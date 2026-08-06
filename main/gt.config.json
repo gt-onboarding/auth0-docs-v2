@@ -1,0 +1,104 @@
+{
+  "$schema": "https://assets.gtx.dev/config-schema.json",
+  "framework": "mintlify",
+  "defaultLocale": "en",
+  "locales": ["fr-ca", "ja-jp"],
+  "customMapping": {
+    "fr-ca": { "code": "fr-CA" },
+    "ja-jp": { "code": "ja" }
+  },
+  "files": {
+    "json": {
+      "include": ["./docs.json", "./docs/oas/**/*.json"],
+      "exclude": ["./docs/[locales]/**/*.json"],
+      "transform": [
+        {
+          "match": "^docs/oas/(.*)$",
+          "replace": "docs/{locale}/oas/$1"
+        }
+      ]
+    },
+    "mdx": {
+      "include": ["./docs/**/*.mdx", "./snippets/**/*.mdx"],
+      "exclude": [
+        "./docs/[locales]/**/*.mdx",
+        "./snippets/[locales]/**/*.mdx"
+      ],
+      "transform": {
+        "match": "^(docs|snippets)/(.*)$",
+        "replace": "$1/{locale}/$2"
+      }
+    },
+    "js": {
+      "include": ["./snippets/**/*.jsx", "./snippets/**/*.js"],
+      "exclude": [
+        "./snippets/[locales]/**/*.jsx",
+        "./snippets/[locales]/**/*.js"
+      ],
+      "transform": {
+        "match": "^snippets/(.*)$",
+        "replace": "snippets/{locale}/$1"
+      }
+    }
+  },
+  "options": {
+    "skipFileValidation": {
+      "mdx": true
+    },
+    "experimentalClearLocaleDirs": true,
+    "experimentalHideDefaultLocale": true,
+    "docsHideDefaultLocaleImport": true,
+    "experimentalLocalizeStaticUrls": true,
+    "docsUrlPattern": "/docs/[locale]",
+    "experimentalLocalizeStaticImports": true,
+    "docsImportPattern": "/snippets/[locale]",
+    "experimentalLocalizeRelativeAssets": true,
+    "experimentalAddHeaderAnchorIds": "mintlify",
+    "mintlify": {
+      "inferTitleFromFilename": true,
+      "openapi": {
+        "files": [
+          "./docs/oas/authentication/authentication-api-oas.json",
+          "./docs/oas/management/v2/management-api-oas.json",
+          "./docs/oas/myaccount/myaccount-api-oas.json",
+          "./docs/oas/myorganization/myorganization-api-oas.json",
+          "./docs/oas/events/events-schema.json",
+          "./docs/oas/tenant-logs/logs-schema.json"
+        ]
+      }
+    },
+    "jsonSchema": {
+      "./docs/oas/**/*.json": {
+        "preset": "openapi"
+      },
+      "./docs.json": {
+        "resolveRefs": true,
+        "composite": {
+          "$.navigation.languages": {
+            "type": "array",
+            "key": "$.language",
+            "experimentalSort": "localesAlphabetical",
+            "splitEntries": true,
+            "include": [
+              "$..group",
+              "$..tab",
+              "$..item",
+              "$..anchor",
+              "$..dropdown"
+            ],
+            "transform": {
+              "$..pages[*]": {
+                "match": "^/?docs/(.*)$",
+                "replace": "docs/{locale}/$1"
+              },
+              "$..root": {
+                "match": "^/?docs/(.*)$",
+                "replace": "docs/{locale}/$1"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
