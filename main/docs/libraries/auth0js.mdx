@@ -370,8 +370,10 @@ You can now do something else with this information as your application needs, s
 
 By default (and if `responseType` contains `id_token`), Auth0.js will generate a random `nonce` when you call `webAuth.authorize`, store it in local storage, and pull it out in `webAuth.parseHash`. The default behavior should work in most cases, but some use cases may require a developer to control the `nonce`.
 If you want to use a developer generated `nonce`, then you must provide it as an option to both `webAuth.authorize` and `webAuth.parseHash`.
-`webAuth.authorize({<Tooltip tip="Nonce: Arbitrary number issued once in an authentication protocol to detect and prevent replay attacks." cta="View Glossary" href="/docs/glossary?term=nonce">nonce</Tooltip>: '1234', responseType: 'token id_token'});
-webAuth.parseHash({nonce: '1234'}, callback);`
+```js
+webAuth.authorize({nonce: '1234', responseType: 'token id_token'});
+webAuth.parseHash({nonce: '1234'}, callback);
+```
 
 If you're calling `webAuth.checkSession` instead of `webAuth.authorize`, then you only have to specify your custom `nonce` as an option to `checkSession`:
 
