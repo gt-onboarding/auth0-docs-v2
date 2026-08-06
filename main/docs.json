@@ -58,7 +58,7 @@
   "navigation": {
     "languages": [
       {
-        "$ref": "config/nav.en.json"
+        "$ref": "config/nav.json"
       }
     ]
   },
