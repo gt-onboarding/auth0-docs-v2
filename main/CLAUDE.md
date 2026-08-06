@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-This is the Auth0 Documentation repository, a Mintlify-based documentation platform deployed at https://auth0.com/docs. It contains 4,305 MDX files organized across multiple documentation sections and supports 3 languages (English, French-Canada, Japanese).
+This is the Auth0 Documentation repository, a Mintlify-based documentation platform deployed at https://auth0.com/docs. It contains 4,305 MDX files organized across multiple documentation sections.
 
 ## Development Commands
 
@@ -34,8 +34,6 @@ mint dev
 │   ├── libraries/          # SDK documentation
 │   ├── quickstart/         # Platform-specific quickstarts
 │   ├── troubleshoot/       # Troubleshooting guides
-│   ├── fr-ca/              # French (Canada) translations (full mirror)
-│   ├── ja-jp/              # Japanese translations (full mirror)
 │   └── [assets]/           # css/, fonts/, images/, logo/, media/
 ├── snippets/               # Reusable React components and content
 │   ├── *.jsx               # React components (AuthCodeBlock, etc.)
@@ -169,12 +167,9 @@ Code examples for quickstarts live in `/snippets/quickstart/{type}/{platform}/`
 
 ### Localization
 
-Full documentation is mirrored in three languages:
-- **`docs/`** - English (primary)
-- **`docs/fr-ca/`** - French (Canada)
-- **`docs/ja-jp/`** - Japanese
-
-When editing English content, consider whether translations need updates. The directory structure is identical across languages.
+`docs/` holds the English source and is the only content authored by hand.
+Translations are generated, not written — do not hand-edit files under a
+locale directory, as they are overwritten on the next translation run.
 
 ## Contribution Workflow
 
