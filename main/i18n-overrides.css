@@ -1,0 +1,25 @@
+/* ---------------------------------------------------------------------------
+ * i18n layout overrides
+ *
+ * Localized labels run longer than English (French is commonly 15-30% longer;
+ * "Dev Tools" becomes "Outils de developpement"). In the top navigation this
+ * makes multi-word tabs wrap onto a second line while single-word tabs stay on
+ * one, leaving the header ragged.
+ *
+ * Fixing this in CSS rather than by shortening translations is
+ * content-agnostic: it holds for any locale and any future label change, with
+ * no dependency on a glossary entry or an exact output length.
+ *
+ * Tabs that no longer fit collapse into Mintlify's existing overflow menu
+ * instead of wrapping.
+ * ------------------------------------------------------------------------- */
+
+/* Top navigation tab links - keep each label on one line. */
+header nav a,
+#navbar a,
+[class*="navbar"] a[class*="tab"],
+[class*="Navbar"] a[class*="tab"],
+nav[aria-label="Tabs"] a,
+[class*="tabs"] a {
+  white-space: nowrap;
+}
