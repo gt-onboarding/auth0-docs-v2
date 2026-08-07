@@ -1,0 +1,48 @@
+{
+  "menu": [
+    {
+      "icon": "user-tag",
+      "item": "プリンシパルとしてのエージェント",
+      "pages": [
+        "docs/ja-jp/ai-agents-mcp/agents-as-principal",
+        {
+          "group": "はじめに",
+          "pages": [
+            "docs/ja-jp/ai-agents-mcp/agents-as-principal/register-an-agent",
+            "docs/ja-jp/ai-agents-mcp/agents-as-principal/associate-agent-client",
+            "docs/ja-jp/ai-agents-mcp/agents-as-principal/agent-identity-in-tokens"
+          ]
+        },
+        {
+          "group": "リファレンス",
+          "pages": [
+            "docs/ja-jp/ai-agents-mcp/agents-as-principal/actions-context",
+            "docs/ja-jp/ai-agents-mcp/agents-as-principal/tenant-logs"
+          ]
+        }
+      ]
+    },
+    {
+      "icon": "arrows-cross",
+      "item": "クロスアプリアクセス（XAA）",
+      "pages": [
+        "docs/ja-jp/ai-agents-mcp/cross-app-access",
+        {
+          "group": "Auth0をResource Appとして設定する",
+          "pages": [
+            "docs/ja-jp/ai-agents-mcp/cross-app-access/set-up-xaa-test-environment",
+            {
+              "group": "IdP連携",
+              "pages": [
+                "docs/ja-jp/ai-agents-mcp/cross-app-access/idp/okta-as-oidc-idp",
+                "docs/ja-jp/ai-agents-mcp/cross-app-access/idp/okta-as-saml-idp"
+              ]
+            },
+            "docs/ja-jp/ai-agents-mcp/cross-app-access/idp/add-organization-support",
+            "docs/ja-jp/ai-agents-mcp/cross-app-access/end-to-end-testing"
+          ]
+        }
+      ]
+    }
+  ]
+}

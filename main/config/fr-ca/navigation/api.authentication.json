@@ -1,0 +1,220 @@
+{
+  "pages": [
+    {
+      "group": "Connexion",
+      "pages": [
+        "docs/fr-ca/api/authentication/login/index",
+        "docs/fr-ca/api/authentication/login/authenticate-using-database",
+        "docs/fr-ca/api/authentication/login/enterprise-saml-and-others"
+      ]
+    },
+    {
+      "group": "Déconnexion",
+      "pages": [
+        "docs/fr-ca/api/authentication/logout/auth-0-logout",
+        "docs/fr-ca/api/authentication/logout/oidc-logout",
+        "docs/fr-ca/api/authentication/logout/saml-logout",
+        "docs/fr-ca/api/authentication/logout/global-token-revocation"
+      ]
+    },
+    {
+      "group": "Authentification par canal secondaire",
+      "pages": [
+        "docs/fr-ca/api/authentication/login/start-back-channel-login",
+        "docs/fr-ca/api/authentication/login/check-back-channel-login-status"
+      ]
+    },
+    {
+      "group": "Sans mot de passe",
+      "pages": [
+        "docs/fr-ca/api/authentication/passwordless/get-code-or-link",
+        "docs/fr-ca/api/authentication/passwordless/authenticate-user",
+        "docs/fr-ca/api/authentication/passwordless/verify"
+      ]
+    },
+    {
+      "group": "Clés d’accès",
+      "pages": [
+        "docs/fr-ca/api/authentication/passkey/challenge",
+        "docs/fr-ca/api/authentication/passkey/register"
+      ]
+    },
+    {
+      "group": "Inscription",
+      "pages": [
+        "docs/fr-ca/api/authentication/signup/create-a-new-user"
+      ]
+    },
+    {
+      "group": "Modifier le mot de passe",
+      "pages": [
+        "docs/fr-ca/api/authentication/change-password/change-password"
+      ]
+    },
+    {
+      "group": "Profil utilisateur",
+      "pages": [
+        "docs/fr-ca/api/authentication/user-profile/get-user-info"
+      ]
+    },
+    {
+      "group": "Authentification multifacteur",
+      "pages": [
+        "docs/fr-ca/api/authentication/multi-factor-authentication/request-mfa-challenge",
+        "docs/fr-ca/api/authentication/multi-factor-authentication/verify-mfa-with-otp",
+        "docs/fr-ca/api/authentication/multi-factor-authentication/verify-with-out-of-band",
+        "docs/fr-ca/api/authentication/multi-factor-authentication/verify-with-recovery-code",
+        "docs/fr-ca/api/authentication/multi-factor-authentication/add-an-authenticator",
+        "docs/fr-ca/api/authentication/multi-factor-authentication/list-authenticators",
+        "docs/fr-ca/api/authentication/multi-factor-authentication/delete-authenticator"
+      ]
+    },
+    {
+      "group": "SAML",
+      "pages": [
+        "docs/fr-ca/api/authentication/saml/accept-saml-request",
+        "docs/fr-ca/api/authentication/saml/get-saml-metadata",
+        "docs/fr-ca/api/authentication/saml/idp-initiated-sso"
+      ]
+    },
+    {
+      "group": "Fédération WS",
+      "pages": [
+        "docs/fr-ca/api/authentication/ws-federation/accept-ws-federation-request",
+        "docs/fr-ca/api/authentication/ws-federation/get-ws-federation-metadata"
+      ]
+    },
+    {
+      "group": "Enregistrement dynamique d’application (client)",
+      "pages": [
+        "docs/fr-ca/api/authentication/dynamic-application-client-registration/dynamic-application-registration"
+      ]
+    },
+    {
+      "group": "Flux de code d’autorisation",
+      "pages": [
+        "docs/fr-ca/api/authentication/authorization-code-flow/authorize-application",
+        "docs/fr-ca/api/authentication/authorization-code-flow/get-token"
+      ]
+    },
+    {
+      "group": "Flux de code d’autorisation avec PKCE",
+      "pages": [
+        "docs/fr-ca/api/authentication/authorization-code-flow-with-pkce/authorize-with-pkce",
+        "docs/fr-ca/api/authentication/authorization-code-flow-with-pkce/get-token-pkce"
+      ]
+    },
+    {
+      "group": "Flux de code d’autorisation avec protection renforcée de la vie privée",
+      "pages": [
+        "docs/fr-ca/api/authentication/authorization-code-flow-with-enhanced-privacy-protection/push-authorization-requests",
+        "docs/fr-ca/api/authentication/authorization-code-flow-with-enhanced-privacy-protection/authorize",
+        "docs/fr-ca/api/authentication/authorization-code-flow-with-enhanced-privacy-protection/exchange-authorization-code-for-token"
+      ]
+    },
+    {
+      "group": "Flux des identifiants du client",
+      "pages": [
+        "docs/fr-ca/api/authentication/client-credential-flow/get-token"
+      ]
+    },
+    {
+      "group": "Flux implicite",
+      "pages": [
+        "docs/fr-ca/api/authentication/implicit-flow/authorize"
+      ]
+    },
+    {
+      "group": "Échange de jetons personnalisé",
+      "pages": [
+        "docs/fr-ca/api/authentication/custom-token-exchange/get-token"
+      ]
+    },
+    {
+      "group": "Échange de jetons pour le compte d’un utilisateur",
+      "pages": [
+        "docs/fr-ca/api/authentication/on-behalf-of-token-exchange/get-token"
+      ]
+    },
+    {
+      "group": "Flux d’accès entre applications",
+      "pages": [
+        "docs/fr-ca/api/authentication/cross-app-access/get-token"
+      ]
+    },
+    {
+      "group": "Échange de jetons via le coffre-fort de jetons",
+      "pages": [
+        "docs/fr-ca/api/authentication/token-vault-token-exchange/get-token"
+      ]
+    },
+    {
+      "group": "Flux de mot de passe du propriétaire de la ressource",
+      "pages": [
+        "docs/fr-ca/api/authentication/resource-owner-password-flow/get-token"
+      ]
+    },
+    {
+      "group": "Flux d’autorisation d’appareil",
+      "pages": [
+        "docs/fr-ca/api/authentication/device-authorization-flow/authorize-device"
+      ]
+    },
+    {
+      "group": "Jeton d’actualisation",
+      "pages": [
+        "docs/fr-ca/api/authentication/refresh-token/refresh-token"
+      ]
+    },
+    {
+      "group": "Révoquer le jeton d’actualisation",
+      "pages": [
+        "docs/fr-ca/api/authentication/revoke-refresh-token/revoke-refresh-token"
+      ]
+    },
+    {
+      "group": "Échange de jetons pour l’authentification sociale native",
+      "pages": [
+        "docs/fr-ca/api/authentication/token-exchange-for-native-social/token-exchange-native-social"
+      ]
+    },
+    {
+      "group": "Connexion [Hérité]",
+      "pages": [
+        "docs/fr-ca/api/authentication/login-legacy/social-with-providers-access-token",
+        "docs/fr-ca/api/authentication/login-legacy/database-ad-lapd-active"
+      ]
+    },
+    {
+      "group": "Profil utilisateur [Hérité]",
+      "pages": [
+        "docs/fr-ca/api/authentication/user-profile-legacy/get-token-info"
+      ]
+    },
+    {
+      "group": "Liaison de comptes [Hérité]",
+      "pages": [
+        "docs/fr-ca/api/authentication/account-linking-legacy/link",
+        "docs/fr-ca/api/authentication/account-linking-legacy/unlink"
+      ]
+    },
+    {
+      "group": "Délégation [Hérité]",
+      "pages": [
+        "docs/fr-ca/api/authentication/delegation-legacy/delegation"
+      ]
+    },
+    {
+      "group": "Usurpation d’identité [Hérité]",
+      "pages": [
+        "docs/fr-ca/api/authentication/impersonation-legacy/impersonation"
+      ]
+    },
+    {
+      "group": "Propriétaire de la ressource [Hérité]",
+      "pages": [
+        "docs/fr-ca/api/authentication/resource-owner-legacy/resource-owner-password-grant"
+      ]
+    }
+  ]
+}

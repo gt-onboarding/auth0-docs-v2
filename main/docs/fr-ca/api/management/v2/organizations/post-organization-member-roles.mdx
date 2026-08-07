@@ -1,0 +1,14 @@
+---
+title: Attribuer des rôles à un membre de l’organisation
+openapi: /docs/fr-ca/oas/management/v2/management-api-oas.json POST
+  /organizations/{id}/members/{user_id}/roles
+playground: interactive
+deprecated: faux
+---
+
+import { ApiReleaseLifecycle } from "/snippets/fr-ca/ApiReleaseLifecycle.jsx";
+import { Scopes } from "/snippets/fr-ca/ApiScopes.jsx";
+
+<ApiReleaseLifecycle releaseLifecycle="GA" />
+
+<Scopes scopes={["create:organization_member_roles"]} />

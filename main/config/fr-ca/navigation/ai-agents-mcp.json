@@ -1,0 +1,48 @@
+{
+  "menu": [
+    {
+      "icon": "user-tag",
+      "item": "Agents en tant que principaux",
+      "pages": [
+        "docs/fr-ca/ai-agents-mcp/agents-as-principal",
+        {
+          "group": "Pour commencer",
+          "pages": [
+            "docs/fr-ca/ai-agents-mcp/agents-as-principal/register-an-agent",
+            "docs/fr-ca/ai-agents-mcp/agents-as-principal/associate-agent-client",
+            "docs/fr-ca/ai-agents-mcp/agents-as-principal/agent-identity-in-tokens"
+          ]
+        },
+        {
+          "group": "Référence",
+          "pages": [
+            "docs/fr-ca/ai-agents-mcp/agents-as-principal/actions-context",
+            "docs/fr-ca/ai-agents-mcp/agents-as-principal/tenant-logs"
+          ]
+        }
+      ]
+    },
+    {
+      "icon": "arrows-cross",
+      "item": "Accès entre applications (XAA)",
+      "pages": [
+        "docs/fr-ca/ai-agents-mcp/cross-app-access",
+        {
+          "group": "Configurer Auth0 comme application de ressources",
+          "pages": [
+            "docs/fr-ca/ai-agents-mcp/cross-app-access/set-up-xaa-test-environment",
+            {
+              "group": "Intégration à un IdP",
+              "pages": [
+                "docs/fr-ca/ai-agents-mcp/cross-app-access/idp/okta-as-oidc-idp",
+                "docs/fr-ca/ai-agents-mcp/cross-app-access/idp/okta-as-saml-idp"
+              ]
+            },
+            "docs/fr-ca/ai-agents-mcp/cross-app-access/idp/add-organization-support",
+            "docs/fr-ca/ai-agents-mcp/cross-app-access/end-to-end-testing"
+          ]
+        }
+      ]
+    }
+  ]
+}
