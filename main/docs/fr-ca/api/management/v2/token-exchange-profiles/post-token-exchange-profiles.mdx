@@ -1,0 +1,14 @@
+---
+title: Créer des profils d’échange de jetons
+openapi: /docs/fr-ca/oas/management/v2/management-api-oas.json POST
+  /token-exchange-profiles
+playground: interactive
+deprecated: false
+---
+
+import { ApiReleaseLifecycle } from "/snippets/fr-ca/ApiReleaseLifecycle.jsx";
+import { Scopes } from "/snippets/fr-ca/ApiScopes.jsx";
+
+<ApiReleaseLifecycle releaseLifecycle="EA" />
+
+<Scopes scopes={["create:token_exchange_profiles"]} />

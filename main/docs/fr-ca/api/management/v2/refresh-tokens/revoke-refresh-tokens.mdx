@@ -1,0 +1,14 @@
+---
+title: Révoquer les jetons d’actualisation
+openapi: /docs/fr-ca/oas/management/v2/management-api-oas.json POST
+  /refresh-tokens/revoke
+playground: interactive
+deprecated: faux
+---
+
+import { ApiReleaseLifecycle } from "/snippets/fr-ca/ApiReleaseLifecycle.jsx";
+import { Scopes } from "/snippets/fr-ca/ApiScopes.jsx";
+
+<ApiReleaseLifecycle releaseLifecycle="EA" />
+
+<Scopes scopes={["delete:refresh_tokens"]} />

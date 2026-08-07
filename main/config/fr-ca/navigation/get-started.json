@@ -1,0 +1,477 @@
+{
+  "directory": "accordion",
+  "pages": [
+    "docs/fr-ca/get-started",
+    {
+      "expanded": true,
+      "group": "Découvrez les bases",
+      "pages": [
+        "docs/fr-ca/get-started/identity-fundamentals/introduction-to-auth0",
+        "docs/fr-ca/get-started/identity-fundamentals/identity-and-access-management",
+        "docs/fr-ca/get-started/identity-fundamentals/authentication-and-authorization",
+        {
+          "group": "Flux d’authentification et d’autorisation",
+          "pages": [
+            "docs/fr-ca/get-started/authentication-and-authorization-flow/which-oauth-2-0-flow-should-i-use",
+            {
+              "group": "Flux de code d’autorisation",
+              "pages": [
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/authorization-code-flow",
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/authorization-code-flow/add-login-auth-code-flow",
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/authorization-code-flow/call-your-api-using-the-authorization-code-flow",
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-rar",
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-par",
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-jar"
+              ]
+            },
+            {
+              "group": "Flux de code d’autorisation avec clé de preuve pour l’échange de code",
+              "pages": [
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce",
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce/add-login-using-the-authorization-code-flow-with-pkce",
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce/call-your-api-using-the-authorization-code-flow-with-pkce"
+              ]
+            },
+            {
+              "group": "Flux d’identifiants client",
+              "pages": [
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/client-credentials-flow",
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/client-credentials-flow/call-your-api-using-the-client-credentials-flow",
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/client-credentials-flow/customize-tokens-using-hooks-with-client-credentials-flow"
+              ]
+            },
+            {
+              "group": "Flux d’authentification par canal auxiliaire initié par le client",
+              "pages": [
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/client-initiated-backchannel-authentication-flow",
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/client-initiated-backchannel-authentication-flow/mobile-push-notifications-with-ciba",
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/client-initiated-backchannel-authentication-flow/email-notifications-with-ciba",
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/client-initiated-backchannel-authentication-flow/user-authorization-with-ciba"
+              ]
+            },
+            {
+              "group": "Flux d’échange de jetons personnalisé",
+              "pages": [
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/token-exchange-flow",
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/token-exchange-flow/call-your-api-using-the-custom-token-exchange-flow"
+              ]
+            },
+            {
+              "group": "Flux d’autorisation d’appareil",
+              "pages": [
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/device-authorization-flow",
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/device-authorization-flow/call-your-api-using-the-device-authorization-flow"
+              ]
+            },
+            {
+              "group": "Flux implicite avec Form Post",
+              "pages": [
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post",
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post/mitigate-replay-attacks-when-using-the-implicit-flow",
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post/add-login-using-the-implicit-flow-with-form-post"
+              ]
+            },
+            {
+              "group": "Flux hybride",
+              "pages": [
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/hybrid-flow",
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/hybrid-flow/call-api-hybrid-flow"
+              ]
+            },
+            {
+              "group": "Flux de mot de passe du propriétaire de la ressource",
+              "pages": [
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/resource-owner-password-flow",
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/resource-owner-password-flow/call-your-api-using-resource-owner-password-flow",
+                "docs/fr-ca/get-started/authentication-and-authorization-flow/resource-owner-password-flow/avoid-common-issues-with-resource-owner-password-flow-and-attack-protection"
+              ]
+            },
+            "docs/fr-ca/get-started/authentication-and-authorization-flow/authenticate-with-private-key-jwt",
+            "docs/fr-ca/get-started/authentication-and-authorization-flow/authenticate-with-mtls",
+            "docs/fr-ca/get-started/authentication-and-authorization-flow/client-credentials-exchange"
+          ],
+          "root": "docs/fr-ca/get-started/authentication-and-authorization-flow"
+        },
+        {
+          "group": "Scénarios d’architecture",
+          "pages": [
+            {
+              "group": "Entreprise à consommateur",
+              "pages": [
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-consumer",
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-consumer/architecture",
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-consumer/provisioning",
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-consumer/authentication",
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-consumer/branding",
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-consumer/deployment",
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-consumer/quality-assurance",
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-consumer/profile-management",
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-consumer/authorization",
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-consumer/logout",
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-consumer/operations",
+                {
+                  "group": "Préparation au lancement",
+                  "pages": [
+                    "docs/fr-ca/get-started/architecture-scenarios/business-to-consumer/launch",
+                    "docs/fr-ca/get-started/architecture-scenarios/business-to-consumer/launch/tenant-check",
+                    "docs/fr-ca/get-started/architecture-scenarios/business-to-consumer/launch/testing",
+                    "docs/fr-ca/get-started/architecture-scenarios/business-to-consumer/launch/operations-readiness",
+                    "docs/fr-ca/get-started/architecture-scenarios/business-to-consumer/launch/compliance-readiness",
+                    "docs/fr-ca/get-started/architecture-scenarios/business-to-consumer/launch/support-readiness",
+                    "docs/fr-ca/get-started/architecture-scenarios/business-to-consumer/launch/launch-day"
+                  ]
+                }
+              ]
+            },
+            {
+              "group": "Entreprise à entreprise",
+              "pages": [
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-business",
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-business/architecture",
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-business/provisioning",
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-business/authentication",
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-business/branding",
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-business/deployment",
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-business/quality-assurance",
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-business/profile-management",
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-business/authorization",
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-business/logout",
+                "docs/fr-ca/get-started/architecture-scenarios/business-to-business/operations",
+                {
+                  "group": "Préparation au lancement (B2B)",
+                  "pages": [
+                    "docs/fr-ca/get-started/architecture-scenarios/business-to-business/launch",
+                    "docs/fr-ca/get-started/architecture-scenarios/business-to-business/launch/tenant-check",
+                    "docs/fr-ca/get-started/architecture-scenarios/business-to-business/launch/testing",
+                    "docs/fr-ca/get-started/architecture-scenarios/business-to-business/launch/operations-readiness",
+                    "docs/fr-ca/get-started/architecture-scenarios/business-to-business/launch/compliance-readiness",
+                    "docs/fr-ca/get-started/architecture-scenarios/business-to-business/launch/support-readiness",
+                    "docs/fr-ca/get-started/architecture-scenarios/business-to-business/launch/launch-day"
+                  ]
+                }
+              ]
+            },
+            "docs/fr-ca/get-started/architecture-scenarios/b2e",
+            {
+              "group": "Architecture à organisations multiples",
+              "pages": [
+                "docs/fr-ca/get-started/architecture-scenarios/multiple-organization-architecture",
+                {
+                  "group": "Organisations à fournisseur d’identité unique",
+                  "pages": [
+                    "docs/fr-ca/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations",
+                    "docs/fr-ca/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/provisioning",
+                    "docs/fr-ca/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/authentication",
+                    "docs/fr-ca/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/branding",
+                    "docs/fr-ca/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/authorization",
+                    "docs/fr-ca/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/profile-management",
+                    "docs/fr-ca/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/logout"
+                  ]
+                },
+                "docs/fr-ca/get-started/architecture-scenarios/multiple-organization-architecture/multiple-idp-orgs"
+              ]
+            },
+            {
+              "group": "SSO pour les applications Web classiques",
+              "pages": [
+                "docs/fr-ca/get-started/architecture-scenarios/sso-for-regular-web-apps",
+                "docs/fr-ca/get-started/architecture-scenarios/sso-for-regular-web-apps/part-1",
+                "docs/fr-ca/get-started/architecture-scenarios/sso-for-regular-web-apps/part-2",
+                "docs/fr-ca/get-started/architecture-scenarios/sso-for-regular-web-apps/part-3",
+                "docs/fr-ca/get-started/architecture-scenarios/sso-for-regular-web-apps/implementation-aspnetcore",
+                "docs/fr-ca/get-started/architecture-scenarios/sso-for-regular-web-apps/part-4"
+              ]
+            },
+            {
+              "group": "Application serveur + API",
+              "pages": [
+                "docs/fr-ca/get-started/architecture-scenarios/server-application-api",
+                "docs/fr-ca/get-started/architecture-scenarios/server-application-api/part-1",
+                "docs/fr-ca/get-started/architecture-scenarios/server-application-api/part-2",
+                "docs/fr-ca/get-started/architecture-scenarios/server-application-api/part-3",
+                "docs/fr-ca/get-started/architecture-scenarios/server-application-api/api-implementation-nodejs",
+                "docs/fr-ca/get-started/architecture-scenarios/server-application-api/cron-implementation-python",
+                "docs/fr-ca/get-started/architecture-scenarios/server-application-api/part-4"
+              ]
+            },
+            {
+              "group": "SPA + API",
+              "pages": [
+                "docs/fr-ca/get-started/architecture-scenarios/spa-api",
+                "docs/fr-ca/get-started/architecture-scenarios/spa-api/part-1",
+                "docs/fr-ca/get-started/architecture-scenarios/spa-api/part-2",
+                "docs/fr-ca/get-started/architecture-scenarios/spa-api/part-3",
+                "docs/fr-ca/get-started/architecture-scenarios/spa-api/spa-implementation-angular2",
+                "docs/fr-ca/get-started/architecture-scenarios/spa-api/api-implementation-nodejs",
+                "docs/fr-ca/get-started/architecture-scenarios/spa-api/part-4"
+              ]
+            },
+            {
+              "group": "Mobile + API",
+              "pages": [
+                "docs/fr-ca/get-started/architecture-scenarios/mobile-api",
+                "docs/fr-ca/get-started/architecture-scenarios/mobile-api/part-1",
+                "docs/fr-ca/get-started/architecture-scenarios/mobile-api/part-2",
+                "docs/fr-ca/get-started/architecture-scenarios/mobile-api/part-3",
+                "docs/fr-ca/get-started/architecture-scenarios/mobile-api/mobile-implementation-android",
+                "docs/fr-ca/get-started/architecture-scenarios/mobile-api/api-implementation-nodejs",
+                "docs/fr-ca/get-started/architecture-scenarios/mobile-api/part-4"
+              ]
+            },
+            "docs/fr-ca/get-started/architecture-scenarios/checklists",
+            "docs/fr-ca/get-started/architecture-scenarios/implementation-resources"
+          ],
+          "root": "docs/fr-ca/get-started/architecture-scenarios"
+        }
+      ],
+      "root": "docs/fr-ca/get-started/identity-fundamentals"
+    },
+    {
+      "group": "Quickstarts",
+      "$ref": "./quickstarts.json"
+    },
+    {
+      "directory": "accordion",
+      "expanded": true,
+      "group": "Outils d’IA",
+      "pages": [
+        "docs/fr-ca/quickstart/agent-skills",
+        {
+          "group": "Serveur Auth0 Model Context Protocol (MCP)",
+          "pages": [
+            "docs/fr-ca/get-started/auth0-mcp-server/getting-started-with-auth0-mcp-server",
+            {
+              "group": "Guides",
+              "pages": [
+                "docs/fr-ca/get-started/auth0-mcp-server/auth0-mcp-server-guides/streamline-api-authorization-flows-with-auth0-model-context-protocol-mcp",
+                "docs/fr-ca/get-started/auth0-mcp-server/auth0-mcp-server-guides/implement-advanced-security-monitoring-with-auth0-model-context-protocol-mcp",
+                "docs/fr-ca/get-started/auth0-mcp-server/auth0-mcp-server-guides/understanding-scopes"
+              ],
+              "root": "docs/fr-ca/get-started/auth0-mcp-server/auth0-mcp-server-guides"
+            },
+            "docs/fr-ca/get-started/auth0-mcp-server/auth0-mcp-tools-reference"
+          ]
+        },
+        "docs/fr-ca/get-started/auth0-agent-experience",
+        "docs/fr-ca/get-started/build-with-ai-tools",
+        "docs/fr-ca/get-started/auth0-guide"
+      ],
+      "root": "docs/fr-ca/get-started/ai-tools"
+    },
+    {
+      "group": "Aperçu d’Auth0",
+      "pages": [
+        "docs/fr-ca/get-started/auth0-overview",
+        {
+          "group": "Auth0 Dashboard",
+          "pages": [
+            "docs/fr-ca/get-started/auth0-overview/dashboard",
+            "docs/fr-ca/get-started/auth0-overview/dashboard/activity",
+            "docs/fr-ca/get-started/auth0-overview/dashboard/search-and-filter-auth0-dashboard"
+          ]
+        },
+        {
+          "group": "Créer des tenants",
+          "pages": [
+            "docs/fr-ca/get-started/auth0-overview/create-tenants",
+            "docs/fr-ca/get-started/auth0-overview/create-tenants/create-multiple-tenants",
+            "docs/fr-ca/get-started/auth0-overview/create-tenants/child-tenants",
+            "docs/fr-ca/get-started/auth0-overview/create-tenants/set-up-multiple-environments",
+            "docs/fr-ca/get-started/auth0-overview/create-tenants/multi-tenant-apps-best-practices"
+          ]
+        },
+        "docs/fr-ca/get-started/auth0-overview/set-up-apis"
+      ]
+    },
+    {
+      "group": "Configurer Auth0",
+      "pages": [
+        {
+          "group": "Auth0 Teams",
+          "pages": [
+            "docs/fr-ca/get-started/auth0-teams",
+            "docs/fr-ca/get-started/auth0-teams/tenant-management",
+            "docs/fr-ca/get-started/auth0-teams/team-member-management",
+            "docs/fr-ca/get-started/auth0-teams/tenant-member-management",
+            "docs/fr-ca/get-started/auth0-teams/configure-security-policies",
+            "docs/fr-ca/get-started/auth0-teams/troubleshoot-teams",
+            "docs/fr-ca/get-started/auth0-teams/team-activity",
+            "docs/fr-ca/get-started/auth0-teams/quarterly-snapshot"
+          ]
+        },
+        {
+          "group": "Profil du Dashboard",
+          "pages": [
+            "docs/fr-ca/get-started/dashboard-profile",
+            "docs/fr-ca/get-started/dashboard-profile/auth0-dashboard-login-session-management",
+            "docs/fr-ca/get-started/dashboard-profile/light-and-dark-themes"
+          ]
+        },
+        {
+          "group": "Paramètres du tenant",
+          "pages": [
+            "docs/fr-ca/get-started/tenant-settings",
+            {
+              "group": "Clés de signature",
+              "pages": [
+                "docs/fr-ca/get-started/tenant-settings/signing-keys",
+                "docs/fr-ca/get-started/tenant-settings/signing-keys/rotate-signing-keys",
+                "docs/fr-ca/get-started/tenant-settings/signing-keys/revoke-signing-keys",
+                "docs/fr-ca/get-started/tenant-settings/signing-keys/view-signing-certificates",
+                "docs/fr-ca/get-started/tenant-settings/signing-keys/customer-signing-keys"
+              ]
+            },
+            "docs/fr-ca/get-started/tenant-settings/configure-device-user-code-settings",
+            "docs/fr-ca/get-started/tenant-settings/enable-sso-for-legacy-tenants",
+            "docs/fr-ca/get-started/tenant-settings/find-your-tenant-name-or-tenant-id"
+          ]
+        },
+        {
+          "group": "API",
+          "pages": [
+            "docs/fr-ca/get-started/apis",
+            "docs/fr-ca/get-started/apis/api-settings",
+            "docs/fr-ca/get-started/apis/api-access-policies-for-applications",
+            "docs/fr-ca/get-started/apis/add-api-permissions",
+            "docs/fr-ca/get-started/apis/delete-api-permissions",
+            {
+              "group": "Portées",
+              "pages": [
+                "docs/fr-ca/get-started/apis/scopes",
+                "docs/fr-ca/get-started/apis/scopes/api-scopes",
+                "docs/fr-ca/get-started/apis/scopes/openid-connect-scopes",
+                "docs/fr-ca/get-started/apis/scopes/sample-use-cases-scopes-and-claims"
+              ]
+            },
+            "docs/fr-ca/get-started/apis/configure-access-token-profile",
+            "docs/fr-ca/get-started/apis/configure-json-web-encryption",
+            "docs/fr-ca/get-started/apis/set-logical-api",
+            "docs/fr-ca/get-started/apis/configure-rich-authorization-requests",
+            "docs/fr-ca/get-started/apis/create-m2m-app-test",
+            "docs/fr-ca/get-started/apis/enable-role-based-access-control-for-apis"
+          ]
+        },
+        {
+          "group": "Gérer l’accès au Dashboard",
+          "pages": [
+            "docs/fr-ca/get-started/manage-dashboard-access",
+            "docs/fr-ca/get-started/manage-dashboard-access/feature-access-by-role",
+            "docs/fr-ca/get-started/manage-dashboard-access/add-dashboard-users",
+            "docs/fr-ca/get-started/manage-dashboard-access/edit-dashboard-users",
+            "docs/fr-ca/get-started/manage-dashboard-access/remove-dashboard-users",
+            "docs/fr-ca/get-started/manage-dashboard-access/update-dashboard-user-email",
+            {
+              "group": "Authentification multifacteur pour les utilisateurs du Dashboard",
+              "pages": [
+                "docs/fr-ca/get-started/manage-dashboard-access/add-change-remove-mfa",
+                "docs/fr-ca/get-started/manage-dashboard-access/add-change-remove-mfa/add-mfa",
+                "docs/fr-ca/get-started/manage-dashboard-access/add-change-remove-mfa/remove-or-change-dashboard-multi-factor-authentication"
+              ]
+            },
+            "docs/fr-ca/get-started/manage-dashboard-access/configure-single-sign-on-for-auth0-dashboard"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Applications",
+      "pages": [
+        {
+          "group": "Types d’applications",
+          "pages": [
+            "docs/fr-ca/get-started/applications/confidential-and-public-applications",
+            "docs/fr-ca/get-started/applications/first-party-and-third-party-applications"
+          ],
+          "root": "docs/fr-ca/get-started/applications"
+        },
+        {
+          "group": "Enregistrer des applications",
+          "pages": [
+            "docs/fr-ca/get-started/auth0-overview/create-applications/register-applications-with-cimd",
+            "docs/fr-ca/get-started/auth0-overview/create-applications/native-apps",
+            "docs/fr-ca/get-started/auth0-overview/create-applications/single-page-web-apps",
+            "docs/fr-ca/get-started/auth0-overview/create-applications/regular-web-apps",
+            "docs/fr-ca/get-started/auth0-overview/create-applications/machine-to-machine-apps",
+            "docs/fr-ca/get-started/auth0-overview/create-applications/configure-an-identity-provider-in-access-gateway",
+            "docs/fr-ca/get-started/applications/dynamic-client-registration",
+            "docs/fr-ca/get-started/applications/remove-applications"
+          ],
+          "root": "docs/fr-ca/get-started/auth0-overview/create-applications"
+        },
+        {
+          "group": "Configurer les applications",
+          "pages": [
+            "docs/fr-ca/get-started/applications/application-settings",
+            "docs/fr-ca/get-started/applications/credentials",
+            "docs/fr-ca/get-started/applications/wildcards-for-subdomains",
+            "docs/fr-ca/get-started/applications/configure-application-metadata",
+            {
+              "group": "Applications tierces",
+              "pages": [
+                "docs/fr-ca/get-started/applications/third-party-applications/security-controls",
+                "docs/fr-ca/get-started/applications/third-party-applications/user-consent-and-third-party-applications",
+                "docs/fr-ca/get-started/applications/third-party-applications/configure-third-party-applications",
+                "docs/fr-ca/get-started/applications/third-party-applications/troubleshooting",
+                "docs/fr-ca/get-started/applications/third-party-applications/permissive-mode"
+              ],
+              "root": "docs/fr-ca/get-started/applications/third-party-applications"
+            }
+          ]
+        },
+        {
+          "group": "Connexions et types d’autorisation",
+          "pages": [
+            "docs/fr-ca/get-started/applications/set-up-database-connections",
+            "docs/fr-ca/get-started/applications/test-database-connections",
+            "docs/fr-ca/get-started/applications/update-application-connections",
+            "docs/fr-ca/get-started/applications/application-grant-types",
+            "docs/fr-ca/get-started/applications/update-grant-types",
+            "docs/fr-ca/get-started/applications/application-access-to-apis-client-grants",
+            "docs/fr-ca/get-started/applications/revoke-api-access",
+            "docs/fr-ca/get-started/applications/enable-sso-for-applications"
+          ]
+        },
+        {
+          "group": "Sécurité et conformité",
+          "pages": [
+            "docs/fr-ca/get-started/applications/signing-algorithms",
+            "docs/fr-ca/get-started/applications/change-application-signing-algorithms",
+            "docs/fr-ca/get-started/applications/rotate-credentials",
+            "docs/fr-ca/get-started/applications/rotate-client-secret",
+            {
+              "group": "Configurer la conformité FAPI",
+              "pages": [
+                "docs/fr-ca/get-started/applications/configure-fapi-compliance/configure-auth0-to-pass-openid-fapi-certification-tests"
+              ],
+              "root": "docs/fr-ca/get-started/applications/configure-fapi-compliance"
+            },
+            "docs/fr-ca/get-started/applications/configure-par",
+            "docs/fr-ca/get-started/applications/configure-jar",
+            {
+              "group": "Configurer l’authentification mTLS",
+              "pages": [
+                "docs/fr-ca/get-started/applications/configure-mtls/set-up-the-customer-edge",
+                "docs/fr-ca/get-started/applications/configure-mtls/configure-mtls-for-a-tenant",
+                "docs/fr-ca/get-started/applications/configure-mtls/configure-mtls-for-a-client"
+              ],
+              "root": "docs/fr-ca/get-started/applications/configure-mtls"
+            },
+            "docs/fr-ca/get-started/applications/configure-private-key-jwt",
+            "docs/fr-ca/get-started/applications/configure-client-initiated-backchannel-authentication"
+          ]
+        },
+        {
+          "group": "Plateforme et déploiement",
+          "pages": [
+            "docs/fr-ca/get-started/applications/enable-android-app-links-support",
+            "docs/fr-ca/get-started/applications/enable-universal-links-support-in-apple-xcode",
+            "docs/fr-ca/get-started/applications/set-up-cors",
+            "docs/fr-ca/get-started/applications/configure-applications-with-oidc-discovery",
+            "docs/fr-ca/get-started/applications/configure-ws-fed-applications",
+            "docs/fr-ca/get-started/applications/work-with-auth0-locally"
+          ]
+        }
+      ]
+    }
+  ]
+}

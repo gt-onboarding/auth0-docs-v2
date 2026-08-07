@@ -1,0 +1,13 @@
+---
+title: 認証方法を作成
+openapi: /docs/ja-jp/oas/myaccount/myaccount-api-oas.json POST /authentication-methods
+playground: simple
+deprecated: false
+---
+
+import { ApiReleaseLifecycle } from "/snippets/ja-jp/ApiReleaseLifecycle.jsx";
+import { Scopes } from "/snippets/ja-jp/ApiScopes.jsx";
+
+<ApiReleaseLifecycle releaseLifecycle="GA" />
+
+<Scopes scopes={["create:me:authentication_methods"]} />
