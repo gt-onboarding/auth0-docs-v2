@@ -8,7 +8,7 @@ import { ReleaseStageNotice } from "/snippets/fr-ca/ReleaseStageNotice.jsx"
 <ReleaseStageNotice feature="Délégation de session" stage="ea" plans="B2C Professional, B2B Professional et Enterprise" terms="true" />
 
 <div id="session-behavior">
-  ## Comportement des sessions
+  ## Comportement des sessions {#session-behavior}
 </div>
 
 Les sessions déléguées se distinguent d’une session Auth0 standard à plusieurs égards :
@@ -31,13 +31,13 @@ Les sessions déléguées se distinguent d’une session Auth0 standard à plusi
 * **Les courriels de bienvenue** ne sont pas envoyés.
 
 <div id="actions">
-  ## Actions
+  ## Actions {#actions}
 </div>
 
 `event.session.actor` est disponible dans les [Actions post-login](/docs/fr-ca/customize/actions/explore-triggers/post-login) lors d’une session déléguée et contient l’objet actor exact transmis à `setActor()` lors de l’émission du jeton de transfert de session.
 
 <div id="monitoring">
-  ## Surveillance
+  ## Surveillance {#monitoring}
 </div>
 
 Les sessions déléguées génèrent leurs propres types d’événements dans le [journal](/docs/fr-ca/deploy-monitor/logs) du tenant :

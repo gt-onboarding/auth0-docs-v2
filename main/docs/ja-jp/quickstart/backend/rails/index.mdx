@@ -3,7 +3,7 @@ title: "Ruby On Rails API: Authorization"
 ---
 
 <div id="by-josh-cunningham">
-  ##### Josh Cunningham 著
+  ##### Josh Cunningham 著 {#by-josh-cunningham}
 </div>
 
 このチュートリアルでは、Ruby on Rails API に認可を追加する方法を説明します。ご自身のアカウント用に設定されたサンプルを使ってこの Quickstart を進められるよう、あらかじめログインしておくことをおすすめします。
@@ -17,11 +17,11 @@ title: "Ruby On Rails API: Authorization"
 </Info>
 
 <div id="configure-auth0-apis">
-  ## Auth0 API の設定
+  ## Auth0 API の設定 {#configure-auth0-apis}
 </div>
 
 <div id="create-an-api">
-  ### API を作成する
+  ### API を作成する {#create-an-api}
 </div>
 
 Auth0 Dashboard の [APIs](https://manage.auth0.com/#/apis) セクションで、**Create API** をクリックします。API の名前と識別子を入力します。たとえば `https://quickstarts/api` です。後でアクセストークンの検証を設定する際に、この識別子を `audience` として使用します。**Signing Algorithm** は **RS256** のままにしておきます。
@@ -35,7 +35,7 @@ Auth0 Dashboard の [APIs](https://manage.auth0.com/#/apis) セクションで�
 </Info>
 
 <div id="define-permissions">
-  ### 権限を定義する
+  ### 権限を定義する {#define-permissions}
 </div>
 
 権限を使用すると、特定のアクセストークンを持つユーザーに代わって、リソースへのアクセス方法を定義できます。たとえば、ユーザーが manager のアクセスレベルを持っている場合は `messages` リソースへの読み取りアクセスを許可し、administrator のアクセスレベルを持っている場合はそのリソースへの書き込みアクセスを許可するといった設定ができます。
@@ -54,11 +54,11 @@ Auth0 Dashboard の [APIs](https://manage.auth0.com/#/apis) セクションで�
 * Auth0 アカウントの [JSON Web Key Set (JWKS)](/docs/ja-jp/secure/tokens/json-web-tokens/json-web-key-sets) を使用して、トークンが有効かどうかを確認する方法。アクセストークンの検証について詳しくは、[アクセストークンを検証する](/docs/ja-jp/secure/tokens/access-tokens/validate-access-tokens) を参照してください。
 
 <div id="validate-access-tokens">
-  ## アクセストークンを検証
+  ## アクセストークンを検証 {#validate-access-tokens}
 </div>
 
 <div id="install-dependencies">
-  ### 依存関係をインストールする
+  ### 依存関係をインストールする {#install-dependencies}
 </div>
 
 このチュートリアルでは、カスタム `Auth0Client` クラス内で [**jwt**](https://github.com/jwt/ruby-jwt) Gem を使ってアクセストークンのバリデーションを行います。`Secured` という Concern は、受信したアクセストークンによる認証が必要なエンドポイントの認可に使用します。
@@ -71,7 +71,7 @@ bundle install
 ```
 
 <div id="create-an-auth0client-class">
-  ### Auth0Client クラスを作成する
+  ### Auth0Client クラスを作成する {#create-an-auth0client-class}
 </div>
 
 `Authorization` ヘッダー内のリクエストから取得したアクセストークンをデコードして検証する `Auth0Client` というクラスを作成します。トークンの検証には、Auth0 テナントの公開鍵を取得できます。
@@ -133,7 +133,7 @@ end
 ```
 
 <div id="define-a-secured-concern">
-  ### `Secured` Concernを定義する
+  ### `Secured` Concernを定義する {#define-a-secured-concern}
 </div>
 
 受信したリクエストの`Authorization`ヘッダーからアクセストークンを取得する、`Secured`という名前のConcernを作成します。トークンが存在する場合は、`Auth0Client.validate_token`に渡します。
@@ -189,7 +189,7 @@ end
 ```
 
 <div id="validate-scopes">
-  ### スコープを検証する
+  ### スコープを検証する {#validate-scopes}
 </div>
 
 上記の `Auth0Client.validate_token` メソッドは、リクエストに含まれるアクセストークンが有効であることを検証します。ただし、要求されたリソースにアクセスするのに十分な **スコープ** をトークンが持っているかどうかを確認する仕組みは、まだありません。
@@ -291,7 +291,7 @@ end
 ```
 
 <div id="protect-api-endpoints">
-  ## APIエンドポイントを保護する
+  ## APIエンドポイントを保護する {#protect-api-endpoints}
 </div>
 
 以下のルートは、次のリクエストで利用できます。
@@ -337,7 +337,7 @@ end
 ```
 
 <Info>
-  ##### 次にできることは？
+  ##### 次にできることは？ {#what-can-you-do-next}
 
   | [他のアイデンティティプロバイダーを設定する](/docs/ja-jp/authenticate/identity-providers)                                                            | [多要素認証を有効にする](/docs/ja-jp/secure/multi-factor-authentication) |
   | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |

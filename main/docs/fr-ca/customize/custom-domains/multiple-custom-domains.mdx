@@ -10,7 +10,7 @@ import {AuthCodeGroup} from "/snippets/fr-ca/AuthCodeGroup.jsx";
 Dans Auth0, un <Tooltip tip="Domaine personnalisé : domaine tiers portant un nom spécialisé ou personnalisé." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=custom+domain">domaine personnalisé</Tooltip> vous permet d’unifier l’expérience de connexion avec votre propre image de marque et vos produits. Domaines personnalisés multiples vous permet de configurer plusieurs domaines personnalisés dans un même tenant Auth0. Cette fonctionnalité est offerte aux clients Enterprise, tant dans les déploiements Public Cloud que Private Cloud.
 
 <div id="prerequisites">
-  ## Prérequis
+  ## Prérequis {#prerequisites}
 </div>
 
 Avant de commencer avec MCD, prenez connaissance des exigences ci-dessous :
@@ -22,7 +22,7 @@ Avant de commencer avec MCD, prenez connaissance des exigences ci-dessous :
 * Vous devez être en mesure de prouver que vous êtes propriétaire des domaines personnalisés configurés.
 
 <div id="configure-multiple-custom-domains">
-  ## Configurer Domaines personnalisés multiples
+  ## Configurer Domaines personnalisés multiples {#configure-multiple-custom-domains}
 </div>
 
 Vous pouvez ajouter et gérer plusieurs domaines personnalisés pour votre tenant à l’aide de l’<Tooltip tip="Management API : Un produit qui permet aux clients d’effectuer des tâches administratives." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip> ou de la <Tooltip tip="Management API : Un produit qui permet aux clients d’effectuer des tâches administratives." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Management+API">Management API</Tooltip>.
@@ -42,7 +42,7 @@ Vous pouvez ajouter et gérer plusieurs domaines personnalisés pour votre tenan
 
     Le nom de domaine que vous venez d’ajouter s’affichera comme `pending` jusqu’à ce que la vérification soit terminée.
 
-    #### Afficher et gérer les domaines
+#### Afficher et gérer les domaines {#view-and-manage-domains}
 
     La page **Custom Domains** affiche tous les domaines configurés. Vous pouvez :
 
@@ -71,7 +71,7 @@ Vous pouvez ajouter et gérer plusieurs domaines personnalisés pour votre tenan
     6. Accédez à l’onglet **Paramètres** pour noter votre **Client ID**, votre **Client Secret** et votre **Domain**.
     7. Consultez [Obtenir des jetons d’accès pour l’API de gestion](/docs/fr-ca/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production) pour récupérer et stocker votre jeton d’accès.
 
-    #### Créer un domaine personnalisé
+#### Créer un domaine personnalisé {#create-a-custom-domain}
 
     Vous pouvez créer un nouveau domaine personnalisé en envoyant une requête `POST` à l’endpoint `/api/v2/custom-domains`. Consultez l’exemple ci‑dessous pour créer un nouveau domaine personnalisé à l’aide du Management API Explorer, en utilisant les identifiants récupérés ci‑dessus :
 
@@ -315,7 +315,7 @@ Vous pouvez ajouter et gérer plusieurs domaines personnalisés pour votre tenan
 </Tabs>
 
 <div id="mcd-features">
-  ## Fonctionnalités de MCD
+  ## Fonctionnalités de MCD {#mcd-features}
 </div>
 
 MCD offre de nombreuses fonctionnalités clés pour gérer plus efficacement votre mise en œuvre d’Auth0 et améliorer l’expérience utilisateur. Vous êtes responsable d’être propriétaire des domaines personnalisés souhaités et de les enregistrer auprès d’un registraire de noms de domaine.
@@ -325,7 +325,7 @@ L’[Auth0 Management API](https://auth0.com/docs/api/management/v2/custom-domai
 MCD est pris en charge par les Auth0 Management SDKs suivants : [Node.js](https://github.com/auth0/node-auth0), [Go](https://github.com/auth0/go-auth0), [Python](https://github.com/auth0/auth0-python), [Java](https://github.com/auth0/auth0-java) et [.NET](https://github.com/auth0/auth0.net). Les SDK d’authentication fonctionnent automatiquement avec les domaines personnalisés lorsqu’ils sont configurés dans votre application.
 
 <div id="default-domain">
-  ### Domaine par défaut
+  ### Domaine par défaut {#default-domain}
 </div>
 
 Lorsque plusieurs domaines personnalisés sont configurés, vous pouvez désigner l’un d’eux comme **domaine par défaut**. Le domaine par défaut est utilisé lorsque des renseignements sur le domaine sont requis pour les points de terminaison de l’Auth0 Management API, mais qu’aucun domaine personnalisé n’est explicitement précisé au moyen de l’en-tête `auth0-custom-domain`. Ces renseignements servent à personnaliser les notifications par courriel (p. ex. les réinitialisations de mot de passe et la vérification de l’adresse courriel) en fonction du domaine.
@@ -343,7 +343,7 @@ Vous pouvez aussi définir le domaine par défaut à l’aide de la Management A
 </Callout>
 
 <div id="domain-verification">
-  ### Vérification du domaine
+  ### Vérification du domaine {#domain-verification}
 </div>
 
 La méthode de vérification de la propriété du nom de domaine dépend du type de gestion choisi :
@@ -356,13 +356,13 @@ La méthode de vérification de la propriété du nom de domaine dépend du type
 Une fois votre domaine personnalisé vérifié par Auth0, vous pouvez l’utiliser immédiatement pour configurer les fonctionnalités Auth0 pour vos utilisateurs. Pour en savoir plus, consultez [Configurer les fonctionnalités pour utiliser des domaines personnalisés](/docs/fr-ca/customize/custom-domains/configure-features-to-use-custom-domains).
 
 <div id="metadata-for-enhanced-management">
-  ### Métadonnées pour une gestion simplifiée
+  ### Métadonnées pour une gestion simplifiée {#metadata-for-enhanced-management}
 </div>
 
 Vous pouvez configurer jusqu’à 10 champs de métadonnées par domaine personnalisé pour faciliter l’organisation et permettre une personnalisation ultérieure. Dans les prochaines versions, ces champs de métadonnées permettront de personnaliser davantage les modèles de courriel, <Tooltip tip="Universal Login : Votre application redirige vers Universal Login, hébergé sur le serveur d’autorisation d’Auth0, pour vérifier l’identité d’un utilisateur." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Universal+Login">Universal Login</Tooltip> et la logique d’authentification.
 
 <div id="customize-email-templates">
-  ### Personnaliser les modèles de courriel
+  ### Personnaliser les modèles de courriel {#customize-email-templates}
 </div>
 
 Tirez parti des renseignements sur votre domaine personnalisé pour personnaliser vos modèles de courriel et renforcer votre image de marque, afin d’assurer une expérience utilisateur cohérente. Pour ce faire, MCD met la variable `custom_domain.domain` à votre disposition dans la syntaxe Liquid.
@@ -370,7 +370,7 @@ Tirez parti des renseignements sur votre domaine personnalisé pour personnalise
 Par exemple, vous pourriez définir le **From Address** de votre modèle de courriel à `support@{{ custom_domain.domain }}` , qui s’afficherait sous la forme `support@my.custom-domain.com`. Cette variable est accessible dans la syntaxe Liquid des champs **From Address**, **Subject** et **Message**. Pour en savoir plus, consultez [Personnaliser les modèles de courriel](/docs/fr-ca/customize/email/email-templates).
 
 <div id="customize-email-handling-using-the-management-api">
-  #### Personnaliser la gestion des courriels à l’aide de la Management API
+  #### Personnaliser la gestion des courriels à l’aide de la Management API {#customize-email-handling-using-the-management-api}
 </div>
 
 Si vous avez configuré Domaines personnalisés multiples et activé [Use Custom Domains in Emails](/docs/fr-ca/customize/custom-domains/configure-features-to-use-custom-domains#use-custom-domains-in-emails), l’en-tête HTTP `auth0-custom-domain` est disponible lorsque vous utilisez l’Auth0 Management API. L’en-tête est transmis comme valeur de l’`domain object` dans les modèles de courriel.
@@ -428,7 +428,7 @@ Exemple de réponse : Le domaine personnalisé est transmis dans l’en-tête s
 ```
 
 <div id="response-messages">
-  ##### Messages de réponse
+  ##### Messages de réponse {#response-messages}
 </div>
 
 Lorsque vous incluez l’en-tête HTTP `auth0-custom-domain`, les réponses supplémentaires suivantes sont possibles :
@@ -444,13 +444,13 @@ Lorsque vous incluez l’en-tête HTTP `auth0-custom-domain`, les réponses supp
 </Callout>
 
 <div id="application-url-placeholders">
-  ### Variables de remplacement d’URL d’application
+  ### Variables de remplacement d’URL d’application {#application-url-placeholders}
 </div>
 
 Vous pouvez utiliser les métadonnées de domaine personnalisé comme variables de remplacement dynamiques dans les URL d’application, comme les URL de rappel, les URL de déconnexion et l’Application Login URI (`initiate_login_uri`). Ainsi, chaque domaine personnalisé peut pointer vers une URL d’application différente à l’exécution. Pour en savoir plus, consultez [Variables de remplacement d’URL de domaine personnalisé](/docs/fr-ca/get-started/applications/wildcards-for-subdomains#custom-domain-url-placeholders).
 
 <div id="multiple-custom-domains-with-actions">
-  ### Domaines personnalisés multiples avec Actions
+  ### Domaines personnalisés multiples avec Actions {#multiple-custom-domains-with-actions}
 </div>
 
 Les [Actions](/docs/fr-ca/customize/actions) d’Auth0 vous permettent de créer une logique personnalisée pour gérer vos différentes transactions en fonction du domaine personnalisé.
@@ -460,7 +460,7 @@ Par exemple, vous pourriez créer une Action qui dirige un utilisateur vers une 
 Pour ce faire, les Actions post-login incluent l’objet `event.custom_domain`, qui indique le domaine personnalisé utilisé pour le flux d’authentification.
 
 <div id="use-case-restrict-user-access-to-an-organization-based-on-custom-domain">
-  #### Cas d’utilisation : restreindre l’accès d’un utilisateur à une Organisation en fonction du custom domain
+  #### Cas d’utilisation : restreindre l’accès d’un utilisateur à une Organisation en fonction du custom domain {#use-case-restrict-user-access-to-an-organization-based-on-custom-domain}
 </div>
 
 Stockez une liste de domaines autorisés et une liste de domaines rejetés (par exemple, `allow_domains` et `deny_domains`) dans les métadonnées de votre Organisation.
@@ -505,13 +505,13 @@ exports.onExecutePostLogin = async (event, api) => {
 </Callout>
 
 <div id="custom-domain-attributes">
-  ### Attributs des domaines personnalisés
+  ### Attributs des domaines personnalisés {#custom-domain-attributes}
 </div>
 
 MCD fournit les attributs suivants liés à la vérification des domaines personnalisés et à la gestion des certificats SSL/TLS. Ces attributs fournissent des renseignements détaillés sur l’état du provisionnement et du fonctionnement des domaines personnalisés.
 
 <div id="updated-attributes">
-  #### Attributs mis à jour
+  #### Attributs mis à jour {#updated-attributes}
 </div>
 
 | Attribut | Description                                                                                                                                                                                                                                                          |
@@ -519,7 +519,7 @@ MCD fournit les attributs suivants liés à la vérification des domaines person
 | `status` | Une nouvelle valeur d’énumération, `failed`, a été ajoutée à l’attribut `status`. Cette valeur indique que le processus de vérification du domaine personnalisé a rencontré une erreur et n’a pas abouti. Elle s’ajoute aux valeurs existantes `pending` et `ready`. |
 
 <div id="new-attributes">
-  #### Nouveaux attributs
+  #### Nouveaux attributs {#new-attributes}
 </div>
 
 Les attributs suivants sont pris en charge uniquement pour les domaines gérés par Auth0 :
@@ -536,7 +536,7 @@ Les attributs suivants sont pris en charge uniquement pour les domaines gérés 
 | `certificate.renews_before`         | Pour les domaines personnalisés gérés par Auth0, ce nouvel attribut d’horodatage indique la date et l’heure avant lesquelles le certificat SSL/TLS doit être renouvelé. Le format de cet horodatage respecte la norme ISO 8601. |
 
 <div id="limitations">
-  ### Limitations
+  ### Limitations {#limitations}
 </div>
 
 Les limitations suivantes s’appliquent à Domaines personnalisés multiples :

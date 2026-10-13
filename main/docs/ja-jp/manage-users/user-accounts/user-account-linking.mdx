@@ -19,7 +19,7 @@ Auth0 は、さまざまな <Tooltip tip="アイデンティティプロバイ�
 Auth0 は、デフォルトではすべてのアイデンティティを別個のものとして扱います。たとえば、あるユーザーが最初に Auth0 データベースでログインし、その後 Google や Facebook 経由でログインした場合、Auth0 ではこれら 2 回のログインは別々の 2 人のユーザーとして認識されます。ユーザーが明示的にアカウントをリンクできるようにする機能は、自分で実装できます。このシナリオでは、ユーザーは最初のプロバイダー (たとえば Google) でログインします。次に、最初のアカウントに別のアカウントをリンクできるよう、アプリケーションでリンクまたはボタンを表示します。ユーザーがそのリンクまたはボタンをクリックすると、アプリケーションが必要な呼び出しを行い、ユーザーが 2 つ目のプロバイダーでログインした際に、その 2 つ目のアカウントが最初のアカウントにリンクされるようにします。
 
 <div id="advantages-of-linking-accounts">
-  ## アカウントをリンクするメリット
+  ## アカウントをリンクするメリット {#advantages-of-linking-accounts}
 </div>
 
 * ユーザーは、アイデンティティプロバイダーごとに別々のプロファイルを作成しなくても、どのアイデンティティプロバイダーでもログインできます
@@ -28,7 +28,7 @@ Auth0 は、デフォルトではすべてのアイデンティティを別個�
 * アプリは、さまざまな接続に保存されているユーザープロファイルデータを取得できます
 
 <div id="precautions">
-  ## 注意事項
+  ## 注意事項 {#precautions}
 </div>
 
 安全でない方法でアカウントをリンクすると、悪意のある第三者が正規のユーザーアカウントにアクセスできる可能性があります。次の点に注意してください。
@@ -38,7 +38,7 @@ Auth0 は、デフォルトではすべてのアイデンティティを別個�
 さらに、**すべての**手動アカウントリンクでは、ユーザーに資格情報の入力を求める必要があります。
 
 <div id="how-it-works">
-  ## 仕組み
+  ## 仕組み {#how-it-works}
 </div>
 
 アカウントのリンク処理では、既存の2つのユーザープロファイルが1つに統合されます。アカウントをリンクするには、**primary account** と **secondary account** を指定する必要があります。
@@ -160,7 +160,7 @@ Auth0 は、デフォルトではすべてのアイデンティティを別個�
 * primary account を削除すると、secondary account も削除されます
 
 <div id="metadata-merge">
-  ### メタデータのマージ
+  ### メタデータのマージ {#metadata-merge}
 </div>
 
 アカウントリンク時に、メタデータが自動的にマージされることはありません。マージする場合は、Manage API の [`/users/patch_users_by_id`](https://auth0.com/docs/api/v2#!/Users/patch_users_by_id) エンドポイントを使用して、手動で行う必要があります。
@@ -170,7 +170,7 @@ Auth0 は、デフォルトではすべてのアイデンティティを別個�
 詳しくは、[ユーザープロファイルにおけるメタデータの仕組み](/docs/ja-jp/manage-users/user-accounts/metadata) を参照してください。
 
 <div id="scenarios">
-  ## シナリオ
+  ## シナリオ {#scenarios}
 </div>
 
 アカウントリンクを実装する方法は、2 つあります。
@@ -179,7 +179,7 @@ Auth0 は、デフォルトではすべてのアイデンティティを別個�
 * 提案型アカウントリンク: 同じメールアドレスを持つアカウントを特定し、アプリ内でそれらをリンクするようユーザーに促します。
 
 <div id="user-initiated-account-linking">
-  ### ユーザー主導のアカウントリンク
+  ### ユーザー主導のアカウントリンク {#user-initiated-account-linking}
 </div>
 
 通常、アカウントリンクは認証済みユーザーによって開始されます。アプリでは、ユーザーのプロファイルページに **アカウントをリンクする** ボタンを配置するなど、そのための UI を提供する必要があります。
@@ -187,7 +187,7 @@ Auth0 は、デフォルトではすべてのアイデンティティを別個�
 Single Page Application でユーザー主導のアカウントリンクを実装する方法について詳しくは、[クライアントサイドのアカウントリンク](/docs/ja-jp/manage-users/user-accounts/user-account-linking/user-initiated-account-linking-client-side-implementation) を参照してください。Regular Web Application でユーザー主導のアカウントリンクを実装する方法について詳しくは、[サーバーサイドのアカウントリンク](/docs/ja-jp/manage-users/user-accounts/user-account-linking/suggested-account-linking-server-side-implementation) を参照してください。
 
 <div id="suggested-account-linking">
-  ### 推奨されるアカウントリンク
+  ### 推奨されるアカウントリンク {#suggested-account-linking}
 </div>
 
 同じメールアドレスを持つアカウントを見つけて、それらをリンクするようユーザーに促すことができます。たとえば、ユーザーが `user@gmail.com` で Google アカウントを作成した後、同じメールアドレスに関連付けられた Facebook アカウントでログインすることがあります。
@@ -201,7 +201,7 @@ Single Page Application でユーザー主導のアカウントリンクを実�
 </Warning>
 
 <div id="learn-more">
-  ## 詳しく見る
+  ## 詳しく見る {#learn-more}
 </div>
 
 * [ユーザーアカウントをリンクする](/docs/ja-jp/manage-users/user-accounts/user-account-linking/link-user-accounts)

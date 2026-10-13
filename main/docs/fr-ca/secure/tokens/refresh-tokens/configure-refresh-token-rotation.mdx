@@ -23,7 +23,7 @@ Les scénarios de migration prennent en charge la révocation automatique des je
   L’échange d’un jeton d’actualisation avec rotation génère un jeton d’actualisation sans rotation et révoque la famille de jetons d’actualisation avec rotation émise pour le même `client_id`, le serveur de ressources, l’utilisateur et le tenant.
 
 <div id="configure-in-the-dashboard">
-  ## Configurer dans le Dashboard
+  ## Configurer dans le Dashboard {#configure-in-the-dashboard}
 </div>
 
 1. Accédez à [Dashboard &gt; Applications](https://manage.auth0.com/#/applications).
@@ -41,7 +41,7 @@ Les scénarios de migration prennent en charge la révocation automatique des je
 </Callout>
 
 <div id="configure-with-the-auth0-spa-sdk">
-  ## Configurer avec l’Auth0 SPA SDK
+  ## Configurer avec l’Auth0 SPA SDK {#configure-with-the-auth0-spa-sdk}
 </div>
 
 Vous pouvez utiliser l’Auth0 SPA SDK pour activer la rotation des jetons d’actualisation. Vous devez activer l’accès hors ligne et demander le scope `offline_access` dans le SDK client.
@@ -81,13 +81,13 @@ Vous pouvez utiliser l’Auth0 SPA SDK pour activer la rotation des jetons d’a
 </Callout>
 
 <div id="automatic-reuse-detection">
-  ## Détection automatique de la réutilisation
+  ## Détection automatique de la réutilisation {#automatic-reuse-detection}
 </div>
 
 Si un jeton précédemment invalidé est utilisé, tous les jetons d’actualisation émis depuis ce jeton invalidé seront immédiatement révoqués, ainsi que l’autorisation associée, ce qui obligera l’utilisateur à s’authentifier de nouveau.
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Rotation des jetons d’actualisation](/docs/fr-ca/secure/tokens/refresh-tokens/refresh-token-rotation)

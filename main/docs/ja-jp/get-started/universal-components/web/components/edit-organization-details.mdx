@@ -17,7 +17,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
 <Tabs>
   <Tab title="React">
-    ## 設定の要件
+## 設定の要件 {#setup-requirements}
 
     <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
       **Auth0 Configuration が必要です**—tenant で
@@ -25,7 +25,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
       →](/docs/ja-jp/get-started/universal-components/web/components/build-delegated-admin#enable-the-my-organization-api)
     </Callout>
 
-    ## インストール
+## インストール {#installation}
 
     <CodeGroup>
       ```bash pnpm  wrap lines
@@ -42,7 +42,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
       依存パッケージもインストールされます。
     </Callout>
 
-    ## はじめに
+## はじめに {#get-started}
 
     ```tsx wrap lines
     import { OrganizationDetailsEdit } from "@auth0/universal-components-react";
@@ -158,15 +158,15 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
       ```
     </Accordion>
 
-    ## プロップス
+## プロップス {#props}
 
-    ### 必須のプロップス
+### 必須のプロップス {#required-props}
 
     必須プロップスはコンポーネントの動作に不可欠です。`OrganizationDetailsEdit` に必須プロップスはなく、現在の organization の詳細は My Organization API から自動的に読み込まれます。
 
     ***
 
-    ### 表示関連のプロップス
+### 表示関連のプロップス {#display-props}
 
     表示用のプロップスは、コンポーネントの動作に影響を与えることなく、その表示方法を制御します。セクションを非表示にしたり、読み取り専用モードを有効にしたりする際に使用します。
 
@@ -212,7 +212,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     ***
 
-    ### Action のプロップス
+### Action のプロップス {#action-props}
 
     Actionのプロップスはユーザー操作を処理し、ユーザーが変更を保存またはキャンセルしたときの動作を定義します。ライフサイクルフック (`onBefore`、`onAfter`) を使用すると、アプリケーションのルーティングや分析と連携できます。
 
@@ -365,7 +365,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     ***
 
-    ### カスタマイズ用プロップス
+### カスタマイズ用プロップス {#customization-props}
 
     カスタマイズ用のプロップスを使えば、ソースコードを変更せずに、ブランド、ロケール、バリデーションの要件に合わせてコンポーネントを調整できます。
 
@@ -556,11 +556,11 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     ***
 
-    ## 高度なカスタマイズ
+## 高度なカスタマイズ {#advanced-customization}
 
     `OrganizationDetailsEdit` コンポーネントは、より小さなサブコンポーネントとフックで構成されています。shadcn を使用している場合は、これらを個別に import して、独自の organization 編集ワークフローを構築できます。
 
-    ### 利用可能なサブコンポーネント
+### 利用可能なサブコンポーネント {#available-subcomponents}
 
     高度なユースケースでは、個々のサブコンポーネントをインポートして、独自のorganization編集インターフェースを構築できます。
 
@@ -599,7 +599,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
       </tbody>
     </table>
 
-    ### 利用可能なHooks
+### 利用可能なHooks {#available-hooks}
 
     これらのフックは、UIを持たない基盤ロジックのみを提供します。Auth0 APIとの連携を活用しつつ、完全に独自のインターフェースを構築したい場合にご利用ください。
 
@@ -624,7 +624,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
   </Tab>
 
   <Tab title="Next.js">
-    ## 設定の要件
+## 設定の要件 {#setup-requirements-2}
 
     <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
       **Auth0 Configuration が必要です**—tenant が
@@ -632,7 +632,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
       →](/docs/ja-jp/get-started/universal-components/web/components/build-delegated-admin#configure-auth0-dashboard)
     </Callout>
 
-    ## インストール
+## インストール {#installation-2}
 
     <CodeGroup>
       ```bash npm (Recommended) wrap lines
@@ -649,7 +649,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
       依存パッケージがインストールされます。
     </Callout>
 
-    ## はじめに
+## はじめに {#get-started-2}
 
     ```tsx page.tsx wrap lines
     import { OrganizationDetailsEdit } from "@auth0/universal-components-react";
@@ -744,15 +744,15 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
       ```
     </Accordion>
 
-    ## プロップス
+## プロップス {#props-2}
 
-    ### 主要なプロップス
+### 主要なプロップス {#core-props}
 
     コアプロップスは、コンポーネントの動作に欠かせないものです。`OrganizationDetailsEdit` には必須のプロップスはなく、現在の organization の詳細を My Organization API から自動的に読み込みます。
 
     ***
 
-    ### 表示関連のプロップス
+### 表示関連のプロップス {#display-props-2}
 
     表示用のプロップスは、コンポーネントの動作に影響を与えずに、その表示方法を制御します。セクションを非表示にしたり、読み取り専用モードを有効にしたりする場合に使用します。
 
@@ -798,7 +798,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     ***
 
-    ### Action のプロップス
+### Action のプロップス {#action-props-2}
 
     Actionのプロップスは、ユーザー操作を処理し、ユーザーが変更を保存またはキャンセルしたときの動作を定義します。ライフサイクルフック (`onBefore`、`onAfter`) を使用すると、アプリケーションのルーティングや分析と連携できます。
 
@@ -951,7 +951,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     ***
 
-    ### カスタマイズ用プロップス
+### カスタマイズ用プロップス {#customization-props-2}
 
     カスタマイズ用のプロップスを使えば、ソースコードを変更せずに、ブランド、ロケール、バリデーションの要件に合わせてコンポーネントを調整できます。
 
@@ -1142,11 +1142,11 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     ***
 
-    ## 高度なカスタマイズ
+## 高度なカスタマイズ {#advanced-customization-2}
 
     `OrganizationDetailsEdit` コンポーネントは、より小さなサブコンポーネントとフックで構成されています。これらを個別にインポートすることで、独自の organization 編集ワークフローを構築できます。
 
-    ### 利用可能なサブコンポーネント
+### 利用可能なサブコンポーネント {#available-subcomponents-2}
 
     高度なユースケースでは、個々のサブコンポーネントをインポートして、独自の organization 編集インターフェースを構築できます。
 
@@ -1185,7 +1185,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
       </tbody>
     </table>
 
-    ### 利用可能なHooks
+### 利用可能なHooks {#available-hooks-2}
 
     これらのフックは、UIを持たない基盤ロジックのみを提供します。Auth0 APIとの連携を活用しつつ、完全に独自のインターフェイスを構築したい場合にご利用ください。
 
@@ -1210,7 +1210,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
   </Tab>
 
   <Tab title="shadcn">
-    ## 設定の要件
+## 設定の要件 {#setup-requirements-3}
 
     <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
       **Auth0 の設定が必要です**—tenant が
@@ -1218,7 +1218,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
       →](/docs/ja-jp/get-started/universal-components/web/components/build-delegated-admin#configure-auth0-dashboard)
     </Callout>
 
-    ## インストール
+## インストール {#installation-3}
 
     ```bash wrap lines
     npx shadcn@latest add https://auth0-universal-components.vercel.app/r/my-organization/organization-details-edit.json
@@ -1229,7 +1229,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
       依存関係もインストールされます。
     </Callout>
 
-    ## はじめに
+## はじめに {#get-started-3}
 
     ```tsx wrap lines
     import { OrganizationDetailsEdit } from "@/components/auth0/my-organization/organization-details-edit";
@@ -1344,15 +1344,15 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
       ```
     </Accordion>
 
-    ## プロップス
+## プロップス {#props-3}
 
-    ### 主要なプロップス
+### 主要なプロップス {#core-props-2}
 
     コアプロップスはコンポーネントの動作に不可欠です。`OrganizationDetailsEdit` に必須のプロップスはありません。現在の organization の詳細は、My Organization API から自動的に読み込まれます。
 
     ***
 
-    ### 表示関連のプロップス
+### 表示関連のプロップス {#display-props-3}
 
     表示用プロップスは、コンポーネントの動作に影響を与えずに、レンダリングのされ方を制御します。セクションを非表示にしたり、読み取り専用モードを有効にしたりする場合に使用します。
 
@@ -1398,7 +1398,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     ***
 
-    ### Action のプロップス
+### Action のプロップス {#action-props-3}
 
     Actionのプロップスは、ユーザー操作を処理し、ユーザーが変更を保存またはキャンセルしたときの動作を定義します。ライフサイクルフック (`onBefore`、`onAfter`) を使用すれば、アプリケーションのルーティングや分析と連携できます。
 
@@ -1551,7 +1551,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     ***
 
-    ### カスタマイズ用プロップス
+### カスタマイズ用プロップス {#customization-props-3}
 
     カスタマイズ用のプロップスを使えば、ソースコードを変更せずに、ブランド、ロケール、バリデーションの要件に合わせてコンポーネントを調整できます。
 
@@ -1742,11 +1742,11 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     ***
 
-    ## 高度なカスタマイズ
+## 高度なカスタマイズ {#advanced-customization-3}
 
     `OrganizationDetailsEdit` コンポーネントは、より小さなサブコンポーネントとフックで構成されています。shadcn を使用している場合は、それらを個別に import して、独自の organization 編集ワークフローを構築できます。
 
-    ### 利用可能なサブコンポーネント
+### 利用可能なサブコンポーネント {#available-subcomponents-3}
 
     高度なユースケースでは、個々のサブコンポーネントをインポートして、独自の organization 編集インターフェースを構築できます。
 
@@ -1785,7 +1785,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
       </tbody>
     </table>
 
-    ### 利用可能なHooks
+### 利用可能なHooks {#available-hooks-3}
 
     これらのフックは、UIを持たない基盤ロジックのみを提供します。Auth0 APIとの連携を活用しつつ、完全に独自のインターフェースを構築したい場合にご利用ください。
 

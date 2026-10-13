@@ -12,11 +12,11 @@ title: Azure API Management と連携する
 このチュートリアルでは、Azure API Management で管理される Basic Calculator API にユーザーがアクセスする際に、Auth0 を使用してユーザーを認証および認可する方法を学びます。
 
 <div id="configure-auth0">
-  ## Auth0 の設定
+  ## Auth0 の設定 {#configure-auth0}
 </div>
 
 <div id="create-an-api">
-  ### API を作成
+  ### API を作成 {#create-an-api}
 </div>
 
 Azure API Management Service で管理する API を表すために、Auth0 で API を作成する必要があります。詳しくは、[API を登録する](/docs/ja-jp/get-started/auth0-overview/set-up-apis)を参照してください。
@@ -32,7 +32,7 @@ Azure API Management Service で管理する API を表すために、Auth0 で 
 3. **Create** を選択します。
 
 <div id="create-a-regular-web-application">
-  ### 従来型Webアプリケーションを作成する
+  ### 従来型Webアプリケーションを作成する {#create-a-regular-web-application}
 </div>
 
 Azure の OAuth 2.0 <Tooltip tip="Authorization Server: ユーザーのアクセス範囲を定義する中央サーバーです。たとえば、認可サーバーでは、ユーザーが利用できるデータ、タスク、機能を制御できます。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=authorization+server">認可サーバー</Tooltip> と通信するために、Auth0 で従来型Webアプリケーション (RWA) を作成する必要があります。
@@ -41,7 +41,7 @@ Azure の OAuth 2.0 <Tooltip tip="Authorization Server: ユーザーのアクセ
 2. アプリケーションの **Name** を入力し、アプリケーションの種類として **従来型Webアプリケーション** を選択します。
 
 <div id="create-and-enable-a-connection">
-  ### 接続を作成して有効にする
+  ### 接続を作成して有効にする {#create-and-enable-a-connection}
 </div>
 
 Auth0 で接続を作成し、その接続をアプリケーションで有効にする必要があります。
@@ -54,7 +54,7 @@ Auth0 で接続を作成し、その接続をアプリケーションで有効�
 6. 先ほど作成したアプリケーションのトグルをオンにして、その接続で有効にします。
 
 <div id="create-a-user">
-  ### ユーザーを作成する
+  ### ユーザーを作成する {#create-a-user}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -68,11 +68,11 @@ Auth0 で接続を作成し、その接続をアプリケーションで有効�
 3. **Create** を選択します。
 
 <div id="configure-azure">
-  ## Azure の設定
+  ## Azure の設定 {#configure-azure}
 </div>
 
 <div id="create-azure-api-management-service">
-  ### Azure API Management Service を作成する
+  ### Azure API Management Service を作成する {#create-azure-api-management-service}
 </div>
 
 API を管理するには、Azure で API Management Service インスタンスを作成する必要があります。
@@ -93,7 +93,7 @@ API を管理するには、Azure で API Management Service インスタンス�
 4. **Create** を選択してサービスのプロビジョニングを開始します (完了まで最大 15 分かかる場合があります) 。
 
 <div id="import-the-sample-api">
-  ### サンプル API をインポートする
+  ### サンプル API をインポートする {#import-the-sample-api}
 </div>
 
 このチュートリアルでは、Microsoft が提供する Basic Calculator API をインポートして使用します。詳しい手順については、Microsoft の [Import and Publish Your First API](https://docs.microsoft.com/en-us/azure/api-management/import-and-publish#go-to-your-api-management-instance) を参照してください。
@@ -101,7 +101,7 @@ API を管理するには、Azure で API Management Service インスタンス�
 完了したら、**Create** を選択して API をインポートします。インポートが完了すると、API の概要ページに移動します。
 
 <div id="configure-an-oauth-20-authorization-server">
-  ### OAuth 2.0 認可サーバーを設定する
+  ### OAuth 2.0 認可サーバーを設定する {#configure-an-oauth-20-authorization-server}
 </div>
 
 Azure API を Auth0 で保護するには、Auth0 を OAuth 2.0 認可サーバーとして登録する必要があります。
@@ -128,7 +128,7 @@ Azure API を Auth0 で保護するには、Auth0 を OAuth 2.0 認可サーバ�
 6. **Create** を選択します。
 
 <div id="configure-azure-api-to-use-auth0">
-  ### Auth0 を使用するように Azure API を設定する
+  ### Auth0 を使用するように Azure API を設定する {#configure-azure-api-to-use-auth0}
 </div>
 
 Azure で OAuth 2.0 認可サーバーを作成したら、ユーザー認可に Auth0 を使用するように、Azure API を更新する必要があります。
@@ -141,7 +141,7 @@ Azure で OAuth 2.0 認可サーバーを作成したら、ユーザー認可に
 6. **Save** をクリックします。
 
 <div id="set-the-allowed-callback-url-in-auth0">
-  ## Auth0 で Allowed Callback URL を設定する
+  ## Auth0 で Allowed Callback URL を設定する {#set-the-allowed-callback-url-in-auth0}
 </div>
 
 Azure API のプロビジョニングと、ユーザー認可に Auth0 を使用するための設定が完了したら、Auth0 のアプリケーションを更新する必要があります。
@@ -152,7 +152,7 @@ Azure API のプロビジョニングと、ユーザー認可に Auth0 を使用
 4. **Save** をクリックします。
 
 <div id="test-the-integration">
-  ## 連携をテストする
+  ## 連携をテストする {#test-the-integration}
 </div>
 
 Azure Portal で、API Management Service のインスタンスを開きます。
@@ -166,7 +166,7 @@ Azure Portal で、API Management Service のインスタンスを開きます�
 7. ページの一番下に移動して、**Send** を選択します。リクエストが成功すると、ページ下部に `HTTP 200` レスポンスを含むメッセージが表示されます。
 
 <div id="configure-a-jwt-validation-policy-for-access-tokens">
-  ### アクセストークン用の JWT 検証ポリシーを設定する
+  ### アクセストークン用の JWT 検証ポリシーを設定する {#configure-a-jwt-validation-policy-for-access-tokens}
 </div>
 
 前のステップでは、Developer Console から呼び出しを行おうとすると、ユーザーにサインインが求められます。Developer Console は、API リクエストに含めるために、ユーザーに代わって <Tooltip tip="アクセストークン: API へのアクセスに使用される、不透明な文字列または JWT の形式の Authorization 資格情報。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Access+Token">アクセストークン</Tooltip> を取得しようとします。すべてのアクセストークンは、`Authorization` ヘッダーを通じて API に渡されます。

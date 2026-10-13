@@ -6,13 +6,13 @@ title: JSON Web Token
 Cette liste d’actions <Tooltip tip="JSON Web Token (JWT) : format standard d’ID Token (et souvent d’Access Token) utilisé pour représenter des claims de manière sécurisée entre deux parties." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=JSON+Web+Token">JSON Web Token</Tooltip> vous permet de générer, de vérifier et de décoder des JWTs dans vos flows.
 
 <div id="configure-your-jwt-vault-connection">
-  ## Configurez votre JWT Vault Connection
+  ## Configurez votre JWT Vault Connection {#configure-your-jwt-vault-connection}
 </div>
 
 Découvrez comment configurer une Vault Connection pour vos Flow Actions de JSON Web Token à la page [JWT Vault Connection](/docs/fr-ca/customize/forms/vaults/jwt).
 
 <div id="sign-json-web-token">
-  ## Signer un JSON Web Token
+  ## Signer un JSON Web Token {#sign-json-web-token}
 </div>
 
 Génère un JSON Web Token.
@@ -20,7 +20,7 @@ Génère un JSON Web Token.
 <Frame>![](/docs/images/cdy7uua7fh8z/3XQqUMKrmrc8fUkCsDhI2T/43f7f8d38673d8fa4f9dba7242e044d9/sign-json-web-token.png)</Frame>
 
 <div id="input-settings">
-  ### Paramètres d’entrée
+  ### Paramètres d’entrée {#input-settings}
 </div>
 
 | Paramètre          | Description                                                                           |
@@ -32,7 +32,7 @@ Génère un JSON Web Token.
 | Délai d’expiration | Indique le moment à partir duquel le JWT ne doit plus être accepté pour traitement.   |
 
 <div id="output-object">
-  ### Objet de sortie
+  ### Objet de sortie {#output-object}
 </div>
 
 | Propriété | Type   | Description                              |
@@ -40,7 +40,7 @@ Génère un JSON Web Token.
 | `token`   | String | Une chaîne de caractères JSON Web Token. |
 
 <div id="output-object-example">
-  ### Exemple d’objet de sortie
+  ### Exemple d’objet de sortie {#output-object-example}
 </div>
 
 ```json lines
@@ -50,7 +50,7 @@ Génère un JSON Web Token.
 ```
 
 <div id="decode-json-web-token">
-  ## Décoder un JSON Web Token
+  ## Décoder un JSON Web Token {#decode-json-web-token}
 </div>
 
 Décode le JSON Web Token fourni.
@@ -58,7 +58,7 @@ Décode le JSON Web Token fourni.
 <Frame>![](/docs/images/cdy7uua7fh8z/7I25WVtppllW6qhC5sALvH/70143bbe0d96920e1d9dfabbb1d6aeff/decode-json-web-token.png)</Frame>
 
 <div id="input-settings">
-  ### Paramètres d’entrée
+  ### Paramètres d’entrée {#input-settings-2}
 </div>
 
 | Paramètre           | Description                                           |
@@ -66,7 +66,7 @@ Décode le JSON Web Token fourni.
 | Token (obligatoire) | Chaîne de caractères JSON Web Token qui sera décodée. |
 
 <div id="output-object">
-  ### Objet de sortie
+  ### Objet de sortie {#output-object-2}
 </div>
 
 | Propriété | Type  | Description                                   |
@@ -74,7 +74,7 @@ Décode le JSON Web Token fourni.
 | `payload` | objet | Le contenu décodé et valide du JSON Web Token |
 
 <div id="output-object-example">
-  ### Exemple d’objet de sortie
+  ### Exemple d’objet de sortie {#output-object-example-2}
 </div>
 
 ```json lines
@@ -93,7 +93,7 @@ Décode le JSON Web Token fourni.
 ```
 
 <div id="verify-json-web-token">
-  ## Vérifier le JSON Web Token
+  ## Vérifier le JSON Web Token {#verify-json-web-token}
 </div>
 
 Vérifie les données du JSON Web Token pour déterminer s’il est toujours intact ou s’il a été modifié, afin d’en garantir l’authenticité.
@@ -101,7 +101,7 @@ Vérifie les données du JSON Web Token pour déterminer s’il est toujours int
 <Frame>![](/docs/images/cdy7uua7fh8z/15MDJcfZqtC46h6mRPOGcz/55e0785db066a54f836d30199fa5f295/verify-json-web-token.png)</Frame>
 
 <div id="input-settings">
-  ### Paramètres d’entrée
+  ### Paramètres d’entrée {#input-settings-3}
 </div>
 
 | Paramètre           | Description                                 |
@@ -111,7 +111,7 @@ Vérifie les données du JSON Web Token pour déterminer s’il est toujours int
 | Audience            | Audience destinataire du JWT à vérifier.    |
 
 <div id="output-object">
-  ### Objet de sortie
+  ### Objet de sortie {#output-object-3}
 </div>
 
 | Propriété | Type    | Description                                                                      |
@@ -121,7 +121,7 @@ Vérifie les données du JSON Web Token pour déterminer s’il est toujours int
 | `payload` | Objet   | Le contenu décodé et valide du JSON Web Token.                                   |
 
 <div id="output-object-example">
-  ### Exemple d’objet de sortie
+  ### Exemple d’objet de sortie {#output-object-example-3}
 </div>
 
 ```json lines

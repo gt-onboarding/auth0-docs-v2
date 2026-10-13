@@ -16,7 +16,7 @@ Lors de la planification de votre stratégie de contrôle d&#39;accès, il est r
 </Callout>
 
 <div id="benefits-of-rbac">
-  ## Avantages du RBAC
+  ## Avantages du RBAC {#benefits-of-rbac}
 </div>
 
 Avec le RBAC, la gestion des accès est plus simple, à condition de respecter rigoureusement les exigences des rôles. Le RBAC vous aide à :
@@ -29,11 +29,11 @@ Avec le RBAC, la gestion des accès est plus simple, à condition de respecter r
 * respecter plus efficacement les exigences réglementaires et légales en matière de confidentialité et de protection des renseignements personnels
 
 <div id="rbac-model">
-  ## Modèle RBAC
+  ## Modèle RBAC {#rbac-model}
 </div>
 
 <div id="roles">
-  ### Rôles
+  ### Rôles {#roles}
 </div>
 
 Essentiellement, un rôle est un ensemble de permissions que vous pouvez attribuer aux utilisateurs. L’utilisation des rôles facilite l’ajout, la suppression et l’ajustement des permissions, plutôt que de les attribuer individuellement à chaque utilisateur. À mesure que votre base d’utilisateurs gagne en taille et en complexité, les rôles deviennent particulièrement utiles.
@@ -43,7 +43,7 @@ Vous pouvez aussi utiliser les rôles pour regrouper des permissions définies p
 De plus, des rôles propres à l’organisation peuvent être [ajoutés aux membres de l’organisation](/docs/fr-ca/manage-users/organizations/configure-organizations/add-member-roles) et utilisés pour autoriser l’accès à votre application selon les organisations avec lesquelles un utilisateur final se connecte. Cela est particulièrement utile pour les produits SaaS et multilocataires, où un même utilisateur peut avoir un rôle privilégié dans une organisation, mais pas dans d’autres.
 
 <div id="overlapping-role-assignments">
-  ## Chevauchement des attributions de rôles
+  ## Chevauchement des attributions de rôles {#overlapping-role-assignments}
 </div>
 
 RBAC est un modèle additif. Donc, si vous avez des attributions de rôles qui se chevauchent, vos permissions effectives correspondent à l’union de ces attributions.
@@ -51,7 +51,7 @@ RBAC est un modèle additif. Donc, si vous avez des attributions de rôles qui s
 Par exemple, supposons que vous avez une API qui fournit des données pour une application de gestion d’événements. Vous créez un rôle `Organizer` et lui assignez des permissions qui lui permettent de consulter, de créer et de modifier des événements. Vous créez aussi un rôle `Registrant` et lui assignez des permissions qui lui permettent de consulter les événements et de s’y inscrire. Les utilisateurs qui ont à la fois les rôles `Organizer` et `Registrant` pourront consulter, créer, modifier et gérer les inscriptions aux événements.
 
 <div id="role-based-access-control-in-auth0">
-  ## Contrôle d’accès basé sur les rôles dans Auth0
+  ## Contrôle d’accès basé sur les rôles dans Auth0 {#role-based-access-control-in-auth0}
 </div>
 
 À l’heure actuelle, nous proposons deux façons de mettre en œuvre le contrôle d’accès basé sur les rôles (RBAC), que vous pouvez utiliser à la place du système interne de contrôle d’accès de votre API ou en complément de celui-ci :
@@ -72,7 +72,7 @@ Pour le moment, les deux mettent en œuvre les fonctionnalités clés du RBAC et
 </Callout>
 
 <div id="extending-rbac">
-  ### Étendre le RBAC
+  ### Étendre le RBAC {#extending-rbac}
 </div>
 
 Vous pouvez offrir un contrôle accru en utilisant les [Actions](/docs/fr-ca/customize/actions) pour restreindre l’accès en fonction d’une combinaison d’attributs, comme le département de l’utilisateur, le moment de la journée, l’endroit d’où l’accès est effectué, ou tout autre attribut de l’utilisateur ou de l’API (par exemple, le username, l’habilitation de sécurité ou le nom de l’API).
@@ -80,7 +80,7 @@ Vous pouvez offrir un contrôle accru en utilisant les [Actions](/docs/fr-ca/cus
 Pour en savoir plus sur l’utilisation des Actions avec les politiques d’autorisation, consultez [Sample Use Cases: Actions with Authorization](/docs/fr-ca/manage-users/access-control/sample-use-cases-actions-with-authorization).
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Activer le contrôle d’accès basé sur les rôles pour les API](/docs/fr-ca/get-started/apis/enable-role-based-access-control-for-apis)

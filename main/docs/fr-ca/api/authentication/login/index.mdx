@@ -5,13 +5,13 @@ description: "Lancez une connexion par navigateur à l’aide d’un fournisseur
 ---
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `GET /authorize`
 
 <div id="social">
-  ## Social
+  ## Social {#social}
 </div>
 
 Vous pouvez connecter votre service Auth0 à un fournisseur d’identité sociale et permettre à vos utilisateurs de se connecter à votre application avec Facebook, Google, Apple ou d’autres fournisseurs pris en charge. Pour en savoir plus sur les fournisseurs pris en charge, consultez [Marketplace](https://marketplace.auth0.com/features/social-connections).
@@ -23,7 +23,7 @@ Pour authentifier les utilisateurs avec un fournisseur d’identité sociale, ef
 </Note>
 
 <div id="remarks">
-  ### Remarques
+  ### Remarques {#remarks}
 </div>
 
 * Si `response_type=token`, une fois l’utilisateur authentifié auprès du fournisseur, il sera redirigé vers l’`URL de rappel` de votre application, avec le jeton d’accès et le jeton d’identité transmis dans le `location.hash` de l’adresse. Cela est utilisé pour les applications monopages ainsi que pour les SDK mobiles natifs.
@@ -31,7 +31,7 @@ Pour authentifier les utilisateurs avec un fournisseur d’identité sociale, ef
 * L’exemple de script auth0.js utilise la version 8 de la bibliothèque. Si vous utilisez la version 7 d’auth0.js, veuillez consulter ce [guide de référence](https://auth0.com/docs/libraries/auth0js).
 
 <div id="learn-more">
-  ### En savoir plus
+  ### En savoir plus {#learn-more}
 </div>
 
 * [Fournisseurs d’identité sociale pris en charge](https://marketplace.auth0.com/features/social-connections)
@@ -40,7 +40,7 @@ Pour authentifier les utilisateurs avec un fournisseur d’identité sociale, ef
 * [Référence de la méthode /authorize d’Auth0.js](https://auth0.com/docs/libraries/auth0js#webauth-authorize)
 
 <div id="query-parameters">
-  ## Paramètres de requête
+  ## Paramètres de requête {#query-parameters}
 </div>
 
 <ParamField query="response_type" type="string" required>
@@ -66,7 +66,7 @@ Pour authentifier les utilisateurs avec un fournisseur d’identité sociale, ef
 </ParamField>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                                     |

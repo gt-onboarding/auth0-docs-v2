@@ -28,7 +28,7 @@ title: Refresh Token Expirationを設定する
 * **アイドル有効期間**: 指定した期間中にユーザーがアプリケーションで操作しなかった場合に失効するよう、発行されたリフレッシュトークンのアイドル有効期間を設定します。
 
 <div id="use-the-dashboard">
-  ## Auth0 Dashboard を使用する
+  ## Auth0 Dashboard を使用する {#use-the-dashboard}
 </div>
 
 1. [Auth0 Dashboard &gt; Applications](https://manage.auth0.com/#/applications) に移動します。
@@ -59,7 +59,7 @@ title: Refresh Token Expirationを設定する
 8. **Save Changes** を選択します。
 
 <div id="use-the-management-api">
-  ## Management API を使用する
+  ## Management API を使用する {#use-the-management-api}
 </div>
 
 Management API の [/api/v2/clients/{id}](https://auth0.com/docs/api/management/v2#!/Clients/patch_clients_by_id) エンドポイントでは、ペイロードで最大有効期間とアイドル時の有効期間を設定できます。以下は、ローテーションしないリフレッシュトークンの有効期限を設定する例です。
@@ -79,7 +79,7 @@ PATCH /api/v2/clients/{id}
 ```
 
 <div id="support-and-limitations">
-  ## サポートと制限事項
+  ## サポートと制限事項 {#support-and-limitations}
 </div>
 
 * **最大リフレッシュトークン有効期間**は発行時に決定され、その後は、アプリケーションの最大リフレッシュトークン有効期間が更新されても変わりません。ただし、[Actions を使用したセッション](/docs/ja-jp/manage-users/sessions/manage-sessions-actions)を使用すると、発行時に最大リフレッシュトークン有効期間を明示的に上書きできます。これには、リフレッシュトークン交換が成功した場合も含まれます。
@@ -101,7 +101,7 @@ PATCH /api/v2/clients/{id}
 </Callout>
 
 <div id="learn-more">
-  ## 詳しく見る
+  ## 詳しく見る {#learn-more}
 </div>
 
 * [リフレッシュトークンを取得する](/docs/ja-jp/secure/tokens/refresh-tokens/get-refresh-tokens)

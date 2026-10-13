@@ -16,7 +16,7 @@ Dans ces scénarios de service à service, l’application cliente peut génére
 Pour utiliser l’échange de jetons Privileged Worker avec Token Vault, l’application cliente doit être un client hautement privilégié qui peut demander des jetons d’accès à des fournisseurs externes par l’intermédiaire de Token Vault. Elle doit s’authentifier auprès de Token Vault à l’aide de méthodes cryptographiques asymétriques comme l’assertion [Private Key JWT](/docs/fr-ca/get-started/authentication-and-authorization-flow/authenticate-with-private-key-jwt) ou [authentification TLS mutuelle](/docs/fr-ca/get-started/authentication-and-authorization-flow/authenticate-with-mtls).
 
 <div id="prerequisites">
-  ## Prérequis
+  ## Prérequis {#prerequisites}
 </div>
 
 Seuls certains types de clients peuvent utiliser Privileged Worker Token Exchange with Token Vault :
@@ -31,7 +31,7 @@ Avant de configurer Privileged Worker Token Exchange pour votre application clie
 2. Configurez [Private Key JWT](/docs/fr-ca/get-started/authentication-and-authorization-flow/authenticate-with-private-key-jwt) ou [l’authentification TLS mutuelle](/docs/fr-ca/get-started/authentication-and-authorization-flow/authenticate-with-mtls) pour votre application cliente.
 
 <div id="configure-client-application">
-  ## Configurer l’application cliente
+  ## Configurer l’application cliente {#configure-client-application}
 </div>
 
 Pour configurer l’accès privilégié de l’application cliente à Token Vault, vous devez :
@@ -143,7 +143,7 @@ Les `grants` (**Permissions** dans le Dashboard) limitent le client à un ensemb
 </Callout>
 
 <div id="create-signed-jwt-subject-token">
-  ## Créer un jeton de sujet JWT signé
+  ## Créer un jeton de sujet JWT signé {#create-signed-jwt-subject-token}
 </div>
 
 Après avoir [configuré votre application cliente avec la clé publique](#configure-client-application), vous devez créer le jeton de sujet qui sera échangé contre un jeton d’accès pour une API externe. Le jeton de sujet est un JSON Web Token (JWT) contenant les revendications nécessaires. Il est signé à l’aide de la clé privée.
@@ -221,7 +221,7 @@ import * as jwt from 'jsonwebtoken';
 ```
 
 <div id="request-token-for-external-api">
-  ## Demander un jeton pour l’API externe
+  ## Demander un jeton pour l’API externe {#request-token-for-external-api}
 </div>
 
 Une fois que vous avez le JWT signé, vous pouvez envoyer une requête pour obtenir le jeton d’accès à l’API externe :

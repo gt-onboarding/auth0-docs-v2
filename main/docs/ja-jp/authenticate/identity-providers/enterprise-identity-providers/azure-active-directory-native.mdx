@@ -10,7 +10,7 @@ WS-Federation および <Tooltip tip="OpenID: アプリケーションがログ�
 <Frame>![リソース所有者フローを使用する Azure AD アプリの概要図](/docs/images/cdy7uua7fh8z/6Uy9Q35rn0d9rankvlJuBT/6a5fa5175db76fd1cab35b79f0a213ea/azure-ad-native-app.png)</Frame>
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 [Auth0 にアプリケーションを登録する](/docs/ja-jp/get-started/auth0-overview/create-applications):
@@ -20,7 +20,7 @@ WS-Federation および <Tooltip tip="OpenID: アプリケーションがログ�
 3. アプリケーションの [Grant Types](/docs/ja-jp/get-started/applications/update-grant-types) に、適切なフローが含まれていることを確認します。
 
 <div id="steps">
-  ## 手順
+  ## 手順 {#steps}
 </div>
 
 リソース所有者フローを使用してアプリケーションを接続するには、次の手順を行う必要があります。
@@ -42,7 +42,7 @@ WS-Federation および <Tooltip tip="OpenID: アプリケーションがログ�
 </Card>
 
 <div id="set-up-your-applications-in-the-microsoft-azure-portal">
-  ## Microsoft Azure ポータルでアプリケーションを設定する
+  ## Microsoft Azure ポータルでアプリケーションを設定する {#set-up-your-applications-in-the-microsoft-azure-portal}
 </div>
 
 <Warning>
@@ -50,7 +50,7 @@ WS-Federation および <Tooltip tip="OpenID: アプリケーションがログ�
 </Warning>
 
 <div id="register-a-new-web-application">
-  ### 新しいWebアプリケーションを登録する
+  ### 新しいWebアプリケーションを登録する {#register-a-new-web-application}
 </div>
 
 Azure AD へのアプリケーションの登録方法については、[Quickstart: Microsoft Docs の Microsoft identity platform でアプリケーションを登録する](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app)を参照してください。
@@ -77,7 +77,7 @@ Azure AD へのアプリケーションの登録方法については、[Quickst
 このプロセスの間に、Microsoft がアプリケーション用に生成する **Application (client) ID** を控えておいてください (アプリケーションの **Overview** 画面で確認できます) 。これはチュートリアルの後半で必要になります。
 
 <div id="configure-your-web-application-to-expose-an-api">
-  ### API を公開するように Web アプリケーションを構成する
+  ### API を公開するように Web アプリケーションを構成する {#configure-your-web-application-to-expose-an-api}
 </div>
 
 Azure AD で API を公開するように Web アプリケーションを構成する方法については、[Quickstart: Microsoft Docs の「アプリケーションを構成して Web API を公開する」](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-configure-app-expose-web-apis)を参照してください。
@@ -89,7 +89,7 @@ Azure AD で API を公開するように Web アプリケーションを構成�
 この手順の途中で、Microsoft によってアプリケーション用に生成される **Application ID URI** を控えておいてください。チュートリアルの後半で必要になります。
 
 <div id="register-a-new-native-application">
-  ### 新しいネイティブアプリケーションを登録する
+  ### 新しいネイティブアプリケーションを登録する {#register-a-new-native-application}
 </div>
 
 Azure でネイティブアプリケーションを登録する方法については、[Microsoft Docs の Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app)を参照してください。
@@ -106,7 +106,7 @@ Azure でネイティブアプリケーションを登録する方法につい�
 この手順の中で、Microsoft がアプリケーション用に生成する **Application (client) ID** を控えておいてください (アプリケーションの **Overview** 画面で確認できます) 。これは、このチュートリアルの後の手順で必要になります。
 
 <div id="create-a-client-secret-for-your-native-application">
-  ### ネイティブアプリケーションのClient Secretを作成する
+  ### ネイティブアプリケーションのClient Secretを作成する {#create-a-client-secret-for-your-native-application}
 </div>
 
 <Tooltip tip="Client Secret: クライアント（アプリケーション）がAuthorization Serverで認証を行うために使用するSecretです。これはクライアントとAuthorization Serverだけが知っているべきもので、推測されないよう十分にランダムである必要があります。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=client+secret">client secret</Tooltip> の作成方法については、[Quickstart: Configure a client application to access web APIs - Add Credentials to your web application (Microsoft Docs) ](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-configure-app-access-web-apis#add-credentials-to-your-web-application)を参照してください。
@@ -118,7 +118,7 @@ Azure でネイティブアプリケーションを登録する方法につい�
 </Callout>
 
 <div id="add-permissions-for-your-native-application">
-  ### ネイティブ アプリケーションの権限を追加する
+  ### ネイティブ アプリケーションの権限を追加する {#add-permissions-for-your-native-application}
 </div>
 
 **Native** アプリケーションに権限を追加する方法については、[Quickstart: クライアント アプリケーションが Web API にアクセスするための構成 - Web API にアクセスする権限を追加する (Microsoft Docs) ](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-configure-app-access-web-apis#add-permissions-to-access-web-apis)を参照してください。
@@ -139,7 +139,7 @@ API を公開するように構成した Web アプリについては、次の�
   * **API** で **API.Access** を選択すると、アプリでユーザーに代わって API にアクセスできるようになります。
 
 <div id="configure-the-connection-in-auth0">
-  ## Auth0 で接続を設定する
+  ## Auth0 で接続を設定する {#configure-the-connection-in-auth0}
 </div>
 
 Azure AD で両方のアプリケーションを作成したら、Auth0 の接続を設定できます。
@@ -166,19 +166,19 @@ Azure AD で両方のアプリケーションを作成したら、Auth0 の接�
 <Frame>![Create new Azure AD connection](/docs/images/cdy7uua7fh8z/1r6WTgLJUlbiV9jligIwER/55904e9d3c1eec62c2e8421b71cff94b/Enterprise_Connection_-_MSFT_-_English.png)</Frame>
 
 <div id="enable-the-enterprise-connection-for-your-auth0-application">
-  ## Auth0アプリケーションでエンタープライズ接続を有効にする
+  ## Auth0アプリケーションでエンタープライズ接続を有効にする {#enable-the-enterprise-connection-for-your-auth0-application}
 </div>
 
 新しい Azure AD エンタープライズ接続を使用するには、Auth0のアプリケーションで[接続を有効にする](/docs/ja-jp/authenticate/identity-providers/enterprise-identity-providers/enable-enterprise-connections)必要があります。
 
 <div id="test-the-connection">
-  ## 接続をテストする
+  ## 接続をテストする {#test-the-connection}
 </div>
 
 これで、[接続をテストする](/docs/ja-jp/authenticate/identity-providers/enterprise-identity-providers/test-enterprise-connections)準備ができました。
 
 <div id="group-memberships-and-advanced-profile-information">
-  ## グループメンバーシップと高度なプロファイル情報
+  ## グループメンバーシップと高度なプロファイル情報 {#group-memberships-and-advanced-profile-information}
 </div>
 
 このネイティブフローでは、Auth0 は Azure AD から、Azure AD Web アプリケーション向けに発行された<Tooltip tip="アクセストークン: API へのアクセスに使用される認可資格情報で、不透明な文字列または JWT の形式を取ります。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Access+Token">アクセストークン</Tooltip>を受け取ります。その結果、グループメンバーシップや高度なプロファイル情報の読み込みなどの機能は動作しなくなります。これは、Azure AD から受け取ったアクセストークンを、こうした追加情報を取得するために Azure AD Graph API へ問い合わせる用途に使えなくなるためです。
@@ -199,7 +199,7 @@ Azure AD で両方のアプリケーションを作成したら、Auth0 の接�
      ```
 
 <div id="next-steps">
-  ## 次のステップ
+  ## 次のステップ {#next-steps}
 </div>
 
 * [いずれかのライブラリを使用してAuth0を統合する](/docs/ja-jp/libraries)

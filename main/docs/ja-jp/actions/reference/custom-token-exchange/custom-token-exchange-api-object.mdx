@@ -13,13 +13,13 @@ sidebarTitle: 'API オブジェクト'
 custom-token-exchange Actions トリガーの API オブジェクトには、以下が含まれます。
 
 <div id="apiaccess">
-  ## `api.access`
+  ## `api.access` {#apiaccess}
 </div>
 
 リクエストの拒否など、トークン交換リクエストへのアクセスを変更します。
 
 <div id="apiaccessdenycode-reason">
-  ### `api.access.deny(code, reason)`
+  ### `api.access.deny(code, reason)` {#apiaccessdenycode-reason}
 </div>
 
 現在のトークン交換を拒否として扱います。
@@ -56,7 +56,7 @@ exports.onExecuteCustomTokenExchange = async (event, api) => {
 </Expandable>
 
 <div id="apiaccessrejectinvalidsubjecttokenreason">
-  ### `api.access.rejectInvalidSubjectToken(reason)`
+  ### `api.access.rejectInvalidSubjectToken(reason)` {#apiaccessrejectinvalidsubjecttokenreason}
 </div>
 
 リクエストで指定されたサブジェクトトークンを無効として扱います。これにより、リクエストは
@@ -97,13 +97,13 @@ exports.onExecuteCustomTokenExchange = async (event, api) => {
 </Expandable>
 
 <div id="apiauthentication">
-  ## `api.authentication`
+  ## `api.authentication` {#apiauthentication}
 </div>
 
 サブジェクトトークンの認証結果を示し、トークンの発行先となるユーザーを指定します。
 
 <div id="apiauthenticationsetuserbyiduser_id">
-  ### `api.authentication.setUserById(user_id)`
+  ### `api.authentication.setUserById(user_id)` {#apiauthenticationsetuserbyiduser_id}
 </div>
 
 userId を指定して、subject&#95;token に対応するユーザーを指定します。トークン交換リクエストでは、このユーザーのトークンが発行されます。
@@ -138,7 +138,7 @@ exports.onExecuteCustomTokenExchange = async (event, api) => {
 </Expandable>
 
 <div id="apiauthenticationsetuserbyconnectionconnection_name-user_attributes-options">
-  ### `api.authentication.setUserByConnection(connection_name, user_attributes, options)`
+  ### `api.authentication.setUserByConnection(connection_name, user_attributes, options)` {#apiauthenticationsetuserbyconnectionconnection_name-user_attributes-options}
 </div>
 
 接続とユーザー属性を指定して、subject&#95;token に対応するユーザーを設定します。
@@ -317,7 +317,7 @@ exports.onExecuteCustomTokenExchange = async (event, api) => {
 </Expandable>
 
 <div id="apiauthenticationsetorganizationorganization_id_or_name">
-  ### `api.authentication.setOrganization(organization_id_or_name)`
+  ### `api.authentication.setOrganization(organization_id_or_name)` {#apiauthenticationsetorganizationorganization_id_or_name}
 </div>
 
 トークン交換に関連付けられたユーザーのorganizationを設定します。
@@ -353,7 +353,7 @@ exports.onExecuteCustomTokenExchange = async (event, api) => {
 </Expandable>
 
 <div id="apiauthenticationsetactoractor">
-  ### `api.authentication.setActor(actor)`
+  ### `api.authentication.setActor(actor)` {#apiauthenticationsetactoractor}
 </div>
 
 サブジェクトに代わって操作を行うエンティティを表すため、トークン交換のアクターを設定します。
@@ -429,13 +429,13 @@ exports.onExecuteCustomTokenExchange = async (event, api) => {
 </Expandable>
 
 <div id="apiuser">
-  ## `api.user`
+  ## `api.user` {#apiuser}
 </div>
 
 サブジェクトトークンに対応するユーザーの変更をリクエストします。
 
 <div id="apiusersetappmetadatakey-value">
-  ### `api.user.setAppMetadata(key, value)`
+  ### `api.user.setAppMetadata(key, value)` {#apiusersetappmetadatakey-value}
 </div>
 
 サブジェクトトークンに対応するユーザーのアプリケーション固有のメタデータを設定します。
@@ -469,7 +469,7 @@ exports.onExecuteCustomTokenExchange = async (event, api) => {
 </Expandable>
 
 <div id="apiusersetusermetadatakey-value">
-  ### `api.user.setUserMetadata(key, value)`
+  ### `api.user.setUserMetadata(key, value)` {#apiusersetusermetadatakey-value}
 </div>
 
 サブジェクトトークンに対応するユーザーの一般メタデータを設定します。
@@ -502,13 +502,13 @@ exports.onExecuteCustomTokenExchange = async (event, api) => {
 </Expandable>
 
 <div id="apicache">
-  ## `api.cache`
+  ## `api.cache` {#apicache}
 </div>
 
 実行をまたいで保持されるデータを保存・取得します。
 
 <div id="apicachedeletekey">
-  ### `api.cache.delete(key)`
+  ### `api.cache.delete(key)` {#apicachedeletekey}
 </div>
 
 指定されたキーにキャッシュ値を表すレコードが存在する場合、そのレコードを削除します。
@@ -522,7 +522,7 @@ exports.onExecuteCustomTokenExchange = async (event, api) => {
 </Expandable>
 
 <div id="apicachegetkey">
-  ### `api.cache.get(key)`
+  ### `api.cache.get(key)` {#apicachegetkey}
 </div>
 
 指定されたキーにキャッシュ内のレコードが存在する場合、そのキャッシュ値に関するレコードを取得します。レコードが見つかった場合、キャッシュ値は返されるオブジェクトの `value` プロパティに格納されています。
@@ -536,7 +536,7 @@ exports.onExecuteCustomTokenExchange = async (event, api) => {
 </Expandable>
 
 <div id="apicachesetkey-value-options">
-  ### `api.cache.set(key, value, options)`
+  ### `api.cache.set(key, value, options)` {#apicachesetkey-value-options}
 </div>
 
 指定したキーに文字列値をキャッシュへ保存または更新します。

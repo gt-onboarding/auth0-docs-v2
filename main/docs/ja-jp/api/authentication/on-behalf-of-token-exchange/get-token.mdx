@@ -10,7 +10,7 @@ On-Behalf-Of (OBO) トークン交換 ([RFC 8693](https://datatracker.ietf.org/d
 新しいトークンは、元のユーザーの識別情報と権限を維持したまま、下流サービス向けに特化したスコープが設定されます。これにより、そのサービスはエンドユーザーに基づいて認可を判断できます。委任チェーンは `act` (actor) クレームで追跡され、各レベルは呼び出しチェーン内のサービスを表します。詳しくは、[On-Behalf-Of Token Exchange documentation](https://auth0.com/docs/secure/call-apis-on-users-behalf/on-behalf-of-token-exchange)を参照してください。
 
 <div id="remarks">
-  ## 注意事項
+  ## 注意事項 {#remarks}
 </div>
 
 * リソースサーバーに関連付けられた Custom API クライアントのみが、OBO トークン交換を使用できます。Custom API クライアントには、次の要件があります。
@@ -26,7 +26,7 @@ On-Behalf-Of (OBO) トークン交換 ([RFC 8693](https://datatracker.ietf.org/d
 * API 呼び出しのたびに新しいトークンをリクエストするのではなく、アクセストークンの有効期間中はそのアクセストークンをキャッシュしてください。アクセストークンは有効期限が切れるまで再利用できます。トークン交換を繰り返すと、リソースを無駄に消費し、レイテンシーが増加し、レート制限に達する可能性があります。
 
 <div id="parameters">
-  ## パラメーター
+  ## パラメーター {#parameters}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -38,7 +38,7 @@ On-Behalf-Of (OBO) トークン交換 ([RFC 8693](https://datatracker.ietf.org/d
 </ParamField>
 
 <div id="request-body">
-  ## リクエストボディ
+  ## リクエストボディ {#request-body}
 </div>
 
 <ParamField body="grant_type" type="string" required>
@@ -74,7 +74,7 @@ On-Behalf-Of (OBO) トークン交換 ([RFC 8693](https://datatracker.ietf.org/d
 </ParamField>
 
 <div id="response">
-  ## レスポンス
+  ## レスポンス {#response}
 </div>
 
 | ステータス | 説明                                                                                                        |
@@ -122,7 +122,7 @@ On-Behalf-Of (OBO) トークン交換 ([RFC 8693](https://datatracker.ietf.org/d
 ```
 
 <div id="response-fields">
-  ## レスポンスフィールド
+  ## レスポンスフィールド {#response-fields}
 </div>
 
 <ResponseField name="access_token" type="string">

@@ -6,7 +6,7 @@ title: サードパーティのCAPTCHAプロバイダー連携を設定する
 Auth0では、[ボット検出](/docs/ja-jp/secure/attack-protection/bot-detection)用に複数のサードパーティCAPTCHAプロバイダー連携をサポートしています。
 
 <div id="google-recaptcha-enterprise-on-google-cloud-platform-gcp">
-  ## Google Cloud Platform (GCP) 上の Google reCAPTCHA Enterprise
+  ## Google Cloud Platform (GCP) 上の Google reCAPTCHA Enterprise {#google-recaptcha-enterprise-on-google-cloud-platform-gcp}
 </div>
 
 Google reCAPTCHA Enterprise は、月間評価数が 100 万件を超えるトラフィック向けの <Tooltip tip="ボット検出: Auth0 がログインプロセス中に CAPTCHA を有効にして、ボットの疑いがあるトラフィックをブロックする攻撃対策の一形態です。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Bot+Detection">ボット検出</Tooltip> サービスとして利用できます。
@@ -14,7 +14,7 @@ Google reCAPTCHA Enterprise は、月間評価数が 100 万件を超えるト�
 GCP で reCAPTCHA Enterprise を設定する方法については、[Google ドキュメントの「Set up reCAPTCHA Enterprise ...」](https://cloud.google.com/recaptcha-enterprise/docs/authenticate-apis)を参照してください。
 
 <div id="locate-your-gcp-project-id">
-  ### GCP プロジェクト ID を確認する
+  ### GCP プロジェクト ID を確認する {#locate-your-gcp-project-id}
 </div>
 
 1. [Google Cloud Dashboard](https://console.cloud.google.com/) に移動します。
@@ -22,14 +22,14 @@ GCP で reCAPTCHA Enterprise を設定する方法については、[Google ド�
 3. 後で必要になるため、**Project ID** をメモしておきます。
 
 <div id="enable-recaptcha-enterprise">
-  ### reCAPTCHA Enterprise を有効にする
+  ### reCAPTCHA Enterprise を有効にする {#enable-recaptcha-enterprise}
 </div>
 
 1. [Google Cloud Dashboard](https://console.cloud.google.com/) の検索バーに reCAPTCHA Enterprise API と入力し、マーケットプレイスの検索結果から選択します。
 2. API を有効にするには、**Enable** を選択します。
 
 <div id="create-a-site-key">
-  ### サイトキーを作成する
+  ### サイトキーを作成する {#create-a-site-key}
 </div>
 
 1. [Google Cloud Dashboard](https://console.cloud.google.com/) で、検索バーに reCAPTCHA Enterprise と入力し、マーケットプレイスの検索結果から選択します。
@@ -42,7 +42,7 @@ GCP で reCAPTCHA Enterprise を設定する方法については、[Google ド�
 8. 後で必要になるため、**Site Key** を控えておきます。
 
 <div id="create-an-api-key">
-  ### API Key を作成する
+  ### API Key を作成する {#create-an-api-key}
 </div>
 
 1. [Google Cloud Dashboard](https://console.cloud.google.com/) で、検索バーに Credentials と入力し、検索結果から選択します。
@@ -53,7 +53,7 @@ GCP で reCAPTCHA Enterprise を設定する方法については、[Google ド�
 6. **Save** を選択します。
 
 <div id="hcaptcha">
-  ## hCaptcha
+  ## hCaptcha {#hcaptcha}
 </div>
 
 hCaptcha ウィジェットを使用すると、ボット、スパム、その他の自動化された不正利用からアプリケーションを保護できます。
@@ -61,7 +61,7 @@ hCaptcha ウィジェットを使用すると、ボット、スパム、その�
 hCaptcha の詳細や設定情報の取得方法については、[hCaptcha Docs の Switch from reCAPTCHA to hCaptcha](https://docs.hcaptcha.com/switch) をご覧ください。
 
 <div id="friendly-captcha">
-  ## Friendly Captcha
+  ## Friendly Captcha {#friendly-captcha}
 </div>
 
 Friendly Captcha は、ウェブサイト上のスパムを防ぐためのシステムです。ユーザーエクスペリエンスへの影響をほとんど抑えたまま、Friendly Captcha のウィジェットをウェブアプリに追加してスパム対策を行えます。
@@ -69,7 +69,7 @@ Friendly Captcha は、ウェブサイト上のスパムを防ぐためのシス
 Friendly Captcha の詳細や設定情報の取得方法については、[Friendly Captcha Docs の Installation](https://docs.friendlycaptcha.com/#/installation?id=installation)を参照してください。
 
 <div id="arkose">
-  ## Arkose
+  ## Arkose {#arkose}
 </div>
 
 Arkose Labs は、人手による攻撃やボットによる攻撃を軽減するためのボット検出ソリューションを提供しています。CAPTCHA プロバイダーとして Arkose とシームレスに連携する方法について詳しくは、[Arkose Bot Manager](https://www.arkoselabs.com/arkose-bot-manager/) を参照してください。
@@ -79,7 +79,7 @@ Arkose Labs は、人手による攻撃やボットによる攻撃を軽減す�
 </Warning>
 
 <div id="configure-callback-action-with-auth0js">
-  ### Auth0.js でコールバック処理を設定する
+  ### Auth0.js でコールバック処理を設定する {#configure-callback-action-with-auth0js}
 </div>
 
 CAPTCHA プロバイダーとして Arkose を使用する場合、Auth0.js の WebAuth クライアントの `renderCaptcha` メソッドでは、コールバック関数を渡せます。コールバックの 2 番目のパラメーターには、`triggerCaptcha` 関数を含む payload オブジェクトが渡されます。`triggerCaptcha` 関数を使用すると、アプリケーションで CAPTCHA プロンプトをどのように処理し、レンダリングするかを設定できます。

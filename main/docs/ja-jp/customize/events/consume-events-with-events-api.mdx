@@ -12,7 +12,7 @@ Events API は、Event Streams に代わるプル型の手段です。Auth0 が�
 * プッシュ型の配信よりもポーリングを好むシステムと統合したい。
 
 <div id="how-the-events-api-works">
-  ## Events API の仕組み
+  ## Events API の仕組み {#how-the-events-api-works}
 </div>
 
 アプリケーションが Events API に接続すると、SSE メッセージのストリームを受信します。各メッセージには、**オフセット** として機能する `id` フィールドが含まれます。接続が切断された場合、アプリケーションは再接続し、最後に受信した オフセット を渡します。Auth0 はその位置から配信を再開するため、イベントが失われることはありません。
@@ -29,7 +29,7 @@ SSE ストリームには、次のメッセージタイプが含まれます。
 | `event: error`                                    | 終端エラーです。このメッセージの後、ストリームは閉じます。                                    |
 
 <div id="example-sse-stream">
-  ### SSEストリームの例
+  ### SSEストリームの例 {#example-sse-stream}
 </div>
 
 ```text wrap lines
@@ -53,7 +53,7 @@ data: {"offset":"NTY3ODkwMTIzCg==","event":{"id":"evt_def456","type":"user.updat
 ```
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 始める前に、以下を用意してください。
@@ -69,7 +69,7 @@ data: {"offset":"NTY3ODkwMTIzCg==","event":{"id":"evt_def456","type":"user.updat
 * `read:events` スコープを持つ Management API アクセストークン。詳しくは、[Management API Access Tokens](/docs/ja-jp/secure/tokens/access-tokens/management-api-access-tokens) をご覧ください。
 
 <div id="connect-to-the-events-api">
-  ## Events API に接続する
+  ## Events API に接続する {#connect-to-the-events-api}
 </div>
 
 テナントの events エンドポイントへの SSE 接続を確立します。次の例では `curl` を使用します。
@@ -82,7 +82,7 @@ curl -N --http2 \
 ```
 
 <div id="query-parameters">
-  ### クエリパラメータ
+  ### クエリパラメータ {#query-parameters}
 </div>
 
 クエリパラメータを使用して、ストリームを絞り込んだり、再開したりできます。
@@ -101,7 +101,7 @@ curl -N --http2 \
 ```
 
 <div id="resume-after-a-disconnection">
-  ## 切断後の再開
+  ## 切断後の再開 {#resume-after-a-disconnection}
 </div>
 
 SSE 接続は、ネットワークの問題、トークンの有効期限切れ、サーバー側での接続の切り替え (Auth0 では負荷分散のため、通常は数分ごとに定期的に接続を閉じます) など、さまざまな理由で切断されることがあります。標準的な SSE クライアントライブラリは、再接続時に最後のオフセットを送信することで、こうした切断を透過的に処理します。
@@ -126,35 +126,35 @@ curl -N --http2 \
 </Callout>
 
 <div id="handle-message-types">
-  ## メッセージの種類を処理
+  ## メッセージの種類を処理 {#handle-message-types}
 </div>
 
 <div id="real-events">
-  ### 実際のイベント
+  ### 実際のイベント {#real-events}
 </div>
 
 `event` フィールドが既知のイベントタイプ (たとえば `user.created`) に一致するメッセージには、`data` フィールドにイベントの完全なペイロードが含まれます。JSON を解析し、ビジネスロジックに従ってイベントを処理してください。
 
 <div id="offset-only-messages">
-  ### オフセットのみのメッセージ
+  ### オフセットのみのメッセージ {#offset-only-messages}
 </div>
 
 Auth0 は、ストリーム内の位置を進めるために、一定間隔 (ハートビートの頻度) で `offset-only` メッセージを送信します。これらのメッセージにはイベント `ペイロード` は含まれません。受信したら保存しているオフセットを更新してください。そうすることで、今後再接続した際に、すでに通過したイベントが再送されるのを防げます。
 
 <div id="error-messages">
-  ### エラーメッセージ
+  ### エラーメッセージ {#error-messages}
 </div>
 
 `event: error` メッセージは、オフセットの有効期限切れやサーバー側の問題など、回復不能な問題を示します。このメッセージを受信すると、ストリームは終了します。アプリケーションではエラーを記録したうえで、適切なオフセットまたは新しい `from_timestamp` を指定して再接続する必要があります。
 
 <div id="heartbeats">
-  ### ハートビート
+  ### ハートビート {#heartbeats}
 </div>
 
 `:` で始まる行は、ハートビート用のSSEコメントです。これにより、プロキシやロードバランサーを経由しても接続を維持できます。特別な処理は必要ありません。
 
 <div id="server-side-connection-cycling">
-  ## サーバー側での接続の切り替え
+  ## サーバー側での接続の切り替え {#server-side-connection-cycling}
 </div>
 
 Auth0 では、負荷分散のために SSE 接続を定期的に切断します (通常は数分ごと) 。これは想定された動作であり、エラーではありません。標準的な SSE クライアントライブラリ (`eventsource` npm パッケージを含む) は、`Last-Event-ID` ヘッダーを使って自動的に再接続するため、アプリケーションはイベントを取りこぼすことなく正しいオフセットから再開できます。
@@ -162,7 +162,7 @@ Auth0 では、負荷分散のために SSE 接続を定期的に切断します
 カスタムの SSE クライアントを実装する場合は、最新のオフセットを保持し、その値を使って再接続することで、接続の切断に適切に対応できるようにしてください。
 
 <div id="implement-a-consumer">
-  ## コンシューマーを実装する
+  ## コンシューマーを実装する {#implement-a-consumer}
 </div>
 
 以下の Node.js の例では、イベントを処理し、オフセットをファイルに保存する最小限の Events API コンシューマーを示しています。
@@ -244,7 +244,7 @@ connect();
 </Callout>
 
 <div id="error-responses">
-  ## エラーレスポンス
+  ## エラーレスポンス {#error-responses}
 </div>
 
 接続を確立できない場合、Events API は標準的な HTTP ステータスコードを返します。
@@ -259,7 +259,7 @@ connect();
 | `429`    | レート制限を超過しています。`Retry-After` ヘッダーの値で指定された時間だけ待ってから、再試行してください。 |
 
 <div id="learn-more">
-  ## 詳細
+  ## 詳細 {#learn-more}
 </div>
 
 * [イベントカタログ](/docs/ja-jp/events)

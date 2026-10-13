@@ -10,14 +10,14 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 ユーザーには、<Tooltip tip="Auth0 Dashboard: サービスを設定するための Auth0 の主要な製品。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip> または <Tooltip tip="Management API: テナント、アプリケーション、ユーザー、その他のリソースをプログラムで管理するための Auth0 の管理 API。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Management+API">Management API</Tooltip> を使用して [ロール](/docs/ja-jp/manage-users/access-control/rbac) を割り当てることができます。割り当てたロールは、API Authorization Core の機能セットで利用できます。
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 * ロールベースのアクセス制御 (RBAC) を正しく機能させるには、Dashboard または Management API を使用して、API で RBAC を有効にする必要があります。Authorization Core の機能は Authorization Extension とは異なります。比較については、[Authorization Core と Authorization Extension の比較](/docs/ja-jp/manage-users/access-control/authorization-core-vs-authorization-extension)をご覧ください。
 * ロールはあらかじめ定義された値から選択します。ロールの一覧が空の場合は、まず[ロールを作成](/docs/ja-jp/manage-users/access-control/configure-core-rbac/roles/create-roles)していることを確認してください。
 
 <div id="dashboard">
-  ## Dashboard
+  ## Dashboard {#dashboard}
 </div>
 
 ユーザーにロールを割り当てる方法は 2 つあります。**Users** リストからユーザーを選択してロールを割り当てるか、各ユーザーの **User Details** (ユーザープロフィール) ページに移動し、**Roles** タブで割り当てるロールを選択します。
@@ -25,7 +25,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 ロールが 50 個を超える場合、**Roles** タブに表示されるのは先頭の 50 個のみです。それ以外のロールは Management API で割り当てることができます。
 
 <div id="assign-roles-in-user-list">
-  ### ユーザー一覧でロールを割り当てる
+  ### ユーザー一覧でロールを割り当てる {#assign-roles-in-user-list}
 </div>
 
 1. [Dashboard &gt; User Management &gt; Users](https://manage.auth0.com/#/users) に移動します。
@@ -33,7 +33,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 3. 割り当てるロールを選択し、**Assign** をクリックします。
 
 <div id="assign-roles-in-user-profile">
-  ### ユーザープロファイルでロールを割り当てる
+  ### ユーザープロファイルでロールを割り当てる {#assign-roles-in-user-profile}
 </div>
 
 各ユーザーのプロフィールページからロールを割り当てることもできます。
@@ -43,7 +43,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 3. 割り当てるロールを選択し、**Assign.** をクリックします。
 
 <div id="management-api">
-  ## Management API
+  ## Management API {#management-api}
 </div>
 
 [Assign User Roles エンドポイント](https://auth0.com/docs/api/management/v2#!/Users/post_user_roles) に `POST` リクエストを送信します。`USER_ID`、`MGMT_API_ACCESS_TOKEN`、`ROLE_ID` の各プレースホルダー値は、それぞれご使用のユーザー ID、Management API の <Tooltip tip="アクセストークン: API へのアクセスに使用される、不透明な文字列または JWT 形式の認可資格情報。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=access+token">アクセストークン</Tooltip>、およびロール ID に必ず置き換えてください。
@@ -212,7 +212,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 | `ROLE_ID`               | 指定したユーザーに追加するロールの ID。                                                                                                 |
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * [ロールベースのアクセス制御 (RBAC) のロールを管理する](/docs/ja-jp/manage-users/access-control/configure-core-rbac/roles)

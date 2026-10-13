@@ -6,7 +6,7 @@ title: Aperçu de la solution (SPAs + API)
 Afin de s’assurer que seuls les utilisateurs et les applications autorisés peuvent accéder à la Timesheets API, ExampleCo a décidé d’utiliser le [cadre d’autorisation OAuth 2.0](https://tools.ietf.org/html/rfc6749). Ce cadre offre à l’entreprise la souplesse recherchée, puisque les différents types d’octroi lui permettent d’autoriser facilement les divers types d’applications qui doivent communiquer avec la Timesheets API.
 
 <div id="api-authentication-and-authorization">
-  ## Authentification et autorisation de l’API
+  ## Authentification et autorisation de l’API {#api-authentication-and-authorization}
 </div>
 
 Une API permet d’exposer les fonctionnalités de votre application à d’autres applications. Une application peut envoyer une requête à un point de terminaison d’une API et recevoir des informations en réponse.
@@ -53,7 +53,7 @@ En utilisant le framework d’autorisation <Tooltip tip="OAuth 2.0 : framework 
 </Card>
 
 <div id="implicit-grant">
-  ## Octroi implicite
+  ## Octroi implicite {#implicit-grant}
 </div>
 
 OAuth 2.0 offre plusieurs **types d’octroi** pour différents cas d’utilisation. Dans ce cas d’utilisation précis, nous voulons accéder à l’API à partir d’une [application côté client](/docs/fr-ca/quickstart/spa).
@@ -70,7 +70,7 @@ Une fois l’utilisateur authentifié, l’application reçoit le <Tooltip tip="
 4. L’application peut utiliser le jeton d’accès pour envoyer une requête à l’API au nom de l’utilisateur.
 
 <div id="authorization-extension">
-  ## Authorization Extension
+  ## Authorization Extension {#authorization-extension}
 </div>
 
 L’[Auth0 Authorization Extension](/docs/fr-ca/customize/extensions/authorization-extension) vous permet de configurer des rôles, des groupes et des permissions, puis de les attribuer à des utilisateurs.

@@ -6,7 +6,7 @@ title: Hooks から Actions への移行
 既存の Hooks を Actions に変換する際は、新しい Action を、その Hook の種類に対応するトリガーに関連付ける必要があります。以下の手順に従い、その中で示す対応関係を使用すれば、同じ機能を実現できます。
 
 <div id="plan-your-migration">
-  ## 移行を計画する
+  ## 移行を計画する {#plan-your-migration}
 </div>
 
 デプロイ済みのActionsは有効なHooksの後に実行されるため、Hooksを1つずつAuth0 Dashboardで変換することも、<Tooltip tip="Management API: 顧客が管理タスクを実行できるようにするための製品。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Management+API">Management API</Tooltip> を使用して一括で変換することもできます。
@@ -22,7 +22,7 @@ title: Hooks から Actions への移行
 </Card>
 
 <div id="understand-limitations">
-  ## 制限事項を理解する
+  ## 制限事項を理解する {#understand-limitations}
 </div>
 
 Actions は Hooks でできることの大半に対応していますが、移行を始める前に、いくつかの制限事項を把握しておく必要があります。 (注意: 移行中は Hooks と Actions の両方を同時に実行できます。)
@@ -33,7 +33,7 @@ Actions は Hooks でできることの大半に対応していますが、移�
 制限事項の一覧については、[Actions Limitations](/docs/ja-jp/customize/actions/limitations) を参照してください。
 
 <div id="convert-code">
-  ## コードを変換する
+  ## コードを変換する {#convert-code}
 </div>
 
 Hook を Action に変換するには、Hook 固有のコードを Actions のコードに置き換える必要があります。このセクションでは、動作中の Hook を対応する Action に変換するために必要な作業について説明します。
@@ -45,7 +45,7 @@ Hook を Action に変換するには、Hook 固有のコードを Actions の�
 </Card>
 
 <div id="copy-hook-code-to-a-new-action">
-  ### Hook のコードを新しい Action にコピーする
+  ### Hook のコードを新しい Action にコピーする {#copy-hook-code-to-a-new-action}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -76,7 +76,7 @@ Hook を Action に変換するには、Hook 固有のコードを Actions の�
    また、新しい Actions のトリガーに関連付けられた `event` オブジェクトについても確認してください。このガイドの後半にある [データへのアクセス方法を変更する](#change-how-data-is-accessed) セクションに進むと、関連ドキュメントへのリンクが表示されます。
 
 <div id="change-the-function-declaration">
-  ### 関数宣言を変更する
+  ### 関数宣言を変更する {#change-the-function-declaration}
 </div>
 
 フックの関数はデフォルトエクスポートでエクスポートされますが、Actions の関数は名前付きエクスポートを使用します。変換する Hook の種類に応じて、使用する名前付きエクスポートも変わります。対応は次のとおりです。
@@ -115,7 +115,7 @@ exports.onExecuteSendPhoneMessage = async (event) => {}
 ```
 
 <div id="convert-dependencies">
-  ### 依存関係を移行する
+  ### 依存関係を移行する {#convert-dependencies}
 </div>
 
 フックとActionsでは、依存関係はほぼ同じ方法で扱います。どちらも、依存関係をUIまたはManagement APIから個別に追加し、コード内で使用します。また、どちらでも`npm` Registryで利用可能な任意のパッケージを`require`できます。
@@ -130,7 +130,7 @@ exports.onExecuteSendPhoneMessage = async (event) => {}
 4. 見つかった`require`文を`function`宣言の外に移動します。
 
 <div id="convert-secrets">
-  ### シークレットを変換する
+  ### シークレットを変換する {#convert-secrets}
 </div>
 
 Hooks と Actions では、シークレットはほぼ同じように扱われます。どちらも、Secrets は UI または Management API を使って Hook/Action ごとに追加し、コード内で利用します。
@@ -164,7 +164,7 @@ async (event, api) => {
 フックと同様に、Auth0 は保存時にすべてのシークレットの値を暗号化します。
 
 <div id="change-how-data-is-accessed">
-  ### データへのアクセス方法を変更する
+  ### データへのアクセス方法を変更する {#change-how-data-is-accessed}
 </div>
 
 Hooks では、ユーザー、クライアント、リクエスト、そのほかのコンテキストデータに関する情報は、Hook 関数に渡される複数の引数に格納されています。Actions では、これらのデータは再構成され、`event` オブジェクトに移されています。多くのプロパティはそのまま移行されていますが、わかりやすくするために統合されたものもあります。
@@ -204,7 +204,7 @@ async (event, api) => {
 </Callout>
 
 <div id="convert-callbacks">
-  ### コールバックを変換する
+  ### コールバックを変換する {#convert-callbacks}
 </div>
 
 Hook での処理が完了したら、実行を完了するために `callback()` 関数を呼び出す必要があります。一方、Actions ではコールバックの仕組みを使用しないため、Actions 関数から `callback()` の呼び出しをすべて削除する必要があります。
@@ -212,7 +212,7 @@ Hook での処理が完了したら、実行を完了するために `callback()
 以前、Client Credentials Exchange または Pre User Registration Hook で、リクエストを失敗させたりユーザーを更新したりするために `callback()` 関数を使用していた場合でも、Actions では新しい `api` インターフェースを通じて引き続きこれを行えます。
 
 <div id="client-credentials-exchange">
-  #### Client Credentials Exchange
+  #### Client Credentials Exchange {#client-credentials-exchange}
 </div>
 
 Client Credentials Exchange Hook で access token に追加のクレームを設定していた場合:
@@ -238,7 +238,7 @@ exports.onExecuteCredentialsExchange = async (event, api) => {
 ```
 
 <div id="pre-user-registration">
-  #### Pre User Registration
+  #### Pre User Registration {#pre-user-registration}
 </div>
 
 Pre User Registration Hook で access token に追加のクレームを設定していた場合:
@@ -283,7 +283,7 @@ exports.onExecutePreUserRegistration = async (event, api) => {
 ```
 
 <div id="complete-the-migration">
-  ## 移行を完了する
+  ## 移行を完了する {#complete-the-migration}
 </div>
 
 新しいActionsのコードを作成してテストしたら、Actionを有効化し、Hookを無効化する必要があります。これら2つの作業は立て続けにすばやく行えますが、順序によっては、短時間だけ両方が実行されたり、どちらも実行されなかったりする可能性があります。有効なHooksはデプロイ済みのActionsより先に実行されるため、Actionsで別のロジックを構築してテストしている間も、一部のロジックをルールに残しておくことができます。

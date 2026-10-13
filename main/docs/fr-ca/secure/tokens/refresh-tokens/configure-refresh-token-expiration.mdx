@@ -28,7 +28,7 @@ Vous pouvez activer et configurer deux paramètres de durée de vie des jetons d
 * **Durée de vie d’inactivité** : définissez la durée de vie d’inactivité des jetons d’actualisation émis afin qu’ils expirent si l’utilisateur n’est pas actif dans votre application pendant une période donnée.
 
 <div id="use-the-dashboard">
-  ## Utiliser le Dashboard
+  ## Utiliser le Dashboard {#use-the-dashboard}
 </div>
 
 1. Accédez à [Dashboard &gt; Applications](https://manage.auth0.com/#/applications).
@@ -59,7 +59,7 @@ Vous pouvez activer et configurer deux paramètres de durée de vie des jetons d
 8. Sélectionnez **Save Changes**.
 
 <div id="use-the-management-api">
-  ## Utiliser la Management API
+  ## Utiliser la Management API {#use-the-management-api}
 </div>
 
 Vous pouvez configurer les paramètres de durée de vie maximale et d’inactivité dans le payload de l’endpoint [/api/v2/clients/{id}](https://auth0.com/docs/api/management/v2#!/Clients/patch_clients_by_id) de la Management API. Voici un exemple qui définit la durée avant expiration d’un jeton d’actualisation sans rotation :
@@ -79,7 +79,7 @@ PATCH /api/v2/clients/{id}
 ```
 
 <div id="support-and-limitations">
-  ## Prise en charge et limites
+  ## Prise en charge et limites {#support-and-limitations}
 </div>
 
 * La **durée de vie maximale du jeton d’actualisation** est déterminée au moment de son émission et demeure fixe pendant toute sa durée de vie, même si la durée de vie maximale du jeton d’actualisation de l’application est mise à jour. Toutefois, vous pouvez explicitement remplacer la durée de vie maximale du jeton d’actualisation au moment de son émission à l’aide des [sessions avec Actions](/docs/fr-ca/manage-users/sessions/manage-sessions-actions), y compris lors d’échanges réussis de jetons d’actualisation.
@@ -101,7 +101,7 @@ PATCH /api/v2/clients/{id}
 </Callout>
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Obtenir des jetons d’actualisation](/docs/fr-ca/secure/tokens/refresh-tokens/get-refresh-tokens)

@@ -14,7 +14,7 @@ Le SDK Auth0-PHP s’intègre à vos applications PHP et offre des fonctionnalit
 Le dépôt Auth0-PHP est open source et [hébergé sur GitHub](https://github.com/auth0/auth0-PHP). Nous apprécions toutes les contributions, y compris les signalements de bogues, les propositions d’amélioration et les pull requests.
 
 <div id="requirements">
-  ## Prérequis
+  ## Prérequis {#requirements}
 </div>
 
 * PHP 8.2+
@@ -25,7 +25,7 @@ Le dépôt Auth0-PHP est open source et [hébergé sur GitHub](https://github.co
 * Une implémentation de [messages HTTP PSR-7](https://packagist.org/providers/psr/http-message-implementation)
 
 <div id="installation">
-  ## Installation
+  ## Installation {#installation}
 </div>
 
 L’installation de l’Auth0 PHP SDK nécessite [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos), l’outil standard de gestion des dépendances pour PHP. Composer vous permet de déclarer les bibliothèques dont votre projet a besoin et les installe pour vous. Assurez-vous que Composer est installé et accessible à partir de votre shell avant de continuer.
@@ -39,7 +39,7 @@ composer require auth0/auth0-php
 Cela créera un sous-dossier `vendor` dans votre projet et téléchargera toutes les dépendances nécessaires à l’utilisation du SDK PHP. Cela créera aussi le fichier `vendor/autoload.php`, nécessaire pour que le SDK fonctionne avec votre application, que nous importerons plus tard.
 
 <div id="get-started">
-  ## Pour commencer
+  ## Pour commencer {#get-started}
 </div>
 
 Pour utiliser les API d’authentification et de gestion d’Auth0, vous aurez besoin d’un compte Auth0 gratuit et d’une application :
@@ -50,7 +50,7 @@ Pour utiliser les API d’authentification et de gestion d’Auth0, vous aurez b
 4. Cliquez sur l’onglet **Settings** pour obtenir les identifiants requis ci-dessous. Pour en savoir plus, consultez [Application Settings](/docs/fr-ca/get-started/applications/application-settings).
 
 <div id="configure-the-sdk">
-  ## Configurer le SDK
+  ## Configurer le SDK {#configure-the-sdk}
 </div>
 
 Il est recommandé d’utiliser des [variables d’environnement](https://secure.php.net/manual/en/reserved.variables.environment.php) pour stocker et charger les identifiants sensibles d’Auth0. Vous éviterez ainsi de les coder en dur dans votre application. Créons un fichier `.env` à la racine du répertoire de notre projet pour y stocker les identifiants de l’application :
@@ -83,7 +83,7 @@ composer require vlucas/phpdotenv
 ```
 
 <div id="initialize-the-sdk">
-  ## Initialiser le SDK
+  ## Initialiser le SDK {#initialize-the-sdk}
 </div>
 
 Nous sommes prêts à configurer et à initialiser une instance du SDK dans notre nouvelle application PHP. Commençons par créer le fichier source PHP que nous utiliserons pour cette démonstration, `index.php`, puis utilisons l’extrait de code suivant pour commencer :
@@ -114,7 +114,7 @@ Félicitations ! Votre application est maintenant configurée et prête à êtr
 * [API backend PHP](/docs/fr-ca/quickstart/backend/php/)
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Gérer le Login, le Logout et les profils utilisateur](/docs/fr-ca/libraries/auth0-php/auth0-php-basic-use)

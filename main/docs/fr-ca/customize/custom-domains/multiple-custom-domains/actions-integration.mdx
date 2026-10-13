@@ -8,13 +8,13 @@ import {AuthCodeBlock} from "/snippets/fr-ca/AuthCodeBlock.jsx";
 Les [Auth0 Actions](/docs/fr-ca/customize/actions) vous permettent de personnaliser l’authentification à l’aide de code personnalisé. Lorsque vous utilisez [plusieurs domaines personnalisés](/docs/fr-ca/customize/custom-domains/multiple-custom-domains), vous pouvez accéder aux renseignements sur le domaine personnalisé dans vos Actions afin de mettre en œuvre une logique propre au domaine, de diriger les utilisateurs vers des organisations, d’appliquer des politiques d’accès et de personnaliser les notifications.
 
 <div id="accessing-custom-domain-information">
-  ## Accès aux renseignements sur le domaine personnalisé
+  ## Accès aux renseignements sur le domaine personnalisé {#accessing-custom-domain-information}
 </div>
 
 Actions permettent d’accéder aux renseignements sur le domaine personnalisé par l’intermédiaire de l’objet `event.custom_domain`. Cet objet contient le nom de domaine ainsi que toutes les métadonnées configurées pour ce domaine.
 
 <div id="available-triggers">
-  ### Déclencheurs disponibles
+  ### Déclencheurs disponibles {#available-triggers}
 </div>
 
 L’objet `event.custom_domain` est disponible dans les déclencheurs des Actions suivants :
@@ -35,7 +35,7 @@ L’objet `event.custom_domain` est disponible dans les déclencheurs des Action
 </Note>
 
 <div id="event-object-structure">
-  ### Structure de l’objet Event
+  ### Structure de l’objet Event {#event-object-structure}
 </div>
 
 En utilisant le domaine `login.example.com` configuré avec les métadonnées du domaine :
@@ -62,11 +62,11 @@ Afficherait dans la console :
 ```
 
 <div id="common-use-cases">
-  ## Cas d’utilisation courants
+  ## Cas d’utilisation courants {#common-use-cases}
 </div>
 
 <div id="conditional-logic-by-domain">
-  ### Logique conditionnelle par domaine
+  ### Logique conditionnelle par domaine {#conditional-logic-by-domain}
 </div>
 
 Appliquez différentes règles selon que vous utilisez un domaine personnalisé ou un domaine canonique :
@@ -86,7 +86,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="email-domain-based-access-control">
-  ### Contrôle d’accès selon le domaine du courriel
+  ### Contrôle d’accès selon le domaine du courriel {#email-domain-based-access-control}
 </div>
 
 Appliquez des politiques d’accès selon le domaine du courriel à l’aide des métadonnées du domaine personnalisé :
@@ -140,7 +140,7 @@ exports.onExecutePreUserRegistration = async (event, api) => {
 ```
 
 <div id="application-metadata-based-access-control">
-  ### Contrôle d’accès basé sur les métadonnées de l’application
+  ### Contrôle d’accès basé sur les métadonnées de l’application {#application-metadata-based-access-control}
 </div>
 
 Appliquez les politiques d’accès des groupes d’applications et de domaines à l’aide des métadonnées d’application et de domaine :
@@ -170,7 +170,7 @@ exports.onExecuteCredentialsExchange = async (event, api) => {
 ```
 
 <div id="connection-metadata-based-access-control">
-  ### Contrôle d’accès basé sur les métadonnées de connexion
+  ### Contrôle d’accès basé sur les métadonnées de connexion {#connection-metadata-based-access-control}
 </div>
 
 Appliquez les politiques d’accès pour les groupes de connexions et de domaines à l’aide des métadonnées de connexion et de domaine :
@@ -198,7 +198,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="organization-metadata-based-access-control">
-  ### Contrôle d’accès fondé sur les métadonnées de l’organisation
+  ### Contrôle d’accès fondé sur les métadonnées de l’organisation {#organization-metadata-based-access-control}
 </div>
 
 Faites appliquer les politiques d’accès des groupes d’organisation et de domaine à l’aide des métadonnées de l’organisation et du domaine :
@@ -232,7 +232,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="region-based-requests">
-  ### Requêtes par région
+  ### Requêtes par région {#region-based-requests}
 </div>
 
 Envoyez des requêtes à des services externes propres à une région en fonction des métadonnées du domaine personnalisé :
@@ -265,11 +265,11 @@ exports.onExecuteCustomEmailProvider = async (event, api) => {
 ```
 
 <div id="learn-more">
-  ## Pour en savoir plus
+  ## Pour en savoir plus {#learn-more}
 </div>
 
 <div id="actions-documentation">
-  ### Documentation des Actions
+  ### Documentation des Actions {#actions-documentation}
 </div>
 
 * [Aperçu des Auth0 Actions](/docs/fr-ca/customize/actions)
@@ -277,7 +277,7 @@ exports.onExecuteCustomEmailProvider = async (event, api) => {
 * [Limitations des Actions](/docs/fr-ca/customize/actions/limitations)
 
 <div id="event-object-references">
-  ### Références des objets Event
+  ### Références des objets Event {#event-object-references}
 </div>
 
 * [Objet Event Post-Login](/docs/fr-ca/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object)
@@ -286,7 +286,7 @@ exports.onExecuteCustomEmailProvider = async (event, api) => {
 * [Objet Event Custom Phone Provider](/docs/fr-ca/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/actions-triggers-custom-phone-provider-event-object)
 
 <div id="related-topics">
-  ### Sujets connexes
+  ### Sujets connexes {#related-topics}
 </div>
 
 * [Multiple Custom Domains](/docs/fr-ca/customize/custom-domains/multiple-custom-domains)

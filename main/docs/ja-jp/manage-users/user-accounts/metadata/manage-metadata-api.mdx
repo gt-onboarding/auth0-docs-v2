@@ -8,11 +8,11 @@ import {AuthCodeBlock} from "/snippets/ja-jp/AuthCodeBlock.jsx";
 import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 
 <div id="user-metadata">
-  ## ユーザーメタデータ
+  ## ユーザーメタデータ {#user-metadata}
 </div>
 
 <div id="create-user-metadata">
-  ### ユーザーのメタデータを作成する
+  ### ユーザーのメタデータを作成する {#create-user-metadata}
 </div>
 
 以下のプロファイル情報を持つユーザーを作成するには、
@@ -185,7 +185,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 </AuthCodeGroup>
 
 <div id="update-user-metadata">
-  ### ユーザーのメタデータを更新する
+  ### ユーザーのメタデータを更新する {#update-user-metadata}
 </div>
 
 Management API の [`/patch_users_by_id`](https://auth0.com/docs/api/management/v2#!/Users/patch_users_by_id) エンドポイントに `PATCH` リクエストを送信することで、ユーザーのメタデータを更新できます。
@@ -387,7 +387,7 @@ Management API の [`/patch_users_by_id`](https://auth0.com/docs/api/management/
 </Warning>
 
 <div id="merge-user-metadata">
-  ### ユーザーのメタデータをマージする
+  ### ユーザーのメタデータをマージする {#merge-user-metadata}
 </div>
 
 オブジェクトにマージされるのは、ルートレベルのプロパティのみです。下位レベルのプロパティはすべて置き換えられます。
@@ -564,7 +564,7 @@ Management API の [`/patch_users_by_id`](https://auth0.com/docs/api/management/
 </AuthCodeGroup>
 
 <div id="delete-user-metadata">
-  ### ユーザーのメタデータを削除する
+  ### ユーザーのメタデータを削除する {#delete-user-metadata}
 </div>
 
 次のように `user_metadata` を削除できます:
@@ -576,7 +576,7 @@ Management API の [`/patch_users_by_id`](https://auth0.com/docs/api/management/
 ```
 
 <div id="app-metadata">
-  ## アプリのメタデータ
+  ## アプリのメタデータ {#app-metadata}
 </div>
 
 空のオブジェクトでメタデータをパッチすると、メタデータは完全に削除されます。たとえば、このボディを送信すると、`app_metadata` 内のすべてが削除されます:
@@ -588,23 +588,23 @@ Management API の [`/patch_users_by_id`](https://auth0.com/docs/api/management/
 ```
 
 <div id="client-metadata">
-  ## クライアントメタデータ
+  ## クライアントメタデータ {#client-metadata}
 </div>
 
 <div id="create-applications-with-client-metadata">
-  ### クライアントメタデータを含めてアプリケーションを作成する
+  ### クライアントメタデータを含めてアプリケーションを作成する {#create-applications-with-client-metadata}
 </div>
 
 `POST /api/v2/` applications エンドポイントを使用して新しいアプリケーションを作成する際に、`clientMetadata` オブジェクトを含めることができます。
 
 <div id="read-client-metadata">
-  ### クライアントメタデータを取得する
+  ### クライアントメタデータを取得する {#read-client-metadata}
 </div>
 
 クライアントメタデータは、`GET /api/v2/clients` および `GET /api/v2/client/{id}` エンドポイントのレスポンスに含まれます。
 
 <div id="update-client-metadata">
-  ### クライアントメタデータを更新する
+  ### クライアントメタデータを更新する {#update-client-metadata}
 </div>
 
 クライアントメタデータは、[`PATCH /api/v2/clients/{id}`](https://auth0.com/docs/api/management/v2#!/Users/patch_users_by_id) エンドポイントを使用して更新できます。`clientMetadata property` を持つアプリケーションオブジェクトを指定し、そのプロパティの値には、変更したいメタデータを含むオブジェクトを設定します。
@@ -643,13 +643,13 @@ Management API の [`/patch_users_by_id`](https://auth0.com/docs/api/management/
 ```
 
 <div id="delete-client-metadata-properties-and-values">
-  ### クライアントメタデータのプロパティと値を削除する
+  ### クライアントメタデータのプロパティと値を削除する {#delete-client-metadata-properties-and-values}
 </div>
 
 クライアントメタデータのキーは、上記の「Update app&#95;metadata」で説明されているように、`PATCH` リクエストを送信し、キーの値に `null` を指定することで削除できます。この挙動は、`PATCH` [/api/v2/users/{id}](https://auth0.com/docs/api/management/v2#!/Users/patch_users_by_id) エンドポイントにおける `user_metadata` および `app_metadata` プロパティの挙動と一致します。
 
 <div id="learn-more">
-  ## 詳しくはこちら
+  ## 詳しくはこちら {#learn-more}
 </div>
 
 * [Management API のアクセストークン](/docs/ja-jp/secure/tokens/access-tokens/management-api-access-tokens)

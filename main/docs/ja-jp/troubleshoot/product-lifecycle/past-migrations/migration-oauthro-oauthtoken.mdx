@@ -6,7 +6,7 @@ title: リソース所有者パスワードフローを移行する
 `/oauth/token` で <Tooltip tip="リソース所有者: 保護されたリソースへのアクセスを許可できるエンティティ（ユーザーやアプリケーションなど）。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=resource+owner">リソース所有者</Tooltip>パスワードがサポートされるようになりました。`/oauth/ro` エンドポイントの使用は 2017 年 7 月 8 日に非推奨となりました。`/oauth/ro` エンドポイントは以前、エンドユーザーがメールまたは SMS で受け取ったワンタイムパスワード (OTP) を、<Tooltip tip="ID トークン: リソースへのアクセスではなく、クライアント自体を対象とした認証情報です。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=ID+token">ID トークン</Tooltip> と <Tooltip tip="アクセストークン: API へのアクセスに使用される、opaque 文字列または JWT 形式の認可資格情報です。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=access+token">アクセストークン</Tooltip> に交換するために使用されていました。Auth0 では、このユースケース向けに `/oauth/ro` を置き換える新しい API を実装しており、新しいエンドポイントへの移行を推奨しています。
 
 <div id="features-affected">
-  ## 影響を受ける機能
+  ## 影響を受ける機能 {#features-affected}
 </div>
 
 この変更は、[リソース所有者パスワードフロー](/docs/ja-jp/get-started/authentication-and-authorization-flow/resource-owner-password-flow) (Resource Owner Password Grant または ROPG と呼ばれることもあります) を使用し、Auth0 のライブラリや SDK を使わずに `/oauth/ro` を直接呼び出している場合に影響します。Lock や Auth0.js などの Auth0 ライブラリは、内部で `/oauth/ro` を使用しないように更新されています。lock-<Tooltip tip="パスワードレス: 第1の認証要素としてパスワードに依存しない認証形式。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=passwordless">パスワードレス</Tooltip>ライブラリを使用している場合は、代わりに Lock のパスワードレスモードを使用できるようになりました。
@@ -16,11 +16,11 @@ title: リソース所有者パスワードフローを移行する
 </Callout>
 
 <div id="actions">
-  ## Actions
+  ## Actions {#actions}
 </div>
 
 <div id="change-requests">
-  ### リクエストの変更
+  ### リクエストの変更 {#change-requests}
 </div>
 
 以前は、`/oauth/ro` へのリクエストのペイロードは以下のようになっていました。
@@ -67,7 +67,7 @@ title: リソース所有者パスワードフローを移行する
 * `audience` パラメータを追加して、そのトークンの対象となる API の <Tooltip tip="Audience: 発行されたトークンの audience の一意の識別子。トークン内では aud という名前で表され、その値には、ID トークンの場合はアプリケーション（Client ID）の ID、アクセストークンの場合は API（API 識別子）の ID が含まれます。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=audience">audience</Tooltip> を指定することもできます。
 
 <div id="response-changes">
-  ### レスポンスの変更
+  ### レスポンスの変更 {#response-changes}
 </div>
 
 `/oauth/ro` からのレスポンスは、次のような形式でした。
@@ -99,7 +99,7 @@ title: リソース所有者パスワードフローを移行する
 ```
 
 <div id="verify-migration">
-  ### Verify の移行確認
+  ### Verify の移行確認 {#verify-migration}
 </div>
 
 1. コードベースの移行を完了し、アプリがそのエンドポイントを呼び出していないことを確認したら、[Dashboard &gt; Tenant Settings &gt; Advanced](https://manage.auth0.com/#/tenant/advanced) に移動します。

@@ -4,7 +4,7 @@ description: "ユーザーアカウントのリンク用の非推奨エンドポ
 ---
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `GET /authorize`
@@ -18,13 +18,13 @@ description: "ユーザーアカウントのリンク用の非推奨エンドポ
 このエンドポイントは、既存のアカウントを新しいアカウントにリンクするためのログインフローをトリガーします。これにより、現在のユーザーが追加したい `connection` への 302 リダイレクトが返されます。ユーザーは、ログイン成功時に返されたアクセストークンによって識別されます。
 
 <div id="remarks">
-  ### 備考
+  ### 備考 {#remarks}
 </div>
 
 * `redirect_uri` の値は、[アプリケーションの設定](https://manage.auth0.com/dashboard) で有効なコールバックURLとして指定する必要があります。
 
 <div id="learn-more">
-  ### 詳細情報
+  ### 詳細情報 {#learn-more}
 </div>
 
 * [ユーザー アカウントをリンクする](https://auth0.com/docs/manage-users/user-accounts/user-account-linking/link-user-accounts)
@@ -32,7 +32,7 @@ description: "ユーザーアカウントのリンク用の非推奨エンドポ
 * [サーバーサイドシナリオでユーザー アカウントをリンクする](https://auth0.com/docs/manage-users/user-accounts/user-account-linking/suggested-account-linking-server-side-implementation)
 
 <div id="query-parameters">
-  ## クエリパラメーター
+  ## クエリパラメーター {#query-parameters}
 </div>
 
 <ParamField query="response_type" type="string" required>
@@ -56,7 +56,7 @@ description: "ユーザーアカウントのリンク用の非推奨エンドポ
 </ParamField>
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | Status | Description          |

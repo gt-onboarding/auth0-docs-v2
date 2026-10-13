@@ -6,7 +6,7 @@ description: "Renvoie le profil de l’utilisateur à l’aide d’un jeton d’
 import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `GET /userinfo`
@@ -14,7 +14,7 @@ import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 Avec le jeton d’accès Auth0 obtenu lors de la connexion, ce point de terminaison renvoie le profil de l’utilisateur. Ce point de terminaison fonctionne uniquement si `openid` a été accordé comme scope pour le jeton d’accès. Les renseignements du profil utilisateur inclus dans la réponse dépendent des scopes demandés. Par exemple, un scope `openid` seul peut renvoyer moins de renseignements qu’un scope `openid profile email`.
 
 <div id="remarks">
-  ### Remarques
+  ### Remarques {#remarks}
 </div>
 
 * Le script d’exemple auth0.js utilise la version 8 de la bibliothèque. Si vous utilisez la version 7 d’auth0.js, veuillez consulter ce [guide de référence](https://auth0.com/docs/libraries/auth0js/v7).
@@ -31,14 +31,14 @@ Avec le jeton d’accès Auth0 obtenu lors de la connexion, ce point de terminai
 * Pour accéder aux valeurs les plus à jour des claims standard qui ont été modifiés au moyen d’un IdP externe (par exemple, si l’utilisateur a changé son adresse courriel dans Facebook), vous devez obtenir de nouveaux jetons. Connectez-vous de nouveau au moyen de l’IdP externe, mais *pas* avec l’authentification silencieuse.
 
 <div id="learn-more">
-  ### En savoir plus
+  ### En savoir plus {#learn-more}
 </div>
 
 * [Référence d’Auth0.js v8 : extraire `authResult` et obtenir les renseignement sur l’utilisateur](https://auth0.com/docs/libraries/auth0js#extract-the-authresult-and-get-user-info)
 * [Auth0 API Rate Limit Policy](https://auth0.com/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy)
 
 <div id="headers">
-  ## En-têtes
+  ## En-têtes {#headers}
 </div>
 
 <ParamField header="access_token" type="string" required />
@@ -48,7 +48,7 @@ Avec le jeton d’accès Auth0 obtenu lors de la connexion, ce point de terminai
 </ParamField>
 
 <div id="response-schema">
-  ## Schéma de réponse
+  ## Schéma de réponse {#response-schema}
 </div>
 
 <ResponseSchema>
@@ -134,7 +134,7 @@ Avec le jeton d’accès Auth0 obtenu lors de la connexion, ce point de terminai
 </ResponseSchema>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                                       |

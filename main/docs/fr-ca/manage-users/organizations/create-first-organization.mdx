@@ -10,7 +10,7 @@ Pour utiliser la fonctionnalité [Organizations](/docs/fr-ca/manage-users/organi
 </Card>
 
 <div id="create-an-organization">
-  ## Créer une organisation
+  ## Créer une organisation {#create-an-organization}
 </div>
 
 Lorsque vous [créez une organisation](/docs/fr-ca/manage-users/organizations/configure-organizations/create-organizations), les paramètres que vous définissez servent à personnaliser la page de connexion et les modèles de courriel que les utilisateurs finaux voient lorsqu’ils s’authentifient dans le contexte de l’organisation.
@@ -18,7 +18,7 @@ Lorsque vous [créez une organisation](/docs/fr-ca/manage-users/organizations/co
 Lorsque vous utilisez Organizations par défaut, ces paramètres remplacent ceux des pages <Tooltip tip="Universal Login : votre application redirige vers Universal Login, hébergé sur le Authorization Server d’Auth0, pour vérifier l’identité d’un utilisateur." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Universal+Login">Universal Login</Tooltip>. Pour en savoir plus sur la personnalisation de la page de connexion ou des modèles de courriel, consultez [Personnaliser les prompts et les modèles de courriel](#customize-prompts-and-email-templates).
 
 <div id="define-organization-behavior">
-  ## Définir le comportement de l’organisation
+  ## Définir le comportement de l’organisation {#define-organization-behavior}
 </div>
 
 Vous connaissez peut-être des applications comme Heroku, qui se comportent différemment selon qu’un utilisateur se connecte avec un compte personnel ou sélectionne une organisation associée à son compte d’entreprise. Auth0 vous permet de définir un comportement semblable pour l’organisation au niveau de l’application.
@@ -28,13 +28,13 @@ Pour chaque application que vous créez dans Auth0, vous pouvez décider si les 
 Vous pourriez aussi vouloir mettre à jour les **URL de rappel autorisées** et les **origines autorisées (CORs)** dans les [paramètres de l’application](/docs/fr-ca/get-started/applications/application-settings) de votre application pour y inclure des [espaces réservés pour les sous-domaines](/docs/fr-ca/get-started/applications/wildcards-for-subdomains) d’organisation.
 
 <div id="customize-prompts-and-email-templates">
-  ## Personnaliser les prompts et les modèles de courriel
+  ## Personnaliser les prompts et les modèles de courriel {#customize-prompts-and-email-templates}
 </div>
 
 Lorsque vous utilisez Organizations avec les prompts Universal Login prêts à l’emploi, les paramètres d’image de marque que vous configurez lorsque vous [créez des Organizations](/docs/fr-ca/manage-users/organizations/configure-organizations/create-organizations) remplacent l’image de marque des pages de connexion Universal Login et des modèles de courriel. Si vous souhaitez personnaliser davantage les pages de connexion Universal Login et les courriels que l’utilisateur final reçoit, vous pouvez personnaliser les modèles de page et de courriel.
 
 <div id="page-templates">
-  ### Modèles de page
+  ### Modèles de page {#page-templates}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -67,7 +67,7 @@ Les balises suivantes doivent être présentes dans le modèle :
 Pour centrer le widget sur la page, remplacez la balise `<body>` par `<body class="_widget-auto-layout">`.
 
 <div id="email-templates">
-  ### Modèles de courriel
+  ### Modèles de courriel {#email-templates}
 </div>
 
 Pour modifier les courriels que reçoit l’utilisateur final, personnalisez un modèle de courriel à l’aide du [langage de modèles Liquid](https://shopify.github.io/liquid/) et des variables de modèle. Pour en savoir plus, consultez [Personnaliser les modèles de courriel](/docs/fr-ca/customize/email/email-templates).
@@ -79,7 +79,7 @@ Les modèles de courriel suivants peuvent aussi être personnalisés pour les or
 * **Inviter un utilisateur** : Envoyé à l’utilisateur final lorsqu’il est invité à rejoindre une organisation. Contient un lien qui le redirige vers la route de connexion par défaut que vous avez configurée. Pour en savoir plus, consultez [Inviter des membres d’une organisation](/docs/fr-ca/manage-users/organizations/configure-organizations/invite-members).
 
 <div id="template-variables">
-  ### Variables de modèle
+  ### Variables de modèle {#template-variables}
 </div>
 
 Les modèles de page et de courriel peuvent accéder à un ensemble de variables de contexte que vous pouvez utiliser pour modifier le rendu du modèle.
@@ -101,7 +101,7 @@ Des variables supplémentaires sont accessibles au modèle de page lorsqu’un u
 </Callout>
 
 <div id="configure-organization-domains">
-  ## Configurer les domaines d’organisation
+  ## Configurer les domaines d’organisation {#configure-organization-domains}
 </div>
 
 Pendant la préconnexion, Auth0 peut détecter l’organisation d’un utilisateur à partir soit du nom de l’organisation, soit du domaine de courriel qu’il saisit. Pour associer une organisation à un domaine, vous pouvez créer des domaines d’organisation. Auth0 l’achemine ensuite automatiquement vers le bon fournisseur d’identité (IdP).
@@ -111,7 +111,7 @@ Pendant la préconnexion, Auth0 peut détecter l’organisation d’un utilisate
 </Note>
 
 <div id="add-a-domain-to-an-organization">
-  ### Ajouter un domaine à une organisation
+  ### Ajouter un domaine à une organisation {#add-a-domain-to-an-organization}
 </div>
 
 Les administrateurs de tenant peuvent ajouter et gérer des domaines dans la section **Domains** d’une organisation dans l’Auth0 Dashboard ou au moyen de la Management API.
@@ -131,7 +131,7 @@ Pour ajouter un domaine dans l’Auth0 Dashboard :
 Pour savoir comment la découverte de domaine influe sur le comportement de connexion, consultez [Login Flows for Organizations](https://auth0.com/docs/manage-users/organizations/login-flows-for-organizations).
 
 <div id="configure-organization-membership">
-  ## Configurer l’appartenance à une organisation
+  ## Configurer l’appartenance à une organisation {#configure-organization-membership}
 </div>
 
 Chaque organisation a ses propres membres, c’est-à-dire les utilisateurs qui peuvent accéder à vos applications en se connectant par l’intermédiaire de la page de connexion configurée de l’organisation.
@@ -147,13 +147,13 @@ Les Organizations dans Auth0 sont suffisamment flexibles pour prendre en charge 
 Une fois l’appartenance définie, vous pouvez [récupérer les membres des organizations](/docs/fr-ca/manage-users/organizations/configure-organizations/retrieve-members) ou [récupérer l’appartenance d’un utilisateur à une organisation](/docs/fr-ca/manage-users/organizations/configure-organizations/retrieve-user-membership).
 
 <div id="assign-roles-to-members">
-  ## Assigner des rôles aux membres
+  ## Assigner des rôles aux membres {#assign-roles-to-members}
 </div>
 
 Chaque membre de l’organisation peut se voir attribuer un ou plusieurs rôles, qui s’appliquent lorsque les utilisateurs se connectent par l’intermédiaire de l’organisation. Plus précisément, vous pouvez [ajouter des rôles aux membres de l’organisation](/docs/fr-ca/manage-users/organizations/configure-organizations/add-member-roles), [retirer des rôles à des membres de l’organisation](/docs/fr-ca/manage-users/organizations/configure-organizations/remove-member-roles) ou [récupérer les rôles des membres d’une organisation](/docs/fr-ca/manage-users/organizations/configure-organizations/retrieve-member-roles). Vous pouvez utiliser les rôles et les permissions qui y sont associées pour contrôler l’accès aux [applications que vous créez](/docs/fr-ca/manage-users/organizations/custom-development). Pour en savoir plus sur les rôles, consultez [le contrôle d’accès basé sur les rôles](/docs/fr-ca/manage-users/access-control/rbac).
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Comprendre le fonctionnement d’Auth0 Organizations](/docs/fr-ca/manage-users/organizations/organizations-overview)

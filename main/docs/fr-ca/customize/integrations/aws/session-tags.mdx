@@ -15,7 +15,7 @@ Pour utiliser les balises de session AWS avec les API et les ressources AWS, vou
 4. Tester votre configuration.
 
 <div id="prerequisites">
-  ## Prérequis
+  ## Prérequis {#prerequisites}
 </div>
 
 * Vous aurez besoin d’un compte [Amazon Web Services (AWS)](https://portal.aws.amazon.com/billing/signup#/start) dont vous êtes l’administrateur.
@@ -23,7 +23,7 @@ Pour utiliser les balises de session AWS avec les API et les ressources AWS, vou
 * [Configurer quelques instances de VM AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html). Dans l’exemple de ce guide, nous utilisons trois instances distinctes.
 
 <div id="tag-aws-instances">
-  ### Baliser des instances AWS
+  ### Baliser des instances AWS {#tag-aws-instances}
 </div>
 
 Ajoutez des balises à vos ressources AWS. Suivez les instructions dans [Amazon Elastic Compute Cloud: Tag your Amazon EC2 resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html).
@@ -37,7 +37,7 @@ Vous devriez avoir créé trois instances. Ajoutez les balises suivantes :
 | 3        | Clé : `CostCenter`, valeur : `marketing`.<br />Clé : `Project`, valeur : `community_site`.         |
 
 <div id="create-a-specialized-aws-iam-role">
-  ### Créer un rôle AWS IAM spécialisé
+  ### Créer un rôle AWS IAM spécialisé {#create-a-specialized-aws-iam-role}
 </div>
 
 Créez un rôle IAM à l’aide du <Tooltip tip="Fournisseur d’identité (IdP) : service qui stocke et gère les identités numériques." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=identity+provider">fournisseur d’identité</Tooltip> SAML AWS que vous avez configuré lors des étapes préalables. Suivez les instructions du [AWS Identity and Access Management User Guide: Creating a Role for SAML 2.0 Federation (Console)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_saml.html).
@@ -88,7 +88,7 @@ Lorsque vous vérifiez vos paramètres, assurez-vous d’utiliser les paramètre
 | Description du rôle | Description de l’objectif pour lequel votre rôle est utilisé.   |
 
 <div id="create-an-auth0-rule">
-  ### Créer une règle Auth0
+  ### Créer une règle Auth0 {#create-an-auth0-rule}
 </div>
 
 Pour mapper le rôle AWS et les balises à un utilisateur, vous devrez [créer une règle](/docs/fr-ca/customize/rules/create-rules) dans Auth0. Ces valeurs seront ensuite transmises dans les assertions SAML du jeton. Dans cet exemple :
@@ -121,7 +121,7 @@ function(user, context, callback) {
 ```
 
 <div id="test-configuration">
-  ### Tester la configuration
+  ### Tester la configuration {#test-configuration}
 </div>
 
 Vous devriez maintenant être en mesure de vous connecter à la console AWS avec un utilisateur Auth0 et de tester votre mise en œuvre.
@@ -136,7 +136,7 @@ Pour vous connecter, vous aurez besoin de l’adresse de connexion <Tooltip tip=
 6. Cliquez sur l’instance associée à un `CostCenter` de `engineering`, puis cliquez sur **Actions** &gt; **Instance State** &gt; **Stop**. Vous constaterez que l’action échoue et renvoie une erreur.
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Configurer Amazon Web Services pour l’authentification unique](/docs/fr-ca/customize/integrations/aws/configure-amazon-web-services-for-sso)

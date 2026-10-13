@@ -7,7 +7,7 @@ validatedOn: 2026-02-02
 Vous pouvez personnaliser <Tooltip tip="Adaptive Multi-factor Authentication : authentification multifacteur (AMF) qui n’est déclenchée pour les utilisateurs que lorsqu’une tentative de connexion est jugée peu fiable." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Adaptive+MFA">Adaptive MFA</Tooltip> dans divers scénarios avec [Auth0 Actions](/docs/fr-ca/customize/actions).
 
 <div id="when-to-customize-adaptive-mfa">
-  ## Quand personnaliser Adaptive AMF
+  ## Quand personnaliser Adaptive AMF {#when-to-customize-adaptive-mfa}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -24,7 +24,7 @@ Avant de commencer à personnaliser Adaptive AMF, posez-vous quelques questions�
 * Comment allez-vous gérer les utilisateurs qui ne sont pas inscrits à l’authentification multifacteur ?
 
 <div id="confidence-scores">
-  ## Scores de confiance
+  ## Scores de confiance {#confidence-scores}
 </div>
 
 Adaptive MFA calcule un score de confiance global à partir de l’analyse de trois évaluations : `NewDevice`, `ImpossibleTravel` et `UntrustedIP`. Pour en savoir plus, consultez [Adaptive MFA : fonctionnement](/docs/fr-ca/secure/multi-factor-authentication/adaptive-mfa).
@@ -61,7 +61,7 @@ Si vous souhaitez mettre en œuvre votre propre méthode pour évaluer le score 
 Vous pouvez consulter la description complète, les propriétés et les valeurs de l’objet `riskAssessment` dans la [référence `riskAssessment` du déclencheur post-login d’Actions](/docs/fr-ca/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object#param-risk-assessment).
 
 <div id="action-result-outcomes">
-  ## Résultats des Actions
+  ## Résultats des Actions {#action-result-outcomes}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -82,13 +82,13 @@ Le tableau suivant présente les résultats possibles selon la combinaison des A
 | Aucune AMF requise   | Aucune AMF requise  | Aucune AMF requise |
 
 <div id="action-templates">
-  ## Modèles d’Action
+  ## Modèles d’Action {#action-templates}
 </div>
 
 Auth0 propose deux modèles d’Action basés sur Adaptive MFA que vous pouvez personnaliser : [Adaptive MFA](#adaptive-mfa-template) et [Require MFA Enrollment](#require-mfa-enrollment-template).
 
 <div id="adaptive-mfa-template">
-  ### Modèle Adaptive MFA
+  ### Modèle Adaptive MFA {#adaptive-mfa-template}
 </div>
 
 Ce modèle fournit un exemple et un point de départ pour créer un flux métier personnalisé à l’aide d’évaluations du risque individuelles. Cet exemple utilise :
@@ -143,7 +143,7 @@ if (shouldPromptMfa && canPromptMfa) {
 ```
 
 <div id="require-mfa-enrollment-template">
-  ### Modèle Require AMF Enrôlement
+  ### Modèle Require AMF Enrôlement {#require-mfa-enrollment-template}
 </div>
 
 Ce modèle montre comment imposer l’enrôlement à l’AMF lorsque vous utilisez une politique AMF standard ou Adaptive MFA. Il utilise `event.user.multifactor` pour vérifier si l’utilisateur est inscrit à l’AMF et, dans le cas contraire, l’invite à s’inscrire.
@@ -163,7 +163,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="action-use-cases">
-  ## Cas d’utilisation d’Action
+  ## Cas d’utilisation d’Action {#action-use-cases}
 </div>
 
 Voici quelques suggestions pour créer des Actions personnalisées selon votre cas d’utilisation.
@@ -266,7 +266,7 @@ Voici quelques suggestions pour créer des Actions personnalisées selon votre c
 </AccordionGroup>
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Activer Adaptive MFA](/docs/fr-ca/secure/multi-factor-authentication/adaptive-mfa/enable-adaptive-mfa)

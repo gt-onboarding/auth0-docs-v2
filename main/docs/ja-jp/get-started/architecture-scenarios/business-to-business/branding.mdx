@@ -9,7 +9,7 @@ Auth0 は、組織のブランド要件やユーザーの期待に沿った見�
 Auth0 は、[internationalization (I18N)](/docs/ja-jp/customize/internationalization-and-localization) と localization (L10N) の両方をサポートしています。これらはいずれも、国際的な顧客層向けにブランディングを行う際に重要です。Auth0 Lock UI ウィジェットや <Tooltip tip="Universal Login: アプリケーションは Auth0 の Authorization Server でホストされる Universal Login にリダイレクトされ、ユーザーの本人確認を行います。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Universal+Login">Universal Login</Tooltip> などの標準提供の要素は、複数言語のサポートがあらかじめ有効になっており、必要なものが [まだ用意されていない場合](/docs/ja-jp/customize/internationalization-and-localization/lock-internationalization) でも、さらに多くの言語を追加できる拡張性が組み込まれています。
 
 <Info>
-  ### ベストプラクティス
+  ### ベストプラクティス {#best-practice}
 
   ほとんどすべてのアプリケーションでは、何らかの形で国際化やローカライズが必要になります。Auth0 ではこれを簡単に追加できますが、最初から考慮しておく必要があります。たとえば、ローカライズを後から組み込むのは、対応が遅れると大変な作業になることがあります。
 </Info>
@@ -31,19 +31,19 @@ Auth0 は、[internationalization (I18N)](/docs/ja-jp/customize/internationaliza
 Auth0 ではエラー時の既定情報が提供されますが、標準の情報は、あなたにしか提供できない文脈が欠けているため、やや分かりにくいことがあります。ただし、Auth0 の [error page customization](#error-page-customization) に関するガイダンスを利用すれば、独自のサポート窓口を通じて、より状況に即した情報を提供できるようになり、その問題を軽減できます。
 
 <Info>
-  ### ベストプラクティス
+  ### ベストプラクティス {#best-practice-2}
 
   問題が発生したユーザーに役立つ案内を提供するために、わかりやすい名前とロゴを設定し、組織のサポート用メールアドレスと URL も提供する必要があります。方法については、[Dashboard Tenant Settings](/docs/ja-jp/get-started/tenant-settings#settings) を参照してください。
 </Info>
 
 <div id="universal-login-and-login-pages">
-  ## Universal Login とログインページ
+  ## Universal Login とログインページ {#universal-login-and-login-pages}
 </div>
 
 [Universal Login](/docs/ja-jp/authenticate/login/auth0-universal-login) は、ユーザー認証に推奨される方法であり、その中心となるのがログインページです。ログインページは、組織のブランディング要件に合わせてカスタマイズできます。
 
 <Info>
-  ### ベストプラクティス
+  ### ベストプラクティス {#best-practice-3}
 
   Universal Login のページをカスタマイズするには、[ページテーマ](/docs/ja-jp/customize/login-pages/universal-login/customize-themes)を変更できるほか、動的な[ページテンプレート](/docs/ja-jp/customize/login-pages/universal-login/customize-templates)を作成することもできます。
 
@@ -51,7 +51,7 @@ Auth0 ではエラー時の既定情報が提供されますが、標準の情�
 </Info>
 
 <div id="branding-login-by-organization">
-  ## 組織ごとのログインのブランディング
+  ## 組織ごとのログインのブランディング {#branding-login-by-organization}
 </div>
 
 Universal Login ページで特別なカスタマイズが必要かどうかは、顧客の組織をどのように管理するかによって決まります。このセクションを読む前に、[Universal Login section](#universal-login-and-login-pages) を確認し、[Multiple Organization Architecture](/docs/ja-jp/get-started/architecture-scenarios/multiple-organization-architecture) を参照して、組織にどのように対応するかを把握しておいてください。
@@ -59,7 +59,7 @@ Universal Login ページで特別なカスタマイズが必要かどうかは�
 組織のユーザー同士がすべて互いに分離されている場合は、Universal Login ページで、そのログインページがどの組織向けのものかを明確に示すことが重要です。これを行う最も簡単な方法は、[Organizations Feature](/docs/ja-jp/manage-users/organizations/create-first-organization) を使用することです。これにより、ロゴ、メインカラー、背景色を保存でき、アプリケーションから org&#95;id を渡すか、ユーザーが組織入力プロンプトで自分の組織を入力して組織が特定されると、それらを使って Universal Login ページのブランディングをカスタマイズできます。
 
 <div id="custom-domain-naming">
-  ## カスタムドメインの命名
+  ## カスタムドメインの命名 {#custom-domain-naming}
 </div>
 
 デフォルトでは、テナントに関連付けられた URL には、その名前と、場合によってはリージョン固有の識別子が含まれます。たとえば、米国を拠点とするテナントの URL は `https://example.us.auth0.com` のようになり、ヨーロッパを拠点とするテナントの URL は `https://example.eu.auth0.com` のようになります。 [Custom Domain](/docs/ja-jp/customize/custom-domains) を使用すると、組織のブランドに合った一貫性のある名前を使って、ユーザーに統一された体験を提供できます。
@@ -77,7 +77,7 @@ Universal Login ページで特別なカスタマイズが必要かどうかは�
 </Warning>
 
 <div id="email-template-customization">
-  ## メールテンプレートのカスタマイズ
+  ## メールテンプレートのカスタマイズ {#email-template-customization}
 </div>
 
 Auth0 では、ユーザーへの通知や、安全なアイデンティティ管理に必要な機能 (たとえば、メール認証、アカウント復旧、ブルートフォース対策など) のためにメールを幅広く利用しており、そのためのテンプレートを多数提供しています。
@@ -91,7 +91,7 @@ Auth0 では、ユーザーへの通知や、安全なアイデンティティ�
 メールテンプレートは、[Liquid syntax](/docs/ja-jp/customize/email/email-templates/use-liquid-syntax-in-email-templates) を使用してカスタマイズします。ユーザー設定に基づいてテンプレートをカスタマイズしたい場合は、ユーザープロファイル内の[metadata](/docs/ja-jp/manage-users/user-accounts/metadata)に加え、特定のアプリケーションのメタデータにもアクセスできます。
 
 <div id="password-reset-page-customization">
-  ## Password Reset ページのカスタマイズ
+  ## Password Reset ページのカスタマイズ {#password-reset-page-customization}
 </div>
 
 [Password Reset](/docs/ja-jp/customize/login-pages/classic-login/customize-password-reset-page) ページは、ユーザーがパスワード変更機能を利用する際に使用されます。また、ログインページと同様に、組織固有のブランディング要件を反映できるようカスタマイズすることも可能です。
@@ -102,19 +102,19 @@ Auth0 では、ユーザーへの通知や、安全なアイデンティティ�
 * 組織ごとに個別のテナントを作成し、その組織に必要な内容を Universal Login でカスタマイズする。
 
 <div id="error-page-customization">
-  ## エラーページのカスタマイズ
+  ## エラーページのカスタマイズ {#error-page-customization}
 </div>
 
 ユーザーの対話型ワークフロー (たとえばユーザー登録やログイン) 中に問題が発生すると、Auth0 は内部で何が起きているかを示すエラーメッセージを表示します。既定のメッセージはやや分かりにくく、特にエンドユーザーにとっては意味をつかみにくい場合があります。というのも、通常はあなたにしか補えない文脈情報が不足しているためです。そのため、不足している文脈固有の情報をユーザーに直接伝えられるよう、[エラーページをカスタマイズする](/docs/ja-jp/customize/login-pages/custom-error-pages)ことをお勧めします。さらに、エラーページをカスタマイズすることで、Auth0 ではなく自社のブランドを表示できるほか、次に何をすべきかについて役立つ情報をユーザーに提供できます。たとえば、FAQ へのリンクや、会社のサポートチームまたはヘルプデスクへの問い合わせ方法などを含めることができます。
 
 <Info>
-  ### ベストプラクティス
+  ### ベストプラクティス {#best-practice-4}
 
   Auth0 提供のエラーページをカスタマイズするためのユーザーインターフェースは標準では用意されていませんが、設定には [Management API の Tenant Settings エンドポイント](https://auth0.com/docs/api/management/v2#!/Tenants/patch_settings) を使用できます。あるいは、独自のエラーページを作成してホストできる場合は、Auth0 がホストするページの代わりに、そのページへユーザーをリダイレクトするよう Auth0 を設定することもできます。
 </Info>
 
 <div id="guardian-multi-factor-page-customization">
-  ## Guardian 多要素認証ページのカスタマイズ
+  ## Guardian 多要素認証ページのカスタマイズ {#guardian-multi-factor-page-customization}
 </div>
 
 <Tooltip tip="多要素認証（MFA）: SMS で送信されるコードなど、ユーザー名とパスワードに加えて別の要素を使用するユーザー認証のプロセス。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Multi-factor+Authentication">多要素認証</Tooltip>ページは、[Universal Login Settings](https://manage.auth0.com/#/login_settings) セクションで Universal Login のブランディングオプションを調整することでカスタマイズできます。
@@ -122,7 +122,7 @@ Auth0 では、ユーザーへの通知や、安全なアイデンティティ�
 さらにカスタマイズが必要な場合は、組織固有の UX 要件に合わせて、[HTML コンテンツ全体](/docs/ja-jp/secure/multi-factor-authentication/customize-mfa/customize-mfa-classic-login)をカスタマイズすることもできます。
 
 <div id="project-planning-guide">
-  ## プロジェクト計画ガイド
+  ## プロジェクト計画ガイド {#project-planning-guide}
 </div>
 
 推奨する戦略の詳細を確認できるよう、ダウンロードして参照できるPDF形式の計画ガイドをご用意しています。

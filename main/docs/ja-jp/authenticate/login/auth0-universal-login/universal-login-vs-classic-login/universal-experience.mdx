@@ -10,13 +10,13 @@ Universal Login エクスペリエンスでは、使いやすいカスタマイ�
 Universal Login の設定は動的に行え、ログインフローは Auth0 の集中管理型<Tooltip tip="認証サーバー: ユーザーの身元を確認または拒否するサーバーです。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=authentication+server">認証サーバー</Tooltip>でホストされるウェブページによって処理されるため、アプリケーションレベルの変更は不要です。さらに、Auth0 が Universal Login に加えた改善をアプリケーションで利用するために、コードを手動で更新する必要もありません。
 
 <div id="universal-login-features-and-functionality">
-  ## Universal Login の特長と機能
+  ## Universal Login の特長と機能 {#universal-login-features-and-functionality}
 </div>
 
 以下のセクションでは、Universal Login エクスペリエンスについてさらに詳しく説明します。Universal Login と Classic Login の機能比較については、[Universal Login と Classic Login の比較](/docs/ja-jp/authenticate/login/auth0-universal-login/universal-login-vs-classic-login)をご覧ください。
 
 <div id="customization">
-  ### カスタマイズ
+  ### カスタマイズ {#customization}
 </div>
 
 * [Page Templates](/docs/ja-jp/customize/login-pages/universal-login/customize-templates) を使用して、ログインフロー内のすべてのページに Liquid テンプレートを指定できます。
@@ -26,7 +26,7 @@ Universal Login の設定は動的に行え、ログインフローは Auth0 の
 * Auth0 Management API を使用して、サインアップとログインのプロンプトをカスタマイズできます。詳しくは、[Customize Signup and Login prompts](/docs/ja-jp/customize/login-pages/universal-login/customize-signup-and-login-prompts) を参照してください。
 
 <div id="login">
-  ### ログイン
+  ### ログイン {#login}
 </div>
 
 * [デバイスの生体認証を使用する WebAuthn による Passwordless](/docs/ja-jp/authenticate/login/auth0-universal-login/passwordless-login/webauthn-device-biometrics) を利用できます。
@@ -41,7 +41,7 @@ Universal Login の設定は動的に行え、ログインフローは Auth0 の
 * Google ソーシャル接続を使用している場合は、[Google One Tap](/docs/ja-jp/authenticate/identity-providers/social-identity-providers/google-one-tap)を有効にすると、Universal Login ページを離れることなく、アクティブな Google セッションを使ってワンタップでログインまたはサインアップできます。
 
 <div id="signup">
-  ### サインアップ
+  ### サインアップ {#signup}
 </div>
 
 * `/authorize` へのリダイレクト時に `screen_hint=signup` パラメーターを指定すると、ユーザーをログインページではなくサインアップページに直接遷移させることができます。このパラメーターは `prompt=login` と組み合わせることもでき、既存のセッションがある場合でも常に認証ページを表示するのか、ページをスキップするのかを指定できます。
@@ -54,7 +54,7 @@ Universal Login の設定は動的に行え、ログインフローは Auth0 の
 | `prompt=login&screen_hint=signup` | サインアップページを表示 | サインアップページを表示       |
 
 <div id="multi-factor-authentication">
-  ### 多要素認証
+  ### 多要素認証 {#multi-factor-authentication}
 </div>
 
 * ユーザーが複数の <Tooltip tip="多要素認証（MFA）: SMS で送信されるコードなど、ユーザー名とパスワードに加えて別の要素を使用するユーザー認証プロセス。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=MFA">MFA</Tooltip> 要素を登録している場合 (例: SMS やプッシュ通知) 、Universal Login の MFA ページで、使用する方法をユーザー自身が選択できます。
@@ -65,7 +65,7 @@ Universal Login の設定は動的に行え、ログインフローは Auth0 の
 * [Actions](/docs/ja-jp/customize/actions) を使用すると、特定の要素または複数の要素を組み合わせてユーザーに認証を求めるように、MFA フローをカスタマイズできます。また、ロールや Organization メンバーシップなどのユーザーメタデータを活用して、より個別化された体験を作成することもできます。詳しくは、[Customize MFA Selection in Universal Login](/docs/ja-jp/secure/multi-factor-authentication/customize-mfa/customize-mfa-selection-universal-login) を参照してください。
 
 <div id="password-reset">
-  ## パスワードのリセット
+  ## パスワードのリセット {#password-reset}
 </div>
 
 * Universal Login では、成功するとユーザーはデフォルトのログインルートにリダイレクトされ、エラー処理は Universal Login フロー内で行われます。メールテンプレート内の Redirect URL は無視されます。リダイレクト URL を機能させるには、[Dashboard &gt; Applications &gt; Applications](/docs/ja-jp/get-started/applications/application-settings) の **Settings** タブで **Application Login URI** を指定する必要があることに注意してください。
@@ -75,7 +75,7 @@ Universal Login の設定は動的に行え、ログインフローは Auth0 の
   * **注**: パスワードリセットフロー中にユーザーに表示される MFA プロンプトはカスタマイズできます。詳しくは、[Customize Universal Login Text Prompts.](/docs/ja-jp/customize/login-pages/universal-login/customize-text-elements) を参照してください。
 
 <div id="custom-database-connections">
-  ## カスタムデータベース接続
+  ## カスタムデータベース接続 {#custom-database-connections}
 </div>
 
 カスタムデータベース接続を使用する場合:
@@ -84,13 +84,13 @@ Universal Login の設定は動的に行え、ログインフローは Auth0 の
 * `ValidationErrors` または `WrongUsernameOrPasswordError` で返されたエラーは、該当するページに表示されます。詳しくは、[カスタムデータベースのトラブルシューティング](/docs/ja-jp/authenticate/database-connections/custom-db/error-handling)を参照してください。
 
 <div id="email-verification">
-  ## メール認証
+  ## メール認証 {#email-verification}
 </div>
 
 ユーザーがメール認証リンクをクリックすると、メールアドレスが認証済みであることを確認するページにリダイレクトされます。デフォルトのログインルートが設定されている場合、ユーザーはボタンをクリックしてそのページにリダイレクトできます。
 
 <div id="password-autocomplete">
-  ## パスワードのオートコンプリート
+  ## パスワードのオートコンプリート {#password-autocomplete}
 </div>
 
 Universal Login のページでは、パスワード欄に [autocomplete 属性](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) を使用しています。
@@ -106,13 +106,13 @@ Universal Login のページでは、パスワード欄に [autocomplete 属性]
 * Safari の場合、パスワードが自動入力される前に、Mac のパスワードを入力するか Touch ID を使うよう求められます。
 
 <div id="implement-universal-login">
-  ## Implement Universal Login
+  ## Implement Universal Login {#implement-universal-login}
 </div>
 
 アプリケーションで Universal Login を使用するための設定方法については、[Quickstarts](/docs/ja-jp/quickstarts) をご覧ください。ご利用の技術に最適な方法を選ぶと、Quickstarts に沿って実装を進められます。
 
 <div id="learn-more">
-  ## 詳しく見る
+  ## 詳しく見る {#learn-more}
 </div>
 
 * [Universal Login で Google One Tap を使用する](/docs/ja-jp/authenticate/identity-providers/social-identity-providers/google-one-tap)

@@ -9,7 +9,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 外部の開発者、パートナー、またはAIエージェントが、強化されたセキュリティ管理のもとでお使いのAPIにアクセスできるサードパーティアプリケーションを作成します。
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 サードパーティアプリケーションを作成する前に、次の項目を満たしていることを確認してください。
@@ -18,7 +18,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 * (ユーザー向けフローの場合) 少なくとも 1 つの [接続](/docs/ja-jp/authenticate/identity-providers) が [ドメインレベル](/docs/ja-jp/authenticate/identity-providers/promote-connections-to-domain-level) に昇格されていること
 
 <div id="create-a-third-party-application">
-  ## サードパーティアプリケーションを作成する
+  ## サードパーティアプリケーションを作成する {#create-a-third-party-application}
 </div>
 
 Auth0 Dashboard または Management API を使用して、サードパーティアプリケーションを作成します。
@@ -94,7 +94,7 @@ Auth0 Dashboard または Management API を使用して、サードパーティ
 </Callout>
 
 <div id="configure-api-access-policies">
-  ## APIアクセスポリシーを設定する
+  ## APIアクセスポリシーを設定する {#configure-api-access-policies}
 </div>
 
 サードパーティアプリケーションがAPIにアクセスするには、明示的な client grants が必要です。APIアクセスポリシーは、次の方法で設定できます。
@@ -105,7 +105,7 @@ Auth0 Dashboard または Management API を使用して、サードパーティ
 同じAPIに対してアプリケーションごとの権限とサードパーティアプリケーションのデフォルト権限の両方が設定されている場合は、アプリケーションごとの権限が優先されます。詳しくは、[Application Access to APIs: Client Grants](/docs/ja-jp/get-started/applications/application-access-to-apis-client-grants)を参照してください。
 
 <div id="per-application-permissions">
-  ### アプリケーションごとの権限
+  ### アプリケーションごとの権限 {#per-application-permissions}
 </div>
 
 特定のサードパーティアプリケーションに、既定より広い、または狭いアクセス権を付与するには、そのアプリケーションの `client_id` に対するクライアントグラントを作成します。
@@ -155,7 +155,7 @@ Auth0 Dashboard または Management API を使用して、サードパーティ
 </Tabs>
 
 <div id="default-permissions-for-all-third-party-applications">
-  ### すべてのサードパーティアプリケーションのデフォルト権限
+  ### すべてのサードパーティアプリケーションのデフォルト権限 {#default-permissions-for-all-third-party-applications}
 </div>
 
 デフォルト権限では、すべてのサードパーティアプリケーションで利用できる API とスコープの基本セットを定義します。これは [動的クライアント登録](/docs/ja-jp/get-started/applications/dynamic-client-registration) で必要です。この場合、アプリケーションごとに個別のアクセス設定はできません。
@@ -199,7 +199,7 @@ Auth0 Dashboard または Management API を使用して、サードパーティ
 </Tabs>
 
 <div id="configure-connections">
-  ## 接続を設定する
+  ## 接続を設定する {#configure-connections}
 </div>
 
 サードパーティアプリケーションは、ドメインレベルの接続を介してのみユーザーを認証できます。接続をドメインレベルに昇格すると、そのテナント内のすべてのサードパーティアプリケーションで利用できるようになります。
@@ -217,7 +217,7 @@ Auth0 Dashboard または Management API を使用して、サードパーティ
 </Callout>
 
 <div id="configure-organizations-access">
-  ## Organizationsへのアクセスを設定する
+  ## Organizationsへのアクセスを設定する {#configure-organizations-access}
 </div>
 
 ユーザーが[組織](/docs/ja-jp/manage-users/organizations)のコンテキストでサードパーティアプリケーションを介して認証されるには、次の2つの条件を満たす必要があります。
@@ -238,7 +238,7 @@ Organizations のマシンツーマシンアクセスでは、サードパーテ
 ユーザーの同意は組織コンテキスト単位で適用されます。ある組織で同意したユーザーが、別の組織を通じて同じアプリケーションにアクセスする場合は、再度同意する必要があります。詳しくは、[Consent with Organizations](/docs/ja-jp/get-started/applications/third-party-applications/user-consent-and-third-party-applications#consent-with-organizations) を参照してください。
 
 <div id="behavior-summary">
-  ### 動作の概要
+  ### 動作の概要 {#behavior-summary}
 </div>
 
 | **フロー**    | **`third_party_client_access: allow` が必要か** | **ドメイン接続が必要か** | **`allow_any_organization`** |
@@ -247,7 +247,7 @@ Organizations のマシンツーマシンアクセスでは、サードパーテ
 | クライアント資格情報 | いいえ — 評価されない                                | いいえ            | 許可されない                       |
 
 <div id="configure-open-redirect-protection">
-  ## オープンリダイレクト保護を設定する
+  ## オープンリダイレクト保護を設定する {#configure-open-redirect-protection}
 </div>
 
 強化されたセキュリティ制御が適用されるサードパーティアプリケーションでは、**Open Redirect Protection** がデフォルトで有効になっています。有効になっている場合、Auth0 は次のことを行いません。
@@ -285,13 +285,13 @@ Organizations のマシンツーマシンアクセスでは、サードパーテ
 </Tabs>
 
 <div id="dynamic-client-registration">
-  ## 動的クライアント登録
+  ## 動的クライアント登録 {#dynamic-client-registration}
 </div>
 
 [dynamically registered clients](/docs/ja-jp/get-started/applications/dynamic-client-registration) はすべてサードパーティアプリケーションです。DCR を有効にする前に、動的登録されたクライアントがお使いの API にアクセスできるよう、[デフォルトの API 権限](#default-permissions-for-all-third-party-applications)を設定してください。
 
 <div id="learn-more">
-  ## さらに詳しく
+  ## さらに詳しく {#learn-more}
 </div>
 
 * [サードパーティアプリケーション](/docs/ja-jp/get-started/applications/third-party-applications)

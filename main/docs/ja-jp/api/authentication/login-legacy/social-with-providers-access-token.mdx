@@ -6,7 +6,7 @@ description: "ソーシャルプロバイダーのアクセストークンを使
 import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `POST /oauth/access_token`
@@ -20,7 +20,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 ソーシャルプロバイダーのアクセストークンと`connection`を指定すると、このエンドポイントはそのプロバイダーでユーザーを認証し、アクセストークンと、必要に応じて ID トークンを含む JSON を返します。このエンドポイントは、Facebook、Google、Twitter、Weibo でのみ利用できます。
 
 <div id="remarks">
-  ### 注記
+  ### 注記 {#remarks}
 </div>
 
 * `profile` スコープ値は、End-User の既定のプロフィール クレーム (`name`、`family_name`、`given_name`、`middle_name`、`nickname`、`preferred_username`、`profile`、`picture`、`website`、`gender`、`birthdate`、`zoneinfo`、`locale`、`updated_at`) へのアクセスを求めます。
@@ -28,7 +28,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 * `email` スコープ値は、`email` および `email_verified` クレームへのアクセスを求めます。
 
 <div id="learn-more">
-  ### 詳しく見る
+  ### 詳しく見る {#learn-more}
 </div>
 
 * [IDプロバイダー API を呼び出す](https://auth0.com/docs/authenticate/identity-providers/calling-an-external-idp-api)
@@ -36,7 +36,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 * [IDプロバイダー の API を呼び出すためのスコープ/権限を追加する](https://auth0.com/docs/authenticate/identity-providers/adding-scopes-for-an-external-idp)
 
 <div id="body-parameters">
-  ## Body Parameters
+  ## Body Parameters {#body-parameters}
 </div>
 
 <ParamField body="client_id" type="string" required>
@@ -56,7 +56,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 </ParamField>
 
 <div id="response-schema">
-  ## レスポンススキーマ
+  ## レスポンススキーマ {#response-schema}
 </div>
 
 <ResponseSchema statusCode="200">
@@ -84,7 +84,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 </ResponseSchema>
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | Status  | Description     |

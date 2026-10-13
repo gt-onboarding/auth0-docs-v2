@@ -17,7 +17,7 @@ title: Management API v2 エンドポイントのページネーション付き�
 * 影響を受けるエンドポイントを使用し、`per_page` パラメーターを渡している、または常に単一の結果を返すクエリを実行している。
 
 <div id="endpoints-affected">
-  ## 影響を受けるエンドポイント
+  ## 影響を受けるエンドポイント {#endpoints-affected}
 </div>
 
 以下の Management API v2 エンドポイントの呼び出しが影響を受けます:
@@ -33,7 +33,7 @@ title: Management API v2 エンドポイントのページネーション付き�
 ページネーションオプションを指定していないすべてのリクエストのうち、現在 2 件以上の項目を返しているものについては、クライアントとエンドポイントの組み合わせごとに 1 時間に 1 回、非推奨通知がテナントログに記録されます。
 
 <div id="actions">
-  ## Actions
+  ## Actions {#actions}
 </div>
 
 1. `page` パラメーターと `per_page` パラメーターを指定して、影響を受けるすべてのエンドポイントへの呼び出しを置き換えます。
@@ -54,7 +54,7 @@ title: Management API v2 エンドポイントのページネーション付き�
 3. テナントで Management API のページネーションなしリクエストを無効にします。[Auth0 Dashboard &gt; Tenant Settings &gt; Advanced &gt; Migration](https://manage.auth0.com/#/tenant/advanced) に移動してください。これにより、migration window の終了後に想定される動作を再現でき、影響を受けるエンドポイントへの呼び出しは最大 50 件の結果を返すようになります。その日付までは、ページネーションなしリクエストをいつでも再度有効にできます。
 
 <div id="update-extensions">
-  ### 拡張機能を更新する
+  ### 拡張機能を更新する {#update-extensions}
 </div>
 
 以前のバージョンの[Auth0 Extensions](/docs/ja-jp/customize/extensions)やカスタム拡張機能は、ページネーション対応のクエリのみを実行するように、最新バージョンへ更新する必要がある場合があります。
@@ -63,7 +63,7 @@ title: Management API v2 エンドポイントのページネーション付き�
 2. [Auth0 Dashboard &gt; Extensions](https://manage.auth0.com/#/extensions)に移動し、**Installed Extensions**を選択して、表示されていれば拡張機能の **Update** リンクをクリックします。
 
 <div id="update-deploy-cli-tool">
-  ### Deploy CLI ツールを更新する
+  ### Deploy CLI ツールを更新する {#update-deploy-cli-tool}
 </div>
 
 `auth0-deploy-cli` ツールを使用している場合は、**バージョン 5.3.0 以降**に更新する必要があります。詳細については、[Deploy CLI ツール](/docs/ja-jp/deploy-monitor/deploy-cli-tool) を参照してください。

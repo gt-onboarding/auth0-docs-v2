@@ -12,7 +12,7 @@ Auth0 React SDK は、グラントやプロトコルの詳細、トークンの�
 このライブラリは [GitHub で公開](https://github.com/auth0/auth0-react) されており、[API の詳細](https://auth0.github.io/auth0-react/) も確認できます。
 
 <div id="installation">
-  ## インストール
+  ## インストール {#installation}
 </div>
 
 プロジェクトで auth0-react.js を使用するには、いくつかの方法があります。
@@ -24,7 +24,7 @@ Auth0 React SDK は、グラントやプロトコルの詳細、トークンの�
   `yarn add @auth0/auth0-react`
 
 <div id="getting-started">
-  ## はじめに
+  ## はじめに {#getting-started}
 </div>
 
 まず、アプリケーションを `Auth0Provider` コンポーネントでラップする必要があります。これにより、アプリケーション内のコンポーネントで React Context を利用できるようになります。
@@ -49,7 +49,7 @@ export const codeExample = `import React from 'react';
 <AuthCodeBlock children={codeExample} language="js" />
 
 <div id="isloading-and-error">
-  ## isLoading と error
+  ## isLoading と error {#isloading-and-error}
 </div>
 
 SDK の初期化が完了するまで待機し、`isLoading` と `error` の状態を使ってエラーに対処します。
@@ -74,7 +74,7 @@ export default Wrapper;
 ```
 
 <div id="login">
-  ## Login
+  ## Login {#login}
 </div>
 
 ユーザーをログインさせるには、`loginWithRedirect` または `loginWithPopup` を使用します。
@@ -98,7 +98,7 @@ export default LoginButton;
 ```
 
 <div id="logout">
-  ## ログアウト
+  ## ログアウト {#logout}
 </div>
 
 ユーザーをログアウトするには、`logout` を使用します。<Tooltip tip="Auth0 Dashboard: サービスを設定するための Auth0 の主要な製品。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip> の &quot;Allowed Logout URLs&quot; に `returnTo` が指定されていることを確認してください。
@@ -128,7 +128,7 @@ export default LogoutButton;
 ```
 
 <div id="user">
-  ## ユーザー
+  ## ユーザー {#user}
 </div>
 
 `user` の値を使用して、ユーザープロファイル情報にアクセスできます。
@@ -147,7 +147,7 @@ export default Profile;
 ```
 
 <div id="use-with-a-class-component">
-  ## クラスコンポーネントで使用する
+  ## クラスコンポーネントで使用する {#use-with-a-class-component}
 </div>
 
 フックの代わりに、`withAuth0` 高階コンポーネント を使用して、クラスコンポーネントに `auth0` プロパティを追加します。
@@ -167,7 +167,7 @@ export default withAuth0(Profile);
 ```
 
 <div id="protect-a-route">
-  ## ルートを保護する
+  ## ルートを保護する {#protect-a-route}
 </div>
 
 高階コンポーネント `withAuthenticationRequired` を使用して、ルートコンポーネントを保護します。未認証の状態でこのルートにアクセスすると、ユーザーはログインページにリダイレクトされ、ログイン後にこのページへ戻ります。
@@ -187,7 +187,7 @@ export default withAuthenticationRequired(PrivateRoute, {
 **注** カスタム Router を使用している場合は、ユーザーを保護されたページに戻す処理を行うために、`Auth0Provider` にカスタムの `onRedirectCallback` メソッドを指定する必要があります。例については、[react-router](https://github.com/auth0/auth0-react/blob/master/EXAMPLES.md#1-protecting-a-route-in-a-react-router-dom-app)、[Gatsby](https://github.com/auth0/auth0-react/blob/master/EXAMPLES.md#2-protecting-a-route-in-a-gatsby-app)、および [Next.js](https://github.com/auth0/auth0-react/blob/master/EXAMPLES.md#3-protecting-a-route-in-a-nextjs-app-in-spa-mode) を参照してください。
 
 <div id="call-an-api">
-  ## API を呼び出す
+  ## API を呼び出す {#call-an-api}
 </div>
 
 保護された API を <Tooltip tip="アクセストークン: API へのアクセスに使用される認可資格情報で、opaque 文字列または JWT の形式を取ります。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Access+Token">アクセストークン</Tooltip>で呼び出すには、`Auth0Provider` または `getAccessTokenSilently` で、[アクセストークン](/docs/ja-jp/secure/tokens/access-tokens/get-access-tokens)の `audience` と `scope` を必ず指定してください。次に、そのアクセストークンをリクエストの `Authorization` ヘッダーに渡して、保護された API を呼び出します。

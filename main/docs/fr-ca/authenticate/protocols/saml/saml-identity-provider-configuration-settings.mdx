@@ -8,7 +8,7 @@ import {AuthCodeBlock} from "/snippets/fr-ca/AuthCodeBlock.jsx";
 import {AuthCodeGroup} from "/snippets/fr-ca/AuthCodeGroup.jsx";
 
 <div id="common-settings">
-  ## Paramètres communs
+  ## Paramètres communs {#common-settings}
 </div>
 
 Voici les paramètres utilisés pour configurer un <Tooltip tip="Security Assertion Markup Language (SAML) : protocole normalisé permettant à deux parties d’échanger des informations d’authentification sans mot de passe." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=SAML">SAML</Tooltip> <Tooltip tip="Security Assertion Markup Language (SAML) : protocole normalisé permettant à deux parties d’échanger des informations d’authentification sans mot de passe." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=identity+provider">fournisseur d’identité</Tooltip> (IdP).
@@ -18,7 +18,7 @@ Voici les paramètres utilisés pour configurer un <Tooltip tip="Security Assert
 </Callout>
 
 <div id="post-back-url">
-  ### URL de retour POST
+  ### URL de retour POST {#post-back-url}
 </div>
 
 Lorsque vous utilisez le <Tooltip tip="authentification unique (SSO) : service qui, après la connexion d’un utilisateur à une application, connecte automatiquement cet utilisateur à d’autres applications." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=SSO">SSO</Tooltip> initié par l’IdP, assurez-vous d’inclure le paramètre connection dans l’URL de retour POST :
@@ -38,7 +38,7 @@ export const codeExample2 = `https://{yourDomain}/login/callback?connection={you
 </Callout>
 
 <div id="entity-id">
-  ### ID d’entité
+  ### ID d’entité {#entity-id}
 </div>
 
 L’ID du fournisseur de services est :
@@ -180,7 +180,7 @@ Vous pouvez obtenir la valeur du ID d’entité personnalisé à l’aide de l�
 Remplacez la valeur de l’en-tête `ACCESS_TOKEN` par un <Tooltip tip="Jeton d’accès : information d’identification d’autorisation, sous la forme d’une chaîne opaque ou d’un JWT, utilisée pour accéder à une API." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=access+token">jeton d’accès</Tooltip> de la Management APIv2.
 
 <div id="saml-request-binding">
-  ### Liaison de requête SAML
+  ### Liaison de requête SAML {#saml-request-binding}
 </div>
 
 Également appelée **Liaison de protocole**, elle est envoyée à l’IdP depuis Auth0. Si possible, définissez la valeur dynamiquement en fonction de `connection.options.protocolBinding` :
@@ -194,25 +194,25 @@ Remplacez la valeur de l’en-tête `ACCESS_TOKEN` par un <Tooltip tip="Jeton d�
 S’il n’est pas possible de définir la valeur dynamiquement, définissez-la sur `HTTP-Redirect` (par défaut) ou sur `HTTP-Post` si vous avez sélectionné cette option dans **Liaison de protocole**.
 
 <div id="saml-response-binding">
-  ### Liaison SAML Response
+  ### Liaison SAML Response {#saml-response-binding}
 </div>
 
 Comment Auth0 reçoit le token SAML de l’IdP, défini à `HTTP-Post`.
 
 <div id="nameid-format">
-  ### Format du NameID
+  ### Format du NameID {#nameid-format}
 </div>
 
 Non précisé.
 
 <div id="saml-assertion-and-response">
-  ### Assertion et réponse SAML
+  ### Assertion et réponse SAML {#saml-assertion-and-response}
 </div>
 
 L’assertion SAML et la réponse SAML peuvent être signées séparément ou en même temps.
 
 <div id="singlelogout-service-url">
-  ### URL du service SingleLogout
+  ### URL du service SingleLogout {#singlelogout-service-url}
 </div>
 
 C’est à cette URL que le fournisseur d’identité SAML enverra les requêtes et les réponses de déconnexion :
@@ -224,7 +224,7 @@ export const codeExample13 = `https://{yourDomain}/logout`;
 Les requêtes de déconnexion SAML doivent être signées par le fournisseur d’identité.
 
 <div id="signed-assertions">
-  ## Assertions signées
+  ## Assertions signées {#signed-assertions}
 </div>
 
 Utilisez les liens suivants pour obtenir la clé publique dans différents formats :
@@ -238,13 +238,13 @@ Utilisez les liens suivants pour obtenir la clé publique dans différents forma
 Téléchargez le certificat au format demandé par l’IdP.
 
 <div id="idp-initiated-single-sign-on">
-  ### Authentification unique initiée par l’IdP
+  ### Authentification unique initiée par l’IdP {#idp-initiated-single-sign-on}
 </div>
 
 Pour en savoir plus sur le SSO initié par l’IdP, consultez [Configurer l’authentification unique SAML initiée par l’IdP](/docs/fr-ca/authenticate/protocols/saml/saml-sso-integrations/identity-provider-initiated-single-sign-on).
 
 <div id="metadata">
-  ## Métadonnées
+  ## Métadonnées {#metadata}
 </div>
 
 Certains fournisseurs d’identité SAML permettent d’importer directement les métadonnées contenant toutes les informations requises. Vous შეგიძლიათ accéder aux métadonnées de votre connexion dans Auth0 ici :
@@ -254,7 +254,7 @@ export const codeExample14 = `https://{yourDomain}/samlp/metadata?connection={yo
 <AuthCodeBlock children={codeExample14} language="http" />
 
 <div id="organizations">
-  ## Organizations
+  ## Organizations {#organizations}
 </div>
 
 Utilisez l’URL ACS de votre organisation dans l’IdP fédéré pour lancer le flux de connexion d’Organizations.
@@ -264,7 +264,7 @@ export const codeExample15 = `https://{yourDomain}/samlp?connection={yourConnect
 <AuthCodeBlock children={codeExample15} language="http" />
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Trouver l’ID ou le nom de la connexion](/docs/fr-ca/authenticate/identity-providers/locate-the-connection-id)

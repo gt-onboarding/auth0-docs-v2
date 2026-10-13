@@ -10,17 +10,17 @@ Auth0 を使うと、SharePoint の認証プロセスを大幅に簡素化でき
 </Callout>
 
 <div id="setup">
-  ## 設定
+  ## 設定 {#setup}
 </div>
 
 <div id="step-1-adding-the-integration-to-your-account">
-  ### ステップ 1. アカウントに連携を追加する
+  ### ステップ 1. アカウントに連携を追加する {#step-1-adding-the-integration-to-your-account}
 </div>
 
 まず、Auth0 Dashboard の [SSO Integrations](https://manage.auth0.com/#/externalapps/create) セクションに移動し、アプリ一覧から **SharePoint** を選択します。
 
 <div id="step-2-follow-the-live-documentation">
-  ### ステップ 2. Live Documentation の手順に従う
+  ### ステップ 2. Live Documentation の手順に従う {#step-2-follow-the-live-documentation}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -68,7 +68,7 @@ Enable-Auth0
 ```
 
 <div id="step-3-you-now-have-sharepoint-configured">
-  ### ステップ 3. SharePoint の設定が完了しました
+  ### ステップ 3. SharePoint の設定が完了しました {#step-3-you-now-have-sharepoint-configured}
 </div>
 
 これで、SharePoint が SSO ブローカーとして Auth0 を使用するように設定されました。ユーザーがサイトにアクセスすると、そのアプリケーションで有効になっているすべての接続が表示されたログインページが表示されます。
@@ -102,7 +102,7 @@ Enable-Auth0
 SharePoint では、今後 Auth0 が SSO ブローカーとして使用されます。
 
 <div id="customizing-the-login-page">
-  ## ログインページのカスタマイズ
+  ## ログインページのカスタマイズ {#customizing-the-login-page}
 </div>
 
 [Auth0 Universal Login](/docs/ja-jp/authenticate/login/auth0-universal-login) の手順に従って、ログインページをカスタマイズできます。
@@ -159,13 +159,13 @@ lock.show();
 ```
 
 <div id="troubleshooting">
-  ## トラブルシューティング
+  ## トラブルシューティング {#troubleshooting}
 </div>
 
 追加のクレームや認可を扱う際は、現在のユーザーのクレームを確認できると便利です。Microsoft の専門家である [Liam Clearly](https://helloitsliam.com/) の記事 [Claims Viewer Web Part](https://sharepointobservations.wordpress.com/2013/08/21/sharepoint-2013-and-adfs-2-0-test-with-claims-viewer-web-part/) を使えば、ユーザーのクレームに関する問題のトラブルシューティングに役立ちます:
 
 <div id="logs-in-sp2010">
-  ### SP2010 のログ
+  ### SP2010 のログ {#logs-in-sp2010}
 </div>
 
 エラーと警告は SharePoint の統合ログ サービスに記録され、Claims Provider の使用時に発生する問題のトラブルシューティングには、ULS Viewer などのツールを使用できます。
@@ -173,7 +173,7 @@ lock.show();
 ULS View の詳細および入手方法については、Microsoft のドキュメント [ULS Viewer](https://www.microsoft.com/en-us/download/details.aspx?id=44020) を参照してください。
 
 <div id="logs-in-sp2013">
-  ### SP2013 のログ
+  ### SP2013 のログ {#logs-in-sp2013}
 </div>
 
 SharePoint 2013 では、ログに 統合ログ サービス は使用せず、代わりに Event Tracing for Windows を利用しています。これによりパフォーマンスが向上し、記録されたすべてのイベントを取得する方法も複数用意されています。
@@ -181,11 +181,11 @@ SharePoint 2013 では、ログに 統合ログ サービス は使用せず、�
 ログをリアルタイムで表示するには、GitHub から Auth0 の [Logs Processor](https://github.com/auth0/auth0-sharepoint/releases) をダウンロードできます。Claims Provider に対して SharePoint が行うすべての呼び出しを確認するには、このツールを SharePoint Server で実行してください:
 
 <div id="next-steps">
-  ## 次のステップ
+  ## 次のステップ {#next-steps}
 </div>
 
 <div id="authorization">
-  ### 認可
+  ### 認可 {#authorization}
 </div>
 
 Auth0 から渡されるクレームは、SharePoint での認可にも使用できます。たとえば、**Fabrikam HR** を含む Role クレームを持つユーザーには、特定のサイトへのアクセス権を付与したり、そのサイトの投稿者に設定したりできます。
@@ -252,7 +252,7 @@ $group.AddUser($user)
 このclaim値をContributorsグループに追加すると、Davidはそのサイトにアクセスし、内容を編集できるようになります。
 
 <div id="user-profile-synchronization">
-  ### ユーザープロファイルの同期
+  ### ユーザープロファイルの同期 {#user-profile-synchronization}
 </div>
 
 既定では、SharePoint は Active Directory 由来のユーザープロファイル情報を同期できます。しかし Auth0 では、ユーザーがさまざまな種類の接続 (ソーシャルからエンタープライズまで) から来る可能性があるため、ユーザープロファイルを同期するには別のアプローチが必要になります。

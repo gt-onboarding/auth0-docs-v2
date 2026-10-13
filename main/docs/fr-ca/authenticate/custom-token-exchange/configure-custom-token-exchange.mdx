@@ -14,7 +14,7 @@ Pour configurer l’échange de jetons personnalisé pour votre application, vou
 * [Configurer](#configure-custom-token-exchange-profile) et [gérer](#manage-custom-token-exchange-profile) un profil d’échange de jetons personnalisé
 
 <div id="prerequisites">
-  ## Prérequis
+  ## Prérequis {#prerequisites}
 </div>
 
 Avant de configurer l’Échange de jetons personnalisé, assurez-vous que votre application remplit les prérequis suivants :
@@ -25,7 +25,7 @@ Avant de configurer l’Échange de jetons personnalisé, assurez-vous que votre
 Pour configurer votre application, accédez à **[Applications &gt; Paramètres avancés &gt; OAuth](https://auth0.com/docs/get-started/applications/application-settings#oauth)** dans l’Auth0 Dashboard.
 
 <div id="enable-custom-token-exchange-for-your-application">
-  ## Activer l’échange de jetons personnalisé pour votre application
+  ## Activer l’échange de jetons personnalisé pour votre application {#enable-custom-token-exchange-for-your-application}
 </div>
 
 Pour activer l’échange de jetons personnalisé, [créez une nouvelle application](/docs/fr-ca/get-started/auth0-overview/create-applications) ou mettez à jour une application existante à l’aide de l’Auth0 Dashboard ou de la Management API. Vous pouvez créer plusieurs applications pour utiliser l’échange de jetons personnalisé.
@@ -52,7 +52,7 @@ Lorsque vous créez une nouvelle application :
 Une fois l’application créée, notez le `client_id` et le `client_secret` pour les utiliser plus tard lorsque vous appellerez le point de terminaison `/oauth/token`.
 
 <div id="configure-custom-token-exchange-profile">
-  ## Configurer profil d’échange de jetons personnalisé
+  ## Configurer profil d’échange de jetons personnalisé {#configure-custom-token-exchange-profile}
 </div>
 
 Chaque profil d’échange de jetons personnalisé établit une correspondance biunivoque entre un `subject_token_type` et une Action, qui contient la logique de code pour un cas d’utilisation précis.
@@ -66,7 +66,7 @@ Pour créer un profil d’échange de jetons personnalisé, vous devez :
 3. [Gérer le profil d’échange de jetons personnalisé](#manage-custom-token-exchange-profile)
 
 <div id="create-action-for-the-profile">
-  ### Créer une Action pour le profil
+  ### Créer une Action pour le profil {#create-action-for-the-profile}
 </div>
 
 Utilisez les objets Event et API de échange de jetons personnalisé pour écrire une Action qui :
@@ -107,7 +107,7 @@ curl --location 'https://{yourDomain}/api/v2/actions/actions?actionName={yourAct
 Vous devriez trouver l’Action ID dans le corps de la réponse, à `actions[0].id.` Vous aurez besoin de l’Action ID pour créer le Profil d’échange de jetons personnalisé.
 
 <div id="create-custom-token-exchange-profile">
-  ### Créer un profil d’échange de jetons personnalisé
+  ### Créer un profil d’échange de jetons personnalisé {#create-custom-token-exchange-profile}
 </div>
 
 Pour créer le profil d’échange de jetons personnalisé, utilisez la Management API pour effectuer une requête `POST` avec les paramètres suivants vers le point de terminaison `/token-exchange-profiles` :
@@ -145,7 +145,7 @@ Si vous avez créé un profil d’échange de jetons personnalisé avec succès,
 ```
 
 <div id="manage-custom-token-exchange-profile">
-  ### Gérer le profil d’échange de jetons personnalisé
+  ### Gérer le profil d’échange de jetons personnalisé {#manage-custom-token-exchange-profile}
 </div>
 
 Pour gérer votre profil d’échange de jetons personnalisé, utilisez la Management API pour envoyer des requêtes au point de terminaison `/token-exchange-profiles`.

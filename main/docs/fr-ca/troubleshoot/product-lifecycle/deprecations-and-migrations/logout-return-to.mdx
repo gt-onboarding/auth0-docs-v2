@@ -12,7 +12,7 @@ Le **1 décembre 2021**, le comportement de déconnexion changera pour toujours 
 Si Auth0 n’a aucune trace d’une requête précédente vers l’une de ces API, la déconnexion se terminera, mais la redirection n’aura pas lieu et une page d’erreur s’affichera pour les utilisateurs finaux.
 
 <div id="affected-endpoints">
-  ### Points de terminaison touchés
+  ### Points de terminaison touchés {#affected-endpoints}
 </div>
 
 Les points de terminaison suivants sont touchés par ce changement :
@@ -29,7 +29,7 @@ Les tenants qui s’appuient sur les modes d’utilisation suivants ne pourront 
 4. Les applications ou les utilisateurs qui effectuent des requêtes vers l’API `/authorize` de façon simultanée ou en alternance avec des requêtes vers l’une des API touchées, qu’il y ait eu ou non une requête préalable à `/v2/logout` ou `/wsfed/{yourClientId}?wa=wsignout1.0`.
 
 <div id="actions">
-  ### Actions
+  ### Actions {#actions}
 </div>
 
 1. Allez à [Auth0 Dashboard &gt; Monitoring &gt; Logs](https://manage.auth0.com/#/logs), puis recherchez `type:depnote AND description:*unvalidated*redirects*` pour trouver les applications qui dépendent du comportement obsolète.
@@ -44,7 +44,7 @@ Les tenants qui s’appuient sur les modes d’utilisation suivants ne pourront 
 Une fois les actions de migration terminées et testées, vous devriez vérifier la migration.
 
 <div id="verify-migration">
-  ### Vérifier la migration
+  ### Vérifier la migration {#verify-migration}
 </div>
 
 Une fois que vous avez migré vos applications et que vous êtes certain qu’elles ne reposent plus sur les modes d’utilisation obsolètes, vérifiez vos modifications en désactivant le comportement obsolète à un moment de votre choix, avant le **1er décembre 2021**.

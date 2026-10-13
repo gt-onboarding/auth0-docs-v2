@@ -25,7 +25,7 @@ Get User スクリプトは、ユーザーの存在状況を確認する際に�
 * パスワードを変更またはリセットする  ([Change Password](/docs/ja-jp/authenticate/database-connections/custom-db/templates/change-password) スクリプト)
 
 <div id="get-user-function">
-  ## Get User 関数
+  ## Get User 関数 {#get-user-function}
 </div>
 
 `getUser` 関数は、次の処理を行う必要があります。
@@ -35,7 +35,7 @@ Get User スクリプトは、ユーザーの存在状況を確認する際に�
 * ユーザーが存在するかどうかの判定時に問題が発生した場合は、エラーを返す。
 
 <div id="definition">
-  ### 定義
+  ### 定義 {#definition}
 </div>
 
 `getUser` 関数は2つのパラメータを受け取り、`callback` コールバック関数を返します。
@@ -83,13 +83,13 @@ function getUser(email, callback) {
 ```
 
 <div id="callback-function">
-  ## コールバック関数
+  ## コールバック関数 {#callback-function}
 </div>
 
 `callback` 関数は、ユーザープロファイルデータやエラーデータをパイプライン内で受け渡すために使用されます。
 
 <div id="definition">
-  ### 定義
+  ### 定義 {#definition-2}
 </div>
 
 `callback` 関数は最大2つのパラメータを受け取り、関数を返します。
@@ -104,7 +104,7 @@ callback(error[,profile]): function
 | `profile` | オブジェクト | 任意 | ユーザーのプロファイルデータが含まれます。 |
 
 <div id="return-the-user-profile-user-found">
-  ### ユーザープロファイルを返す (ユーザーが見つかった場合)
+  ### ユーザープロファイルを返す (ユーザーが見つかった場合) {#return-the-user-profile-user-found}
 </div>
 
 <Warning>
@@ -138,7 +138,7 @@ return callback(null, {
 標準フィールドに加えて、`user_metadata`、`app_metadata`、`mfa_factors` フィールドを含めることもできます。
 
 <div id="return-no-user-profile-user-not-found">
-  ### ユーザープロファイルを返さない (ユーザーが見つからない場合)
+  ### ユーザープロファイルを返さない (ユーザーが見つからない場合) {#return-no-user-profile-user-not-found}
 </div>
 
 ユーザーが見つからない場合は、`error` パラメータには `null` を渡し、`profile` パラメータは省略します：
@@ -148,7 +148,7 @@ return callback(null);
 ```
 
 <div id="return-an-error">
-  ### エラーを返す
+  ### エラーを返す {#return-an-error}
 </div>
 
 エラーが発生した場合は、問題の内容がわかる関連情報とともに、エラーデータを `error` パラメータに渡します。
@@ -160,7 +160,7 @@ return callback(new Error("My custom error message."));
 詳しくは、[カスタムデータベースのトラブルシューティング](/docs/ja-jp/authenticate/database-connections/custom-db/error-handling)を参照してください。
 
 <div id="language-specific-script-examples">
-  ## 言語別のスクリプト例
+  ## 言語別のスクリプト例 {#language-specific-script-examples}
 </div>
 
 Auth0 では、以下の言語／テクノロジー向けのサンプルスクリプトを提供しています。

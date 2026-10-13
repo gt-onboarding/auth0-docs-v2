@@ -21,7 +21,7 @@ Cookie は、ウェブサーバーがブラウザーに送信するデータ文�
 ユーザーは、ブラウザーの設定を変更することで、Cookie を受け入れるかどうかを選択できます。
 
 <div id="cookie-based-authentication">
-  ## Cookie ベースの認証
+  ## Cookie ベースの認証 {#cookie-based-authentication}
 </div>
 
 通常、シングルページアプリ (React、Vue、AngularJS + Node など) 、Native モバイルアプリ (iOS や Android など) 、そして Web API (Node、Ruby、ASP.NET、またはそれらを組み合わせて構築されたもの) は、トークン ベースの認証のメリットを最も受けやすい種類です。一方、従来型のサーバーサイド Web アプリケーションでは、従来から Cookie ベースの認証が使われてきました。
@@ -31,7 +31,7 @@ Cookie ベースの認証は Web プラットフォームごとに実装方法�
 認証が必要なアプリケーションを構築する場合は、リクエストが行われるたびにユーザーが認証済みかどうかを判断するために、セッションと Cookie を使用できます。そのためには、ステートフル Cookie とステートレス Cookie のいずれかを選択します。
 
 <div id="stateful-cookies">
-  ### ステートフルなCookie
+  ### ステートフルなCookie {#stateful-cookies}
 </div>
 
 ステートフルなCookieには、セッション情報を保存しているデータベースのレコードを参照するポインタが含まれます。
@@ -48,7 +48,7 @@ Cookie ベースの認証は Web プラットフォームごとに実装方法�
 * ユーザー数が多くなり、それに伴ってデータベースの読み書きも増えると、スケーリングが難しくなることがあります。
 
 <div id="stateless-cookies">
-  ### ステートレスCookie
+  ### ステートレスCookie {#stateless-cookies}
 </div>
 
 ステートレスCookieは自己完結型で、必要なセッション情報 (認証済みユーザーの場合はuser ID) をすべて含み、クライアント側に保存されます。外部からの改ざんを防ぐため、ステートレスCookieは暗号化するか、少なくとも署名する必要があります。
@@ -66,7 +66,7 @@ Cookie ベースの認証は Web プラットフォームごとに実装方法�
 * 複数のWebサーバーを使用する場合は、すべてのサーバーがCookieの暗号化/復号や署名に必要なキーを持っていることを確認する必要があります。
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * [セッション](/docs/ja-jp/manage-users/sessions)

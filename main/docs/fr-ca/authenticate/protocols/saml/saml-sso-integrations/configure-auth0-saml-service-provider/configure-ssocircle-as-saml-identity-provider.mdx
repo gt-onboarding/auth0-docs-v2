@@ -11,13 +11,13 @@ Configurez SSOCircle comme <Tooltip tip="Fournisseur d’identité (IdP) : serv
 4. Testez la connexion.
 
 <div id="prerequisite">
-  ## Prérequis
+  ## Prérequis {#prerequisite}
 </div>
 
 Vous devez avoir un compte [SSOCircle](https://idp.ssocircle.com/).
 
 <div id="obtain-ssocircle-metadata">
-  ## Obtenir les métadonnées de SSOCircle
+  ## Obtenir les métadonnées de SSOCircle {#obtain-ssocircle-metadata}
 </div>
 
 1. Accédez à la [page IdP de SSOCircle](https://idp.ssocircle.com/) pour consulter les métadonnées requises pour l’intégration. Vous y verrez un fichier XML.
@@ -28,7 +28,7 @@ Vous devez avoir un compte [SSOCircle](https://idp.ssocircle.com/).
 3. [Téléchargez](http://www.ssocircle.com/en/idp-tips-tricks/public-idp-configuration) et enregistrez le certificat CA de SSOCircle.
 
 <div id="configure-enterprise-connection-in-auth0">
-  ## Configurer la connexion d’entreprise dans Auth0
+  ## Configurer la connexion d’entreprise dans Auth0 {#configure-enterprise-connection-in-auth0}
 </div>
 
 1. Accédez à [Dashboard &gt; Authentication &gt; Enterprise &gt; SAMLP](https://manage.auth0.com/#/connections) et cliquez sur l’icône **plus** pour ouvrir la page qui permet de créer une nouvelle connexion.
@@ -61,7 +61,7 @@ Vous pouvez accéder aux métadonnées d’une connexion Auth0 <Tooltip tip="Sec
 Vous devrez fournir ces métadonnées à SSOCircle à l’étape suivante.
 
 <div id="configure-ssocircle-as-identity-provider">
-  ## Configurer SSOCircle comme fournisseur d&#39;identité
+  ## Configurer SSOCircle comme fournisseur d&#39;identité {#configure-ssocircle-as-identity-provider}
 </div>
 
 1. Connectez-vous à votre compte [SSOCircle](http://ssocircle.com). Vous serez redirigé vers votre profil d’utilisateur; une barre de navigation se trouve à gauche.
@@ -77,11 +77,11 @@ Vous devrez fournir ces métadonnées à SSOCircle à l’étape suivante.
 4. Cliquez sur **Soumettre**.
 
 <div id="test-connection">
-  ## Tester la connexion
+  ## Tester la connexion {#test-connection}
 </div>
 
 <div id="create-auth0-application">
-  ### Créer une application Auth0
+  ### Créer une application Auth0 {#create-auth0-application}
 </div>
 
 1. Accédez à la page **Applications** dans le [Auth0 Dashboard](https://manage.auth0.com/#), puis cliquez sur **+ New Application**.
@@ -94,7 +94,7 @@ Vous devrez fournir ces métadonnées à SSOCircle à l’étape suivante.
 8. Faites défiler jusqu’à la section **Enterprise**. Repérez la ligne de la connexion SAML que vous avez créée ci-dessus et activez la bascule pour l’activer.
 
 <div id="test-enterprise-connection">
-  ### Tester la connexion d’entreprise
+  ### Tester la connexion d’entreprise {#test-enterprise-connection}
 </div>
 
 1. Pour tester votre connexion, suivez les étapes de [Tester les connexions d’entreprise](/docs/fr-ca/authenticate/identity-providers/enterprise-identity-providers/test-enterprise-connections).

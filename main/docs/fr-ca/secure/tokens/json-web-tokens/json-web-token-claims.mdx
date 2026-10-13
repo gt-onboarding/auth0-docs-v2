@@ -23,7 +23,7 @@ Il existe deux types de claims JWT :
 * **personnalisé** : comprend des claims publics ou privés non enregistrés. Les claims publics sont résistants aux collisions, tandis que les claims privés peuvent entraîner des collisions.
 
 <div id="registered-claims">
-  ## Claims enregistrées
+  ## Claims enregistrées {#registered-claims}
 </div>
 
 La spécification JWT définit sept claims réservées qui ne sont pas obligatoires, mais qui sont recommandées afin de permettre l’interopérabilité avec les [applications tierces](/docs/fr-ca/get-started/applications/third-party-applications/configure-third-party-applications). Les voici :
@@ -39,7 +39,7 @@ La spécification JWT définit sept claims réservées qui ne sont pas obligatoi
 Vous pouvez consulter la liste complète des claims enregistrées dans le [registre des claims JSON Web Token de l’IANA](https://www.iana.org/assignments/jwt/jwt.xhtml#claims).
 
 <div id="custom-claims">
-  ## Claims personnalisées
+  ## Claims personnalisées {#custom-claims}
 </div>
 
 Vous pouvez définir vos propres claims personnalisées, que vous contrôlez, et les ajouter à un jeton à l’aide d’Actions. Voici quelques exemples :
@@ -52,7 +52,7 @@ Tant que l’Action est en place, les claims personnalisées qu’elle ajoute ap
 Pour voir un exemple de la façon d’ajouter des claims personnalisées à un jeton, consultez [Exemples de cas d’utilisation : portées et revendications](/docs/fr-ca/get-started/apis/scopes/sample-use-cases-scopes-and-claims).
 
 <div id="public-claims">
-  ### Claims publics
+  ### Claims publics {#public-claims}
 </div>
 
 Vous pouvez créer des claims personnalisés destinés au public, qui peuvent contenir des renseignements généraux comme le nom et l’adresse courriel. Si vous créez des claims publics, vous devez soit les enregistrer, soit utiliser, au moyen d’un espace de noms, des noms résistants aux collisions, et prendre des précautions raisonnables pour vous assurer de contrôler l’espace de noms que vous utilisez.
@@ -64,13 +64,13 @@ Dans le [registre des claims JSON Web Token de l’IANA](https://www.iana.org/as
 * `nonce`
 
 <div id="private-claims">
-  ### Claims privés
+  ### Claims privés {#private-claims}
 </div>
 
 Vous pouvez créer des claims personnalisés privés pour transmettre des renseignements propres à votre application. Par exemple, alors qu’un claim public peut contenir des renseignements généraux comme le nom et l’adresse courriel, les claims privés peuvent être plus précis, comme l’ID d’employé et le nom du département.
 
 <div id="auth0-restrictions">
-  ## Restrictions d’Auth0
+  ## Restrictions d’Auth0 {#auth0-restrictions}
 </div>
 
 Auth0 applique les restrictions générales suivantes aux claims personnalisées :
@@ -83,7 +83,7 @@ Auth0 applique les restrictions générales suivantes aux claims personnalisées
 Pour en savoir plus sur les claims personnalisées, consultez [Create Custom Claims](/docs/fr-ca/secure/tokens/json-web-tokens/create-custom-claims).
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Valider les JSON Web Tokens](/docs/fr-ca/secure/tokens/json-web-tokens/validate-json-web-tokens)

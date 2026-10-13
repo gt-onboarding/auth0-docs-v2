@@ -6,7 +6,7 @@ title: シングルサインオンを使用する従来型Webアプリケーシ�
 このシナリオでは、ExampleCo という架空の会社向けのWebアプリケーションを構築します。このアプリは、ExampleCo の従業員と契約社員が利用することを想定しています。従業員は既存の社内ディレクトリ (Active Directory) を使用し、契約社員は別のユーザーストアで管理されます。
 
 <Info>
-  ### 要点
+  ### 要点 {#tldr}
 
   * Auth0 は、認証と認可のために OAuth 2.0 や <Tooltip tip="OpenID: アプリケーションがログイン情報を収集および保存することなく、ユーザーの身元を検証できるようにする認証のオープン標準。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=OpenID+Connect+%28OIDC%29">OpenID Connect (OIDC)</Tooltip> などのオープン標準をサポートしています ([使用するプロトコル](/docs/ja-jp/get-started/architecture-scenarios/sso-for-regular-web-apps/part-1#which-protocol-to-use)を参照)
   * OIDC は複数の認可フローをサポートしており、Webアプリケーションに最も適しているのは認可コードフローです ([認証フロー](/docs/ja-jp/get-started/architecture-scenarios/sso-for-regular-web-apps/part-1#authentication-flow)を参照)
@@ -23,7 +23,7 @@ title: シングルサインオンを使用する従来型Webアプリケーシ�
 </Callout>
 
 <div id="the-premise">
-  ## 前提
+  ## 前提 {#the-premise}
 </div>
 
 ExampleCo はコンサルティング系のスタートアップ企業です。現在、従業員は約100名おり、いくつかの業務を外部の契約業者に委託しています。従業員の大半は本社オフィスで勤務していますが、一部のチームはリモートで働いています。さらに、一部の従業員は顧客先への出張が多く、モバイル端末から業務を行っています。
@@ -33,7 +33,7 @@ ExampleCo はコンサルティング系のスタートアップ企業です。�
 会社は利用可能なタイムシート用アプリケーションをいくつか評価した結果、現時点では非常にシンプルなアプリケーションを求めていることから、自社で独自のソリューションを構築するほうが費用対効果が高いと結論づけました。このアプリは ASP.NET Core を使って構築されます。開発者はすでにこの技術に習熟しており、1週間ほどでアプリを用意できるからです。
 
 <div id="goals-requirements">
-  ### 目標と要件
+  ### 目標と要件 {#goals-requirements}
 </div>
 
 ExampleCo は新しいソリューションをすばやくローンチしたいため、まずはシンプルに始めて、従業員からのフィードバックを集めながら段階的に機能を拡張していくことにしました。
@@ -41,7 +41,7 @@ ExampleCo は新しいソリューションをすばやくローンチしたい�
 このアプリケーションは、ログイン済みのユーザーのみが利用できる必要があります。各ユーザーにはロールがあり、そのロールに応じて特定の操作を行い、特定のデータを閲覧できるようにする必要があります。
 
 <Info>
-  ### 認証と認可の違い
+  ### 認証と認可の違い {#authentication-vs-authorization}
 
   ExampleCo は各ユーザーを**認証**し、**認可**したいと考えています。認証は本人確認に関するもので、ユーザーが名乗っている本人であることを検証します。認可は、ユーザーがどのリソースにアクセスできるか、またそのリソースに対して何を許可されるかを判断することです。
 </Info>
@@ -66,7 +66,7 @@ ExampleCo は、ユーザーのログイン時の負担は最小限に抑えた�
 <Frame>![ソリューションの図](/docs/images/cdy7uua7fh8z/7hg1vqzNEJ2RG1JYw0pxFp/d5e88b45ef76d06b1e8d35ab49186e1d/solution-diagram.png)</Frame>
 
 <div id="learn-more">
-  ## 詳しくはこちら
+  ## 詳しくはこちら {#learn-more}
 </div>
 
 * [ソリューションの概要 (Webアプリ + SSO) ](/docs/ja-jp/get-started/architecture-scenarios/sso-for-regular-web-apps/part-1)

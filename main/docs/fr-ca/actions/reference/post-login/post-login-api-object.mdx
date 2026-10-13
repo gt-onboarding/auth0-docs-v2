@@ -13,13 +13,13 @@ sidebarTitle: 'Objet API'
 L’objet API du déclencheur post-login des Actions comprend :
 
 <div id="apiaccess">
-  ## `api.access`
+  ## `api.access` {#apiaccess}
 </div>
 
 Modifiez l’accès de l’utilisateur qui tente de se connecter, par exemple en rejetant sa tentative de connexion.
 
 <div id="apiaccessdenyreason">
-  ### `api.access.deny(reason)`
+  ### `api.access.deny(reason)` {#apiaccessdenyreason}
 </div>
 
 Marquez la tentative de connexion en cours comme rejetée. L’utilisateur final ne pourra alors pas terminer
@@ -37,13 +37,13 @@ l’exécution de cette action, et aucune autre action ne sera exécutée.
 </Expandable>
 
 <div id="apiaccesstoken">
-  ## `api.accessToken`
+  ## `api.accessToken` {#apiaccesstoken}
 </div>
 
 Demandez des modifications au jeton d’accès en cours d’émission.
 
 <div id="apiaccesstokensetcustomclaimkey-value">
-  ### `api.accessToken.setCustomClaim(key, value)`
+  ### `api.accessToken.setCustomClaim(key, value)` {#apiaccesstokensetcustomclaimkey-value}
 </div>
 
 Définit une revendication personnalisée dans le jeton d’accès qui sera émis à la fin du flux de connexion.
@@ -61,7 +61,7 @@ Définit une revendication personnalisée dans le jeton d’accès qui sera émi
 </Expandable>
 
 <div id="apiaccesstokenaddscopescope">
-  ### `api.accessToken.addScope(scope)`
+  ### `api.accessToken.addScope(scope)` {#apiaccesstokenaddscopescope}
 </div>
 
 Ajoute une portée au jeton d’accès qui sera émis à la fin du flux de connexion.
@@ -75,7 +75,7 @@ Ajoute une portée au jeton d’accès qui sera émis à la fin du flux de conne
 </Expandable>
 
 <div id="apiaccesstokenremovescopescope">
-  ### `api.accessToken.removeScope(scope)`
+  ### `api.accessToken.removeScope(scope)` {#apiaccesstokenremovescopescope}
 </div>
 
 Supprime une portée du jeton d’accès qui sera émis à la fin du flux de connexion.
@@ -89,13 +89,13 @@ Supprime une portée du jeton d’accès qui sera émis à la fin du flux de con
 </Expandable>
 
 <div id="apiauthentication">
-  ## `api.authentication`
+  ## `api.authentication` {#apiauthentication}
 </div>
 
 Demande de modifier l’état d’authentification de la session de l’utilisateur courant.
 
 <div id="apiauthenticationchallengewithfactor-options">
-  ### `api.authentication.challengeWith(factor, options)`
+  ### `api.authentication.challengeWith(factor, options)` {#apiauthenticationchallengewithfactor-options}
 </div>
 
 Demande un défi d’authentification multifacteur à l’aide du facteur fourni et, éventuellement, de facteurs supplémentaires.
@@ -171,7 +171,7 @@ api.authentication.challengeWith({
 </Expandable>
 
 <div id="apiauthenticationchallengewithanyfactors">
-  ### `api.authentication.challengeWithAny(factors)`
+  ### `api.authentication.challengeWithAny(factors)` {#apiauthenticationchallengewithanyfactors}
 </div>
 
 Demande un défi d’authentification multifacteur à l’aide de l’un des facteurs fournis (en affichant d’abord un écran de sélection du facteur).
@@ -197,7 +197,7 @@ Si un facteur demandé n’est pas activé dans le tenant, il est ignoré. Si un
 </Expandable>
 
 <div id="apiauthenticationenrollwithfactor-options">
-  ### `api.authentication.enrollWith(factor, options)`
+  ### `api.authentication.enrollWith(factor, options)` {#apiauthenticationenrollwithfactor-options}
 </div>
 
 Demande l’inscription à l’authentification multifacteur à l’aide du facteur fourni et de facteurs supplémentaires.
@@ -257,7 +257,7 @@ api.authentication.enrollWith({
 </Expandable>
 
 <div id="apiauthenticationenrollwithanyfactors">
-  ### `api.authentication.enrollWithAny(factors)`
+  ### `api.authentication.enrollWithAny(factors)` {#apiauthenticationenrollwithanyfactors}
 </div>
 
 Demande l’inscription à l’authentification multifacteur à l’aide de l’un des facteurs fournis (en affichant d’abord un écran de sélection des facteurs).
@@ -283,7 +283,7 @@ Si aucun des facteurs demandés n’est à la fois activé et non inscrit, la tr
 </Expandable>
 
 <div id="apiauthenticationrecordmethodprovider_url">
-  ### `api.authentication.recordMethod(provider_url)`
+  ### `api.authentication.recordMethod(provider_url)` {#apiauthenticationrecordmethodprovider_url}
 </div>
 
 Indique qu&#39;une méthode d&#39;authentification personnalisée a été complétée au cours de la
@@ -305,7 +305,7 @@ la complétion d&#39;une méthode d&#39;authentification personnalisée après a
 </Expandable>
 
 <div id="apiauthenticationsetprimaryuserprimary_user_id">
-  ### `api.authentication.setPrimaryUser(primary_user_id)`
+  ### `api.authentication.setPrimaryUser(primary_user_id)` {#apiauthenticationsetprimaryuserprimary_user_id}
 </div>
 
 Modifiez l’utilisateur principal de la transaction de connexion.
@@ -325,13 +325,13 @@ Dans les scénarios nécessitant la liaison d’utilisateurs, l’identité util
 </Expandable>
 
 <div id="apiidtoken">
-  ## `api.idToken`
+  ## `api.idToken` {#apiidtoken}
 </div>
 
 Demande des modifications au jeton ID émis.
 
 <div id="apiidtokensetcustomclaimkey-value">
-  ### `api.idToken.setCustomClaim(key, value)`
+  ### `api.idToken.setCustomClaim(key, value)` {#apiidtokensetcustomclaimkey-value}
 </div>
 
 Définit une revendication personnalisée dans le jeton ID qui sera émis à la fin du flux de connexion.
@@ -349,13 +349,13 @@ Définit une revendication personnalisée dans le jeton ID qui sera émis à la
 </Expandable>
 
 <div id="apimultifactor">
-  ## `api.multifactor`
+  ## `api.multifactor` {#apimultifactor}
 </div>
 
 Activez ou désactivez l’exigence d’authentification multifacteur pour la tentative de connexion.
 
 <div id="apimultifactorenableprovider-options">
-  ### `api.multifactor.enable(provider, options)`
+  ### `api.multifactor.enable(provider, options)` {#apimultifactorenableprovider-options}
 </div>
 
 Activez l’authentification multifacteur pour ce flux de connexion. Une fois activée, les utilisateurs doivent répondre au
@@ -412,13 +412,13 @@ fin du flux de connexion.
 </Expandable>
 
 <div id="apiredirect">
-  ## `api.redirect`
+  ## `api.redirect` {#apiredirect}
 </div>
 
 Configurez et lancez des redirections externes.
 
 <div id="apiredirectencodetokenoptions">
-  ### `api.redirect.encodeToken(options)`
+  ### `api.redirect.encodeToken(options)` {#apiredirectencodetokenoptions}
 </div>
 
 Crée un jeton de session pouvant servir de cible de redirection dans un paramètre de chaîne de requête (par l’intermédiaire de `sendUserTo`),
@@ -457,7 +457,7 @@ Le secret partagé doit être stocké dans un **secret** de l’Action et peut �
 </Expandable>
 
 <div id="apiredirectsendusertourl-options">
-  ### `api.redirect.sendUserTo(url, options)`
+  ### `api.redirect.sendUserTo(url, options)` {#apiredirectsendusertourl-options}
 </div>
 
 Déclenche une redirection du navigateur vers l’`url` cible dans le pipeline de connexion dès la fin de cette action. La méthode d’assistance `createUrl` permet de simplifier l’encodage des données sous forme de paramètre de requête dans l’`url` cible, afin que le endpoint cible puisse en vérifier l’authenticité et l’intégrité.
@@ -480,7 +480,7 @@ Déclenche une redirection du navigateur vers l’`url` cible dans le pipeline d
 </Expandable>
 
 <div id="apiredirectcanredirect">
-  ### `api.redirect.canRedirect()`
+  ### `api.redirect.canRedirect()` {#apiredirectcanredirect}
 </div>
 
 Indique si la transaction actuelle permet de rediriger l’utilisateur. Certains protocoles, comme
@@ -488,7 +488,7 @@ Indique si la transaction actuelle permet de rediriger l’utilisateur. Certains
 la redirection de l’utilisateur. Une requête avec `prompt=none` ne permet pas non plus de rediriger l’utilisateur.
 
 <div id="apiredirectvalidatetokenoptions">
-  ### `api.redirect.validateToken(options)`
+  ### `api.redirect.validateToken(options)` {#apiredirectvalidatetokenoptions}
 </div>
 
 Récupère les données encodées dans un token JWT transmis au point de terminaison `/continue`, tout en vérifiant
@@ -513,13 +513,13 @@ l’authenticité et l’intégrité de ces données.
 </Expandable>
 
 <div id="apiuser">
-  ## `api.user`
+  ## `api.user` {#apiuser}
 </div>
 
 Modifiez les métadonnées de l’utilisateur qui se connecte.
 
 <div id="apiusersetappmetadatakey-value">
-  ### `api.user.setAppMetadata(key, value)`
+  ### `api.user.setAppMetadata(key, value)` {#apiusersetappmetadatakey-value}
 </div>
 
 Définit les métadonnées propres à l’application de l’utilisateur qui se connecte.
@@ -543,7 +543,7 @@ au format objet.
 </Expandable>
 
 <div id="apiusersetusermetadatakey-value">
-  ### `api.user.setUserMetadata(key, value)`
+  ### `api.user.setUserMetadata(key, value)` {#apiusersetusermetadatakey-value}
 </div>
 
 Définit les métadonnées générales de l’utilisateur qui se connecte.
@@ -567,13 +567,13 @@ format objet.
 </Expandable>
 
 <div id="apicache">
-  ## `api.cache`
+  ## `api.cache` {#apicache}
 </div>
 
 Modifiez le cache.
 
 <div id="apicachedeletekey">
-  ### `api.cache.delete(key)`
+  ### `api.cache.delete(key)` {#apicachedeletekey}
 </div>
 
 Supprime l’enregistrement associé à la valeur mise en cache pour la
@@ -588,7 +588,7 @@ clé fournie, s’il existe.
 </Expandable>
 
 <div id="apicachegetkey">
-  ### `api.cache.get(key)`
+  ### `api.cache.get(key)` {#apicachegetkey}
 </div>
 
 Récupère l’enregistrement associé à la clé fournie, s’il existe.
@@ -604,7 +604,7 @@ dans la propriété `value` de l’objet renvoyé.
 </Expandable>
 
 <div id="apicachesetkey-value-options">
-  ### `api.cache.set(key, value, options)`
+  ### `api.cache.set(key, value, options)` {#apicachesetkey-value-options}
 </div>
 
 Stocke ou met à jour une valeur de type chaîne dans le cache à la clé indiquée.
@@ -662,13 +662,13 @@ disponibles lors de transactions ultérieures, même s’ils n’ont pas encore 
 </Expandable>
 
 <div id="apisamlresponse">
-  ## `api.samlResponse`
+  ## `api.samlResponse` {#apisamlresponse}
 </div>
 
 Configurez des configurations et des attributs SAML personnalisés.
 
 <div id="apisamlresponsesetattributeattribute-value">
-  ### `api.samlResponse.setAttribute(attribute, value)`
+  ### `api.samlResponse.setAttribute(attribute, value)` {#apisamlresponsesetattributeattribute-value}
 </div>
 
 Définit des attributs dans l’assertion SAML émise pour l’utilisateur authentifié.
@@ -687,7 +687,7 @@ Définit des attributs dans l’assertion SAML émise pour l’utilisateur authe
 </Expandable>
 
 <div id="apisamlresponsesetaudienceaudience">
-  ### `api.samlResponse.setAudience(audience)`
+  ### `api.samlResponse.setAudience(audience)` {#apisamlresponsesetaudienceaudience}
 </div>
 
 Audience de l’assertion SAML.
@@ -700,7 +700,7 @@ Par défaut, utilise l’émetteur de la SAMLRequest.
 </Expandable>
 
 <div id="apisamlresponsesetrecipientrecipient">
-  ### `api.samlResponse.setRecipient(recipient)`
+  ### `api.samlResponse.setRecipient(recipient)` {#apisamlresponsesetrecipientrecipient}
 </div>
 
 Destinataire de l’assertion SAML (SubjectConfirmationData).
@@ -713,7 +713,7 @@ Par défaut, il s’agit de l’AssertionConsumerUrl de la SAMLRequest ou de l�
 </Expandable>
 
 <div id="apisamlresponsesetcreateupnclaimcreateupnclaim">
-  ### `api.samlResponse.setCreateUpnClaim(createUpnClaim)`
+  ### `api.samlResponse.setCreateUpnClaim(createUpnClaim)` {#apisamlresponsesetcreateupnclaimcreateupnclaim}
 </div>
 
 Détermine si un claim UPN doit être créé. La valeur par défaut est true.
@@ -725,7 +725,7 @@ Détermine si un claim UPN doit être créé. La valeur par défaut est true.
 </Expandable>
 
 <div id="apisamlresponsesetpassthroughclaimswithnomappingpassthroughclaimswithnomapping">
-  ### `api.samlResponse.setPassthroughClaimsWithNoMapping(passthroughClaimsWithNoMapping)`
+  ### `api.samlResponse.setPassthroughClaimsWithNoMapping(passthroughClaimsWithNoMapping)` {#apisamlresponsesetpassthroughclaimswithnomappingpassthroughclaimswithnomapping}
 </div>
 
 Si la valeur est true (par défaut), Auth0 transmet dans l’assertion de sortie chaque claim qui n’est pas mappé au profil commun.
@@ -738,7 +738,7 @@ Si la valeur est false, ces claims ne sont pas mappés.
 </Expandable>
 
 <div id="apisamlresponsesetmapunknownclaimsasismapunknownclaimsasis">
-  ### `api.samlResponse.setMapUnknownClaimsAsIs(mapUnknownClaimsAsIs)`
+  ### `api.samlResponse.setMapUnknownClaimsAsIs(mapUnknownClaimsAsIs)` {#apisamlresponsesetmapunknownclaimsasismapunknownclaimsasis}
 </div>
 
 Si passthroughClaimsWithNoMapping est vrai et que cette valeur est fausse (valeur par défaut), Auth0 ajoute le préfixe `http://schema.auth0.com` à chaque claim qui n’est pas mappé au profil commun.
@@ -751,7 +751,7 @@ Si elle est vraie, le claim est transmis tel quel.
 </Expandable>
 
 <div id="apisamlresponsesetmapidentitiesmapidentities">
-  ### `api.samlResponse.setMapIdentities(mapIdentities)`
+  ### `api.samlResponse.setMapIdentities(mapIdentities)` {#apisamlresponsesetmapidentitiesmapidentities}
 </div>
 
 Si la valeur est true (par défaut), ajoute des renseignements supplémentaires au token, comme le Provider (Google, ADFS, AD, etc.) et le jeton d’accès, s’il est disponible.
@@ -763,7 +763,7 @@ Si la valeur est true (par défaut), ajoute des renseignements supplémentaires 
 </Expandable>
 
 <div id="apisamlresponsesetsignaturealgorithmsignaturealgorithm">
-  ### `api.samlResponse.setSignatureAlgorithm(signatureAlgorithm)`
+  ### `api.samlResponse.setSignatureAlgorithm(signatureAlgorithm)` {#apisamlresponsesetsignaturealgorithmsignaturealgorithm}
 </div>
 
 Algorithme de signature utilisé pour signer l’assertion ou la réponse SAML.
@@ -778,7 +778,7 @@ La valeur par défaut est rsa-sha256.
 </Expandable>
 
 <div id="apisamlresponsesetsignaturealgorithmsignaturealgorithm">
-  ### `api.samlResponse.setSignatureAlgorithm(signatureAlgorithm)`
+  ### `api.samlResponse.setSignatureAlgorithm(signatureAlgorithm)` {#apisamlresponsesetsignaturealgorithmsignaturealgorithm-2}
 </div>
 
 **Paramètres**
@@ -790,7 +790,7 @@ La valeur par défaut est rsa-sha256.
 </Expandable>
 
 <div id="apisamlresponsesetdigestalgorithmdigestalgorithm">
-  ### `api.samlResponse.setDigestAlgorithm(digestAlgorithm)`
+  ### `api.samlResponse.setDigestAlgorithm(digestAlgorithm)` {#apisamlresponsesetdigestalgorithmdigestalgorithm}
 </div>
 
 Algorithme de hachage utilisé pour calculer le condensé de l’assertion ou de la réponse SAML.
@@ -805,7 +805,7 @@ La valeur par défaut est sha256.
 </Expandable>
 
 <div id="apisamlresponsesetdigestalgorithmdigestalgorithm">
-  ### `api.samlResponse.setDigestAlgorithm(digestAlgorithm)`
+  ### `api.samlResponse.setDigestAlgorithm(digestAlgorithm)` {#apisamlresponsesetdigestalgorithmdigestalgorithm-2}
 </div>
 
 **Paramètres**
@@ -817,7 +817,7 @@ La valeur par défaut est sha256.
 </Expandable>
 
 <div id="apisamlresponsesetdestinationdestination">
-  ### `api.samlResponse.setDestination(destination)`
+  ### `api.samlResponse.setDestination(destination)` {#apisamlresponsesetdestinationdestination}
 </div>
 
 Destination de la réponse SAML. Si elle n’est pas précisée, la valeur utilisée sera l’AssertionConsumerUrl de SAMLRequest ou l’URL de rappel en l’absence de SAMLRequest.
@@ -829,7 +829,7 @@ Destination de la réponse SAML. Si elle n’est pas précisée, la valeur utili
 </Expandable>
 
 <div id="apisamlresponsesetlifetimeinsecondslifetimeinseconds">
-  ### `api.samlResponse.setLifetimeInSeconds(lifetimeInSeconds)`
+  ### `api.samlResponse.setLifetimeInSeconds(lifetimeInSeconds)` {#apisamlresponsesetlifetimeinsecondslifetimeinseconds}
 </div>
 
 Durée de validité du token.
@@ -842,7 +842,7 @@ La valeur par défaut est de 3 600 secondes (1 heure).
 </Expandable>
 
 <div id="apisamlresponsesetsignresponsesignresponse">
-  ### `api.samlResponse.setSignResponse(signResponse)`
+  ### `api.samlResponse.setSignResponse(signResponse)` {#apisamlresponsesetsignresponsesignresponse}
 </div>
 
 Détermine si la réponse SAML doit être signée.
@@ -857,7 +857,7 @@ La valeur par défaut est faux.
 </Expandable>
 
 <div id="apisamlresponsesetnameidentifierformatnameidentifierformat">
-  ### `api.samlResponse.setNameIdentifierFormat(nameIdentifierFormat)`
+  ### `api.samlResponse.setNameIdentifierFormat(nameIdentifierFormat)` {#apisamlresponsesetnameidentifierformatnameidentifierformat}
 </div>
 
 La valeur par défaut est urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified.
@@ -869,7 +869,7 @@ La valeur par défaut est urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified.
 </Expandable>
 
 <div id="apisamlresponsesetnameidentifierprobesnameidentifierprobes">
-  ### `api.samlResponse.setNameIdentifierProbes(nameIdentifierProbes)`
+  ### `api.samlResponse.setNameIdentifierProbes(nameIdentifierProbes)` {#apisamlresponsesetnameidentifierprobesnameidentifierprobes}
 </div>
 
 Auth0 tentera d’utiliser chacun des attributs de ce tableau, dans l’ordre.
@@ -888,7 +888,7 @@ L’ordre est le suivant :
 </Expandable>
 
 <div id="apisamlresponsesetauthncontextclassrefauthncontextclassref">
-  ### `api.samlResponse.setAuthnContextClassRef(authnContextClassRef)`
+  ### `api.samlResponse.setAuthnContextClassRef(authnContextClassRef)` {#apisamlresponsesetauthncontextclassrefauthncontextclassref}
 </div>
 
 La valeur par défaut est urn:oasis:names:tc:SAML:2.0:ac:classes:unspecified.
@@ -900,7 +900,7 @@ La valeur par défaut est urn:oasis:names:tc:SAML:2.0:ac:classes:unspecified.
 </Expandable>
 
 <div id="apisamlresponsesetsigningcertsigningcert">
-  ### `api.samlResponse.setSigningCert(signingCert)`
+  ### `api.samlResponse.setSigningCert(signingCert)` {#apisamlresponsesetsigningcertsigningcert}
 </div>
 
 Indique, de façon facultative, le certificat de clé publique utilisé pour valider les requêtes SAML.
@@ -914,7 +914,7 @@ Voici un exemple de valeur : « -----BEGIN CERTIFICATE-----\nMIIC8jCCAdqgAwIBAg
 </Expandable>
 
 <div id="apisamlresponsesetincludeattributenameformatincludeattributenameformat">
-  ### `api.samlResponse.setIncludeAttributeNameFormat(includeAttributeNameFormat)`
+  ### `api.samlResponse.setIncludeAttributeNameFormat(includeAttributeNameFormat)` {#apisamlresponsesetincludeattributenameformatincludeattributenameformat}
 </div>
 
 Lorsque cette valeur est définie sur true, le NameFormat est déduit du nom de l’attribut. Les valeurs possibles pour NameFormat sont urn:oasis:names:tc:SAML:2.0:attrname-format:uri, urn:oasis:names:tc:SAML:2.0:attrname-format:basic et urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified.
@@ -928,7 +928,7 @@ La valeur par défaut est true.
 </Expandable>
 
 <div id="apisamlresponsesettypedattributestypedattributes">
-  ### `api.samlResponse.setTypedAttributes(typedAttributes)`
+  ### `api.samlResponse.setTypedAttributes(typedAttributes)` {#apisamlresponsesettypedattributestypedattributes}
 </div>
 
 Lorsque cette option est définie sur true, le xs:type de l’élément est déduit. Les types sont xs:string, xs:boolean, xs:double et xs:anyType.
@@ -942,7 +942,7 @@ La valeur par défaut est true.
 </Expandable>
 
 <div id="apisamlresponsesetencryptioncertencryptioncert">
-  ### `api.samlResponse.setEncryptionCert(encryptionCert)`
+  ### `api.samlResponse.setEncryptionCert(encryptionCert)` {#apisamlresponsesetencryptioncertencryptioncert}
 </div>
 
 Spécifiez facultativement un certificat à utiliser pour chiffrer l’assertion SAML.
@@ -957,7 +957,7 @@ Voici un exemple de valeur : « -----BEGIN CERTIFICATE-----\nMIIC8jCCAdqgAwIBA
 </Expandable>
 
 <div id="apisamlresponsesetencryptionpublickeyencryptionpublickey">
-  ### `api.samlResponse.setEncryptionPublicKey(encryptionPublicKey)`
+  ### `api.samlResponse.setEncryptionPublicKey(encryptionPublicKey)` {#apisamlresponsesetencryptionpublickeyencryptionpublickey}
 </div>
 
 Vous pouvez spécifier une clé publique servant à chiffrer l’assertion SAML.
@@ -972,7 +972,7 @@ Voici un exemple de valeur : &quot;-----BEGIN PUBLIC KEY-----\nnMIIC8jCCAdqgAwI
 </Expandable>
 
 <div id="apisamlresponsesetcertcert">
-  ### `api.samlResponse.setCert(cert)`
+  ### `api.samlResponse.setCert(cert)` {#apisamlresponsesetcertcert}
 </div>
 
 Par défaut, Auth0 utilise la paire de clés privée/publique attribuée à votre tenant pour signer les réponses SAML ou les assertions.
@@ -988,7 +988,7 @@ Voici un exemple de valeur : « -----BEGIN CERTIFICATE-----\nMIIC8jCCAdqgAwIBA
 </Expandable>
 
 <div id="apisamlresponsesetkeykey">
-  ### `api.samlResponse.setKey(key)`
+  ### `api.samlResponse.setKey(key)` {#apisamlresponsesetkeykey}
 </div>
 
 Par défaut, Auth0 utilise la paire de clés privée/publique attribuée à votre tenant pour signer les réponses SAML ou les assertions.
@@ -1007,7 +1007,7 @@ Voici un exemple de valeur : &quot;-----BEGIN PRIVATE KEY-----\nnMIIC8jCCAdqgAw
 </Expandable>
 
 <div id="apisamlresponsesetrelaystaterelaystate">
-  ### `api.samlResponse.setRelayState(relayState)`
+  ### `api.samlResponse.setRelayState(relayState)` {#apisamlresponsesetrelaystaterelaystate}
 </div>
 
 Indiquez facultativement un RelayState à utiliser pour retourner vers le fournisseur de services.
@@ -1019,7 +1019,7 @@ Indiquez facultativement un RelayState à utiliser pour retourner vers le fourni
 </Expandable>
 
 <div id="apisamlresponsesetissuerissuer">
-  ### `api.samlResponse.setIssuer(issuer)`
+  ### `api.samlResponse.setIssuer(issuer)` {#apisamlresponsesetissuerissuer}
 </div>
 
 Spécifiez facultativement l’émetteur de l’assertion SAML.
@@ -1032,7 +1032,7 @@ La valeur par défaut est urn:auth0:TENANT
 </Expandable>
 
 <div id="apisamlresponsesetencryptionalgorithmencryptionalgorithm">
-  ### `api.samlResponse.setEncryptionAlgorithm(encryptionAlgorithm)`
+  ### `api.samlResponse.setEncryptionAlgorithm(encryptionAlgorithm)` {#apisamlresponsesetencryptionalgorithmencryptionalgorithm}
 </div>
 
 Définit l’algorithme de chiffrement de l’assertion SAML.
@@ -1052,7 +1052,7 @@ api.samlResponse.setEncryptionAlgorithm('aes256-gcm');
 </Expandable>
 
 <div id="apisamlresponsesetencryptionalgorithmencryptionalgorithm">
-  ### `api.samlResponse.setEncryptionAlgorithm(encryptionAlgorithm)`
+  ### `api.samlResponse.setEncryptionAlgorithm(encryptionAlgorithm)` {#apisamlresponsesetencryptionalgorithmencryptionalgorithm-2}
 </div>
 
 ```js Set encryption algorithm to aes256-cbc (not recommended)
@@ -1069,13 +1069,13 @@ api.samlResponse.setEncryptionAlgorithm('aes256-cbc');
 </Expandable>
 
 <div id="apivalidation">
-  ## `api.validation`
+  ## `api.validation` {#apivalidation}
 </div>
 
 Empêche un utilisateur de se connecter en générant une erreur de validation.
 
 <div id="apivalidationerrorerrorcode-errormessage">
-  ### `api.validation.error(errorCode, errorMessage)`
+  ### `api.validation.error(errorCode, errorMessage)` {#apivalidationerrorerrorcode-errormessage}
 </div>
 
 Génère une erreur lorsqu’une erreur de validation se produit.
@@ -1093,13 +1093,13 @@ Génère une erreur lorsqu’une erreur de validation se produit.
 </Expandable>
 
 <div id="apirules">
-  ## `api.rules`
+  ## `api.rules` {#apirules}
 </div>
 
 Indique si une règle a été exécutée dans la transaction en cours.
 
 <div id="apiruleswasexecutedruleid">
-  ### `api.rules.wasExecuted(ruleId)`
+  ### `api.rules.wasExecuted(ruleId)` {#apiruleswasexecutedruleid}
 </div>
 
 Vérifie si une règle ayant un ID donné a été exécutée au cours de la transaction actuelle.
@@ -1113,13 +1113,13 @@ Vérifie si une règle ayant un ID donné a été exécutée au cours de la tran
 </Expandable>
 
 <div id="apiprompt">
-  ## `api.prompt`
+  ## `api.prompt` {#apiprompt}
 </div>
 
 Affiche un prompt personnalisé.
 
 <div id="apipromptrenderpromptid-promptoptions">
-  ### `api.prompt.render(promptId, promptOptions)`
+  ### `api.prompt.render(promptId, promptOptions)` {#apipromptrenderpromptid-promptoptions}
 </div>
 
 Affiche un prompt personnalisé.
@@ -1150,13 +1150,13 @@ Affiche un prompt personnalisé.
 </Expandable>
 
 <div id="apirefreshtoken">
-  ## `api.refreshToken`
+  ## `api.refreshToken` {#apirefreshtoken}
 </div>
 
 Modifie le jeton d’actualisation de l’utilisateur actuel.
 
 <div id="apirefreshtokenrevokereason">
-  ### `api.refreshToken.revoke(reason)`
+  ### `api.refreshToken.revoke(reason)` {#apirefreshtokenrevokereason}
 </div>
 
 [Clients d’entreprise] Révoque le jeton d’actualisation de l’utilisateur actuel et marque la tentative d’échange de jeton d’actualisation en cours comme refusée. Cela empêchera
@@ -1175,7 +1175,7 @@ Cette méthode peut être utilisée uniquement pendant le flux d’échange de j
 </Expandable>
 
 <div id="apirefreshtokensetexpiresatabsolute">
-  ### `api.refreshToken.setExpiresAt(absolute)`
+  ### `api.refreshToken.setExpiresAt(absolute)` {#apirefreshtokensetexpiresatabsolute}
 </div>
 
 [Clients d’entreprise] Définit une nouvelle date d’expiration absolue pour le jeton d’actualisation actuel.
@@ -1191,7 +1191,7 @@ Lorsque cette méthode est appelée plusieurs fois, la date d’expiration la pl
 </Expandable>
 
 <div id="apirefreshtokensetidleexpiresatinactivity">
-  ### `api.refreshToken.setIdleExpiresAt(inactivity)`
+  ### `api.refreshToken.setIdleExpiresAt(inactivity)` {#apirefreshtokensetidleexpiresatinactivity}
 </div>
 
 [Clients d’entreprise] Définit un nouveau délai d’expiration d’inactivité pour le jeton d’actualisation actuel.
@@ -1208,7 +1208,7 @@ Lorsqu’elle est appelée plusieurs fois, la date d’expiration la plus proche
 </Expandable>
 
 <div id="apirefreshtokensetmetadatakey-value">
-  ### `api.refreshToken.setMetadata(key, value)`
+  ### `api.refreshToken.setMetadata(key, value)` {#apirefreshtokensetmetadatakey-value}
 </div>
 
 Définit une paire clé-valeur dans l’objet de métadonnées du jeton d’actualisation actuel.
@@ -1226,7 +1226,7 @@ Définit une paire clé-valeur dans l’objet de métadonnées du jeton d’actu
 </Expandable>
 
 <div id="apirefreshtokendeletemetadatakey">
-  ### `api.refreshToken.deleteMetadata(key)`
+  ### `api.refreshToken.deleteMetadata(key)` {#apirefreshtokendeletemetadatakey}
 </div>
 
 Supprime une clé de l’objet de métadonnées du jeton d’actualisation courant.
@@ -1240,19 +1240,19 @@ Supprime une clé de l’objet de métadonnées du jeton d’actualisation coura
 </Expandable>
 
 <div id="apirefreshtokenevictmetadata">
-  ### `api.refreshToken.evictMetadata()`
+  ### `api.refreshToken.evictMetadata()` {#apirefreshtokenevictmetadata}
 </div>
 
 Supprime toutes les clés de l’objet de métadonnées du jeton d’actualisation courant.
 
 <div id="apisession">
-  ## `api.session`
+  ## `api.session` {#apisession}
 </div>
 
 Demander la modification de la session de l’utilisateur actuel.
 
 <div id="apisessionrevokereason-options">
-  ### `api.session.revoke(reason, options)`
+  ### `api.session.revoke(reason, options)` {#apisessionrevokereason-options}
 </div>
 
 [Clients d’entreprise] Révoque la session de l’utilisateur actuel et marque la tentative de connexion en cours comme refusée. Cela empêchera
@@ -1284,7 +1284,7 @@ api.session.revoke('reason', { preserveRefreshTokens: true });
 </Expandable>
 
 <div id="apisessionsetexpiresatabsolute">
-  ### `api.session.setExpiresAt(absolute)`
+  ### `api.session.setExpiresAt(absolute)` {#apisessionsetexpiresatabsolute}
 </div>
 
 [Clients d’entreprise] Définit une nouvelle date d’expiration absolue pour la session actuelle.
@@ -1300,7 +1300,7 @@ Lorsqu’elle est appelée plusieurs fois, la date d’expiration la plus rappro
 </Expandable>
 
 <div id="apisessionsetidleexpiresatinactivity">
-  ### `api.session.setIdleExpiresAt(inactivity)`
+  ### `api.session.setIdleExpiresAt(inactivity)` {#apisessionsetidleexpiresatinactivity}
 </div>
 
 [client d’entreprise] Définit un nouveau délai d’expiration d’inactivité pour la session actuelle.
@@ -1317,7 +1317,7 @@ Si elle est appelée plusieurs fois, l’heure d’expiration la plus proche ser
 </Expandable>
 
 <div id="apisessionsetcookiemodemode">
-  ### `api.session.setCookieMode(mode)`
+  ### `api.session.setCookieMode(mode)` {#apisessionsetcookiemodemode}
 </div>
 
 [Clients d’entreprise] [Accès anticipé] Définit le mode du cookie de la session actuelle, qui peut être « persistent » ou « non-persistent » (éphémère).
@@ -1340,7 +1340,7 @@ ou jusqu’à sa révocation au moyen des API disponibles. Pour en savoir plus s
 </Expandable>
 
 <div id="apisessionsetmetadatakey-value">
-  ### `api.session.setMetadata(key, value)`
+  ### `api.session.setMetadata(key, value)` {#apisessionsetmetadatakey-value}
 </div>
 
 [client d’entreprise] [Accès anticipé] Définit une paire clé-valeur dans l’objet de métadonnées de la session en cours.
@@ -1358,7 +1358,7 @@ ou jusqu’à sa révocation au moyen des API disponibles. Pour en savoir plus s
 </Expandable>
 
 <div id="apisessiondeletemetadatakey">
-  ### `api.session.deleteMetadata(key)`
+  ### `api.session.deleteMetadata(key)` {#apisessiondeletemetadatakey}
 </div>
 
 [Clients d’entreprise] [Accès anticipé] Supprime une clé de l’objet de métadonnées de la session actuelle.
@@ -1372,19 +1372,19 @@ ou jusqu’à sa révocation au moyen des API disponibles. Pour en savoir plus s
 </Expandable>
 
 <div id="apisessionevictmetadata">
-  ### `api.session.evictMetadata()`
+  ### `api.session.evictMetadata()` {#apisessionevictmetadata}
 </div>
 
 [client d’entreprise] [Accès anticipé] Supprime toutes les clés de l’objet de métadonnées de la session actuelle.
 
 <div id="apitransaction">
-  ## `api.transaction`
+  ## `api.transaction` {#apitransaction}
 </div>
 
 Modifiez la transaction.
 
 <div id="apitransactionsetmetadatakey-value">
-  ### `api.transaction.setMetadata(key, value)`
+  ### `api.transaction.setMetadata(key, value)` {#apitransactionsetmetadatakey-value}
 </div>
 
 Stocke ou met à jour la valeur associée à une clé donnée dans les métadonnées de la transaction.
@@ -1406,13 +1406,13 @@ Les métadonnées modifiées à l’aide de cette méthode sont mises à jour en
 </Expandable>
 
 <div id="apigroups">
-  ## `api.groups`
+  ## `api.groups` {#apigroups}
 </div>
 
 Obtenir des renseignements sur l’appartenance des utilisateurs aux groupes.
 
 <div id="apigroupsgetusergroupsparams">
-  ### `api.groups.getUserGroups(params)`
+  ### `api.groups.getUserGroups(params)` {#apigroupsgetusergroupsparams}
 </div>
 
 Récupère la liste paginée des groupes auxquels l’utilisateur appartient.
@@ -1437,7 +1437,7 @@ Récupère la liste paginée des groupes auxquels l’utilisateur appartient.
 </Expandable>
 
 <div id="apigroupshasgroupmembershipgroups">
-  ### `api.groups.hasGroupMembership(groups)`
+  ### `api.groups.hasGroupMembership(groups)` {#apigroupshasgroupmembershipgroups}
 </div>
 
 Vérifie si l’utilisateur est membre de l’un des groupes indiqués et fournit des détails
@@ -1452,13 +1452,13 @@ sur les groupes correspondants, le cas échéant.
 </Expandable>
 
 <div id="apiroles">
-  ## `api.roles`
+  ## `api.roles` {#apiroles}
 </div>
 
 Obtenir des renseignements sur les attributions de rôles aux utilisateurs.
 
 <div id="apirolesgetusereffectiverolesparams">
-  ### `api.roles.getUserEffectiveRoles(params)`
+  ### `api.roles.getUserEffectiveRoles(params)` {#apirolesgetusereffectiverolesparams}
 </div>
 
 Renvoie tous les rôles attribués à un utilisateur, directement ou par son appartenance à un groupe,
@@ -1500,7 +1500,7 @@ do {
 </Expandable>
 
 <div id="apirolesgetusereffectiverolesbyidsids">
-  ### `api.roles.getUserEffectiveRolesByIds(ids)`
+  ### `api.roles.getUserEffectiveRolesByIds(ids)` {#apirolesgetusereffectiverolesbyidsids}
 </div>
 
 Renvoie les rôles attribués à un utilisateur, directement ou par son appartenance à un groupe,
@@ -1523,7 +1523,7 @@ console.log(result.roles);
 </Expandable>
 
 <div id="apirolesgetusereffectiverolesbynamesnames">
-  ### `api.roles.getUserEffectiveRolesByNames(names)`
+  ### `api.roles.getUserEffectiveRolesByNames(names)` {#apirolesgetusereffectiverolesbynamesnames}
 </div>
 
 Renvoie les rôles attribués à un utilisateur, directement ou par l’intermédiaire de son appartenance à un groupe,

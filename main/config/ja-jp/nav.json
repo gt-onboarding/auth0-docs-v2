@@ -4,45 +4,45 @@
       "pages": [
         "docs/ja-jp/index"
       ],
-      "tab": "ホーム"
+      "tab": "Home"
     },
     {
-      "tab": "はじめに",
+      "tab": "Get Started",
       "icon": "play",
       "$ref": "./navigation/get-started.json"
     },
     {
-      "tab": "認証",
+      "tab": "Authenticate",
       "icon": "/icons/authenticate.svg",
       "$ref": "./navigation/authenticate.json"
     },
     {
-      "tab": "ユーザー管理",
+      "tab": "Manage Users",
       "icon": "/icons/manage-users.svg",
       "$ref": "./navigation/manage-users.json"
     },
     {
-      "tab": "カスタマイズ",
+      "tab": "Customize",
       "icon": "/icons/customize.svg",
       "$ref": "./navigation/customize.json"
     },
     {
-      "tab": "セキュリティ",
+      "tab": "Secure",
       "icon": "shield-check",
       "$ref": "./navigation/secure.json"
     },
     {
-      "tab": "デプロイと監視",
+      "tab": "Deploy & Monitor",
       "icon": "chart-simple",
       "$ref": "./navigation/deploy-and-monitor.json"
     },
     {
-      "tab": "AIエージェントとMCP",
+      "tab": "AI Agents & MCP",
       "icon": "robot",
       "$ref": "./navigation/ai-agents-mcp.json"
     },
     {
-      "tab": "プラットフォーム",
+      "tab": "Platform",
       "icon": "/icons/platform.svg",
       "$ref": "./navigation/platform.json"
     },
@@ -50,27 +50,27 @@
       "icon": "/icons/dev-tools.svg",
       "menu": [
         {
-          "item": "API",
+          "item": "APIs",
           "icon": "/icons/apis.svg",
           "$ref": "./navigation/apis.json"
         },
         {
-          "item": "SDK",
+          "item": "SDKs",
           "icon": "/icons/sdks.svg",
           "$ref": "./navigation/sdk-libraries.json"
         },
         {
-          "item": "イベントカタログ",
+          "item": "Events Catalog",
           "icon": "/icons/events-catalog.svg",
           "$ref": "./navigation/generated/events-catalog.json"
         },
         {
-          "item": "Actionsリファレンス",
+          "item": "Actions Reference",
           "icon": "/icons/actions-reference.svg",
           "$ref": "./navigation/generated/actions-reference.json"
         },
         {
-          "item": "テナントログカタログ",
+          "item": "Tenant Log Catalog",
           "icon": "/icons/tenant-logs.svg",
           "$ref": "./navigation/generated/tenant-logs.json"
         },
@@ -80,7 +80,7 @@
           "$ref": "./navigation/universal-components.json"
         }
       ],
-      "tab": "開発者ツール"
+      "tab": "Dev Tools"
     }
   ]
 }

@@ -25,7 +25,7 @@ Le script Get User s’exécute également lorsqu’un utilisateur tente de :
 * Modifier ou réinitialiser son mot de passe (script [Change Password](/docs/fr-ca/authenticate/database-connections/custom-db/templates/change-password))
 
 <div id="get-user-function">
-  ## Fonction Get User
+  ## Fonction Get User {#get-user-function}
 </div>
 
 La fonction `getUser` doit :
@@ -35,7 +35,7 @@ La fonction `getUser` doit :
 * Retourner une erreur s’il est impossible de déterminer si l’utilisateur existe ou non.
 
 <div id="definition">
-  ### Définition
+  ### Définition {#definition}
 </div>
 
 La fonction `getUser` accepte deux paramètres et renvoie une fonction `callback` :
@@ -83,13 +83,13 @@ function getUser(email, callback) {
 ```
 
 <div id="callback-function">
-  ## Fonction `callback`
+  ## Fonction `callback` {#callback-function}
 </div>
 
 La fonction `callback` sert à transmettre les données du profil utilisateur ou les données d’erreur dans le pipeline.
 
 <div id="definition">
-  ### Définition
+  ### Définition {#definition-2}
 </div>
 
 La fonction `callback` accepte jusqu’à deux paramètres et renvoie une fonction :
@@ -104,7 +104,7 @@ callback(error[,profile]): function
 | `profile` | Objet | Facultatif  | Contient les données de profil de l’utilisateur. |
 
 <div id="return-the-user-profile-user-found">
-  ### Retourner le profil de l’utilisateur (utilisateur trouvé)
+  ### Retourner le profil de l’utilisateur (utilisateur trouvé) {#return-the-user-profile-user-found}
 </div>
 
 <Warning>
@@ -138,7 +138,7 @@ return callback(null, {
 En plus des champs standard, vous pouvez inclure les champs `user_metadata`, `app_metadata` et `mfa_factors`.
 
 <div id="return-no-user-profile-user-not-found">
-  ### Ne retourner aucun profil utilisateur (utilisateur introuvable)
+  ### Ne retourner aucun profil utilisateur (utilisateur introuvable) {#return-no-user-profile-user-not-found}
 </div>
 
 Si l&#39;utilisateur est introuvable, transmettez une valeur `null` au paramètre `error` et omettez le paramètre `profile` :
@@ -148,7 +148,7 @@ return callback(null);
 ```
 
 <div id="return-an-error">
-  ### Retourner une erreur
+  ### Retourner une erreur {#return-an-error}
 </div>
 
 Si une erreur se produit, transmettez les données d’erreur au paramètre `error` avec les renseignements pertinents sur la cause du problème :
@@ -160,7 +160,7 @@ return callback(new Error("My custom error message."));
 Pour en savoir plus, consultez [Résoudre les problèmes liés aux bases de données personnalisées](/docs/fr-ca/authenticate/database-connections/custom-db/error-handling).
 
 <div id="language-specific-script-examples">
-  ## Exemples de scripts par langage
+  ## Exemples de scripts par langage {#language-specific-script-examples}
 </div>
 
 Auth0 fournit des scripts d’exemple pour les langages/technologies suivants :

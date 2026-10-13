@@ -15,7 +15,7 @@ Les ORT permettent de suivre la session d’un utilisateur dans les SPA lorsque 
 Les ORT sont liés à la [session](/docs/fr-ca/manage-users/sessions) Auth0 de l’utilisateur et ne peuvent être utilisés que tant que cette session est active, ce qui garantit que lorsqu’un utilisateur se déconnecte, toutes les applications qui utilisent cette session sont déconnectées en même temps.
 
 <div id="how-it-works">
-  ## Fonctionnement
+  ## Fonctionnement {#how-it-works}
 </div>
 
 Lorsque vous demandez un ORT :
@@ -26,7 +26,7 @@ Lorsque vous demandez un ORT :
 4. Le jeton reste valide tant que la session Auth0 correspondante est active.
 
 <div id="comparison-of-orts-versus-refresh-tokens">
-  ## Comparaison entre les ORT et les jetons d’actualisation
+  ## Comparaison entre les ORT et les jetons d’actualisation {#comparison-of-orts-versus-refresh-tokens}
 </div>
 
 | **Fonctionnalité**                                                                                                                          | **ORT**                                                                                                      | **jeton d’actualisation**                                                                                          |
@@ -41,7 +41,7 @@ Lorsque vous demandez un ORT :
 | **Délai d’inactivité de la session**                                                                                                        | Prolongé à chaque échange                                                                                    | Aucun effet sur la session                                                                                         |
 
 <div id="key-behavioral-differences">
-  ### Principales différences de comportement
+  ### Principales différences de comportement {#key-behavioral-differences}
 </div>
 
 **Prolongation de la session :** Lorsque vous échangez un ORT, Auth0 réinitialise le délai d’inactivité de la session, ce qui permet de garder la session de l’utilisateur active. Auth0 ne prolonge pas la [durée de vie absolue](/docs/fr-ca/manage-users/sessions/session-lifecycle#absolute-timeout-maximum) de la session.
@@ -51,7 +51,7 @@ Lorsque vous demandez un ORT :
 **Sans état :** Les ORT sont liés à une session; ils ne peuvent donc pas être consultés ni gérés indépendamment. Vous ne pouvez pas les voir dans la Management API ni les révoquer individuellement.
 
 <div id="best-practices">
-  ## Pratiques exemplaires
+  ## Pratiques exemplaires {#best-practices}
 </div>
 
 1. **Stockez les jetons en mémoire :** Évitez de stocker les ORT dans `localStorage` ou `sessionStorage`. Conservez-les dans la mémoire JavaScript pour une meilleure sécurité. Comme les ORT sont liés à la session Auth0, le cookie de session rétablira le contexte lors de la prochaine visite de l’utilisateur, ce qui permettra à votre application de demander un nouvel ORT.
@@ -61,11 +61,11 @@ Lorsque vous demandez un ORT :
 5. **Surveillez la durée de vie de la session :** Tenez compte à la fois du délai d’expiration d’inactivité et du délai d’expiration absolu de la session. Le délai d’expiration absolu ne peut pas être prolongé au moyen d’un échange de jeton d’actualisation.
 
 <div id="limitations">
-  ## Limites
+  ## Limites {#limitations}
 </div>
 
 <div id="unsupported-flows">
-  ### Flux non pris en charge
+  ### Flux non pris en charge {#unsupported-flows}
 </div>
 
 Les ORT ne sont offerts que pour les flux qui créent une session de navigateur interactive. Les flux suivants **ne peuvent pas** émettre d’ORT :
@@ -81,7 +81,7 @@ Les ORT ne sont offerts que pour les flux qui créent une session de navigateur 
 Si vous demandez la scope `online_access` dans l’un de ces flux, elle est ignorée sans avertissement et aucun jeton d’actualisation n’est émis.
 
 <div id="scope-conflicts">
-  ### Conflits de scopes
+  ### Conflits de scopes {#scope-conflicts}
 </div>
 
 Vous ne pouvez pas demander à la fois `online_access` et `offline_access` dans la même requête d’autorisation. Si les deux scopes sont présents, Auth0 renvoie une erreur :
@@ -99,7 +99,7 @@ Sélectionnez le `scope` approprié selon votre cas d’utilisation :
 * Utilisez `offline_access` pour les applications qui ont besoin de jetons pour fonctionner indépendamment de la session du navigateur.
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Configurer Online Refresh Tokens](/docs/fr-ca/secure/tokens/refresh-tokens/online-refresh-tokens/configure-online-refresh-tokens)

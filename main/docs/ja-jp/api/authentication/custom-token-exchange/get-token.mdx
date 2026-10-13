@@ -6,7 +6,7 @@ description: "Custom Token Exchange grant を使用して、既存のIDトーク
 import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `POST /oauth/token`
@@ -18,7 +18,7 @@ Custom Token Exchange (CTE) は、アプリケーションが `/oauth/token` エ
 </Note>
 
 <div id="remarks">
-  ### 注記
+  ### 注記 {#remarks}
 </div>
 
 [カスタムトークン交換](/docs/ja-jp/authenticate/custom-token-exchange)を参照して、カスタムトークン交換プロファイル、プロファイルとActionの対応付け、このフローをアプリケーションで有効にする方法をご確認ください。
@@ -36,7 +36,7 @@ Custom Token Exchange (CTE) は、アプリケーションが `/oauth/token` エ
 * カスタムトークン交換ではagent actorは追加されません。Agents as Principalが有効な場合でも、`act`クレームは`setActor()`を介してActionが完全に制御します。Auth0がこのグラントに対してagent `act`を自動的に追加することはありません。
 
 <div id="headers">
-  ## ヘッダー
+  ## ヘッダー {#headers}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -48,7 +48,7 @@ Custom Token Exchange (CTE) は、アプリケーションが `/oauth/token` エ
 </ParamField>
 
 <div id="body-parameters">
-  ## Body Parameters
+  ## Body Parameters {#body-parameters}
 </div>
 
 <div className="prose-sm prose-gray dark:prose-invert">
@@ -102,7 +102,7 @@ Custom Token Exchange (CTE) は、アプリケーションが `/oauth/token` エ
 </ParamField>
 
 <div id="response-schema">
-  ## レスポンススキーマ
+  ## レスポンススキーマ {#response-schema}
 </div>
 
 <ResponseSchema>
@@ -132,7 +132,7 @@ Custom Token Exchange (CTE) は、アプリケーションが `/oauth/token` エ
 </ResponseSchema>
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | ステータス | 説明                                                                                                                                                             |

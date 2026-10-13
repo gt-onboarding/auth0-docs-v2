@@ -6,7 +6,7 @@ title: Vérification des données
 Cette liste d’actions de vérification des données vous permet de vérifier des adresses courriel, ainsi que de générer et de vérifier des mots de passe à usage unique.
 
 <div id="generate-one-time-password">
-  ## Générer un mot de passe à usage unique
+  ## Générer un mot de passe à usage unique {#generate-one-time-password}
 </div>
 
 Génère un code numérique valide pendant 5 minutes, qui peut être envoyé par courriel, par SMS ou par une application de messagerie.
@@ -14,7 +14,7 @@ Génère un code numérique valide pendant 5 minutes, qui peut être envoyé par
 <Frame>![](/docs/images/cdy7uua7fh8z/1h69FWzZwk9beKKjB4Cq38/16aa515e61cc6e9ebdfd0849201e3141/generate-one-time-password.png)</Frame>
 
 <div id="input-settings">
-  ### Paramètres d’entrée
+  ### Paramètres d’entrée {#input-settings}
 </div>
 
 | Paramètre                         | Description                                                                                                              |
@@ -23,7 +23,7 @@ Génère un code numérique valide pendant 5 minutes, qui peut être envoyé par
 | Longueur du code (obligatoire)    | Le nombre de chiffres du code généré.                                                                                    |
 
 <div id="output-object">
-  ### Objet de sortie
+  ### Objet de sortie {#output-object}
 </div>
 
 | Propriété | Type   | Description    |
@@ -31,7 +31,7 @@ Génère un code numérique valide pendant 5 minutes, qui peut être envoyé par
 | `code`    | String | Le code généré |
 
 <div id="output-object-example">
-  ### Exemple d’objet de sortie
+  ### Exemple d’objet de sortie {#output-object-example}
 </div>
 
 ```json lines
@@ -41,7 +41,7 @@ Génère un code numérique valide pendant 5 minutes, qui peut être envoyé par
 ```
 
 <div id="verify-one-time-password">
-  ## Vérifier le mot de passe à usage unique
+  ## Vérifier le mot de passe à usage unique {#verify-one-time-password}
 </div>
 
 Vérifie si le code de mot de passe à usage unique fourni est valide.
@@ -49,7 +49,7 @@ Vérifie si le code de mot de passe à usage unique fourni est valide.
 <Frame>![](/docs/images/cdy7uua7fh8z/3bkT8QDN4dcl0YHTrSOIGj/9698a07f55353a11ca98164377cd4217/verify-otp.png)</Frame>
 
 <div id="input-settings">
-  ### Paramètres d’entrée
+  ### Paramètres d’entrée {#input-settings-2}
 </div>
 
 | Paramètre                         | Description                                                                                                     |
@@ -58,7 +58,7 @@ Vérifie si le code de mot de passe à usage unique fourni est valide.
 | Longueur du code (obligatoire)    | Le nombre de chiffres du code généré.                                                                           |
 
 <div id="output-object">
-  ### Objet de sortie
+  ### Objet de sortie {#output-object-2}
 </div>
 
 | Propriété | Type    | Description                                                                                                                                                                                                                                                                    |
@@ -67,7 +67,7 @@ Vérifie si le code de mot de passe à usage unique fourni est valide.
 | `result`  | String  | Renvoie différents codes de résultat selon le code fourni : <ul> <li> `MISSING:` Le code fourni n’existe pas. </li> <li> `EXPIRED:` Le code fourni a expiré. </li> <li> `VALID:` Le code fourni est valide. </li> <li> `UNEQUAL:` Le code fourni n’est pas valide. </li> </ul> |
 
 <div id="output-object-examples">
-  ### Exemples d’objets de sortie
+  ### Exemples d’objets de sortie {#output-object-examples}
 </div>
 
 ```json lines
@@ -84,7 +84,7 @@ Vérifie si le code de mot de passe à usage unique fourni est valide.
 ```
 
 <div id="verify-email-address">
-  ## Vérifier l’adresse courriel
+  ## Vérifier l’adresse courriel {#verify-email-address}
 </div>
 
 Applique un certain nombre de règles de vérification sélectionnées à l’adresse courriel fournie.
@@ -92,7 +92,7 @@ Applique un certain nombre de règles de vérification sélectionnées à l’ad
 <Frame>![](/docs/images/cdy7uua7fh8z/6qkqny1hhObFalHwdEG342/1a2e18195b29102c3f68744f42277917/verify-email.png)</Frame>
 
 <div id="input-settings">
-  ### Paramètres d’entrée
+  ### Paramètres d’entrée {#input-settings-3}
 </div>
 
 | Paramètre                                        | Description                                                                                                                                                             |
@@ -106,7 +106,7 @@ Applique un certain nombre de règles de vérification sélectionnées à l’ad
 | Domaines bloqués                                 | Bloquer des domaines de courriel précis.                                                                                                                                |
 
 <div id="output-object">
-  ### Objet de sortie
+  ### Objet de sortie {#output-object-3}
 </div>
 
 | Propriété | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
@@ -115,7 +115,7 @@ Applique un certain nombre de règles de vérification sélectionnées à l’ad
 | `cause`   | String  | Si la propriété `valid` est `<br/>false<br/>`, retourne une référence à la première règle que l’adresse courriel n’a pas respectée : <ul> <li> `MISSING_MX_RECORD:` Le domaine de l’adresse courriel n’a pas d’enregistrements MX. </li> <li> `FREE_EMAIL:` Le domaine de l’adresse courriel correspond à un fournisseur de courriel gratuit.</li> <li> `DISPOSABLE_EMAIL:` L’adresse courriel est une adresse courriel jetable.</li> <li> `BLOCKLISTED:` Le domaine de l’adresse courriel est inclus dans le paramètre domaine bloqué.</li> <li> `NOT_ALLOWED:` Le domaine de l’adresse courriel n’est pas inclus dans le paramètre domaine autorisé.</li> </ul> |
 
 <div id="output-object-example">
-  ### Exemple d’objet de sortie
+  ### Exemple d’objet de sortie {#output-object-example-2}
 </div>
 
 ```json lines

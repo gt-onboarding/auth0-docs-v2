@@ -15,7 +15,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 * ユーザーがブックマークしたログインページを開き、[Default Login Route](/docs/ja-jp/authenticate/login/auth0-universal-login/configure-default-login-routes) が指定されていない。
 
 <div id="parameters">
-  ## パラメーター
+  ## パラメーター {#parameters}
 </div>
 
 カスタムエラーページを設定した場合、Authorization Server は、URL のクエリ文字列に付加されたパラメーターを返します。
@@ -32,7 +32,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 返されるパラメーターはエラーの種類によって異なり、リクエストごとに異なります。たとえば、エラーの原因となったリクエストに `client_id` が含まれていなかった場合、Authorization Server は `client_id` パラメーターを返しません。
 
 <div id="display-a-custom-error-page">
-  ## カスタムエラーページを表示する
+  ## カスタムエラーページを表示する {#display-a-custom-error-page}
 </div>
 
 カスタムエラーページを表示するには、2 つの方法があります。
@@ -41,7 +41,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 * Management API を使用して、Auth0 側でカスタムエラーページを表示するよう設定します。
 
 <div id="redirect-users-to-a-custom-error-page-using-the-dashboard">
-  ### Auth0 Dashboard を使用してユーザーをカスタムエラーページにリダイレクトする
+  ### Auth0 Dashboard を使用してユーザーをカスタムエラーページにリダイレクトする {#redirect-users-to-a-custom-error-page-using-the-dashboard}
 </div>
 
 Auth0 Dashboard を使用して、Auth0 がユーザーをカスタムエラーページにリダイレクトするよう設定します。
@@ -53,7 +53,7 @@ Auth0 Dashboard を使用して、Auth0 がユーザーをカスタムエラー�
 5. **Save** を選択します。
 
 <div id="redirect-users-to-a-custom-error-page-using-the-management-api">
-  ### Management API を使用してユーザーをカスタムエラーページにリダイレクトする
+  ### Management API を使用してユーザーをカスタムエラーページにリダイレクトする {#redirect-users-to-a-custom-error-page-using-the-management-api}
 </div>
 
 <Tooltip tip="Management API: お客様が管理タスクを実行できるようにする製品です。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Management+API">Management API</Tooltip> の [テナント設定を更新](https://auth0.com/docs/api/management/v2/#!/Tenants/patch_settings) エンドポイントを使用します。`{mgmtApiAccessToken}` プレースホルダーの値を Management API の <Tooltip tip="アクセストークン: API へのアクセスに使用される認可資格情報で、不透明な文字列または JWT の形式を取ります。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Access+Token">アクセストークン</Tooltip> に置き換え、JSON ボディ内の `url` フィールドの値を、エラーページの場所を指すように更新します。
@@ -214,7 +214,7 @@ Auth0 Dashboard を使用して、Auth0 がユーザーをカスタムエラー�
 | `url`                   | リダイレクト先のカスタムエラーページの URL。                                                                                       |
 
 <div id="render-a-custom-error-page">
-  ### カスタムエラーページを表示する
+  ### カスタムエラーページを表示する {#render-a-custom-error-page}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">

@@ -4,7 +4,7 @@ description: "Okta の Universal Logout を使用して、すべてのアプリ�
 ---
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `POST /oauth/global-token-revocation/connection/{connection_name}`
@@ -12,7 +12,7 @@ description: "Okta の Universal Logout を使用して、すべてのアプリ�
 このエンドポイントは、[Okta Workforce Identity Cloud Universal Logout](https://developer.okta.com/docs/guides/oin-universal-logout-overview/) と組み合わせて使用し、ユーザーをアプリケーションからログアウトさせます。このエンドポイントへのリクエストにより、セッションクッキーとリフレッシュトークンは失効しますが、アクセストークンは失効しません。詳しくは、[Universal Logout](https://auth0.com/docs/authenticate/login/logout/universal-logout) を参照してください。ユーザーセッションを失効させる前に、リクエストを認証する必要があります。[Endpoint Authentication](https://developer.okta.com/docs/guides/oin-universal-logout-overview/#endpoint-authentication) を確認してください。
 
 <div id="path-parameters">
-  ## パスパラメータ
+  ## パスパラメータ {#path-parameters}
 </div>
 
 <ParamField path="connection_name" type="string" required>
@@ -20,7 +20,7 @@ description: "Okta の Universal Logout を使用して、すべてのアプリ�
 </ParamField>
 
 <div id="body-parameters">
-  ## ボディパラメータ
+  ## ボディパラメータ {#body-parameters}
 </div>
 
 <ParamField body="subject" type="object">
@@ -38,7 +38,7 @@ description: "Okta の Universal Logout を使用して、すべてのアプリ�
 </ParamField>
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | Status | Description                                          |

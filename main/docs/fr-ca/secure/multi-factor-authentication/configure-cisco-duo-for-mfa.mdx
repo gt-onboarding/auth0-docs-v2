@@ -19,7 +19,7 @@ L’application demandera à l’utilisateur de fournir le second facteur avec D
 Vos utilisateurs peuvent télécharger Duo à partir de [Google Play](https://play.google.com/store/apps/details?id=com.duosecurity.duomobile) ou de l’[App Store](https://itunes.apple.com/us/app/duo-mobile/id422663827?mt=8) pour l’utiliser comme second facteur.
 
 <div id="configure-duo">
-  ## Configurer Duo
+  ## Configurer Duo {#configure-duo}
 </div>
 
 Pour configurer Duo Security, vous devez fournir à votre application vos identifiants Duo dans le <Tooltip tip="Auth0 Dashboard : le produit principal d’Auth0 pour configurer vos services." cta="Consulter le glossaire" href="/docs/fr-ca/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip>.
@@ -29,7 +29,7 @@ Pour configurer Duo Security, vous devez fournir à votre application vos identi
 3. Sélectionnez **Enregistrer**.
 
 <div id="use-actions-to-enable-duo">
-  ## Utiliser Actions pour activer Duo
+  ## Utiliser Actions pour activer Duo {#use-actions-to-enable-duo}
 </div>
 
 Pour activer Duo dans une Action, indiquez `duo` comme valeur du paramètre `provider` lorsque vous activez l’<Tooltip tip="authentification multifacteur (AMF) : processus d’authentification d’un utilisateur qui utilise un facteur en plus du nom d’utilisateur et du mot de passe, comme un code par SMS." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=multi-factor+authentication">authentification multifacteur</Tooltip>.
@@ -45,7 +45,7 @@ Duo n’offre pas d’option &quot;Se souvenir de moi&quot;. La session AMF de 3
 Pour obliger vos utilisateurs à se connecter avec Duo à chaque fois, créez une règle avec `allowRememberBrowser: false`.
 
 <div id="actions-template-for-duo">
-  ## Modèle d’Actions pour Duo
+  ## Modèle d’Actions pour Duo {#actions-template-for-duo}
 </div>
 
 Ce modèle fournit un exemple et un point de départ pour déclencher l’authentification multifacteur avec [Duo Security](http://duosecurity.com/) lorsqu’une condition est remplie.
@@ -86,7 +86,7 @@ export const codeExample = `exports.onExecutePostLogin = async (event, api) => {
 <AuthCodeBlock children={codeExample} language="js" />
 
 <div id="current-limitations">
-  ## Limitations actuelles
+  ## Limitations actuelles {#current-limitations}
 </div>
 
 * Vous ne pouvez pas utiliser les [tickets d’inscription AMF Auth0](/docs/fr-ca/secure/multi-factor-authentication/multi-factor-authentication-developer-resources/create-custom-enrollment-tickets) pour inscrire des utilisateurs avec Duo. Intégrez plutôt ces utilisateurs directement dans Duo.

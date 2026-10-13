@@ -15,14 +15,14 @@ Vous pouvez créer un portail à l’aide de :
 * L’[Auth0 Dashboard](/docs/fr-ca/get-started/auth0-overview/dashboard#auth0-dashboard) en suivant des instructions étape par étape pour créer une application et un portail.
 
 <div id="prerequisites">
-  ## Prérequis
+  ## Prérequis {#prerequisites}
 </div>
 
 * Un tenant Auth0 de [développement](/docs/fr-ca/get-started/tenant-settings#environment-tag) configuré avec l’accès à la version bêta de Universal Portals.
 
 <Tabs>
   <Tab title="Auth0 CLI">
-    ## Étape 1 : Installez la bêta d’Auth0 CLI
+## Étape 1 : Installez la bêta d’Auth0 CLI {#step-1-install-the-auth0-cli-beta}
 
     Suivez les [instructions d’installation](https://github.com/auth0/auth0-cli/#linux-and-macos-1) correspondant à votre plateforme, puis authentifiez-vous auprès de votre tenant :
 
@@ -30,7 +30,7 @@ Vous pouvez créer un portail à l’aide de :
     auth0-beta login
     ```
 
-    ## Étape 2 : Exécutez la commande de configuration
+## Étape 2 : Exécutez la commande de configuration {#step-2-run-the-setup-command}
 
     ```bash
     auth0-beta universal-portals setup
@@ -48,13 +48,13 @@ Vous pouvez créer un portail à l’aide de :
   </Tab>
 
   <Tab title="Auth0 Agent Skills">
-    ## Étape 1 : Installer Auth0 Agent Skills
+## Étape 1 : Installer Auth0 Agent Skills {#step-1-install-auth0-agent-skills}
 
     ```bash
     npx skills add auth0/agent-skills
     ```
 
-    ## Étape 2 : Demandez à votre agent d’IA de configurer les portails Universal
+## Étape 2 : Demandez à votre agent d’IA de configurer les portails Universal {#step-2-ask-your-ai-agent-to-configure-universal-portals}
 
     ```bash
     configure universal portals on my auth0 tenant
@@ -74,13 +74,13 @@ Vous pouvez créer un portail à l’aide de :
   </Tab>
 
   <Tab title="Auth0 Dashboard">
-    ## Étape 1 : Créer une application web traditionnelle
+## Étape 1 : Créer une application web traditionnelle {#step-1-create-a-regular-web-application}
 
     1. Accédez à [**Auth0 Dashboard &gt; Applications &gt; Applications**](https://manage.auth0.com/#/applications) et sélectionnez **Create Application**.
     2. Choisissez **Regular Web Applications** et donnez un nom à l’application.
     3. Sélectionnez **Create**.
 
-    ## Étape 2 : Configurer l’application
+## Étape 2 : Configurer l’application {#step-2-configure-the-application}
 
     Dans l’onglet **Settings** de l’application :
 
@@ -94,7 +94,7 @@ Vous pouvez créer un portail à l’aide de :
 
     3. Sélectionnez **Save Changes**.
 
-    ## Étape 3 : Configurer l’accès aux API
+## Étape 3 : Configurer l’accès aux API {#step-3-configure-api-access}
 
     Dans l’onglet **API Access** de l’application, activez les API suivantes et les scopes associés :
 
@@ -125,13 +125,13 @@ Vous pouvez créer un portail à l’aide de :
 
     Sélectionnez **Save** après avoir activé chaque API.
 
-    ## Étape 4 : Activer le Refresh Token multiresource
+## Étape 4 : Activer le Refresh Token multiresource {#step-4-enable-multi-resource-refresh-token}
 
     De retour dans l’onglet **Settings**, faites défiler la page jusqu’à **Multi-Resource Refresh Token** et activez-le pour les mêmes API avec accès délégué par l’utilisateur et les mêmes scopes qu’à l’étape 3, soit My Account API et My Organization API.
 
     Sélectionnez **Save Changes**.
 
-    ## Étape 5 : Créer un portail
+## Étape 5 : Créer un portail {#step-5-create-a-portal}
 
     1. Sélectionnez **Portals** dans la barre latérale du Dashboard.
 
@@ -147,20 +147,20 @@ Vous pouvez créer un portail à l’aide de :
 
     Si vous n’avez pas encore défini les URL de rappel et de déconnexion à l’étape 2, copiez-les maintenant à partir des paramètres du portail et mettez à jour l’application.
 
-    ## Étape 6 : Créer une page
+## Étape 6 : Créer une page {#step-6-build-a-page}
 
     L’éditeur visuel s’ouvre après la création du portail. Faites glisser des composants du panneau de gauche vers la zone de travail pour créer vos pages.
 
     <Frame>![Éditeur visuel Universal Portals](/docs/images/customize/portals/portal-editor.png)</Frame>
 
-    ## Étape 7 : Prévisualiser et publier
+## Étape 7 : Prévisualiser et publier {#step-7-preview-and-publish}
 
     Sélectionnez **Preview** pour ouvrir le portail dans un nouvel onglet. Lorsque vous êtes prêt, sélectionnez **Publish**.
   </Tab>
 </Tabs>
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 <Card title="Aperçu d’Universal Portals" icon="key" href="/docs/fr-ca/customize/portals/overview" horizontal>

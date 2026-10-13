@@ -44,7 +44,7 @@ import {HowToSchema} from "/snippets/fr-ca/HowToSchema.jsx";
 </Note>
 
 <div id="get-started">
-  ## Premiers pas
+  ## Premiers pas {#get-started}
 </div>
 
 Ce guide explique comment intégrer Auth0, ajouter l’authentification et afficher les renseignements du profil utilisateur dans une application web Express.js à l’aide du SDK `express-openid-connect`.
@@ -52,7 +52,7 @@ Ce guide explique comment intégrer Auth0, ajouter l’authentification et affic
 ***
 
 <div id="1-create-a-new-project">
-  ## 1. Créez un nouveau projet
+  ## 1. Créez un nouveau projet {#1-create-a-new-project}
 </div>
 
 Créez un nouveau répertoire pour votre application Express, puis initialisez un projet Node.js.
@@ -74,7 +74,7 @@ touch index.js .env
 ***
 
 <div id="2-install-the-auth0-express-sdk">
-  ## 2. Installer le SDK Auth0 Express
+  ## 2. Installer le SDK Auth0 Express {#2-install-the-auth0-express-sdk}
 </div>
 
 Installez `express-openid-connect` ainsi qu’Express et dotenv pour gérer les variables d’environnement.
@@ -116,7 +116,7 @@ Mettez à jour votre `package.json` pour y ajouter des scripts de démarrage :
 ***
 
 <div id="3-setup-your-auth0-app">
-  ## 3. Configurez votre Auth0 App
+  ## 3. Configurez votre Auth0 App {#3-setup-your-auth0-app}
 </div>
 
 Ensuite, vous devez créer une nouvelle application dans votre tenant Auth0 et ajouter les variables d’environnement à votre projet.
@@ -198,7 +198,7 @@ Vous pouvez choisir de configurer automatiquement votre application Auth0 en ex�
 ***
 
 <div id="4-configure-the-middleware">
-  ## 4. Configurer le middleware
+  ## 4. Configurer le middleware {#4-configure-the-middleware}
 </div>
 
 Ajoutez le middleware Auth0 à votre application Express. Le middleware `auth()` gère la session et crée automatiquement les routes `/login`, `/logout` et `/callback`.
@@ -246,7 +246,7 @@ app.listen(port, () => {
 ***
 
 <div id="5-create-login-logout-and-profile-routes">
-  ## 5. Créez des routes de login, de logout et de profil
+  ## 5. Créez des routes de login, de logout et de profil {#5-create-login-logout-and-profile-routes}
 </div>
 
 Ajoutez maintenant des routes pour afficher des liens de login et de logout, ainsi qu’une page de profil protégée.
@@ -354,7 +354,7 @@ app.listen(port, () => {
 ***
 
 <div id="6-run-your-app">
-  ## 6. Lancez votre application
+  ## 6. Lancez votre application {#6-run-your-app}
 </div>
 
 Démarrez le serveur de développement :
@@ -379,7 +379,7 @@ Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 ***
 
 <div id="advanced-usage">
-  ## Utilisation avancée
+  ## Utilisation avancée {#advanced-usage}
 </div>
 
 <AccordionGroup>
@@ -611,12 +611,12 @@ Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 ***
 
 <div id="troubleshooting">
-  ## Dépannage
+  ## Dépannage {#troubleshooting}
 </div>
 
 <AccordionGroup>
   <Accordion title="Problèmes courants et solutions">
-    ### Erreur « invalid state » après la connexion
+### Erreur « invalid state » après la connexion {#invalid-state-error-after-login}
 
     **Problème :** La valeur de `state` ne correspond pas entre la requête d&#39;authentification et le rappel.
 
@@ -626,7 +626,7 @@ Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
     2. Vérifiez que les cookies sont correctement enregistrés (et non bloqués par le navigateur)
     3. Vérifiez que l&#39;URL de rappel correspond exactement à celle configurée dans l&#39;Auth0 Dashboard
 
-    ### `req.oidc` est `undefined`
+### `req.oidc` est `undefined` {#reqoidc-is-undefined}
 
     **Problème :** Le middleware `auth()` n&#39;est pas appliqué avant l&#39;accès à `req.oidc`.
 
@@ -642,7 +642,7 @@ Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
     app.use(auth(config));
     ```
 
-    ### Session trop volumineuse / erreurs liées aux cookies
+### Session trop volumineuse / erreurs liées aux cookies {#session-too-large-cookie-errors}
 
     **Problème :** Les données de session de l&#39;utilisateur dépassent la taille maximale des cookies.
 
@@ -654,7 +654,7 @@ Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
     }
     ```
 
-    ### Incompatibilité de l&#39;URL de rappel
+### Incompatibilité de l&#39;URL de rappel {#callback-url-mismatch}
 
     **Problème :** Erreur « Callback URL mismatch » provenant d&#39;Auth0.
 
@@ -664,7 +664,7 @@ Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
     2. Ajoutez `http://localhost:3000` (ou votre URL de production) à **Allowed Callback URLs**
     3. L&#39;URL doit correspondre **exactement** (y compris les barres obliques finales)
 
-    ### Les variables d&#39;environnement ne se chargent pas
+### Les variables d&#39;environnement ne se chargent pas {#environment-variables-not-loading}
 
     **Problème :** Les valeurs de configuration sont `undefined`.
 
@@ -688,7 +688,7 @@ Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 ***
 
 <div id="next-steps">
-  ## Prochaines étapes
+  ## Prochaines étapes {#next-steps}
 </div>
 
 Maintenant que l’authentification fonctionne, pensez à explorer :
@@ -702,7 +702,7 @@ Maintenant que l’authentification fonctionne, pensez à explorer :
 ***
 
 <div id="resources">
-  ## Ressources
+  ## Ressources {#resources}
 </div>
 
 * **[express-openid-connect GitHub](https://github.com/auth0/express-openid-connect)** - Code source et exemples

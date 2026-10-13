@@ -6,7 +6,7 @@ title: 'Delegated Administration : Filter Hook'
 Par défaut, les utilisateurs ayant le rôle **Delegated Admin - User** voient tous les utilisateurs associés au compte Auth0. Cependant, vous pouvez filtrer les données auxquelles ils ont accès à l’aide du **Filter Hook**.
 
 <div id="hook-contract">
-  ## Contrat du Hook
+  ## Contrat du Hook {#hook-contract}
 </div>
 
 * **ctx** : Objet de contexte.
@@ -15,7 +15,7 @@ Par défaut, les utilisateurs ayant le rôle **Delegated Admin - User** voient t
 Pour en savoir plus sur la requête Lucene, consultez [User Search Query Syntax](/docs/fr-ca/manage-users/user-search/user-search-query-syntax).
 
 <div id="sample-use">
-  ### Exemple d’utilisation
+  ### Exemple d’utilisation {#sample-use}
 </div>
 
 Si Kelly gère le département Finance, elle ne devrait voir que les utilisateurs qui font aussi partie du département Finance. Nous filtrerons les utilisateurs en fonction du département de l’utilisateur actuel (soit, dans ce cas-ci, le département Finance pour le département et Kelly pour l’utilisateur, respectivement).
@@ -39,7 +39,7 @@ function(ctx, callback) {
 ```
 
 <div id="search-engine-override">
-  ### Remplacement du search engine
+  ### Remplacement du search engine {#search-engine-override}
 </div>
 
 Vous pouvez remplacer le search engine par défaut en indiquant votre choix dans la réponse.
@@ -50,7 +50,7 @@ return callback(null, { query: 'app_metadata.department:"' + department + '"', s
 ```
 
 <div id="notes">
-  ## Remarques
+  ## Remarques {#notes}
 </div>
 
 N’utilisez pas de guillemets simples, de guillemets doubles ni d’autres caractères spéciaux (comme **+** ou **-**) dans les termes sur lesquels vous souhaitez appliquer un filtre. Cela peut entraîner des problèmes avec la requête Lucene.
@@ -60,7 +60,7 @@ Si vous utilisez plusieurs opérateurs comme OR, NOT ou AND, placez ces paramèt
 Si vous ne configurez pas ce Hook, la recherche renvoie **tous les utilisateurs**.
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Delegated Administration: Access Hook](/docs/fr-ca/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-access-hook)

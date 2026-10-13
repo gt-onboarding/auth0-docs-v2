@@ -8,11 +8,11 @@ import {AuthCodeBlock} from "/snippets/fr-ca/AuthCodeBlock.jsx";
 import {AuthCodeGroup} from "/snippets/fr-ca/AuthCodeGroup.jsx";
 
 <div id="user-metadata">
-  ## Métadonnées de l’utilisateur
+  ## Métadonnées de l’utilisateur {#user-metadata}
 </div>
 
 <div id="create-user-metadata">
-  ### Créer des métadonnées utilisateur
+  ### Créer des métadonnées utilisateur {#create-user-metadata}
 </div>
 
 Pour créer un utilisateur avec les détails du profil suivants :
@@ -185,7 +185,7 @@ Effectuez la requête `POST` suivante vers le <Tooltip tip="Management API : un
 </AuthCodeGroup>
 
 <div id="update-user-metadata">
-  ### Mettre à jour les métadonnées utilisateur
+  ### Mettre à jour les métadonnées utilisateur {#update-user-metadata}
 </div>
 
 Vous pouvez mettre à jour les métadonnées d’un utilisateur en envoyant une requête `PATCH` au point de terminaison [`/patch_users_by_id`](https://auth0.com/docs/api/management/v2#!/Users/patch_users_by_id) de la Management API.
@@ -387,7 +387,7 @@ Le profil de l’utilisateur apparaîtra désormais comme suit :
 </Warning>
 
 <div id="merge-user-metadata">
-  ### Fusionner les métadonnées utilisateur
+  ### Fusionner les métadonnées utilisateur {#merge-user-metadata}
 </div>
 
 Seules les propriétés au niveau racine sont fusionnées dans l’objet. Toutes les propriétés de niveaux inférieurs seront remplacées.
@@ -564,7 +564,7 @@ Par conséquent, la requête `PATCH` correspondante envoyée à l’API serait 
 </AuthCodeGroup>
 
 <div id="delete-user-metadata">
-  ### Supprimer les métadonnées utilisateur
+  ### Supprimer les métadonnées utilisateur {#delete-user-metadata}
 </div>
 
 Vous pouvez supprimer `user_metadata` :
@@ -576,7 +576,7 @@ Vous pouvez supprimer `user_metadata` :
 ```
 
 <div id="app-metadata">
-  ## Métadonnées d’application
+  ## Métadonnées d’application {#app-metadata}
 </div>
 
 Mettre à jour les métadonnées avec un objet vide les supprime complètement. Par exemple, l’envoi du corps de requête suivant supprime entièrement `app_metadata` :
@@ -588,23 +588,23 @@ Mettre à jour les métadonnées avec un objet vide les supprime complètement. 
 ```
 
 <div id="client-metadata">
-  ## Métadonnées du client
+  ## Métadonnées du client {#client-metadata}
 </div>
 
 <div id="create-applications-with-client-metadata">
-  ### Créer des applications avec les métadonnées du client
+  ### Créer des applications avec les métadonnées du client {#create-applications-with-client-metadata}
 </div>
 
 Un objet `clientMetadata` peut être inclus lors de la création d’une nouvelle application au moyen du point de terminaison d’applications `POST /api/v2/`.
 
 <div id="read-client-metadata">
-  ### Consulter les métadonnées du client
+  ### Consulter les métadonnées du client {#read-client-metadata}
 </div>
 
 Les métadonnées du client sont incluses dans la réponse renvoyée par les points de terminaison `GET /api/v2/clients` et `GET /api/v2/client/{id}`.
 
 <div id="update-client-metadata">
-  ### Mettre à jour les métadonnées du client
+  ### Mettre à jour les métadonnées du client {#update-client-metadata}
 </div>
 
 Les métadonnées du client peuvent être mises à jour à l’aide du point de terminaison [`PATCH /api/v2/clients/{id}`](https://auth0.com/docs/api/management/v2#!/Users/patch_users_by_id), en fournissant un objet d’application avec la propriété `clientMetadata`, dont la valeur est un objet contenant les métadonnées que vous souhaitez modifier.
@@ -643,13 +643,13 @@ Requête : `PATCH /api/v2/client/myclientid123` avec le corps de la requête :
 ```
 
 <div id="delete-client-metadata-properties-and-values">
-  ### Supprimer des propriétés et des valeurs des métadonnées du client
+  ### Supprimer des propriétés et des valeurs des métadonnées du client {#delete-client-metadata-properties-and-values}
 </div>
 
 Les clés des métadonnées du client peuvent être supprimées au moyen d’une requête PATCH, comme décrit dans « Update app&#95;metadata » ci-dessus, en fournissant `null` comme valeur de la clé. Ce comportement correspond à celui des propriétés `user_metadata` et `app_metadata` dans le point de terminaison `PATCH` [/api/v2/users/{id}](https://auth0.com/docs/api/management/v2#!/Users/patch_users_by_id).
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Jetons d’accès de la Management API](/docs/fr-ca/secure/tokens/access-tokens/management-api-access-tokens)

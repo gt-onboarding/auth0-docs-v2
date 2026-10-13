@@ -32,7 +32,7 @@ import {HowToSchema} from "/snippets/ja-jp/HowToSchema.jsx";
 </Accordion>
 
 <div id="get-started">
-  ## はじめに
+  ## はじめに {#get-started}
 </div>
 
 <Steps>
@@ -544,11 +544,11 @@ import {HowToSchema} from "/snippets/ja-jp/HowToSchema.jsx";
 ***
 
 <div id="troubleshooting-advanced">
-  ## トラブルシューティングと高度な設定
+  ## トラブルシューティングと高度な設定 {#troubleshooting-advanced}
 </div>
 
 <Accordion title="よくある問題と解決策">
-  ### &quot;Invariant Violation: Native module cannot be null&quot;
+  ### &quot;Invariant Violation: Native module cannot be null&quot; {#invariant-violation-native-module-cannot-be-null}
 
   このエラーは、Expo Go で SDK を使用しようとすると発生します。
 
@@ -562,7 +562,7 @@ import {HowToSchema} from "/snippets/ja-jp/HowToSchema.jsx";
   npx expo run:android
   ```
 
-  ### Callback URL の不一致エラー
+  ### Callback URL の不一致エラー {#callback-url-mismatch-error}
 
   **解決策:**
 
@@ -572,7 +572,7 @@ import {HowToSchema} from "/snippets/ja-jp/HowToSchema.jsx";
   2. `authorize()` と `clearSession()` に渡す `customScheme` パラメーター
   3. Auth0 Dashboard の Callback URLs (アプリケーション → Your App → Settings → Application URIs)
 
-  ### &quot;PKCE not allowed&quot; エラー
+  ### &quot;PKCE not allowed&quot; エラー {#pkce-not-allowed-error}
 
   **修正方法:**
 
@@ -580,7 +580,7 @@ import {HowToSchema} from "/snippets/ja-jp/HowToSchema.jsx";
   2. アプリケーションの種類を **Native** に変更します
   3. 変更を保存して、もう一度試します
 
-  ### Prebuild が失敗する、またはプラグインが適用されない
+  ### Prebuild が失敗する、またはプラグインが適用されない {#prebuild-fails-or-plugin-not-applied}
 
   **修正方法:**
 
@@ -589,7 +589,7 @@ import {HowToSchema} from "/snippets/ja-jp/HowToSchema.jsx";
   npx expo prebuild --clean
   ```
 
-  ### iOS ビルドが Pod エラーで失敗する
+  ### iOS ビルドが Pod エラーで失敗する {#ios-build-fails-with-pod-errors}
 
   **修正方法:**
 
@@ -600,7 +600,7 @@ import {HowToSchema} from "/snippets/ja-jp/HowToSchema.jsx";
   npx expo run:ios
   ```
 
-  ### ユーザーによるキャンセルエラー
+  ### ユーザーによるキャンセルエラー {#user-cancelled-error}
 
   ログイン関数内で適切に処理してください。
 
@@ -619,7 +619,7 @@ import {HowToSchema} from "/snippets/ja-jp/HowToSchema.jsx";
   };
   ```
 
-  ### iOS のアラートダイアログ
+  ### iOS のアラートダイアログ {#ios-alert-dialog}
 
   iOS では、ユーザーに *&quot;App Name&quot; Wants to Use &quot;auth0.com&quot; to Sign In* という許可ダイアログが表示されます。これは `ASWebAuthenticationSession` の想定内の動作です。続行するには、ユーザーが **Continue** をタップする必要があります。
 
@@ -724,7 +724,7 @@ import {HowToSchema} from "/snippets/ja-jp/HowToSchema.jsx";
   eas build --platform android
   ```
 
-  ### 本番環境にデプロイする前に
+  ### 本番環境にデプロイする前に {#before-deploying-to-production}
 
   **セキュリティ強化のため、HTTPS callback URL を使用してください。**
 

@@ -6,14 +6,14 @@ title: 'Delegated Administration : Memberships Query Hook'
 Lors de la création d’un nouvel utilisateur, l’interface utilisateur affiche une liste déroulante dans laquelle vous pouvez choisir la ou les appartenances à attribuer à l’utilisateur. Ces appartenances sont ensuite définies à l’aide du **Memberships Query Hook**.
 
 <div id="hook-contract">
-  ## Contrat du Hook
+  ## Contrat du Hook {#hook-contract}
 </div>
 
 * **ctx** : Objet de contexte.
 * **callback(error, &#123; createMemberships: true/false, memberships: &#125;)** : Callback dans lequel vous pouvez retourner une erreur et un objet contenant la configuration des appartenances.
 
 <div id="sample-use">
-  ## Exemple d’utilisation
+  ## Exemple d’utilisation {#sample-use}
 </div>
 
 Les utilisateurs du département informatique devraient pouvoir créer des utilisateurs dans d’autres départements. Les utilisateurs des autres départements devraient seulement pouvoir créer des utilisateurs pour leur propre département.
@@ -34,7 +34,7 @@ function(ctx, callback) {
 ```
 
 <div id="notes">
-  ## Remarques
+  ## Remarques {#notes}
 </div>
 
 Comme vous ne pouvez utiliser cette query que dans l’UI, vous devrez attribuer les appartenances à l’aide du **Write Hook** si vous devez faire respecter des règles concernant l’attribution des utilisateurs à des départements précis.
@@ -58,7 +58,7 @@ function(ctx, callback) {
 ```
 
 <div id="learn-more">
-  ## Pour en savoir plus
+  ## Pour en savoir plus {#learn-more}
 </div>
 
 * [Delegated Administration : Access Hook](/docs/fr-ca/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-access-hook)

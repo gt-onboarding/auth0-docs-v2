@@ -8,7 +8,7 @@ import {AuthCodeBlock} from "/snippets/fr-ca/AuthCodeBlock.jsx";
 La version 2 du Auth0 Android SDK comprend de nombreuses améliorations pour intégrer Auth0 à votre application Android. **Cette mise à niveau comporte des changements non rétrocompatibles.** Veuillez consulter ce guide pour comprendre les modifications requises lors de la migration vers la v2.
 
 <div id="requirements-changes">
-  ## Changements aux exigences
+  ## Changements aux exigences {#requirements-changes}
 </div>
 
 La v2 nécessite Android API version 21 ou une version ultérieure, ainsi que Java 8+.
@@ -29,7 +29,7 @@ android {
 ```
 
 <div id="open-id-connect-only">
-  ## OpenID Connect uniquement
+  ## OpenID Connect uniquement {#open-id-connect-only}
 </div>
 
 v2 ne prend en charge que les applications conformes à OIDC. Lorsque vous utilisez ce SDK pour authentifier des utilisateurs, seuls le pipeline d’authentification Auth0 actuel et les endpoints actuels sont utilisés. Nous avons supprimé la méthode `setOIDCConformant(boolean value)` de la classe `Auth0`.
@@ -37,25 +37,25 @@ v2 ne prend en charge que les applications conformes à OIDC. Lorsque vous utili
 Pour en savoir plus, consultez le [protocole OpenID Connect](/docs/fr-ca/authenticate/protocols/openid-connect-protocol).
 
 <div id="authorization-code-with-pkce">
-  ## Code d’autorisation avec PKCE
+  ## Code d’autorisation avec PKCE {#authorization-code-with-pkce}
 </div>
 
 v2 ne prend en charge que le flux [Code d’autorisation avec clé de preuve pour l’échange de code (PKCE)](/docs/fr-ca/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce). Nous avons supprimé la méthode `withResponseType(@ResponseType int type)` de `WebAuthProvider.Builder`.
 
 <div id="removal-of-webview-support">
-  ## Fin de la prise en charge de WebView
+  ## Fin de la prise en charge de WebView {#removal-of-webview-support}
 </div>
 
 Nous avons supprimé la possibilité, désormais obsolète, de s’authentifier à l’aide d’un composant `WebView`. À la place, des applications de navigateur externes seront toujours utilisées afin d’accroître la sécurité et la confiance des utilisateurs.
 
 <div id="removal-of-legacy-authentication-api-support">
-  ## Suppression de la prise en charge des API d’authentification hérité
+  ## Suppression de la prise en charge des API d’authentification hérité {#removal-of-legacy-authentication-api-support}
 </div>
 
 Nous avons supprimé les méthodes et les classes servant à appeler les [API d’authentification](https://auth0.com/docs/api/authentication) classées comme hérité. Consultez la liste complète dans la section **Classes et interfaces supprimées** ci-dessous.
 
 <div id="request-interfaces-changes">
-  ## Modifications des interfaces de requête
+  ## Modifications des interfaces de requête {#request-interfaces-changes}
 </div>
 
 Le package `com.auth0.android.request` définit les interfaces de haut niveau servant à créer et à exécuter des requêtes HTTP. Historiquement, un problème fréquent était l’impossibilité d’ajouter des en-têtes personnalisés et des paramètres de requête à tous les types de requêtes. Nous avons refactorisé les interfaces de requête pour permettre de personnaliser n’importe quelle requête avec des en-têtes supplémentaires et des paramètres de requête. Notez que ces paramètres doivent maintenant être de type `String`.
@@ -86,13 +86,13 @@ Toutes les classes qui implémentaient `ParameterizableRequest` ou `AuthReque
 Consultez la liste complète dans la section **Classes et interfaces supprimées** ci-dessous.
 
 <div id="networking-client-customization">
-  ## Personnalisation du client réseau
+  ## Personnalisation du client réseau {#networking-client-customization}
 </div>
 
 La v2 améliore la façon dont vous pouvez personnaliser la manière dont cette bibliothèque effectue des requêtes HTTP. Une nouvelle interface, `NetworkingClient`, définit le contrat d’exécution des requêtes HTTP. Vous pouvez configurer la classe `Auth0` avec une instance de `NetworkingClient`. Cela vous permet de fournir votre propre implémentation afin d’avoir un contrôle total sur le client réseau. De plus, le client réseau par défaut fourni par cette bibliothèque offre plusieurs points de personnalisation en exemple pour faciliter la configuration des personnalisations courantes.
 
 <div id="timeout-configuration">
-  ### Configuration du délai d’attente
+  ### Configuration du délai d’attente {#timeout-configuration}
 </div>
 
 export const codeExample1 = `// Avant
@@ -115,7 +115,7 @@ account.networkingClient = netClient`;
 <AuthCodeBlock children={codeExample1} language="kotlin" />
 
 <div id="logging-configuration">
-  ### Configuration de la journalisation
+  ### Configuration de la journalisation {#logging-configuration}
 </div>
 
 export const codeExample2 = `// Avant
@@ -135,18 +135,18 @@ account.networkingClient = netClient`;
 <AuthCodeBlock children={codeExample2} language="kotlin" />
 
 <div id="detailed-change-listing">
-  ## Liste détaillée des changements
+  ## Liste détaillée des changements {#detailed-change-listing}
 </div>
 
 <div id="files-that-changed-their-package">
-  ### Fichiers dont le package a changé
+  ### Fichiers dont le package a changé {#files-that-changed-their-package}
 </div>
 
 * Nous avons déplacé la classe `com.auth0.android.authentication.request.ProfileRequest` vers `com.auth0.android.request.ProfileRequest`.
 * Nous avons déplacé la classe `com.auth0.android.authentication.request.SignUpRequest` vers `com.auth0.android.request.SignUpRequest`.
 
 <div id="internal-package">
-  ### Package interne
+  ### Package interne {#internal-package}
 </div>
 
 La version précédente de cette bibliothèque rendait accessibles quelques classes du package `com.auth0.android.request.internal`. Celles-ci n&#39;ont jamais été destinées à faire partie de l&#39;API publique de la bibliothèque; la documentation Java en déconseillait l&#39;utilisation directe. Comme la base de code a migré vers Kotlin, nous tirons maintenant parti du modificateur `internal` et l&#39;utilisons au besoin. Ces classes peuvent sembler être des classes `public` dans les projets Java, mais ne les utilisez pas. Elles ne font toujours pas partie de l&#39;API publique de cette bibliothèque.
@@ -154,7 +154,7 @@ La version précédente de cette bibliothèque rendait accessibles quelques clas
 Nous ne fournirons pas de soutien pour ces classes. Nous les modifierons au besoin, sans préavis.
 
 <div id="classes-and-interfaces-removed">
-  ### Classes et interfaces supprimées
+  ### Classes et interfaces supprimées {#classes-and-interfaces-removed}
 </div>
 
 * La classe `com.auth0.android.util.Base64` a été supprimée. Utilisez `android.util.Base64` à la place.
@@ -175,7 +175,7 @@ Nous ne fournirons pas de soutien pour ces classes. Nous les modifierons au beso
 * La classe `com.auth0.android.util.JsonRequiredTypeAdapterFactory` a été supprimée.
 
 <div id="constants-removed">
-  ### Constantes supprimées
+  ### Constantes supprimées {#constants-removed}
 </div>
 
 * `ParameterBuilder.GRANT_TYPE_JWT` a été supprimée.
@@ -185,7 +185,7 @@ Nous ne fournirons pas de soutien pour ces classes. Nous les modifierons au beso
 * `ResponseType.CODE`, `ResponseType.ID_TOKEN` et `ResponseType.ACCESS_TOKEN` ont été supprimées.
 
 <div id="classes-and-interfaces-changed">
-  ### Classes et interfaces modifiées
+  ### Classes et interfaces modifiées {#classes-and-interfaces-changed}
 </div>
 
 * `SignupRequest` implémente maintenant `AuthenticationRequest` au lieu de `AuthRequest`, qui a été supprimé
@@ -193,7 +193,7 @@ Nous ne fournirons pas de soutien pour ces classes. Nous les modifierons au beso
 * `BaseCallback` est obsolète; utilisez plutôt `Callback`.
 
 <div id="constructors-changed">
-  ### Constructeurs modifiés
+  ### Constructeurs modifiés {#constructors-changed}
 </div>
 
 * Vous ne pouvez plus créer `AuthenticationAPIClient` à partir d’un `Context`. Utilisez plutôt `AuthenticationAPIClient(auth0: Auth0)`. Vous pouvez créer une instance de `Auth0` à l’aide d’un `Context`.
@@ -203,11 +203,11 @@ Nous ne fournirons pas de soutien pour ces classes. Nous les modifierons au beso
 * Vous ne pouvez plus créer `Credentials` avec une valeur « expires in ». Indiquez plutôt la date d’expiration ou « expires at ». En règle générale, vous n’aurez pas à créer `Credentials` vous-même.
 
 <div id="methods-removed-or-changed">
-  ### Méthodes supprimées ou modifiées
+  ### Méthodes supprimées ou modifiées {#methods-removed-or-changed}
 </div>
 
 <div id="auth0-methods-removed">
-  #### Méthodes Auth0 supprimées
+  #### Méthodes Auth0 supprimées {#auth0-methods-removed}
 </div>
 
 * `setOIDCConformant(boolean enabled)` et `isOIDCConformant()` ont été supprimées. Le SDK prend désormais uniquement en charge les applications conformes à OIDC.
@@ -219,7 +219,7 @@ Nous ne fournirons pas de soutien pour ces classes. Nous les modifierons au beso
 * `setTLS12Enforced()` et `isTLS12Enforced()` ont été supprimées. Le SDK prend désormais en charge TLS moderne par défaut.
 
 <div id="authenticationapiclient-methods-removed-or-changed">
-  #### Méthodes `AuthenticationAPIClient` supprimées ou modifiées
+  #### Méthodes `AuthenticationAPIClient` supprimées ou modifiées {#authenticationapiclient-methods-removed-or-changed}
 </div>
 
 * `setUserAgent(String)` a été supprimée. Vous pouvez définir les en-têtes à envoyer directement pour chaque instance de `Request` à l’aide de la méthode `addHeader("{NAME}", "{VALUE}")`, ou de façon globale pour l’instance du client réseau au moyen du paramètre de constructeur `DefaultClient(defaultHeaders = mapOf())`.
@@ -258,14 +258,14 @@ Les méthodes qui retournaient un `TokenRequest` retournent maintenant un `Reque
 * `token("{AUTHORIZATION-CODE}", "{CODE-VERIFIER}", "{REDIRECT-URI}")`
 
 <div id="authenticationrequest-methods-removed">
-  #### Méthodes d’`AuthenticationRequest` supprimées
+  #### Méthodes d’`AuthenticationRequest` supprimées {#authenticationrequest-methods-removed}
 </div>
 
 * `addAuthenticationParameters(parameters)` a été supprimée. Utilisez plutôt `addParameters(parameters)`.
 * `setDevice("{DEVICE}").` Utilisez plutôt `addParameter("device", "{VALUE}")`.
 
 <div id="webauthproviderbuilder-methods-removed">
-  #### Méthodes supprimées de WebAuthProvider.Builder
+  #### Méthodes supprimées de WebAuthProvider.Builder {#webauthproviderbuilder-methods-removed}
 </div>
 
 * `useCodeGrant(boolean useCodeGrant)`. Il n’y a pas de remplacement; seul le flux Code + PKCE est pris en charge dans la v2.
@@ -275,13 +275,13 @@ Les méthodes qui retournaient un `TokenRequest` retournent maintenant un `Reque
 * `start(activity: Activity, callback: AuthCallback, requestCode: Int)` a été supprimée. Utilisez plutôt `start(activity: Activity, callback: Callback<Credentials, AuthenticationException>)`.
 
 <div id="webauthproviderlogoutbuilder-methods-removed">
-  #### Méthodes de WebAuthProvider.LogoutBuilder supprimées
+  #### Méthodes de WebAuthProvider.LogoutBuilder supprimées {#webauthproviderlogoutbuilder-methods-removed}
 </div>
 
 * `start(context: Context, callback: VoidCallback)`. Utilisez plutôt `start(context: Context, callback: Callback<Void, AuthenticationException>)`.
 
 <div id="webauthprovider-methods-removed">
-  #### Méthodes `WebAuthProvider` retirées
+  #### Méthodes `WebAuthProvider` retirées {#webauthprovider-methods-removed}
 </div>
 
 * `init(account: Auth0)` a été retirée. Utilisez plutôt `login(account: Auth0)`.
@@ -290,13 +290,13 @@ Les méthodes qui retournaient un `TokenRequest` retournent maintenant un `Reque
 * `init(account: Auth0)` a été retirée. Utilisez plutôt `login(account: Auth0)`.
 
 <div id="parameterbuilder-methods-removed">
-  #### Méthodes supprimées de ParameterBuilder
+  #### Méthodes supprimées de ParameterBuilder {#parameterbuilder-methods-removed}
 </div>
 
 * `setDevice("{DEVICE}")` a été supprimée. Utilisez `set("device", "{VALUE}")` à la place.
 
 <div id="usersapiclient-methods-changed">
-  #### Méthodes de UsersAPIClient modifiées
+  #### Méthodes de UsersAPIClient modifiées {#usersapiclient-methods-changed}
 </div>
 
 * `setUserAgent(String)` a été supprimée. Vous pouvez définir les en-têtes à envoyer directement pour chaque instance de `Request` à l’aide de la méthode `addHeader("{NAME}", "{VALUE}")`, ou globalement pour l’instance du client réseau au moyen du paramètre de constructeur `DefaultClient(defaultHeaders = mapOf())`.
@@ -309,7 +309,7 @@ Les méthodes qui renvoyaient un `ParameterizableRequest` renvoient maintenant
 * `getProfile("{USER-ID}")`
 
 <div id="requestfactory-methods-removed-or-changed">
-  #### Méthodes de `RequestFactory` supprimées ou modifiées
+  #### Méthodes de `RequestFactory` supprimées ou modifiées {#requestfactory-methods-removed-or-changed}
 </div>
 
 La classe `RequestFactory` contient des méthodes qui facilitent l’envoi de requêtes HTTP, y compris la sérialisation et la désérialisation du corps de la requête JSON et de la réponse. Comme elle fait partie du package `com.auth0.android.request.internal`, elle n’est pas destinée à un usage public, mais puisqu’il s’agit d’un type public, un résumé des changements est présenté ci-dessous.
@@ -320,13 +320,13 @@ La classe `RequestFactory` contient des méthodes qui facilitent l’envoi de 
 * La méthode `authenticationPOST` a été supprimée sans remplacement, puisque toutes les instances de `Request` peuvent être paramétrées avec les en-têtes nécessaires.
 
 <div id="profilerequest-methods-changed">
-  #### Méthodes de `ProfileRequest` modifiées
+  #### Méthodes de `ProfileRequest` modifiées {#profilerequest-methods-changed}
 </div>
 
 * La méthode `addParameters` exige maintenant que la valeur soit une Map de String à String, au lieu de String à Object (`addParameters(mapOf("key" to "val"))`)
 
 <div id="signuprequest-methods-changed">
-  #### Méthodes de SignUpRequest modifiées
+  #### Méthodes de SignUpRequest modifiées {#signuprequest-methods-changed}
 </div>
 
 Les méthodes qui définissent des paramètres exigent maintenant que la valeur soit une Map de String à String, plutôt qu’un String à Object :

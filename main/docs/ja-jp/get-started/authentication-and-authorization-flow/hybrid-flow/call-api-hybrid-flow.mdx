@@ -17,7 +17,7 @@ Auth0 を使うと、次の方法でアプリに認可コードフローを簡�
 * [Authentication API](https://auth0.com/docs/api/authentication): 独自のソリューションを構築したい場合は、このまま読み進めて、API を直接呼び出す方法を確認してください。
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 **このチュートリアルを始める前に、以下を行ってください。**
@@ -33,7 +33,7 @@ Auth0 を使うと、次の方法でアプリに認可コードフローを簡�
   * API が、以前のトークンの有効期限が切れた際に新しいトークンを取得するための **リフレッシュトークン** を受け取れるようにするには、**オフラインアクセスの許可** を有効にしてください。
 
 <div id="steps">
-  ## 手順
+  ## 手順 {#steps}
 </div>
 
 1. [ユーザーを認可する](#authorize-user):
@@ -48,7 +48,7 @@ Auth0 を使うと、次の方法でアプリに認可コードフローを簡�
 任意: [サンプルのユースケースを見る](#sample-use-cases)
 
 <div id="authorize-user">
-  ### ユーザーを認可する
+  ### ユーザーを認可する {#authorize-user}
 </div>
 
 このステップには、次のプロセスのうち 1 つ以上が含まれる場合があります。
@@ -61,7 +61,7 @@ Auth0 を使うと、次の方法でアプリに認可コードフローを簡�
 ユーザーを認可するには、アプリでユーザーを[認可 URL](https://auth0.com/docs/api/authentication#authorization-code-grant)に誘導する必要があります。
 
 <div id="example-authorization-url">
-  #### 認可 URL の例
+  #### 認可 URL の例 {#example-authorization-url}
 </div>
 
 export const codeExample1 = `https://{yourDomain}/authorize?
@@ -76,7 +76,7 @@ export const codeExample1 = `https://{yourDomain}/authorize?
 
 <AuthCodeBlock children={codeExample1} language="http" />
 
-##### パラメータ
+##### パラメータ {#parameters}
 
 カスタム API の呼び出し時にユーザーを認可する場合は、次の点に注意してください。
 
@@ -112,7 +112,7 @@ export const codeExample2 = `<a href="https://{yourDomain}/authorize?
 <AuthCodeBlock children={codeExample2} language="html" />
 
 <div id="response">
-  #### レスポンス
+  #### レスポンス {#response}
 </div>
 
 すべてが正常に進むと、`HTTP 302` レスポンスが返されます。要求した資格情報はレスポンスボディにエンコードされています。
@@ -154,7 +154,7 @@ state=xyzABC123
 3. 結果が `c_hash` の値と一致することを確認します。
 
 <div id="request-tokens">
-  ### トークンを取得する
+  ### トークンを取得する {#request-tokens}
 </div>
 
 認可コードを取得したら、次はそれをトークンに交換する必要があります。前のステップで取得した認可コード (`code`) を使って、[トークン URL](https://auth0.com/docs/api/authentication#authorization-code) に `POST` します。
@@ -162,7 +162,7 @@ state=xyzABC123
 このステップで受け取る <Tooltip tip="アクセストークン: API へのアクセスに使用される、不透明な文字列または JWT 形式の認可資格情報。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Access+Token">アクセストークン</Tooltip> は、API の呼び出しに使用するものです。このチュートリアルの前のステップで受け取ったアクセストークンとは、別のものとして管理してください。
 
 <div id="example-post-to-token-url">
-  #### token URL に POST する例
+  #### token URL に POST する例 {#example-post-to-token-url}
 </div>
 
 <AuthCodeGroup>
@@ -313,7 +313,7 @@ state=xyzABC123
 </AuthCodeGroup>
 
 <div id="parameters">
-  ##### パラメーター
+  ##### パラメーター {#parameters-2}
 </div>
 
 | パラメーター名         | 説明                                                                                                                                                                                                                           |
@@ -325,7 +325,7 @@ state=xyzABC123
 | `redirect_uri`  | アプリケーション設定に設定した有効なコールバックURLです。これは、このチュートリアルの前の手順で認可URLに渡した `redirect_uri` と完全に一致している必要があります。なお、URLエンコードが必要です。                                                                                                                |
 
 <div id="response">
-  #### レスポンス
+  #### レスポンス {#response-2}
 </div>
 
 正常に処理されると、`access_token`、`refresh_token`、`id_token`、`token_type` の各値を含むペイロードとともに、`HTTP 200` レスポンスが返されます。
@@ -354,7 +354,7 @@ state=xyzABC123
 </Warning>
 
 <div id="call-api">
-  ### API を呼び出す
+  ### API を呼び出す {#call-api}
 </div>
 
 通常の Web アプリケーション (または、アプリケーションの資格情報を安全に保存できる同様のケース) から API を呼び出すには、アプリケーションは取得したアクセストークンを、HTTP リクエストの Authorization ヘッダーで Bearer トークンとして渡す必要があります。
@@ -495,7 +495,7 @@ state=xyzABC123
 </AuthCodeGroup>
 
 <div id="refresh-tokens">
-  ### リフレッシュトークン
+  ### リフレッシュトークン {#refresh-tokens}
 </div>
 
 このチュートリアルに沿って進め、以下を完了していれば、すでに[リフレッシュトークン](/docs/ja-jp/secure/tokens/refresh-tokens)を受け取っています。
@@ -507,7 +507,7 @@ state=xyzABC123
 
 トークンを更新するには、`grant_type=refresh_token` を使用して、Authentication API の `/oauth/token` エンドポイントに `POST` リクエストを送信します。
 
-#### Token URL に POST する例
+#### Token URL に POST する例 {#example-post-to-token-url-2}
 
 <AuthCodeGroup>
   ```bash cURL
@@ -653,7 +653,7 @@ state=xyzABC123
 </AuthCodeGroup>
 
 <div id="parameters">
-  ##### パラメーター
+  ##### パラメーター {#parameters-3}
 </div>
 
 | Parameter Name  | Description                                                                                                                   |
@@ -664,7 +664,7 @@ state=xyzABC123
 | `scope`         |  (任意) リクエストするスコープ権限のスペース区切りリストです。送信しない場合は元のスコープが使用されます。送信する場合は、スコープを絞ってリクエストできます。なお、これは URL エンコードする必要があります。                   |
 
 <div id="response">
-  #### レスポンス
+  #### レスポンス {#response-3}
 </div>
 
 問題なく処理されると、新しい `access_token`、その有効期間 (秒単位の `expires_in`) 、許可された `scope` 値、`token_type` を含むペイロードを伴う `HTTP 200` レスポンスが返されます。初期トークンのスコープに `openid` が含まれている場合、レスポンスには新しい `id_token` も含まれます:
@@ -684,11 +684,11 @@ state=xyzABC123
 </Warning>
 
 <div id="sample-use-cases">
-  ### 使用例
+  ### 使用例 {#sample-use-cases}
 </div>
 
 <div id="customize-tokens">
-  #### トークンをカスタマイズする
+  #### トークンをカスタマイズする {#customize-tokens}
 </div>
 
 ルールを使うと、返されるアクセストークンのスコープを変更したり、アクセストークンや ID トークンにクレームを追加したりできます。 (ルールについて詳しくは、[Auth0 Rules](/docs/ja-jp/customize/rules) を参照してください。) そのためには、次のルールを追加します。このルールは、ユーザーの認証後に実行されます。
@@ -712,7 +712,7 @@ exports.onExecutePostLogin = async (event, api) => {
 </Warning>
 
 <div id="learn-more">
-  ## 詳細情報
+  ## 詳細情報 {#learn-more}
 </div>
 
 * [OAuth 2.0 認可フレームワーク](/docs/ja-jp/authenticate/protocols/oauth)

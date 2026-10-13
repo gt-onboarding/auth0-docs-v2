@@ -4,7 +4,7 @@ description: "Accepter une requête d’authentification SAML pour lancer un pro
 ---
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `GET /samlp/{clientId}`
@@ -16,7 +16,7 @@ Vous pouvez aussi inclure un paramètre `connection` pour vous connecter au moye
 Les requêtes de connexion initiées par le SP peuvent aussi inclure un paramètre `organization` pour authentifier les utilisateurs dans le contexte d’une organisation. Pour en savoir plus, consultez [Organizations](https://auth0.com/docs/manage-users/organizations).
 
 <div id="path-parameters">
-  ## Paramètres de chemin
+  ## Paramètres de chemin {#path-parameters}
 </div>
 
 <ParamField path="clientId" type="string" required>
@@ -24,7 +24,7 @@ Les requêtes de connexion initiées par le SP peuvent aussi inclure un paramèt
 </ParamField>
 
 <div id="body-parameters">
-  ## Paramètres du corps
+  ## Paramètres du corps {#body-parameters}
 </div>
 
 <ParamField body="connection" type="string">
@@ -36,7 +36,7 @@ Les requêtes de connexion initiées par le SP peuvent aussi inclure un paramèt
 </ParamField>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                        |

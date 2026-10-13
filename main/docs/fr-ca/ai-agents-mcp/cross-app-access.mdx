@@ -15,7 +15,7 @@ L’accès interapplications (XAA) répond à ces défis en permettant aux admin
 XAA implémente l’[Identity Assertion Authorization Grant](https://datatracker.ietf.org/doc/draft-ietf-oauth-identity-assertion-authz-grant/), une extension OAuth en cours d’élaboration qui permet à une application demandeuse, telle qu’une application ou un agent IA, d’obtenir un jeton sécurisé auprès de l’IdP d’entreprise afin d’effectuer une requête à l’API d’une autre application (application de ressources) au nom de l’utilisateur final. Cela couvre à la fois les connexions application-à-application et agent-à-application. XAA est la solution protocolaire derrière l’extension [autorisation gérée par l’entreprise](https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/) de MCP, qui permet à un agent IA agissant comme [client MCP](https://modelcontextprotocol.io/) de se connecter de façon transparente à un serveur MCP exposé par l’application de ressources. Pour en savoir plus, consultez [Fonctionnement](#how-it-works).
 
 <div id="key-benefits">
-  ## Principaux avantages
+  ## Principaux avantages {#key-benefits}
 </div>
 
 XAA offre des avantages clés pour chaque rôle au sein de votre écosystème d’entreprise :
@@ -25,7 +25,7 @@ XAA offre des avantages clés pour chaque rôle au sein de votre écosystème d�
 * Pour les utilisateurs finaux : connexions simples et fluides entre les applications, éliminant les processus complexes de consentement OAuth.
 
 <div id="use-cases">
-  ## Cas d’utilisation
+  ## Cas d’utilisation {#use-cases}
 </div>
 
 Les cas d’utilisation courants de XAA comprennent :
@@ -34,7 +34,7 @@ Les cas d’utilisation courants de XAA comprennent :
 * Connecter des applications SaaS (application-à-application) : dans notre exemple précédent, les applications de calendrier et de messagerie de l’entreprise prennent toutes deux en charge XAA. Les employés peuvent facilement connecter l’application de messagerie à l’API de l’application de calendrier, sans redirection ni consentement de l’utilisateur, tout en respectant les politiques d’accès de l’entreprise.
 
 <div id="how-it-works">
-  ## Fonctionnement
+  ## Fonctionnement {#how-it-works}
 </div>
 
 Le flux XAA fait intervenir les acteurs suivants :
@@ -56,7 +56,7 @@ Dans le diagramme suivant, Acme est le client d’entreprise dont les employés 
 Le serveur d’autorisation Auth0 de l’application de ressources et l’IdP d’entreprise doivent tous deux être configurés pour que XAA fonctionne. Commencez par [Configuration de l’environnement](/docs/fr-ca/ai-agents-mcp/cross-app-access/set-up-xaa-test-environment) pour configurer la partie Auth0, puis consultez le guide approprié dans Intégration d’IdP — [Okta comme IdP OIDC](/docs/fr-ca/ai-agents-mcp/cross-app-access/idp/okta-as-oidc-idp) et [Okta comme IdP SAML](/docs/fr-ca/ai-agents-mcp/cross-app-access/idp/okta-as-saml-idp) — selon l’IdP et le protocole que vous souhaitez utiliser pour établir la fédération avec celui-ci.
 
 <div id="end-to-end-xaa-flow">
-  ## Flux XAA de bout en bout
+  ## Flux XAA de bout en bout {#end-to-end-xaa-flow}
 </div>
 
 Dans notre exemple Acme, le flux XAA de bout en bout comprend les étapes suivantes :
@@ -75,7 +75,7 @@ Dans notre exemple Acme, le flux XAA de bout en bout comprend les étapes suivan
 Grâce au flux XAA, les politiques de l’administrateur TI d’Acme régissent l’accès d’Agent0 à Todo0, sans nécessiter de redirection ni d’interaction de la part de l’utilisateur final.
 
 <div id="early-access-limitations">
-  ## Limites de l’accès anticipé
+  ## Limites de l’accès anticipé {#early-access-limitations}
 </div>
 
 L’accès anticipé de XAA présente les limites suivantes :
@@ -87,7 +87,7 @@ L’accès anticipé de XAA présente les limites suivantes :
 * Aucune création dynamique d’utilisateurs : l’utilisateur doit s’être déjà connecté à votre application ressource à l’aide de la connexion d’entreprise configurée. Sinon, la demande d’échange de l’assertion ID-JAG contre un jeton d’accès échouera avec l’erreur `User not found error`.
 
 <div id="rate-limits">
-  ## Limites de débit
+  ## Limites de débit {#rate-limits}
 </div>
 
 Dans le cadre de l’accès anticipé XAA, les échanges ID-JAG sur le point de terminaison `/token` de votre tenant Auth0 sont limités à 50 % au plus de la limite de débit globale de l’API d’authentification de votre tenant. Pour en savoir plus, notamment sur la limite exacte associée à votre forfait d’abonnement, consultez [Configurations des limites de débit](/docs/fr-ca/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations).

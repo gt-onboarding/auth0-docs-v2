@@ -8,19 +8,19 @@ Auth0.Android est une bibliothèque côté client que vous pouvez utiliser avec 
 Consultez le [dépôt Auth0.Android](https://github.com/auth0/Auth0.Android) sur GitHub.
 
 <div id="requirements">
-  ## Exigences
+  ## Exigences {#requirements}
 </div>
 
 Android API version 21 ou plus récente est requise.
 
 <div id="installation">
-  ## Installation
+  ## Installation {#installation}
 </div>
 
 Ajoutez le SDK à votre projet. La bibliothèque effectuera des requêtes aux API d’authentification et de gestion d’Auth0.
 
 <div id="add-auth0-to-gradle">
-  ### Ajouter Auth0 à Gradle
+  ### Ajouter Auth0 à Gradle {#add-auth0-to-gradle}
 </div>
 
 Dans la section `dependencies` du fichier `build.gradle` de votre application, ajoutez ce qui suit :
@@ -53,7 +53,7 @@ android {
 ```
 
 <div id="permissions">
-  ### Autorisations
+  ### Autorisations {#permissions}
 </div>
 
 Ouvrez le fichier `AndroidManifest.xml` de votre application et ajoutez l’autorisation suivante.
@@ -63,7 +63,7 @@ Ouvrez le fichier `AndroidManifest.xml` de votre application et ajoutez l’auto
 ```
 
 <div id="configure-for-universal-login">
-  ## Configurer pour Universal Login
+  ## Configurer pour Universal Login {#configure-for-universal-login}
 </div>
 
 D’abord, accédez à [Dashboard &gt; Applications](https://manage.auth0.com/#/applications) et cliquez sur le nom de l’application que vous souhaitez modifier. Dans **Allowed Callback URLs**, assurez-vous que votre URL respecte ce format :
@@ -103,7 +103,7 @@ android {
 </Callout>
 
 <div id="initialize-auth0">
-  ## Initialiser Auth0
+  ## Initialiser Auth0 {#initialize-auth0}
 </div>
 
 Créez un nouvel objet `Auth0` à l’aide de votre <Tooltip tip="ID client : valeur d’identification attribuée par Auth0 à votre ressource enregistrée." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=client+ID">ID client</Tooltip> Auth0 et de la valeur du domaine. Les objets s’en serviront plus tard pour interagir avec les points de terminaison d’Auth0.
@@ -115,13 +115,13 @@ val auth0 = Auth0("{yourClientId}", "YOUR_DOMAIN")
 Vous pouvez aussi initialiser cet objet à l’aide d’un Context Android, comme dans [cet exemple d’utilisation](https://github.com/auth0/Auth0.Android/tree/master#usage).
 
 <div id="next-steps">
-  ## Prochaines étapes
+  ## Prochaines étapes {#next-steps}
 </div>
 
 [Connectez les utilisateurs à votre application et déconnectez-les](/docs/fr-ca/libraries/auth0-android/auth0-android-login-logout-and-user-profiles) à l’aide de la classe `WebAuthProvider`.
 
 <div id="reset-user-password">
-  ### Réinitialiser le mot de passe de l’utilisateur
+  ### Réinitialiser le mot de passe de l’utilisateur {#reset-user-password}
 </div>
 
 Pour lancer la réinitialisation du mot de passe d’un utilisateur, appelez `resetPassword` en lui passant l’adresse courriel de l’utilisateur et le nom de la connexion de base de données en paramètres.
@@ -129,7 +129,7 @@ Pour lancer la réinitialisation du mot de passe d’un utilisateur, appelez `re
 Les requêtes de réinitialisation du mot de passe échouent en cas d’erreur liée au réseau, mais pas si l’adresse courriel indiquée n’existe pas dans la base de données (pour des raisons de sécurité).
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Auth0.Android Connexion, déconnexion et profils utilisateur](/docs/fr-ca/libraries/auth0-android/auth0-android-login-logout-and-user-profiles)

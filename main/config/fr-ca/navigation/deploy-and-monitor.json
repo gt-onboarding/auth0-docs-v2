@@ -2,11 +2,11 @@
   "pages": [
     "docs/fr-ca/deploy-monitor",
     {
-      "group": "Déploiement",
+      "group": "Deployment",
       "pages": [
         "docs/fr-ca/deploy-monitor/deployment-options",
         {
-          "group": "Déploiements Private Cloud",
+          "group": "Private Cloud Deployments",
           "pages": [
             "docs/fr-ca/deploy-monitor/deploy-private-cloud",
             "docs/fr-ca/deploy-monitor/deploy-private-cloud/private-cloud-on-aws",
@@ -15,7 +15,7 @@
           ]
         },
         {
-          "group": "Vérifications préalables au déploiement",
+          "group": "Pre-Deployment Checks",
           "pages": [
             "docs/fr-ca/deploy-monitor/pre-deployment-checks",
             "docs/fr-ca/deploy-monitor/pre-deployment-checks/how-to-run-production-checks",
@@ -48,10 +48,10 @@
       ]
     },
     {
-      "group": "Surveillance",
+      "group": "Monitoring",
       "pages": [
         {
-          "group": "Surveiller",
+          "group": "Monitor",
           "pages": [
             "docs/fr-ca/deploy-monitor/monitor",
             "docs/fr-ca/deploy-monitor/monitor/check-auth0-status",
@@ -61,7 +61,7 @@
           ]
         },
         {
-          "group": "Journaux",
+          "group": "Logs",
           "pages": [
             "docs/fr-ca/deploy-monitor/logs",
             "docs/fr-ca/deploy-monitor/logs/pii-in-logs",

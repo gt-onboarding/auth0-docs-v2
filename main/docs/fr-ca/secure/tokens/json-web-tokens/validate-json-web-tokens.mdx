@@ -25,7 +25,7 @@ La signature d’un jeton JWT est générée à l’aide d’un <Tooltip tip="Al
 Lors de la validation d’un JWT, en général, la valeur de hachage actuelle et la valeur de hachage d’origine sont analysées, c’est-à-dire décodées, puis comparées pour vérifier que la signature du jeton est authentique. Tous nos [Quickstarts d’API backend](/docs/fr-ca/quickstart/backend) utilisent des SDKs qui effectuent pour vous la validation et l’analyse des JWT.
 
 <div id="parse-and-validate">
-  ## Analyser et valider
+  ## Analyser et valider {#parse-and-validate}
 </div>
 
 Si vous n’utilisez pas l’un de nos SDKs qui effectuent la validation et l’analyse des JWT pour vous, vous pouvez analyser et valider un JWT de l’une des façons suivantes :
@@ -37,13 +37,13 @@ Si vous n’utilisez pas l’un de nos SDKs qui effectuent la validation et l’
 Nous vous recommandons fortement d’utiliser un middleware ou l’une des bibliothèques tierces open source existantes pour analyser et valider les JWT. Sur [JWT.io](https://jwt.io/#libraries-io), vous trouverez des bibliothèques pour diverses plateformes et divers langages, comme .NET, Python, Java, Ruby, Objective-C, Swift et PHP.
 
 <div id="middleware">
-  ## Middleware
+  ## Middleware {#middleware}
 </div>
 
 De nombreux frameworks Web, comme [ASP.NET Core](/docs/fr-ca/quickstart/backend/aspnet-core-webapi), incluent un middleware JWT qui prend en charge la validation des JWT. En général, c’est l’option à privilégier, car le middleware s’intègre bien aux mécanismes d’authentification du framework.
 
 <div id="third-party-libraries">
-  ## Bibliothèques tierces
+  ## Bibliothèques tierces {#third-party-libraries}
 </div>
 
 Si vous choisissez une bibliothèque tierce, optez pour une bibliothèque qui prend en charge l’algorithme de signature que vous avez sélectionné lorsque vous avez enregistré votre application ou votre API auprès d’Auth0. Sachez également que certaines bibliothèques ne valident pas toutes les claims JWT. Sur JWT.io, vous pouvez voir quelles validations sont prises en charge par chaque bibliothèque (repérez les coches vertes).
@@ -56,7 +56,7 @@ Recommandations générales pour l’utilisation de bibliothèques tierces :
 * Suivez attentivement toutes les instructions d’utilisation de la bibliothèque choisie. La bibliothèque pourrait s’appuyer sur des valeurs ou des paramètres par défaut susceptibles d’entraîner des risques de sécurité.
 
 <div id="manually-implement-checks">
-  ## Effectuer manuellement les vérifications
+  ## Effectuer manuellement les vérifications {#manually-implement-checks}
 </div>
 
 Nous déconseillons de valider les JWT manuellement, car il est facile de mal s’y prendre et d’omettre des détails importants, ce qui peut entraîner de graves failles de sécurité. La plupart des bibliothèques JWT s’occupent de la validation des JWT pour vous. Consultez JWT.io pour trouver une bibliothèque JWT adaptée à votre plateforme et à votre langage de programmation.
@@ -64,7 +64,7 @@ Nous déconseillons de valider les JWT manuellement, car il est facile de mal s�
 Pour savoir comment valider manuellement un JWT, consultez la [RFC 7519](https://tools.ietf.org/html/rfc7519#section-7.2). Tous les JWT émis par Auth0 comportent une signature Web JSON (JWS), ce qui signifie qu’ils sont signés plutôt que chiffrés.
 
 <div id="verify-rs256-signed-tokens">
-  ## Vérifier les jetons signés avec RS256
+  ## Vérifier les jetons signés avec RS256 {#verify-rs256-signed-tokens}
 </div>
 
 Pour vérifier visuellement des jetons signés avec RS256 :
@@ -81,7 +81,7 @@ Nous vous recommandons d’obtenir la Public Key à partir du JWKS de votre tena
 `https://{yourDomain}/.well-known/jwks.json`
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Claims des JSON Web Token](/docs/fr-ca/secure/tokens/json-web-tokens/json-web-token-claims)

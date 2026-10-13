@@ -2,14 +2,14 @@
   "components": {
     "headers": {
       "LocationHeader": {
-        "description": "認証方法リソースのURL。",
+        "description": "URL of the authentication method resource.",
         "examples": {
           "create": {
-            "summary": "新たに作成された未確認のパスキー認証方法のLocation URL",
+            "summary": "Location URL for a newly created but not verified passkey authentication method",
             "value": "https://auth0.auth0.com/me/v1/authentication-methods/passkey%7Cnew"
           },
           "verify": {
-            "summary": "新たに確認済みとなったパスキー認証方法のLocation URL",
+            "summary": "Location URL for a newly verified passkey authentication method",
             "value": "https://auth0.auth0.com/me/v1/authentication-methods/passkey%7Cdev_XXXXXXXXXXXXXXXX"
           }
         },
@@ -20,35 +20,35 @@
         }
       },
       "RetryAfterHeader": {
-        "description": "クライアントが新しいリクエストを行う前に待機すべき秒数",
+        "description": "The number of seconds the client should wait before making a new request",
         "required": true,
         "schema": {
           "type": "number"
         }
       },
       "XAuth0ErrorKindHeader": {
-        "description": "レート制限の超過がグローバル（tenant 単位）制限であることを示す指標。",
+        "description": "An indicator that the rate limit exceeded a is global (per tenant) limit.",
         "schema": {
           "const": "global-rate-limit",
           "type": "string"
         }
       },
       "XRateLimitLimitHeader": {
-        "description": "制限ウィンドウ内で許可されるリクエストの最大数",
+        "description": "The maximum number of requests permissible during the limit’s window window",
         "required": true,
         "schema": {
           "type": "number"
         }
       },
       "XRateLimitRemainingHeader": {
-        "description": "リクエストが拒否されるまで、現在のウィンドウ内で残っているリクエスト数",
+        "description": "The number of remaining requests remaining in the current window until requests are rejected",
         "required": true,
         "schema": {
           "type": "number"
         }
       },
       "XRateLimitResetHeader": {
-        "description": "bucket が補充される予定時刻（UNIXタイムスタンプ、秒単位）",
+        "description": "The anticipated time (as a UNIX timestamp, in seconds) when the bucket will be replenished",
         "required": true,
         "schema": {
           "type": "number"
@@ -57,7 +57,7 @@
     },
     "parameters": {
       "AuthenticationMethodTypeQueryParameter": {
-        "description": "認証方法をタイプで絞り込む",
+        "description": "Filter authentication methods by type",
         "in": "query",
         "name": "type",
         "required": false,
@@ -66,7 +66,7 @@
         }
       },
       "ConnectedAccountIdParameter": {
-        "description": "接続済みアカウントの一意の識別子",
+        "description": "The unique identifier of the connected account",
         "in": "path",
         "name": "id",
         "required": true,
@@ -75,7 +75,7 @@
         }
       },
       "ConnectionQueryParameter": {
-        "description": "接続済みアカウントを接続名で絞り込む",
+        "description": "Filter connected accounts by connection names",
         "explode": true,
         "in": "query",
         "name": "connection",
@@ -86,7 +86,7 @@
         "style": "form"
       },
       "FromQueryParameter": {
-        "description": "ページネーション用カーソル - この位置から結果の取得を開始します",
+        "description": "Cursor for pagination - start retrieving results from this point",
         "in": "query",
         "name": "from",
         "required": false,
@@ -95,7 +95,7 @@
         }
       },
       "OrganizationsTakeQueryParameter": {
-        "description": "返す結果の数（1～100）",
+        "description": "Number of results to return (1-100)",
         "in": "query",
         "name": "take",
         "required": false,
@@ -106,7 +106,7 @@
         }
       },
       "PathAuthenticationMethodId": {
-        "description": "認証方法 ID。この値は、認証方法の作成時に返される Location ヘッダーの一部です。変更せずにそのまま使用してください。",
+        "description": "Authentication Method ID. This value is part of the Location header returned when creating an authentication method. It should be used as it is, without any modifications.",
         "in": "path",
         "name": "authentication_method_id",
         "required": true,
@@ -115,7 +115,7 @@
         }
       },
       "PathConsentId": {
-        "description": "取得する Consent の ID",
+        "description": "The ID of the consent to retrieve",
         "in": "path",
         "name": "consent_id",
         "required": true,
@@ -124,7 +124,7 @@
         }
       },
       "TakeQueryParameter": {
-        "description": "返す結果の数（1～20）",
+        "description": "Number of results to return (1-20)",
         "in": "query",
         "name": "take",
         "required": false,
@@ -144,7 +144,7 @@
             }
           }
         },
-        "description": "スキーマに基づく入力が無効です。"
+        "description": "Invalid input based on schema."
       },
       "CompleteConnectedAccountsResponse": {
         "content": {
@@ -154,7 +154,7 @@
             }
           }
         },
-        "description": "接続済みアカウント リクエストが正常に完了しました",
+        "description": "Connected account request completed successfully",
         "headers": {
           "x-ratelimit-limit": {
             "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -175,7 +175,7 @@
             }
           }
         },
-        "description": "リクエストがリソースの現在の状態と競合しています。"
+        "description": "Request conflicts with the current state of the resource."
       },
       "CreateConnectedAccountsResponse": {
         "content": {
@@ -185,7 +185,7 @@
             }
           }
         },
-        "description": "アカウント接続リクエストが正常に作成されました",
+        "description": "Account connection request created successfully",
         "headers": {
           "x-ratelimit-limit": {
             "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -206,7 +206,7 @@
             }
           }
         },
-        "description": "アクセスが禁止されています。"
+        "description": "Forbidden."
       },
       "NotFound": {
         "content": {
@@ -216,7 +216,7 @@
             }
           }
         },
-        "description": "見つかりません。"
+        "description": "Not Found."
       },
       "TooManyRequests": {
         "content": {
@@ -226,7 +226,7 @@
             }
           }
         },
-        "description": "リクエストが多すぎます。",
+        "description": "Too Many Requests.",
         "headers": {
           "retry-after": {
             "$ref": "#/components/headers/RetryAfterHeader"
@@ -253,7 +253,7 @@
             }
           }
         },
-        "description": "認証されていません。"
+        "description": "Unauthorized."
       },
       "UnsupportedMediaType": {
         "content": {
@@ -263,12 +263,12 @@
             }
           }
         },
-        "description": "サポートされていないメディアタイプです。"
+        "description": "Unsupported Media Type."
       }
     },
     "schemas": {
       "AccessTypeEnum": {
-        "description": "アクセス種別。常に 'offline'",
+        "description": "The access type, always 'offline'",
         "enum": [
           "offline"
         ],
@@ -333,12 +333,12 @@
       "AuthenticationMethodBase": {
         "properties": {
           "created_at": {
-            "description": "認証方法が作成された日時",
+            "description": "The date and time when the authentication method was created",
             "format": "date-time",
             "type": "string"
           },
           "id": {
-            "description": "認証方法の一意の識別子",
+            "description": "The unique identifier of the authentication method",
             "type": "string"
           },
           "usage": {
@@ -360,17 +360,17 @@
           {
             "properties": {
               "email": {
-                "description": "確認メッセージの送信先メールアドレス。",
+                "description": "The email address used to send verification messages.",
                 "type": "string"
               },
               "name": {
-                "description": "認証方法の表示名",
+                "description": "The friendly name of the authentication method",
                 "type": "string"
               },
               "type": {
                 "const": "email",
                 "default": "email",
-                "description": "認証方法の種類（認証要素）",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               }
             },
@@ -391,11 +391,11 @@
           {
             "properties": {
               "confirmed": {
-                "description": "認証方法のstatus",
+                "description": "The authentication method status",
                 "type": "boolean"
               },
               "last_auth_at": {
-                "description": "認証方法が最後に使用された日時",
+                "description": "The date and time when the authentication method was last used",
                 "format": "date-time",
                 "type": "string"
               }
@@ -415,13 +415,13 @@
           {
             "properties": {
               "name": {
-                "description": "認証方法の表示名",
+                "description": "The friendly name of the authentication method",
                 "type": "string"
               },
               "type": {
                 "const": "push-notification",
                 "default": "push-notification",
-                "description": "認証方法の種類（認証要素）",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               }
             },
@@ -443,7 +443,7 @@
               "type": {
                 "const": "recovery-code",
                 "default": "recovery-code",
-                "description": "認証方法の種類（認証要素）",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               }
             },
@@ -463,13 +463,13 @@
           {
             "properties": {
               "name": {
-                "description": "認証方法の表示名",
+                "description": "The friendly name of the authentication method",
                 "type": "string"
               },
               "type": {
                 "const": "totp",
                 "default": "totp",
-                "description": "認証方法の種類（認証要素）",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               }
             },
@@ -493,27 +493,27 @@
                 "type": "string"
               },
               "credential_backed_up": {
-                "description": "クレデンシャルがバックアップされていたかどうか",
+                "description": "Whether the credential was backed up",
                 "type": "boolean"
               },
               "credential_device_type": {
                 "$ref": "#/components/schemas/CredentialDeviceTypeEnum"
               },
               "identity_user_id": {
-                "description": "認証方法にリンクされたユーザーアイデンティティのID",
+                "description": "The ID of the user identity linked with the authentication method",
                 "type": "string"
               },
               "key_id": {
-                "description": "クレデンシャルのID",
+                "description": "The ID of the credential",
                 "type": "string"
               },
               "last_auth_at": {
-                "description": "認証方法が最後に使用された日時",
+                "description": "The date and time when the authentication method was last used",
                 "format": "date-time",
                 "type": "string"
               },
               "public_key": {
-                "description": "公開鍵",
+                "description": "The public key",
                 "type": "string"
               },
               "relying_party_id": {
@@ -521,7 +521,7 @@
                 "type": "string"
               },
               "transports": {
-                "description": "クライアントが認証器と通信するために使用するトランスポート",
+                "description": "The transports used by clients to communicate with the authenticator",
                 "example": [
                   "internal"
                 ],
@@ -533,16 +533,16 @@
               "type": {
                 "const": "passkey",
                 "default": "passkey",
-                "description": "認証方法の種類（認証要素）",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               },
               "user_agent": {
-                "description": "パスキーの作成に使用されたブラウザーのユーザーエージェント",
+                "description": "The user-agent of the browser used to create the passkey",
                 "example": "Chrome 131.0.0 / Mac OS X 10.15.7",
                 "type": "string"
               },
               "user_handle": {
-                "description": "ユーザーアイデンティティのユーザーハンドル",
+                "description": "The user handle of the user identity",
                 "type": "string"
               }
             },
@@ -568,18 +568,18 @@
           {
             "properties": {
               "identity_user_id": {
-                "description": "認証方法にリンクされたユーザーアイデンティティのID",
+                "description": "The ID of the user identity linked with the authentication method",
                 "type": "string"
               },
               "last_password_reset": {
-                "description": "最後にパスワードリセットされた日時",
+                "description": "The date of the last password reset",
                 "format": "date-time",
                 "type": "string"
               },
               "type": {
                 "const": "password",
                 "default": "password",
-                "description": "認証方法の種類（認証要素）",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               }
             },
@@ -600,11 +600,11 @@
           {
             "properties": {
               "name": {
-                "description": "認証方法の表示名",
+                "description": "The friendly name of the authentication method",
                 "type": "string"
               },
               "phone_number": {
-                "description": "テキストメッセージおよび音声で確認コードを送信する宛先の電話番号。",
+                "description": "The destination phone number used to send verification codes via text and voice.",
                 "type": "string"
               },
               "preferred_authentication_method": {
@@ -613,7 +613,7 @@
               "type": {
                 "const": "phone",
                 "default": "phone",
-                "description": "認証方法の種類（認証要素）",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               }
             },
@@ -635,15 +635,15 @@
           {
             "properties": {
               "key_id": {
-                "description": "資格情報のID",
+                "description": "The ID of the credential",
                 "type": "string"
               },
               "name": {
-                "description": "認証方法の表示名",
+                "description": "The friendly name of the authentication method",
                 "type": "string"
               },
               "public_key": {
-                "description": "公開鍵",
+                "description": "The public key",
                 "type": "string"
               }
             },
@@ -662,7 +662,7 @@
               "type": {
                 "const": "webauthn-platform",
                 "default": "webauthn-platform",
-                "description": "認証方法の種類（認証要素）",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               }
             },
@@ -684,7 +684,7 @@
               "type": {
                 "const": "webauthn-roaming",
                 "default": "webauthn-roaming",
-                "description": "認証方法の種類（認証要素）",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               }
             },
@@ -697,7 +697,7 @@
         "title": "WebAuthn Roaming MFA Authenticator"
       },
       "AuthenticatorAttachmentEnum": {
-        "description": "認証器のアタッチ方法",
+        "description": "The authenticator attachment method",
         "enum": [
           "platform",
           "cross-platform"
@@ -774,16 +774,16 @@
       },
       "AuthorizationParams": {
         "additionalProperties": false,
-        "description": "認可リクエスト中に基盤となる IDプロバイダー（IdP）へ送信する認可パラメーターです。これらのパラメーターは、IdP が認可フローをどのように処理するかや、どの permissions を要求するかに影響します。",
+        "description": "Authorization parameters to be sent to the underlying Identity Provider (IdP) during the authorization request. These parameters influence how the IdP processes the authorization flow and what permissions are requested.",
         "properties": {
           "acr_values": {
-            "description": "必要な認証レベル（例: Multi-factor、パスワードレス）を示す、希望する Authentication Context Class Reference 値を指定します。IDプロバイダー（IdP）は、これらの値に基づいて特定の保証レベルを適用する場合があります。",
+            "description": "Specifies the desired Authentication Context Class Reference values, which indicate the required level of authentication (e.g., multi-factor, passwordless). The Identity Provider (IdP) may enforce a specific assurance level based on these values.",
             "maxLength": 1024,
             "minLength": 1,
             "type": "string"
           },
           "audience": {
-            "description": "access token の想定される受信先を定義します。通常は、その token の対象（例: API 識別子）を示します。",
+            "description": "Defines the intended recipient of the access token, typically indicating who the token is meant for (e.g., an API identifier).",
             "maxLength": 512,
             "minLength": 1,
             "type": "string"
@@ -792,19 +792,19 @@
             "$ref": "#/components/schemas/DisplayEnum"
           },
           "id_token_hint": {
-            "description": "以前に発行された id_token を IdP に渡します。これは、どのユーザーを認証するかを示唆したり、logout リクエストを円滑にしたりするために使用できます。",
+            "description": "Provides a previously issued id_token to the IdP. It can be used to suggest which user is being authenticated or to facilitate logout requests.",
             "maxLength": 4096,
             "minLength": 1,
             "type": "string"
           },
           "login_hint": {
-            "description": "ログインフォームに事前入力するために、ユーザーの identifier（メールアドレスやユーザー名など）のヒントを渡します。",
+            "description": "Supplies a hint about the user's identifier (like an email address or username) to pre-populate the login form.",
             "maxLength": 255,
             "minLength": 1,
             "type": "string"
           },
           "max_age": {
-            "description": "ユーザーの前回の認証からの最大経過時間（秒単位）を示します。これを超えると、IdP はユーザーに再認証を要求します。",
+            "description": "Indicates the maximum time (in seconds) since the user's last authentication. If exceeded, the IdP forces the user to re-authenticate.",
             "maximum": 2147483647,
             "minimum": 0,
             "type": "integer"
@@ -813,13 +813,13 @@
             "$ref": "#/components/schemas/PromptEnum"
           },
           "resource": {
-            "description": "クライアントがどのリソースサーバーへのアクセスを要求しているかを指定します（OAuth 2.0 Resource Indicators で使用）。",
+            "description": "Specifies which resource server the client is requesting access to (used in OAuth 2.0 Resource Indicators).",
             "maxLength": 512,
             "minLength": 1,
             "type": "string"
           },
           "ui_locales": {
-            "description": "ユーザーインターフェースの優先言語を示します。BCP47 言語タグをスペース区切りのリスト（例: 'en'、'es'、'fr'）で渡します。",
+            "description": "Suggests the preferred languages for the user interface, passed as a space-separated list of BCP47 language tags (e.g., 'en', 'es', 'fr').",
             "maxLength": 100,
             "minLength": 2,
             "pattern": "^[a-zA-Z]{2}(-[a-zA-Z]{2})?(\\s[a-zA-Z]{2}(-[a-zA-Z]{2})?)*$",
@@ -836,24 +836,24 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "認証セッション識別子",
+            "description": "The authentication session identifier",
             "maxLength": 64,
             "type": "string"
           },
           "code_verifier": {
-            "description": "PKCE の code verifier",
+            "description": "The PKCE code verifier",
             "maxLength": 128,
             "minLength": 43,
             "type": "string"
           },
           "connect_code": {
-            "description": "接続フローから返される認可コード",
+            "description": "The authorization code returned from the connect flow",
             "maxLength": 46,
             "minLength": 1,
             "type": "string"
           },
           "redirect_uri": {
-            "description": "元のリクエストで使用された Redirect URI",
+            "description": "The redirect URI used in the original request",
             "format": "uri",
             "maxLength": 2048,
             "type": "string"
@@ -873,25 +873,25 @@
             "$ref": "#/components/schemas/AccessTypeEnum"
           },
           "connection": {
-            "description": "接続名",
+            "description": "The connection name",
             "type": "string"
           },
           "created_at": {
-            "description": "接続済みアカウントが作成された日時を示す ISO 日付文字列",
+            "description": "ISO date string of when the connected account was created",
             "format": "date-time",
             "type": "string"
           },
           "expires_at": {
-            "description": "リフレッシュトークンの有効期限を示す ISO 日付文字列（任意）",
+            "description": "ISO date string of when the refresh token expires (optional)",
             "format": "date-time",
             "type": "string"
           },
           "id": {
-            "description": "接続済みアカウントの一意の識別子",
+            "description": "The unique identifier of the connected account",
             "type": "string"
           },
           "scopes": {
-            "description": "付与されたスコープの配列",
+            "description": "Array of scopes granted",
             "items": {
               "type": "string"
             },
@@ -908,10 +908,10 @@
       },
       "ConnectParams": {
         "additionalProperties": false,
-        "description": "接続 URI で使用するパラメーター。",
+        "description": "Parameters to be used with the connect URI.",
         "properties": {
           "ticket": {
-            "description": "接続 URI で使用する ticket 識別子。",
+            "description": "The ticket identifier to be used with the connection URI.",
             "type": "string"
           }
         },
@@ -926,29 +926,29 @@
             "$ref": "#/components/schemas/ConnectedAccountAccessTypeEnum"
           },
           "connection": {
-            "description": "アカウントに関連付けられた接続名。",
+            "description": "The name of the connection associated with the account.",
             "type": "string"
           },
           "created_at": {
-            "description": "接続済みアカウントが作成された日時を示す ISO 8601 タイムスタンプ。",
+            "description": "ISO 8601 timestamp when the connected account was created.",
             "format": "date-time",
             "type": "string"
           },
           "expires_at": {
-            "description": "接続済みアカウントの有効期限を示す ISO 8601 タイムスタンプ。",
+            "description": "ISO 8601 timestamp when the connected account expires.",
             "format": "date-time",
             "type": "string"
           },
           "id": {
-            "description": "接続済みアカウントの一意の識別子。",
+            "description": "The unique identifier for the connected account.",
             "type": "string"
           },
           "org_id": {
-            "description": "この接続済みアカウントに設定された組織ID。organization に関連付けられたアカウントにのみ存在します。",
+            "description": "The organization ID this connected account is scoped to. Only present for accounts bound to an organization.",
             "type": "string"
           },
           "scopes": {
-            "description": "この接続済みアカウントに付与されたスコープ。",
+            "description": "The scopes granted for this connected account.",
             "items": {
               "type": "string"
             },
@@ -965,7 +965,7 @@
         "type": "object"
       },
       "ConnectedAccountAccessTypeEnum": {
-        "description": "接続済みアカウントのアクセス種別。",
+        "description": "The access type for to the connected account.",
         "enum": [
           "offline"
         ],
@@ -975,18 +975,18 @@
         "additionalProperties": false,
         "properties": {
           "name": {
-            "description": "接続名。",
+            "description": "The name of the connection.",
             "type": "string"
           },
           "scopes": {
-            "description": "この接続で利用可能なスコープ。",
+            "description": "The available scopes for this connection.",
             "items": {
               "type": "string"
             },
             "type": "array"
           },
           "strategy": {
-            "description": "接続で使用される strategy（例: 'oauth2'、'oidc'）。",
+            "description": "The strategy used by the connection (e.g., 'oauth2', 'oidc').",
             "type": "string"
           }
         },
@@ -997,12 +997,12 @@
         "type": "object"
       },
       "ConnectedAccountId": {
-        "description": "接続済みアカウントの一意の識別子",
+        "description": "The unique identifier for a connected account",
         "pattern": "^cac_[A-Za-z0-9]+$",
         "type": "string"
       },
       "Connection": {
-        "description": "データベース接続名",
+        "description": "Name of the database connection",
         "maxLength": 128,
         "minLength": 1,
         "pattern": "^[a-zA-Z0-9-]+$",
@@ -1027,24 +1027,24 @@
       },
       "Consent": {
         "additionalProperties": false,
-        "description": "特定のクライアントとスコープに対するユーザーの認可を表す consent record。",
+        "description": "A consent record representing user authorization for a specific client and scope.",
         "properties": {
           "client_id": {
-            "description": "consent の付与先である client ID。",
+            "description": "The client ID that the consent was granted to.",
             "type": "string"
           },
           "created_at": {
-            "description": "consent が作成された日時。",
+            "description": "The date and time when the consent was created.",
             "format": "date-time",
             "type": "string"
           },
           "expires_at": {
-            "description": "consent の有効期限日時。",
+            "description": "The date and time when the consent expires.",
             "format": "date-time",
             "type": "string"
           },
           "id": {
-            "description": "consent の一意の識別子。",
+            "description": "The unique identifier of the consent.",
             "example": "cns_abc123def456",
             "type": "string"
           },
@@ -1062,18 +1062,18 @@
       },
       "ConsentDetails": {
         "additionalProperties": false,
-        "description": "同意リクエストの詳細",
+        "description": "Details of the consent request",
         "properties": {
           "audience": {
-            "description": "consent が付与された対象の audience（API 識別子）。",
+            "description": "The audience (API identifier) that the consent was granted for.",
             "type": "string"
           },
           "binding_message": {
-            "description": "人が理解しやすい識別子またはメッセージ。エンドユーザー向けの視覚的な手がかりとして consumption device と認証デバイスの両方に表示され、transaction 内で両者を結び付けるためのものです。",
+            "description": "A human-readable identifier or message intended to be displayed on both the consumption device and the authentication device to interlock them together for the transaction by way of a visual cue for the end-user.",
             "type": "string"
           },
           "scope": {
-            "description": "この consent に対して要求されたスコープ。",
+            "description": "The scopes that were requested for this consent.",
             "items": {
               "type": "string"
             },
@@ -1083,7 +1083,7 @@
         "type": "object"
       },
       "CreateAuthenticationMethodRequestContent": {
-        "description": "認証方法作成用のリクエスト内容",
+        "description": "Request content for creating an authentication method",
         "discriminator": {
           "mapping": {
             "email": "#/components/schemas/CreateEmailAuthenticationMethod",
@@ -1159,36 +1159,36 @@
             "code_challenge_method"
           ]
         },
-        "description": "アカウント接続リクエストを作成するためのリクエスト本文。",
+        "description": "Request body for creating an account connection request.",
         "properties": {
           "authorization_params": {
             "$ref": "#/components/schemas/AuthorizationParams"
           },
           "code_challenge": {
-            "description": "code verifier から導出された PKCE code challenge。",
+            "description": "The PKCE code challenge derived from the code verifier.",
             "maxLength": 128,
             "minLength": 43,
             "type": "string"
           },
           "code_challenge_method": {
             "const": "S256",
-            "description": "code challenge の導出に使用する方式。code_challenge が指定されている場合は必須です。",
+            "description": "The method used to derive the code challenge. Required when code_challenge is provided.",
             "type": "string"
           },
           "connection": {
-            "description": "アカウントをリンクする接続の名前（例: 'google-oauth2'、'facebook'）。",
+            "description": "The name of the connection to link the account with (e.g., 'google-oauth2', 'facebook').",
             "maxLength": 128,
             "minLength": 1,
             "type": "string"
           },
           "redirect_uri": {
-            "description": "接続プロセスの完了後にリダイレクトする先の URI。",
+            "description": "The URI to redirect to after the connection process completes.",
             "format": "uri",
             "maxLength": 2048,
             "type": "string"
           },
           "scopes": {
-            "description": "クライアントが IDプロバイダーに要求する permissions を定義します。ユーザーの識別に使用される標準のスコープ（例: 'openid'、'email'、'profile'）、必要に応じてリフレッシュトークンを取得するために必要なスコープ（例: 'offline_access'）、および保護されたリソースにアクセスするためにクライアントが必要とするカスタムスコープを含める必要があります。",
+            "description": "Defines the permissions that the client requests from the Identity Provider. Must include the standard scopes used to identify the user (e.g. 'openid', 'email', 'profile'), the scope required to obtain refresh tokens if needed (e.g. 'offline_access'), and any custom scopes the client needs to access protected resources.",
             "example": [
               "openid",
               "offline_access",
@@ -1206,7 +1206,7 @@
             "uniqueItems": true
           },
           "state": {
-            "description": "リクエストとコールバックの間で state を維持するために使用される opaque な値。",
+            "description": "An opaque value used to maintain state between the request and callback.",
             "maxLength": 4096,
             "minLength": 1,
             "type": "string"
@@ -1222,7 +1222,7 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "認証セッション識別子。",
+            "description": "The authentication session identifier.",
             "maxLength": 64,
             "type": "string"
           },
@@ -1230,12 +1230,12 @@
             "$ref": "#/components/schemas/ConnectParams"
           },
           "connect_uri": {
-            "description": "アカウント接続フローを開始するためのベース URI。",
+            "description": "The base URI to initiate the account connection flow.",
             "format": "uri",
             "type": "string"
           },
           "expires_in": {
-            "description": "ticket の有効期限が切れるまでの秒数。",
+            "description": "The number of seconds until the ticket expires.",
             "minimum": 1,
             "type": "integer"
           }
@@ -1252,13 +1252,13 @@
         "additionalProperties": false,
         "properties": {
           "email": {
-            "description": "ワンタイムコードの送信に使用するメールアドレス。",
+            "description": "The email address to use for sending one-time codes.",
             "type": "string"
           },
           "type": {
             "const": "email",
             "default": "email",
-            "description": "認証方法の種類（認証要素）",
+            "description": "Authentication method type (factor)",
             "type": "string"
           }
         },
@@ -1279,11 +1279,11 @@
               "type": {
                 "const": "passkey",
                 "default": "passkey",
-                "description": "認証方法の種類（認証要素）",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               },
               "use_exclude_credentials": {
-                "description": "有効にすると、Auth0 はパスキー登録時に、ユーザーの既存の資格情報を excludeCredentials フィールドに含めます。これにより、同じ認証器で複数のパスキーを誤って登録することを防ぎ、資格情報の重複やサインイン時の混乱を避けられます。",
+                "description": "When enabled, Auth0 includes the user's existing credentials in the excludeCredentials field during passkey enrollment. This prevents users from accidentally registering multiple passkeys from the same authenticator, reducing credential clutter and avoiding confusion at sign-in.",
                 "type": "boolean",
                 "x-internal": true
               }
@@ -1309,7 +1309,7 @@
               "type": {
                 "const": "password",
                 "default": "password",
-                "description": "認証方法の種類（認証要素）",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               }
             },
@@ -1325,17 +1325,17 @@
         "additionalProperties": false,
         "properties": {
           "phone_number": {
-            "description": "テキストメッセージおよび音声で確認コードを送信する宛先の電話番号。",
+            "description": "The destination phone number used to send verification codes via text and voice.",
             "type": "string"
           },
           "preferred_authentication_method": {
             "$ref": "#/components/schemas/PhoneAuthenticationMethodEnum",
-            "description": "優先する連絡方法。"
+            "description": "The preferred communication method."
           },
           "type": {
             "const": "phone",
             "default": "phone",
-            "description": "認証方法の種類（認証要素）",
+            "description": "Authentication method type (factor)",
             "type": "string"
           }
         },
@@ -1352,7 +1352,7 @@
           "type": {
             "const": "push-notification",
             "default": "push-notification",
-            "description": "認証方法の種類（認証要素）",
+            "description": "Authentication method type (factor)",
             "type": "string"
           }
         },
@@ -1368,7 +1368,7 @@
           "type": {
             "const": "recovery-code",
             "default": "recovery-code",
-            "description": "認証方法の種類（認証要素）",
+            "description": "Authentication method type (factor)",
             "type": "string"
           }
         },
@@ -1384,7 +1384,7 @@
           "type": {
             "const": "totp",
             "default": "totp",
-            "description": "認証方法の種類（認証要素）",
+            "description": "Authentication method type (factor)",
             "type": "string"
           }
         },
@@ -1395,7 +1395,7 @@
         "type": "object"
       },
       "CredentialDeviceTypeEnum": {
-        "description": "パスキー認証方法のクレデンシャルデバイス種別",
+        "description": "Credential device type for passkey authentication methods",
         "enum": [
           "multi_device",
           "single_device"
@@ -1403,7 +1403,7 @@
         "type": "string"
       },
       "DisplayEnum": {
-        "description": "IdP が認証インターフェースをユーザーにどのように表示するかを示します。",
+        "description": "Suggests how the IdP should display the authentication interface to the user.",
         "enum": [
           "page",
           "popup",
@@ -1456,7 +1456,7 @@
         "type": "object"
       },
       "FactorTypeEnum": {
-        "description": "認証方法の種類（認証要素）",
+        "description": "Authentication method type (factor)",
         "enum": [
           "password",
           "passkey",
@@ -1545,7 +1545,7 @@
         "type": "object"
       },
       "IdentityUserId": {
-        "description": "IDプロバイダーのユーザーID",
+        "description": "Identity provider user ID",
         "maxLength": 255,
         "minLength": 1,
         "pattern": "^\\S+$",
@@ -1578,7 +1578,7 @@
             "type": "array"
           },
           "next": {
-            "description": "接続の次のページを取得するためのトークン（存在する場合）",
+            "description": "The token to retrieve the next page of connections (if there is one)",
             "type": "string"
           }
         },
@@ -1598,7 +1598,7 @@
             "type": "array"
           },
           "next": {
-            "description": "接続済みアカウントの次のページを取得するためのトークン（存在する場合）",
+            "description": "The token to retrieve the next page of connected accounts (if there is one)",
             "type": "string"
           }
         },
@@ -1611,7 +1611,7 @@
         "additionalProperties": false,
         "properties": {
           "consents": {
-            "description": "認証されたユーザーの consent 一覧。",
+            "description": "List of consents for the authenticated user.",
             "items": {
               "$ref": "#/components/schemas/Consent"
             },
@@ -1642,7 +1642,7 @@
         "additionalProperties": false,
         "properties": {
           "next": {
-            "description": "次の組織ページを取得するためのトークン（ある場合）",
+            "description": "The token to retrieve the next page of organizations (if there is one)",
             "type": "string"
           },
           "organizations": {
@@ -1661,11 +1661,11 @@
       "MfaBaseCreationResponse": {
         "properties": {
           "auth_session": {
-            "description": "登録用の一意のセッション識別子。",
+            "description": "The unique session identifier for the enrollment.",
             "type": "string"
           },
           "id": {
-            "description": "認証方法の一意の識別子。",
+            "description": "The unique identifier for the authentication method.",
             "type": "string"
           }
         },
@@ -1679,15 +1679,15 @@
         "additionalProperties": false,
         "properties": {
           "display_name": {
-            "description": "organization の人が読み取れる表示名。",
+            "description": "The human-readable display name of the organization.",
             "type": "string"
           },
           "id": {
-            "description": "organization の一意の識別子。",
+            "description": "The unique identifier of the organization.",
             "type": "string"
           },
           "name": {
-            "description": "organization の名前（スラッグ）。",
+            "description": "The name (slug) of the organization.",
             "type": "string"
           }
         },
@@ -1700,7 +1700,7 @@
       "PasskeyCreationResponse": {
         "properties": {
           "auth_session": {
-            "description": "登録用の一意のセッション識別子。",
+            "description": "The unique session identifier for the enrollment.",
             "type": "string"
           },
           "authn_params_public_key": {
@@ -1716,7 +1716,7 @@
       },
       "PasswordAuthenticationMethodPolicy": {
         "additionalProperties": false,
-        "description": "接続のパスワードポリシー設定を柔軟な形式で表したもの。",
+        "description": "The password policy configuration for the connection in flexible format.",
         "properties": {
           "complexity": {
             "$ref": "#/components/schemas/PasswordComplexityPolicy"
@@ -1740,7 +1740,7 @@
         "type": "object"
       },
       "PasswordCharacterTypeEnum": {
-        "description": "パスワードの複雑さの要件における文字種別",
+        "description": "Character type for password complexity requirements",
         "enum": [
           "uppercase",
           "lowercase",
@@ -1750,7 +1750,7 @@
         "type": "string"
       },
       "PasswordCharacterTypeRuleEnum": {
-        "description": "パスワードの複雑さにおいて文字種別をどのように適用するか",
+        "description": "How character types are enforced in password complexity",
         "enum": [
           "all",
           "three_of_four"
@@ -1759,13 +1759,13 @@
       },
       "PasswordComplexityPolicy": {
         "additionalProperties": false,
-        "description": "パスワードの複雑さの要件",
+        "description": "Password complexity requirements",
         "properties": {
           "character_type_rule": {
             "$ref": "#/components/schemas/PasswordCharacterTypeRuleEnum"
           },
           "character_types": {
-            "description": "必須の文字種別",
+            "description": "Required character types",
             "items": {
               "$ref": "#/components/schemas/PasswordCharacterTypeEnum"
             },
@@ -1778,7 +1778,7 @@
             "$ref": "#/components/schemas/PasswordMaxLengthExceededEnum"
           },
           "min_length": {
-            "description": "最小パスワード長",
+            "description": "Minimum password length",
             "type": "integer"
           },
           "sequential_characters": {
@@ -1798,11 +1798,11 @@
       "PasswordCreationResponse": {
         "properties": {
           "auth_session": {
-            "description": "パスワード変更操作の一意のセッション識別子。",
+            "description": "The unique session identifier for the password change operation.",
             "type": "string"
           },
           "id": {
-            "description": "パスワード認証方法の一意の識別子。",
+            "description": "The unique identifier for the password authentication method.",
             "type": "string"
           },
           "policy": {
@@ -1818,7 +1818,7 @@
         "type": "object"
       },
       "PasswordDictionaryDefaultEnum": {
-        "description": "脆弱なパスワードのチェックに使用するデフォルト辞書",
+        "description": "Default dictionary to use for checking weak passwords",
         "enum": [
           "en_10k",
           "en_100k"
@@ -1827,10 +1827,10 @@
       },
       "PasswordDictionaryPolicy": {
         "additionalProperties": false,
-        "description": "脆弱または禁止されたパスワードをブロックするための辞書チェック設定",
+        "description": "Dictionary checking settings to block weak or banned passwords",
         "properties": {
           "active": {
-            "description": "辞書チェックを有効にするかどうか",
+            "description": "Whether dictionary checking is enabled",
             "type": "boolean"
           },
           "default": {
@@ -1845,14 +1845,14 @@
       },
       "PasswordHistoryPolicy": {
         "additionalProperties": false,
-        "description": "Password History の適用設定",
+        "description": "Password history enforcement settings",
         "properties": {
           "active": {
-            "description": "Password History を適用するかどうか",
+            "description": "Whether password history is enforced",
             "type": "boolean"
           },
           "size": {
-            "description": "記憶して再利用を防止する過去のパスワード数",
+            "description": "Number of previous passwords to remember and prevent reuse",
             "type": "integer"
           }
         },
@@ -1863,7 +1863,7 @@
         "type": "object"
       },
       "PasswordIdenticalCharactersEnum": {
-        "description": "同一文字が3文字以上連続することを許可するかどうか",
+        "description": "Whether to allow 3 or more consecutive identical characters",
         "enum": [
           "allow",
           "block"
@@ -1871,7 +1871,7 @@
         "type": "string"
       },
       "PasswordMaxLengthExceededEnum": {
-        "description": "パスワードが最大長を超えた場合の動作",
+        "description": "Behavior when password exceeds maximum length",
         "enum": [
           "truncate",
           "error"
@@ -1880,14 +1880,14 @@
       },
       "PasswordProfileDataPolicy": {
         "additionalProperties": false,
-        "description": "パスワードで個人情報をブロックするための設定",
+        "description": "Settings for blocking personal information in passwords",
         "properties": {
           "active": {
-            "description": "パスワードで個人情報（名前、メールアドレスなど）をブロックするかどうか",
+            "description": "Whether to block personal information (name, email, etc.) in passwords",
             "type": "boolean"
           },
           "blocked_fields": {
-            "description": "パスワードに含めることを禁止するユーザープロファイル項目（例: 'name'、'email'、'user_metadata.first'）",
+            "description": "User profile fields to block from passwords (e.g., 'name', 'email', 'user_metadata.first')",
             "items": {
               "type": "string"
             },
@@ -1901,7 +1901,7 @@
         "type": "object"
       },
       "PasswordSequentialCharactersEnum": {
-        "description": "連続する文字を許可するかどうか",
+        "description": "Whether to allow sequential characters",
         "enum": [
           "allow",
           "block"
@@ -1912,7 +1912,7 @@
         "type": "string"
       },
       "PhoneAuthenticationMethodEnum": {
-        "description": "電話ベース認証で優先される認証方法",
+        "description": "Preferred authentication method for phone-based authentication",
         "enum": [
           "sms",
           "voice"
@@ -1920,7 +1920,7 @@
         "type": "string"
       },
       "PromptEnum": {
-        "description": "IdP がユーザーに authentication または consent を求めるかどうかを制御します。",
+        "description": "Controls whether the IdP should prompt the user for authentication or consent.",
         "enum": [
           "none",
           "login",
@@ -1937,7 +1937,7 @@
             "type": "string"
           },
           "excludeCredentials": {
-            "description": "再登録時に除外する既存の資格情報。",
+            "description": "Existing credentials to exclude from re-registration.",
             "items": {
               "$ref": "#/components/schemas/PublicKeyCredentialDescriptor"
             },
@@ -1987,11 +1987,11 @@
         "additionalProperties": false,
         "properties": {
           "id": {
-            "description": "クレデンシャル ID。",
+            "description": "The credential ID.",
             "type": "string"
           },
           "transports": {
-            "description": "認証器が使用できる可能性のあるトランスポートに関するヒント。",
+            "description": "Hints about the transports the authenticator may use.",
             "items": {
               "type": "string"
             },
@@ -2025,7 +2025,7 @@
         "type": "object"
       },
       "PublicKeyTypeEnum": {
-        "description": "公開鍵資格情報の種類",
+        "description": "The public key credential type",
         "enum": [
           "public-key"
         ],
@@ -2039,11 +2039,11 @@
           {
             "properties": {
               "barcode_uri": {
-                "description": "認証器でスキャンするQRコードのURI。",
+                "description": "The URI for the QR code to be scanned by the authenticator.",
                 "type": "string"
               },
               "manual_input_code": {
-                "description": "QRコードを使用できない場合に認証器へ手動で入力するコード。",
+                "description": "The manual input code for the authenticator in case QR codes cannot be used.",
                 "type": "string"
               }
             },
@@ -2063,7 +2063,7 @@
           {
             "properties": {
               "recovery_code": {
-                "description": "復旧コードの値。",
+                "description": "The recovery code value.",
                 "type": "string"
               }
             },
@@ -2091,7 +2091,7 @@
         "type": "object"
       },
       "ResidentKeyEnum": {
-        "description": "常駐キーの要件",
+        "description": "The resident key requirement",
         "enum": [
           "required"
         ],
@@ -2099,15 +2099,15 @@
       },
       "UpdateAuthenticationMethodRequestContent": {
         "additionalProperties": false,
-        "description": "認証方法を更新するためのリクエスト内容",
+        "description": "Request content for updating an authentication method",
         "properties": {
           "name": {
-            "description": "認証方法のフレンドリー名",
+            "description": "The friendly name of the authentication method",
             "type": "string"
           },
           "preferred_authentication_method": {
             "$ref": "#/components/schemas/PhoneAuthenticationMethodEnum",
-            "description": "優先する認証方法（電話認証器用）"
+            "description": "The preferred authentication method (for phone authenticators)"
           }
         },
         "type": "object"
@@ -2169,14 +2169,14 @@
         "type": "object"
       },
       "Usage": {
-        "description": "第1要素および/または第2要素",
+        "description": "Primary and/or secondary factor",
         "items": {
           "$ref": "#/components/schemas/UsageEnum"
         },
         "type": "array"
       },
       "UsageEnum": {
-        "description": "認証要素の使用種別",
+        "description": "Usage type for authentication factors",
         "enum": [
           "primary",
           "secondary"
@@ -2204,7 +2204,7 @@
         "type": "object"
       },
       "UserVerificationEnum": {
-        "description": "ユーザー検証の要件",
+        "description": "The user verification requirement",
         "enum": [
           "required",
           "preferred",
@@ -2272,7 +2272,7 @@
             "x-type": "totp"
           }
         ],
-        "description": "認証方法を検証するためのリクエスト内容"
+        "description": "Request content for verifying an authentication method"
       },
       "VerifyAuthenticationMethodResponseContent": {
         "discriminator": {
@@ -2334,11 +2334,11 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "POST /authentication-methods によって返される、登録用の一意なセッション識別子",
+            "description": "The unique session identifier for the enrollment as returned by POST /authentication-methods",
             "type": "string"
           },
           "otp_code": {
-            "description": "メールアドレスに送信されたワンタイムパスワードコード。",
+            "description": "The one-time password code sent to the email address.",
             "type": "string"
           }
         },
@@ -2353,7 +2353,7 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "POST /authentication-methods から返される、登録用の一意のセッション識別子。",
+            "description": "The unique session identifier for the enrollment as returned by POST /authentication-methods",
             "type": "string"
           },
           "authn_response": {
@@ -2371,11 +2371,11 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "POST /authentication-methods から返される、パスワード変更操作用の一意のセッション識別子。",
+            "description": "The unique session identifier for the password change operation as returned by POST /authentication-methods",
             "type": "string"
           },
           "new_password": {
-            "description": "ユーザーに設定する新しいパスワード",
+            "description": "The new password to set for the user",
             "maxLength": 256,
             "minLength": 1,
             "pattern": "^[^\\u0000-\\u001f\\u007f-\\u009f]*$",
@@ -2393,11 +2393,11 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "POST /authentication-methods によって返される、登録用の一意なセッション識別子",
+            "description": "The unique session identifier for the enrollment as returned by POST /authentication-methods",
             "type": "string"
           },
           "otp_code": {
-            "description": "電話番号に送信されたワンタイムパスワードコード。",
+            "description": "The one-time password code sent to the phone number.",
             "type": "string"
           }
         },
@@ -2412,7 +2412,7 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "POST /authentication-methods によって返される、登録用の一意なセッション識別子",
+            "description": "The unique session identifier for the enrollment as returned by POST /authentication-methods",
             "type": "string"
           }
         },
@@ -2426,7 +2426,7 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "POST /authentication-methods によって返される、登録用の一意なセッション識別子",
+            "description": "The unique session identifier for the enrollment as returned by POST /authentication-methods",
             "type": "string"
           }
         },
@@ -2440,11 +2440,11 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "POST /authentication-methods によって返される、登録用の一意なセッション識別子",
+            "description": "The unique session identifier for the enrollment as returned by POST /authentication-methods",
             "type": "string"
           },
           "otp_code": {
-            "description": "TOTP アプリケーションから取得したワンタイムパスワードコード。",
+            "description": "The one-time password code retrieved from the TOTP application.",
             "type": "string"
           }
         },
@@ -2459,7 +2459,7 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "POST /authentication-methods から返される、登録用の一意のセッション識別子。",
+            "description": "The unique session identifier for the enrollment as returned by POST /authentication-methods",
             "type": "string"
           },
           "authn_response": {
@@ -2477,7 +2477,7 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "POST /authentication-methods から返される、登録用の一意のセッション識別子。",
+            "description": "The unique session identifier for the enrollment as returned by POST /authentication-methods",
             "type": "string"
           },
           "authn_response": {
@@ -2513,14 +2513,14 @@
     },
     "securitySchemes": {
       "Bearer-DPoP": {
-        "description": "Bearer トークンと DPoP トークンは、API の設定に応じてサポートされます",
+        "description": "Bearer and DPoP tokens are supported depending on the API configuration",
         "scheme": "bearer",
         "type": "http"
       }
     }
   },
   "info": {
-    "description": "Auth0 My Account API は、ユーザーが自分のアカウント情報を管理するための専用のエンドポイント群を提供します。これらの API を使用すると、お客様はアプリケーション内でセルフサービス体験を構築したり、ユーザーアカウントに詳細情報を段階的に追加したりできます。\n\nMy Account API は、現在ログイン中のユーザーのコンテキストで動作し、ユーザー向けアプリケーション内で直接使用できます。\n\n:::tip Auth0 ドメインとカスタムドメインの使い分け\n\nMy Account API では、正規の Auth0 ドメインまたはカスタムドメインを使用できますが、次の項目を含むプロセス全体で、必ず同じものを使用する必要があります。\n\n- アクセストークンを取得する\n- audience の値を設定する\n- My Account API エンドポイントを呼び出す\n\n詳しくは、[Custom Domains](https://auth0.com/docs/customize/custom-domains) をご覧ください。\n\n:::\n\n## My Account API を有効化する\n\nAuth0 Dashboard でテナントの My Account API を有効化できます。\n\n1. Authentication > APIs に移動します。\n2. MyAccount API のバナーを見つけます。\n3. Activate を選択します。\n\n![](https://images.ctfassets.net/cdy7uua7fh8z/DGkDQNIHcegN8vtQyEvF3/a2e98b06867701a66fa1f1b3df1c996b/My_Account_API_-_Activate.png)\n\nデフォルトでは、My Account API は次の application API access policies で作成されます。\n\n`require_client_grant` はユーザーフロー用\n\n`deny_all` はクライアント（machine-to-machine）フロー用\n\nアプリケーションがユーザーに代わって My Account API にアクセスするには、そのアプリケーションに対してクライアントグラントを明示的に作成する必要があります。これにより、そのアプリケーションがリクエストできるスコープの上限を定義できます。あるいは、ユーザーアクセスポリシーのフローを allow_all に変更することもできます。これにより、テナント内の任意のアプリケーションが My Account API に対して任意の scope をリクエストできるようになります。\n\nMy Account API は機密性の高い情報や操作を公開するため、Auth0 ではユーザーアクセスポリシーのフローに allow_all を使用することを推奨していません。My Account API では最小権限の原則に従い、アプリケーションが本当に必要なものにのみアクセスできるようにして、潜在的なセキュリティリスクを最小限に抑える必要があります。\n\nアプリケーションに最終的に付与される権限は、application API access policy でアプリケーションに許可される scopes、エンドユーザーに割り当てられたロールベースのアクセス制御 (RBAC) の権限、およびユーザーの同意（該当する場合）の共通部分によって決まります。\n\n:::info サポートされているフロー\n\nMy Account API へのクライアントアクセス用の application API policy は更新できません。つまり、クライアント認証情報フローを使用して My Account API にアクセスすることはできません。\n\n:::\n\napplication API access policies と、それに関連付けられた client grants の管理方法について詳しくは、[Application Access to APIs: Client Grants](https://auth0.com/docs/get-started/applications/application-access-to-apis-client-grants) をご覧ください。\n\n## アクセストークンを取得する\n\nMy Account API 用のアクセストークンは、自分の API 用のアクセストークンを取得する場合と同じ方法で取得できます。\n\n:::info &nbsp\nMy Account API に機密性の高い操作（認証方法の登録など）を許可する場合は、[多要素認証 (MFA)](https://auth0.com/docs/secure/multi-factor-authentication) によって追加のセキュリティポリシーを適用するために、[step-up authentication](https://auth0.com/docs/secure/multi-factor-authentication/step-up-authentication) を使用することを強く推奨します。\n:::\n\nUniversal Login を使用している場合は、次の記事を参照してください。\n\n- [Call Your API Using the Authorization Code Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/call-your-api-using-the-authorization-code-flow)\n- [Call Your API Using the Authorization Code Flow with PKCE](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce/call-your-api-using-the-authorization-code-flow-with-pkce)\n\n組み込みログインを使用している場合は、次の記事を参照してください。\n\n- [Call Your API Using Resource Owner Password Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow/call-your-api-using-resource-owner-password-flow)\n- [Login Flow with Native Passkeys API](https://auth0.com/docs/native-passkeys-api#login-flow)\n\n## 例\n\n### Universal Login での認可コードフロー\n\n**ステップ 1: 認可コードをリクエストする**\n\n```\ncurl --request GET \\\n  --url 'https://{yourDomain}/authorize?response_type=code&client_id={yourClientId}&redirect_uri=%7ByourRedirectUri%7D&scope=create%3Ame%3Aauthentication_methods&offline_access=&audience=https%3A%2F%2F{yourDomain}%2Fme%2F'\n```\n\n**ステップ 2: code をアクセストークンと交換する**\n\n```\ncurl --request POST \\\n  --url 'https://{yourDomain}/oauth/token' \\\n  --header 'content-type: application/json' \\\n  --data '{\"grant_type\": \"authorization_code\",\"client_id\": \"{yourClientId}\",\"client_secret\": \"{yourClientSecret}\",\"code\": \"{yourAuthorizationCode}\",\"redirect_uri\": \"{yourRedirectUri}\",\"audience\": \"{yourAudience}\",\"scope\": \"create:me:authentication_methods\",\"offline_access\": \"\"}'\n```\n\n### ネイティブ パスキーを使った埋め込み型ログイン\n\n**ステップ 1: ログインチャレンジをリクエストする**\n\n```\ncurl --request POST \\\n  --url 'https://{yourDomain}/passkey/challenge' \\\n  --header 'content-type: application/json' \\\n  --data '{\"client_id\": \"{yourClientId}\"}'\n```\n\n**ステップ 2: 既存のユーザーを認証する**\n\n```\ncurl --request POST \\\n  --url 'https://{yourDomain}/oauth/token' \\\n  --header 'content-type: application/json' \\\n  --data '{  \"grant_type\": \"urn:okta:params:oauth:grant-type:webauthn\",  \"client_id\": \"{yourClientId}\",  \"scope\": \"create:me:authentication_methods offline_access\",  \"audience\": \"https://{yourDomain}/me/\",  \"auth_session\": \"{sessionIdFromTheFirstRequest}\",  \"authn_response\": \"{authenticatorResponse}\"}'\n```",
+    "description": "The Auth0 My Account API provides a dedicated set of endpoints for users to manage their own account information. Customers can use these APIs to build self-service experiences in their applications or progressively add details to a user account.\n\nThe My Account API operates within the context of the currently logged-in user and can be used directly within user-facing applications.\n\n:::tip Using Auth0 domain vs. custom domain\n\nThe My Account API supports using your canonical Auth0 domain or your custom domain, but you must use the same one throughout the entire process, including:\n\n- Getting an access token\n- Setting the audience value\n- Calling the My Account API endpoint\n\nFor more information, read [Custom Domains](https://auth0.com/docs/customize/custom-domains).\n\n:::\n\n## Activate the My Account API\n\nYou can activate the My Account API for your tenant in the Auth0 Dashboard:\n\n1. Navigate to Authentication > APIs.\n2. Locate the MyAccount API banner.\n3. Select Activate.\n\n![](https://images.ctfassets.net/cdy7uua7fh8z/DGkDQNIHcegN8vtQyEvF3/a2e98b06867701a66fa1f1b3df1c996b/My_Account_API_-_Activate.png)\n\nBy default, the My Account API is created with the following application API access policies:\n\n`require_client_grant` for user flows\n\n`deny_all` for client (machine-to-machine) flows\n\nFor an application to access the My Account API on the user's behalf, you must explicitly create a client grant for that application, which allows you to define the maximum scopes the application can request. Alternatively, you can change the policy for user access flows to allow_all, which allows any application in your tenant to request any scope from the My Account API.\n\nBecause the My Account API exposes sensitive information and operations, Auth0 does not recommend using allow_all for user access flows. You should follow a least privilege principle with the My Account API to ensure applications only get access to what they truly need, minimizing potential security risks.\n\nThe final permissions granted to the application will be determined by the intersection of the scopes allowed by the application API access policy, the Role-Based Access Control (RBAC) permissions assigned to the end user, and any user consent given (if applicable).\n\n:::info Supported flows\n\nYou cannot update the application API policy for client access to the My Account API, which means you cannot access the My Account API using the Client Credentials Flow.\n\n:::\n\nTo learn more about how to manage application API access policies and their associated client grants, read [Application Access to APIs: Client Grants](https://auth0.com/docs/get-started/applications/application-access-to-apis-client-grants).\n\n## Get an access token\n\nYou can get an access token for the My Account API in the same way you'd get an access token for one of your own APIs.\n\n:::info &nbsp\nIf you're going to allow the My Account API to perform sensitive operations (such as enrolling an authentication method), we strongly recommend that you use [step-up authentication](https://auth0.com/docs/secure/multi-factor-authentication/step-up-authentication) to enforce additional security policies through [multi-factor authentication (MFA)](https://auth0.com/docs/secure/multi-factor-authentication).\n:::\n\nIf you're using Universal Login, read the following articles:\n\n- [Call Your API Using the Authorization Code Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/call-your-api-using-the-authorization-code-flow)\n- [Call Your API Using the Authorization Code Flow with PKCE](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce/call-your-api-using-the-authorization-code-flow-with-pkce)\n\nIf you're using embedded login, read the following articles:\n\n- [Call Your API Using Resource Owner Password Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow/call-your-api-using-resource-owner-password-flow)\n- [Login Flow with Native Passkeys API](https://auth0.com/docs/native-passkeys-api#login-flow)\n\n## Examples\n\n### Universal Login with authorization code flow\n\n**Step 1: Request authorization code**\n\n```\ncurl --request GET \\\n  --url 'https://{yourDomain}/authorize?response_type=code&client_id={yourClientId}&redirect_uri=%7ByourRedirectUri%7D&scope=create%3Ame%3Aauthentication_methods&offline_access=&audience=https%3A%2F%2F{yourDomain}%2Fme%2F'\n```\n\n**Step 2: Exchange code for access token**\n\n```\ncurl --request POST \\\n  --url 'https://{yourDomain}/oauth/token' \\\n  --header 'content-type: application/json' \\\n  --data '{\"grant_type\": \"authorization_code\",\"client_id\": \"{yourClientId}\",\"client_secret\": \"{yourClientSecret}\",\"code\": \"{yourAuthorizationCode}\",\"redirect_uri\": \"{yourRedirectUri}\",\"audience\": \"{yourAudience}\",\"scope\": \"create:me:authentication_methods\",\"offline_access\": \"\"}'\n```\n\n### Embedded login with native passkeys\n\n**Step 1: Request login challenge**\n\n```\ncurl --request POST \\\n  --url 'https://{yourDomain}/passkey/challenge' \\\n  --header 'content-type: application/json' \\\n  --data '{\"client_id\": \"{yourClientId}\"}'\n```\n\n**Step 2: Authenticate existing user**\n\n```\ncurl --request POST \\\n  --url 'https://{yourDomain}/oauth/token' \\\n  --header 'content-type: application/json' \\\n  --data '{  \"grant_type\": \"urn:okta:params:oauth:grant-type:webauthn\",  \"client_id\": \"{yourClientId}\",  \"scope\": \"create:me:authentication_methods offline_access\",  \"audience\": \"https://{yourDomain}/me/\",  \"auth_session\": \"{sessionIdFromTheFirstRequest}\",  \"authn_response\": \"{authenticatorResponse}\"}'\n```",
     "title": "My Account",
     "version": "1.0"
   },
@@ -2528,7 +2528,7 @@
   "paths": {
     "/authentication-methods": {
       "get": {
-        "description": "認証済みユーザーに属する認証方法の詳細な一覧を取得します。",
+        "description": "Retrieve detailed list of authentication methods belonging to the authenticated user.",
         "operationId": "getAuthenticationMethods",
         "parameters": [
           {
@@ -2541,7 +2541,7 @@
               "application/json": {
                 "examples": {
                   "multiple-methods": {
-                    "summary": "複数の認証方法が登録されているユーザー",
+                    "summary": "User with multiple authentication methods enrolled",
                     "value": {
                       "authentication_methods": [
                         {
@@ -2633,7 +2633,7 @@
                 }
               }
             },
-            "description": "認証方法を正常に取得しました",
+            "description": "Successfully retrieved authentication methods",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -2666,7 +2666,7 @@
             ]
           }
         ],
-        "summary": "認証方法の一覧を取得",
+        "summary": "Get a list of authentication methods",
         "tags": [
           "authentication-methods"
         ],
@@ -2677,33 +2677,33 @@
         "x-release-lifecycle": "GA"
       },
       "post": {
-        "description": "サポート対象の認証方法の登録を開始します。",
+        "description": "Start the enrollment of a supported authentication method.",
         "operationId": "createAuthenticationMethod",
         "requestBody": {
           "content": {
             "application/json": {
               "examples": {
                 "email": {
-                  "summary": "OTP用のメールアドレスを登録",
+                  "summary": "Enroll an email address for OTP",
                   "value": {
                     "email": "user@example.com",
                     "type": "email"
                   }
                 },
                 "passkey": {
-                  "summary": "パスキーを登録",
+                  "summary": "Enroll a passkey",
                   "value": {
                     "type": "passkey"
                   }
                 },
                 "password": {
-                  "summary": "パスワード認証情報を登録",
+                  "summary": "Enroll a password credential",
                   "value": {
                     "type": "password"
                   }
                 },
                 "phone": {
-                  "summary": "SMS/音声OTP用の電話番号を登録",
+                  "summary": "Enroll a phone number for SMS/voice OTP",
                   "value": {
                     "phone_number": "+15551234567",
                     "preferred_authentication_method": "sms",
@@ -2711,19 +2711,19 @@
                   }
                 },
                 "push-notification": {
-                  "summary": "プッシュ通知認証器を登録",
+                  "summary": "Enroll a push notification authenticator",
                   "value": {
                     "type": "push-notification"
                   }
                 },
                 "recovery-code": {
-                  "summary": "リカバリーコードを生成",
+                  "summary": "Generate a recovery code",
                   "value": {
                     "type": "recovery-code"
                   }
                 },
                 "totp": {
-                  "summary": "TOTP認証器アプリを登録",
+                  "summary": "Enroll a TOTP authenticator app",
                   "value": {
                     "type": "totp"
                   }
@@ -2741,14 +2741,14 @@
               "application/json": {
                 "examples": {
                   "email": {
-                    "summary": "メールアドレスの登録を開始しました",
+                    "summary": "Email enrollment started",
                     "value": {
                       "auth_session": "Fe26.2**05c400ed...",
                       "id": "email|dev_XXXXXXXXXXXXXXXX"
                     }
                   },
                   "passkey": {
-                    "summary": "パスキーの登録を開始しました — WebAuthnの作成オプションが含まれます",
+                    "summary": "Passkey enrollment started — includes WebAuthn creation options",
                     "value": {
                       "auth_session": "Fe26.2**05c400ed...",
                       "authn_params_public_key": {
@@ -2781,7 +2781,7 @@
                     }
                   },
                   "password": {
-                    "summary": "パスワードの登録を開始しました — パスワードポリシーが含まれます",
+                    "summary": "Password enrollment started — includes password policy",
                     "value": {
                       "auth_session": "Fe26.2**05c400ed...",
                       "id": "password|new",
@@ -2818,14 +2818,14 @@
                     }
                   },
                   "phone": {
-                    "summary": "電話番号の登録を開始しました",
+                    "summary": "Phone enrollment started",
                     "value": {
                       "auth_session": "Fe26.2**05c400ed...",
                       "id": "phone|dev_XXXXXXXXXXXXXXXX"
                     }
                   },
                   "push-notification": {
-                    "summary": "プッシュ通知の登録を開始しました — QR code データが含まれます",
+                    "summary": "Push notification enrollment started — includes QR code data",
                     "value": {
                       "auth_session": "Fe26.2**05c400ed...",
                       "barcode_uri": "otpauth://totp/my-tenant:auth0%7C507f1f77bcf86cd799439011?secret=JBSWY3DPEHPK3PXP&issuer=my-tenant&algorithm=SHA1&digits=6&period=30",
@@ -2833,7 +2833,7 @@
                     }
                   },
                   "recovery-code": {
-                    "summary": "リカバリーコードを生成しました",
+                    "summary": "Recovery code generated",
                     "value": {
                       "auth_session": "Fe26.2**05c400ed...",
                       "id": "recovery-code|dev_XXXXXXXXXXXXXXXX",
@@ -2841,7 +2841,7 @@
                     }
                   },
                   "totp": {
-                    "summary": "TOTPの登録を開始しました — QR code データが含まれます",
+                    "summary": "TOTP enrollment started — includes QR code data",
                     "value": {
                       "auth_session": "Fe26.2**05c400ed...",
                       "barcode_uri": "otpauth://totp/my-tenant:auth0%7C507f1f77bcf86cd799439011?secret=JBSWY3DPEHPK3PXP&issuer=my-tenant&algorithm=SHA1&digits=6&period=30",
@@ -2855,7 +2855,7 @@
                 }
               }
             },
-            "description": "登録を開始しました",
+            "description": "Enrollment started",
             "headers": {
               "Location": {
                 "$ref": "#/components/headers/LocationHeader"
@@ -2894,7 +2894,7 @@
             ]
           }
         ],
-        "summary": "サポート対象の認証方法の登録を開始します。",
+        "summary": "Start the enrollment of a supported authentication method.",
         "tags": [
           "authentication-methods"
         ],
@@ -2906,7 +2906,7 @@
     },
     "/authentication-methods/{authentication_method_id}": {
       "delete": {
-        "description": "認証済みユーザーに属する1つの認証方法を削除します。",
+        "description": "Deletes a single authentication method belonging to the authenticated user.",
         "operationId": "deleteAuthenticationMethod",
         "parameters": [
           {
@@ -2915,7 +2915,7 @@
         ],
         "responses": {
           "204": {
-            "description": "認証方法を正常に削除しました",
+            "description": "Authentication method successfully deleted",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -2951,7 +2951,7 @@
             ]
           }
         ],
-        "summary": "IDで認証方法を削除",
+        "summary": "Delete an authentication method by ID",
         "tags": [
           "authentication-methods"
         ],
@@ -2961,7 +2961,7 @@
         "x-release-lifecycle": "GA"
       },
       "get": {
-        "description": "認証済みユーザーに属する1つの認証方法を取得します。",
+        "description": "Retrieves a single authentication method belonging to the authenticated user.",
         "operationId": "getAuthenticationMethod",
         "parameters": [
           {
@@ -2974,7 +2974,7 @@
               "application/json": {
                 "examples": {
                   "email": {
-                    "summary": "メールの認証方法",
+                    "summary": "Email authentication method",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-01-15T10:30:00.000Z",
@@ -2987,7 +2987,7 @@
                     }
                   },
                   "passkey": {
-                    "summary": "パスキーの認証方法",
+                    "summary": "Passkey authentication method",
                     "value": {
                       "created_at": "2025-03-10T08:00:00.000Z",
                       "credential_backed_up": true,
@@ -3009,7 +3009,7 @@
                     }
                   },
                   "password": {
-                    "summary": "パスワードの認証方法",
+                    "summary": "Password authentication method",
                     "value": {
                       "created_at": "2024-06-01T12:00:00.000Z",
                       "id": "password|dXNlci0xMjM",
@@ -3021,7 +3021,7 @@
                     }
                   },
                   "phone": {
-                    "summary": "電話の認証方法",
+                    "summary": "Phone authentication method",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-01-15T10:30:00.000Z",
@@ -3035,7 +3035,7 @@
                     }
                   },
                   "push-notification": {
-                    "summary": "プッシュ通知の認証方法",
+                    "summary": "Push notification authentication method",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-01-15T10:30:00.000Z",
@@ -3047,7 +3047,7 @@
                     }
                   },
                   "recovery-code": {
-                    "summary": "リカバリーコードの認証方法",
+                    "summary": "Recovery code authentication method",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-01-15T10:30:00.000Z",
@@ -3059,7 +3059,7 @@
                     }
                   },
                   "totp": {
-                    "summary": "TOTPの認証方法",
+                    "summary": "TOTP authentication method",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-01-15T10:30:00.000Z",
@@ -3071,7 +3071,7 @@
                     }
                   },
                   "webauthn-platform": {
-                    "summary": "WebAuthnプラットフォーム認証器（例: Touch ID、Windows Hello）",
+                    "summary": "WebAuthn platform authenticator (e.g. Touch ID, Windows Hello)",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-02-20T11:00:00.000Z",
@@ -3085,7 +3085,7 @@
                     }
                   },
                   "webauthn-roaming": {
-                    "summary": "WebAuthnローミング認証器（例: セキュリティキー）",
+                    "summary": "WebAuthn roaming authenticator (e.g. security key)",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-02-25T16:45:00.000Z",
@@ -3104,7 +3104,7 @@
                 }
               }
             },
-            "description": "認証方法を正常に取得しました",
+            "description": "Successfully retrieved authentication method",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -3140,7 +3140,7 @@
             ]
           }
         ],
-        "summary": "IDで認証方法を取得",
+        "summary": "Get an authentication method by ID",
         "tags": [
           "authentication-methods"
         ],
@@ -3150,7 +3150,7 @@
         "x-release-lifecycle": "GA"
       },
       "patch": {
-        "description": "1つの認証方法を更新します",
+        "description": "Updates a single authentication method",
         "operationId": "updateAuthenticationMethod",
         "parameters": [
           {
@@ -3175,7 +3175,7 @@
                 }
               }
             },
-            "description": "認証方法を正常に更新しました",
+            "description": "Successfully updated authentication method",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -3211,7 +3211,7 @@
             ]
           }
         ],
-        "summary": "IDで認証方法の詳細を更新",
+        "summary": "Update details of an authentication method by ID",
         "tags": [
           "authentication-methods"
         ],
@@ -3223,7 +3223,7 @@
     },
     "/authentication-methods/{authentication_method_id}/verify": {
       "post": {
-        "description": "サポート対象の認証方法の登録を確認します。",
+        "description": "Confirm the enrollment of a supported authentication method.",
         "operationId": "confirmAuthenticationMethod",
         "parameters": [
           {
@@ -3235,14 +3235,14 @@
             "application/json": {
               "examples": {
                 "email": {
-                  "summary": "OTPコードでメールの登録を確認する",
+                  "summary": "Verify email enrollment with OTP code",
                   "value": {
                     "auth_session": "Fe26.2**05c400ed...",
                     "otp_code": "123456"
                   }
                 },
                 "passkey": {
-                  "summary": "認証器のアテステーション応答でパスキーの登録を確認する",
+                  "summary": "Verify passkey enrollment with authenticator attestation response",
                   "value": {
                     "auth_session": "Fe26.2**05c400ed...",
                     "authn_response": {
@@ -3258,33 +3258,33 @@
                   }
                 },
                 "password": {
-                  "summary": "新しいパスワードを設定してパスワードの登録を確認する",
+                  "summary": "Verify password enrollment by setting the new password",
                   "value": {
                     "auth_session": "Fe26.2**05c400ed...",
                     "new_password": "MySecureP@ssw0rd!"
                   }
                 },
                 "phone": {
-                  "summary": "OTPコードで電話番号の登録を確認",
+                  "summary": "Verify phone enrollment with OTP code",
                   "value": {
                     "auth_session": "Fe26.2**05c400ed...",
                     "otp_code": "123456"
                   }
                 },
                 "push-notification": {
-                  "summary": "プッシュ通知の登録を確認する",
+                  "summary": "Verify push notification enrollment",
                   "value": {
                     "auth_session": "Fe26.2**05c400ed..."
                   }
                 },
                 "recovery-code": {
-                  "summary": "リカバリーコードの登録を確認する",
+                  "summary": "Verify recovery code enrollment",
                   "value": {
                     "auth_session": "Fe26.2**05c400ed..."
                   }
                 },
                 "totp": {
-                  "summary": "認証器アプリのコードでTOTPの登録を確認する",
+                  "summary": "Verify TOTP enrollment with code from authenticator app",
                   "value": {
                     "auth_session": "Fe26.2**05c400ed...",
                     "otp_code": "123456"
@@ -3303,7 +3303,7 @@
               "application/json": {
                 "examples": {
                   "email": {
-                    "summary": "メール認証方法の確認が完了",
+                    "summary": "Email authentication method confirmed",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-01-15T10:30:00.000Z",
@@ -3316,7 +3316,7 @@
                     }
                   },
                   "passkey": {
-                    "summary": "パスキー認証方法の確認が完了",
+                    "summary": "Passkey authentication method confirmed",
                     "value": {
                       "created_at": "2025-01-15T10:30:00.000Z",
                       "credential_backed_up": true,
@@ -3338,7 +3338,7 @@
                     }
                   },
                   "password": {
-                    "summary": "パスワード認証方法の確認が完了",
+                    "summary": "Password authentication method confirmed",
                     "value": {
                       "created_at": "2025-01-15T10:30:00.000Z",
                       "id": "password|dXNlci0xMjM",
@@ -3350,7 +3350,7 @@
                     }
                   },
                   "phone": {
-                    "summary": "電話認証方法の確認が完了",
+                    "summary": "Phone authentication method confirmed",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-01-15T10:30:00.000Z",
@@ -3364,7 +3364,7 @@
                     }
                   },
                   "push-notification": {
-                    "summary": "プッシュ通知認証方法の確認が完了",
+                    "summary": "Push notification authentication method confirmed",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-01-15T10:30:00.000Z",
@@ -3376,7 +3376,7 @@
                     }
                   },
                   "recovery-code": {
-                    "summary": "リカバリーコード認証方法の確認が完了",
+                    "summary": "Recovery code authentication method confirmed",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-01-15T10:30:00.000Z",
@@ -3388,7 +3388,7 @@
                     }
                   },
                   "totp": {
-                    "summary": "TOTP認証方法の確認が完了",
+                    "summary": "TOTP authentication method confirmed",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-01-15T10:30:00.000Z",
@@ -3405,7 +3405,7 @@
                 }
               }
             },
-            "description": "認証方法が確認されました",
+            "description": "Authentication method verified",
             "headers": {
               "Location": {
                 "$ref": "#/components/headers/LocationHeader"
@@ -3444,7 +3444,7 @@
             ]
           }
         ],
-        "summary": "サポート対象の認証方法の登録を確認します。",
+        "summary": "Confirm the enrollment of a supported authentication method.",
         "tags": [
           "authentication-methods"
         ],
@@ -3456,7 +3456,7 @@
     },
     "/connected-accounts/accounts": {
       "get": {
-        "description": "認証済みユーザーに属する接続済みアカウントを取得します。",
+        "description": "Retrieve connected accounts belonging to the authenticated user.",
         "operationId": "getConnectedAccounts",
         "parameters": [
           {
@@ -3478,7 +3478,7 @@
                 }
               }
             },
-            "description": "接続済みアカウントを正常に取得しました",
+            "description": "Successfully retrieved connected accounts",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -3511,7 +3511,7 @@
             ]
           }
         ],
-        "summary": "接続済みアカウントの一覧を取得する",
+        "summary": "Get a list of connected accounts",
         "tags": [
           "connected-accounts"
         ],
@@ -3524,7 +3524,7 @@
     },
     "/connected-accounts/accounts/{id}": {
       "delete": {
-        "description": "認証済みユーザーに属する接続済みアカウントを削除します。",
+        "description": "Delete a connected account belonging to the authenticated user.",
         "operationId": "deleteConnectedAccount",
         "parameters": [
           {
@@ -3533,7 +3533,7 @@
         ],
         "responses": {
           "204": {
-            "description": "接続済みアカウントを正常に削除しました",
+            "description": "Connected account successfully deleted",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -3566,7 +3566,7 @@
             ]
           }
         ],
-        "summary": "IDで接続済みアカウントを削除する",
+        "summary": "Delete a connected account by ID",
         "tags": [
           "connected-accounts"
         ],
@@ -3578,7 +3578,7 @@
     },
     "/connected-accounts/complete": {
       "post": {
-        "description": "認証済みユーザーのアカウントを外部のアイデンティティプロバイダーにリンクするため、以前に開始した認可フローを完了します。",
+        "description": "Complete a previously started authorization flow to link the authenticated user's account with an external identity provider.",
         "operationId": "completeConnectedAccountRequest",
         "requestBody": {
           "content": {
@@ -3620,7 +3620,7 @@
             ]
           }
         ],
-        "summary": "接続済みアカウントのリクエストを完了する",
+        "summary": "Complete a connected account request",
         "tags": [
           "connected-accounts"
         ],
@@ -3632,7 +3632,7 @@
     },
     "/connected-accounts/connect": {
       "post": {
-        "description": "認証済みユーザーのアカウントを外部のアイデンティティプロバイダーにリンクするための認可フローを開始します。",
+        "description": "Start an authorization flow to link the authenticated user's account with an external identity provider.",
         "operationId": "createConnectedAccountRequest",
         "requestBody": {
           "content": {
@@ -3671,7 +3671,7 @@
             ]
           }
         ],
-        "summary": "接続済みアカウントのリクエストを作成する",
+        "summary": "Create a connected account request",
         "tags": [
           "connected-accounts"
         ],
@@ -3683,7 +3683,7 @@
     },
     "/connected-accounts/connections": {
       "get": {
-        "description": "認証済みユーザーがアカウントのリンクに使用できる接続の一覧を取得します。",
+        "description": "Retrieve available connections that can be used for account linking by the authenticated user.",
         "operationId": "getConnectedAccountsConnections",
         "parameters": [
           {
@@ -3702,7 +3702,7 @@
                 }
               }
             },
-            "description": "利用可能な接続を正常に取得しました",
+            "description": "Successfully retrieved available connections",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -3735,7 +3735,7 @@
             ]
           }
         ],
-        "summary": "接続済みアカウントで利用可能な接続の一覧を取得する",
+        "summary": "Get a list of available connections for connected accounts",
         "tags": [
           "connected-accounts"
         ],
@@ -3751,7 +3751,7 @@
     },
     "/consents": {
       "get": {
-        "description": "認証済みユーザーの同意の一覧を取得します。",
+        "description": "Retrieve the list of consents for the authenticated user.",
         "operationId": "getConsents",
         "responses": {
           "200": {
@@ -3762,7 +3762,7 @@
                 }
               }
             },
-            "description": "同意を正常に取得しました",
+            "description": "Successfully retrieved consents",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -3792,7 +3792,7 @@
             ]
           }
         ],
-        "summary": "ユーザーの同意の一覧を取得する",
+        "summary": "List user consents",
         "tags": [
           "consents"
         ],
@@ -3805,7 +3805,7 @@
     },
     "/consents/{consent_id}": {
       "get": {
-        "description": "認証済みユーザーの特定の同意を ID で取得します。",
+        "description": "Retrieve a specific consent for the authenticated user by ID.",
         "operationId": "getConsent",
         "parameters": [
           {
@@ -3821,7 +3821,7 @@
                 }
               }
             },
-            "description": "同意を正常に取得しました",
+            "description": "Successfully retrieved consent",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -3854,7 +3854,7 @@
             ]
           }
         ],
-        "summary": "IDで同意を取得する",
+        "summary": "Get a consent by ID",
         "tags": [
           "consents"
         ],
@@ -3867,7 +3867,7 @@
     },
     "/factors": {
       "get": {
-        "description": "Auth0 テナントで有効になっており、このユーザーが登録可能な認証要素の一覧。",
+        "description": "List of factors enabled for the Auth0 tenant and available for enrollment by this user.",
         "operationId": "getFactors",
         "parameters": [],
         "responses": {
@@ -3879,7 +3879,7 @@
                 }
               }
             },
-            "description": "有効な認証要素を正常に取得しました",
+            "description": "Successfully retrieved enabled factors",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -3912,7 +3912,7 @@
             ]
           }
         ],
-        "summary": "すべての認証要素のステータスを取得",
+        "summary": "Get the status of all factors",
         "tags": [
           "factors"
         ],
@@ -3924,7 +3924,7 @@
     },
     "/organizations": {
       "get": {
-        "description": "認証済みユーザーが所属する組織の一覧を取得します。",
+        "description": "Retrieve the list of organizations the authenticated user belongs to.",
         "operationId": "getOrganizations",
         "parameters": [
           {
@@ -3943,7 +3943,7 @@
                 }
               }
             },
-            "description": "組織を正常に取得しました",
+            "description": "Successfully retrieved organizations",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -3976,7 +3976,7 @@
             ]
           }
         ],
-        "summary": "ユーザーが所属する組織の一覧",
+        "summary": "List user organizations",
         "tags": [
           "organizations"
         ],
@@ -3995,14 +3995,14 @@
       "variables": {
         "host": {
           "default": "auth0.auth0.com",
-          "description": "カスタムまたは標準のホスト名"
+          "description": "Custom or canonical host name"
         }
       }
     }
   ],
   "tags": [
     {
-      "description": "認証要素",
+      "description": "Factors",
       "name": "factors",
       "x-displayName": "Factors"
     },
@@ -4012,12 +4012,12 @@
       "x-displayName": "Connected Accounts"
     },
     {
-      "description": "認証方法",
+      "description": "Authentication Methods",
       "name": "authentication-methods",
       "x-displayName": "Authentication Methods"
     },
     {
-      "description": "同意",
+      "description": "Consents",
       "name": "consents",
       "x-displayName": "Consents"
     },

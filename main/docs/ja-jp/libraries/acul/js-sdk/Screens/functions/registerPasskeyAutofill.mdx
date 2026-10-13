@@ -9,7 +9,7 @@ title: "registerPasskeyAutofill"
 ログイン画面の初期化時 (たとえばページの読み込み時) に、これを一度呼び出します。ブラウザーが Conditional Mediation をサポートしていない場合、このメソッドは安全に no-op します。
 
 <div id="parameters">
-  ## パラメータ
+  ## パラメータ {#parameters}
 </div>
 
 <ParamField body="inputId?" type="string">
@@ -23,7 +23,7 @@ title: "registerPasskeyAutofill"
 </ParamField>
 
 <div id="returns">
-  ## 戻り値
+  ## 戻り値 {#returns}
 </div>
 
 `Promise`&lt;`void`&gt;
@@ -31,7 +31,7 @@ title: "registerPasskeyAutofill"
 Conditional UI の登録が完了すると解決されます。
 
 <div id="example">
-  ## 例
+  ## 例 {#example}
 </div>
 
 ```typescript
@@ -48,7 +48,7 @@ initializeLogin().catch(console.error);
 ```
 
 <div id="gotchas">
-  ## 注意点
+  ## 注意点 {#gotchas}
 </div>
 
 * `autocomplete` 属性は、**必ず正確に** `"username webauthn"` である必要があります。`"email"` や `"text"` などの無関係なトークンを含めると、ブラウザーでパスキーのドロップダウンが表示されなくなります。
@@ -56,7 +56,7 @@ initializeLogin().catch(console.error);
 * ブラウザーが Conditional Mediation をサポートしていない場合、SDK は安全に no-op します。
 
 <div id="remarks">
-  ## 注記
+  ## 注記 {#remarks}
 </div>
 
 このメソッドは内部の `registerPasskeyAutofill()` ユーティリティに処理を委譲し、リクエストのライフタイムを管理するためのバックグラウンド `AbortController` を返します。ページのライフサイクルごとに 1 回だけ呼び出してください。

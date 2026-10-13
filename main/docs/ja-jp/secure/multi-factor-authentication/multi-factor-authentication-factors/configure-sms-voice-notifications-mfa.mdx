@@ -20,7 +20,7 @@ SMS および音声要素は、Auth0 Dashboard または <Tooltip tip="Managemen
 </Card>
 
 <div id="how-it-works">
-  ## 仕組み
+  ## 仕組み {#how-it-works}
 </div>
 
 SMS と音声の両方を有効にすると、ユーザーは SMS または音声でコードを受け取って登録できます。
@@ -34,7 +34,7 @@ SMS のみを有効にした場合は、フローがよりシンプルになり�
 ユーザーが登録を完了すると、次回の認証時に、登録済みの電話番号に音声通話または SMS メッセージが届きます。
 
 <div id="use-the-dashboard">
-  ## Auth0 Dashboardを使用する
+  ## Auth0 Dashboardを使用する {#use-the-dashboard}
 </div>
 
 1. [**Auth0 Dashboard &gt; Security &gt; Multi-factor Auth**](https://manage.auth0.com/#/multifactor-auth) に移動します。
@@ -49,7 +49,7 @@ SMS のみを有効にした場合は、フローがよりシンプルになり�
    また、ユーザーが SMS テキストメッセージ、音声通話、またはその両方を受け取れるようにすることもできます。
 
 <div id="twilio-configuration">
-  ### Twilio の設定
+  ### Twilio の設定 {#twilio-configuration}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -71,13 +71,13 @@ Twilio 経由で SMS を配信する場合は、次の手順で SMS 認証要素
 7. **Save** を選択します。
 
 <div id="customize-sms-or-voice-message-templates">
-  ### SMS または音声メッセージのテンプレートをカスタマイズ
+  ### SMS または音声メッセージのテンプレートをカスタマイズ {#customize-sms-or-voice-message-templates}
 </div>
 
 SMS と音声メッセージのテンプレートはカスタマイズできます。詳しくは、[Customize SMS and Voice Messages](/docs/ja-jp/customize/customize-sms-or-voice-messages)をご覧ください。
 
 <div id="use-the-management-api">
-  ## Management API を使用する
+  ## Management API を使用する {#use-the-management-api}
 </div>
 
 Management API では、`/api/v2/guardian/factors/phone/message-types` エンドポイントを使用して、有効にするメッセージ配信方法を設定できます。`message_types` パラメーターは配列で、`["sms"]`、`["voice"]`、または `["sms", "voice"]` を指定できます。API を呼び出すには、`update:guardian_factors` スコープを持つ [Management API access token](/docs/ja-jp/secure/tokens/access-tokens/management-api-access-tokens) をベアラートークンとして使用する必要があります。
@@ -232,7 +232,7 @@ Management API では、`/api/v2/guardian/factors/phone/message-types` エンド
 </AuthCodeGroup>
 
 <div id="integrated-sms-messaging-providers">
-  ## 連携済みの SMS メッセージプロバイダー
+  ## 連携済みの SMS メッセージプロバイダー {#integrated-sms-messaging-providers}
 </div>
 
 Auth0 はデフォルトで、Twilio を使用したメッセージ送信をサポートしています。ただし、別の SMS プロバイダーを使用したり、メッセージ送信前に特定のロジックを追加したり、ユーザーやアプリケーションに応じて異なるメッセージを送信したりすることもできます。そのためには、SMS MFA が [Send Phone Message Flow](/docs/ja-jp/customize/actions/explore-triggers/mfa-notifications-trigger) 内の連携済み [Actions](/docs/ja-jp/customize/actions) のいずれかを使用するように設定します。
@@ -247,13 +247,13 @@ Auth0 はデフォルトで、Twilio を使用したメッセージ送信をサ�
 * [Telesign](https://marketplace.auth0.com/integrations/telesign-sms-verification)
 
 <div id="custom-phone-providers">
-  ## カスタム電話プロバイダー
+  ## カスタム電話プロバイダー {#custom-phone-providers}
 </div>
 
 Actions を使用して、カスタム電話プロバイダーを設定することもできます。詳しくは、[カスタム電話プロバイダーの設定](/docs/ja-jp/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider)をご覧ください。
 
 <div id="security-considerations">
-  ## セキュリティに関する考慮事項
+  ## セキュリティに関する考慮事項 {#security-considerations}
 </div>
 
 いずれの Phone Messaging Provider を使用する場合も、攻撃者がサインアップフローを悪用すると、金銭的な損害が発生するおそれがあることに注意してください。
@@ -269,7 +269,7 @@ Phone Messaging Provider には追加の保護機能もあります。Twilio を
 * 不正利用やコーディングミスからアカウントを保護するために、Twilio の [usage triggers](https://support.twilio.com/hc/en-us/articles/223132387-Protect-your-Twilio-project-from-Fraud-with-Usage-Triggers) を有効にします。
 
 <div id="learn-more">
-  ## 詳しくはこちら
+  ## 詳しくはこちら {#learn-more}
 </div>
 
 * [SMS および音声の認証器の登録とチャレンジ](/docs/ja-jp/secure/multi-factor-authentication/authenticate-using-ropg-flow-with-mfa/enroll-challenge-sms-voice-authenticators)

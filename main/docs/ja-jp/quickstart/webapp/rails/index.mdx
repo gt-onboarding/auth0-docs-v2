@@ -5,7 +5,7 @@ title: "Ruby On Rails: Login"
 import {AuthCodeBlock} from "/snippets/ja-jp/AuthCodeBlock.jsx";
 
 <div id="by-david-patrick">
-  ##### David Patrick による
+  ##### David Patrick による {#by-david-patrick}
 </div>
 
 このチュートリアルでは、Ruby on Railsアプリケーションにユーザーログインを追加する方法を説明します。アカウント用に設定されたサンプルを使ってこのQuickstartを進められるよう、ログインしておくことをお勧めします。
@@ -19,11 +19,11 @@ import {AuthCodeBlock} from "/snippets/ja-jp/AuthCodeBlock.jsx";
 </Info>
 
 <div id="configure-auth0">
-  ## Auth0 の設定
+  ## Auth0 の設定 {#configure-auth0}
 </div>
 
 <div id="get-your-application-keys">
-  ### アプリケーションのキーを取得する
+  ### アプリケーションのキーを取得する {#get-your-application-keys}
 </div>
 
 Auth0 にサインアップすると、新しいアプリケーションが自動的に作成されます。あるいは、自分で新しく作成した場合もあります。Auth0 と通信するには、そのアプリケーションの情報がいくつか必要です。これらの情報は、Auth0 Dashboard の [Application Settings](https://manage.auth0.com/#/applications) セクションで確認できます。
@@ -41,7 +41,7 @@ Auth0 にサインアップすると、新しいアプリケーションが自�
 </Info>
 
 <div id="configure-callback-urls">
-  ### コールバック URL を設定する
+  ### コールバック URL を設定する {#configure-callback-urls}
 </div>
 
 コールバック URL とは、ユーザーが認証された後に Auth0 がリダイレクトする、アプリケーション内の URL です。アプリのコールバック URL は、[Application Settings](https://manage.auth0.com/#/applications) の **Allowed Callback URLs** フィールドに追加する必要があります。このフィールドが設定されていないと、ユーザーはアプリケーションにログインできず、エラーが表示されます。
@@ -51,7 +51,7 @@ Auth0 にサインアップすると、新しいアプリケーションが自�
 </Info>
 
 <div id="configure-logout-urls">
-  ### Logout URL を設定する
+  ### Logout URL を設定する {#configure-logout-urls}
 </div>
 
 ログアウト URL とは、ユーザーが認可サーバーからログアウトしたあとに、Auth0 がリダイレクトできるアプリケーション内の URL です。これは `returnTo` クエリパラメータで指定します。アプリのログアウト URL は、[Application Settings](https://manage.auth0.com/#/applications) の **Allowed Logout URLs** フィールドに追加する必要があります。このフィールドが設定されていない場合、ユーザーはアプリケーションからログアウトできず、エラーが発生します。
@@ -61,11 +61,11 @@ Auth0 にサインアップすると、新しいアプリケーションが自�
 </Info>
 
 <div id="install-the-auth0-sdk">
-  ## Auth0 SDKをインストールする
+  ## Auth0 SDKをインストールする {#install-the-auth0-sdk}
 </div>
 
 <div id="install-dependencies">
-  ### 依存関係をインストール
+  ### 依存関係をインストール {#install-dependencies}
 </div>
 
 このチュートリアルでは、認証フローの処理に、カスタムの[OmniAuth ストラテジー](https://github.com/intridea/omniauth#omniauth-standardized-multi-provider-authentication)である `omniauth-auth0` を使用します。次の依存関係を `Gemfile` に追加してください。
@@ -78,7 +78,7 @@ gem 'omniauth-rails_csrf_protection', '~> 1.0' # 偽造された認証リクエ�
 gem を追加したら、`bundle install` でインストールします。
 
 <div id="initialize-auth0-configuration">
-  ### Auth0 Configuration の初期化
+  ### Auth0 Configuration の初期化 {#initialize-auth0-configuration}
 </div>
 
 Auth0 の設定ファイル `./config/auth0.yml` を作成します
@@ -112,7 +112,7 @@ end
 ```
 
 <div id="add-an-auth0-controller">
-  ### Auth0 コントローラーを追加
+  ### Auth0 コントローラーを追加 {#add-an-auth0-controller}
 </div>
 
 認証のコールバックを処理する Auth0 コントローラーを作成します。`rails generate controller auth0 callback failure logout --skip-assets --skip-helper --skip-routes --skip-template-engine` コマンドを実行します。
@@ -157,7 +157,7 @@ end
 ```
 
 <div id="add-login-to-your-application">
-  ## アプリケーションにログイン機能を追加する
+  ## アプリケーションにログイン機能を追加する {#add-login-to-your-application}
 </div>
 
 ユーザーは `/auth/auth0` エンドポイントにアクセスすると、アプリケーションにログインできます。
@@ -172,7 +172,7 @@ end
 ```
 
 <div id="add-logout-to-your-application">
-  ## アプリケーションにログアウトを追加する
+  ## アプリケーションにログアウトを追加する {#add-logout-to-your-application}
 </div>
 
 Railsアプリケーションにログインできるようになったので、[ログアウトする方法](https://auth0.com/docs/logout/guides/logout-auth0)も必要です。先ほど作成したAuth0Controllerをもう一度確認し、追加しておいたlogoutメソッドを仕上げましょう。
@@ -216,7 +216,7 @@ end
 ```
 
 <div id="show-user-profile-information">
-  ## ユーザープロファイル情報を表示する
+  ## ユーザープロファイル情報を表示する {#show-user-profile-information}
 </div>
 
 ユーザーのプロファイルを表示するには、アプリケーションに保護されたルートを用意する必要があります。コントローラーの `concern` を使うと、ルートへのアクセスを制御できます。次のファイル `./app/controllers/concerns/secured.rb` を作成します
@@ -261,7 +261,7 @@ end
 ```
 
 <Note>
-  ##### 次にできることは？
+  ##### 次にできることは？ {#what-can-you-do-next}
 
   | [他のアイデンティティプロバイダーを設定する](/docs/ja-jp/authenticate/identity-providers)                                         | [多要素認証を有効にする](/docs/ja-jp/secure/multi-factor-authentication) |
   | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------- |

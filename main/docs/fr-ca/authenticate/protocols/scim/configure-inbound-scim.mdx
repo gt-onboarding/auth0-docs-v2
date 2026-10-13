@@ -18,7 +18,7 @@ La fonctionnalité Inbound SCIM d’Auth0 prend en charge les intégrations SaaS
 </Callout>
 
 <div id="enable-inbound-scim-for-an-enterprise-connection">
-  ## Activer Inbound SCIM pour une connexion Enterprise
+  ## Activer Inbound SCIM pour une connexion Enterprise {#enable-inbound-scim-for-an-enterprise-connection}
 </div>
 
 1. Ouvrez l’[Auth0 Dashboard](https://manage.auth0.com/#/), puis choisissez le tenant que vous souhaitez configurer.
@@ -28,7 +28,7 @@ La fonctionnalité Inbound SCIM d’Auth0 prend en charge les intégrations SaaS
 5. Sélectionnez l’onglet **Setup** sous **Synchroniser les utilisateurs et les groupes avec SCIM** pour obtenir l’URL du point de terminaison SCIM et les jetons SCIM nécessaires pour faire des tests avec Postman.
 
 <div id="test-with-postman">
-  ### Tester avec Postman
+  ### Tester avec Postman {#test-with-postman}
 </div>
 
 Vous pouvez télécharger la collection Postman ci-dessous pour tester votre configuration SCIM :
@@ -46,7 +46,7 @@ Vous pouvez télécharger la collection Postman ci-dessous pour tester votre con
 Pour effectuer des tests avec des fournisseurs d’identité précis, consultez [Configurer Inbound SCIM pour les fournisseurs d’identité avec SAML ou OpenID](/docs/fr-ca/authenticate/protocols/scim/configure-inbound-scim-for-identity-providers-using-saml-or-openid).
 
 <div id="supported-scim-operations">
-  ## Opérations SCIM prises en charge
+  ## Opérations SCIM prises en charge {#supported-scim-operations}
 </div>
 
 Auth0 prend en charge les opérations SCIM 2.0 suivantes pour gérer les utilisateurs et les groupes :
@@ -73,7 +73,7 @@ Auth0 prend en charge le [schéma de base](https://tools.ietf.org/html/rfc7643) 
 Auth0 prend en charge le [schéma de base](https://tools.ietf.org/html/rfc7643) SCIM 2.0 pour les ressources de groupe; toutefois, seuls les types de membre « user » sont pris en charge. Les valeurs « displayName » des groupes doivent être uniques par connexion, comme l’exige la compatibilité avec les fournisseurs d’identité d’entreprise, comme Microsoft Entra ID.
 
 <div id="scim-endpoints-and-tokens">
-  ### Points de terminaison SCIM et jetons
+  ### Points de terminaison SCIM et jetons {#scim-endpoints-and-tokens}
 </div>
 
 Chaque client d’entreprise obtient un point de terminaison SCIM et un jeton propres à sa connexion, ce qui lui permet de provisionner, de déprovisionner et de gérer en toute sécurité les utilisateurs et les groupes associés à cette connexion qui sont stockés dans le tenant Auth0.
@@ -106,13 +106,13 @@ Les paramètres de génération de jeton suivants sont disponibles :
   * **delete:groups** - Permet de supprimer des groupes.
 
 <div id="session-revocation-and-backchannel-logout">
-  ### Révocation de session et déconnexion back-channel
+  ### Révocation de session et déconnexion back-channel {#session-revocation-and-backchannel-logout}
 </div>
 
 Lorsque Auth0 reçoit un message SCIM visant à désactiver et à bloquer un utilisateur, il met fin à toutes les sessions Auth0 de l’utilisateur, révoque les <Tooltip tip="Jeton d’actualisation : jeton utilisé pour obtenir un nouveau jeton d’accès sans obliger les utilisateurs à se connecter de nouveau." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=refresh+tokens">jetons d’actualisation</Tooltip> et, s’il est configuré, déclenche la [déconnexion back-channel OpenID Connect](/docs/fr-ca/authenticate/login/logout/back-channel-logout/configure-back-channel-logout) pour vos applications.
 
 <div id="logs">
-  ### Journaux
+  ### Journaux {#logs}
 </div>
 
 Vous pouvez consulter tous les détails de l’ensemble des requêtes SCIM qu’Auth0 reçoit dans la section [**Monitoring &gt; Logs**](https://manage.auth0.com/#/logs) de l’Auth0 Dashboard. Notez que, pour toute opération POST ou PUT visant un groupe de plus de 1 000 membres dans le corps de la requête, l’attribut members n’apparaîtra pas dans les journaux en raison des limites de taille de ceux-ci.
@@ -120,13 +120,13 @@ Vous pouvez consulter tous les détails de l’ensemble des requêtes SCIM qu’
 Pour savoir comment synchroniser vers des systèmes externes les utilisateurs, groupes et appartenances à des groupes provisionnés par SCIM depuis Auth0, consultez [Synchroniser les utilisateurs et les groupes vers des systèmes externes](/docs/fr-ca/authenticate/protocols/scim/configure-inbound-scim#sync-users-and-groups-to-external-systems).
 
 <div id="user-provisioning-options">
-  ## Options de provisionnement des utilisateurs
+  ## Options de provisionnement des utilisateurs {#user-provisioning-options}
 </div>
 
 Consultez les sections ci-dessous pour savoir comment configurer le mappage des attributs entre le schéma SCIM et les profils utilisateur Auth0, ainsi que comment utiliser les utilisateurs provisionnés par SCIM avec d’autres fonctionnalités d’Auth0.
 
 <div id="user-attribute-mapping">
-  ### Mappage des attributs utilisateur
+  ### Mappage des attributs utilisateur {#user-attribute-mapping}
 </div>
 
 Chaque nouvelle connexion utilise le mappage d’attributs par défaut disponible dans le Auth0 Dashboard, à **Authentication &gt; Enterprise &gt; [connecton-type] &gt; [your-connection] &gt; Provisioning &gt;  Synchroniser les utilisateurs et les groupes avec SCIM &gt;  Mapping**, où il peut être modifié et personnalisé selon les besoins de votre connexion.
@@ -152,7 +152,7 @@ Ces attributs SCIM peuvent être mappés aux attributs [root](/docs/fr-ca/manage
 Auth0 vous permet également de provisionner des attributs à l’aide de SCIM en parallèle avec des attributs provisionnés pendant la connexion. Pour en savoir plus, consultez la section suivante.
 
 <div id="sync-additional-attributes-at-login">
-  ### Synchroniser des attributs supplémentaires à la connexion
+  ### Synchroniser des attributs supplémentaires à la connexion {#sync-additional-attributes-at-login}
 </div>
 
 Si vous intégrez un fournisseur d&#39;identité qui ne prend pas en charge le même ensemble d&#39;attributs utilisateur dans <Tooltip tip="Security Assertion Markup Language (SAML) : protocole standardisé permettant à deux parties d'échanger des informations d'authentification sans mot de passe." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=SAML">SAML</Tooltip>/OIDC, et SCIM, vous pouvez accéder aux attributs supplémentaires en activant **Synchroniser les attributs du profil utilisateur à la connexion** en parallèle avec le provisionnement SCIM.
@@ -163,7 +163,7 @@ Lorsque l&#39;option **Synchroniser les attributs du profil utilisateur à la co
 * Dans votre mappage d&#39;attributs SCIM, mappez tous les autres attributs SCIM (sauf l&#39;attribut `active`) vers des valeurs dans l&#39;attribut Auth0 `app_metadata`.
 
 <div id="sync-roles-as-a-user-attribute">
-  ### Synchroniser les rôles en tant qu’attribut utilisateur
+  ### Synchroniser les rôles en tant qu’attribut utilisateur {#sync-roles-as-a-user-attribute}
 </div>
 
 Auth0 prend en charge la synchronisation de l’attribut utilisateur SCIM 2.0 `roles`, tel qu’il est défini dans la [RFC7643](https://datatracker.ietf.org/doc/html/rfc7643). Pour accepter les rôles, assurez-vous que le mappage des attributs SCIM de votre connexion fait correspondre l’attribut SCIM `roles` à un attribut utilisateur Auth0 comme `app_metadata.roles`.
@@ -173,25 +173,25 @@ Pour savoir comment synchroniser des rôles propres à une application à partir
 Pour savoir comment attribuer des rôles Auth0 à des groupes provisionnés au moyen de SCIM, consultez [Options de provisionnement des groupes](/docs/fr-ca/authenticate/protocols/scim/configure-inbound-scim#group-provisioning-options).
 
 <div id="organization-membership">
-  ### Appartenance à l’organisation
+  ### Appartenance à l’organisation {#organization-membership}
 </div>
 
 Pour que les utilisateurs provisionnés au moyen de SCIM deviennent membres d’une organisation, la connexion doit être configurée pour **Activer l’appartenance automatique**, comme décrit dans [Accorder une appartenance juste-à-temps à une connexion d’organisation](/docs/fr-ca/manage-users/organizations/configure-organizations/grant-just-in-time-membership).
 
 <div id="user-account-linking">
-  ### Liaison de comptes d’utilisateur
+  ### Liaison de comptes d’utilisateur {#user-account-linking}
 </div>
 
 Lors de l’utilisation de la [liaison de comptes d’utilisateur](/docs/fr-ca/manage-users/user-accounts/user-account-linking), le compte d’utilisateur provisionné par SCIM doit être défini comme compte d’utilisateur principal. Le définir comme compte secondaire modifiera l’attribut SCIM `id`, ce qui va à l’encontre de la [spécification du schéma de base SCIM 2.0](https://datatracker.ietf.org/doc/html/rfc7643#section-3.1). Il n’est pas recommandé d’effectuer la liaison de comptes d’utilisateur Enterprise avec des comptes d’utilisateur sociaux et personnels.
 
 <div id="group-provisioning-options">
-  ## Options de provisionnement des groupes
+  ## Options de provisionnement des groupes {#group-provisioning-options}
 </div>
 
 Consultez les sections ci-dessous pour savoir comment utiliser les groupes provisionnés par SCIM pour l’autorisation et comment ils peuvent être utilisés avec Auth0 Organizations.
 
 <div id="use-groups-with-roles">
-  ### Utiliser des groupes avec des rôles
+  ### Utiliser des groupes avec des rôles {#use-groups-with-roles}
 </div>
 
 Les groupes synchronisés à partir de fournisseurs d’identité d’entreprise peuvent être attribués à des [rôles d’autorisation de base](/docs/fr-ca/manage-users/access-control/configure-core-rbac) dans Auth0. Une fois attribué, le rôle est hérité par tous les membres du groupe lorsqu’ils se connectent. Pour en savoir plus, consultez [Attribuer des rôles aux groupes d’entreprise](/docs/fr-ca/manage-users/access-control/configure-core-rbac/rbac-users/assign-roles-to-groups).
@@ -199,7 +199,7 @@ Les groupes synchronisés à partir de fournisseurs d’identité d’entreprise
 Prenez note des limites d’entités à l’échelle du tenant pour les groupes d’entreprise et les rôles d’autorisation de base dans la [politique de limite d’entités](/docs/fr-ca/troubleshoot/customer-support/operational-policies/entity-limit-policy#entity-limit-policy).
 
 <div id="use-groups-with-organizational-roles">
-  ### Utiliser les groupes avec les rôles d’organisation
+  ### Utiliser les groupes avec les rôles d’organisation {#use-groups-with-organizational-roles}
 </div>
 
 Comme indiqué ci-dessus, les groupes synchronisés à partir de fournisseurs d’identité d’entreprise peuvent être [attribués à des rôles dans une organisation](/docs/fr-ca/manage-users/organizations/organizations-overview). Lorsqu’un membre d’une organisation se connecte, il hérite de tous les rôles d’organisation attribués aux groupes synchronisés dont il fait partie.
@@ -213,13 +213,13 @@ Les rôles d’organisation peuvent ensuite être attribués à tous les groupes
 Notez les limites d’entité au niveau de l’organisation pour les groupes d’entreprise et les rôles d’autorisation de base dans la [politique de limite des entités](/docs/fr-ca/troubleshoot/customer-support/operational-policies/entity-limit-policy#entity-limit-policy).
 
 <div id="use-groups-in-a-post-login-action">
-  ### Utiliser des groupes dans une Action post-login
+  ### Utiliser des groupes dans une Action post-login {#use-groups-in-a-post-login-action}
 </div>
 
 Vous pouvez utiliser les informations sur les groupes transmises par les fournisseurs d’identité d’entreprise dans vos Actions post-login pour prendre des décisions personnalisées en matière de contrôle d’accès et d’autorisation dans Auth0. Pour en savoir plus, consultez la documentation des fonctions `api.groups.getUserGroups()` et `api.groups.hasGroupMembership()` dans [Déclencheurs Actions : post-login - Objet API](/docs/fr-ca/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-api-object).
 
 <div id="sync-users-and-groups-to-external-systems">
-  ## Synchroniser les utilisateurs et les groupes vers des systèmes externes
+  ## Synchroniser les utilisateurs et les groupes vers des systèmes externes {#sync-users-and-groups-to-external-systems}
 </div>
 
 Utilisez la fonctionnalité [Events](/docs/fr-ca/customize/events) d’Auth0 pour synchroniser les utilisateurs, les groupes et les appartenances aux groupes d’Auth0 vers des systèmes externes. Cela vous permet d’envoyer des notifications en temps réel concernant les changements apportés aux utilisateurs et aux groupes à un point de terminaison webhook personnalisé, à AWS EventBridge ou à une Auth0 Action personnalisée.
@@ -233,11 +233,11 @@ Pour configurer la synchronisation sortante des utilisateurs et des groupes :
 3. Une fois votre flux d’événements et la destination souhaitée configurés, vous pouvez générer des événements liés aux utilisateurs et aux groupes à des fins de test en utilisant la collection Postman fournie précédemment, ou en utilisant un fournisseur d’identité d’entreprise pour créer, mettre à jour ou supprimer des utilisateurs et des groupes au moyen de SCIM.
 
 <div id="deployment-guidelines">
-  ## Consignes de déploiement
+  ## Consignes de déploiement {#deployment-guidelines}
 </div>
 
 <div id="leverage-integration-galleries-for-streamlined-setup">
-  ### Tirez parti des galeries d’intégration pour une configuration simplifiée
+  ### Tirez parti des galeries d’intégration pour une configuration simplifiée {#leverage-integration-galleries-for-streamlined-setup}
 </div>
 
 Pour offrir à vos clients une expérience adaptée pour configurer à la fois SCIM et le <Tooltip tip="Single Sign-On (SSO) : service qui, après qu’un utilisateur s’est connecté à une application, le connecte automatiquement à d’autres applications." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=SSO">SSO</Tooltip>, envisagez d’inscrire votre application dans le [Okta Integration Network](https://www.okta.com/integrations/) ainsi que dans d’autres galeries d’intégration de fournisseurs d’identité pour la main-d’œuvre avec lesquels vous prévoyez l’intégrer.
@@ -245,19 +245,19 @@ Pour offrir à vos clients une expérience adaptée pour configurer à la fois S
 Aujourd’hui, Auth0 prend en charge [Express Configuration with Okta](/docs/fr-ca/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration), qui automatise la configuration d’OpenID Connect, de SCIM et d’Universal Logout pour les applications publiées dans le [Okta Integration Network](https://www.okta.com/integrations/).
 
 <div id="use-auth0-self-service-sso-and-user-provisioning">
-  ### Utiliser Auth0 Self-Service SSO et le provisionnement des utilisateurs
+  ### Utiliser Auth0 Self-Service SSO et le provisionnement des utilisateurs {#use-auth0-self-service-sso-and-user-provisioning}
 </div>
 
 Si vous n’utilisez pas de galerie d’intégrations, utilisez [Auth0 Self-Service Enterprise Configuration](/docs/fr-ca/authenticate/enterprise-connections/self-service-enterprise-configuration) pour permettre à vos clients ou aux administrateurs de l’IdP de configurer SCIM directement.
 
 <div id="test-scim-in-lower-level-environments-first">
-  ### Testez d’abord SCIM dans des environnements hors production
+  ### Testez d’abord SCIM dans des environnements hors production {#test-scim-in-lower-level-environments-first}
 </div>
 
 N’activez pas SCIM dans un tenant Auth0 de production avant d’avoir testé votre intégration de façon approfondie dans un tenant Auth0 de développement ou de staging.
 
 <div id="send-scim-tokens-securely">
-  ### Envoyez les jetons SCIM en toute sécurité
+  ### Envoyez les jetons SCIM en toute sécurité {#send-scim-tokens-securely}
 </div>
 
 N’envoyez jamais de jetons SCIM en texte brut, par courriel ou par des canaux non sécurisés. Utilisez un service de communication sécurisé comme [SendSafely](https://www.sendsafely.com/) ou [Auth0 Self-Service Enterprise Configuration](/docs/fr-ca/authenticate/enterprise-connections/self-service-enterprise-configuration) pour émettre directement des jetons SCIM à vos clients.
@@ -265,7 +265,7 @@ N’envoyez jamais de jetons SCIM en texte brut, par courriel ou par des canaux 
 Lorsque vous utilisez [Express Configuration with Okta](/docs/fr-ca/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration), la configuration du jeton est automatisée et n’est pas affichée.
 
 <div id="management-api">
-  ## Management API
+  ## Management API {#management-api}
 </div>
 
 La configuration de SCIM pour une connexion Enterprise peut être automatisée à l’aide de l’Auth0 Management API. Pour en savoir plus, consultez [Gérer un déploiement Inbound SCIM avec la Management API](/docs/fr-ca/authenticate/protocols/scim/manage-an-inbound-scim-deployment-with-the-management-api).
@@ -282,7 +282,7 @@ Tous les utilisateurs et groupes Enterprise créés dans votre tenant Auth0 au m
 * [DELETE /api/v2/groups/:id](/docs/fr-ca/api/management/v2/groups/delete-group)
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Configurer Inbound SCIM pour les fournisseurs d’identité avec SAML ou OpenID](/docs/fr-ca/authenticate/protocols/scim/configure-inbound-scim-for-identity-providers-using-saml-or-openid)

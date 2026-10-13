@@ -25,7 +25,7 @@ Microsoft Azure Active Directory (AD) と連携すると、ユーザーに次の
 </Callout>
 
 <div id="steps">
-  ## 手順
+  ## 手順 {#steps}
 </div>
 
 アプリケーションを Azure AD に接続するには、次の手順を行います。
@@ -36,7 +36,7 @@ Microsoft Azure Active Directory (AD) と連携すると、ユーザーに次の
 4. [接続をテストする](#test-the-connection)
 
 <div id="register-your-app-with-azure-ad">
-  ### Azure AD にアプリを登録する
+  ### Azure AD にアプリを登録する {#register-your-app-with-azure-ad}
 </div>
 
 Azure AD にアプリを登録するには、Microsoft の [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) を参照してください。
@@ -65,7 +65,7 @@ Azure AD にアプリを登録するには、Microsoft の [Quickstart: Register
 このプロセスの中で、Microsoft によりアプリケーション用の **Application (client) ID** が生成されます。この値は、アプリの **Overview** 画面で確認できます。**この値は控えておいてください。**
 
 <div id="create-a-client-secret">
-  #### クライアントシークレットを作成する
+  #### クライアントシークレットを作成する {#create-a-client-secret}
 </div>
 
 <Tooltip tip="Client Secret: クライアント（アプリケーション）が認可サーバーに対して認証を行うために使用するシークレット。これはクライアントと認可サーバーだけが知っている必要があり、推測されないよう十分にランダムでなければなりません。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=client+secret">クライアントシークレット</Tooltip>を作成するには、Microsoft の [Microsoft&#39;s Add and manage application credentials in Microsoft Entra ID - Add a Client Secret](https://learn.microsoft.com/en-us/entra/identity-platform/how-to-add-credentials?source=recommendations\&tabs=client-secret) を参照してください。
@@ -77,7 +77,7 @@ Azure AD にアプリを登録するには、Microsoft の [Quickstart: Register
 </Callout>
 
 <div id="add-permissions">
-  #### 権限を追加
+  #### 権限を追加 {#add-permissions}
 </div>
 
 権限を追加するには、Microsoft の [Quickstart: Configure a client application to access web APIs - Add permissions to access web APIs](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-configure-app-access-web-apis#add-permissions-to-access-web-apis) を参照してください。
@@ -92,7 +92,7 @@ Azure AD にアプリを登録するには、Microsoft の [Quickstart: Register
 | **Directory &gt; Directory.Read.All** | アプリがサインイン中のユーザーに代わってディレクトリ データを読み取れるようにするため。      |
 
 <div id="create-an-enterprise-connection-in-auth0">
-  ### Auth0 でエンタープライズ接続を作成する
+  ### Auth0 でエンタープライズ接続を作成する {#create-an-enterprise-connection-in-auth0}
 </div>
 
 Auth0 で Azure AD エンタープライズ接続を作成して設定します。Microsoft Azure portal でアプリを設定する際に生成された **Application (client) ID** と **クライアントシークレット** を必ず用意してください。
@@ -141,19 +141,19 @@ Auth0 で Azure AD エンタープライズ接続を作成して設定します�
    [Azure AD アカウントにログイン](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-permissions-and-consent#requesting-consent-for-an-entire-tenant)して、同意を付与するよう求められます。そうでない場合は、表示された URL を管理者に渡し、管理者が同意を付与できるようにしてください。
 
 <div id="enable-the-enterprise-connection-for-your-auth0-application">
-  ### Auth0 アプリケーションでエンタープライズ接続を有効にする
+  ### Auth0 アプリケーションでエンタープライズ接続を有効にする {#enable-the-enterprise-connection-for-your-auth0-application}
 </div>
 
 新しい Azure AD エンタープライズ接続を使用するには、まず Auth0 アプリケーションで[この接続を有効にする](/docs/ja-jp/authenticate/identity-providers/enterprise-identity-providers/enable-enterprise-connections)必要があります。
 
 <div id="test-the-connection">
-  ### 接続をテストする
+  ### 接続をテストする {#test-the-connection}
 </div>
 
 これで、[接続をテストする](/docs/ja-jp/authenticate/identity-providers/enterprise-identity-providers/test-enterprise-connections)準備ができました。
 
 <div id="troubleshooting">
-  ## トラブルシューティング
+  ## トラブルシューティング {#troubleshooting}
 </div>
 
 トラブルシューティングのヒントをいくつか紹介します。
@@ -171,7 +171,7 @@ Auth0 で Azure AD エンタープライズ接続を作成して設定します�
 このエラーの最も可能性が高い原因は、Azure AD の **クライアントシークレット** が無効か期限切れになっていることです。これを解決するには、Azure AD でアプリ用の新しい **クライアントシークレット** を生成し、Auth0 で設定したエンタープライズ接続の **Client Secret** を更新してください。
 
 <div id="signing-key-rollover-in-azure-ad">
-  ## Azure AD における署名鍵のロールオーバー
+  ## Azure AD における署名鍵のロールオーバー {#signing-key-rollover-in-azure-ad}
 </div>
 
 署名鍵は、<Tooltip tip="アイデンティティプロバイダー（IdP）: デジタルIDを保存および管理するサービス。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=identity+provider">アイデンティティプロバイダー</Tooltip>が発行する認証トークンに署名するために使用され、利用側のアプリケーション (この場合は Auth0) では、生成されたトークンが真正なものかどうかを検証するために使用されます。
@@ -179,7 +179,7 @@ Auth0 で Azure AD エンタープライズ接続を作成して設定します�
 セキュリティ上の理由から、Azure AD の署名鍵は[定期的にロールオーバーされます](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-signing-key-rollover)。この場合でも、**特に対応は必要ありません**。Auth0 は新しいキーを自動的に使用します。
 
 <div id="remove-unverified-label">
-  ## 未確認ラベルを削除する
+  ## 未確認ラベルを削除する {#remove-unverified-label}
 </div>
 
 <Tooltip tip="カスタムドメイン: 特殊な、いわゆるバニティ名を持つサードパーティのドメイン。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=custom+domain">カスタムドメイン</Tooltip>を使用している場合、Azure AD ログインのアプリケーションの同意プロンプトで、ドメインに「未確認」というラベルが表示されることがあります。未確認ラベルを削除するには、次の手順に従います。
@@ -188,7 +188,7 @@ Auth0 で Azure AD エンタープライズ接続を作成して設定します�
 2. 検証済みドメインを Auth0アプリケーションに割り当てます: [方法: アプリケーションのパブリッシャー ドメインを構成する](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-configure-publisher-domain#configure-publisher-domain-using-the-azure-portal)。
 
 <div id="next-steps">
-  ## 次のステップ
+  ## 次のステップ {#next-steps}
 </div>
 
 * [いずれかのライブラリを使ってAuth0と連携する](/docs/ja-jp/libraries)

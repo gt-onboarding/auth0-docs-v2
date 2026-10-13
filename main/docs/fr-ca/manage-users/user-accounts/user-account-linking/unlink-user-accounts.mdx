@@ -31,7 +31,7 @@ Le point de terminaison utilise les paramètres suivants :
 Si votre instance comporte des utilisateurs provenant de plusieurs fournisseurs, vous pouvez aussi inclure `[connection_name]|` avant la chaîne `user_id` pour nommer le fournisseur (par exemple, `"user-id": "google-oauth2|123456789081523216417").`
 
 <div id="response-example">
-  ## Exemple de réponse
+  ## Exemple de réponse {#response-example}
 </div>
 
 ```json lines
@@ -57,7 +57,7 @@ Si votre instance comporte des utilisateurs provenant de plusieurs fournisseurs,
 ```
 
 <div id="use-jwt-from-the-primary-account">
-  ## Utilisez le JWT du compte principal
+  ## Utilisez le JWT du compte principal {#use-jwt-from-the-primary-account}
 </div>
 
 Pour dissocier des comptes, envoyez une requête au [point de terminaison Unlink a User Account](https://auth0.com/docs/api/v2#!/Users/delete_user_identity_by_user_id) de la Management API en utilisant le <Tooltip tip="JSON Web Token (JWT) : format standard d’ID Token (et souvent d’Access Token) utilisé pour représenter des claims de façon sécurisée entre deux parties." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=JWT">JWT</Tooltip> du compte principal pour l’autorisation :
@@ -83,7 +83,7 @@ export const codeExample1 = `function unlinkAccount(secondaryProvider, secondary
 <AuthCodeBlock children={codeExample1} language="javascript" />
 
 <div id="use-access-token-with-the-updateusers-scope">
-  ## Utiliser un jeton d’accès avec la portée `update:users`
+  ## Utiliser un jeton d’accès avec la portée `update:users` {#use-access-token-with-the-updateusers-scope}
 </div>
 
 Si vous devez dissocier au moins deux comptes d’utilisateur, effectuez une requête vers le point de terminaison [Unlink a User Account](https://auth0.com/docs/api/v2#!/Users/delete_user_identity_by_user_id) de la Management API à l’aide d’un [jeton d’accès de la Management API](https://auth0.com/docs/api/v2/tokens) doté de la portée `update:users`.
@@ -114,7 +114,7 @@ function unlinkAccount(secondaryProvider, secondaryUserId) {
 ```
 
 <div id="unlink-accounts-from-server-side-code">
-  ## Dissocier des comptes dans le code côté serveur
+  ## Dissocier des comptes dans le code côté serveur {#unlink-accounts-from-server-side-code}
 </div>
 
 1. Mettez à jour l’utilisateur de la session avec le nouveau tableau d’identités (chacune représentant un compte d’utilisateur distinct).
@@ -172,7 +172,7 @@ module.exports = new Auth0Client();`;
 <AuthCodeBlock children={codeExample2} language="javascript" />
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Lier des comptes d’utilisateurs](/docs/fr-ca/manage-users/user-accounts/user-account-linking/link-user-accounts)

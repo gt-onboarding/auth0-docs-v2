@@ -15,7 +15,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 [Universal Login](/docs/ja-jp/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience) ページに表示されるテキストは、<Tooltip tip="Auth0 Dashboard: サービスを設定するための Auth0 の主要製品です。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip> または <Tooltip tip="Auth0 Dashboard: サービスを設定するための Auth0 の主要製品です。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Management+API">Management API</Tooltip> のいずれかを使用して、サポート対象のすべての言語でカスタマイズできます。以下の定義、値、および変数は、どちらの方法にも共通して適用されます。
 
 <div id="configure-prompts-and-screens">
-  ## プロンプトと画面を設定する
+  ## プロンプトと画面を設定する {#configure-prompts-and-screens}
 </div>
 
 利用可能な[プロンプトと画面](#prompt-values)は、Auth0 Dashboard または [Management API](https://auth0.com/docs/api/management/v2) でカスタマイズできます。
@@ -43,7 +43,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
          指定したプロンプトに対して複数の `screen` 値を設定する場合は、それらをすべて 1 回の Management API 呼び出しに含める必要があります。
        </Warning>
 
-    #### 例
+#### 例 {#example}
 
     Management API の [Set custom text for a specific prompt](https://auth0.com/docs/api/management/v2#!/Prompts/put_custom_text_by_language) エンドポイントを呼び出すことで、`login` プロンプトの `login` 画面の `description` テキストコンポーネントを `Log in to ACME's website` に設定できます。以下に例を示します。
 
@@ -196,7 +196,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
       ```
     </AuthCodeGroup>
 
-    #### プロンプトのカスタムテキストを削除する
+#### プロンプトのカスタムテキストを削除する {#delete-custom-text-for-a-prompt}
 
     プロンプトのカスタムテキストをすべて削除するには、Management API の [Set custom text for a specific prompt](https://auth0.com/docs/api/management/v2#!/Prompts/put_custom_text_by_language) エンドポイントを呼び出し、`body` パラメータに空のオブジェクト (`{}`) を渡してください。
 
@@ -352,7 +352,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 </Tabs>
 
 <div id="supported-parameters">
-  ### サポート対象のパラメータ
+  ### サポート対象のパラメータ {#supported-parameters}
 </div>
 
 | パラメータ      | 説明                                                                                                                                                                             |
@@ -364,7 +364,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 | `text`     | ユーザーに表示されるメッセージです。                                                                                                                                                             |
 
 <div id="prompt-values">
-  ### `prompt` の値
+  ### `prompt` の値 {#prompt-values}
 </div>
 
 `prompt` は、ログインフロー内の特定のステップを指します。各 `prompt` には少なくとも 1 つの `screen` があり、各 `screen` にはカスタマイズ可能なテキストコンポーネントのセットが含まれています。
@@ -373,7 +373,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 
 <AccordionGroup>
   <Accordion title="async-approval-flow">
-    ## 画面: async-approval-error
+## 画面: async-approval-error {#screen-async-approval-error}
 
     <Frame>![async-approval-error の参照スクリーンショット](/docs/images/universal-login/customize-text/async-approval-error.png)</Frame>
 
@@ -386,7 +386,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | このリクエストは別のアカウントに対するものです。続行するには、ログアウトして正しいアカウントでもう一度お試しください。 | `wrong-user-description` |
     | ログアウトしてもう一度お試しください                                          | `wrong-user-link-text`   |
 
-    ## 画面: async-approval-accepted
+## 画面: async-approval-accepted {#screen-async-approval-accepted}
 
     <Frame>![async-approval-accepted の参照スクリーンショット](/docs/images/universal-login/customize-text/async-approval-accepted.png)</Frame>
 
@@ -396,7 +396,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | このウィンドウは閉じてかまいません。 | `description` |
     | リクエストが承認されました      | `eventtitle`  |
 
-    ## 画面: async-approval-denied
+## 画面: async-approval-denied {#screen-async-approval-denied}
 
     <Frame>![async-approval-denied の参照スクリーンショット](/docs/images/universal-login/customize-text/async-approval-denied.png)</Frame>
 
@@ -408,7 +408,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="総当たり攻撃防止">
-    ## 画面: brute-force-protection-unblock
+## 画面: brute-force-protection-unblock {#screen-brute-force-protection-unblock}
 
     <Frame>![brute-force-protection-unblock の参照用スクリーンショット](/docs/images/cdy7uua7fh8z/brute-force-unblock.png)</Frame>
 
@@ -419,7 +419,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 続行                       | `buttonText`  |
     | $&#123;companyName&#125; | `logoAltText` |
 
-    ## 画面: brute-force-protection-unblock-success
+## 画面: brute-force-protection-unblock-success {#screen-brute-force-protection-unblock-success}
 
     <Frame>![brute-force-protection-unblock-success の参照用スクリーンショット](/docs/images/cdy7uua7fh8z/brute-force-unblock-success.png)</Frame>
 
@@ -430,7 +430,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 続行                       | `buttonText`  |
     | $&#123;companyName&#125; | `logoAltText` |
 
-    ## 画面: brute-force-protection-unblock-failure
+## 画面: brute-force-protection-unblock-failure {#screen-brute-force-protection-unblock-failure}
 
     <Frame>![brute-force-protection-unblock-failure の参照用スクリーンショット](/docs/images/cdy7uua7fh8z/brute-force-unblock-fail.png)</Frame>
 
@@ -443,7 +443,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="CAPTCHA">
-    ## 画面: interstitial-captcha
+## 画面: interstitial-captcha {#screen-interstitial-captcha}
 
     <Frame>![interstitial-captcha のスクリーンショット](/docs/images/universal-login/customize-text/captcha.png)</Frame>
 
@@ -462,7 +462,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="共通">
-    ## 画面: redeem-ticket
+## 画面: redeem-ticket {#screen-redeem-ticket}
 
     <Frame>![redeem-ticket の参考スクリーンショット](/docs/images/cdy7uua7fh8z/7H4DS8I8fnlUgtS4ttpMyK/90006ee36032cc1ee3d9674fe6bcf575/redeem-ticket.png)</Frame>
 
@@ -474,7 +474,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="同意">
-    ## 画面: 同意
+## 画面: 同意 {#screen-consent}
 
     <Frame>![consent の参照スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/consent.png)</Frame>
 
@@ -495,7 +495,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="カスタムフォーム">
-    ## 画面: custom-form
+## 画面: custom-form {#screen-custom-form}
 
     <Frame>![カスタムフォームのスクリーンショット](/docs/images/universal-login/customize-text/custom-form.png)</Frame>
 
@@ -505,7 +505,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="デバイスフロー">
-    ## 画面: device-code-activation
+## 画面: device-code-activation {#screen-device-code-activation}
 
     <Frame>![device-code-activation 参照用スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/device-code-activation.png)</Frame>
 
@@ -521,7 +521,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | デバイスに表示されているコードを入力してください                          | `no-code`              |
     | 入力したコードは無効です                                      | `invalid-code`         |
 
-    ## 画面: device-code-activation-allowed
+## 画面: device-code-activation-allowed {#screen-device-code-activation-allowed}
 
     <Frame>![device-code-activation-allowed 参照用スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/device-code-activation-allowed.png)</Frame>
 
@@ -531,7 +531,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | デバイスが接続されました。                         | `description` |
     | これで準備完了です！                            | `eventTitle`  |
 
-    ## 画面: device-code-activation-denied
+## 画面: device-code-activation-denied {#screen-device-code-activation-denied}
 
     <Frame>![device-code-activation-denied 参照用スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/device-code-activation-denied.png)</Frame>
 
@@ -541,7 +541,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | デバイスを有効化できませんでした。                | `description` |
     | 有効化は拒否されました                      | `eventTitle`  |
 
-    ## 画面: device-code-confirmation
+## 画面: device-code-confirmation {#screen-device-code-confirmation}
 
     <Frame>![device-code-confirmation 参照用スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/device-code-confirmation.png)</Frame>
 
@@ -558,7 +558,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="メール-識別子-チャレンジ">
-    ## 画面: email-identifier-challenge
+## 画面: email-identifier-challenge {#screen-email-identifier-challenge}
 
     <Frame>![email-identifier-challenge 参照スクリーンショット](/docs/images/universal-login/customize-text/email-identifier-challenge.png)</Frame>
 
@@ -599,7 +599,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="メール-OTP-確認">
-    ## 画面: email-otp-challenge
+## 画面: email-otp-challenge {#screen-email-otp-challenge}
 
     <Frame>![email-otp-challenge の参照用スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/email-otp-challenge.png)</Frame>
 
@@ -621,7 +621,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="メール確認">
-    ## 画面: email-verification-result
+## 画面: email-verification-result {#screen-email-verification-result}
 
     <Frame>![email-verification-result の参照用スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/email-verification-result.png)</Frame>
 
@@ -642,7 +642,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="招待">
-    ## 画面: accept-invitation
+## 画面: accept-invitation {#screen-accept-invitation}
 
     <Frame>![accept-invitation の参考スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/accept-invitation.png)</Frame>
 
@@ -656,7 +656,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="ログイン">
-    ## 画面: login
+## 画面: login {#screen-login}
 
     <Frame>![login の参照用スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/login.png)</Frame>
 
@@ -712,7 +712,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="ログインID">
-    ## 画面: login-id
+## 画面: login-id {#screen-login-id}
 
     <Frame>![login-id reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/login-id.png)</Frame>
 
@@ -779,7 +779,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="ログイン-パスワード">
-    ## 画面: login-password
+## 画面: login-password {#screen-login-password}
 
     <Frame>![login-password リファレンス スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/login-password.png)</Frame>
 
@@ -831,7 +831,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="ログイン-パスワードレス">
-    ## 画面: login-passwordless-email-code
+## 画面: login-passwordless-email-code {#screen-login-passwordless-email-code}
 
     <Frame>![login-passwordless-email-code 参照スクリーンショット](/docs/images/cdy7uua7fh8z/6zazshkUI5sdFDd2Fgbo6w/0193e17673250b5293d9581e34316c20/login-passwordless-email-code.png)</Frame>
 
@@ -849,7 +849,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | コードを送信できませんでした。後でもう一度お試しください。                   | `passwordless-authenticator-error` |
     | 問題が発生しました。後でもう一度お試しください。                        | `passwordless-unknown-error`       |
 
-    ## 画面: login-passwordless-email-link
+## 画面: login-passwordless-email-link {#screen-login-passwordless-email-link}
 
     <Frame>![login-passwordless-email-link 参照スクリーンショット](/docs/images/cdy7uua7fh8z/7EcEUmoEPC6GVgJjNyTugr/e160cb40af3a0c748ba1f9fe2307488b/login-passwordless-email-link.png)</Frame>
 
@@ -861,7 +861,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | メールを送信しました。受信トレイでログインリンクを確認してください。   | `description`             |
     | 後でもう一度お試しください。                       | `unknownErrorDescription` |
 
-    ## 画面: login-passwordless-sms-otp
+## 画面: login-passwordless-sms-otp {#screen-login-passwordless-sms-otp}
 
     <Frame>![login-passwordless-sms-otp 参照スクリーンショット](/docs/images/cdy7uua7fh8z/5dk4vZpc06UojLdnelUInO/f5fb02e0adeeceaa1b8ce6eef8151bc2/login-passwordless-sms-otp.png)</Frame>
 
@@ -882,7 +882,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="login-email-verification">
-    ## 画面: login-email-verification
+## 画面: login-email-verification {#screen-login-email-verification}
 
     <Frame>![login-email-verification 参照スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/login-email-verification.png)</Frame>
 
@@ -904,7 +904,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="ログアウト">
-    ## 画面: logout
+## 画面: logout {#screen-logout}
 
     <Frame>![logout の参照スクリーンショット](/docs/images/cdy7uua7fh8z/2lXg143oKAF4OlIilbwDCK/d770603ba5203adff07cf4e23e4fcbbb/logout.png)</Frame>
 
@@ -920,7 +920,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="多要素認証">
-    ## 画面: mfa-detect-browser-capabilities
+## 画面: mfa-detect-browser-capabilities {#screen-mfa-detect-browser-capabilities}
 
     <Frame>![mfa-detect-browser-capabilities reference screenshot](/docs/images/cdy7uua7fh8z/2D7DbdMRJ7SdwxEzOYYsLX/595c1436aaa38ed342137c4a5227f4b0/mfa-detect-browser-capabilities.png)</Frame>
 
@@ -931,7 +931,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | JavaScript が必要です                                                 | `noJSErrorTitle`        |
     | お使いのブラウザーでは JavaScript が有効になっていません。有効にしてから、ページの再読み込みボタンを押してください。 | `noJSErrorDescription`  |
 
-    ## 画面: mfa-enroll-result
+## 画面: mfa-enroll-result {#screen-mfa-enroll-result}
 
     <Frame>![mfa-enroll-result reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-enroll-result.png)</Frame>
 
@@ -949,7 +949,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 二要素認証はすでに有効です。                                  | `alreadyEnrolledDescription` |
     | 問題が発生しました                                       | `genericError`               |
 
-    ## 画面: mfa-login-options
+## 画面: mfa-login-options {#screen-mfa-login-options}
 
     <Frame>![mfa-login-options reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-login-options.png)</Frame>
 
@@ -969,7 +969,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | セキュリティキー                          | `authenticatorNamesWebauthnRoaming`  |
     | 指紋認証または顔認証                        | `authenticatorNamesWebauthnPlatform` |
 
-    ## 画面: mfa-begin-enroll-options
+## 画面: mfa-begin-enroll-options {#screen-mfa-begin-enroll-options}
 
     <Frame>![mfa-begin-enroll-options reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-begin-enroll-options.png)</Frame>
 
@@ -993,7 +993,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="mfa-email">
-    ## 画面: mfa-email-challenge
+## 画面: mfa-email-challenge {#screen-mfa-email-challenge}
 
     <Frame>![mfa-email-challenge の参照スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-email-challenge.png)</Frame>
 
@@ -1019,7 +1019,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | メールを送信できませんでした。しばらくしてからもう一度お試しください。               | `mfa-email-challenge-authenticator-error` |
     | コードを入力してください                                      | `no-code`                                 |
 
-    ## 画面: mfa-email-list
+## 画面: mfa-email-list {#screen-mfa-email-list}
 
     <Frame>![mfa-email-list の参照スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-email-list.png)</Frame>
 
@@ -1031,7 +1031,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="MFA-OTP">
-    ## 画面: mfa-otp-enrollment-qr
+## 画面: mfa-otp-enrollment-qr {#screen-mfa-otp-enrollment-qr}
 
     <Frame>![mfa-otp-enrollment-qr 参照スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-otp-enrollment-qr.png)</Frame>
 
@@ -1053,7 +1053,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | すでにMFAに登録済みです。                                               | `user-already-enrolled`   |
     | コードを入力してください                                                 | `no-code`                 |
 
-    ## 画面: mfa-otp-enrollment-code
+## 画面: mfa-otp-enrollment-code {#screen-mfa-otp-enrollment-code}
 
     <Frame>![mfa-otp-enrollment-code 参照スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-otp-enrollment-code.png)</Frame>
 
@@ -1073,7 +1073,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 登録トランザクションの有効期限が切れました。最初からやり直してください。                        | `transaction-not-found` |
     | コードを入力してください                                                | `no-code`               |
 
-    ## 画面: mfa-otp-challenge
+## 画面: mfa-otp-challenge {#screen-mfa-otp-challenge}
 
     <Frame>![mfa-otp-challenge 参照スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-otp-challenge.png)</Frame>
 
@@ -1095,7 +1095,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="mfa-phone">
-    ## 画面: mfa-phone-challenge
+## 画面: mfa-phone-challenge {#screen-mfa-phone-challenge}
 
     <Frame>![mfa-phone-challenge の参照スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-phone-challenge.png)</Frame>
 
@@ -1121,7 +1121,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 登録処理の有効期限が切れました。最初からやり直してください。               | `transaction-not-found` |
     | 電話番号を入力してください                                | `no-phone`              |
 
-    ## 画面: mfa-phone-enrollment
+## 画面: mfa-phone-enrollment {#screen-mfa-phone-enrollment}
 
     <Frame>![mfa-phone-enrollment の参照スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-phone-enrollment.png)</Frame>
 
@@ -1149,7 +1149,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="MFA-プッシュ">
-    ## 画面: mfa-push-welcome
+## 画面: mfa-push-welcome {#screen-mfa-push-welcome}
 
     <Frame>![mfa-push-welcome の参照スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-push-welcome.png)</Frame>
 
@@ -1164,7 +1164,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 別の方法を試す                                                         | `pickAuthenticatorText` |
     | $&#123;companyName&#125;                                        | `logoAltText`           |
 
-    ## 画面: mfa-push-enrollment-qr
+## 画面: mfa-push-enrollment-qr {#screen-mfa-push-enrollment-qr}
 
     <Frame>![mfa-push-enrollment-qr の参照スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-push-enrollment-qr.png)</Frame>
 
@@ -1178,7 +1178,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | $&#123;companyName&#125;                                       | `logoAltText`                    |
     | モバイルデバイスの $&#123;appName&#125; アプリで QR コードをスキャンする必要があります。      | `enrollment-transaction-pending` |
 
-    ## 画面: mfa-push-challenge-push
+## 画面: mfa-push-challenge-push {#screen-mfa-push-challenge-push}
 
     <Frame>![mfa-push-challenge-push の参照スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-push-challenge-push.png)</Frame>
 
@@ -1204,7 +1204,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 通知を送信できませんでした。しばらくしてからもう一度お試しください。                 | `mfa-push-challenge-authenticator-error` |
     | 通知は拒否されました                                         | `transaction-rejected`                   |
 
-    ## 画面: mfa-push-list
+## 画面: mfa-push-list {#screen-mfa-push-list}
 
     <Frame>![mfa-push-list の参照スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-push-list.png)</Frame>
 
@@ -1216,7 +1216,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="MFA-リカバリーコード">
-    ## 画面: mfa-recovery-code-enrollment
+## 画面: mfa-recovery-code-enrollment {#screen-mfa-recovery-code-enrollment}
 
     <Frame>![mfa-recovery-code-enrollment 参照スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-recovery-code-enrollment.png)</Frame>
 
@@ -1232,7 +1232,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | $&#123;companyName&#125;                                     | `logoAltText`        |
     | コードを記録したことを確認してください                                          | `no-confirmation`    |
 
-    ## 画面: mfa-recovery-code-challenge
+## 画面: mfa-recovery-code-challenge {#screen-mfa-recovery-code-challenge}
 
     <Frame>![mfa-recovery-code-challenge 参照スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-recovery-code-challenge.png)</Frame>
 
@@ -1254,7 +1254,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="mfa-sms">
-    ## 画面: mfa-country-codes
+## 画面: mfa-country-codes {#screen-mfa-country-codes}
 
     <Frame>![mfa-country-codes reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-country-codes.png)</Frame>
 
@@ -1264,7 +1264,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 戻る                             | `backText`  |
     | 国番号を選択                         | `title`     |
 
-    ## 画面: mfa-sms-enrollment
+## 画面: mfa-sms-enrollment {#screen-mfa-sms-enrollment}
 
     <Frame>![mfa-sms-enrollment reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-sms-enrollment.png)</Frame>
 
@@ -1285,7 +1285,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 登録処理の有効期限が切れました。もう一度最初からやり直してください。                    | `transaction-not-found`   |
     | 電話番号を入力してください                                         | `no-phone`                |
 
-    ## 画面: mfa-sms-challenge
+## 画面: mfa-sms-challenge {#screen-mfa-sms-challenge}
 
     <Frame>![mfa-sms-challenge reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-sms-challenge.png)</Frame>
 
@@ -1316,7 +1316,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 登録トランザクションの有効期限が切れたため、最初からやり直してください。                  | `transaction-not-found`                |
     | コードを入力してください                                          | `no-code`                              |
 
-    ## 画面: mfa-sms-list
+## 画面: mfa-sms-list {#screen-mfa-sms-list}
 
     <Frame>![mfa-sms-list reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-sms-list.png)</Frame>
 
@@ -1328,7 +1328,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="mfa-voice">
-    ## 画面: mfa-voice-enrollment
+## 画面: mfa-voice-enrollment {#screen-mfa-voice-enrollment}
 
     <Frame>![mfa-voice-enrollment 参考スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-voice-enrollment.png)</Frame>
 
@@ -1348,7 +1348,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 登録処理の有効期限が切れました。最初からやり直してください。                                  | `transaction-not-found` |
     | 電話番号を入力してください                                                   | `no-phone`              |
 
-    ## 画面: mfa-voice-challenge
+## 画面: mfa-voice-challenge {#screen-mfa-voice-challenge}
 
     <Frame>![mfa-voice-challenge 参考スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-voice-challenge.png)</Frame>
 
@@ -1382,7 +1382,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="mfa-webauthn">
-    ## 画面: mfa-webauthn-platform-enrollment
+## 画面: mfa-webauthn-platform-enrollment {#screen-mfa-webauthn-platform-enrollment}
 
     <Frame>![mfa-webauthn-enrollment reference screenshot](/docs/images/universal-login/text-customization/mfa-webauth-platform-enrollment.png)</Frame>
 
@@ -1400,7 +1400,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 今はしない                                                      | `skipAddingDeviceText`              |
     | デバイスの登録を開始できませんでした。しばらくしてからもう一度お試しください。                    | `webauthn-platform-associate-error` |
 
-    ## 画面: mfa-webauthn-roaming-enrollment
+## 画面: mfa-webauthn-roaming-enrollment {#screen-mfa-webauthn-roaming-enrollment}
 
     <Frame>![mfa-webauthn-guidance-enrollment 参照スクリーンショット](/docs/images/universal-login/text-customization/mfa-webauth-roaming-enrollment.png)</Frame>
 
@@ -1418,7 +1418,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 後で見分けやすいように、Security Keyに名前を付けてください。            | `instructions3`            |
     | security keyの登録を開始できませんでした。しばらくしてからもう一度お試しください。 | `webauthn-associate-error` |
 
-    ## 画面: mfa-webauthn-platform-challenge
+## 画面: mfa-webauthn-platform-challenge {#screen-mfa-webauthn-platform-challenge}
 
     <Frame>![mfa-webauthn-challenge-user-initiated 参照スクリーンショット](/docs/images/universal-login/text-customization/mfa-webauth-platform-challenge.png)</Frame>
 
@@ -1435,7 +1435,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | このデバイスを30日間記憶する                          | `rememberMeText`                             |
     | デバイスの認証を開始できませんでした。しばらくしてからもう一度お試しください。  | `webauthn-platform-challenge-error`          |
 
-    ## 画面: mfa-webauthn-roaming-challenge
+## 画面: mfa-webauthn-roaming-challenge {#screen-mfa-webauthn-roaming-challenge}
 
     <Frame>![mfa-webauthn-challenge-user-initiated reference screenshot](/docs/images/universal-login/text-customization/mfa-webauth-roaming-challenge.png)</Frame>
 
@@ -1452,7 +1452,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | このデバイスを30日間記憶する                                | `rememberMeText`                             |
     | セキュリティキーの認証を開始できませんでした。後でもう一度お試しください。          | `webauthn-challenge-error`                   |
 
-    ## 画面: mfa-webauthn-change-key-nickname
+## 画面: mfa-webauthn-change-key-nickname {#screen-mfa-webauthn-change-key-nickname}
 
     <Frame>![mfa-webauthn-change-key-nickname reference screenshot](/docs/images/universal-login/text-customization/mfa-webauth-change-key-nickname.png)</Frame>
 
@@ -1476,7 +1476,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 情報の取得中にエラーが発生しました。もう一度お試しください。                | `error-while-retrieving-authenticator`   |
     | 名前の保存中にエラーが発生しました。もう一度お試しください。                | `error-while-patching`                   |
 
-    ## 画面: mfa-webauthn-enrollment-success
+## 画面: mfa-webauthn-enrollment-success {#screen-mfa-webauthn-enrollment-success}
 
     <Frame>![mfa-webauthn-enrollment-success reference screenshot](/docs/images/universal-login/text-customization/mfa-webauthn-enrollment-success.png)</Frame>
 
@@ -1489,7 +1489,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 続行                                           | `buttonText`          |
     | $&#123;companyName&#125;                     | `logoAltText`         |
 
-    ## 画面: mfa-webauthn-error
+## 画面: mfa-webauthn-error {#screen-mfa-webauthn-error}
 
     <Frame>![mfa-webauthn-error reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-webauthn-error.png)</Frame>
 
@@ -1506,7 +1506,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 結構です                                                   | `refuseAddingAuthenticatorText` |
     | パスワードを使用                                               | `usePasswordText`               |
 
-    ## 画面: mfa-webauthn-not-available-error
+## 画面: mfa-webauthn-not-available-error {#screen-mfa-webauthn-not-available-error}
 
     <Frame>![mfa-webauthn-not-available-error reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-webauthn-not-available-error.png)</Frame>
 
@@ -1520,7 +1520,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="組織">
-    ## 画面: organization-selection
+## 画面: organization-selection {#screen-organization-selection}
 
     <Frame>![organization-selection の参照スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/organization-selection.png)</Frame>
 
@@ -1534,7 +1534,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | $&#123;companyName&#125;                                 | `logoAltText`          |
     | 入力した organization は無効です                                  | `invalid-organization` |
 
-    ## 画面: organization-picker
+## 画面: organization-picker {#screen-organization-picker}
 
     <Frame>![organization-picker の参照スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/organization-picker-rev2.png)</Frame>
 
@@ -1551,7 +1551,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="パスワードのリセット">
-    ## 画面: reset-password-request
+## 画面: reset-password-request {#screen-reset-password-request}
 
     <Frame>![reset-password-request reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-request.png)</Frame>
 
@@ -1594,7 +1594,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 入力されたLogin IDが無効です                                       | `invalid-login-id`                     |
     | 有効なメールアドレスまたは電話番号を入力してください。電話番号には国番号を含める必要があります。         | `invalid-email-phone`                  |
 
-    ## 画面: reset-password-email
+## 画面: reset-password-email {#screen-reset-password-email}
 
     <Frame>![reset-password-email reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-email.png)</Frame>
 
@@ -1607,7 +1607,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | メールを再送する                                                                                                                   | `resendLinkText`                       |
     | ユーザー名 &lt;%= &quot;$ に紐づいているメールアドレスをご確認ください{メール}パスワードをリセットする手順については、ユーザー名 {"<%= \"${email}\" %>"} に関連付けられたメールアドレスをご確認ください。 | `usernameDescription`                  |
 
-    ## 画面: reset-password
+## 画面: reset-password {#screen-reset-password}
 
     <Frame>![reset-passwordリファレンススクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password.png)</Frame>
 
@@ -1635,7 +1635,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | この資格情報の組み合わせは、別のウェブサイトで発生した公開データ侵害で検出されました。続行するには、アカウントの安全を確保するため、別のパスワードを使用してください。 | `password-breached-reset`              |
     | パスワードが一致しません                                                                        | `password-mismatch`                    |
 
-    ## 画面: reset-password-success
+## 画面: reset-password-success {#screen-reset-password-success}
 
     <Frame>![reset-password-success reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-success.png)</Frame>
 
@@ -1646,7 +1646,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | パスワードは正常に変更されました。                          | `description`                          |
     | &lt;%= &quot;$ に戻る{clientName}&quot; %&gt; | `buttonText`                           |
 
-    ## 画面: reset-password-error
+## 画面: reset-password-error {#screen-reset-password-error}
 
     <Frame>![reset-password-error reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-error.png)</Frame>
 
@@ -1666,7 +1666,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 問題が発生しました。しばらくしてからもう一度お試しください                                                                      | `auth0-users-validation`               |
     | メールの送信中に問題が発生しました。しばらくしてからもう一度お試しください。                                                             | `reset-password-error`                 |
 
-    ## 画面: reset-password-mfa-email-challenge
+## 画面: reset-password-mfa-email-challenge {#screen-reset-password-mfa-email-challenge}
 
     <Frame>![reset-password-mfa-email-challenge reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-mfa-email-challenge.png)</Frame>
 
@@ -1691,7 +1691,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 登録のトランザクションの有効期限が切れたため、最初からやり直す必要があります。           | `transaction-not-found`                   |
     | メールを送信できませんでした。しばらくしてからもう一度お試しください。               | `mfa-email-challenge-authenticator-error` |
 
-    ## 画面: reset-password-mfa-otp-challenge
+## 画面: reset-password-mfa-otp-challenge {#screen-reset-password-mfa-otp-challenge}
 
     <Frame>![reset-password-mfa-otp-challenge reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-mfa-otp-challenge.png)</Frame>
 
@@ -1710,7 +1710,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | コードの入力に何度も失敗しました。数分待ってからもう一度お試しください。              | `too-many-failures`                    |
     | 登録処理の有効期限が切れました。もう一度最初からやり直してください。                | `transaction-not-found`                |
 
-    ## 画面: reset-password-mfa-phone-challenge
+## 画面: reset-password-mfa-phone-challenge {#screen-reset-password-mfa-phone-challenge}
 
     <Frame>![reset-password-mfa-phone-challenge reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-mfa-phone-challenge.png)</Frame>
 
@@ -1736,7 +1736,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 登録トランザクションの有効期限が切れたため、最初からやり直す必要があります。            | `transaction-not-found`                |
     | 電話番号を入力してください                                     | `no-phone`                             |
 
-    ## 画面: reset-password-mfa-push-challenge-push
+## 画面: reset-password-mfa-push-challenge-push {#screen-reset-password-mfa-push-challenge-push}
 
     <Frame>![reset-password-mfa-push-challenge-push reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-mfa-push-challenge-push.png)</Frame>
 
@@ -1762,7 +1762,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 通知を送信できませんでした。後でもう一度お試しください。                                                                                            | `mfa-push-challenge-authenticator-error` |
     | 通知が拒否されました                                                                                                              | `transaction-rejected`                   |
 
-    ## 画面: reset-password-mfa-recovery-code-challenge
+## 画面: reset-password-mfa-recovery-code-challenge {#screen-reset-password-mfa-recovery-code-challenge}
 
     <Frame>![reset-password-mfa-recovery-code-challenge reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-mfa-recovery-code-challenge.png)</Frame>
 
@@ -1782,7 +1782,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | コードの入力に何度も失敗しました。数分待ってから再試行してください。                | `too-many-failures`                    |
     | 登録トランザクションの有効期限が切れたため、最初からやり直す必要があります。            | `transaction-not-found`                |
 
-    ## 画面: reset-password-mfa-sms-challenge
+## 画面: reset-password-mfa-sms-challenge {#screen-reset-password-mfa-sms-challenge}
 
     <Frame>![reset-password-mfa-sms-challenge reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-mfa-sms-challenge.png)</Frame>
 
@@ -1812,7 +1812,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 1時間あたりの電話メッセージの送信上限を超えました。数分待ってからもう一度お試しください。     | `too-many-sms`                         |
     | 登録トランザクションの有効期限が切れたため、最初からやり直す必要があります。            | `transaction-not-found`                |
 
-    ## 画面: reset-password-mfa-voice-challenge
+## 画面: reset-password-mfa-voice-challenge {#screen-reset-password-mfa-voice-challenge}
 
     <Frame>![reset-password-mfa-voice-challenge reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-mfa-voice-challenge.png)</Frame>
 
@@ -1843,7 +1843,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | 1時間あたりの電話メッセージの上限を超えました。数分待ってからもう一度お試しください。       | `too-many-voice`                       |
     | 登録トランザクションの有効期限が切れたため、最初からやり直してください。              | `transaction-not-found`                |
 
-    ## 画面: reset-password-mfa-webauthn-platform-challenge
+## 画面: reset-password-mfa-webauthn-platform-challenge {#screen-reset-password-mfa-webauthn-platform-challenge}
 
     <Frame>![reset-password-mfa-webauthn-platform-challenge reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-mfa-webauthn-platform-challenge.png)</Frame>
 
@@ -1861,7 +1861,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
     | このデバイスを30日間記憶する                                   | `rememberMeText`                             |
     | デバイスの確認を開始できませんでした。しばらくしてからもう一度お試しください。           | `webauthn-platform-challenge-error`          |
 
-    ## 画面: reset-password-mfa-webauthn-roaming-challenge
+## 画面: reset-password-mfa-webauthn-roaming-challenge {#screen-reset-password-mfa-webauthn-roaming-challenge}
 
     <Frame>![reset-password-mfa-webauthn-roaming-challenge reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-mfa-webauthn-roaming-challenge.png)</Frame>
 
@@ -1880,7 +1880,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="パスキー-登録">
-    ## 画面: passkey-enrollment
+## 画面: passkey-enrollment {#screen-passkey-enrollment}
 
     <Frame>![passkey-enrollment の参照スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/passkey-enrollment.png)</Frame>
 
@@ -1915,7 +1915,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="パスキー-登録-ローカル">
-    ## 画面: passkey-enrollment-local
+## 画面: passkey-enrollment-local {#screen-passkey-enrollment-local}
 
     <Frame>![passkey-enrollment-local の参考スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/passkey-enrollment-local.png)</Frame>
 
@@ -1938,7 +1938,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="phone-識別子-チャレンジ">
-    ## 画面: phone-identifier-challenge
+## 画面: phone-identifier-challenge {#screen-phone-identifier-challenge}
 
     <Frame>![phone-identifier-challenge 参照スクリーンショット](/docs/images/cdy7uua7fh8z/CustomizeULTemplate/phone-identifier-challenge.png)</Frame>
 
@@ -1974,7 +1974,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="phone-識別子-登録">
-    ## 画面: phone-identifier-enrollment
+## 画面: phone-identifier-enrollment {#screen-phone-identifier-enrollment}
 
     <Frame>![phone-identifier-enrollment 参照スクリーンショット](/docs/images/cdy7uua7fh8z/CustomizeULTemplate/Phone-identifier-enrollment.png)</Frame>
 
@@ -2002,7 +2002,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="新規登録">
-    ## 画面: signup
+## 画面: signup {#screen-signup}
 
     <Frame><Frame>![サインアップ参照スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/signup.png)</Frame></Frame>
 
@@ -2059,7 +2059,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="signup-id">
-    ## 画面: signup-id
+## 画面: signup-id {#screen-signup-id}
 
     <Frame>![signup-id 参照スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/signup-id.png)</Frame>
 
@@ -2111,7 +2111,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="サインアップ-パスワード">
-    ## 画面: signup-password
+## 画面: signup-password {#screen-signup-password}
 
     <Frame>![signup-password 参照スクリーンショット](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/signup-password.png)</Frame>
 
@@ -2175,7 +2175,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   </Accordion>
 
   <Accordion title="ステータス">
-    ## 画面: status
+## 画面: status {#screen-status}
 
     <Frame>![status の参照スクリーンショット](/docs/images/cdy7uua7fh8z/6sVCv5Bq3QI0rhe21wzU8E/universal-login-text-prompt-status.png)</Frame>
 
@@ -2193,7 +2193,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 </AccordionGroup>
 
 <div id="variables">
-  ## 変数
+  ## 変数 {#variables}
 </div>
 
 一部の画面では、テキスト内の変数がコンテキスト情報に応じて実行時に置き換えられます。画面ごとに使用できる変数は異なるため、ある変数が元の画面以外でも使用できるとは限りません。
@@ -2210,7 +2210,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 | $&#123;appName&#125;          | カスタム Guardian プッシュ アプリケーション名                          |
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * [Universal Login エクスペリエンス](/docs/ja-jp/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience)

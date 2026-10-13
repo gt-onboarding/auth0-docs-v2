@@ -16,7 +16,7 @@ Lock offre de nombreuses méthodes, fonctionnalités et options configurables. C
 * [logout()](#logout-) - Déconnecter l’utilisateur
 
 <div id="auth0lock">
-  ## Auth0Lock
+  ## Auth0Lock {#auth0lock}
 </div>
 
 `new Auth0Lock(clientID, domain, options)`
@@ -67,7 +67,7 @@ export const codeExample1 = `var Auth = (function() {
 <AuthCodeBlock children={codeExample1} language="js" />
 
 <div id="getuserinfo">
-  ## getUserInfo()
+  ## getUserInfo() {#getuserinfo}
 </div>
 
 `getUserInfo(accessToken, callback)`
@@ -86,7 +86,7 @@ lock.getUserInfo(accessToken, function(error, profile) {
 ```
 
 <div id="show">
-  ## show()
+  ## show() {#show}
 </div>
 
 `show(options)`
@@ -123,7 +123,7 @@ Les options doivent être définies lors de la première initialisation de Lock 
 Il existe aussi une option supplémentaire qui peut être définie dans la méthode `show`, appelée `flashMessage`.
 
 <div id="flashmessage">
-  ### message flash
+  ### message flash {#flashmessage}
 </div>
 
 Cet objet est offert uniquement comme option pour la méthode `show`, et non dans l’objet `options` habituel lors de l’instanciation de Lock. L’objet `flashMessage` affiche un message flash d’erreur ou de réussite lorsque Lock s’affiche. Il comporte les paramètres suivants :
@@ -156,7 +156,7 @@ lock.on('authorization_error', function(error) {
 Donc, si `tester@example.com` tentait maintenant de se connecter alors qu’il s’agit d’un utilisateur bloqué, Lock s’afficherait de nouveau, avec une barre supérieure affichant le message d’erreur, au lieu que la connexion échoue simplement et que Lock se ferme.
 
 <div id="hide">
-  ## hide()
+  ## hide() {#hide}
 </div>
 
 `hide()`
@@ -176,7 +176,7 @@ lock.on("authenticated", function() {
 ```
 
 <div id="on">
-  ## on()
+  ## on() {#on}
 </div>
 
 Lock émet des événements tout au long de son cycle de vie. La méthode `on` peut être utilisée pour écouter certains événements et y réagir.
@@ -241,7 +241,7 @@ export const codeExample2 = `var Auth = (function() {
 <AuthCodeBlock children={codeExample2} language="js" />
 
 <div id="resumeauth">
-  ## resumeAuth()
+  ## resumeAuth() {#resumeauth}
 </div>
 
 Cette méthode ne peut être utilisée que si vous définissez l’option [auth.autoParseHash](/docs/fr-ca/libraries/lock/lock-configuration) à `false`. Vous devrez appeler `resumeAuth` pour terminer le flux d’authentification. Cette méthode est utile si vous utilisez un routeur côté client qui se sert d’un `#` pour gérer les URL (angular2 avec `useHash` ou react-router avec `hashHistory`).
@@ -260,7 +260,7 @@ lock.resumeAuth(hash, function(error, authResult) {
 ```
 
 <div id="checksession">
-  ## checkSession()
+  ## checkSession() {#checksession}
 </div>
 
 La méthode `checkSession` vous permet d’obtenir un nouveau token auprès d’Auth0 pour un utilisateur déjà authentifié auprès d’Auth0 pour votre domaine. Elle accepte les paramètres suivants :
@@ -275,7 +275,7 @@ lock.checkSession({}, function(err, authResult) {
 ```
 
 <div id="logout">
-  ## logout()
+  ## logout() {#logout}
 </div>
 
 Déconnecte l’utilisateur.

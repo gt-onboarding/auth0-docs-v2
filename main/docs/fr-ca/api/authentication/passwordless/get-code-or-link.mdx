@@ -4,7 +4,7 @@ description: "Envoyez un code à usage unique ou un Magic Link à l’adresse co
 ---
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `POST /passwordless/start`
@@ -18,7 +18,7 @@ Vous avez trois options pour l’[authentification sans mot de passe](https://au
 * Envoyer un code de vérification par SMS.
 
 <div id="remarks">
-  ### Remarques
+  ### Remarques {#remarks}
 </div>
 
 * Si vous avez envoyé un code de vérification, par courriel ou par SMS, une fois le code reçu, vous devez authentifier l’utilisateur à l’aide du [point de terminaison /passwordless/verify](/passwordless/authenticate-user), en utilisant `email` ou `phone_number` comme `username`, et le code de vérification comme `password`.
@@ -26,20 +26,20 @@ Vous avez trois options pour l’[authentification sans mot de passe](https://au
 * L’exemple de script auth0.js utilise la version 8 de la bibliothèque. Si vous utilisez la version 7 d’auth0.js, veuillez consulter ce [guide de référence](/libraries/auth0js/v7).
 
 <div id="error-codes">
-  ### Codes d’erreur
+  ### Codes d’erreur {#error-codes}
 </div>
 
 Pour consulter la référence complète des codes d’erreur pour ce point de terminaison, voir [Errors &gt; POST /passwordless/start](#post-passwordless-start).
 
 <div id="learn-more">
-  ### Pour en savoir plus
+  ### Pour en savoir plus {#learn-more}
 </div>
 
 * [Authentification sans mot de passe](https://auth0.com/docs/authenticate/passwordless)
 * [Pratiques exemplaires pour l’authentification sans mot de passe](https://auth0.com/docs/authenticate/passwordless/best-practices)
 
 <div id="body-parameters">
-  ## Paramètres du corps
+  ## Paramètres du corps {#body-parameters}
 </div>
 
 <ParamField body="client_id" type="string" required>
@@ -93,7 +93,7 @@ Pour consulter la référence complète des codes d’erreur pour ce point de te
 </ParamField>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                                       |

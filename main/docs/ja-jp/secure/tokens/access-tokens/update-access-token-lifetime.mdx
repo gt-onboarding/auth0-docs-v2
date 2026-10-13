@@ -6,7 +6,7 @@ title: アクセストークンの有効期間を更新する
 <Tooltip tip="Access Token: API へのアクセスに使用される、不透明な文字列または JWT 形式の認可情報。" cta="用語集を表示" href="/docs/ja-jp/glossary?term=access+token">アクセストークン</Tooltip>の有効期間は、<Tooltip tip="Access Token: API へのアクセスに使用される、不透明な文字列または JWT 形式の認可情報。" cta="用語集を表示" href="/docs/ja-jp/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip> で変更できます。
 
 <div id="configure-access-token-lifetime">
-  ## アクセストークンの有効期間を設定する
+  ## アクセストークンの有効期間を設定する {#configure-access-token-lifetime}
 </div>
 
 1. [Auth0 Dashboard &gt; アプリケーション &gt; APIs](https://manage.auth0.com/#/apis) に移動し、対象の API 名を選択します。
@@ -22,7 +22,7 @@ title: アクセストークンの有効期間を更新する
 4. **Save Changes** を選択します。
 
 <div id="token-expiration-for-browser-flows">
-  ## ブラウザフローにおけるトークンの有効期限
+  ## ブラウザフローにおけるトークンの有効期限 {#token-expiration-for-browser-flows}
 </div>
 
 **Implicit / Hybrid Flow Access Token Lifetime** フィールドは、implicit フローおよび hybrid フローを通じて API 向けに発行されるアクセストークンを指し、ブラウザから開始されるすべてのフローを対象としているわけではありません。
@@ -30,13 +30,13 @@ title: アクセストークンの有効期間を更新する
 たとえば、PKCE フロー (`auth0-js-spa` SDK で使用) はブラウザから開始できますが、参照されるのは **Implicit / Hybrid Flow Access Token Lifetime** の値ではなく、**Token Expiration** の値です。
 
 <div id="restricted-lifetime-for-mfa-access-tokens">
-  ## MFA アクセストークンの有効期間の制限
+  ## MFA アクセストークンの有効期間の制限 {#restricted-lifetime-for-mfa-access-tokens}
 </div>
 
 `{yourAuth0Domain}/mfa` の <Tooltip tip="オーディエンス: 発行されたトークンの対象を一意に識別する identifier です。トークン内では aud という名前で表され、その値には、ID トークンの場合は application（Client ID）、アクセストークンの場合は API（API Identifier）のいずれかの ID が含まれます。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=audience">audience</Tooltip> を持つアクセストークンの有効期間は、セキュリティ上の理由により `600` 秒 (10 分) に制限されており、変更できません。
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * [ID トークンの有効期間を更新する](/docs/ja-jp/secure/tokens/id-tokens/update-id-token-lifetime)

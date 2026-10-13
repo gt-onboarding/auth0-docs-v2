@@ -8,17 +8,17 @@ Pour mettre en œuvre efficacement [Multiple Custom Domains](/docs/fr-ca/customi
 Ce guide présente les meilleures pratiques en matière de planification, de sécurité, de performance, d’exploitation et d’expérience utilisateur lors de l’utilisation de plusieurs domaines personnalisés.
 
 <div id="verify-ownership-of-domains">
-  ## Vérifier la propriété des domaines
+  ## Vérifier la propriété des domaines {#verify-ownership-of-domains}
 </div>
 
 Assurez-vous d’être prêt à vérifier la propriété de vos domaines personnalisés rapidement. Laisser des domaines non vérifiés trop longtemps peut encombrer votre espace et compliquer le processus de gestion.
 
 <div id="planning-and-architecture">
-  ## Planification et architecture
+  ## Planification et architecture {#planning-and-architecture}
 </div>
 
 <div id="choose-a-domain-strategy">
-  ### Choisir une stratégie de domaine
+  ### Choisir une stratégie de domaine {#choose-a-domain-strategy}
 </div>
 
 Avant de mettre en œuvre MCD, déterminez votre stratégie de domaine :
@@ -29,7 +29,7 @@ Avant de mettre en œuvre MCD, déterminez votre stratégie de domaine :
 * **Hybride** : une combinaison de stratégies (p. ex., image de marque + région : `login-us.brand1.com`)
 
 <div id="configure-a-default-domain">
-  ### Configurer un domaine par défaut
+  ### Configurer un domaine par défaut {#configure-a-default-domain}
 </div>
 
 Configurez toujours un [domaine personnalisé par défaut](/docs/fr-ca/customize/custom-domains/multiple-custom-domains/default-domain) pour :
@@ -41,7 +41,7 @@ Configurez toujours un [domaine personnalisé par défaut](/docs/fr-ca/customize
 **Bonne pratique** : utilisez un domaine générique ou administratif comme domaine par défaut (p. ex., `login.company.com` ou `admin.company.com`) plutôt qu’un domaine propre à l’image de marque.
 
 <div id="plan-for-scale">
-  ### Prévoir l’évolutivité
+  ### Prévoir l’évolutivité {#plan-for-scale}
 </div>
 
 Tenez compte de la croissance future lors de la conception de votre architecture MCD :
@@ -52,7 +52,7 @@ Tenez compte de la croissance future lors de la conception de votre architecture
 * **Prévoyez l’expansion** : concevez votre architecture de manière à pouvoir ajouter d’autres domaines
 
 <div id="use-metadata-to-stay-organized">
-  ## Utilisez les métadonnées pour mieux vous organiser
+  ## Utilisez les métadonnées pour mieux vous organiser {#use-metadata-to-stay-organized}
 </div>
 
 Profitez des champs de métadonnées disponibles pour chaque domaine personnalisé afin de faciliter la gestion et la personnalisation :
@@ -87,7 +87,7 @@ Utilisez les métadonnées pour :
 * **Rapports** : Suivez l’utilisation et les performances selon l’image de marque, la région ou le client
 
 <div id="security">
-  ## Sécurité
+  ## Sécurité {#security}
 </div>
 
 Lors de la mise en œuvre de plusieurs domaines personnalisés, tenez compte des modèles de sécurité suivants selon votre cas d’utilisation :
@@ -97,7 +97,7 @@ Lors de la mise en œuvre de plusieurs domaines personnalisés, tenez compte des
 * **Gestion des certificats** : Assurez une gestion sécurisée du cycle de vie des certificats
 
 <div id="domain-validation-in-actions">
-  ### Validation de domaine dans Actions
+  ### Validation de domaine dans Actions {#domain-validation-in-actions}
 </div>
 
 Utilisez [Actions](/docs/fr-ca/customize/actions) pour limiter l’authentification à certains domaines personnalisés. C’est utile si vous voulez empêcher les utilisateurs de s’authentifier à partir du domaine Auth0 canonique ou limiter l’accès à certains domaines de marque :
@@ -122,7 +122,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="organization-based-access-control">
-  ### Contrôle d’accès par organisation
+  ### Contrôle d’accès par organisation {#organization-based-access-control}
 </div>
 
 Si vous utilisez [Auth0 Organizations](/docs/fr-ca/manage-users/organizations), vous pouvez restreindre les domaines personnalisés autorisés pour chaque organisation. C’est utile dans les scénarios B2B où chaque client a son propre domaine aux couleurs de son image de marque et ne devrait accéder à son organisation que par ce domaine :
@@ -147,7 +147,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="certificate-management">
-  ### Gestion des certificats
+  ### Gestion des certificats {#certificate-management}
 </div>
 
 * **Surveiller l’expiration** : Configurez des alertes pour les dates d’expiration des certificats
@@ -155,11 +155,11 @@ exports.onExecutePostLogin = async (event, api) => {
 * **Documenter les processus autogérés** : Si vous utilisez des certificats autogérés, tenez des runbooks clairs à jour
 
 <div id="performance">
-  ## Performance
+  ## Performance {#performance}
 </div>
 
 <div id="use-regional-domains">
-  ### Utiliser des domaines régionaux
+  ### Utiliser des domaines régionaux {#use-regional-domains}
 </div>
 
 Pour les applications mondiales, envisagez d’utiliser des domaines personnalisés propres à chaque région afin de répondre aux exigences de résidence des données et de renforcer l’image de marque selon la région :
@@ -171,11 +171,11 @@ Pour les applications mondiales, envisagez d’utiliser des domaines personnalis
 </Note>
 
 <div id="branding-and-user-experience">
-  ## Image de marque et expérience utilisateur
+  ## Image de marque et expérience utilisateur {#branding-and-user-experience}
 </div>
 
 <div id="keep-branding-consistent">
-  ### Assurez la cohérence de votre image de marque
+  ### Assurez la cohérence de votre image de marque {#keep-branding-consistent}
 </div>
 
 MCD ajoute une dimension supplémentaire à vos efforts d’image de marque. Les utilisateurs s’attendent à une expérience cohérente sur tous les points de contact :
@@ -187,7 +187,7 @@ MCD ajoute une dimension supplémentaire à vos efforts d’image de marque. Les
 Pour des conseils détaillés, consultez les guides sur l’image de marque [B2B](/docs/fr-ca/get-started/architecture-scenarios/business-to-business/branding) et [B2C](/docs/fr-ca/get-started/architecture-scenarios/business-to-consumer/branding).
 
 <div id="passkey-management">
-  ### Gestion des clés d’accès
+  ### Gestion des clés d’accès {#passkey-management}
 </div>
 
 * **Communiquez clairement** : Informez les utilisateurs que les clés d’accès sont propres à chaque domaine
@@ -198,7 +198,7 @@ Pour des conseils détaillés, consultez les guides sur l’image de marque [B2B
 Consultez [Clés d’accès avec plusieurs Multiple Custom Domains](/docs/fr-ca/customize/custom-domains/multiple-custom-domains/passkeys) pour obtenir des directives détaillées.
 
 <div id="user-communication">
-  ### Communication avec les utilisateurs
+  ### Communication avec les utilisateurs {#user-communication}
 </div>
 
 Lorsque les utilisateurs interagissent avec plusieurs domaines personnalisés :
@@ -209,11 +209,11 @@ Lorsque les utilisateurs interagissent avec plusieurs domaines personnalisés :
 * **Documentation d’accompagnement** : maintenez une documentation claire sur la structure de vos domaines
 
 <div id="operations-and-maintenance">
-  ## Opérations et maintenance
+  ## Opérations et maintenance {#operations-and-maintenance}
 </div>
 
 <div id="monitoring-and-alerting">
-  ### Surveillance et alertes
+  ### Surveillance et alertes {#monitoring-and-alerting}
 </div>
 
 Configurez la surveillance pour :
@@ -225,7 +225,7 @@ Configurez la surveillance pour :
 * **Performance de l’API** : Suivez la latence de la Management API pour les opérations liées aux domaines
 
 <div id="documentation">
-  ### Documentation
+  ### Documentation {#documentation}
 </div>
 
 Maintenez une documentation exhaustive :
@@ -237,7 +237,7 @@ Maintenez une documentation exhaustive :
 * **Coordonnées** : Équipes ou personnes responsables de chaque domaine
 
 <div id="testing">
-  ### Tests
+  ### Tests {#testing}
 </div>
 
 Testez de façon approfondie avant la mise en production :
@@ -249,7 +249,7 @@ Testez de façon approfondie avant la mise en production :
 * **Tests de performance** : Effectuez un test de charge de l’authentification via les domaines personnalisés
 
 <div id="change-management">
-  ### Gestion des changements
+  ### Gestion des changements {#change-management}
 </div>
 
 Lorsque vous apportez des modifications aux domaines personnalisés :
@@ -261,18 +261,18 @@ Lorsque vous apportez des modifications aux domaines personnalisés :
 * **Communiquez les changements** : Informez les parties prenantes des changements planifiés
 
 <div id="common-pitfalls-to-avoid">
-  ## Pièges courants à éviter
+  ## Pièges courants à éviter {#common-pitfalls-to-avoid}
 </div>
 
 <div id="dont-over-complicate-domain-structure">
-  ### Ne compliquez pas trop la structure des domaines
+  ### Ne compliquez pas trop la structure des domaines {#dont-over-complicate-domain-structure}
 </div>
 
 * **Anti-modèle** : créer un domaine personnalisé pour chaque déclinaison possible
 * **Meilleure approche** : commencez par quelques domaines de base, puis étendez au besoin
 
 <div id="dont-forget-to-update-all-integration-points">
-  ### N&#39;oubliez pas de mettre à jour tous les points d’intégration
+  ### N&#39;oubliez pas de mettre à jour tous les points d’intégration {#dont-forget-to-update-all-integration-points}
 </div>
 
 Lorsque vous ajoutez de nouveaux domaines personnalisés, mettez à jour :
@@ -284,28 +284,28 @@ Lorsque vous ajoutez de nouveaux domaines personnalisés, mettez à jour :
 * les règles de surveillance et d’alerte
 
 <div id="dont-neglect-documentation">
-  ### Ne négligez pas la documentation
+  ### Ne négligez pas la documentation {#dont-neglect-documentation}
 </div>
 
 * **Anti-modèle** : S’en remettre aux connaissances institutionnelles
 * **Meilleure approche** : Documenter les attributions de domaines, la signification des métadonnées et les procédures opérationnelles
 
 <div id="dont-ignore-certificate-management">
-  ### N’ignorez pas la gestion des certificats
+  ### N’ignorez pas la gestion des certificats {#dont-ignore-certificate-management}
 </div>
 
 * **Anti-modèle**: Laisser expirer les certificats sans alerte
 * **Meilleure approche**: Automatiser la surveillance et le renouvellement
 
 <div id="dont-mix-authentication-contexts">
-  ### Ne mélangez pas les contextes d’authentification
+  ### Ne mélangez pas les contextes d’authentification {#dont-mix-authentication-contexts}
 </div>
 
 * **Anti-modèle** : Utiliser le même domaine personnalisé pour des images de marque ou des clients sans lien
 * **Meilleure approche** : Maintenir une séparation claire entre les différents contextes d’authentification
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Multiple Custom Domains](/docs/fr-ca/customize/custom-domains/multiple-custom-domains)

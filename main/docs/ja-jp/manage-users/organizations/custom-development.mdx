@@ -10,13 +10,13 @@ title: Organizations を使ったカスタム開発
 </Card>
 
 <div id="extensibility">
-  ## 拡張
+  ## 拡張 {#extensibility}
 </div>
 
 Organizations は拡張ポイントをサポートしているため、organization のメタデータ内でプロパティを定義し、そのデータを[Actions](/docs/ja-jp/customize/actions)で利用できるようにできます。これにより、個々の顧客やアプリケーションに合わせて機能をカスタマイズできます。たとえば、その情報を organization のメタデータに保存しておくことで、サブスクリプションプランに基づいて特定の顧客向けに Actions でカスタムロジックを実行できます。
 
 <div id="actions-event-object">
-  ### Actions イベントオブジェクト
+  ### Actions イベントオブジェクト {#actions-event-object}
 </div>
 
 Action のイベントオブジェクトには、ユーザーの IP アドレス、アプリケーション、位置情報など、現在の認証トランザクションに関するコンテキスト情報が格納されています。
@@ -24,7 +24,7 @@ Action のイベントオブジェクトには、ユーザーの IP アドレス
 Action 内で `event` オブジェクトを使用してトークンの内容を変更すると、その変更はすべての Actions の実行完了後にトークンに反映されます。
 
 <div id="sdks">
-  ## SDK
+  ## SDK {#sdks}
 </div>
 
 メンバーが自分の組織を自分で管理できるようにするには、メンバーにロールを割り当て、API や SDK を使って自社製品内にダッシュボードを構築できます。管理者は、<Tooltip tip="シングルサインオン (SSO): ユーザーが 1 つのアプリケーションにログインすると、そのユーザーは他のアプリケーションにも自動的にログインできます。" cta="用語集を表示" href="/docs/ja-jp/glossary?term=Single+Sign-On">シングルサインオン</Tooltip> (SSO) の設定、ユーザーの組織への招待、メンバーの組織への割り当て、メンバーへのロールの割り当てなどを行えます。
@@ -38,7 +38,7 @@ Action 内で `event` オブジェクトを使用してトークンの内容を�
 </Callout>
 
 <div id="i-want-users-to-log-in-to-a-specified-organization">
-  ### ユーザーを指定した 組織 にログインさせたい
+  ### ユーザーを指定した 組織 にログインさせたい {#i-want-users-to-log-in-to-a-specified-organization}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -58,7 +58,7 @@ Action 内で `event` オブジェクトを使用してトークンの内容を�
 * [組織に基づいてセッションの非アクティブ タイムアウトをカスタマイズする](/docs/ja-jp/manage-users/sessions/manage-sessions-actions)
 
 <div id="from-my-application-i-want-to-get-the-organization-to-which-the-authenticated-user-logged-in">
-  ### 自分のアプリケーションから、認証されたユーザーがログインした組織を取得したい
+  ### 自分のアプリケーションから、認証されたユーザーがログインした組織を取得したい {#from-my-application-i-want-to-get-the-organization-to-which-the-authenticated-user-logged-in}
 </div>
 
 ユーザーが組織を使って認証された場合、組織ID は ID トークンの `org_id` クレームに含まれます。Auth0 SPA SDK を使用して、次のように取得します。
@@ -66,7 +66,7 @@ Action 内で `event` オブジェクトを使用してトークンの内容を�
 `const { org_id } = await client.getIdTokenClaims();`
 
 <div id="from-my-api-i-want-to-get-the-organization-with-which-the-access-token-was-issued">
-  ### API から、アクセストークンがどの 組織 で発行されたかを取得したい
+  ### API から、アクセストークンがどの 組織 で発行されたかを取得したい {#from-my-api-i-want-to-get-the-organization-with-which-the-access-token-was-issued}
 </div>
 
 ユーザーが 組織 を使用して認証され、<Tooltip tip="Audience: 発行されたトークンの対象を一意に識別する識別子です。トークン内では aud という名前で表され、その値には ID トークンの場合はアプリケーション（Client ID）の ID、アクセストークンの場合は API（API 識別子）の ID が含まれます。" cta="用語集を表示" href="/docs/ja-jp/glossary?term=audience">audience</Tooltip> が指定されている場合、<Tooltip tip="Audience: 発行されたトークンの対象を一意に識別する識別子です。トークン内では aud という名前で表され、その値には ID トークンの場合はアプリケーション（Client ID）の ID、アクセストークンの場合は API（API 識別子）の ID が含まれます。" cta="用語集を表示" href="/docs/ja-jp/glossary?term=access+token">アクセストークン</Tooltip> は <Tooltip tip="JSON Web Token (JWT): 2 者間でクレームを安全に表現するために使用される標準的な ID トークン形式（および多くの場合アクセストークン形式）です。" cta="用語集を表示" href="/docs/ja-jp/glossary?term=JWT">JWT</Tooltip> となり、ユーザーがログインした 組織 の ID を含む `org_id` クレームが含まれます。
@@ -101,7 +101,7 @@ end
 </Callout>
 
 <div id="learn-more">
-  ## 詳細情報
+  ## 詳細情報 {#learn-more}
 </div>
 
 * [Auth0 Organizations の仕組みを理解する](/docs/ja-jp/manage-users/organizations/organizations-overview)

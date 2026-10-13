@@ -29,7 +29,7 @@ Remplacez `{prompt}` par le nom du prompt (par exemple, `login`) et `{screen}` p
 </Callout>
 
 <div id="the-experiment-context-shape">
-  ## La structure du contexte de l’expérience
+  ## La structure du contexte de l’expérience {#the-experiment-context-shape}
 </div>
 
 Lorsqu’un écran a été explicitement activé et qu’une expérience est en cours, vous pouvez accéder au contexte de l’expérience dans `window.universal_login_context.experiment`.
@@ -63,7 +63,7 @@ Par exemple, si votre feature flag a un paramètre `button_label` avec une valeu
 Pour la variation témoin (sans surcharge), `config.button_label.value` est `"Sign in"`.
 
 <div id="read-a-parameter-value">
-  ## Lire la valeur d’un paramètre
+  ## Lire la valeur d’un paramètre {#read-a-parameter-value}
 </div>
 
 Vous pouvez accéder aux valeurs des paramètres à l’aide de `config[paramName].value` :
@@ -76,7 +76,7 @@ const label = experiment?.config?.button_label?.value;
 Utilisez le chaînage optionnel (`?.`) partout. La prop `experiment` est `undefined` lorsqu’aucune expérience n’est active.
 
 <div id="use-is_control">
-  ## Utiliser is_control
+  ## Utiliser is_control {#use-is_control}
 </div>
 
 Le paramètre `is_control` est `true` lorsque l’utilisateur fait partie du groupe témoin (il a reçu la version de référence, sans aucune surcharge appliquée). Utilisez-le lorsque vous devez repérer les utilisateurs qui ont vu l’expérience non modifiée, ou si vous voulez ignorer le traitement optionnel pour les utilisateurs du groupe témoin.
@@ -92,7 +92,7 @@ Pour le rendu conditionnel, vérifiez directement la valeur du paramètre (`conf
 Les vérifications fondées sur les paramètres sont plus faciles à lire et fonctionnent correctement, même si vous changez plus tard la variation utilisée comme contrôle statistique dans une autre expérience.
 
 <div id="example-copy-variant-experiment">
-  ## Exemple : expérience sur les variantes de libellé
+  ## Exemple : expérience sur les variantes de libellé {#example-copy-variant-experiment}
 </div>
 
 Cet exemple présente un feature flag avec deux variations qui modifient le libellé d’un bouton. Le témoin utilise le libellé standard ; le traitement utilise une version de rechange.
@@ -152,7 +152,7 @@ const buttonLabel = experiment
 ```
 
 <div id="example-boolean-feature-rollout">
-  ## Exemple : déploiement progressif d’une fonctionnalité booléenne
+  ## Exemple : déploiement progressif d’une fonctionnalité booléenne {#example-boolean-feature-rollout}
 </div>
 
 Cet exemple utilise un paramètre booléen pour afficher ou non un nouvel élément de l’interface utilisateur.
@@ -181,7 +181,7 @@ export default function PostLoginScreen({...props }) {
 Le test `=== true` (plutôt qu’un simple test de vérité) est intentionnel : il garantit que la bannière ne s’affiche que lorsque le paramètre vaut explicitement `true`, et non lorsque `experiment` est `undefined` ou que `config` n’est pas défini.
 
 <div id="troubleshoot">
-  ## Dépannage
+  ## Dépannage {#troubleshoot}
 </div>
 
 La propriété `experiment` est `undefined` dans trois situations :

@@ -9,13 +9,13 @@ Deploy CLI の設定は、Auth0 の認証情報を設定し、ツールの動作
 2. 環境変数を設定します。
 
 <div id="configuration-file">
-  ## 設定ファイル
+  ## 設定ファイル {#configuration-file}
 </div>
 
 Deploy CLI の設定には、単一の JSON ファイルを使用できます。このファイルは通常、プロジェクトのルートディレクトリに置かれ、ファイル名は `config.json` にする必要があります。
 
 <div id="examples">
-  ### 例
+  ### 例 {#example}
 </div>
 
 ```json lines
@@ -31,7 +31,7 @@ Deploy CLI の設定には、単一の JSON ファイルを使用できます。
 </Callout>
 
 <div id="environment-variables">
-  ## 環境変数
+  ## 環境変数 {#environment-variables}
 </div>
 
 既定では、Deploy CLI は環境変数を読み込むため、認証情報やその他の設定を `config.json` ファイルに記載しなくてもツールに渡せます。環境変数は、プロジェクトの要件に応じて `config.json` ファイルを補完することも、完全に置き換えることもできます。
@@ -41,11 +41,11 @@ Deploy CLI の設定には、単一の JSON ファイルを使用できます。
 `import` または `export` コマンドで環境変数の読み込みを無効にするには、`--env=false` 引数を指定します。
 
 <div id="examples">
-  ### 例
+  ### 例 {#examples}
 </div>
 
 <div id="deploying-configuration-for-yaml-formats-without-a-configjson-file">
-  #### config.json ファイルを含まない YAML 形式の設定のデプロイ
+  #### config.json ファイルを含まない YAML 形式の設定のデプロイ {#deploying-configuration-for-yaml-formats-without-a-configjson-file}
 </div>
 
 ```bash lines
@@ -56,7 +56,7 @@ $ a0deploy import --input_file=local/tenant.yaml
 ```
 
 <div id="disable-environment-variable-ingestion">
-  #### 環境変数の読み込みを無効にする
+  #### 環境変数の読み込みを無効にする {#disable-environment-variable-ingestion}
 </div>
 
 ```bash wrap lines
@@ -64,7 +64,7 @@ $ a0deploy export -c=config.json --format=yaml --output_folder=local --env=false
 ```
 
 <div id="non-primitive-configuration-values">
-  #### プリミティブ型以外の設定値
+  #### プリミティブ型以外の設定値 {#non-primitive-configuration-values}
 </div>
 
 ```bash lines
@@ -74,41 +74,41 @@ $ a0deploy export -c=config.json --format=yaml --output_folder=local
 ```
 
 <div id="available-configuration-properties">
-  ## 利用可能な設定プロパティ
+  ## 利用可能な設定プロパティ {#available-configuration-properties}
 </div>
 
 <div id="auth0_domain">
-  ### AUTH0_DOMAIN
+  ### AUTH0_DOMAIN {#auth0_domain}
 </div>
 
 文字列。対象となる Auth0 テナントのドメイン。
 
 <div id="auth0_client_id">
-  ### AUTH0_CLIENT_ID
+  ### AUTH0_CLIENT_ID {#auth0_client_id}
 </div>
 
 String. APIリクエストの送信に使用する、指定されたAuth0 applicationのIDです。
 
 <div id="auth0_client_secret">
-  ### AUTH0_CLIENT_SECRET
+  ### AUTH0_CLIENT_SECRET {#auth0_client_secret}
 </div>
 
 String。APIリクエストの送信に使用する、指定されたAuth0 applicationのシークレットです。
 
 <div id="auth0_access_token">
-  ### AUTH0_ACCESS_TOKEN
+  ### AUTH0_ACCESS_TOKEN {#auth0_access_token}
 </div>
 
 String. 指定されたAuth0 applicationから<Tooltip tip="Access Token: APIへのアクセスに使用される、opaque stringまたはJWT形式のAuthorization認証情報。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=access+token">access token</Tooltip>として<Tooltip tip="Access Token: APIへのアクセスに使用される、opaque stringまたはJWT形式のAuthorization認証情報。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Management+API">Management API</Tooltip>にアクセスするための短期間有効なトークンです。<Tooltip tip="Client ID: Auth0から登録済みリソースに付与される識別値。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=client+ID">client ID</Tooltip>と<Tooltip tip="Client ID: Auth0から登録済みリソースに付与される識別値。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=client+secret">client secret</Tooltip>の組み合わせの代わりに使用できます。
 
 <div id="auth0_client_signing_key_path">
-  ### AUTH0_CLIENT_SIGNING_KEY_PATH
+  ### AUTH0_CLIENT_SIGNING_KEY_PATH {#auth0_client_signing_key_path}
 </div>
 
 String。Private Key <Tooltip tip="JSON Web Token (JWT): 2者間でclaimsを安全にやり取りするために使用される標準的なID Token形式（多くの場合、access tokenの形式としても使用されます）。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=JWT">JWT</Tooltip>認証を行う際にクライアントが使用する秘密鍵へのパスです。作業ディレクトリからの相対パスで指定します。<Tooltip tip="Signing Algorithm: トークンが改ざんされていないことを保証するために、トークンにデジタル署名する際に使用するアルゴリズムです。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=signing+algorithm">署名アルゴリズム</Tooltip>を指定するには、`AUTH0_CLIENT_SIGNING_ALGORITHM` も参照してください。
 
 <div id="auth0_client_signing_algorithm">
-  ### AUTH0_CLIENT_SIGNING_ALGORITHM
+  ### AUTH0_CLIENT_SIGNING_ALGORITHM {#auth0_client_signing_algorithm}
 </div>
 
 String型。Private Key JWT認証を行う際に、クライアントが使用するJWT署名アルゴリズムを指定します。`AUTH0_CLIENT_SIGNING_KEY_PATH`と組み合わせて使用する場合にのみ使われます。
@@ -116,13 +116,13 @@ String型。Private Key JWT認証を行う際に、クライアントが使用�
 使用可能な値: `RS256`, `RS384`, `PS256`。
 
 <div id="auth0_allow_delete">
-  ### AUTH0_ALLOW_DELETE
+  ### AUTH0_ALLOW_DELETE {#auth0_allow_delete}
 </div>
 
 ブール値。有効にすると、このツールでリソースを削除できるようになります。既定値: `false`。
 
 <div id="auth0_excluded">
-  ### AUTH0_EXCLUDED
+  ### AUTH0_EXCLUDED {#auth0_excluded}
 </div>
 
 文字列の配列。リソースタイプ全体を双方向の管理対象から除外します。詳しくは、[管理対象からリソースを除外する](/docs/ja-jp/deploy-monitor/deploy-cli-tool/exclude-resources-from-management)をご覧ください。
@@ -132,7 +132,7 @@ String型。Private Key JWT認証を行う際に、クライアントが使用�
 指定可能な値: `actions`, `attackProtection`, `branding`, `clientGrants`, `clients`, `connections`, `customDomains`, `databases`, `emailProvider`, `emailTemplates`, `guardianFactorProviders`, `guardianFactorTemplates`, `guardianFactors`, `guardianPhoneFactorMessageTypes`, `guardianPhoneFactorSelectedProvider`, `guardianPolicies`, `logStreams`, `migrations`, `organizations`, `pages`, `prompts`, `resourceServers`, `roles`, `tenant`, `triggers`。
 
 <div id="example">
-  #### 例
+  #### 例 {#example-2}
 </div>
 
 ```json lines
@@ -142,7 +142,7 @@ String型。Private Key JWT認証を行う際に、クライアントが使用�
 ```
 
 <div id="auth0_included_only">
-  ### AUTH0_INCLUDED_ONLY
+  ### AUTH0_INCLUDED_ONLY {#auth0_included_only}
 </div>
 
 文字列の配列です。双方向で管理するリソースタイプを指定します。詳しくは、[管理対象からリソースを除外する](/docs/ja-jp/deploy-monitor/deploy-cli-tool/exclude-resources-from-management)をご覧ください。
@@ -152,7 +152,7 @@ String型。Private Key JWT認証を行う際に、クライアントが使用�
 指定可能な値: `actions`, `attackProtection`, `branding`, `clientGrants`, `clients`, `connections`, `customDomains`, `databases`, `emailProvider`, `emailTemplates`, `guardianFactorProviders`, `guardianFactorTemplates`, `guardianFactors`, `guardianPhoneFactorMessageTypes`, `guardianPhoneFactorSelectedProvider`, `guardianPolicies`, `logStreams`, `migrations`, `organizations`, `pages`, `prompts`, `resourceServers`, `roles`, `tenant`, `triggers`。
 
 <div id="example">
-  #### 例
+  #### 例 {#example-3}
 </div>
 
 ```json lines
@@ -162,13 +162,13 @@ String型。Private Key JWT認証を行う際に、クライアントが使用�
 ```
 
 <div id="auth0_keyword_replace_mappings">
-  ### AUTH0_KEYWORD_REPLACE_MAPPINGS
+  ### AUTH0_KEYWORD_REPLACE_MAPPINGS {#auth0_keyword_replace_mappings}
 </div>
 
 特定のキーワードを動的に置換するためのマッピングです。詳しくは、[キーワード置換](/docs/ja-jp/deploy-monitor/deploy-cli-tool/keyword-replacement)をご覧ください。
 
 <div id="example">
-  #### 例
+  #### 例 {#example-4}
 </div>
 
 ```json lines
@@ -179,7 +179,7 @@ String型。Private Key JWT認証を行う際に、クライアントが使用�
 ```
 
 <div id="auth0_preserve_keywords">
-  ### AUTH0_PRESERVE_KEYWORDS
+  ### AUTH0_PRESERVE_KEYWORDS {#auth0_preserve_keywords}
 </div>
 
 ブール値。有効にすると、エクスポート時にローカルのリソースファイル内のキーワード置換マーカーを保持しようとします。無効の場合、リモートの値で手動配置されたそれらのキーワードマーカーが上書きされます。
@@ -189,19 +189,19 @@ String型。Private Key JWT認証を行う際に、クライアントが使用�
 関連項目: [エクスポート時にキーワードを保持](/docs/ja-jp/deploy-monitor/deploy-cli-tool/keyword-replacement#preserve-keywords-on-export)。
 
 <div id="auth0_export_identifiers">
-  ### AUTH0_EXPORT_IDENTIFIERS
+  ### AUTH0_EXPORT_IDENTIFIERS {#auth0_export_identifiers}
 </div>
 
 ブール値。有効にすると、すべてのリソースの識別子が返されます。単一テナント環境での特定のデバッグや記録保持の用途で役立つ場合があります。デフォルト: `false`。
 
 <div id="excluded_props">
-  ### EXCLUDED_PROPS
+  ### EXCLUDED_PROPS {#excluded_props}
 </div>
 
 管理対象から不要なプロパティを除外できます。
 
 <div id="example">
-  #### 例
+  #### 例 {#example-5}
 </div>
 
 ```json lines
@@ -211,37 +211,37 @@ String型。Private Key JWT認証を行う際に、クライアントが使用�
 ```
 
 <div id="auth0_audience">
-  ### AUTH0_AUDIENCE
+  ### AUTH0_AUDIENCE {#auth0_audience}
 </div>
 
 String。Management API のアクセストークンを取得する際に、<Tooltip tip="Audience: 発行されたトークンの audience の一意の識別子です。トークン内では aud という名前で、その値には ID Token の場合は application（Client ID）、Access Token の場合は API（API Identifier）の ID が含まれます。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=audience">audience</Tooltip> の値とは別の値を指定します。デフォルトの Management API endpoint が公開されていない場合に便利です。
 
 <div id="auth0_excluded_rules">
-  ### AUTH0_EXCLUDED_RULES
+  ### AUTH0_EXCLUDED_RULES {#auth0_excluded_rules}
 </div>
 
 文字列の配列です。IDで指定した特定のルールを管理対象から除外します。注: この設定は、将来的に非推奨化される可能性があります。詳しくは、[管理対象からリソースを除外する](/docs/ja-jp/deploy-monitor/deploy-cli-tool/exclude-resources-from-management) をご覧ください。
 
 <div id="auth0_excluded_clients">
-  ### AUTH0_EXCLUDED_CLIENTS
+  ### AUTH0_EXCLUDED_CLIENTS {#auth0_excluded_clients}
 </div>
 
 文字列の配列。IDで指定した特定のクライアントを管理対象から除外します。注: この設定は、将来的に非推奨化される可能性があります。詳しくは、[管理対象からリソースを除外する](/docs/ja-jp/deploy-monitor/deploy-cli-tool/exclude-resources-from-management)を参照してください。
 
 <div id="auth0_excluded_databases">
-  ### AUTH0_EXCLUDED_DATABASES
+  ### AUTH0_EXCLUDED_DATABASES {#auth0_excluded_databases}
 </div>
 
 文字列の配列。ID で指定した特定のデータベースを管理対象から除外します。注: この設定は今後、非推奨化される可能性があります。詳しくは、[管理対象からリソースを除外する](/docs/ja-jp/deploy-monitor/deploy-cli-tool/exclude-resources-from-management) を参照してください。
 
 <div id="auth0_excluded_connections">
-  ### AUTH0_EXCLUDED_CONNECTIONS
+  ### AUTH0_EXCLUDED_CONNECTIONS {#auth0_excluded_connections}
 </div>
 
 文字列の配列。ID で指定した特定の接続を管理対象から除外します。注: この設定は、今後非推奨になる可能性があります。詳しくは、[管理対象からリソースを除外する](/docs/ja-jp/deploy-monitor/deploy-cli-tool/exclude-resources-from-management) をご覧ください。
 
 <div id="auth0_excluded_resource_servers">
-  ### AUTH0_EXCLUDED_RESOURCE_SERVERS
+  ### AUTH0_EXCLUDED_RESOURCE_SERVERS {#auth0_excluded_resource_servers}
 </div>
 
 文字列の配列。ID で特定の <Tooltip tip="Resource Server: 保護されたリソースをホストするサーバー。リソースサーバーは、保護されたリソースへのリクエストを受け取り、応答します。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=resource+servers">resource servers</Tooltip> の管理を除外します。注: この設定は、将来的に非推奨化される可能性があります。詳しくは、[管理対象からリソースを除外する](/docs/ja-jp/deploy-monitor/deploy-cli-tool/exclude-resources-from-management) を参照してください。

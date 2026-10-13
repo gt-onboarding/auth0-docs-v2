@@ -15,7 +15,7 @@ title: "OIDC IdPとしてのOkta"
 Cross App Access (XAA) のOIDCエンタープライズアイデンティティプロバイダーとしてOktaを設定します。Okta テナントをセットアップし、OktaにResource AppとRequesting Appを登録した後、Auth0 テナントとOktaをフェデレーションするWorkforce Enterprise接続を設定します。
 
 <div id="create-and-configure-your-okta-tenant">
-  ## Okta テナントを作成して構成する
+  ## Okta テナントを作成して構成する {#create-and-configure-your-okta-tenant}
 </div>
 
 Cross App Access 用の Okta テナントを作成して構成するには、次の手順に従います。
@@ -28,11 +28,11 @@ Cross App Access を有効にしたら、Okta Admin Console の **Okta Admin &gt
 <Frame>![](/docs/images/xaa/xaa_okta_flags_ea.png)</Frame>
 
 <div id="register-the-requesting-app-in-okta">
-  ## Okta で Requesting App を登録する
+  ## Okta で Requesting App を登録する {#register-the-requesting-app-in-okta}
 </div>
 
 <div id="create-requesting-app-in-okta">
-  ### Okta で Requesting App を作成する
+  ### Okta で Requesting App を作成する {#create-requesting-app-in-okta}
 </div>
 
 Requesting App は標準的な OIDC アプリケーションです。Okta で Requesting App を作成するには、次の手順を実行します。
@@ -50,7 +50,7 @@ Requesting App を作成すると、Okta から OIDC Client ID と Secret が割
 <Frame>![](/docs/images/xaa/xaa_okta_req_app_general.png)</Frame>
 
 <div id="assign-requesting-app-to-test-users">
-  ### Requesting App をテストユーザーに割り当てる
+  ### Requesting App をテストユーザーに割り当てる {#assign-requesting-app-to-test-users}
 </div>
 
 テストユーザーが Okta で Requesting App にログインできるようにします。
@@ -64,11 +64,11 @@ Okta Admin Console で、次の操作を行います。
 <Frame>![](/docs/images/xaa/xaa_okta_req_app_user_assignment.png)</Frame>
 
 <div id="register-the-resource-app-in-okta">
-  ## Okta に Resource App を登録する
+  ## Okta に Resource App を登録する {#register-the-resource-app-in-okta}
 </div>
 
 <div id="create-resource-app-in-okta">
-  ### Okta で Resource App を作成する
+  ### Okta で Resource App を作成する {#create-resource-app-in-okta}
 </div>
 
 Requesting App と同様に、Resource App は OIDC Web アプリケーションです。
@@ -84,7 +84,7 @@ Resource App のサインイン用リダイレクト URI が Auth0 テナント�
 <Frame>![](/docs/images/xaa/xaa_okta_resource_app_details2.png)</Frame>
 
 <div id="assign-resource-app-to-test-users">
-  ### Resource App をテストユーザーに割り当てる
+  ### Resource App をテストユーザーに割り当てる {#assign-resource-app-to-test-users}
 </div>
 
 テストユーザーが Okta の Resource App にログインできるようにします。
@@ -98,7 +98,7 @@ Okta Admin Console で、次の操作を行います。
 <Frame>![](/docs/images/xaa/xaa_okta_resource_app_user_assignment.png)</Frame>
 
 <div id="enable-cross-app-access-xaa-in-resource-app">
-  ### Resource App で Cross-app Access (XAA) を有効にする
+  ### Resource App で Cross-app Access (XAA) を有効にする {#enable-cross-app-access-xaa-in-resource-app}
 </div>
 
 **Resource Server** タブで、Resource App の Cross-app access (XAA) を有効にします。Resource App の認可サーバーの **Issuer URL** を入力します：`https://YOUR_AUTH0_DOMAIN/`.
@@ -110,11 +110,11 @@ Okta Admin Console で、次の操作を行います。
 </Callout>
 
 <div id="register-ai-agent-in-okta">
-  ## Okta に AI エージェントを登録する
+  ## Okta に AI エージェントを登録する {#register-ai-agent-in-okta}
 </div>
 
 <div id="create-ai-agent">
-  ### AIエージェントを作成
+  ### AIエージェントを作成 {#create-ai-agent}
 </div>
 
 **ディレクトリ &gt; AIエージェント &gt; AIエージェントを登録** に移動し、**手動で登録** を選択します。AIエージェントの名前を入力し、所有者を割り当てます。
@@ -126,7 +126,7 @@ Okta Admin Console で、次の操作を行います。
 <Frame>![](/docs/images/xaa/xaa_okta_ai_agent_staged.png)</Frame>
 
 <div id="add-agent-credentials">
-  ### Agentの資格情報を追加
+  ### Agentの資格情報を追加 {#add-agent-credentials}
 </div>
 
 AI エージェントは、[Private Key JWT](/docs/ja-jp/get-started/authentication-and-authorization-flow/authenticate-with-private-key-jwt) を使用して、アプリケーションに代わって認証を行います。**Credentials** タブで、**Add public key** を選択します。
@@ -142,7 +142,7 @@ AI エージェントは、[Private Key JWT](/docs/ja-jp/get-started/authenticat
 <Frame>![](/docs/images/xaa/xaa_okta_ai_agent_credentials_set.png)</Frame>
 
 <div id="add-agent-delegations">
-  ### エージェントの委譲を追加
+  ### エージェントの委譲を追加 {#add-agent-delegations}
 </div>
 
 **Delegations** タブの **User sign-on** セクションで、**Add Caller** を選択します。
@@ -158,7 +158,7 @@ AI エージェントは、[Private Key JWT](/docs/ja-jp/get-started/authenticat
 <Frame>![](/docs/images/xaa/xaa_okta_ai_agent_delegations_set.png)</Frame>
 
 <div id="add-agent-resource-connections">
-  ### Agent Resource 接続を追加
+  ### Agent Resource 接続を追加 {#add-agent-resource-connections}
 </div>
 
 **Resource connections** タブで **Add resource connections** を選択し、**Resource type** に **Application** を選択します。
@@ -172,13 +172,13 @@ AI エージェントは、[Private Key JWT](/docs/ja-jp/get-started/authenticat
 <Frame>![](/docs/images/xaa/xaa_okta_ai_agent_resource_connections_set.png)</Frame>
 
 <div id="activate-the-agent">
-  ### Agent を有効化する
+  ### Agent を有効化する {#activate-the-agent}
 </div>
 
 **Agent&#39;s Actions** ドロップダウンで **Activate** を選択し、**MANAGED STATUS** が **Active** になっていることを確認します。
 
 <div id="configure-an-okta-workforce-enterprise-connection-in-auth0">
-  ## Auth0 で Okta Workforce Enterprise 接続を設定する
+  ## Auth0 で Okta Workforce Enterprise 接続を設定する {#configure-an-okta-workforce-enterprise-connection-in-auth0}
 </div>
 
 Resource App の `client_id` と `client_secret` を使用して、Auth0 テナントに[Okta Workforce Enterprise 接続を作成](/docs/ja-jp/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration)します。
@@ -197,7 +197,7 @@ Okta Workforce Enterprise 接続を作成したら、接続の設定にある **
 </Callout>
 
 <div id="test-connection-in-auth0">
-  ### Auth0 で接続をテストする
+  ### Auth0 で接続をテストする {#test-connection-in-auth0}
 </div>
 
 Auth0 Dashboard で、次の操作を行います。
@@ -226,7 +226,7 @@ Auth0 Dashboard で、次の操作を行います。
 </Callout>
 
 <div id="publish-your-resource-app-in-oin">
-  ## OIN で Resource App を公開する
+  ## OIN で Resource App を公開する {#publish-your-resource-app-in-oin}
 </div>
 
 設定を完了し、[エンドツーエンドのフローをテスト](/docs/ja-jp/ai-agents-mcp/cross-app-access/end-to-end-testing)したら、B2B および SaaS プロバイダーは、Resource App を [Okta Integration Network (OIN)](https://www.okta.com/integrations/) に公開することで、Enterprise のお客様へのリーチを拡大できます。詳細については、[How to Build and List Secure Cross App Access Connections on OIN](https://developer.okta.com/blog/2026/07/06/submit-oin-xaa) の手順を参照してください。

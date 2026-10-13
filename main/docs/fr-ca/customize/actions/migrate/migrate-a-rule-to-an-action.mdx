@@ -6,13 +6,13 @@ title: Outil de migration
 Simplifiez le processus de migration des Rules vers les Actions à l’aide de l’outil de migration des Rules dans l’[Auth0 Dashboard](https://manage.auth0.com/). En plus de faciliter le passage d’une Rule à une Action, ce nouvel outil offre aussi des conseils intégrés et des correctifs pour les modèles de Rule courants.
 
 <div id="before-migration">
-  ## Avant la migration
+  ## Avant la migration {#before-migration}
 </div>
 
 Avant de commencer la migration, consultez [Passer de Rules à Actions](/docs/fr-ca/customize/actions/migrate/migrate-from-rules-to-actions). Ce guide de migration est une excellente ressource pour comprendre les différences entre Rules et Actions et vous accompagner tout au long du processus de migration.
 
 <div id="rule-migration-order">
-  ### Ordre de migration des Rules
+  ### Ordre de migration des Rules {#rule-migration-order}
 </div>
 
 Les Rules s’exécutent avant les Actions, ce qui signifie qu’elles doivent être migrées dans l’ordre inverse de leur exécution. Migrez d’abord la dernière Rule à s’exécuter dans votre flux actuel, puis remontez jusqu’à la première Rule en suivant l’ordre chronologique inverse.
@@ -20,13 +20,13 @@ Les Rules s’exécutent avant les Actions, ce qui signifie qu’elles doivent �
 Si vous ne respectez pas cet ordre de migration, des erreurs peuvent survenir en raison d’effets secondaires imprévus liés aux dépendances dans l’ordre des Rules et des Actions.
 
 <div id="safely-rolling-back">
-  ### Effectuer un retour arrière en toute sécurité
+  ### Effectuer un retour arrière en toute sécurité {#safely-rolling-back}
 </div>
 
 L’outil de migration vous permet d’effectuer un retour arrière facilement et en toute sécurité en cas de problème. Réactivez votre Rule et ignorez la logique de l’Action correspondante.
 
 <div id="migrating-a-rule">
-  ## Migration d’une Rule
+  ## Migration d’une Rule {#migrating-a-rule}
 </div>
 
 Pour commencer la migration de votre Rule, sélectionnez **Auth Pipeline &gt; Rules**. Une fois cette option sélectionnée, vos Rules s’affichent et vous pouvez les migrer individuellement.
@@ -38,7 +38,7 @@ Pour commencer la migration de votre Rule, sélectionnez **Auth Pipeline &gt; Ru
 </Callout>
 
 <div id="migrate-to-action">
-  ### Migrate to Action
+  ### Migrate to Action {#migrate-to-action}
 </div>
 
 Après avoir sélectionné **Migrate to Action**, l’outil vous invite à créer une nouvelle Action.
@@ -62,7 +62,7 @@ C’est un outil utile pour éviter que votre logique ne s’exécute deux fois.
 Pour en savoir plus sur la fonction `api.rules.wasExecuted()`, consultez [Actions Triggers: post-login - API Object](/docs/fr-ca/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-api-object).
 
 <div id="rewrite-rule-code">
-  ## Réécrire le code de la Rule
+  ## Réécrire le code de la Rule {#rewrite-rule-code}
 </div>
 
 Sélectionnez le bouton **Rules** dans l’Actions Editor pour charger l’outil de migration des Rules. Vous pourrez alors consulter rapidement le code de la Rule migrée. Vous devriez vérifier le code de la Rule sélectionnée dans la barre latérale.
@@ -90,7 +90,7 @@ Dans certaines situations, les correctifs ne peuvent pas être appliqués automa
 Par exemple : dans le cas de la fonction `callback` de la Rule, il est recommandé d’utiliser [`api.access.deny`](/docs/fr-ca/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger/pre-user-registration-api-object) pour les erreurs, ou simplement `return` en cas de réussite.
 
 <div id="test-the-new-action">
-  ### Tester la nouvelle Action
+  ### Tester la nouvelle Action {#test-the-new-action}
 </div>
 
 Les Actions peuvent être testées directement dans l’éditeur, puisqu’il s’agit d’une étape essentielle de la migration. Pour en savoir plus, consultez [Test Actions](/docs/fr-ca/customize/actions/test-actions).
@@ -100,7 +100,7 @@ Les Actions peuvent être testées directement dans l’éditeur, puisqu’il s�
 </Warning>
 
 <div id="automatically-enabling-the-action">
-  ### Activation automatique de l’Action
+  ### Activation automatique de l’Action {#automatically-enabling-the-action}
 </div>
 
 Lorsque le code de l’Action est mis à jour et que vous êtes prêt à effectuer le changement :
@@ -117,7 +117,7 @@ Pour en savoir plus sur l’ajout de votre Action au flux, consultez [Write your
 </Callout>
 
 <div id="migrate-remaining-rules">
-  ## Migrer les Rules restantes
+  ## Migrer les Rules restantes {#migrate-remaining-rules}
 </div>
 
 Ce processus peut être répété pour migrer chaque Rule de votre flux de connexion. Rappelez-vous que les Rules doivent être migrées dans l’ordre inverse de celui dans lequel elles s’exécutent dans le flux de connexion.

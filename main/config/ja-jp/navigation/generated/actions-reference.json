@@ -2,42 +2,42 @@
   "pages": [
     "docs/ja-jp/actions/reference",
     {
-      "group": "資格情報の交換",
+      "group": "Credentials Exchange",
       "pages": [
         "docs/ja-jp/actions/reference/credentials-exchange/credentials-exchange-event-object",
         "docs/ja-jp/actions/reference/credentials-exchange/credentials-exchange-api-object"
       ]
     },
     {
-      "group": "カスタムメールプロバイダー",
+      "group": "Custom Email Provider",
       "pages": [
         "docs/ja-jp/actions/reference/custom-email-provider/custom-email-provider-event-object",
         "docs/ja-jp/actions/reference/custom-email-provider/custom-email-provider-api-object"
       ]
     },
     {
-      "group": "カスタム電話プロバイダー",
+      "group": "Custom Phone Provider",
       "pages": [
         "docs/ja-jp/actions/reference/custom-phone-provider/custom-phone-provider-event-object",
         "docs/ja-jp/actions/reference/custom-phone-provider/custom-phone-provider-api-object"
       ]
     },
     {
-      "group": "カスタムトークン交換",
+      "group": "Custom Token Exchange",
       "pages": [
         "docs/ja-jp/actions/reference/custom-token-exchange/custom-token-exchange-event-object",
         "docs/ja-jp/actions/reference/custom-token-exchange/custom-token-exchange-api-object"
       ]
     },
     {
-      "group": "イベントストリーム",
+      "group": "Event Stream",
       "pages": [
         "docs/ja-jp/actions/reference/event-stream/event-stream-event-object",
         "docs/ja-jp/actions/reference/event-stream/event-stream-api-object"
       ]
     },
     {
-      "group": "パスワードリセット後のチャレンジ",
+      "group": "Password Reset Post Challenge",
       "pages": [
         "docs/ja-jp/actions/reference/password-reset-post-challenge/password-reset-post-challenge-event-object",
         "docs/ja-jp/actions/reference/password-reset-post-challenge/password-reset-post-challenge-api-object"

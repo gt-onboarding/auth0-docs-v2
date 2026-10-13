@@ -15,10 +15,10 @@ OIDC 準拠パイプラインは、次の領域でリソース所有者パスワ
 * <Tooltip tip="アクセストークン: API へのアクセスに使用される認可資格情報で、opaque な文字列または JWT の形式を取ります。" cta="用語集を表示" href="/docs/ja-jp/glossary?term=Access+token">アクセストークン</Tooltip> の構造
 
 <div id="authentication-request">
-  ## 認証リクエスト
+  ## 認証リクエスト {#authentication-request}
 </div>
 
-### 従来
+### 従来 {#legacy}
 
 ```json lines
 POST /oauth/ro HTTP 1.1
@@ -37,7 +37,7 @@ Content-Type: application/json
 `offline_access` スコープを指定して<Tooltip tip="リフレッシュトークン: ユーザーに再度ログインさせることなく、新しいアクセストークンを取得するために使用するトークン。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=refresh+token">リフレッシュトークン</Tooltip>をリクエストする場合にのみ、`device` パラメータが必要です。
 
 <div id="oidc-conformant">
-  ### OIDC 準拠
+  ### OIDC 準拠 {#oidc-conformant}
 </div>
 
 ```json lines
@@ -53,10 +53,10 @@ grant_type=http%3A%2F%2Fauth0.com%2Foauth%2Fgrant-type%2Fpassword-realm&client_i
 * `audience` パラメーターは省略可能です。
 
 <div id="authentication-response">
-  ## 認証レスポンス
+  ## 認証レスポンス {#authentication-response}
 </div>
 
-### 従来
+### 従来 {#legacy-2}
 
 ```json lines
 HTTP/1.1 200 OK
@@ -76,7 +76,7 @@ Pragma: no-cache
 * リフレッシュトークンは、`device` パラメータが渡され、`offline_access` スコープが要求された場合にのみ返されます。
 
 <div id="oidc-conformant">
-  ### OIDC 準拠
+  ### OIDC 準拠 {#oidc-conformant-2}
 </div>
 
 ```json lines
@@ -98,11 +98,11 @@ Pragma: no-cache
 * リフレッシュトークンが返されるのは、`offline_access` スコープが付与された場合のみです。
 
 <div id="id-token-structure">
-  ## ID トークンの構造
+  ## ID トークンの構造 {#id-token-structure}
 </div>
 
 <div id="legacy">
-  ### レガシー
+  ### レガシー {#legacy-3}
 </div>
 
 export const codeExample1 = `{
@@ -119,7 +119,7 @@ export const codeExample1 = `{
 <AuthCodeBlock children={codeExample1} language="json" filename="JSON" />
 
 <div id="oidc-conformant">
-  ### OIDC 準拠
+  ### OIDC 準拠 {#oidc-conformant-3}
 </div>
 
 export const codeExample2 = `{
@@ -139,10 +139,10 @@ export const codeExample2 = `{
 * `favorite_color` クレームは名前空間付きにし、ルールを使って追加する必要があります。詳しくは、[名前空間付きカスタムクレームを作成する](/docs/ja-jp/secure/tokens/json-web-tokens/create-custom-claims) をご覧ください。
 
 <div id="access-token-structure-optional">
-  ## アクセストークンの構造 (オプション)
+  ## アクセストークンの構造 (オプション) {#access-token-structure-optional}
 </div>
 
-### 従来方式
+### 従来方式 {#legacy-4}
 
 ```json JSON lines
 SlAV32hkKG
@@ -151,7 +151,7 @@ SlAV32hkKG
 返されたアクセストークンはopaqueで、`/userinfo`エンドポイントの呼び出しにのみ有効です。
 
 <div id="oidc-conformant">
-  ### OIDC 準拠
+  ### OIDC 準拠 {#oidc-conformant-4}
 </div>
 
 export const codeExample3 = `{
@@ -173,13 +173,13 @@ export const codeExample3 = `{
 * 指定された <Tooltip tip="Audience: 発行されたトークンの audience を表す一意の識別子です。トークン内では aud という名前で表され、その値には ID トークンの場合はアプリケーション（Client ID）の ID、アクセストークンの場合は API（API Identifier）の ID が含まれます。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=audience">オーディエンス</Tooltip> が `/userinfo` のみである場合でも、opaque なアクセストークンが返される可能性があることに注意してください。
 
 <div id="standard-password-grant-requests">
-  ## 標準のパスワードグラントリクエスト
+  ## 標準のパスワードグラントリクエスト {#standard-password-grant-requests}
 </div>
 
 Auth0 の password realm grant は標準の OIDC では定義されていませんが、Auth0 固有の `realm` パラメータをサポートしているため、従来のリソース所有者エンドポイントに代わるものとして推奨されています。OIDC 認証を使用する場合は、[標準の OIDC フローもサポートされています](/docs/ja-jp/get-started/authentication-and-authorization-flow/resource-owner-password-flow)。
 
 <div id="learn-more">
-  ## さらに詳しく
+  ## さらに詳しく {#learn-more}
 </div>
 
 * [OIDCでのアクセストークン](/docs/ja-jp/authenticate/login/oidc-conformant-authentication/oidc-adoption-access-tokens)

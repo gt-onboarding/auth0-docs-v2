@@ -6,7 +6,7 @@ description: "Lancez le flux de code d’autorisation avec PKCE, le type d’oct
 import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `GET /authorize`
@@ -14,7 +14,7 @@ import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 Il s’agit du type d’octroi OAuth 2.0 que les applications mobiles utilisent pour accéder à une API. Avant de commencer ce flux, vous devez générer et stocker un `code_verifier`, puis générer à partir de celui-ci un `code_challenge` qui sera envoyé dans la requête d’autorisation.
 
 <div id="query-parameters">
-  ## Paramètres de requête
+  ## Paramètres de requête {#query-parameters}
 </div>
 
 <ParamField query="audience" type="string" required>
@@ -78,7 +78,7 @@ Il s’agit du type d’octroi OAuth 2.0 que les applications mobiles utilisent 
 </ParamField>
 
 <div id="response-schema">
-  ## Schéma de réponse
+  ## Schéma de réponse {#response-schema}
 </div>
 
 <ResponseSchema statusCode="erreur par défaut">
@@ -92,7 +92,7 @@ Il s’agit du type d’octroi OAuth 2.0 que les applications mobiles utilisent 
 </ResponseSchema>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut  | Description                                                      |

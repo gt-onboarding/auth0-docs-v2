@@ -6,7 +6,7 @@ description: "PKCE を使用した Authorization Code フローの最終ステ�
 import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `POST /oauth/token`
@@ -14,7 +14,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 これは、モバイルアプリがAPIにアクセスする際に使用するフローです。このエンドポイントでは、Authorization Code をトークンに交換します。
 
 <div id="remarks">
-  ### 注記
+  ### 注記 {#remarks}
 </div>
 
 * アプリケーションとの互換性を高めるため、Auth0 は今後、OIDC 仕様で定義された構造化クレーム形式でプロファイル情報を返します。つまり、IDトークンまたはアクセストークンにカスタムクレームを追加する場合は、標準の OIDC クレームとの競合を避けるため、名前空間付きの形式に準拠している必要があります。
@@ -23,7 +23,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 * サイレント認証を使用すると、Auth0 がリダイレクトのみを返し、ログインページは表示しない認証フローを実行できます。アクセストークンの有効期限が切れた場合でも、ユーザーのシングルサインオン (SSO) セッションが有効であれば、サイレント認証を使ってユーザー操作なしで新しいトークンを取得できます。
 
 <div id="learn-more">
-  ### 詳細
+  ### 詳細 {#learn-more}
 </div>
 
 * [Proof Key for Code Exchange (PKCE) を使用した Authorization Code フロー](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce)
@@ -31,7 +31,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 * [サイレント認証](https://auth0.com/docs/authenticate/login/configure-silent-authentication)
 
 <div id="headers">
-  ## ヘッダー
+  ## ヘッダー {#headers}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -39,7 +39,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 </ParamField>
 
 <div id="body-parameters">
-  ## ボディパラメータ
+  ## ボディパラメータ {#body-parameters}
 </div>
 
 <div className="prose-sm prose-gray dark:prose-invert">
@@ -73,7 +73,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 </ParamField>
 
 <div id="response-schema">
-  ## レスポンススキーマ
+  ## レスポンススキーマ {#response-schema}
 </div>
 
 <ResponseSchema statusCode="200">
@@ -109,7 +109,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 </ResponseSchema>
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | Status  | Description     |

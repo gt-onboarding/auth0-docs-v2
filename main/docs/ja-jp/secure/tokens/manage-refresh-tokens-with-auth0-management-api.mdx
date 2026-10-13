@@ -8,7 +8,7 @@ description: Auth0 Management API を使用してリフレッシュトークン�
 </Callout>
 
 <div id="management-api-endpoints">
-  ## Management API エンドポイント
+  ## Management API エンドポイント {#management-api-endpoints}
 </div>
 
 Auth0 の<Tooltip tip="Management API: 顧客が管理作業を実行できるようにする製品。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Management+API">Management API</Tooltip>には、リフレッシュトークンを個別またはまとめて管理するためのエンドポイントがあります。
@@ -16,7 +16,7 @@ Auth0 の<Tooltip tip="Management API: 顧客が管理作業を実行できる�
 これらのエンドポイントは、拡張プロパティと一括取り消し操作を備え、`device-credentials` リソースのエンドポイントに代わるものとして、[別のリフレッシュトークンの取り消し](/docs/ja-jp/secure/tokens/refresh-tokens/revoke-refresh-tokens)を補完します。
 
 <div id="refresh-token-resource">
-  ### リフレッシュトークンリソース
+  ### リフレッシュトークンリソース {#refresh-token-resource}
 </div>
 
 次のエンドポイントを使用すると、特定のリフレッシュトークンの情報を表示したり、取り消したりできます。
@@ -27,7 +27,7 @@ Auth0 の<Tooltip tip="Management API: 顧客が管理作業を実行できる�
 | ID を指定してリフレッシュトークンを取り消す | `DELETE /api/v2/refresh-tokens/{tokenId}` | `delete:refresh_tokens` |
 
 <div id="user-resource">
-  ### ユーザーリソース
+  ### ユーザーリソース {#user-resource}
 </div>
 
 以下のエンドポイントを使用すると、指定したユーザーのすべてのリフレッシュトークンを一覧表示したり、取り消したりできます。
@@ -38,7 +38,7 @@ Auth0 の<Tooltip tip="Management API: 顧客が管理作業を実行できる�
 | ユーザーのすべてのリフレッシュトークンを取り消す   | `DELETE /api/v2/users/{userId}/refresh-tokens` | `delete:refresh_tokens` |
 
 <div id="refresh-token-properties">
-  ## リフレッシュトークンのプロパティ
+  ## リフレッシュトークンのプロパティ {#refresh-token-properties}
 </div>
 
 リフレッシュ <Tooltip tip="トークンエンドポイント: トークンをプログラムからリクエストするために使用される、認可サーバー上のエンドポイント。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=token+endpoints">トークンエンドポイント</Tooltip> は、トークンとその履歴に関する情報を返します。
@@ -51,14 +51,14 @@ Auth0 の<Tooltip tip="Management API: 顧客が管理作業を実行できる�
 | Client and Resource Servers Information | リフレッシュトークンに関連付けられたアプリケーションと API に関する概要情報。                                                                                                                                                                                                                                                                                                                           |
 
 <div id="limitations">
-  ## 制限事項
+  ## 制限事項 {#limitations}
 </div>
 
 * リフレッシュトークンの取り消し (`DELETE`) 操作は非同期で実行され、結果整合性です。
 * 2023-09-21 以降に発行されたリフレッシュトークン (US-3 リージョンのテナントでは 2024-02-22 以降) には、適切な値を持つセッション ID (`session_id`) プロパティが含まれます。この日付より前に発行されたリフレッシュトークンでは、このプロパティの値は `null` になります。
 
 <div id="learn-more">
-  ## 詳しく見る
+  ## 詳しく見る {#learn-more}
 </div>
 
 * [リフレッシュトークン](/docs/ja-jp/secure/tokens/refresh-tokens)

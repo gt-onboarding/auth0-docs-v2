@@ -15,7 +15,7 @@ Vous pouvez uniquement enregistrer des [applications tierces](/docs/fr-ca/get-st
 </Callout>
 
 <div id="key-benefits">
-  ## Principaux avantages
+  ## Principaux avantages {#key-benefits}
 </div>
 
 L’enregistrement manuel CIMD offre les avantages suivants :
@@ -33,7 +33,7 @@ L’enregistrement manuel CIMD offre les avantages suivants :
 </Callout>
 
 <div id="use-cases">
-  ## Cas d’usage
+  ## Cas d’usage {#use-cases}
 </div>
 
 Les cas d’usage courants de l’enregistrement CIMD manuel comprennent :
@@ -42,7 +42,7 @@ Les cas d’usage courants de l’enregistrement CIMD manuel comprennent :
 * Intégrations tierces : applications partenaires, plateformes SaaS et services externes qui authentifient les utilisateurs pour le compte d’organisations. Ces applications gèrent leurs propres métadonnées client et clés cryptographiques, ce qui permet des mises à jour indépendantes et la rotation des clés sans avoir à partager de secrets.
 
 <div id="example-cimd">
-  ## Exemple de CIMD
+  ## Exemple de CIMD {#example-cimd}
 </div>
 
 Voici un exemple de CIMD pour un client MCP public, dans lequel `"token_endpoint_auth_method": "none"` :
@@ -66,7 +66,7 @@ Voici un exemple de CIMD pour un client MCP public, dans lequel `"token_endpoint
 Auth0 [effectue automatiquement le mappage et la validation des champs CIMD](#cimd-json-validation-rules). Pour en savoir plus sur les types de clients pris en charge, consultez [Prérequis](#prerequisites).
 
 <div id="how-it-works">
-  ## Fonctionnement
+  ## Fonctionnement {#how-it-works}
 </div>
 
 Le schéma suivant illustre le processus complet d’enregistrement CIMD manuel :
@@ -106,7 +106,7 @@ sequenceDiagram
 ```
 
 <div id="phase-1-registration">
-  ### Phase 1 : Enregistrement
+  ### Phase 1 : Enregistrement {#phase-1-registration}
 </div>
 
 Lors de l’enregistrement manuel du CIMD, un administrateur de tenant enregistre l’application en important dans Auth0 son CIMD hébergé à l’externe :
@@ -120,7 +120,7 @@ Lors de l’enregistrement manuel du CIMD, un administrateur de tenant enregistr
 5. **Confirmation** : Auth0 renvoie une réponse de réussite; l’application a été enregistrée avec succès comme client CIMD dans Auth0.
 
 <div id="phase-2-authorization">
-  ### Phase 2 : Autorisation
+  ### Phase 2 : Autorisation {#phase-2-authorization}
 </div>
 
 Une fois enregistrée, l&#39;application utilise son URL CIMD comme identité dans le flux OAuth.
@@ -134,13 +134,13 @@ Une fois enregistrée, l&#39;application utilise son URL CIMD comme identité da
 7. **Autorisation terminée** : L&#39;Auth0 Authorization Server renvoie un jeton d&#39;accès dans lequel le `client_id` correspond à l&#39;URL CIMD. L&#39;application peut maintenant accéder à l&#39;API au nom de l&#39;utilisateur.
 
 <div id="prerequisites">
-  ## Prérequis
+  ## Prérequis {#prerequisites}
 </div>
 
 Avant d’enregistrer une application au moyen d’un CIMD manuel, assurez-vous que votre tenant et votre application respectent les exigences suivantes :
 
 <div id="tenant-configuration">
-  ### Configuration du tenant
+  ### Configuration du tenant {#tenant-configuration}
 </div>
 
 * **Activer la prise en charge de CIMD** : activez la **bascule Client ID Metadata Document Registration** dans vos [paramètres du tenant](/docs/fr-ca/get-started/tenant-settings) pour indiquer la prise en charge de CIMD dans les métadonnées de l’Auth0 Authorization Server, ce qui permet aux clients de détecter automatiquement cette fonctionnalité lors de la connexion.
@@ -149,7 +149,7 @@ Avant d’enregistrer une application au moyen d’un CIMD manuel, assurez-vous 
 * **Profil de compatibilité du paramètre de ressource (facultatif)** : pour les clients MCP, nous recommandons d’activer ce profil dans vos [paramètres du tenant](/docs/fr-ca/get-started/tenant-settings). Cela permet au serveur d’autorisation de traiter les requêtes propres aux ressources ([RFC 8707](https://www.rfc-editor.org/rfc/rfc8707.html#name-resource-parameter)) en vérifiant le paramètre `resource` si `audience` n’est pas fourni.
 
 <div id="supported-client-types">
-  ### Types de clients pris en charge
+  ### Types de clients pris en charge {#supported-client-types}
 </div>
 
 Vous pouvez enregistrer les types de clients suivants avec CIMD manuel dans Auth0 :
@@ -158,7 +158,7 @@ Vous pouvez enregistrer les types de clients suivants avec CIMD manuel dans Auth
 * **Application tierce** : il doit s’agir d’une [application tierce](/docs/fr-ca/get-started/applications/third-party-applications) (`is_first_party: false`), soumise à des [contrôles de sécurité renforcés](/docs/fr-ca/get-started/applications/third-party-applications/security-controls). Une fois l’enregistrement terminé, [configurez votre client CIMD](#set-up-cimd-client) comme une application tierce dans Auth0.
 
 <div id="supported-authentication-methods">
-  ### Méthodes d’authentification prises en charge
+  ### Méthodes d’authentification prises en charge {#supported-authentication-methods}
 </div>
 
 Les clients CIMD ne peuvent pas utiliser de méthodes d’authentification fondées sur des secrets symétriques partagés, comme `client_secret_post`, `client_secret_basic` ou `client_secret_jwt`.
@@ -181,7 +181,7 @@ Selon que le client est public ou confidentiel, Auth0 prend en charge les métho
 </Callout>
 
 <div id="register-applications-with-manual-cimd">
-  ## Enregistrer des applications avec un CIMD manuel
+  ## Enregistrer des applications avec un CIMD manuel {#register-applications-with-manual-cimd}
 </div>
 
 Lors de la création d’une application dans Auth0, enregistrez-la manuellement au moyen d’un CIMD à l’aide de l’Auth0 Dashboard ou de la Management API.
@@ -203,7 +203,7 @@ Lors de la création d’une application dans Auth0, enregistrez-la manuellement
     1. [Prévisualiser le CIMD](#preview-cimd) : validez l’URL du CIMD et le CIMD avec Auth0
     2. [Enregistrer le client CIMD](#register-cimd-client) : enregistrez l’application comme client CIMD dans Auth0
 
-    ### Prévisualiser le CIMD
+### Prévisualiser le CIMD {#preview-cimd}
 
     Pour prévisualiser le CIMD, effectuez une requête `POST` vers le point de terminaison `/api/v2/clients/cimd/preview` et transmettez les éléments suivants :
 
@@ -245,7 +245,7 @@ Lors de la création d’une application dans Auth0, enregistrez-la manuellement
     }
     ```
 
-    ### Enregistrer le client CIMD
+### Enregistrer le client CIMD {#register-cimd-client}
 
     Une fois les métadonnées du client vérifiées, effectuez une requête `POST` vers le point de terminaison `/api/v2/clients/cimd/register` et transmettez les éléments suivants :
 
@@ -292,7 +292,7 @@ Lors de la création d’une application dans Auth0, enregistrez-la manuellement
 </Tabs>
 
 <div id="set-up-cimd-client">
-  ## Configurer le client CIMD
+  ## Configurer le client CIMD {#set-up-cimd-client}
 </div>
 
 L’enregistrement manuel CIMD est limité aux applications tierces (`is_first_party: false`), qui sont soumises à des [contrôles de sécurité renforcés](/docs/fr-ca/get-started/applications/third-party-applications/security-controls). Une fois votre client CIMD enregistré, configurez-le comme application tierce dans Auth0 :
@@ -303,7 +303,7 @@ L’enregistrement manuel CIMD est limité aux applications tierces (`is_first_p
 Pour en savoir plus, consultez [Configurer les applications tierces](/docs/fr-ca/get-started/applications/third-party-applications/configure-third-party-applications).
 
 <div id="refresh-client-metadata">
-  ## Actualiser les métadonnées du client
+  ## Actualiser les métadonnées du client {#refresh-client-metadata}
 </div>
 
 Une fois le client CIMD enregistré, vous pouvez actualiser manuellement ses métadonnées. Auth0 récupère les métadonnées client les plus récentes à partir du CIMD, que vous pouvez prévisualiser et enregistrer.
@@ -318,7 +318,7 @@ Dans l’Auth0 Dashboard :
 4. Sélectionnez **Enregistrer**.
 
 <div id="get-cimd-client">
-  ## Obtenir le client CIMD
+  ## Obtenir le client CIMD {#get-cimd-client}
 </div>
 
 Pour obtenir un client CIMD, faites une requête `GET` vers l’endpoint `/v2/clients/{clientId}`, où `{clientID}` correspond à l’ID client généré par Auth0 attribué au client CIMD :
@@ -342,7 +342,7 @@ curl --request GET \
 Si la requête réussit, Auth0 renvoie une réponse qui contient la configuration du client CIMD avec des champs comme `external_client_id`, `name`, `callbacks`, `token_endpoint_auth_method`, et plus encore.
 
 <div id="update-cimd-client">
-  ## Mettre à jour le client CIMD
+  ## Mettre à jour le client CIMD {#update-cimd-client}
 </div>
 
 Vous pouvez mettre à jour les champs de la base de données Auth0 pour un client CIMD enregistré. La mise à jour du client CIMD dans Auth0 ne met pas automatiquement à jour le CIMD hébergé sur le domaine de l’application.
@@ -376,7 +376,7 @@ curl --location --request PATCH \
 ```
 
 <div id="cimd-url-validation-rules">
-  ## Règles de validation des URL CIMD
+  ## Règles de validation des URL CIMD {#cimd-url-validation-rules}
 </div>
 
 Pour être acceptées par la validation dans Auth0, les URL CIMD doivent respecter les exigences suivantes :
@@ -398,7 +398,7 @@ Pour être acceptées par la validation dans Auth0, les URL CIMD doivent respect
 | **Encodage**    | Encodage en pourcentage        | `%` doit être suivi d’exactement deux chiffres hexadécimaux.                                             |
 
 <div id="cimd-json-validation-rules">
-  ## Règles de validation JSON CIMD
+  ## Règles de validation JSON CIMD {#cimd-json-validation-rules}
 </div>
 
 Auth0 applique les règles de validation JSON CIMD suivantes :
@@ -424,11 +424,11 @@ Auth0 prend en charge les propriétés CIMD suivantes :
 | `response_types`             | Non          | Tableau de chaînes | Validé pour assurer la cohérence OIDC, mais non enregistré. Génère un avertissement s’il contient `code` alors que `authorization_code` est absent de `grant_types`. | (Aucun)                      |
 
 <div id="security-considerations">
-  ## Considérations relatives à la sécurité
+  ## Considérations relatives à la sécurité {#security-considerations}
 </div>
 
 <div id="cimd-client-key-rotation-for-private_key_jwt-authentication">
-  ### Rotation des clés pour les clients CIMD avec l’authentification private_key_jwt
+  ### Rotation des clés pour les clients CIMD avec l’authentification private_key_jwt {#cimd-client-key-rotation-for-private_key_jwt-authentication}
 </div>
 
 Pour faire la rotation des clés des clients CIMD qui utilisent l’authentification Private Key JWT, générez une nouvelle paire de clés avec un `kid` nouveau et unique. Si vous faites la rotation de votre clé privée et mettez à jour votre JWKS avec de nouvelles clés sous le même `kid`, l’enregistrement CIMD d’Auth0 rejettera la nouvelle clé et conservera l’ancienne. Cela garantit que la rotation des clés exige l’ajout explicite de nouvelles clés, plutôt qu’un remplacement silencieux.

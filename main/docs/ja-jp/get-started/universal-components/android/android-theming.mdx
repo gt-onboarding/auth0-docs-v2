@@ -13,7 +13,7 @@ Auth0 [Universal Components for Android](https://github.com/auth0/ui-components-
 Universal Components には、デフォルトの Auth0 テーマが用意されています。ブランドに合わせて独自のテーマを設定できます。
 
 <div id="how-theming-works">
-  ## テーマ設定の仕組み
+  ## テーマ設定の仕組み {#how-theming-works}
 </div>
 
 Universal Components for Android では、Material 3 の `MaterialTheme` パターンに準拠した Jetpack Compose テーマを使用します。
@@ -23,7 +23,7 @@ Universal Components for Android では、Material 3 の `MaterialTheme` パタ�
 任意のコンポーザブル内で、`Auth0Theme.colors`、`Auth0Theme.typography`、`Auth0Theme.shapes`、`Auth0Theme.dimensions`、`Auth0Theme.sizes` を使用してトークンを参照できます。
 
 <div id="zero-configuration">
-  ### 設定不要
+  ### 設定不要 {#zero-configuration}
 </div>
 
 テーマを設定しない場合、Universal Components for Android では Auth0 のデフォルトテーマがレンダリングされます。次の例では、`AuthenticatorSettingsComponent` をカスタマイズせずに表示しています。
@@ -40,7 +40,7 @@ fun MFASettingsScreen() {
 </Callout>
 
 <div id="override-a-subset-of-tokens">
-  ### 一部のトークンをオーバーライドする
+  ### 一部のトークンをオーバーライドする {#override-a-subset-of-tokens}
 </div>
 
 Universal Components for Android では、その他のすべてのトークンは Auth0 のデフォルトテーマでレンダリングされますが、特定のトークンをオーバーライドできます。
@@ -62,7 +62,7 @@ fun MFASettingsScreen() {
 ```
 
 <div id="force-dark-mode">
-  ### ダークモードを強制する
+  ### ダークモードを強制する {#force-dark-mode}
 </div>
 
 ダークモードを強制するには、コンポーネントを `Auth0Theme(darkTheme = true)` でラップするか、ダークカラースキームを明示的に指定します。
@@ -88,7 +88,7 @@ fun MFASettingsScreen() {
 ```
 
 <div id="configure-a-full-brand-theme">
-  ### 完全なブランディングテーマを設定する
+  ### 完全なブランディングテーマを設定する {#configure-a-full-brand-theme}
 </div>
 
 色、タイポグラフィ、形状を組み合わせた独自のブランディングテーマを、単一の `Auth0ThemeConfiguration` 設定として指定します。
@@ -128,7 +128,7 @@ fun MFASettingsScreen() {
 ```
 
 <div id="read-theme-tokens-in-your-own-composables">
-  ### 独自のコンポーザブルでテーマトークンを読み取る
+  ### 独自のコンポーザブルでテーマトークンを読み取る {#read-theme-tokens-in-your-own-composables}
 </div>
 
 accessor オブジェクトを使用して、`Auth0Theme { ... }` コンポーザブル内のテーマトークンにアクセスします。
@@ -159,7 +159,7 @@ fun CustomAuthCard() {
 ```
 
 <div id="switch-themes-at-runtime">
-  ### 実行時にテーマを切り替える
+  ### 実行時にテーマを切り替える {#switch-themes-at-runtime}
 </div>
 
 テーマ設定をstateに保持しておけば、画面を再作成することなく、ライトテーマとダークテーマ (またはbrandバリエーション) を切り替えられます。
@@ -181,7 +181,7 @@ fun MFASettingsScreen() {
 ```
 
 <div id="token-reference">
-  ### トークンリファレンス
+  ### トークンリファレンス {#token-reference}
 </div>
 
 <Accordion title="カラー — Auth0Color">
@@ -249,7 +249,7 @@ fun MFASettingsScreen() {
 </Accordion>
 
 <div id="learn-more">
-  ## 詳しく見る
+  ## 詳しく見る {#learn-more}
 </div>
 
 <CardGroup cols={2}>

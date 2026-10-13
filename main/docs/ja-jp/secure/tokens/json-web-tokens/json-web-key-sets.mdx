@@ -21,7 +21,7 @@ Auth0 はテナントごとに JWKS エンドポイントを公開しており�
 </Warning>
 
 <div id="cache-the-json-web-key-set">
-  ## JSON Web Key Set をキャッシュする
+  ## JSON Web Key Set をキャッシュする {#cache-the-json-web-key-set}
 </div>
 
 アプリケーションが JWKS エンドポイントから取得した JWKS をキャッシュすることをお勧めします。これにより、次の利点があります。
@@ -39,7 +39,7 @@ JWKS ライブラリまたはフレームワークのミドルウェアを使用
 * キャッシュミス時の再取得頻度を制限します (たとえば、再試行は 1 回のみにします) 。これにより、未知のキーで署名されたトークンが大量に送られても、JWKS エンドポイントへのリクエストが急増してレート制限を消費するのを防げます。手動で[取り消されたキー](/docs/ja-jp/get-started/tenant-settings/signing-keys/revoke-signing-keys)で署名されたトークンの受け入れを停止する必要があるまでの時間に応じて、キャッシュ間隔を設定してください。
 
 <div id="learn-more">
-  ## 詳細情報
+  ## 詳細情報 {#learn-more}
 </div>
 
 * [署名鍵](/docs/ja-jp/get-started/tenant-settings/signing-keys)

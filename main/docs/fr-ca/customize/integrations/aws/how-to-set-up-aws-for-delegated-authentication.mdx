@@ -6,7 +6,7 @@ title: Configurer Amazon Web Services pour l’authentification déléguée
 Vous pouvez configurer Amazon Web Services (AWS) pour l’authentification déléguée avec Auth0. Pour en savoir plus, consultez [Configurer Amazon Web Services pour l’authentification unique](/docs/fr-ca/customize/integrations/aws/configure-amazon-web-services-for-sso) et [Sécuriser les endpoints d’API Gateway AWS à l’aide d’autorisateurs personnalisés](/docs/fr-ca/customize/integrations/aws/aws-api-gateway-custom-authorizers).
 
 <div id="create-a-saml-provider-in-aws">
-  ## Créer un fournisseur SAML dans AWS
+  ## Créer un fournisseur SAML dans AWS {#create-a-saml-provider-in-aws}
 </div>
 
 1. Connectez-vous à AWS et accédez à la [console IAM](https://console.aws.amazon.com/iam). Dans le menu de navigation de gauche, sélectionnez **Fournisseurs d’identité**. Cliquez sur **Créer un fournisseur**. Définissez les paramètres suivants :
@@ -20,7 +20,7 @@ Vous pouvez configurer Amazon Web Services (AWS) pour l’authentification dél�
 3. Vérifiez vos paramètres et cliquez sur **Créer** si tout est correct.
 
 <div id="create-a-role-for-your-saml-provider">
-  ## Créer un rôle pour votre fournisseur SAML
+  ## Créer un rôle pour votre fournisseur SAML {#create-a-role-for-your-saml-provider}
 </div>
 
 Pour utiliser le fournisseur, vous devez créer un IAM role en utilisant le fournisseur dans la politique d’approbation du rôle.
@@ -60,19 +60,19 @@ Pour utiliser le fournisseur, vous devez créer un IAM role en utilisant le four
 10. Une fois le rôle créé, vous trouverez vos rôles sur la page principale **Roles**.
 
 <div id="copy-the-arn-values">
-  ## Copier les valeurs ARN
+  ## Copier les valeurs ARN {#copy-the-arn-values}
 </div>
 
 Les instructions suivantes vous montreront où trouver les valeurs du fournisseur et du Role ARN.
 
 <div id="provider-arn">
-  ### fournisseur ARN
+  ### fournisseur ARN {#provider-arn}
 </div>
 
 Dans la console IAM, accédez à [Fournisseurs d’identité](https://console.aws.amazon.com/iam/home#/providers). Sélectionnez le rôle qui vous intéresse pour ouvrir sa page Summary. Copiez la valeur **fournisseur ARN**, qui apparaît en premier sous **Summary**.
 
 <div id="role-arn">
-  ### Role ARN
+  ### Role ARN {#role-arn}
 </div>
 
 Dans la console IAM, accédez à [Roles](https://console.aws.amazon.com/iam/home#/roles). Sélectionnez le rôle qui vous intéresse pour ouvrir sa page Summary. Copiez la valeur **Role ARN**, qui apparaît en premier sous **Summary**.

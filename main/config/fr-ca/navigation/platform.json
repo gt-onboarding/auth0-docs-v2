@@ -2,7 +2,7 @@
   "pages": [
     "docs/fr-ca/troubleshoot",
     {
-      "group": "Soutien à la clientèle",
+      "group": "Customer Support",
       "pages": [
         "docs/fr-ca/troubleshoot/customer-support/support-plans",
         "docs/fr-ca/troubleshoot/customer-support/product-support-matrix",
@@ -13,7 +13,7 @@
       "root": "docs/fr-ca/troubleshoot/customer-support"
     },
     {
-      "group": "Gestion des comptes et des plans",
+      "group": "Account and Plan Management",
       "pages": [
         "docs/fr-ca/troubleshoot/customer-support/update-billing-information",
         "docs/fr-ca/troubleshoot/customer-support/manage-subscriptions",
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "group": "Politiques opérationnelles",
+      "group": "Operational Policies",
       "pages": [
         "docs/fr-ca/troubleshoot/customer-support/operational-policies/billing-policy",
         "docs/fr-ca/troubleshoot/customer-support/operational-policies/public-cloud-service-endpoints",
@@ -33,12 +33,12 @@
         "docs/fr-ca/troubleshoot/customer-support/operational-policies/load-testing-policy",
         "docs/fr-ca/troubleshoot/customer-support/operational-policies/penetration-testing-policy",
         {
-          "group": "Politique de limitation du débit",
+          "group": "Rate Limit Policy",
           "pages": [
             "docs/fr-ca/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-use-cases",
             "docs/fr-ca/troubleshoot/customer-support/operational-policies/rate-limit-policy/custom-rate-limit-policies",
             {
-              "group": "Configurations de limites de débit",
+              "group": "Rate Limit Configurations",
               "pages": [
                 "docs/fr-ca/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/free-public",
                 "docs/fr-ca/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/essentials-professional-b2b",
@@ -62,12 +62,12 @@
       "root": "docs/fr-ca/troubleshoot/customer-support/operational-policies"
     },
     {
-      "group": "Cycle de vie du produit",
+      "group": "Product Lifecycle",
       "pages": [
         "docs/fr-ca/troubleshoot/product-lifecycle/product-release-stages",
         "docs/fr-ca/troubleshoot/product-lifecycle/migration-process",
         {
-          "group": "Dépréciations et migrations",
+          "group": "Deprecations and Migrations",
           "pages": [
             "docs/fr-ca/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications",
             "docs/fr-ca/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-nodejs-22",
@@ -78,7 +78,7 @@
           "root": "docs/fr-ca/troubleshoot/product-lifecycle/deprecations-and-migrations"
         },
         {
-          "group": "Migrations antérieures",
+          "group": "Past Migrations",
           "pages": [
             "docs/fr-ca/troubleshoot/product-lifecycle/past-migrations/migrate-nodejs-16-to-nodejs-18",
             "docs/fr-ca/troubleshoot/product-lifecycle/past-migrations/migrate-from-edge-js-extensibility-features",

@@ -19,7 +19,7 @@ Auth0 には、アプリケーションにメールアドレスの確認を追�
 </Warning>
 
 <div id="choose-the-right-approach">
-  ## 適切なアプローチを選ぶ
+  ## 適切なアプローチを選ぶ {#choose-the-right-approach}
 </div>
 
 メールを確認済みまたは未確認としてマークする方法はいくつかあります。どの方法が適しているかを判断するために、自分やチームに次のような質問をしてみてください。
@@ -36,7 +36,7 @@ Auth0 の組み込みフローを使えない要件がある場合や、多数�
 最後に、エンタープライズ接続のユーザーがいる場合は、それらの接続の一部で特別なメールアドレス確認ワークフローがサポートされています。詳しくは、[Special Verification Support](#special-verification-support) をご覧ください。
 
 <div id="email-verification-links">
-  ## メールアドレス確認リンク
+  ## メールアドレス確認リンク {#email-verification-links}
 </div>
 
 Auth0 でメールアドレスを確認する一般的な方法は、ユーザーにメールアドレス確認リンクを送信することです。ユーザーがそのリンクをクリックすると、ユーザーの `email_verified` フラグが `true` に設定されます。
@@ -51,7 +51,7 @@ Auth0 でメールアドレスを確認する一般的な方法は、ユーザ�
 * [email verification ticket](https://auth0.com/docs/api/management/v2#!/Tickets/post_email_verification) を作成し、メールを自分で送信します。その際、ユーザーがメールアドレスの確認に使用する ticket を含めます
 
 <div id="one-time-passwords">
-  ## ワンタイムパスワード
+  ## ワンタイムパスワード {#one-time-passwords}
 </div>
 
 ワンタイムパスワード (OTP) は、すべてのユーザーのメールアドレスが確認済みであることを確実にするために、アカウント作成時に各新規ユーザーへメールで送信できます。メール確認リンクは、メールスキャナーやユーザー自身によって意図せず確認される可能性があるため、OTP を使用することで、各ユーザーが実在するメールアドレスを自ら確認したことを確実にできます。OTP を使用するには、テナントで [Universal Login](/docs/ja-jp/authenticate/login/auth0-universal-login)、[Flexible Identifiers](/docs/ja-jp/authenticate/database-connections/flexible-identifiers-and-attributes)、および [Identifer-First login](/docs/ja-jp/authenticate/login/auth0-universal-login/identifier-first) が有効になっている必要があります。
@@ -65,7 +65,7 @@ OTP を設定するには、[**Authentication &gt; Database**](https://manage.au
 <Frame>![](/docs/images/cdy7uua7fh8z/5SO4gvkdOOZEnPInXrIN1m/5b30204358ac42dcbc3ec0f7e6af9dcf/Email_Config_-_English.png)</Frame>
 
 <div id="custom-or-bulk-verification-with-the-management-api">
-  ## Management API を使ったカスタムまたは一括メールアドレス確認
+  ## Management API を使ったカスタムまたは一括メールアドレス確認 {#custom-or-bulk-verification-with-the-management-api}
 </div>
 
 <Warning>
@@ -77,7 +77,7 @@ OTP を設定するには、[**Authentication &gt; Database**](https://manage.au
 このような場合は、[PATCH `/api/v2/users` エンドポイント](https://auth0.com/docs/api/management/v2/#!/Users/patch_users_by_id)を使って `email_verified` を `true` に設定できます。
 
 <div id="special-verification-support">
-  ## 特別なメールアドレス確認のサポート
+  ## 特別なメールアドレス確認のサポート {#special-verification-support}
 </div>
 
 Azure AD と ADFS のエンタープライズ接続では、Auth0 はいくつかのカスタムメールアドレス確認ワークフローをサポートしています。これにより、他のシステムから移行してくるユーザーのメールアドレスが確認済みであることを、正確かつ安全に確保できます。詳しくは、[Azure AD と ADFS のメールアドレス確認](/docs/ja-jp/authenticate/identity-providers/enterprise-identity-providers/azuread-adfs-email-verification) を参照してください。

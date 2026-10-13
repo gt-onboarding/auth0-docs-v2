@@ -17,7 +17,7 @@ Pour configurer Sender Constraining dans Auth0, vous devez :
 * [Configurer Sender Constraining pour un serveur de ressources](#configure-sender-constraining-for-a-resource-server).
 
 <div id="how-it-works">
-  ## Fonctionnement
+  ## Fonctionnement {#how-it-works}
 </div>
 
 <Tooltip tip="" cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Access+tokens">Les jetons d’accès</Tooltip> sont liés à l’émetteur dans Auth0 selon la manière dont vous configurez le sender constraining pour votre application cliente et votre serveur de ressources :
@@ -49,7 +49,7 @@ Le tableau suivant décrit comment les jetons d’accès sont émis et s’ils s
 | Audience personnalisée (peut contenir Userinfo) | Oui                   | Oui                                              | Non émis                                        | Émis, lié à l’émetteur                                            | Émis, lié à l’émetteur                              |
 
 <div id="configure-sender-constraining-for-a-client-application">
-  ## Configurer sender constraining pour une application cliente
+  ## Configurer sender constraining pour une application cliente {#configure-sender-constraining-for-a-client-application}
 </div>
 
 Lorsque vous exigez sender constraining pour une application cliente, les jetons d’accès sont restreints à cette application. Auth0 vérifie les requêtes pour s’assurer que seule l’application qui a demandé le jeton peut l’utiliser pour accéder à la ressource associée.
@@ -85,7 +85,7 @@ Vous pouvez configurer sender constraining pour une application cliente dans le 
 </Tabs>
 
 <div id="configure-sender-constraining-for-a-resource-server">
-  ## Configurer le sender constraining pour un serveur de ressources
+  ## Configurer le sender constraining pour un serveur de ressources {#configure-sender-constraining-for-a-resource-server}
 </div>
 
 Les jetons d’accès émis par Auth0 peuvent être liés à l’émetteur (c.-à-d. l’application cliente) qui doit accéder aux API d’un serveur de ressources.

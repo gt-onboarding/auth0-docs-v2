@@ -29,7 +29,7 @@ OBO token exchange では、[`post-login` Action トリガー](/docs/ja-jp/custo
 </Callout>
 
 <div id="use-cases">
-  ## ユースケース
+  ## ユースケース {#use-cases}
 </div>
 
 OBO Token Exchange の一般的なユースケースには、次のようなものがあります。
@@ -40,19 +40,19 @@ OBO Token Exchange の一般的なユースケースには、次のようなも�
 アプリケーションがユーザーに代わってサードパーティ API を呼び出せるようにするには、[Token Vault](/docs/ja-jp/secure/call-apis-on-users-behalf/token-vault) を使用します。
 
 <div id="how-it-works">
-  ## 仕組み
+  ## 仕組み {#how-it-works}
 </div>
 
 OBO token exchange により、中間層サービスは受信したユーザー token を、downstream service 向けの scope を持つ新しい token に交換できます。この新しい token は元のユーザーの ID を保持しながら、JSON Web Token (JWT) の payload 内で、関与したサービスの連鎖を追跡します。
 
 <div id="example-mcp-server-calls-first-party-api">
-  ### 例: MCPサーバーがファーストパーティAPIを呼び出す
+  ### 例: MCPサーバーがファーストパーティAPIを呼び出す {#example-mcp-server-calls-first-party-api}
 </div>
 
 ユーザーがAuth0を使ってクライアントアプリケーションに認証し、そのクライアントアプリケーションがMCPサーバーを呼び出します。さらに、そのMCPサーバーはファーストパーティAPIを呼び出す必要があります。
 
 <div id="step-1-user-authentication">
-  #### ステップ 1: ユーザー認証
+  #### ステップ 1: ユーザー認証 {#step-1-user-authentication}
 </div>
 
 ユーザーがログインすると、Auth0 は JWT のペイロードに次のクレームを含む、MCP サーバー向けのスコープが設定されたアクセストークンを発行します。
@@ -72,7 +72,7 @@ OBO token exchange により、中間層サービスは受信したユーザー 
 | `azp` (or `client_id` depending on the [Access token profile](/docs/ja-jp/secure/tokens/access-tokens/access-token-profiles)) | `spa_client_id`                  | トークンをリクエストしたクライアントアプリケーション |
 
 <div id="step-2-obo-exchange">
-  #### ステップ 2: OBO 交換
+  #### ステップ 2: OBO 交換 {#step-2-obo-exchange}
 </div>
 
 OBOトークン交換を使用して、MCPサーバーはユーザーのトークンをAuth0に提示し、ファーストパーティAPI向けのスコープが設定されたアクセストークンをリクエストします。Auth0は、次のクレームを含む、API向けにスコープが設定された新しいアクセストークンを発行します。
@@ -99,7 +99,7 @@ OBOトークン交換を使用して、MCPサーバーはユーザーのトー�
 | `act`                                                                                                             | `{"sub": "mcp_server_client_id",`<br />`"act": {"sub": "spa_client_id"}}` | 関与したすべてのアクターを示す委譲チェーン                  |
 
 <div id="the-act-claim">
-  #### `act` クレーム
+  #### `act` クレーム {#the-act-claim}
 </div>
 
 `act` (actor) クレーム は、委譲チェーン全体を追跡します。各 `act` レベルは呼び出しチェーン内のサービスを表し、最も外側の `act.sub` は、token exchange を実行した現在のアクターを識別します。
@@ -145,7 +145,7 @@ OBOトークン交換を使用して、MCPサーバーはユーザーのトー�
 </Callout>
 
 <div id="user-mcp-server-api-flow">
-  ### User &gt; MCPサーバー &gt; API フロー
+  ### User &gt; MCPサーバー &gt; API フロー {#user-mcp-server-api-flow}
 </div>
 
 次の図は、MCPサーバーがユーザーに代わってファーストパーティ API を呼び出すエンドツーエンドの OBO トークン交換フローを示しています。
@@ -200,7 +200,7 @@ sequenceDiagram
 5. **ダウンストリーム呼び出し**: MCP Server は Token B を使用してファーストパーティ API を呼び出します。API は Token B を検証し、そのリクエストが正当に元のユーザーに「代わって」行われていることを確認します。
 
 <div id="user-api1-api2-api3">
-  ### ユーザー &gt; API1 &gt; API2 &gt; API3
+  ### ユーザー &gt; API1 &gt; API2 &gt; API3 {#user-api1-api2-api3}
 </div>
 
 次の図は、ユーザーに代わって下流のサービスを呼び出すマイクロサービスの連鎖における、エンドツーエンドのフローを示しています。
@@ -275,7 +275,7 @@ sequenceDiagram
 8. **ダウンストリーム呼び出し**: API2 は Token C を使用して API3 にリクエストを送信します。API3 は Token C を検証し、そのリクエストが元のユーザーに代わって正当に行われていることを確認します。
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 OBOトークン交換を使用できるのは、リソースサーバーに関連付けられた Custom API クライアントのみです。Custom API クライアントは、リソースサーバーと同じ identifier を共有している場合、そのリソースサーバーにリンクされます。
@@ -288,7 +288,7 @@ Custom API クライアントには、次の要件があります。
 Custom API クライアントはファーストパーティクライアントであるため、ファーストパーティクライアントがアクセスする必要がある API では、必ず[ユーザーの同意をスキップ](/docs/ja-jp/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications#skip-consent-for-first-party-applications)してください。
 
 <div id="create-custom-api-client">
-  ### Custom API クライアントを作成
+  ### Custom API クライアントを作成 {#create-custom-api-client}
 </div>
 
 Auth0 Dashboard または Management API を使用して、Custom API クライアントを作成できます。
@@ -332,7 +332,7 @@ Auth0 Dashboard または Management API を使用して、Custom API クライ�
 </Tabs>
 
 <div id="create-client-grant">
-  ### クライアントグラントを作成
+  ### クライアントグラントを作成 {#create-client-grant}
 </div>
 
 アクセスを認可するには、Custom API client とダウンストリーム API の間に、ユーザー委任アクセス用のクライアントグラントを作成する必要があります。
@@ -365,7 +365,7 @@ Auth0 Dashboard または Management API を使用して、Custom API クライ�
 </Tabs>
 
 <div id="configure-the-obo-token-exchange">
-  ### OBO token exchange を設定する
+  ### OBO token exchange を設定する {#configure-the-obo-token-exchange}
 </div>
 
 OBO token exchange グラントを使用して Custom API client を設定する方法を説明します。
@@ -396,7 +396,7 @@ OBO token exchange グラントを使用して Custom API client を設定する
 </Tabs>
 
 <div id="perform-obo-token-exchange">
-  ## OBO token exchange を実行する
+  ## OBO token exchange を実行する {#perform-obo-token-exchange}
 </div>
 
 OBO token exchange を実行するには、[`auth0-api-js`](https://github.com/auth0/auth0-auth-js)、[`auth0_api_python`](https://github.com/auth0/auth0-api-python)、または [Authentication API](https://auth0.com/docs/api/authentication) を使用します。
@@ -523,7 +523,7 @@ OBO token exchange を実行するには、[`auth0-api-js`](https://github.com/a
 </Tabs>
 
 <div id="token-binding">
-  ## トークンバインディング
+  ## トークンバインディング {#token-binding}
 </div>
 
 <Warning>
@@ -567,7 +567,7 @@ DPoP proof も mTLS 証明書も提示されない場合、Auth0 は元のサブ
 </Callout>
 
 <div id="organizations-support">
-  ## Organizations のサポート
+  ## Organizations のサポート {#organizations-support}
 </div>
 
 ユーザーが organization を通じて認証されると、アクセストークンには `org_id` クレームが含まれます。OBOトークン交換では、この organization のコンテキストが委譲チェーン全体で保持されます。

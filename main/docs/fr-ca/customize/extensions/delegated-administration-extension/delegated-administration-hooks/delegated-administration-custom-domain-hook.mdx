@@ -6,7 +6,7 @@ title: 'Delegated Administration : Custom Domain Hook'
 Lorsque vous utilisez [Multiple Custom Domains](/docs/fr-ca/customize/custom-domains/multiple-custom-domains) avec la Delegated Administration Extension, le **Custom Domain Hook** vous permet de préciser quel domaine personnalisé doit être utilisé pour des opérations sur les utilisateurs comme la création d’utilisateurs, la réinitialisation de mots de passe, la vérification des courriels et le blocage d’utilisateurs.
 
 <div id="hook-contract">
-  ## Contrat du Hook
+  ## Contrat du Hook {#hook-contract}
 </div>
 
 * **ctx** : Objet de contexte contenant des renseignements sur la requête en cours.
@@ -22,7 +22,7 @@ Lorsque vous utilisez [Multiple Custom Domains](/docs/fr-ca/customize/custom-dom
     * Retournez un objet vide `{}` pour déléguer au [domaine par défaut](/docs/fr-ca/customize/custom-domains/multiple-custom-domains) du tenant.
 
 <div id="supported-methods">
-  ## Méthodes prises en charge
+  ## Méthodes prises en charge {#supported-methods}
 </div>
 
 Le Custom Domain Hook est invoqué pour les opérations utilisateur suivantes :
@@ -33,7 +33,7 @@ Le Custom Domain Hook est invoqué pour les opérations utilisateur suivantes :
 * **block&#95;user** : lors du blocage d’un utilisateur
 
 <div id="sample-use">
-  ## Exemple d’utilisation
+  ## Exemple d’utilisation {#sample-use}
 </div>
 
 Dans cet exemple, les utilisateurs ayant différents domaines de courriel sont acheminés vers différents domaines personnalisés. Les utilisateurs ayant un domaine d’entreprise utilisent le domaine canonique du tenant, tandis que tous les autres utilisent le domaine par défaut du tenant.
@@ -93,7 +93,7 @@ function(ctx, callback) {
 ```
 
 <div id="notes">
-  ## Remarques
+  ## Remarques {#notes}
 </div>
 
 * Si ce hook n’est pas configuré, la Delegated Administration Extension utilisera le domaine personnalisé par défaut du tenant s’il est configuré; sinon, elle utilisera le domaine canonique.
@@ -102,7 +102,7 @@ function(ctx, callback) {
 * Le renvoi d’un objet vide `{}` délègue la sélection du domaine à la configuration du [domaine personnalisé par défaut](/docs/fr-ca/customize/custom-domains/multiple-custom-domains) du tenant.
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Multiple Custom Domains](/docs/fr-ca/customize/custom-domains/multiple-custom-domains)

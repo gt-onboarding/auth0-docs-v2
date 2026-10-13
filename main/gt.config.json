@@ -2,15 +2,27 @@
   "$schema": "https://assets.gtx.dev/config-schema.json",
   "framework": "mintlify",
   "defaultLocale": "en",
-  "locales": ["fr-ca", "ja-jp"],
+  "locales": [
+    "fr-ca",
+    "ja-jp"
+  ],
   "customMapping": {
-    "fr-ca": { "code": "fr-CA" },
-    "ja-jp": { "code": "ja" }
+    "fr-ca": {
+      "code": "fr-CA"
+    },
+    "ja-jp": {
+      "code": "ja"
+    }
   },
   "files": {
     "json": {
-      "include": ["./docs.json", "./docs/oas/**/*.json"],
-      "exclude": ["./docs/[locales]/**/*.json"],
+      "include": [
+        "./docs.json",
+        "./docs/oas/**/*.json"
+      ],
+      "exclude": [
+        "./docs/[locales]/**/*.json"
+      ],
       "transform": [
         {
           "match": "^docs/oas/(.*)$",
@@ -19,7 +31,10 @@
       ]
     },
     "mdx": {
-      "include": ["./docs/**/*.mdx", "./snippets/**/*.mdx"],
+      "include": [
+        "./docs/**/*.mdx",
+        "./snippets/**/*.mdx"
+      ],
       "exclude": [
         "./docs/[locales]/**/*.mdx",
         "./snippets/[locales]/**/*.mdx"
@@ -30,7 +45,10 @@
       }
     },
     "js": {
-      "include": ["./snippets/**/*.jsx", "./snippets/**/*.js"],
+      "include": [
+        "./snippets/**/*.jsx",
+        "./snippets/**/*.js"
+      ],
       "exclude": [
         "./snippets/[locales]/**/*.jsx",
         "./snippets/[locales]/**/*.js"

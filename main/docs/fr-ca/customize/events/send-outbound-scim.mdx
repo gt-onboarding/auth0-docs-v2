@@ -17,7 +17,7 @@ Utilisez une Action Event Stream pour les requêtes SCIM sortantes lorsque vous 
 * Approvisionner un serveur SCIM sans exécuter votre propre écouteur de webhook.
 
 <div id="implementation-overview">
-  ## Vue d’ensemble de la mise en œuvre
+  ## Vue d’ensemble de la mise en œuvre {#implementation-overview}
 </div>
 
 Cette mise en œuvre utilise un flux d’événements avec notre [modèle d’Action de provisionnement sortant d’utilisateurs SCIM 2.0](https://github.com/auth0/opensource-marketplace/blob/main/templates/outbound-scim-EVENT_STREAM/code.js).
@@ -35,7 +35,7 @@ L’Action établit une corrélation entre chaque utilisateur Auth0 et sa ressou
 L’Action considère les réponses du serveur SCIM comme la source de vérité pour la corrélation. Elle valide donc la conformité de chaque réponse réussie (2xx) au protocole SCIM 2.0 et n’agit qu’en fonction de résultats valides.
 
 <div id="error-handling">
-  ### Gestion des erreurs
+  ### Gestion des erreurs {#error-handling}
 </div>
 
 Lorsqu’une Action génère une erreur, la livraison est marquée comme ayant échoué et [Auth0 réessaie automatiquement l’événement ayant échoué](/docs/fr-ca/customize/events/event-testing-observability-and-failure-recovery#recovery). Une fois toutes les tentatives épuisées, l’événement est placé dans la file d’attente de lettres mortes, où il peut être inspecté et relivré.
@@ -43,7 +43,7 @@ Lorsqu’une Action génère une erreur, la livraison est marquée comme ayant �
 Comme cette Action génère des erreurs en cas de réponses non valides et d’erreurs SCIM terminales, ces synchronisations ayant échoué sont visibles par les nouvelles tentatives et dans la file d’attente de lettres mortes. Une modification qui ne génère jamais d’événement livré n’est pas visible de cette façon.
 
 <div id="limits">
-  ### Limites
+  ### Limites {#limits}
 </div>
 
 * Cette Action synchronise les profils utilisateur et ne prend pas en charge le provisionnement des groupes.
@@ -51,7 +51,7 @@ Comme cette Action génère des erreurs en cas de réponses non valides et d’e
 * Un flux d’événements est associé à une destination Action. Pour cibler plusieurs serveurs SCIM, créez plusieurs flux d’événements et Actions.
 
 <div id="instructions">
-  ## Instructions
+  ## Instructions {#instructions}
 </div>
 
 <Steps titleSize="h3">
@@ -264,7 +264,7 @@ Comme cette Action génère des erreurs en cas de réponses non valides et d’e
 </Steps>
 
 <div id="event-considerations">
-  ## Considérations relatives aux événements
+  ## Considérations relatives aux événements {#event-considerations}
 </div>
 
 * **Liaison de comptes** : Lorsque vous liez deux utilisateurs Auth0, Auth0 envoie un événement `user.deleted` pour le compte secondaire et un événement `user.updated` pour le compte principal. L’Action supprime donc l’utilisateur secondaire du serveur SCIM et met à jour l’utilisateur principal. La dissociation restaure l’utilisateur secondaire.

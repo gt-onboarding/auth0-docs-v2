@@ -7,7 +7,7 @@ import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 import { ReleaseStageNotice } from "/snippets/fr-ca/ReleaseStageNotice.jsx"
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `POST /oauth/token`
@@ -15,11 +15,11 @@ import { ReleaseStageNotice } from "/snippets/fr-ca/ReleaseStageNotice.jsx"
 Il s’agit du type d’attribution OAuth 2.0 qu’utilisent les processus côté serveur pour accéder à une API. Utilisez ce point de terminaison pour demander directement un jeton d’accès à l’aide des identifiants de l’application (un Client ID et un Client Secret).
 
 <div id="responses">
-  ### Réponses
+  ### Réponses {#responses}
 </div>
 
 <div id="200">
-  #### 200
+  #### 200 {#200}
 </div>
 
 Une réponse réussie renvoie un jeton d’accès.
@@ -33,7 +33,7 @@ Une réponse réussie renvoie un jeton d’accès.
 ```
 
 <div id="learn-more">
-  ### Pour en savoir plus
+  ### Pour en savoir plus {#learn-more}
 </div>
 
 * [Client Credentials Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/client-credentials-flow)
@@ -42,7 +42,7 @@ Une réponse réussie renvoie un jeton d’accès.
 * [Demander des jetons d’accès dans le cadre d’un Client Credentials Grant](https://auth0.com/docs/get-started/authentication-and-authorization-flow/client-credentials-flow/call-your-api-using-the-client-credentials-flow)
 
 <div id="headers">
-  ## En-têtes
+  ## En-têtes {#headers}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -50,7 +50,7 @@ Une réponse réussie renvoie un jeton d’accès.
 </ParamField>
 
 <div id="body-parameters">
-  ## Paramètres du corps
+  ## Paramètres du corps {#body-parameters}
 </div>
 
 <div className="prose-sm prose-gray dark:prose-invert">
@@ -84,7 +84,7 @@ Une réponse réussie renvoie un jeton d’accès.
 </ParamField>
 
 <div id="response-schema">
-  ## Schéma de réponse
+  ## Schéma de réponse {#response-schema}
 </div>
 
 <ResponseSchema>
@@ -102,7 +102,7 @@ Une réponse réussie renvoie un jeton d’accès.
 </ResponseSchema>
 
 <div id="agent-access-tokens">
-  ## Jetons d’accès des agents
+  ## Jetons d’accès des agents {#agent-access-tokens}
 </div>
 
 <ReleaseStageNotice feature="Agents as Principal" stage="ea" contact="Auth0 Support" terms="true" />
@@ -115,7 +115,7 @@ Lorsque l’application requérante est liée à un agent et que les claims de s
 Pour une application machine-à-machine (M2M) autre qu’un agent qui appelle une API pour laquelle les claims de sujet d’agent sont activés, le claim `sub` correspond au Client ID de l’application sans le suffixe `@clients`. Le schéma de l’objet de réponse (`access_token`, `token_type`, `expires_in`) demeure inchangé ; il s’agit de claims dans le JWT émis. Pour en savoir plus, consultez [Access Token Profiles](/docs/fr-ca/secure/tokens/access-tokens/access-token-profiles#claims).
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description     |

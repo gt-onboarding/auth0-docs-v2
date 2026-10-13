@@ -6,13 +6,13 @@ title: Personnaliser les assertions SAML
 Vous pouvez personnaliser vos assertions <Tooltip tip="Security Assertion Markup Language (SAML) : protocole normalisé permettant à deux parties d’échanger des informations d’authentification sans mot de passe." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=SAML">SAML</Tooltip>, ainsi que les paramètres des protocoles SAML et WS-Federation.
 
 <div id="auth0-as-identity-provider">
-  ## Auth0 comme fournisseur d’identité
+  ## Auth0 comme fournisseur d’identité {#auth0-as-identity-provider}
 </div>
 
 Personnalisez les assertions SAML lorsqu’Auth0 agit en tant que <Tooltip tip="Identity Provider (IdP) : service qui stocke et gère les identités numériques." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=identity+provider">fournisseur d’identité</Tooltip> en configurant le module complémentaire dans le Dashboard ou à l’aide de Rules.
 
 <div id="use-the-dashboard">
-  ### Utiliser le Dashboard
+  ### Utiliser le Dashboard {#use-the-dashboard}
 </div>
 
 1. Accédez à [Dashboard &gt; Applications &gt; Applications](https://manage.auth0.com/#/applications/\{yourClientId}/addons) et sélectionnez le nom de l’application à consulter.
@@ -29,7 +29,7 @@ Personnalisez les assertions SAML lorsqu’Auth0 agit en tant que <Tooltip tip="
    * Spécifier si seule l’assertion ou l’ensemble de la réponse doit être signé.
 
 <div id="use-actions">
-  ### Utiliser les Actions
+  ### Utiliser les Actions {#use-actions}
 </div>
 
 Vous pouvez utiliser les Actions pour ajouter des personnalisations plus poussées ou dynamiques à la réponse SAML. Les personnalisations effectuées dans les Actions priment sur celles effectuées à l’aide de la vue **Application Addons** dans le Dashboard.
@@ -37,7 +37,7 @@ Vous pouvez utiliser les Actions pour ajouter des personnalisations plus poussé
 L’objet `api.samlResponse` sert à remplacer les attributs SAML par défaut ou à ajouter de nouveaux attributs.
 
 <div id="example-changing-the-saml-token-lifetime-and-use-upn-as-nameid">
-  #### Exemple : modifier la durée de validité du jeton SAML et utiliser l’UPN comme NameID
+  #### Exemple : modifier la durée de validité du jeton SAML et utiliser l’UPN comme NameID {#example-changing-the-saml-token-lifetime-and-use-upn-as-nameid}
 </div>
 
 ```js lines
@@ -50,7 +50,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="example-include-user_metadata-attributes-in-an-assertion">
-  #### Exemple : inclure des attributs de user_metadata dans une assertion
+  #### Exemple : inclure des attributs de user_metadata dans une assertion {#example-include-user_metadata-attributes-in-an-assertion}
 </div>
 
 ```js lines
@@ -62,7 +62,7 @@ exports.onExecutePostLogin = (event, api) => {
 ```
 
 <div id="saml-assertion-attributes">
-  ## Attributs des assertions SAML
+  ## Attributs des assertions SAML {#saml-assertion-attributes}
 </div>
 
 Voici la liste des attributs de personnalisation des assertions SAML.
@@ -92,7 +92,7 @@ Voici la liste des attributs de personnalisation des assertions SAML.
 | `signingCert`                    | string  | Indique facultativement le certificat de clé publique utilisé pour valider les requêtes SAML. S’il est défini, les requêtes SAML devront être signées. Un exemple de valeur serait : `"-----BEGIN CERTIFICATE-----\nMIIC8jCCAdqgAwIBAgIJObB6jmhG0QIEMA0GCSqGSIb3DQEBBQUAMCAxHjAcBgNV\n[..all the other lines..]-----END CERTIFICATE-----\n"`.                                                                                                                    |
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Configurer l’authentification unique SAML initiée par le fournisseur d’identité](/docs/fr-ca/authenticate/protocols/saml/saml-sso-integrations/identity-provider-initiated-single-sign-on)

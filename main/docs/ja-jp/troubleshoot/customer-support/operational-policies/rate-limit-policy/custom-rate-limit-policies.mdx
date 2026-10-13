@@ -20,7 +20,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 </Callout>
 
 <div id="how-custom-rate-limits-relate-to-tenant-rate-limits">
-  ## カスタムレート制限とテナントのレート制限の関係
+  ## カスタムレート制限とテナントのレート制限の関係 {#how-custom-rate-limits-relate-to-tenant-rate-limits}
 </div>
 
 テナントには、サブスクリプションプランに応じた[グローバル認証レート制限](/docs/ja-jp/troubleshoot/customer-support/operational-policies/rate-limit-policy)があります。カスタムレート制限ポリシーは、このグローバル制限より低い、*アプリケーションごと*の上限を設定します。この2つの制限は連携して機能します。
@@ -32,7 +32,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 カスタムレート制限により、個々のアプリケーションがグローバルな処理能力を不釣り合いに消費するのを防ぎ、テナントを保護できます。テナント全体のスループットが増えるわけではありません。
 
 <div id="how-policy-evaluation-works">
-  ## ポリシー評価の仕組み
+  ## ポリシー評価の仕組み {#how-policy-evaluation-works}
 </div>
 
 Auth0 では、カスタムレート制限ポリシーを最も具体的なものから最も一般的なものへと、厳格な階層に従って評価します。最初に一致したレベルが適用され、それより広い範囲のレベルはすべてスキップされます。
@@ -44,7 +44,7 @@ Auth0 では、カスタムレート制限ポリシーを最も具体的なも�
 この階層により、個々の不適切に動作するアプリケーションと、アプリケーション群全体からのトラフィック急増の両方を防ぐことができます。
 
 <div id="pooled-counters-group-policies">
-  ### 共有カウンター (グループポリシー)
+  ### 共有カウンター (グループポリシー) {#pooled-counters-group-policies}
 </div>
 
 グループポリシーでは、グループ内のすべてのアプリケーションで単一の共有カウンターを使用します。グループメンバーからのすべてのリクエストは、同じバケットを消費します。
@@ -54,7 +54,7 @@ Auth0 では、カスタムレート制限ポリシーを最も具体的なも�
 1つのサードパーティアプリケーションに異なる扱いが必要な場合は、グループ制限よりも優先されるクライアント ID ポリシーを割り当ててください。
 
 <div id="third-party-apps-vs-cimd-clients">
-  #### サードパーティアプリケーションとCIMDクライアント
+  #### サードパーティアプリケーションとCIMDクライアント {#third-party-apps-vs-cimd-clients}
 </div>
 
 CIMD (Client-Initiated Managed Delegation) クライアントは技術的にはサードパーティアプリケーションに該当しますが、Auth0では従来のサードパーティアプリケーションとは別のグループとして扱われます。つまり、次の2つの異なるグループバケットが存在します。
@@ -65,7 +65,7 @@ CIMD (Client-Initiated Managed Delegation) クライアントは技術的には�
 各グループには、それぞれ専用の共有カウンターがあります。CIMDクライアントからのトラフィックはサードパーティアプリケーションのグループ制限にはカウントされず、その逆も同様です。アプリケーションがどのグループに属するかは、クライアント IDの接頭辞で確認できます。
 
 <div id="independent-counters-global-default-policies">
-  ### 独立したカウンター (グローバル／デフォルトポリシー)
+  ### 独立したカウンター (グローバル／デフォルトポリシー) {#independent-counters-global-default-policies}
 </div>
 
 グローバルポリシーでは、カウンターがアプリケーションごとに独立しています。各アプリケーションには、同じ設定上限に対して評価される個別のカウンターがあります。アプリケーション間で容量を取り合うことはありません。
@@ -75,7 +75,7 @@ CIMD (Client-Initiated Managed Delegation) クライアントは技術的には�
 アプリケーションのグループ全体からの*合計*負荷に上限を設ける必要がある場合 (たとえば、合計トラフィックによってテナントに過剰な負荷がかかる可能性があるサードパーティ連携など) は、グループポリシーを使用します。アプリケーション間で調整することなく、アプリケーションごとに一律の安全上限を設ける必要がある場合は、グローバルデフォルトを使用します。
 
 <div id="requests-that-count-toward-custom-rate-limits">
-  ## カスタムレート制限の対象となるリクエスト
+  ## カスタムレート制限の対象となるリクエスト {#requests-that-count-toward-custom-rate-limits}
 </div>
 
 カスタムレート制限ポリシーでは、アプリケーションの `client_id` に紐付く Authentication API リクエストがカウントされます。エンドユーザーのブラウザーがリクエストを送信する HTTP クライアントであっても、そのリクエストを発生させるかどうかや頻度をアプリケーションが制御している場合、Auth0 はそのリクエストをカウントします。
@@ -95,7 +95,7 @@ CIMD (Client-Initiated Managed Delegation) クライアントは技術的には�
 | パスキー登録            | `/passkey/register`    | 新しいパスキーを登録するバックチャネル呼び出し。                                                    |
 
 <div id="custom-rate-limit-exclusions">
-  ## カスタムレート制限の除外
+  ## カスタムレート制限の除外 {#custom-rate-limit-exclusions}
 </div>
 
 Auth0 が認証フローを開始した後 (`/authorize` の後) 、エンドユーザーのブラウザは Auth0 と直接通信してログインを完了します。こうした後続のリクエスト (ログインページのレンダリング、資格情報の送信、MFA チャレンジの完了) は、カスタムレート制限の対象にはなりません。アプリケーションはこれらのリクエストを開始するものではなく、その頻度やタイミングを制御することもできません。
@@ -114,7 +114,7 @@ Auth0 が認証フローを開始した後 (`/authorize` の後) 、エンドユ
 </Callout>
 
 <div id="log-only-mode">
-  ## ログのみモード
+  ## ログのみモード {#log-only-mode}
 </div>
 
 ポリシーでログのみモードを有効にすると、Auth0 は設定された上限に対するリクエストを追跡し、`action: log` を含む `api_limit` ログイベントを出力します。ただし、HTTP 429 レスポンスは実際には返されません。トラフィックは通常どおり流れ続けます。
@@ -128,13 +128,13 @@ Auth0 が認証フローを開始した後 (`/authorize` の後) 、エンドユ
 ポリシーは再作成せずに、いつでもログのみモードと強制モードを切り替えられます。
 
 <div id="choose-a-rate-limit-value">
-  ## レート制限値を選択する
+  ## レート制限値を選択する {#choose-a-rate-limit-value}
 </div>
 
 適切な制限値は、アプリケーションのトラフィックパターンを制御できるかどうかに応じて決定します。
 
 <div id="first-party-applications-client-id-policies">
-  ### ファーストパーティアプリケーション (クライアント ID ポリシー)
+  ### ファーストパーティアプリケーション (クライアント ID ポリシー) {#first-party-applications-client-id-policies}
 </div>
 
 自社で所有・運用するアプリケーションでは、トラフィックを直接測定できます。
@@ -147,7 +147,7 @@ Auth0 が認証フローを開始した後 (`/authorize` の後) 、エンドユ
 アプリケーションコードを管理できるため、トラフィックの増加を予測し、リクエスト量が増える変更をデプロイする際に、あらかじめ制限を調整できます。
 
 <div id="third-party-applications-group-or-global-policies">
-  ### サードパーティアプリケーション (グループポリシーまたはグローバルポリシー)
+  ### サードパーティアプリケーション (グループポリシーまたはグローバルポリシー) {#third-party-applications-group-or-global-policies}
 </div>
 
 パートナー連携、顧客が構築したアプリ、マーケットプレイスコネクターなど、自身で制御できないアプリケーションでは、トラフィックパターンを事前に予測できません。テナントが安全に処理できる範囲に基づいて制限を設定してください。
@@ -164,13 +164,13 @@ Auth0 が認証フローを開始した後 (`/authorize` の後) 、エンドユ
 </Callout>
 
 <div id="block-an-application-entirely">
-  ### アプリケーションを完全にブロックする
+  ### アプリケーションを完全にブロックする {#block-an-application-entirely}
 </div>
 
 カスタムのレート制限を `0` に設定すると、レート制限の枠を消費することなく、そのアプリケーションからのすべての Authentication API リクエストが直ちにブロックされます。調査中に、侵害されたアプリケーションや著しく不正な動作をするアプリケーションを停止する場合に使用します。
 
 <div id="create-a-custom-rate-limit-policy">
-  ## カスタムレート制限ポリシーを作成する
+  ## カスタムレート制限ポリシーを作成する {#create-a-custom-rate-limit-policy}
 </div>
 
 <Tabs>
@@ -258,7 +258,7 @@ Auth0 が認証フローを開始した後 (`/authorize` の後) 、エンドユ
 </Tabs>
 
 <div id="monitor-via-logs">
-  ## ログによる監視
+  ## ログによる監視 {#monitor-via-logs}
 </div>
 
 テナントログを使用して、カスタムレート制限ポリシーがトラフィックに与える影響を監視します。
@@ -278,7 +278,7 @@ Auth0 は、ポリシーとアプリケーションの組み合わせごとに�
 </Callout>
 
 <div id="monitor-via-http-response-headers">
-  ## HTTP 応答ヘッダーでの監視
+  ## HTTP 応答ヘッダーでの監視 {#monitor-via-http-response-headers}
 </div>
 
 Auth0 は、カスタムレート制限ポリシーの対象となるすべてのリクエストに対して、`Auth0-RateLimit` 応答ヘッダーを返します。このヘッダーはカスタムレート制限ポリシー専用であり、アプリケーションの現在のクォータのステータスを示します。
@@ -314,7 +314,7 @@ response body には JSON 形式のエラーが含まれます。
 </Callout>
 
 <div id="learn-more">
-  ## 詳しく見る
+  ## 詳しく見る {#learn-more}
 </div>
 
 * [Rate Limit Policy](/docs/ja-jp/troubleshoot/customer-support/operational-policies/rate-limit-policy)

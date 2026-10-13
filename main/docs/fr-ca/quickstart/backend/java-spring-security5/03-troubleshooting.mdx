@@ -3,7 +3,7 @@ title: "Guides de démarrage rapide d’Auth0 Spring Boot API SDK : dépannage"
 ---
 
 <div id="by-jim-anderson">
-  ##### Par Jim Anderson
+  ##### Par Jim Anderson {#by-jim-anderson}
 </div>
 
 Ce document vous aidera à résoudre les problèmes liés à votre configuration si votre API renvoie des réponses inattendues. Nous vous recommandons de vous connecter pour suivre ce Quickstart avec des exemples configurés pour votre compte.
@@ -13,7 +13,7 @@ Si vous avez correctement configuré la validation du JWT, votre API devrait ren
 Ce document vous aidera à résoudre les problèmes de configuration de votre middleware JWT.
 
 <div id="how-does-a-token-get-validated">
-  ## Comment un jeton est-il validé ?
+  ## Comment un jeton est-il validé ? {#how-does-a-token-get-validated}
 </div>
 
 Lorsqu’il s’agit de valider un JWT, plusieurs éléments sont à prendre en compte :
@@ -28,7 +28,7 @@ Lorsqu’il s’agit de valider un JWT, plusieurs éléments sont à prendre en 
 5. **Le jeton est-il destiné à l’application actuelle ?** Autrement dit, la claim `aud` du JWT correspond-elle à ce que votre application attend ?
 
 <div id="inspecting-a-token">
-  ## Inspection d’un jeton
+  ## Inspection d’un jeton {#inspecting-a-token}
 </div>
 
 Un moyen rapide d’inspecter un JWT consiste à utiliser le site Web [JWT.io](https://jwt.io/). Il comprend un débogueur pratique qui vous permet de vérifier rapidement qu’un JWT est bien formé, ainsi que d’inspecter les valeurs des différentes claims.
@@ -52,7 +52,7 @@ Pour un jeton signé avec HS256, la vue du débogueur sera légèrement différe
 Dans la capture d’écran ci-dessus, vous pouvez voir que le jeton a été signé à l’aide de l’algorithme **HS256**. L’**émetteur** du jeton est **[https://jerrie.auth0.com/](https://jerrie.auth0.com/)**, et l’**audience** est **[https://hs256.test.api](https://hs256.test.api)**.
 
 <div id="what-can-you-do-next">
-  ##### Que faire ensuite ?
+  ##### Que faire ensuite ? {#what-can-you-do-next}
 </div>
 
 * [Configurer d’autres fournisseurs d’identité](/docs/fr-ca/authenticate/identity-providers)

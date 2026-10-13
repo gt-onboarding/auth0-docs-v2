@@ -12,7 +12,7 @@ Auth0 を SP として使用する SAML 構成では、Auth0 がサポートす�
 テスト用に、1 つのテナントを SAML SP、別のテナントを SAML IdP として使用し、Auth0 でユーザーを認証するシンプルな SAML SSO のサンプルアプリケーションを設定できます。1 つのテナントに対して 2 つのフェデレーションを設定します。
 
 <div id="create-idp-tenant">
-  ## IdP テナントを作成
+  ## IdP テナントを作成 {#create-idp-tenant}
 </div>
 
 SAML IdP として使用するための別の Auth0 テナントがまだない場合は、新しく作成する必要があります。
@@ -23,7 +23,7 @@ SAML IdP として使用するための別の Auth0 テナントがまだない�
 2. **Domain** を入力し、**Region** を選択して、**Create** をクリックします。
 
 <div id="configure-idp-tenant">
-  ## IdP テナントを設定する
+  ## IdP テナントを設定する {#configure-idp-tenant}
 </div>
 
 セカンダリ テナントを IdP として設定し、SP テナントを表すアプリケーションを登録します。
@@ -36,7 +36,7 @@ SAML IdP として使用するための別の Auth0 テナントがまだない�
 6. **Endpoints** ビューに切り替え、**SAML Protocol URL** を見つけてその内容をコピーします。この URL は、SP テナントを設定するときに使用します。
 
 <div id="create-user-to-test-saml-sequence">
-  ## SAML シーケンスのテスト用ユーザーを作成する
+  ## SAML シーケンスのテスト用ユーザーを作成する {#create-user-to-test-saml-sequence}
 </div>
 
 1. [Auth0 Dashboard &gt; User Management &gt; Users](https://manage.auth0.com/#/users) に移動し、**Create User** を選択します。
@@ -46,7 +46,7 @@ SAML IdP として使用するための別の Auth0 テナントがまだない�
 5. **Create** を選択します。
 
 <div id="configure-service-provider-tenant">
-  ## サービスプロバイダー テナントを設定する
+  ## サービスプロバイダー テナントを設定する {#configure-service-provider-tenant}
 </div>
 
 SAML プロトコルを使用した SSO のために、SP テナントが IdP テナントと通信できるように設定します。
@@ -72,7 +72,7 @@ SAML プロトコルを使用した SSO のために、SP テナントが IdP �
    4. **AssertionConsumerService** で始まる行を見つけ、**Location** フィールドの値をコピーして保存します。これは次の形式の URL です: `https://{yourDomain}/login/callback?connection={yourConnectionName}`。この URL は、IdP テナントから送信される SAML assertion を受け取る SP テナント上の URL です。次のセクションでは、この URL を IdP テナントに指定して、SAML assertion の送信先を認識できるようにします。
 
 <div id="add-service-provider-metadata-to-idp">
-  ## IdP にサービスプロバイダーのメタデータを追加する
+  ## IdP にサービスプロバイダーのメタデータを追加する {#add-service-provider-metadata-to-idp}
 </div>
 
 SP テナントに関する情報を IdP テナントに追加し、SAML 認証リクエストを受信して応答できるようにします。
@@ -86,7 +86,7 @@ SP テナントに関する情報を IdP テナントに追加し、SAML 認証�
 6. **Enable** を選択します。
 
 <div id="test-idp">
-  ## IdP をテストする
+  ## IdP をテストする {#test-idp}
 </div>
 
 1. 同じウィンドウで上にスクロールして **Debug** を選択します。ログイン画面が表示されます。
@@ -95,7 +95,7 @@ SP テナントに関する情報を IdP テナントに追加し、SAML 認証�
 4. **Close this window** を選択します。
 
 <div id="create-application-to-test-saml-connection">
-  ## SAML 接続をテストするためのアプリケーションを作成する
+  ## SAML 接続をテストするためのアプリケーションを作成する {#create-application-to-test-saml-connection}
 </div>
 
 作成した SAML 接続をテストするためのシンプルなアプリケーションを作成します。
@@ -110,7 +110,7 @@ SP テナントに関する情報を IdP テナントに追加し、SAML 認証�
 7. **Connections** ビューに切り替え、**Enterprise** セクションの下にある作成済みの SAML 接続を見つけて、有効にします。
 
 <div id="test-connection-between-service-and-identity-provider">
-  ## サービスとアイデンティティプロバイダー間の接続をテストする
+  ## サービスとアイデンティティプロバイダー間の接続をテストする {#test-connection-between-service-and-identity-provider}
 </div>
 
 SPテナントとIdPテナント間の SAML 構成が正しく機能することを確認するため、テストを行います。
@@ -123,7 +123,7 @@ SPテナントとIdPテナント間の SAML 構成が正しく機能すること
 正しく構成されていない場合は、手順を再確認してください。それでも解決しない場合は、このドキュメントの末尾にあるトラブルシューティングのセクションを参照してください。
 
 <div id="create-a-web-page-for-test-application">
-  ## テスト用アプリケーションのWebページを作成する
+  ## テスト用アプリケーションのWebページを作成する {#create-a-web-page-for-test-application}
 </div>
 
 Lockウィジェットを呼び出して SAML ログインシーケンスを開始するシンプルなWebページを作成します。
@@ -170,7 +170,7 @@ Lockウィジェットを呼び出して SAML ログインシーケンスを開�
 3. ブラウザーからアクセスできる場所に HTML ファイルを保存します。
 
 <div id="test-sample-application">
-  ## サンプルアプリケーションをテストする
+  ## サンプルアプリケーションをテストする {#test-sample-application}
 </div>
 
 SP テナントで作成した Auth0 の SAML 接続を使用して、IdP テナントに対する SSO 認証を行うサンプル HTML アプリケーションをテストします。
@@ -180,7 +180,7 @@ SP テナントで作成した Auth0 の SAML 接続を使用して、IdP テナ
 3. **saml** または **ACCESS** と表示された青いボタンをクリックします。資格情報の入力を求められるか、すぐにコールバック URL にリダイレクトされるかは、有効なセッションがまだ残っているかどうかによって異なります。
 
 <div id="troubleshoot-test-scenario">
-  ## テストシナリオのトラブルシューティング
+  ## テストシナリオのトラブルシューティング {#troubleshoot-test-scenario}
 </div>
 
 * テストの前には毎回、ブラウザーの履歴と Cookie を消去してください。そうしないと、ブラウザーが HTML ページの最新バージョンを読み込まなかったり、実行に影響する古い Cookie が残っていたりすることがあります。
@@ -193,7 +193,7 @@ SP テナントで作成した Auth0 の SAML 接続を使用して、IdP テナ
 * SAML アサーションをデコードするには、[http://samltool.io](http://samltool.io) ツールを使用してください。
 
 <div id="learn-more">
-  ## 詳細情報
+  ## 詳細情報 {#learn-more}
 </div>
 
 * [SAML SSO 連携](/docs/ja-jp/authenticate/protocols/saml/saml-sso-integrations)

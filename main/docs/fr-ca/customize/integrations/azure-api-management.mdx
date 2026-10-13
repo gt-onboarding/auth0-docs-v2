@@ -12,11 +12,11 @@ Le service [Azure API Management](https://azure.microsoft.com/en-us/products/api
 Dans ce tutoriel, vous apprendrez à utiliser Auth0 pour authentifier et autoriser les utilisateurs lorsqu’ils accèdent à l’API Basic Calculator gérée par Azure API Management.
 
 <div id="configure-auth0">
-  ## Configurer Auth0
+  ## Configurer Auth0 {#configure-auth0}
 </div>
 
 <div id="create-an-api">
-  ### Créer une API
+  ### Créer une API {#create-an-api}
 </div>
 
 Vous devez créer une API dans Auth0 pour représenter l’API gérée par Azure API Management Service. Pour en savoir plus, consultez [Register APIs](/docs/fr-ca/get-started/auth0-overview/set-up-apis).
@@ -32,7 +32,7 @@ Vous devez créer une API dans Auth0 pour représenter l’API gérée par Azure
 3. Sélectionnez **Create**.
 
 <div id="create-a-regular-web-application">
-  ### Créer une Regular Web Application
+  ### Créer une Regular Web Application {#create-a-regular-web-application}
 </div>
 
 Vous devrez créer une Regular Web Application (RWA) dans Auth0 afin de communiquer avec le <Tooltip tip="Authorization Server : serveur centralisé qui aide à définir les limites de l’accès d’un utilisateur. Par exemple, votre serveur d’autorisation peut contrôler les données, les tâches et les fonctionnalités auxquelles un utilisateur a accès." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=authorization+server">serveur d’autorisation</Tooltip> OAuth 2.0 dans Azure :
@@ -41,7 +41,7 @@ Vous devrez créer une Regular Web Application (RWA) dans Auth0 afin de communiq
 2. Saisissez un **Name** pour votre application, puis sélectionnez **Regular Web Applications** comme type d’application.
 
 <div id="create-and-enable-a-connection">
-  ### Créer et activer une connexion
+  ### Créer et activer une connexion {#create-and-enable-a-connection}
 </div>
 
 Vous devez créer une connexion dans Auth0 et l’activer pour votre application :
@@ -54,7 +54,7 @@ Vous devez créer une connexion dans Auth0 et l’activer pour votre application
 6. Activez la bascule de l’application que vous avez créée précédemment pour l’associer à la connexion.
 
 <div id="create-a-user">
-  ### Créer un utilisateur
+  ### Créer un utilisateur {#create-a-user}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -68,11 +68,11 @@ Vous devez avoir au moins un utilisateur dans votre connexion pour tester l’au
 3. Sélectionnez **Create**.
 
 <div id="configure-azure">
-  ## Configurer Azure
+  ## Configurer Azure {#configure-azure}
 </div>
 
 <div id="create-azure-api-management-service">
-  ### Créer Azure API Management Service
+  ### Créer Azure API Management Service {#create-azure-api-management-service}
 </div>
 
 Vous devrez créer une instance d’API Management Service dans Azure pour gérer votre API :
@@ -93,7 +93,7 @@ Vous devrez créer une instance d’API Management Service dans Azure pour gére
 4. Sélectionnez **Create** pour lancer le provisionnement de votre service (cela peut prendre jusqu’à 15 minutes).
 
 <div id="import-the-sample-api">
-  ### Importer l’API d’exemple
+  ### Importer l’API d’exemple {#import-the-sample-api}
 </div>
 
 Pour ce tutoriel, nous allons importer et utiliser l’API Basic Calculator fournie par Microsoft. Pour des instructions détaillées, consultez [Importer et publier votre première API](https://docs.microsoft.com/en-us/azure/api-management/import-and-publish#go-to-your-api-management-instance) de Microsoft.
@@ -101,7 +101,7 @@ Pour ce tutoriel, nous allons importer et utiliser l’API Basic Calculator four
 Une fois terminé, sélectionnez **Create** pour importer votre API. Vous serez redirigé vers la page Summary de votre API une fois l’importation terminée.
 
 <div id="configure-an-oauth-20-authorization-server">
-  ### Configurer un serveur d’autorisation OAuth 2.0
+  ### Configurer un serveur d’autorisation OAuth 2.0 {#configure-an-oauth-20-authorization-server}
 </div>
 
 Pour utiliser Auth0 pour sécuriser votre API Azure, vous devez enregistrer Auth0 comme serveur d’autorisation OAuth 2.0 :
@@ -128,7 +128,7 @@ Pour utiliser Auth0 pour sécuriser votre API Azure, vous devez enregistrer Auth
 6. Sélectionnez **Créer**.
 
 <div id="configure-azure-api-to-use-auth0">
-  ### Configurer l’API Azure pour utiliser Auth0
+  ### Configurer l’API Azure pour utiliser Auth0 {#configure-azure-api-to-use-auth0}
 </div>
 
 Après avoir créé votre serveur d’autorisation OAuth 2.0 dans Azure, vous devrez mettre à jour votre API Azure pour qu’elle utilise Auth0 pour l’autorisation des utilisateurs :
@@ -141,7 +141,7 @@ Après avoir créé votre serveur d’autorisation OAuth 2.0 dans Azure, vous de
 6. Cliquez sur **Save**.
 
 <div id="set-the-allowed-callback-url-in-auth0">
-  ## Définir l’Allowed Callback URL dans Auth0
+  ## Définir l’Allowed Callback URL dans Auth0 {#set-the-allowed-callback-url-in-auth0}
 </div>
 
 Une fois votre API Azure provisionnée et configurée pour utiliser Auth0 pour l’autorisation des utilisateurs, vous devrez mettre à jour votre application Auth0 :
@@ -152,7 +152,7 @@ Une fois votre API Azure provisionnée et configurée pour utiliser Auth0 pour l
 4. Cliquez sur **Save**.
 
 <div id="test-the-integration">
-  ## Testez l’intégration
+  ## Testez l’intégration {#test-the-integration}
 </div>
 
 Dans Azure Portal, ouvrez votre instance d’API Management Service.
@@ -166,7 +166,7 @@ Dans Azure Portal, ouvrez votre instance d’API Management Service.
 7. Accédez au bas de la page, puis sélectionnez **Send**. Si la requête réussit, vous verrez un message contenant la réponse `HTTP 200` au bas de la page.
 
 <div id="configure-a-jwt-validation-policy-for-access-tokens">
-  ### Configurer une politique de validation JWT pour les jetons d’accès
+  ### Configurer une politique de validation JWT pour les jetons d’accès {#configure-a-jwt-validation-policy-for-access-tokens}
 </div>
 
 À l’étape précédente, l’utilisateur est invité à se connecter lorsqu’il tente d’effectuer une requête depuis la console de développement. La console de développement essaie d’obtenir un <Tooltip tip="Jeton d’accès : justificatif d’autorisation, sous la forme d’une chaîne opaque ou d’un JWT, utilisé pour accéder à une API." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Access+Token">jeton d’accès</Tooltip> au nom de l’utilisateur afin de l’inclure dans la requête d’API. Tous les jetons d’accès sont transmis à l’API dans l’en-tête `Authorization`.

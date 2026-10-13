@@ -13,7 +13,7 @@ sidebarTitle: Vue d’ensemble
 Types de ressources pris en charge : `actions`, `branding`, `client grants`, `clients (applications)`, `connections`, `custom domains`, `email templates`, `emails`, `grants`, `guardian`, `hook secrets`, `log streams`, `migrations`, `organizations`, `pages`, `prompts`, `resource servers (APIs)`, `roles`, `tenant settings`, `themes`.
 
 <div id="highlights">
-  ## Points saillants
+  ## Points saillants {#highlights}
 </div>
 
 * **Axé sur le multi-environnement :** Conçu pour vous aider à tester les intégrations Auth0 de vos applications, de votre branche de fonctionnalité jusqu’à la Production.
@@ -21,7 +21,7 @@ Types de ressources pris en charge : `actions`, `branding`, `client grants`, `c
 * **Polyvalent :** Intégrez-le à vos flux de travail CI/CD, soit comme CLI, soit comme module Node.js.
 
 <div id="get-started">
-  ## Pour commencer
+  ## Pour commencer {#get-started}
 </div>
 
 Ce guide vous aidera à mettre en œuvre l’outil Deploy CLI comme CLI autonome. Trois étapes principales sont nécessaires avant de pouvoir exécuter le Deploy CLI :
@@ -35,7 +35,7 @@ Ce guide vous aidera à mettre en œuvre l’outil Deploy CLI comme CLI autonome
 </Warning>
 
 <div id="install-the-deploy-cli">
-  ### Installer le Deploy CLI
+  ### Installer le Deploy CLI {#install-the-deploy-cli}
 </div>
 
 Pour l’utiliser comme outil de ligne de commande autonome :
@@ -43,7 +43,7 @@ Pour l’utiliser comme outil de ligne de commande autonome :
 `npm install -g auth0-deploy-cli`
 
 <div id="create-a-dedicated-auth0-application">
-  ### Créer une application Auth0 dédiée
+  ### Créer une application Auth0 dédiée {#create-a-dedicated-auth0-application}
 </div>
 
 Pour que le Deploy CLI puisse appeler la <Tooltip tip="Management API : un produit qui permet aux clients d’effectuer des tâches administratives." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Management+API">Management API</Tooltip>, une application Auth0 dédiée doit être créée pour effectuer des appels au nom de l’outil :
@@ -65,7 +65,7 @@ Pour que le Deploy CLI puisse appeler la <Tooltip tip="Management API : un prod
 </Callout>
 
 <div id="client-scopes">
-  #### Portées du client
+  #### Portées du client {#client-scopes}
 </div>
 
 L’application désignée doit se voir accorder des portées afin de permettre au Deploy CLI d’exécuter des opérations de Management.
@@ -73,7 +73,7 @@ L’application désignée doit se voir accorder des portées afin de permettre 
 Le principe du moindre privilège est respecté, donc il fonctionnera dans les limites des autorisations accordées. Vous devrez sélectionner `read:clients`, mais il est recommandé de sélectionner les autorisations `read:*`, `create:*` et `update:*` pour tous les types de ressources relevant du Management. Pour autoriser les suppressions, vous avez besoin des portées `delete:*`.
 
 <div id="configure-the-deploy-cli">
-  ### Configurer le Deploy CLI
+  ### Configurer le Deploy CLI {#configure-the-deploy-cli}
 </div>
 
 Vous pouvez configurer le Deploy CLI de deux façons :
@@ -92,7 +92,7 @@ Pour cet exemple, définissez les variables d’environnement suivantes :
 Vous trouverez ces valeurs dans l’onglet **Settings** de l’application Auth0 dédiée que vous avez créée précédemment.
 
 <div id="call-the-deploy-cli">
-  ### Exécuter le Deploy CLI
+  ### Exécuter le Deploy CLI {#call-the-deploy-cli}
 </div>
 
 La commande `export` du Deploy CLI s’exécute à l’aide de la commande suivante :

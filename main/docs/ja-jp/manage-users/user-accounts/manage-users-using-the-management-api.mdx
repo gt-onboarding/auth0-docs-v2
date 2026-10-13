@@ -8,7 +8,7 @@ Auth0 Dashboard を使用するだけでなく、[Management API](https://auth0.
 チームメンバーの <Tooltip tip="Auth0 Dashboard: サービスを構成するための Auth0 の主要製品です。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip> へのアクセスを管理する方法については、[Manage Dashboard Access](/docs/ja-jp/get-started/manage-dashboard-access) を参照してください。
 
 <div id="permissions">
-  ## 権限
+  ## 権限 {#permissions}
 </div>
 
 Machine-to-Machine アプリケーションのアクセストークンを取得するには、以下の権限を使用します。詳しくは、[Register Machine-to-Machine Applications.](/docs/ja-jp/get-started/auth0-overview/create-applications/machine-to-machine-apps) を参照してください。
@@ -22,7 +22,7 @@ Machine-to-Machine アプリケーションのアクセストークンを取得�
 | `delete:users`              | アプリケーションは、Auth0 テナントに保存されているすべてのユーザーを削除できます。これには、`/api/v2/users` エンドポイントを使用した削除が含まれます。                                                                 |
 
 <div id="limitations">
-  ## 制限事項
+  ## 制限事項 {#limitations}
 </div>
 
 デフォルトでは、Auth0 以外 (Google、Facebook、X など) の<Tooltip tip="IDプロバイダー（IdP）: デジタルアイデンティティを保存および管理するサービス。" cta="用語集を表示" href="/docs/ja-jp/glossary?term=identity+providers">アイデンティティプロバイダー</Tooltip>から提供されるユーザープロファイル属性は、ユーザーがログインするたびにアイデンティティプロバイダーから更新されるため、直接編集できません。アイデンティティプロバイダー由来の属性の詳細については、[ユーザープロファイル更新のための Identity Provider Connection の設定](/docs/ja-jp/manage-users/user-accounts/user-profiles/configure-connection-sync-with-auth0)を参照してください。
@@ -32,7 +32,7 @@ Machine-to-Machine アプリケーションのアクセストークンを取得�
 `create` または `update` エンドポイントを使用してパスワードを設定できますが、セキュリティ上の理由から、`get` または `list user` コマンドでパスワードを表示することはできません。API Explorer の右側には、各呼び出しで表示または変更できるユーザープロファイル属性に関するヒントが表示されます。
 
 <div id="endpoints">
-  ## エンドポイント
+  ## エンドポイント {#endpoints}
 </div>
 
 * すべてのユーザーの情報を[取得](https://auth0.com/docs/api/management/v2/users/get-users)するには、[`/users`](https://auth0.com/docs/api/management/v2/users/get-users) エンドポイントを使用します。検索条件を指定して、特定のユーザーを見つけることもできます。
@@ -41,7 +41,7 @@ Machine-to-Machine アプリケーションのアクセストークンを取得�
 * [`/tokeninfo`](https://auth0.com/docs/api/authentication/reference#get-token-info) エンドポイントは、[Auth0 ID トークンを入力として受け取り、ユーザープロファイル情報を返します](https://auth0.com/docs/api/authentication/reference#get-token-info)。このエンドポイントが返す結果には、ユーザープロファイルを変更するルールの結果は含まれません。
 
 <div id="learn-more">
-  ## 詳しく見る
+  ## 詳しく見る {#learn-more}
 </div>
 
 * [Auth0.swift: ユーザー管理](/docs/ja-jp/libraries/auth0-swift/auth0-swift-user-management)

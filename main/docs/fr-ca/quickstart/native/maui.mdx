@@ -34,7 +34,7 @@ Ce guide montre comment intégrer Auth0 à une application .NET MAUI à l’aide
 Ce guide utilise la version **1.x** de `Auth0.OidcClient.MAUI`.
 
 <Note>
-  ## Prérequis
+  ## Prérequis {#prerequisites}
 
   * **SDK .NET 8 ou .NET 9** installé ([télécharger](https://dotnet.microsoft.com/download))
   * **Charge de travail MAUI** installée
@@ -56,7 +56,7 @@ dotnet workload install maui
 ```
 
 <div id="get-started">
-  ## Pour commencer
+  ## Pour commencer {#get-started}
 </div>
 
 <Steps>
@@ -402,7 +402,7 @@ dotnet workload install maui
 ***
 
 <div id="troubleshooting">
-  ## Résolution des problèmes
+  ## Résolution des problèmes {#troubleshooting}
 </div>
 
 <AccordionGroup>
@@ -453,7 +453,7 @@ dotnet workload install maui
 ***
 
 <div id="next-steps">
-  ## Prochaines étapes
+  ## Prochaines étapes {#next-steps}
 </div>
 
 Vous disposez maintenant d’une intégration Auth0 fonctionnelle dans votre application .NET MAUI. Explorez les sujets suivants pour approfondir votre mise en œuvre :
@@ -461,7 +461,7 @@ Vous disposez maintenant d’une intégration Auth0 fonctionnelle dans votre app
 <Accordion title="Jetons d’actualisation">
   Le SDK Auth0 MAUI prend en charge les jetons d’actualisation pour renouveler les sessions en arrière-plan, sans redemander à l’utilisateur de se réauthentifier.
 
-  ### Activer les jetons d’actualisation
+  ### Activer les jetons d’actualisation {#enable-refresh-tokens}
 
   Ajoutez `offline_access` à la propriété `Scope` :
 
@@ -476,7 +476,7 @@ Vous disposez maintenant d’une intégration Auth0 fonctionnelle dans votre app
   }));
   ```
 
-  ### Utiliser les jetons d’actualisation
+  ### Utiliser les jetons d’actualisation {#use-refresh-tokens}
 
   Après la connexion, stockez le jeton d’actualisation et utilisez-le pour renouveler la session en arrière-plan :
 
@@ -556,7 +556,7 @@ Vous disposez maintenant d’une intégration Auth0 fonctionnelle dans votre app
 ***
 
 <div id="additional-resources">
-  ## Ressources supplémentaires
+  ## Ressources supplémentaires {#additional-resources}
 </div>
 
 <CardGroup cols={3}>

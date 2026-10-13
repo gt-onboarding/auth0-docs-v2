@@ -10,7 +10,7 @@ description: "Universal Login の `mfa-sms-enrollment` 画面をカスタマイ�
 </Frame>
 
 <div id="import">
-  ## インポート
+  ## インポート {#import}
 </div>
 
 各画面には、それぞれ専用のフックとメソッドが用意されています。SDK は各画面で **部分インポート** と **ルートインポート** をサポートしています。
@@ -58,7 +58,7 @@ function MfaSmsEnrollmentScreen() {
 ```
 
 <div id="context-hooks">
-  ## コンテキストフック
+  ## コンテキストフック {#context-hooks}
 </div>
 
 `mfa-sms-enrollment` 画面で Auth0 のコンテキストデータへの読み取り専用アクセスを提供する、画面スコープのフックです。`@auth0/auth0-acul-react/mfa-sms-enrollment` からインポートします。
@@ -170,7 +170,7 @@ function MfaSmsEnrollmentScreen() {
 </ParamField>
 
 <div id="methods">
-  ## メソッド
+  ## メソッド {#methods}
 </div>
 
 <ParamField body="continueEnrollment" type="Promise<void>">
@@ -241,7 +241,7 @@ function MfaSmsEnrollmentScreen() {
 </ParamField>
 
 <div id="commonutility-hooks">
-  ## 共通/ユーティリティ フック
+  ## 共通/ユーティリティ フック {#commonutility-hooks}
 </div>
 
 <ParamField body={<a href="/docs/ja-jp/libraries/acul/react-sdk/API-Reference/Hooks/useAuth0Themes">useAuth0Themes</a>} type="フック">

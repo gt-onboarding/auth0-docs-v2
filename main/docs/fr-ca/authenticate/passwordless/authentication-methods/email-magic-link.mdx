@@ -8,13 +8,13 @@ Vous pouvez configurer une connexion <Tooltip tip="Passwordless : forme d’aut
 Pour en savoir plus, consultez [Configurer l’Email ou les SMS pour l’authentification Passwordless](/docs/fr-ca/authenticate/login/auth0-universal-login/passwordless-login/email-or-sms).
 
 <div id="how-it-works">
-  ## Fonctionnement
+  ## Fonctionnement {#how-it-works}
 </div>
 
 Lorsqu’un utilisateur ouvre un Magic Link, Auth0 le connecte automatiquement. C’est semblable au fait de recevoir un courriel contenant un mot de passe à usage unique (OTP), de retourner à votre application et d’y saisir l’OTP, mais sans avoir à effectuer réellement ces étapes.
 
 <div id="limitations">
-  ### Limites
+  ### Limites {#limitations}
 </div>
 
 Magic Links ne sont pas pris en charge avec <Tooltip tip="Votre application est redirigée vers Universal Login, hébergé sur le Authorization Server d’Auth0, afin de vérifier l’identité de l’utilisateur." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Universal+Login">Universal Login</Tooltip>.
@@ -24,7 +24,7 @@ Lorsque vous utilisez Magic Links avec Classic Login, la requête initiale et sa
 Par exemple, l’utilisateur peut envoyer la requête initiale à l’aide du navigateur Chrome, mais lorsqu’il ouvre le Magic Link dans son courriel, iOS l’ouvre automatiquement dans Safari (le navigateur par défaut). Si cela se produit, la transaction échouera.
 
 <div id="classic-login-flow-with-magic-links">
-  ### Flux de connexion Classic Login avec Magic Links
+  ### Flux de connexion Classic Login avec Magic Links {#classic-login-flow-with-magic-links}
 </div>
 
 <Frame>![](/docs/images/cdy7uua7fh8z/yYsZhaG5uzmVg1MwVCRix/0b735f499987539856fa9a251e2b09d1/Magic_Link_Flow.png)</Frame>
@@ -32,7 +32,7 @@ Par exemple, l’utilisateur peut envoyer la requête initiale à l’aide du na
 L’utilisateur clique ensuite sur le bouton ou le lien dans le courriel et se connecte automatiquement à votre application.
 
 <div id="configure-the-connection">
-  ## Configurer la connexion
+  ## Configurer la connexion {#configure-the-connection}
 </div>
 
 1. Dans l’Auth0 Dashboard, accédez à [Authentication &gt; Passwordless](https://manage.auth0.com/#/connections/passwordless), puis activez la bascule **Email**.
@@ -46,7 +46,7 @@ L’utilisateur clique ensuite sur le bouton ou le lien dans le courriel et se c
 5. Sélectionnez **Save**.
 
 <div id="multi-language-support">
-  ### Prise en charge multilingue
+  ### Prise en charge multilingue {#multi-language-support}
 </div>
 
 La zone **Message** prend en charge plusieurs langues.
@@ -54,7 +54,7 @@ La zone **Message** prend en charge plusieurs langues.
 Pour préciser une langue, envoyez une requête au [point de terminaison Get Code or Link de l’Auth0 Authentication API](https://auth0.com/docs/api/authentication#get-code-or-link) et définissez la valeur de l’en-tête `x-request-language`. Si cet en-tête n’est pas défini, la langue est extraite de l’en-tête `accept-language`, qui est automatiquement défini par le navigateur.
 
 <div id="message-syntax">
-  ### Syntaxe du champ Message
+  ### Syntaxe du champ Message {#message-syntax}
 </div>
 
 La zone **Message** accepte la syntaxe Liquid. Vous pouvez utiliser cette syntaxe, combinée aux valeurs des paramètres, pour créer automatiquement des éléments du message.
@@ -81,7 +81,7 @@ Les paramètres suivants sont disponibles lors de la définition du modèle de m
 | `operation`        | Indique que le modèle a été déclenché par une mise à jour de l’adresse courriel d’un utilisateur au moyen de l’API. Lorsqu’il est déclenché, la valeur est `change_email`, sinon c’est `null`. |
 
 <div id="update-classic-login-settings">
-  ## Mettre à jour les paramètres de Classic Login
+  ## Mettre à jour les paramètres de Classic Login {#update-classic-login-settings}
 </div>
 
 Si vous utilisez Classic Login pour votre application, vous devez mettre à jour le page template pour implémenter les Magic Links.
@@ -101,13 +101,13 @@ Si vous utilisez Classic Login pour votre application, vous devez mettre à jour
 Pour en savoir plus sur les options de configuration de Embedded Login, consultez [Passwordless Authentication with Embedded Login](/docs/fr-ca/authenticate/passwordless/implement-login/embedded-login).
 
 <div id="enable-applications">
-  ## Activer les applications
+  ## Activer les applications {#enable-applications}
 </div>
 
 Passez à la vue **Applications**, puis activez les applications pour lesquelles vous voulez utiliser Passwordless Email.
 
 <div id="email-providers">
-  ## Fournisseurs de courriel
+  ## Fournisseurs de courriel {#email-providers}
 </div>
 
 Par défaut, Auth0 envoie les courriels au moyen de son propre fournisseur SMTP. Le fournisseur de courriel intégré d’Auth0 est conçu uniquement à des fins de test et ne permet pas de personnaliser les modèles de courriel.

@@ -8,7 +8,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 <ReleaseStageNotice feature="セッション委譲" stage="ea" plans="B2C Professional、B2B Professional、Enterprise" terms="true" />
 
 <div id="session-behavior">
-  ## セッションの動作
+  ## セッションの動作 {#session-behavior}
 </div>
 
 委譲セッションは、通常の Auth0 セッションとはいくつかの点で異なります。
@@ -31,13 +31,13 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 * **ウェルカムメール** は送信されません。
 
 <div id="actions">
-  ## Actions
+  ## Actions {#actions}
 </div>
 
 `event.session.actor` は、委任セッション中の[Post-Login Actions](/docs/ja-jp/customize/actions/explore-triggers/post-login)で使用でき、Session Transfer Token の発行時に `setActor()` に渡された アクター object がそのまま含まれます。
 
 <div id="monitoring">
-  ## モニタリング
+  ## モニタリング {#monitoring}
 </div>
 
 委譲セッションでは、専用のテナント[ログ](/docs/ja-jp/deploy-monitor/logs)イベントタイプが生成されます。

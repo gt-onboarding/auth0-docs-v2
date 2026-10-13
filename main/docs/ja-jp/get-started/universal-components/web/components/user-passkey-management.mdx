@@ -18,7 +18,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx";
 </Frame>
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 パスキーのサポートを有効にするには、次の要件を満たす必要があります。
@@ -34,14 +34,14 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx";
 * **アプリケーションに Universal Components をインストールして設定する**。Universal Components のインストールと設定については、[アカウントセキュリティ UI を構築する](/docs/ja-jp/get-started/universal-components/web/components/my-account-overview#prerequisites)を参照してください。
 
 <div id="configure-your-application">
-  ## アプリケーションを設定する
+  ## アプリケーションを設定する {#configure-your-application}
 </div>
 
 フレームワークを選択して、環境変数とUniversal Componentsを設定します。
 
 <Tabs>
   <Tab title="React（SPA）">
-    ## コンポーネントをインストールする
+## コンポーネントをインストールする {#install-the-component}
 
     <CodeGroup>
       ```bash pnpm wrap lines
@@ -57,7 +57,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx";
       `react-hook-form` と `@tanstack/react-query` はピア依存関係です。このコマンドにより、共有ユーティリティおよび Auth0 連携に必要な `@auth0/universal-components-core` もインストールされます。
     </Callout>
 
-    ## はじめに
+## はじめに {#get-started}
 
     ```tsx wrap lines
     import { UserPasskeyManagement } from "@auth0/universal-components-react";
@@ -135,7 +135,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx";
   </Tab>
 
   <Tab title="Next.js（RWA）">
-    ## コンポーネントをインストールする
+## コンポーネントをインストールする {#install-the-component-2}
 
     <CodeGroup>
       ```bash pnpm wrap lines
@@ -151,7 +151,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx";
       `react-hook-form` と `@tanstack/react-query` はピア依存関係です。このコマンドでは、共有ユーティリティと Auth0 連携に必要な `@auth0/universal-components-core` もインストールされます。
     </Callout>
 
-    ## はじめに
+## はじめに {#get-started-2}
 
     ```tsx app/security/passkeys/page.tsx wrap lines
     "use client";
@@ -205,7 +205,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx";
   </Tab>
 
   <Tab title="shadcn">
-    ## コンポーネントをインストールする
+## コンポーネントをインストールする {#install-the-component-3}
 
     ```bash wrap lines
     npx shadcn@latest add https://auth0-universal-components.vercel.app/r/my-account/user-passkey-management.json
@@ -215,7 +215,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx";
       インストールコマンドを実行すると、コンポーネントのソースがすべての UI 依存関係とともに `src/components/auth0/my-account/` に追加されます。また、共有ユーティリティと Auth0 連携に必要な `@auth0/universal-components-core` 依存関係も追加されます。
     </Callout>
 
-    ## はじめに
+## はじめに {#get-started-3}
 
     ```tsx wrap lines
     import { UserPasskeyManagement } from "@/components/auth0/my-account/user-passkey-management";
@@ -289,11 +289,11 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx";
 </Tabs>
 
 <div id="props">
-  ## プロップス
+  ## プロップス {#props}
 </div>
 
 <div id="display-props">
-  ### 表示プロップス
+  ### 表示プロップス {#display-props}
 </div>
 
 表示プロップスは、コンポーネントの動作に影響を与えずに表示方法を制御します。
@@ -319,7 +319,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx";
 </table>
 
 <div id="action-props">
-  ### Action プロップス
+  ### Action プロップス {#action-props}
 </div>
 
 Action プロップスを使用すると、コンポーネントのライフサイクルイベントにフックして、操作をトリガーまたはキャンセルできます。
@@ -419,7 +419,7 @@ Action プロップスを使用すると、コンポーネントのライフサ�
 ```
 
 <div id="customize-props">
-  ### プロップスをカスタマイズする
+  ### プロップスをカスタマイズする {#customize-props}
 </div>
 
 カスタマイズ用プロップスを使用すると、ソースコードを変更せずに文言やスタイリングを調整できます。
@@ -524,7 +524,7 @@ CSS変数とクラスのオーバーライドを使用して外観をカスタ�
 ```
 
 <div id="typescript-definitions">
-  ## TypeScript 型定義
+  ## TypeScript 型定義 {#typescript-definitions}
 </div>
 
 ```typescript wrap lines
@@ -561,7 +561,7 @@ interface UserPasskeyManagementProps {
 ```
 
 <div id="advanced-customization">
-  ## 高度なカスタマイズ
+  ## 高度なカスタマイズ {#advanced-customization}
 </div>
 
 上記のコンポーネント設定に加え、パスキー管理用のカスタムインターフェースを構築する必要がある場合は、`useUserPasskey` フックを使用します。
@@ -626,7 +626,7 @@ export function CustomPasskeyManagement() {
 組み込みのインターフェースを使用する場合は、`UserPasskeyManagement` を使用してください。フックを使用する場合は、対応する取り消し確認 UI と、それを閉じる動作を実装してください。
 
 <div id="learn-more">
-  ## 詳しく見る
+  ## 詳しく見る {#learn-more}
 </div>
 
 <CardGroup cols={2}>

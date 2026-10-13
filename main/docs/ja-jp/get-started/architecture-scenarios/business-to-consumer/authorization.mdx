@@ -44,13 +44,13 @@ Auth0 は、アプリケーション側で制限を適用するために必要�
 </Callout>
 
 <div id="application-integration">
-  ## アプリケーション統合
+  ## アプリケーション統合 {#application-integration}
 </div>
 
 このシナリオでは、Auth0テナントが、アプリケーションへの認可されたアクセスを示すトークンを提供します。[OpenID Connect (OIDC)](/docs/ja-jp/authenticate/protocols/openid-connect-protocol) を利用するアプリケーション、つまり顧客向けアプリケーションで一般的に最も広く使われている業界標準のプロトコルの場合、これは [JWT](/docs/ja-jp/secure/tokens/json-web-tokens) 形式の ID Token になります。
 
 <div id="id-token-claims">
-  ### ID Token クレーム
+  ### ID Token クレーム {#id-token-claims}
 </div>
 
 Action の拡張性を利用すると、Auth0 では、たとえばユーザーの [Metadata](/docs/ja-jp/manage-users/user-accounts/metadata) の内容に基づいて、[ID Token にカスタムクレームを追加する](/docs/ja-jp/get-started/apis/scopes/sample-use-cases-scopes-and-claims#add-custom-claims-to-a-token)ことが簡単にできます。これにより、アプリケーションは ID Token に必要なクレームが含まれているかを検証し、必要に応じて特定の機能へのアクセスを許可または拒否できます。Action を使ったカスタムクレームの追加は簡単ですが、Action ランタイムは柔軟性が高いため、悪影響を及ぼす可能性のあるカスタムコードも記述できる点に注意してください。
@@ -60,13 +60,13 @@ Action の拡張性を利用すると、Auth0 では、たとえばユーザー�
 </Callout>
 
 <div id="id-token-scopes">
-  ### ID Token スコープ
+  ### ID Token スコープ {#id-token-scopes}
 </div>
 
 [OIDC Scopes](/docs/ja-jp/get-started/apis/scopes/openid-connect-scopes) は通常、認証時にユーザーの詳細情報への認可されたアクセスについて同意を得るためにアプリケーションで使用されます。事前定義された各スコープは、定義されている標準クレームのセットを返します。その内容は [OIDC specification](https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims) に記載されているとおりです。アプリケーションが要求するスコープは、そのアプリケーションが必要とするユーザー属性によって異なります。ユーザーが要求されたスコープを認可すると、クレームは ID Token で返され、 [/userinfo](https://auth0.com/docs/api/authentication#get-user-info) エンドポイントからも利用できます。
 
 <div id="api-integration">
-  ## API 連携
+  ## API 連携 {#api-integration}
 </div>
 
 このシナリオでは、Auth0 テナント は OAuth2 の [Access Token](/docs/ja-jp/secure/tokens/access-tokens) (通常は [JWT](/docs/ja-jp/secure/tokens/json-web-tokens) 形式) を発行でき、API はこれを使って特定の主体にのみアクセスを許可できます。さらに Auth0 は、概念的に [First-Party and Third-Party Applications](/docs/ja-jp/get-started/applications/first-party-and-third-party-applications) の両方をサポートしています。
@@ -90,7 +90,7 @@ OAuth2 は、サードパーティアクセスを特に念頭に置いて設計�
 あるいは、ユーザーに関連するデータで、追加の[機能が提供される](/docs/ja-jp/get-started/apis/scopes/api-scopes#example-an-api-called-by-a-back-end-service)一方、明示的なユーザー同意を取得できない場合もあります (つまり、それを提供できる認証済みユーザーが存在しない場合です) 。この場合は、[Client Credentials grant が有効なアプリケーションの一覧](/docs/ja-jp/get-started/authentication-and-authorization-flow/client-credentials-flow)を定義できます。
 
 <div id="access-token-claims">
-  ### Access Token のクレーム
+  ### Access Token のクレーム {#access-token-claims}
 </div>
 
 ID Token と同様に、Auth0 Actions の拡張機能を使用して、[Access Token にカスタムクレームを追加](/docs/ja-jp/get-started/apis/scopes/sample-use-cases-scopes-and-claims#add-custom-claims-to-a-token)できます。追加後は、API で Access Token に必要なクレームが含まれているかを検証し、必要に応じて特定の機能へのアクセスを許可または拒否できます。
@@ -100,7 +100,7 @@ ID Token と同様に、Auth0 Actions の拡張機能を使用して、[Access T
 </Callout>
 
 <div id="access-token-scopes">
-  ### Access Token のスコープ
+  ### Access Token のスコープ {#access-token-scopes}
 </div>
 
 [OAuth2 Scopes](/docs/ja-jp/get-started/apis/scopes/api-scopes) は通常、API がユーザーに代わってどの <Tooltip tip="Secure, tenant-specific, versioned functions written in Node." cta="用語集を見る" href="/docs/ja-jp/glossary?term=Actions">アクション</Tooltip> を実行できるかを判断するための仕組みとして使用されます。スコープは API ごとに追加でき、<Tooltip tip="Auth0 Dashboard: Auth0's main product to configure your services." cta="用語集を見る" href="/docs/ja-jp/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip> または Auth0 <Tooltip tip="Auth0 Dashboard: Auth0's main product to configure your services." cta="用語集を見る" href="/docs/ja-jp/glossary?term=Management+API">Management API</Tooltip> で [特定のアクセス権限を定義](/docs/ja-jp/get-started/apis/add-api-permissions) できます。スコープは、Auth0 の拡張機能 (たとえば、この[例](/docs/ja-jp/get-started/architecture-scenarios/spa-api/part-2#create-an-action-to-validate-token-scopes)のように Action 経由) で操作することもできます。アプリケーションが API にアクセスするために要求するスコープは、アプリケーションが利用する機能のうち、ユーザーの許可が必要なものに応じて決めるべきです。要求されたスコープが承認されると、それらは Access Token に含まれて返され、後で [その API によって検証](/docs/ja-jp/secure/tokens/access-tokens/validate-access-tokens) できます。これをよく示す例として、ソーシャルプロバイダーを使ってログインするアプリケーションにログインする場合があります。ソーシャルプロバイダーの API では、アプリケーションがユーザーに代わって投稿を行うことをユーザーが許可するかどうかを、アプリケーション側で指定する必要があります。これにより、ユーザーはこの要求を承諾または拒否できます。この例が示しているのは、ユーザーがアプリケーションに権限を委譲しているということです。これは、API がユーザーの <Tooltip tip="Aspect of a user’s identity assigned to the user to indicate the level of access they should have to the system." cta="用語集を見る" href="/docs/ja-jp/glossary?term=Role">ロール</Tooltip> に基づいてアクセスを制限するのとは異なるため、別の方法で扱う必要があります。
@@ -114,7 +114,7 @@ ID Token と同様に、Auth0 Actions の拡張機能を使用して、[Access T
 スコープはユーザーのアクセス権限を適用する手段としてよく使われますが、このような使い方をすると [扱いが難しくなる](https://auth0.com/blog/on-the-nature-of-oauth2-scopes/) ことがあります。そのため、スコープは本来の目的 (つまり、アプリケーションへの権限の委譲) に使い、ロールベースやその他のアクセス制御のシナリオでは [カスタムクレーム](#access-token-claims) を使用することをお勧めします。
 
 <div id="fine-grained-authorization-fga">
-  ## きめ細かな認可 (FGA)
+  ## きめ細かな認可 (FGA) {#fine-grained-authorization-fga}
 </div>
 
 [きめ細かな認可](https://docs.fga.dev/fga-concepts)を使用すると、次の条件に基づいて、特定のリソースまたはオブジェクトへのアクセス権を個々のユーザーに付与できます。
@@ -126,13 +126,13 @@ ID Token と同様に、Auth0 Actions の拡張機能を使用して、[Access T
 <Tooltip tip="きめ細かな認可（FGA）: 特定のオブジェクトまたはリソースへのアクセスを個々のユーザーに許可できる Auth0 製品。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=FGA">FGA</Tooltip> を使用すると、ユーザーアクセスを判定するために、どのような関係を用いるかを定義した認可モデルを作成できます。
 
 <div id="role-based-access-control-rbac">
-  ## ロールベースのアクセス制御 (RBAC)
+  ## ロールベースのアクセス制御 (RBAC) {#role-based-access-control-rbac}
 </div>
 
 Auth0 は、ロールベースのアクセス制御 ([RBAC](/docs/ja-jp/manage-users/access-control/rbac)) を標準でサポートしています。RBAC とは、組織内でのユーザーの役割に応じてユーザーに permissions を割り当てることで、より管理しやすくミスも起こりにくい方法を提供し、アクセス制御を簡素化するものです。
 
 <div id="machine-to-machine-m2m-authorization">
-  ## マシン間 (M2M) 認可
+  ## マシン間 (M2M) 認可 {#machine-to-machine-m2m-authorization}
 </div>
 
 ユーザーとの対話セッションを伴わないアプリケーションが、API を呼び出すために Access Token を取得する必要があるケースは数多くあります。こうしたケースでは、ユーザーではなくクライアントを認証する必要があり、<Tooltip tip="OAuth 2.0: 認可のプロトコルとワークフローを定義する認可フレームワーク。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=OAuth">OAuth</Tooltip> 2 では、これを簡単に実現できるように [client credentials](/docs/ja-jp/get-started/authentication-and-authorization-flow/client-credentials-flow) グラントタイプが提供されています。これが必要になる代表的な例として、次のようなものがあります。
@@ -147,7 +147,7 @@ Auth0 は、ロールベースのアクセス制御 ([RBAC](/docs/ja-jp/manage-u
 </Callout>
 
 <div id="project-planning-guide">
-  ## プロジェクト計画ガイド
+  ## プロジェクト計画ガイド {#project-planning-guide}
 </div>
 
 推奨戦略の詳細をご確認いただけるよう、ダウンロードして参照できるPDF形式の計画ガイドをご用意しています。

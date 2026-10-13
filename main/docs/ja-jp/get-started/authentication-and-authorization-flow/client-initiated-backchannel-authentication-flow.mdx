@@ -18,7 +18,7 @@ CIBAフローには、2 つの主体があります。
 認証と認可を利用デバイスから切り離すことで、クライアントアプリケーションはバックチャネルリクエストを使って OpenIDプロバイダーを直接呼び出せます。これによりセキュリティが強化され、CIBAフローでは [mTLS](/docs/ja-jp/get-started/authentication-and-authorization-flow/authenticate-with-mtls) や [Private Key JWT](/docs/ja-jp/get-started/authentication-and-authorization-flow/authenticate-with-private-key-jwt) など、より安全なクライアント認証方式を使用できます。
 
 <div id="use-cases">
-  ## ユースケース
+  ## ユースケース {#use-cases}
 </div>
 
 CIBAフローの一般的なユースケースには、次のようなものがあります。
@@ -29,7 +29,7 @@ CIBAフローの一般的なユースケースには、次のようなものが�
 * ユーザーが比較的安全性の低いデバイスで機微なトランザクションを開始し、より安全なデバイスでそのトランザクションを承認したい場合。たとえば、個人用の携帯電話に届いたプッシュ通知を承認して、支払いや個人情報の変更を承認することがあります。
 
 <div id="notification-channels">
-  ## 通知チャネル
+  ## 通知チャネル {#notification-channels}
 </div>
 
 Auth0 は、CIBA で次の通知チャネルをサポートしています。
@@ -42,7 +42,7 @@ Auth0 は、CIBA で次の通知チャネルをサポートしています。
 デフォルトでは、Auth0 は CIBA フローで Guardian プッシュ通知を使用しており、これを推奨しています。Guardian プッシュ通知は、フィッシング攻撃の影響を受けやすいメールなどの他のチャネルよりも安全です。CIBA フローでメール通知を使用するには、明示的に有効にする必要があります。
 
 <div id="how-it-works">
-  ## 仕組み
+  ## 仕組み {#how-it-works}
 </div>
 
 次の図は、CIBAフローの一連の流れを示しています。
@@ -62,7 +62,7 @@ Auth0 は、CIBA で次の通知チャネルをサポートしています。
 </Callout>
 
 <div id="entity-limits">
-  ## エンティティの上限
+  ## エンティティの上限 {#entity-limits}
 </div>
 
 CIBAフローには、以下の上限があります。
@@ -71,7 +71,7 @@ CIBAフローには、以下の上限があります。
 * 1つのテナントで同時に保留できるCIBAリクエストは最大5000件です。保留中のCIBAリクエストとは、開始されているものの、まだユーザーからの応答を受け取っていないリクエストを指します。CIBAリクエストの有効期限が応答を受け取らないまま切れた場合でも、最大24時間、この5000件の上限に引き続きカウントされることがあります。
 
 <div id="get-started">
-  ## はじめに
+  ## はじめに {#get-started}
 </div>
 
 | 読む                                                                                                                                                               | 学べること                                                       |

@@ -34,7 +34,7 @@ Afin d’éviter les erreurs de validation, assurez-vous d’inclure le protocol
 </Callout>
 
 <div id="federated-logouts">
-  ## Déconnexions fédérées
+  ## Déconnexions fédérées {#federated-logouts}
 </div>
 
 [Plusieurs fournisseurs](/docs/fr-ca/authenticate/login/logout/log-users-out-of-idps#federated-logout-support) prennent en charge la déconnexion fédérée.
@@ -48,7 +48,7 @@ Vous devez vous assurer que votre application met fin à la session de l’utili
 Lorsque l’utilisateur atteint le point de terminaison `/logout`, Auth0 met fin à la session Auth0, redirige l’utilisateur vers le point de terminaison de déconnexion du <Tooltip tip="Fournisseur d’identité (IdP) : Service qui stocke et gère les identités numériques." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Identity+Providers">fournisseur d’identité</Tooltip>, puis met fin à la session auprès du fournisseur d’identité.
 
 <div id="limitations">
-  ## Limitations
+  ## Limitations {#limitations}
 </div>
 
 * La validation des URL fournies comme valeurs pour le paramètre `returnTo`, la chaîne de requête et les informations de hachage comprises dans l’URL n’est pas prise en compte.
@@ -58,7 +58,7 @@ Lorsque l’utilisateur atteint le point de terminaison `/logout`, Auth0 met fin
 Si vous utilisez des fournisseurs d’identité sociale comme Google ou Facebook, vous devez définir votre `Client ID` et votre `Secret` pour ces fournisseurs dans le [Dashboard](https://manage.auth0.com/#) afin que la déconnexion fonctionne correctement.
 
 <div id="additional-requirements-for-facebook">
-  ## Exigences supplémentaires pour Facebook
+  ## Exigences supplémentaires pour Facebook {#additional-requirements-for-facebook}
 </div>
 
 Utilisez le paramètre `returnTo` pour indiquer comment rediriger l’utilisateur après la déconnexion.
@@ -74,7 +74,7 @@ export const codeExample = `https://{yourDomain}/v2/logout?federated&
 <AuthCodeBlock children={codeExample} language="http" />
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Déconnecter les utilisateurs des applications](/docs/fr-ca/authenticate/login/logout/log-users-out-of-applications)

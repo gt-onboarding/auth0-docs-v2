@@ -6,7 +6,7 @@ description: "Invalidez un jeton d’actualisation pour éviter qu’il soit ré
 import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `POST /oauth/revoke`
@@ -18,19 +18,19 @@ Si cette bascule est activée, chaque requête de révocation invalide non seule
 Si cette bascule est désactivée, seul le jeton d’actualisation est révoqué, tandis que le grant reste intact.
 
 <div id="remarks">
-  ## Remarques
+  ## Remarques {#remarks}
 </div>
 
 * Pour les applications non confidentielles qui ne peuvent pas garder le Client Secret en sécurité (par exemple, les applications natives), le point de terminaison permet de ne pas transmettre de Client Secret, mais l’application elle-même doit avoir la propriété `tokenEndpointAuthMethod` définie sur `none`. Vous pouvez le faire soit dans l’interface utilisateur ([Dashboard &gt; Applications &gt; Application Settings](https://manage.auth0.com/dashboard)), soit à l’aide de la [Management API](https://auth0.com/docs/api/management/v2/clients/patch-clients-by-id).
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Jetons d’actualisation](https://auth0.com/docs/secure/tokens/refresh-tokens)
 
 <div id="body-parameters">
-  ## Paramètres du corps
+  ## Paramètres du corps {#body-parameters}
 </div>
 
 <ParamField body="client_id" type="string" required>
@@ -54,7 +54,7 @@ Si cette bascule est désactivée, seul le jeton d’actualisation est révoqué
 </ParamField>
 
 <div id="response-schema">
-  ## Schéma de réponse
+  ## Schéma de réponse {#response-schema}
 </div>
 
 <ResponseSchema>
@@ -70,7 +70,7 @@ Si cette bascule est désactivée, seul le jeton d’actualisation est révoqué
 </ResponseSchema>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut  | Description           |

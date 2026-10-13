@@ -6,7 +6,7 @@ description: "Échangez un jeton issu d’un fournisseur social natif (comme App
 import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `POST /oauth/token`
@@ -20,21 +20,21 @@ Lorsqu’une solution non basée sur un navigateur (comme le SDK d’une platefo
 Les artefacts renvoyés par ce flux (ainsi que leur contenu) seront déterminés par le `subject_token_type` et les paramètres de configuration du tenant.
 
 <div id="remarks">
-  ## Remarques
+  ## Remarques {#remarks}
 </div>
 
 * Les scopes accordés à l’application peuvent différer des scopes demandés. Dans ce cas, un paramètre `scope` sera inclus dans la réponse JSON.
 * Si vous ne demandez pas de scopes précis, tous les scopes définis pour l’audience seront renvoyés en raison de la confiance implicite dont bénéficie l’application dans le cadre de ce grant. Vous pouvez personnaliser les scopes renvoyés dans une règle. Pour en savoir plus, consultez [Appeler des API à partir d’applications hautement fiables](https://auth0.com/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow).
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Ajouter Sign In with Apple aux apps Native iOS](https://auth0.com/docs/authenticate/identity-providers/social-identity-providers/apple-native)
 * [Quickstart iOS Swift - Sign In with Apple](https://auth0.com/docs/quickstart/native/ios-swift)
 
 <div id="headers">
-  ## En-têtes
+  ## En-têtes {#headers}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -42,7 +42,7 @@ Les artefacts renvoyés par ce flux (ainsi que leur contenu) seront déterminés
 </ParamField>
 
 <div id="body-parameters">
-  ## Paramètres du corps
+  ## Paramètres du corps {#body-parameters}
 </div>
 
 <div className="prose-sm prose-gray dark:prose-invert">
@@ -90,7 +90,7 @@ Les artefacts renvoyés par ce flux (ainsi que leur contenu) seront déterminés
 </ParamField>
 
 <div id="response-schema">
-  ## Schéma de réponse
+  ## Schéma de réponse {#response-schema}
 </div>
 
 <ResponseSchema statusCode="200">
@@ -126,7 +126,7 @@ Les artefacts renvoyés par ce flux (ainsi que leur contenu) seront déterminés
 </ResponseSchema>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut  | Description       |

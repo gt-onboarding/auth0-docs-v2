@@ -10,7 +10,7 @@ description: "Universal Login の `mfa-sms-challenge` 画面をカスタマイ�
 </Frame>
 
 <div id="import">
-  ## インポート
+  ## インポート {#import}
 </div>
 
 各画面には、それぞれ固有のフックとメソッドがあります。SDK は各画面で**部分インポート**と**ルートインポート**をサポートしています。
@@ -61,7 +61,7 @@ function MfaSmsChallengeScreen() {
 ```
 
 <div id="context-hooks">
-  ## コンテキストフック
+  ## コンテキストフック {#context-hooks}
 </div>
 
 `mfa-sms-challenge` 画面で Auth0 のコンテキストデータへの読み取り専用アクセスを提供する、画面スコープのフックです。`@auth0/auth0-acul-react/mfa-sms-challenge` からインポートします。
@@ -173,7 +173,7 @@ function MfaSmsChallengeScreen() {
 </ParamField>
 
 <div id="methods">
-  ## メソッド
+  ## メソッド {#methods}
 </div>
 
 <ParamField body="continueMfaSmsChallenge" type="Promise<void>">
@@ -278,7 +278,7 @@ function MfaSmsChallengeScreen() {
 </ParamField>
 
 <div id="commonutility-hooks">
-  ## 共通/ユーティリティ フック
+  ## 共通/ユーティリティ フック {#commonutility-hooks}
 </div>
 
 <ParamField body={<a href="/docs/ja-jp/libraries/acul/react-sdk/API-Reference/Hooks/useResend">useResend</a>} type="Hooks">

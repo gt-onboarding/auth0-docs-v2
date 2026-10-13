@@ -25,11 +25,11 @@ Actions では、`event.anonymous_session` オブジェクトを参照できま�
 ```
 
 <div id="anonymous-sessions-and-actions-use-cases">
-  ## 匿名セッションとActionsのユースケース
+  ## 匿名セッションとActionsのユースケース {#anonymous-sessions-and-actions-use-cases}
 </div>
 
 <div id="save-anonymous-session-metadata-to-a-new-user">
-  ### 匿名セッションのメタデータを新規ユーザーに保存する
+  ### 匿名セッションのメタデータを新規ユーザーに保存する {#save-anonymous-session-metadata-to-a-new-user}
 </div>
 
 ユーザーがサインアップする際に、[`pre-user-registration`](/docs/ja-jp/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger) Action トリガーを使用して、匿名メタデータを新しいユーザープロファイルにコピーできます。
@@ -63,7 +63,7 @@ exports.onExecutePreUserRegistration = async (event, api) => {
 ```
 
 <div id="save-anonymous-session-metadata-to-an-existing-user">
-  ### 匿名セッションのメタデータを既存ユーザーに保存する
+  ### 匿名セッションのメタデータを既存ユーザーに保存する {#save-anonymous-session-metadata-to-an-existing-user}
 </div>
 
 ユーザーのログイン時に、[`post-login`](/docs/ja-jp/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger) Action トリガーを使用して、匿名メタデータを既存ユーザーに保存できます。
@@ -97,7 +97,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="merge-user-metadata-with-anonymous-metadata">
-  ### ユーザーメタデータに匿名メタデータを統合する
+  ### ユーザーメタデータに匿名メタデータを統合する {#merge-user-metadata-with-anonymous-metadata}
 </div>
 
 ユーザーがログインした際に、[`post-login`](/docs/ja-jp/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger) Action トリガーを使用して、カート情報などの匿名メタデータを既存のユーザーメタデータに統合できます。
@@ -130,7 +130,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="handle-multiple-anonymous-sessions">
-  ### 複数の匿名セッションを処理する
+  ### 複数の匿名セッションを処理する {#handle-multiple-anonymous-sessions}
 </div>
 
 ユーザーのログイン時に、[`post-login`](/docs/ja-jp/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger) Action トリガーを使用して、異なるデバイスの匿名セッションのメタデータを管理できます。
@@ -161,7 +161,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="learn-more">
-  ## 詳細
+  ## 詳細 {#learn-more}
 </div>
 
 * [匿名セッションを設定する](/docs/ja-jp/manage-users/sessions/anonymous-sessions/configure-anonymous-sessions) 匿名セッションの設定方法を確認します。

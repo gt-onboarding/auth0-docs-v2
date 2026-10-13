@@ -6,7 +6,7 @@ title: Facebook Graph API の変更
 2018年8月1日以降、Facebook では、リクエスト可能な Facebook Graph API の権限とフィールドが変更されました。Auth0 ではこれらの変更を反映して Facebook 接続 を更新し、わかりやすくするために接続インターフェースも変更しました。詳細と重要な日程については、[Facebook Login Changelog: Recent Changes to Facebook Login](https://developers.facebook.com/docs/facebook-login/changelog#2018-07-02) を参照してください。
 
 <div id="features-affected">
-  ## 影響を受ける機能
+  ## 影響を受ける機能 {#features-affected}
 </div>
 
 この更新では、コードや設定の変更が不要な場合もありますが、既存の権限で許可されていれば、アプリケーションが追加のプロファイルデータを受け取る可能性があります。次の点にご注意ください。
@@ -16,7 +16,7 @@ title: Facebook Graph API の変更
 * 接続に新しい権限を追加すると、エンドユーザーは次回ログイン時に同意を求められます。特定の権限を持っていないユーザーへの対応方法については、Facebook のドキュメントを参照してください。
 
 <div id="facebook-login-permissions">
-  ### Facebookログインの権限
+  ### Facebookログインの権限 {#facebook-login-permissions}
 </div>
 
 ユーザーがFacebookを使ってログインするとき、アプリケーションは [Facebook Login permissions](https://developers.facebook.com/docs/facebook-login/permissions) を要求します。ユーザーが初めてログインする場合や、権限が変更されている場合は、要求された新しい権限を示す同意ウィンドウがFacebookに表示されます。これらの権限が付与されると、アプリケーションはFacebookのアクセストークンを使用して、そのユーザーに代わって操作できるようになります。
@@ -24,7 +24,7 @@ title: Facebook Graph API の変更
 Facebook 接続インターフェイスは、表示されるすべての権限について、通常名とマシン名の両方を表示するように更新されました。これにより、必要な権限を見つけやすくなり、それらの権限名を使っているコードとの対応付けもしやすくなります。
 
 <div id="permissions-added">
-  #### 追加された権限
+  #### 追加された権限 {#permissions-added}
 </div>
 
 Facebook 接続インターフェイスに、以下の権限が追加されました。
@@ -40,7 +40,7 @@ Facebook 接続インターフェイスに、以下の権限が追加されま�
 * user&#95;link
 
 <div id="permissions-removed">
-  #### 削除された権限
+  #### 削除された権限 {#permissions-removed}
 </div>
 
 以下の権限が Facebook 接続インターフェイスから削除されました。
@@ -62,7 +62,7 @@ Facebook 接続インターフェイスに、以下の権限が追加されま�
 * user&#95;work&#95;history
 
 <div id="permissions-moved-to-deprecated">
-  #### Deprecated に移動された権限
+  #### Deprecated に移動された権限 {#permissions-moved-to-deprecated}
 </div>
 
 以下の権限は **Deprecated** セクションに移動されており、Graph API の最新バージョンでは使用しないでください。
@@ -71,7 +71,7 @@ Facebook 接続インターフェイスに、以下の権限が追加されま�
 * user&#95;managed&#95;groups
 
 <div id="facebook-graph-api-fields">
-  ### Facebook Graph API フィールド
+  ### Facebook Graph API フィールド {#facebook-graph-api-fields}
 </div>
 
 [Facebook Graph API](https://developers.facebook.com/docs/graph-api/reference/v3.2/user) は、ユーザーのログイン後に Auth0 ユーザーのプロファイルデータを取得するために使用されます。要求されるユーザーデータの権限によって、Graph API から取得される情報が決まります。返されるフィールドは、要求された権限と、それらのフィールドが Facebook のユーザープロファイルに存在するかどうかによって異なります。

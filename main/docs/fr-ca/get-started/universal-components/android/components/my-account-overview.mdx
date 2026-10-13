@@ -13,7 +13,7 @@ Auth0 Universal Components pour Android vous permet de créer une interface libr
 Avec `AuthenticatorSettingsComponent`, les utilisateurs peuvent gérer leurs propres méthodes d’authentification — facteurs d’authentification multifacteur (MFA), clés d’accès et codes de récupération — directement dans votre application, sans avoir à ouvrir un navigateur Web ni à contacter le soutien.
 
 <div id="how-it-works">
-  ## Fonctionnement
+  ## Fonctionnement {#how-it-works}
 </div>
 
 Le `AuthenticatorSettingsComponent` utilise les [méthodes d’authentification de l’API My Account d’Auth0](/docs/fr-ca/manage-users/my-account-api#manage-authentication-methods) pour afficher, dans votre application, une interface permettant de gérer les méthodes d’authentification.
@@ -33,18 +33,18 @@ Le `AuthenticatorSettingsComponent` utilise le jeton d’accès pour appeler les
 </Callout>
 
 <div id="prerequisites">
-  ## Prérequis
+  ## Prérequis {#prerequisites}
 </div>
 
 <div id="enable-the-my-account-api">
-  ### Activer l’API My Account
+  ### Activer l’API My Account {#enable-the-my-account-api}
 </div>
 
 1. Accédez à [Dashboard &gt; Applications &gt; APIs](https://manage.auth0.com/#/apis).
 2. Sélectionnez **Activer l’API My Account** pour vous assurer qu’elle est activée pour votre tenant.
 
 <div id="create-an-application-and-configure-my-account-api-permissions">
-  ### Créer une application et configurer les permissions de My Account API
+  ### Créer une application et configurer les permissions de My Account API {#create-an-application-and-configure-my-account-api-permissions}
 </div>
 
 1. Accédez à [Dashboard &gt; Applications](https://manage.auth0.com/#/applications).
@@ -82,13 +82,13 @@ Le `AuthenticatorSettingsComponent` utilise le jeton d’accès pour appeler les
 </Callout>
 
 <div id="install-the-sdk">
-  ### Installer le SDK
+  ### Installer le SDK {#install-the-sdk}
 </div>
 
 Utilisez Gradle pour installer le paquet `com.auth0.universalcomponents:universal-components`. Pour connaître les détails d’installation et les exigences de la plateforme, consultez [Universal Components for Android](/docs/fr-ca/get-started/universal-components/android/android-overview) d’Auth0.
 
 <div id="initialize-the-sdk">
-  ### Initialiser le SDK
+  ### Initialiser le SDK {#initialize-the-sdk}
 </div>
 
 Pour initialiser le SDK, appelez une seule fois la méthode `Auth0UniversalComponents.initialize(...)` au démarrage de l’application, généralement dans votre sous-classe `Application` ou dans la méthode `onCreate` de l’`Activity` de lancement.
@@ -134,7 +134,7 @@ class MainActivity : ComponentActivity() {
 ```
 
 <div id="configure-the-token-provider">
-  ### Configurer le fournisseur de jetons
+  ### Configurer le fournisseur de jetons {#configure-the-token-provider}
 </div>
 
 Utilisez le `DefaultTokenProvider`, qui encapsule le `CredentialsManager` de [`Auth0.Android`](https://github.com/auth0/Auth0.Android), pour demander des identifiants à votre application.
@@ -170,7 +170,7 @@ class AppTokenProvider : TokenProvider {
 </Check>
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 <CardGroup cols={2}>

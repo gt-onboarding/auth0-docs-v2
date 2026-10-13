@@ -4,7 +4,7 @@ title: Metric Streams
 ---
 
 <div id="metric-streams-beta">
-  # Metric Streams (bêta)
+  # Metric Streams (bêta) {#metric-streams-beta}
 </div>
 
 <Warning>
@@ -14,7 +14,7 @@ title: Metric Streams
 Diffusez en continu les métriques Auth0 en temps réel vers votre plateforme de surveillance afin de suivre les performances de l’API, de repérer les problèmes liés aux limites de débit et de résoudre les erreurs plus rapidement. Metric Streams prend en charge à la fois l’intégration native de Datadog et le protocole OpenTelemetry (OTLP) pour des plateformes comme New Relic et Splunk.
 
 <div id="what-you-can-monitor">
-  ## Ce que vous pouvez surveiller
+  ## Ce que vous pouvez surveiller {#what-you-can-monitor}
 </div>
 
 Suivez des métriques clés liées à l’utilisation de votre API Auth0 :
@@ -26,28 +26,28 @@ Suivez des métriques clés liées à l’utilisation de votre API Auth0 :
 * **Flux d’authentification** : Suivez les types d’octroi et l’utilisation des connexions.
 
 <div id="use-cases">
-  ## Cas d’utilisation
+  ## Cas d’utilisation {#use-cases}
 </div>
 
 <div id="identify-rate-limit-issues">
-  ### Repérer les problèmes de limites de débit
+  ### Repérer les problèmes de limites de débit {#identify-rate-limit-issues}
 </div>
 
 Surveillez les API et les points de terminaison qui atteignent les limites de débit afin d’ajuster votre intégration ou de passer à un niveau de limite de débit supérieur.
 
 <div id="troubleshoot-api-failures">
-  ### Diagnostiquer les échecs de l’API
+  ### Diagnostiquer les échecs de l’API {#troubleshoot-api-failures}
 </div>
 
 Repérez rapidement la cause première des erreurs en filtrant les métriques par API, opération et type d’échec (limites de débit, détection d’anomalies ou erreurs générales).
 
 <div id="plan-capacity">
-  ### Capacité du forfait
+  ### Capacité du forfait {#plan-capacity}
 </div>
 
 Analysez les pics d’utilisation, le RPS moyen et les métriques de percentile afin de déterminer le palier de limite de débit approprié pour votre charge de travail.
 
-## Prérequis
+## Prérequis {#prerequisites}
 
 Avant de configurer un flux de métriques, vous devez disposer des éléments suivants :
 
@@ -67,17 +67,17 @@ Avant de configurer un flux de métriques, vous devez disposer des éléments su
 * **compte sur une plateforme de surveillance** : un compte actif auprès de l’une des [destinations prises en charge](#supported-destinations).
 
 <div id="metric-reference">
-  ## Référence des métriques
+  ## Référence des métriques {#metric-reference}
 </div>
 
 <div id="auth0api_requestcount">
-  ### auth0.api_request.count
+  ### auth0.api_request.count {#auth0api_requestcount}
 </div>
 
 Calcule le nombre de requêtes d’API vers votre tenant Auth0 à l’aide de balises de filtrage et d’agrégation détaillées. Une nouvelle métrique est émise toutes les 10 secondes et offre une granularité d’une seconde.
 
 <div id="available-tags">
-  #### Balises disponibles
+  #### Balises disponibles {#available-tags}
 </div>
 
 | Nom de la balise   | Obligatoire | Description                                                                                                                   |
@@ -102,7 +102,7 @@ Calcule le nombre de requêtes d’API vers votre tenant Auth0 à l’aide de ba
 </Note>
 
 <div id="enum-values">
-  #### Valeurs d’énumération
+  #### Valeurs d’énumération {#enum-values}
 </div>
 
 **api**
@@ -122,7 +122,7 @@ Calcule le nombre de requêtes d’API vers votre tenant Auth0 à l’aide de ba
 * `CLIENT_SERVER_ERROR` - Erreur HTTP 4xx ou 5xx
 
 <div id="supported-destinations">
-  ## Destinations prises en charge
+  ## Destinations prises en charge {#supported-destinations}
 </div>
 
 Metric Streams prend en charge les plateformes de surveillance suivantes :
@@ -142,13 +142,13 @@ Metric Streams prend en charge les plateformes de surveillance suivantes :
 </CardGroup>
 
 <div id="set-up-datadog">
-  ## Configurer Datadog
+  ## Configurer Datadog {#set-up-datadog}
 </div>
 
 Transmettez directement les métriques Auth0 à Datadog au moyen de son API de métriques native.
 
 <div id="prerequisites">
-  ### Prérequis
+  ### Prérequis {#prerequisites-2}
 </div>
 
 * Compte [Datadog](https://www.datadoghq.com/) actif
@@ -156,7 +156,7 @@ Transmettez directement les métriques Auth0 à Datadog au moyen de son API de m
 * Votre site Datadog (identifiant de région, comme `US1` pour app.datadoghq.com, `EU` pour app.datadoghq.eu, `US3` pour us3.datadoghq.com)
 
 <div id="create-metric-stream">
-  ### Créer un flux de métriques
+  ### Créer un flux de métriques {#create-metric-stream}
 </div>
 
 <Tabs>
@@ -224,13 +224,13 @@ Transmettez directement les métriques Auth0 à Datadog au moyen de son API de m
 </Tabs>
 
 <div id="verify-in-datadog">
-  ### Vérifiez dans Datadog
+  ### Vérifiez dans Datadog {#verify-in-datadog}
 </div>
 
 En quelques minutes, les métriques d’Auth0 apparaissent dans Datadog. Accédez à **Metrics &gt; Explorer** et recherchez `auth0.api_request.count` pour afficher vos données.
 
 <div id="manage-streams">
-  ### Gérer les flux
+  ### Gérer les flux {#manage-streams}
 </div>
 
 <Tabs>
@@ -282,13 +282,13 @@ En quelques minutes, les métriques d’Auth0 apparaissent dans Datadog. Accéde
 </Tabs>
 
 <div id="set-up-new-relic">
-  ## Configurer New Relic
+  ## Configurer New Relic {#set-up-new-relic}
 </div>
 
 Transmettez les métriques Auth0 à New Relic à l’aide d’OpenTelemetry Protocol (OTLP).
 
 <div id="get-new-relic-credentials">
-  ### Obtenir les identifiants New Relic
+  ### Obtenir les identifiants New Relic {#get-new-relic-credentials}
 </div>
 
 <Steps>
@@ -312,7 +312,7 @@ Transmettez les métriques Auth0 à New Relic à l’aide d’OpenTelemetry Prot
 </Steps>
 
 <div id="create-metric-stream">
-  ### Créer un flux de métriques
+  ### Créer un flux de métriques {#create-metric-stream-2}
 </div>
 
 <Tabs>
@@ -358,13 +358,13 @@ Transmettez les métriques Auth0 à New Relic à l’aide d’OpenTelemetry Prot
 </Tabs>
 
 <div id="set-up-splunk">
-  ## Configurer Splunk
+  ## Configurer Splunk {#set-up-splunk}
 </div>
 
 Transmettez les métriques Auth0 vers Splunk Observability Cloud à l’aide d’OpenTelemetry Protocol (OTLP).
 
 <div id="get-splunk-credentials">
-  ### Obtenir les identifiants Splunk
+  ### Obtenir les identifiants Splunk {#get-splunk-credentials}
 </div>
 
 <Steps>
@@ -391,7 +391,7 @@ Transmettez les métriques Auth0 vers Splunk Observability Cloud à l’aide d�
 </Steps>
 
 <div id="create-metric-stream">
-  ### Créer un flux de métriques
+  ### Créer un flux de métriques {#create-metric-stream-3}
 </div>
 
 <Tabs>
@@ -437,7 +437,7 @@ Transmettez les métriques Auth0 vers Splunk Observability Cloud à l’aide d�
 </Tabs>
 
 <div id="understand-metric-cardinality">
-  ## Comprendre la cardinalité des métriques
+  ## Comprendre la cardinalité des métriques {#understand-metric-cardinality}
 </div>
 
 La cardinalité correspond au nombre de séries chronologiques uniques générées par vos métriques. Plus la cardinalité est élevée, plus les coûts de monitoring augmentent.
@@ -460,11 +460,11 @@ La cardinalité correspond au nombre de séries chronologiques uniques généré
 </Warning>
 
 <div id="troubleshooting">
-  ## Dépannage
+  ## Dépannage {#troubleshooting}
 </div>
 
 <div id="metrics-not-appearing">
-  ### Les métriques n’apparaissent pas
+  ### Les métriques n’apparaissent pas {#metrics-not-appearing}
 </div>
 
 **Vérifiez le statut du stream :**
@@ -496,7 +496,7 @@ La cardinalité correspond au nombre de séries chronologiques uniques généré
 N’oubliez pas que les requêtes mises en cache et les requêtes bloquées par le WAF ne sont pas incluses dans les flux de métriques.
 
 <div id="high-monitoring-costs">
-  ### Coûts de surveillance élevés
+  ### Coûts de surveillance élevés {#high-monitoring-costs}
 </div>
 
 Si vous constatez des coûts anormalement élevés :

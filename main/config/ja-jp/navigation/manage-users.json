@@ -2,16 +2,16 @@
   "pages": [
     "docs/ja-jp/manage-users",
     {
-      "group": "ユーザーを管理",
+      "group": "Manage Users",
       "pages": [
         {
-          "group": "ユーザーアカウント",
+          "group": "User Accounts",
           "pages": [
             "docs/ja-jp/manage-users/user-accounts",
             "docs/ja-jp/manage-users/user-accounts/manage-users-using-the-dashboard",
             "docs/ja-jp/manage-users/user-accounts/manage-users-using-the-management-api",
             {
-              "group": "ユーザープロファイル",
+              "group": "User Profiles",
               "pages": [
                 "docs/ja-jp/manage-users/user-accounts/user-profiles",
                 "docs/ja-jp/manage-users/user-accounts/user-profiles/user-profile-structure",
@@ -21,7 +21,7 @@
                 "docs/ja-jp/manage-users/user-accounts/user-profiles/progressive-profiling",
                 "docs/ja-jp/manage-users/user-accounts/user-profiles/root-attributes",
                 {
-                  "group": "ルート属性",
+                  "group": "Root Attributes",
                   "pages": [
                     "docs/ja-jp/manage-users/user-accounts/user-profiles/root-attributes/set-root-attributes-during-user-import",
                     "docs/ja-jp/manage-users/user-accounts/user-profiles/root-attributes/set-root-attributes-during-user-sign-up",
@@ -34,7 +34,7 @@
               ]
             },
             {
-              "group": "メタデータ",
+              "group": "Metadata",
               "pages": [
                 "docs/ja-jp/manage-users/user-accounts/metadata",
                 "docs/ja-jp/manage-users/user-accounts/metadata/metadata-fields-data",
@@ -47,7 +47,7 @@
             },
             "docs/ja-jp/manage-users/user-accounts/verify-emails",
             {
-              "group": "ユーザーアカウントのリンク",
+              "group": "User Account Linking",
               "pages": [
                 "docs/ja-jp/manage-users/user-accounts/user-account-linking",
                 "docs/ja-jp/manage-users/user-accounts/user-account-linking/link-user-accounts",
@@ -71,11 +71,11 @@
         },
         {
           "directory": "accordion",
-          "group": "ユーザー移行",
+          "group": "User Migration",
           "pages": [
             {
               "expanded": true,
-              "group": "ユーザーデータのインポート",
+              "group": "Import User Data",
               "pages": [
                 "docs/ja-jp/manage-users/user-migration/configure-automatic-migration-from-your-database",
                 "docs/ja-jp/manage-users/user-migration/bulk-user-imports",
@@ -84,7 +84,7 @@
             },
             {
               "expanded": true,
-              "group": "ユーザーデータのエクスポート",
+              "group": "Export User Data",
               "pages": [
                 "docs/ja-jp/manage-users/user-migration/bulk-user-exports",
                 "docs/ja-jp/manage-users/user-migration/export-password-hashes-and-mfa-secrets"
@@ -114,7 +114,7 @@
             "docs/ja-jp/manage-users/organizations/using-tokens",
             "docs/ja-jp/manage-users/organizations/organization-roles",
             {
-              "group": "Organizations を設定する",
+              "group": "Configure Organizations",
               "pages": [
                 "docs/ja-jp/manage-users/organizations/configure-organizations",
                 "docs/ja-jp/manage-users/organizations/configure-organizations/create-organizations",
@@ -144,7 +144,7 @@
               ]
             },
             {
-              "group": "Organizations のマシンツーマシン（M2M）アクセス",
+              "group": "Machine-to-Machine (M2M) Access for Organizations",
               "pages": [
                 "docs/ja-jp/manage-users/organizations/organizations-for-m2m-applications",
                 "docs/ja-jp/manage-users/organizations/organizations-for-m2m-applications/configure-your-application-for-m2m-access",
@@ -158,10 +158,10 @@
       ]
     },
     {
-      "group": "アクセスを管理する",
+      "group": "Manage Access",
       "pages": [
         {
-          "group": "アクセス制御",
+          "group": "Access Control",
           "pages": [
             "docs/ja-jp/manage-users/access-control",
             "docs/ja-jp/manage-users/access-control/rbac",
@@ -172,11 +172,11 @@
             "docs/ja-jp/manage-users/access-control/sample-use-cases-rules-with-authorization",
             "docs/ja-jp/manage-users/access-control/authorization-core-vs-authorization-extension",
             {
-              "group": "コア RBAC を設定する",
+              "group": "Configure Core RBAC",
               "pages": [
                 "docs/ja-jp/manage-users/access-control/configure-core-rbac",
                 {
-                  "group": "ロールベースのアクセス制御のロールを管理する",
+                  "group": "Manage Role-Based Access Control Roles",
                   "pages": [
                     "docs/ja-jp/manage-users/access-control/configure-core-rbac/roles",
                     "docs/ja-jp/manage-users/access-control/configure-core-rbac/roles/view-users-assigned-to-roles",
@@ -189,7 +189,7 @@
                   ]
                 },
                 {
-                  "group": "ロールベースのアクセス制御のユーザーを管理する",
+                  "group": "Manage Role-Based Access Control Users",
                   "pages": [
                     "docs/ja-jp/manage-users/access-control/configure-core-rbac/rbac-users",
                     "docs/ja-jp/manage-users/access-control/configure-core-rbac/rbac-users/view-user-roles",
@@ -208,7 +208,7 @@
           ]
         },
         {
-          "group": "セッション",
+          "group": "Sessions",
           "pages": [
             "docs/ja-jp/manage-users/sessions",
             "docs/ja-jp/manage-users/sessions/session-layers",
@@ -219,7 +219,7 @@
             "docs/ja-jp/manage-users/sessions/manage-multi-site-sessions",
             "docs/ja-jp/manage-users/sessions/manage-user-sessions-with-auth0-management-api",
             {
-              "group": "セッションメタデータ",
+              "group": "Session Metadata",
               "pages": [
                 "docs/ja-jp/manage-users/sessions/session-metadata",
                 "docs/ja-jp/manage-users/sessions/session-metadata/configure-session-metadata",
@@ -227,7 +227,7 @@
               ]
             },
             {
-              "group": "匿名セッション",
+              "group": "Anonymous Sessions",
               "pages": [
                 "docs/ja-jp/manage-users/sessions/anonymous-sessions",
                 "docs/ja-jp/manage-users/sessions/anonymous-sessions/configure-anonymous-sessions",
@@ -237,7 +237,7 @@
           ]
         },
         {
-          "group": "Cookie",
+          "group": "Cookies",
           "pages": [
             "docs/ja-jp/manage-users/cookies",
             "docs/ja-jp/manage-users/cookies/authentication-api-cookies",

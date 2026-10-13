@@ -2,22 +2,22 @@
   "pages": [
     "docs/ja-jp/customize",
     {
-      "group": "ブランドのカスタマイズ",
+      "group": "Brand Customization",
       "pages": [
         {
-          "group": "ログインページをカスタマイズする",
+          "group": "Customize Login Pages",
           "pages": [
             "docs/ja-jp/customize/login-pages",
             "docs/ja-jp/customize/login-pages/manage-core-configuration",
             {
-              "group": "Universal Login をカスタマイズする",
+              "group": "Customize Universal Login",
               "pages": [
                 "docs/ja-jp/customize/login-pages/universal-login",
                 "docs/ja-jp/customize/login-pages/universal-login/customize-themes",
                 "docs/ja-jp/customize/login-pages/universal-login/customize-templates",
                 "docs/ja-jp/customize/login-pages/universal-login/customize-text-elements",
                 {
-                  "group": "Signup と Login のプロンプトをカスタマイズする",
+                  "group": "Customize Signup and Login Prompts",
                   "pages": [
                     "docs/ja-jp/customize/login-pages/universal-login/customize-signup-and-login-prompts",
                     "docs/ja-jp/customize/login-pages/universal-login/customize-signup-and-login-prompts/connection-switching",
@@ -29,7 +29,7 @@
               ]
             },
             {
-              "group": "クラシックログインをカスタマイズする",
+              "group": "Customize Classic Login",
               "pages": [
                 "docs/ja-jp/customize/login-pages/classic-login",
                 "docs/ja-jp/customize/login-pages/classic-login/customization-classic",
@@ -42,11 +42,11 @@
             "docs/ja-jp/customize/login-pages/customize-consent-prompts",
             "docs/ja-jp/customize/login-pages/custom-error-pages",
             {
-              "group": "Universal Login の高度なカスタマイズ",
+              "group": "Advanced Customizations for Universal Login",
               "pages": [
                 "docs/ja-jp/customize/login-pages/advanced-customizations",
                 {
-                  "group": "設定",
+                  "group": "Configure",
                   "pages": [
                     "docs/ja-jp/customize/login-pages/advanced-customizations/configure/overview",
                     "docs/ja-jp/customize/login-pages/advanced-customizations/configure/reference"
@@ -56,7 +56,7 @@
                 "docs/ja-jp/customize/login-pages/advanced-customizations/development-workflow",
                 "docs/ja-jp/customize/login-pages/advanced-customizations/deployment-workflow",
                 {
-                  "group": "ACUL のユースケース",
+                  "group": "ACUL Use Cases",
                   "pages": [
                     "docs/ja-jp/customize/login-pages/advanced-customizations/acul-use-cases",
                     "docs/ja-jp/customize/login-pages/advanced-customizations/acul-use-cases/create-theme-tailwind",
@@ -70,19 +70,19 @@
           ]
         },
         {
-          "group": "ポータルをカスタマイズする",
+          "group": "Customize Portals",
           "pages": [
             "docs/ja-jp/customize/portals/overview",
             "docs/ja-jp/customize/portals/quickstart"
           ]
         },
         {
-          "group": "カスタムドメイン",
+          "group": "Custom Domains",
           "pages": [
             "docs/ja-jp/customize/custom-domains",
             "docs/ja-jp/customize/custom-domains/auth0-managed-certificates",
             {
-              "group": "自己管理証明書",
+              "group": "Self-Managed Certificates",
               "pages": [
                 "docs/ja-jp/customize/custom-domains/self-managed-certificates",
                 "docs/ja-jp/customize/custom-domains/self-managed-certificates/configure-gcp-as-reverse-proxy",
@@ -95,7 +95,7 @@
             },
             "docs/ja-jp/customize/custom-domains/configure-features-to-use-custom-domains",
             {
-              "group": "複数のカスタムドメイン",
+              "group": "Multiple Custom Domains",
               "pages": [
                 "docs/ja-jp/customize/custom-domains/multiple-custom-domains",
                 "docs/ja-jp/customize/custom-domains/multiple-custom-domains/default-domain",
@@ -111,10 +111,10 @@
           ]
         },
         {
-          "group": "メールをカスタマイズする",
+          "group": "Customize Emails",
           "pages": [
             {
-              "group": "SMTP メールプロバイダー",
+              "group": "SMTP Email Providers",
               "pages": [
                 "docs/ja-jp/customize/email/smtp-email-providers/amazon-ses",
                 "docs/ja-jp/customize/email/smtp-email-providers/azure-communication-services",
@@ -126,7 +126,7 @@
                 "docs/ja-jp/customize/email/smtp-email-providers/sparkpost",
                 "docs/ja-jp/customize/email/smtp-email-providers/smtp-server",
                 {
-                  "group": "Actions を使用したカスタム設定",
+                  "group": "Custom Configuration with Actions",
                   "pages": [
                     "docs/ja-jp/customize/email/smtp-email-providers/custom/configure-action"
                   ],
@@ -137,7 +137,7 @@
               "root": "docs/ja-jp/customize/email/smtp-email-providers"
             },
             {
-              "group": "メールテンプレート",
+              "group": "Email Templates",
               "pages": [
                 "docs/ja-jp/customize/email/email-templates/customize-email-templates",
                 "docs/ja-jp/customize/email/email-templates/supported-liquid-syntax"
@@ -150,10 +150,10 @@
           "root": "docs/ja-jp/customize/email"
         },
         {
-          "group": "電話メッセージをカスタマイズ",
+          "group": "Customize Phone Messages",
           "pages": [
             {
-              "group": "Auth0 の Unified Phone Experience",
+              "group": "Auth0's Unified Phone Experience",
               "pages": [
                 "docs/ja-jp/customize/phone-messages/unified-phone/use-auth0s-unified-phone-experience-for-multi-factor-authentication",
                 "docs/ja-jp/customize/phone-messages/unified-phone/unified-phone-experience-passwordless",
@@ -164,11 +164,11 @@
             },
             {
               "directory": "accordion",
-              "group": "電話メッセージプロバイダーを設定",
+              "group": "Configure Phone Messaging Providers",
               "pages": [
                 "docs/ja-jp/customize/phone-messages/configure-phone-messaging-providers/configure-twilio-as-a-phone-messaging-provider",
                 {
-                  "group": "カスタム電話プロバイダー",
+                  "group": "Custom Phone Provider",
                   "pages": [
                     "docs/ja-jp/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/configure-a-custom-phone-provider-with-terraform",
                     "docs/ja-jp/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/configure-a-custom-phone-provider-with-twilio-verify"
@@ -179,7 +179,7 @@
               "root": "docs/ja-jp/customize/phone-messages/configure-phone-messaging-providers"
             },
             {
-              "group": "電話テンプレート",
+              "group": "Phone Templates",
               "pages": [
                 "docs/ja-jp/customize/phone-messages/phone-templates/customize",
                 "docs/ja-jp/customize/phone-messages/phone-templates/supported-liquid-syntax"
@@ -207,7 +207,7 @@
           ]
         },
         {
-          "group": "国際化とローカリゼーション",
+          "group": "Internationalization and Localization",
           "pages": [
             "docs/ja-jp/customize/internationalization-and-localization",
             "docs/ja-jp/customize/internationalization-and-localization/universal-login-internationalization",
@@ -220,7 +220,7 @@
       ]
     },
     {
-      "group": "コードのカスタマイズ",
+      "group": "Code Customization",
       "pages": [
         {
           "group": "Actions",
@@ -228,7 +228,7 @@
             "docs/ja-jp/customize/actions/actions-overview",
             "docs/ja-jp/customize/actions/write-your-first-action",
             {
-              "group": "Auth0 Actions Modules",
+              "group": "Actions Modules",
               "pages": [
                 "docs/ja-jp/customize/actions/modules/actions-modules-overview",
                 "docs/ja-jp/customize/actions/modules/write-your-first-action-module"
@@ -236,7 +236,7 @@
             },
             "docs/ja-jp/customize/actions/action-coding-guidelines",
             {
-              "group": "トリガーを確認",
+              "group": "Explore Triggers",
               "pages": [
                 "docs/ja-jp/customize/actions/explore-triggers",
                 "docs/ja-jp/customize/actions/explore-triggers/credentials-exchange",
@@ -263,7 +263,7 @@
             "docs/ja-jp/customize/actions/manage-versions",
             "docs/ja-jp/customize/actions/test-actions",
             {
-              "group": "Actions に移行",
+              "group": "Migrate to Actions",
               "pages": [
                 "docs/ja-jp/customize/actions/migrate",
                 "docs/ja-jp/customize/actions/migrate/migrate-from-rules-to-actions",
@@ -276,12 +276,12 @@
         },
         {
           "directory": "accordion",
-          "group": "イベント",
+          "group": "Events",
           "pages": [
             "docs/ja-jp/customize/events/create-an-event-stream",
             "docs/ja-jp/customize/events/consume-events-with-events-api",
             {
-              "group": "ユースケース",
+              "group": "Use Cases",
               "pages": [
                 "docs/ja-jp/customize/events/sync-data-across-systems",
                 "docs/ja-jp/customize/events/correlate-identity-changes",
@@ -295,7 +295,7 @@
           "root": "docs/ja-jp/customize/events"
         },
         {
-          "group": "フォーム",
+          "group": "Forms",
           "pages": [
             "docs/ja-jp/customize/forms",
             "docs/ja-jp/customize/forms/nodes-and-components",
@@ -329,7 +329,7 @@
             "docs/ja-jp/customize/forms/custom-field-components",
             "docs/ja-jp/customize/forms/render",
             {
-              "group": "Vault",
+              "group": "Vaults",
               "pages": [
                 "docs/ja-jp/customize/forms/vaults",
                 "docs/ja-jp/customize/forms/vaults/auth0",
@@ -350,7 +350,7 @@
           ]
         },
         {
-          "group": "ルール",
+          "group": "Rules",
           "pages": [
             "docs/ja-jp/customize/rules",
             "docs/ja-jp/customize/rules/create-rules",
@@ -366,7 +366,7 @@
           ]
         },
         {
-          "group": "フック",
+          "group": "Hooks",
           "pages": [
             "docs/ja-jp/customize/hooks",
             "docs/ja-jp/customize/hooks/create-hooks",
@@ -376,7 +376,7 @@
             "docs/ja-jp/customize/hooks/view-hooks",
             "docs/ja-jp/customize/hooks/view-logs-for-hooks",
             {
-              "group": "Hook シークレット",
+              "group": "Hook Secrets",
               "pages": [
                 "docs/ja-jp/customize/hooks/hook-secrets",
                 "docs/ja-jp/customize/hooks/hook-secrets/create-hook-secrets",
@@ -390,7 +390,7 @@
       ]
     },
     {
-      "group": "サードパーティによるカスタマイズ",
+      "group": "Third-Party Customization",
       "pages": [
         {
           "group": "Extensions",
@@ -450,7 +450,7 @@
           "group": "Integrations",
           "pages": [
             {
-              "group": "Amazon Web Services および製品との連携",
+              "group": "Integrate with Amazon Web Services and Products",
               "pages": [
                 "docs/ja-jp/customize/integrations/aws",
                 "docs/ja-jp/customize/integrations/aws/how-to-set-up-aws-for-delegated-authentication",
@@ -466,7 +466,7 @@
             "docs/ja-jp/customize/integrations/secure-a-cli-with-auth0",
             "docs/ja-jp/customize/integrations/apigee",
             {
-              "group": "マーケティングツール連携",
+              "group": "Marketing Tool Integrations",
               "pages": [
                 "docs/ja-jp/customize/integrations/marketing-tool-integrations",
                 "docs/ja-jp/customize/integrations/marketing-tool-integrations/adobe-campaign",
@@ -482,7 +482,7 @@
               ]
             },
             {
-              "group": "マーケットプレイスパートナー",
+              "group": "Marketplace Partners",
               "pages": [
                 "docs/ja-jp/customize/integrations/marketplace-partners",
                 "docs/ja-jp/customize/integrations/marketplace-partners/introduction-to-integrating-with-auth0",
@@ -498,7 +498,7 @@
             "docs/ja-jp/customize/integrations/sharepoint-2010-2013",
             "docs/ja-jp/customize/integrations/integrate-with-vercel",
             {
-              "group": "CMS アイデンティティプラグイン",
+              "group": "CMS Identity Plugins",
               "pages": [
                 "docs/ja-jp/customize/integrations/cms",
                 {
@@ -521,7 +521,7 @@
           ]
         },
         {
-          "group": "ログストリーム",
+          "group": "Log Streams",
           "pages": [
             "docs/ja-jp/customize/log-streams",
             "docs/ja-jp/customize/log-streams/integrate-log-stream-service",

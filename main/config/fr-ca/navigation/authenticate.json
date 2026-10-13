@@ -2,7 +2,7 @@
   "pages": [
     "docs/fr-ca/authenticate",
     {
-      "group": "Ajouter une connexion",
+      "group": "Add Login",
       "pages": [
         {
           "group": "Login",
@@ -19,7 +19,7 @@
                   "root": "docs/fr-ca/authenticate/login/auth0-universal-login/universal-login-vs-classic-login"
                 },
                 {
-                  "group": "Connexion sans mot de passe",
+                  "group": "Passwordless Login",
                   "pages": [
                     "docs/fr-ca/authenticate/login/auth0-universal-login/passwordless-login/webauthn-device-biometrics",
                     "docs/fr-ca/authenticate/login/auth0-universal-login/passwordless-login/email-or-sms"
@@ -40,7 +40,7 @@
             "docs/fr-ca/authenticate/login/redirect-users-after-login",
             "docs/fr-ca/authenticate/login/max-age-reauthentication",
             {
-              "group": "Déconnexion",
+              "group": "Logout",
               "pages": [
                 "docs/fr-ca/authenticate/login/logout/universal-logout",
                 "docs/fr-ca/authenticate/login/logout/log-users-out-of-applications",
@@ -49,7 +49,7 @@
                 "docs/fr-ca/authenticate/login/logout/log-users-out-of-saml-idps",
                 "docs/fr-ca/authenticate/login/logout/redirect-users-after-logout",
                 {
-                  "group": "Déconnexion OIDC par canal secondaire",
+                  "group": "OIDC Back-Channel Logout",
                   "pages": [
                     "docs/fr-ca/authenticate/login/logout/back-channel-logout/configure-back-channel-logout",
                     "docs/fr-ca/authenticate/login/logout/back-channel-logout/oidc-back-channel-logout-initiators"
@@ -60,7 +60,7 @@
               "root": "docs/fr-ca/authenticate/login/logout"
             },
             {
-              "group": "Authentification conforme à OIDC",
+              "group": "OIDC-Conformant Authentication",
               "pages": [
                 "docs/fr-ca/authenticate/login/oidc-conformant-authentication/oidc-adoption-access-tokens",
                 "docs/fr-ca/authenticate/login/oidc-conformant-authentication/oidc-adoption-apis",
@@ -78,14 +78,14 @@
           "root": "docs/fr-ca/authenticate/login"
         },
         {
-          "group": "Authentification unique",
+          "group": "Single Sign-On",
           "pages": [
             "docs/fr-ca/authenticate/single-sign-on/inbound-single-sign-on",
             {
-              "group": "Authentification unique initiée par le fournisseur d’identité",
+              "group": "Identity-Provider-Initiated Single Sign-On",
               "pages": [
                 {
-                  "group": "Configurer Auth0 comme fournisseur d’identité SAML",
+                  "group": "Configure Auth0 as SAML Identity Provider",
                   "pages": [
                     "docs/fr-ca/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-saml2-web-app-addon-for-aws",
                     "docs/fr-ca/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-auth0-as-identity-provider-for-atlassian",
@@ -123,7 +123,7 @@
               "root": "docs/fr-ca/authenticate/single-sign-on/native-to-web"
             },
             {
-              "group": "Délégation de session",
+              "group": "Session Delegation",
               "pages": [
                 "docs/fr-ca/authenticate/single-sign-on/session-delegation/configure-session-delegation",
                 "docs/fr-ca/authenticate/single-sign-on/session-delegation/implement-session-delegation",
@@ -137,10 +137,10 @@
           "root": "docs/fr-ca/authenticate/single-sign-on"
         },
         {
-          "group": "Sans mot de passe",
+          "group": "Passwordless",
           "pages": [
             {
-              "group": "Méthodes d’authentification",
+              "group": "Authentication Methods",
               "pages": [
                 "docs/fr-ca/authenticate/passwordless/authentication-methods/email-otp",
                 "docs/fr-ca/authenticate/passwordless/authentication-methods/email-magic-link",
@@ -154,7 +154,7 @@
               "pages": [
                 "docs/fr-ca/authenticate/passwordless/implement-login/universal-login",
                 {
-                  "group": "Connexion intégrée",
+                  "group": "Embedded Login",
                   "pages": [
                     "docs/fr-ca/authenticate/passwordless/implement-login/embedded-login/relevant-api-endpoints",
                     "docs/fr-ca/authenticate/passwordless/implement-login/embedded-login/spa",
@@ -174,7 +174,7 @@
           "root": "docs/fr-ca/authenticate/passwordless"
         },
         {
-          "group": "Échange de jetons personnalisé",
+          "group": "Custom Token Exchange",
           "pages": [
             "docs/fr-ca/authenticate/custom-token-exchange/cte-example-use-cases",
             "docs/fr-ca/authenticate/custom-token-exchange/configure-custom-token-exchange",
@@ -186,16 +186,16 @@
       ]
     },
     {
-      "group": "Provisionner des utilisateurs",
+      "group": "Provision Users",
       "pages": [
         {
-          "group": "Fournisseurs d’identité",
+          "group": "Identity Providers",
           "pages": [
             {
-              "group": "Fournisseurs d’identité sociaux",
+              "group": "Social Identity Providers",
               "pages": [
                 {
-                  "group": "Pour les applications Web",
+                  "group": "For Web Applications",
                   "pages": [
                     "docs/fr-ca/authenticate/identity-providers/social-identity-providers/github",
                     "docs/fr-ca/authenticate/identity-providers/social-identity-providers/google",
@@ -203,7 +203,7 @@
                   ]
                 },
                 {
-                  "group": "Pour les applications natives",
+                  "group": "For Native Applications",
                   "pages": [
                     "docs/fr-ca/authenticate/identity-providers/social-identity-providers/apple-native",
                     "docs/fr-ca/authenticate/identity-providers/social-identity-providers/facebook-native",
@@ -218,24 +218,24 @@
               "root": "docs/fr-ca/authenticate/identity-providers/social-identity-providers"
             },
             {
-              "group": "Fournisseurs d’identité d’entreprise",
+              "group": "Enterprise Identity Providers",
               "pages": [
                 {
-                  "group": "Utiliser Auth0 avec Google",
+                  "group": "Use Auth0 with Google",
                   "pages": [
                     "docs/fr-ca/authenticate/identity-providers/enterprise-identity-providers/google-apps",
                     "docs/fr-ca/authenticate/identity-providers/enterprise-identity-providers/google-directory-sync"
                   ]
                 },
                 {
-                  "group": "Utiliser Auth0 avec Okta",
+                  "group": "Use Auth0 with Okta",
                   "pages": [
                     "docs/fr-ca/authenticate/identity-providers/okta",
                     "docs/fr-ca/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration"
                   ]
                 },
                 {
-                  "group": "Connecter votre application à Active Directory à l’aide de LDAP",
+                  "group": "Connect Your App to Active Directory using LDAP",
                   "pages": [
                     {
                       "group": "AD/LDAP Connector",
@@ -285,16 +285,16 @@
           "root": "docs/fr-ca/authenticate/identity-providers"
         },
         {
-          "group": "Connexions à la base de données",
+          "group": "Database Connections",
           "pages": [
             {
               "directory": "accordion",
-              "group": "Connexions à une base de données personnalisée",
+              "group": "Custom Database Connections",
               "pages": [
                 "docs/fr-ca/authenticate/database-connections/custom-db/create-db-connection",
                 {
                   "expanded": true,
-                  "group": "Scripts d’action de base de données personnalisée",
+                  "group": "Custom Database Action Scripts",
                   "pages": [
                     "docs/fr-ca/authenticate/database-connections/custom-db/templates/change-password",
                     "docs/fr-ca/authenticate/database-connections/custom-db/templates/create",
@@ -308,7 +308,7 @@
                   "root": "docs/fr-ca/authenticate/database-connections/custom-db/custom-database-connections-scripts"
                 },
                 {
-                  "group": "Dépannage",
+                  "group": "Troubleshooting",
                   "pages": [
                     "docs/fr-ca/authenticate/database-connections/custom-db/test-custom-database-connections",
                     "docs/fr-ca/authenticate/database-connections/custom-db/error-handling"
@@ -318,7 +318,7 @@
               "root": "docs/fr-ca/authenticate/database-connections/custom-db"
             },
             {
-              "group": "Clés d’accès",
+              "group": "Passkeys",
               "pages": [
                 "docs/fr-ca/authenticate/database-connections/passkeys/configure-passkey-policy",
                 "docs/fr-ca/authenticate/database-connections/passkeys/monitor-passkey-events-in-tenant-logs",
@@ -340,10 +340,10 @@
           "root": "docs/fr-ca/authenticate/database-connections"
         },
         {
-          "group": "Connexions d’entreprise",
+          "group": "Enterprise Connections",
           "pages": [
             {
-              "group": "Configuration d’entreprise en libre-service",
+              "group": "Self-Service Enterprise Configuration",
               "pages": [
                 "docs/fr-ca/authenticate/enterprise-connections/self-service-enterprise-configuration/manage-self-service-enterprise-config",
                 "docs/fr-ca/authenticate/enterprise-connections/connection-profile",
@@ -358,7 +358,7 @@
           "root": "docs/fr-ca/authenticate/enterprise-connections"
         },
         {
-          "group": "Protocoles",
+          "group": "Protocols",
           "pages": [
             {
               "group": "SAML",
@@ -366,7 +366,7 @@
                 "docs/fr-ca/authenticate/identity-providers/enterprise-identity-providers/ping-federate",
                 "docs/fr-ca/authenticate/protocols/saml/saml-identity-provider-configuration-settings",
                 {
-                  "group": "Configuration SAML",
+                  "group": "SAML Configuration",
                   "pages": [
                     "docs/fr-ca/authenticate/protocols/saml/saml-configuration/customize-saml-assertions",
                     "docs/fr-ca/authenticate/protocols/saml/saml-configuration/deprovision-users-in-saml-integrations",
@@ -376,12 +376,12 @@
                   "root": "docs/fr-ca/authenticate/protocols/saml/saml-configuration"
                 },
                 {
-                  "group": "Intégrations d’authentification unique SAML",
+                  "group": "SAML Single Sign-On Integrations",
                   "pages": [
                     "docs/fr-ca/authenticate/protocols/saml/saml-sso-integrations/identity-provider-initiated-single-sign-on",
                     "docs/fr-ca/authenticate/protocols/saml/saml-sso-integrations/configure-idp-initiated-saml-sign-on-to-oidc-apps",
                     {
-                      "group": "Configurer Auth0 comme fournisseur de services SAML",
+                      "group": "Configure Auth0 as SAML Service Provider",
                       "pages": [
                         "docs/fr-ca/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-service-provider/configure-adfs-saml-connections",
                         "docs/fr-ca/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-service-provider/configure-okta-as-saml-identity-provider",
@@ -407,7 +407,7 @@
             "docs/fr-ca/authenticate/protocols/ws-fed-protocol",
             "docs/fr-ca/authenticate/protocols/ldap-protocol",
             {
-              "group": "Système de gestion des identités interdomaines (SCIM)",
+              "group": "System for Cross-domain Identity Management (SCIM)",
               "pages": [
                 "docs/fr-ca/authenticate/protocols/scim/configure-inbound-scim",
                 "docs/fr-ca/authenticate/protocols/scim/inbound-scim-for-azure-ad-saml-connections",

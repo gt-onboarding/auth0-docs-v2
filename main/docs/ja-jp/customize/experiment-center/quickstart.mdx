@@ -13,7 +13,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 </Warning>
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 Experiment Center を使い始めるには、次のものが必要です。
@@ -30,7 +30,7 @@ Experiment Center を使い始めるには、次のものが必要です。
   ```
 
 <div id="1-create-and-activate-the-feature-flag">
-  ## 1. 機能フラグを作成して有効化する
+  ## 1. 機能フラグを作成して有効化する {#1-create-and-activate-the-feature-flag}
 </div>
 
 機能フラグでは、テストする内容と、設定可能なバリエーションを定義します。
@@ -43,13 +43,13 @@ Experiment Center を使い始めるには、次のものが必要です。
 </Callout>
 
 <div id="add-two-variations">
-  ### 2つのバリエーションを追加する
+  ### 2つのバリエーションを追加する {#add-two-variations}
 </div>
 
 機能フラグを有効化するには、コントロールとトリートメントの少なくとも2つのバリエーションが必要です。
 
 <div id="create-the-control-variation">
-  #### コントロールバリエーションを作成する
+  #### コントロールバリエーションを作成する {#create-the-control-variation}
 </div>
 
 特定の機能フラグに対して、`overrides` パラメータを指定してコントロールバリエーションを作成できます。
@@ -61,7 +61,7 @@ Experiment Center を使い始めるには、次のものが必要です。
 </Callout>
 
 <div id="create-the-treatment-variation">
-  #### トリートメントバリエーションを作成する
+  #### トリートメントバリエーションを作成する {#create-the-treatment-variation}
 </div>
 
 トリートメントバリエーションでは、変更したいパラメーターを上書きします。
@@ -76,7 +76,7 @@ Experiment Center を使い始めるには、次のものが必要です。
 ```
 
 <div id="activate-the-feature-flag">
-  ### 機能フラグを有効化する
+  ### 機能フラグを有効化する {#activate-the-feature-flag}
 </div>
 
 2 つのバリエーションを用意したら、機能フラグを有効化します。参照先の機能フラグが `active` ステータスでない限り、実験を有効化することはできません。
@@ -84,7 +84,7 @@ Experiment Center を使い始めるには、次のものが必要です。
 機能フラグのステータスを `active` に変更するには、[`/api/v2/experimentation/feature-flags/{feature_flag_id}/status`](/docs/ja-jp/api/management/v2/experimentation/update-feature-flag-status) エンドポイントに `POST` リクエストを送信します。
 
 <div id="2-create-a-segment-optional">
-  ## 2. セグメントを作成する (任意)
+  ## 2. セグメントを作成する (任意) {#2-create-a-segment-optional}
 </div>
 
 特定のトラフィックだけを対象にする場合は、セグメントを作成します。すべてのトラフィックをシンプルに割合で分割したい場合は、この手順をスキップしてください。
@@ -112,7 +112,7 @@ Experiment Center を使い始めるには、次のものが必要です。
 </Callout>
 
 <div id="3-create-and-activate-an-experiment">
-  ## 3. 実験を作成して有効化する
+  ## 3. 実験を作成して有効化する {#3-create-and-activate-an-experiment}
 </div>
 
 機能フラグを参照し、トラフィックの振り分け方法を定義する実験を作成します。
@@ -140,7 +140,7 @@ Experiment Center を使い始めるには、次のものが必要です。
 実験は `draft` ステータス、`is_valid: false` の状態で開始されます。これは想定内です。完全な準備状況の確認は次のステップで行われます。
 
 <div id="validate-the-experiment">
-  ### 実験を検証する
+  ### 実験を検証する {#validate-the-experiment}
 </div>
 
 有効化する前に、実験の準備が整っていることを確認してください。`/validate` エンドポイントでは、有効化時に実行されるものと同じチェック結果が返されます。
@@ -150,7 +150,7 @@ Experiment Center を使い始めるには、次のものが必要です。
 レスポンスには `is_valid` の値が含まれており、有効化する準備ができているかどうかを確認できます。
 
 <div id="activate-the-experiment">
-  ### 実験を有効化する
+  ### 実験を有効化する {#activate-the-experiment}
 </div>
 
 実験が有効で、両方のバリエーションをテストしたら、有効化します。
@@ -164,7 +164,7 @@ Experiment Center を使い始めるには、次のものが必要です。
 </Callout>
 
 <div id="4-trigger-an-auth-event-and-observe-results">
-  ## 4. 認証イベントを発生させ、結果を確認する
+  ## 4. 認証イベントを発生させ、結果を確認する {#4-trigger-an-auth-event-and-observe-results}
 </div>
 
 テスト用テナントを使用して、テストログインを実行します。たとえば、ブラウザーを開き、オーバーライドパラメータを付けずに `/authorize` URL にアクセスします。
@@ -172,7 +172,7 @@ Experiment Center を使い始めるには、次のものが必要です。
 ログインフローを完了します。Experiment Center は有効な実験を判定し、決定論的ハッシュを使用してバリエーションを割り当て、実験コンテキストを挿入し、生成される認証イベントを拡張します。
 
 <div id="verify-enriched-logs">
-  ### 拡張ログを確認する
+  ### 拡張ログを確認する {#verify-enriched-logs}
 </div>
 
 実験イベントについては、Auth0のログで確認できます。
@@ -194,7 +194,7 @@ Experiment Center を使い始めるには、次のものが必要です。
 </Check>
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * 実験コンテキストに応じて ACUL コンポーネントのコードを分岐する方法については、[ACUL integration guide](/docs/ja-jp/customize/experiment-center/integrations/acul-integration-guide)を参照してください。

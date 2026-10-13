@@ -18,7 +18,7 @@ Le composant affiche une liste des clés d’accès inscrites, un bouton pour en
 </Frame>
 
 <div id="prerequisites">
-  ## Prérequis
+  ## Prérequis {#prerequisites}
 </div>
 
 Pour activer la prise en charge des clés d’accès :
@@ -34,14 +34,14 @@ Pour activer la prise en charge des clés d’accès :
 * **Installez et configurez Universal Components dans votre application**. Pour installer et configurer Universal Components, consultez [Créer une interface utilisateur de sécurité du compte](/docs/fr-ca/get-started/universal-components/web/components/my-account-overview#prerequisites).
 
 <div id="configure-your-application">
-  ## Configurez votre application
+  ## Configurez votre application {#configure-your-application}
 </div>
 
 Sélectionnez votre framework pour configurer les variables d’environnement et Universal Components.
 
 <Tabs>
   <Tab title="React (SPA)">
-    ## Installez le composant
+## Installez le composant {#install-the-component}
 
     <CodeGroup>
       ```bash pnpm wrap lines
@@ -57,7 +57,7 @@ Sélectionnez votre framework pour configurer les variables d’environnement et
       `react-hook-form` et `@tanstack/react-query` sont des dépendances pairs. La commande installe également la dépendance `@auth0/universal-components-core`, qui fournit des utilitaires partagés et l’intégration à Auth0.
     </Callout>
 
-    ## Pour commencer
+## Pour commencer {#get-started}
 
     ```tsx wrap lines
     import { UserPasskeyManagement } from "@auth0/universal-components-react";
@@ -135,7 +135,7 @@ Sélectionnez votre framework pour configurer les variables d’environnement et
   </Tab>
 
   <Tab title="Next.js (RWA)">
-    ## Installez le composant
+## Installez le composant {#install-the-component-2}
 
     <CodeGroup>
       ```bash pnpm wrap lines
@@ -151,7 +151,7 @@ Sélectionnez votre framework pour configurer les variables d’environnement et
       `react-hook-form` et `@tanstack/react-query` sont des dépendances pairs. La commande installe également la dépendance `@auth0/universal-components-core`, qui fournit des utilitaires partagés et l’intégration à Auth0.
     </Callout>
 
-    ## Pour commencer
+## Pour commencer {#get-started-2}
 
     ```tsx app/security/passkeys/page.tsx wrap lines
     "use client";
@@ -205,7 +205,7 @@ Sélectionnez votre framework pour configurer les variables d’environnement et
   </Tab>
 
   <Tab title="shadcn">
-    ## Installer le composant
+## Installer le composant {#install-the-component-3}
 
     ```bash wrap lines
     npx shadcn@latest add https://auth0-universal-components.vercel.app/r/my-account/user-passkey-management.json
@@ -215,7 +215,7 @@ Sélectionnez votre framework pour configurer les variables d’environnement et
       La commande d’installation ajoute le code source du composant dans `src/components/auth0/my-account/`, ainsi que toutes les dépendances d’interface utilisateur et la dépendance `@auth0/universal-components-core`, qui fournit des utilitaires partagés et l’intégration à Auth0.
     </Callout>
 
-    ## Pour commencer
+## Pour commencer {#get-started-3}
 
     ```tsx wrap lines
     import { UserPasskeyManagement } from "@/components/auth0/my-account/user-passkey-management";
@@ -289,11 +289,11 @@ Sélectionnez votre framework pour configurer les variables d’environnement et
 </Tabs>
 
 <div id="props">
-  ## Props
+  ## Props {#props}
 </div>
 
 <div id="display-props">
-  ### Props d’affichage
+  ### Props d’affichage {#display-props}
 </div>
 
 Les props d’affichage déterminent la façon dont le composant s’affiche, sans modifier son comportement.
@@ -319,7 +319,7 @@ Les props d’affichage déterminent la façon dont le composant s’affiche, sa
 </table>
 
 <div id="action-props">
-  ### Props d’Action
+  ### Props d’Action {#action-props}
 </div>
 
 Les props d’Action permettent de vous accrocher aux événements du cycle de vie du composant et de déclencher ou d’annuler des opérations.
@@ -419,7 +419,7 @@ Pour rendre la liste en lecture seule, définissez `disabled: true` sur les deux
 ```
 
 <div id="customize-props">
-  ### Personnaliser les props
+  ### Personnaliser les props {#customize-props}
 </div>
 
 Les props de personnalisation vous permettent d’adapter le texte et le style sans modifier le code source.
@@ -524,7 +524,7 @@ Personnalisez l’apparence à l’aide de variables CSS et de surcharges de cla
 ```
 
 <div id="typescript-definitions">
-  ## Définitions TypeScript
+  ## Définitions TypeScript {#typescript-definitions}
 </div>
 
 ```typescript wrap lines
@@ -561,7 +561,7 @@ interface UserPasskeyManagementProps {
 ```
 
 <div id="advanced-customization">
-  ## Personnalisation avancée
+  ## Personnalisation avancée {#advanced-customization}
 </div>
 
 En plus de la configuration du composant décrite ci-dessus, utilisez le hook `useUserPasskey` pour créer une interface personnalisée de gestion des clés d’accès.
@@ -626,7 +626,7 @@ Le hook accepte `customMessages`, `addAction`, `revokeAction` et `onFetch`. Il r
 Utilisez `UserPasskeyManagement` si vous souhaitez utiliser l’interface intégrée. Si vous utilisez le hook, implémentez l’interface utilisateur de confirmation de révocation correspondante et son comportement de fermeture.
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 <CardGroup cols={2}>

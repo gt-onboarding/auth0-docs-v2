@@ -6,7 +6,7 @@ title: OIDC 接続の PKCE とクレームマッピングを設定する
 [OpenID Connect](/docs/ja-jp/authenticate/identity-providers/enterprise-identity-providers/oidc) または O[kta Workforce](/docs/ja-jp/authenticate/identity-providers/enterprise-identity-providers/okta) を<Tooltip tip="Identity Provider (IdP): Service that stores and manages digital identities." cta="View Glossary" href="/docs/ja-jp/glossary?term=identity+provider">アイデンティティプロバイダー</Tooltip>として使用するエンタープライズ接続では、Proof Key for Code Exchange (PKCE) に加え、属性とトークンのマッピングもサポートできます。
 
 <div id="configure-pkce-for-oidc-connections">
-  ## OIDC 接続の PKCE を設定する
+  ## OIDC 接続の PKCE を設定する {#configure-pkce-for-oidc-connections}
 </div>
 
 <Tooltip tip="OpenID: アプリケーションがログイン情報を収集・保存することなく、ユーザーの本人確認を行えるようにする認証のオープン標準。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=OpenID">OpenID</Tooltip> Connect と Okta Workforce の接続は、Proof Key for Code Exchange (PKCE) をサポートするよう自動的に設定されています。
@@ -14,7 +14,7 @@ title: OIDC 接続の PKCE とクレームマッピングを設定する
 OIDC アイデンティティプロバイダー (IdP) が OIDC ディスカバリー メタデータを通じて PKCE をサポートしている場合、Auth0 はデフォルトで利用可能な中で最も強力なアルゴリズムを使用します。OIDC ディスカバリー メタデータの詳細については、[OpenID のドキュメント](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata)を参照してください。
 
 <div id="view-pkce-configuration-for-a-connection">
-  ### 接続のPKCE設定を表示する
+  ### 接続のPKCE設定を表示する {#view-pkce-configuration-for-a-connection}
 </div>
 
 特定の接続のPKCE設定は、<Tooltip tip="Auth0 Dashboard: サービスを設定するための Auth0 の主要製品です。" cta="用語集を表示" href="/docs/ja-jp/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip>で確認できます。
@@ -34,7 +34,7 @@ OIDC アイデンティティプロバイダー (IdP) が OIDC ディスカバ�
   </Tab>
 
   <Tab title="Management API">
-    #### discovery endpoint を使用する
+#### discovery endpoint を使用する {#use-discovery-endpoint}
 
     ```bash
     curl --request POST \
@@ -54,7 +54,7 @@ OIDC アイデンティティプロバイダー (IdP) が OIDC ディスカバ�
               };
     ```
 
-    #### discovery endpoint を使用しない場合
+#### discovery endpoint を使用しない場合 {#without-discovery-endpoint}
 
     `discovery_url` がない場合は、`oidc_metadata` オブジェクトに必要なフィールドを手動で設定する必要があります。
 
@@ -88,7 +88,7 @@ OIDC アイデンティティプロバイダー (IdP) が OIDC ディスカバ�
 </Tabs>
 
 <div id="supported-pkce-configuration-values">
-  ### サポートされている PKCE の設定値
+  ### サポートされている PKCE の設定値 {#supported-pkce-configuration-values}
 </div>
 
 Auth0 では、PKCE の設定に次の値をサポートしています。
@@ -113,7 +113,7 @@ Auth0 では、PKCE の設定に次の値をサポートしています。
 </Callout>
 
 <div id="map-claims-for-oidc-connections">
-  ## OIDC 接続のクレームのマッピング
+  ## OIDC 接続のクレームのマッピング {#map-claims-for-oidc-connections}
 </div>
 
 OpenID Connect 接続と Okta Workforce 接続では、アイデンティティプロバイダー (IdP) から受け取ったクレームを自動的にマッピングできます。このマッピングは、Auth0 が提供するライブラリテンプレートを使用するか、独自のテンプレートを直接入力して設定できます。
@@ -123,7 +123,7 @@ OpenID Connect 接続と Okta Workforce 接続では、アイデンティティ�
 </Callout>
 
 <div id="mapping-template-properties">
-  ### マッピングテンプレートのプロパティ
+  ### マッピングテンプレートのプロパティ {#mapping-template-properties}
 </div>
 
 マッピングテンプレートでは、以下の `options.attribute_map` オブジェクトのプロパティをサポートしています。テンプレートは、有効なキーと値のペアを含む JSON 形式である必要があります。
@@ -135,7 +135,7 @@ OpenID Connect 接続と Okta Workforce 接続では、アイデンティティ�
 | `attributes`     | 必須        | 受信したクレームのマッピング詳細を含むオブジェクト。                                 |
 
 <div id="mapping-mode">
-  ### マッピングモード
+  ### マッピングモード {#mapping-mode}
 </div>
 
 `mapping_mode` プロパティは、IdP から受け取ったクレームを Auth0 ユーザープロファイルにマッピングする方法を定義します。`mapping_mode` では、次の値を使用できます。
@@ -146,7 +146,7 @@ OpenID Connect 接続と Okta Workforce 接続では、アイデンティティ�
 | `bind_all` | IdP から提供されたすべてのデータ要素をコピーします。  |
 
 <div id="restricted-claims">
-  #### 使用が制限されたクレーム
+  #### 使用が制限されたクレーム {#restricted-claims}
 </div>
 
 一部のクレームは Auth0 による使用のために予約されており、ユーザープロファイルの属性キーとして使用することはできません。
@@ -168,7 +168,7 @@ OpenID Connect 接続と Okta Workforce 接続では、アイデンティティ�
 制限されているクレームの一覧は、[Create Custom Claims](/docs/ja-jp/secure/tokens/json-web-tokens/create-custom-claims)を参照してください。
 
 <div id="userinfo-scope">
-  ### UserInfo スコープ
+  ### UserInfo スコープ {#userinfo-scope}
 </div>
 
 `userinfo_scope` プロパティは、Auth0 が IdP への認可リクエストに含めるスコープを定義します。これらのスコープは、IdP が `UserInfo` エンドポイントを通じて提供するクレームを決定します。属性マップで `context.userinfo properties` を参照している場合、Auth0 はこれらのスコープで付与された アクセストークン を使用して、IdP の `UserInfo` エンドポイントを呼び出します。
@@ -187,7 +187,7 @@ OpenID Connect 接続と Okta Workforce 接続では、アイデンティティ�
 ```
 
 <div id="attributes">
-  ### 属性
+  ### 属性 {#attributes}
 </div>
 
 `attributes` プロパティは、Auth0 が IdP から受信するクレームを解釈できるようにするためのマッピング情報を含むオブジェクトです。マッピング情報は、キーと値のペアで指定する必要があります。
@@ -206,7 +206,7 @@ OpenID Connect 接続と Okta Workforce 接続では、アイデンティティ�
 ```
 
 <div id="literal-values">
-  #### リテラル値
+  #### リテラル値 {#literal-values}
 </div>
 
 リテラル値とは、接続内のすべてのユーザーに対して、特定のプロファイル属性にマッピングされる固定値です。
@@ -224,7 +224,7 @@ OpenID Connect 接続と Okta Workforce 接続では、アイデンティティ�
 ```
 
 <div id="context-object">
-  #### コンテキストオブジェクト
+  #### コンテキストオブジェクト {#context-object}
 </div>
 
 `context` オブジェクトを使用すると、動的な値をユーザープロファイル属性にマッピングできます。これにより、すべてのプロファイルで共通の固定リテラル値ではなく、各プロファイルに固有の値を保存できます。
@@ -238,11 +238,11 @@ OpenID Connect 接続と Okta Workforce 接続では、アイデンティティ�
 | `context.userinfo`   | 次のプロパティが含まれます。<br /><br /><li> `<claim name>`: IdP の UserInfo エンドポイントから提供される、利用可能な任意のクレーム。</li>                                             |
 
 <div id="examples">
-  ### 例
+  ### 例 {#examples}
 </div>
 
 <div id="simple-user-claim-mapping">
-  #### シンプルなユーザークレームのマッピング
+  #### シンプルなユーザークレームのマッピング {#simple-user-claim-mapping}
 </div>
 
 この例では、<Tooltip tip="ID トークン: リソースへのアクセスではなく、クライアント自体を対象とした認証情報です。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=ID+token">ID トークン</Tooltip> のデータを使用して、一般的なユーザークレームを Auth0 ユーザープロファイルにマッピングする方法を示します。
@@ -259,7 +259,7 @@ OpenID Connect 接続と Okta Workforce 接続では、アイデンティティ�
 ```
 
 <div id="group-claim-mapping">
-  #### グループクレームのマッピング
+  #### グループクレームのマッピング {#group-claim-mapping}
 </div>
 
 この例では、受信したIdPからのグループを Auth0 ユーザープロファイルにマッピングする方法を示します:
@@ -276,7 +276,7 @@ OpenID Connect 接続と Okta Workforce 接続では、アイデンティティ�
 ```
 
 <div id="combining-literal-values-and-context-objects">
-  #### リテラル値とコンテキストオブジェクトを組み合わせる
+  #### リテラル値とコンテキストオブジェクトを組み合わせる {#combining-literal-values-and-context-objects}
 </div>
 
 この例では、リテラル値と動的なテンプレート式を組み合わせて、複雑な値をAuth0のユーザープロファイルの属性にマッピングする方法を示します。

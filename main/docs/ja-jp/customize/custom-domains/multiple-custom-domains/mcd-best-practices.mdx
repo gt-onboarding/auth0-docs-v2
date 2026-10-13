@@ -8,17 +8,17 @@ title: 複数のカスタムドメインのベストプラクティス
 このガイドでは、複数のカスタムドメインを使用する際の計画、セキュリティ、パフォーマンス、運用、ユーザーエクスペリエンスに関するベストプラクティスを紹介します。
 
 <div id="verify-ownership-of-domains">
-  ## ドメインの所有権を確認する
+  ## ドメインの所有権を確認する {#verify-ownership-of-domains}
 </div>
 
 カスタムドメインの所有権を速やかに確認できるよう、あらかじめ準備しておいてください。ドメインを長期間未確認のままにすると、スペースが煩雑になり、管理が複雑になるおそれがあります。
 
 <div id="planning-and-architecture">
-  ## 計画と設計
+  ## 計画と設計 {#planning-and-architecture}
 </div>
 
 <div id="choose-a-domain-strategy">
-  ### ドメイン戦略を選択する
+  ### ドメイン戦略を選択する {#choose-a-domain-strategy}
 </div>
 
 MCD を実装する前に、どのようなドメイン戦略を採用するかを決めます。
@@ -29,7 +29,7 @@ MCD を実装する前に、どのようなドメイン戦略を採用するか�
 * **ハイブリッド**: 複数の戦略を組み合わせる (例: ブランド + リージョン: `login-us.brand1.com`)
 
 <div id="configure-a-default-domain">
-  ### デフォルトドメインを設定する
+  ### デフォルトドメインを設定する {#configure-a-default-domain}
 </div>
 
 [デフォルトのカスタムドメイン](/docs/ja-jp/customize/custom-domains/multiple-custom-domains/default-domain)は、必ず設定してください。これにより、次のことが可能になります。
@@ -41,7 +41,7 @@ MCD を実装する前に、どのようなドメイン戦略を採用するか�
 **ベストプラクティス**: デフォルトには、ブランド固有のドメインではなく、汎用的なドメインまたは管理用ドメイン (例: `login.company.com` または `admin.company.com`) を使用してください。
 
 <div id="plan-for-scale">
-  ### スケールを見据えた計画
+  ### スケールを見据えた計画 {#plan-for-scale}
 </div>
 
 MCD アーキテクチャを設計する際は、将来的な拡張も考慮しましょう。
@@ -52,7 +52,7 @@ MCD アーキテクチャを設計する際は、将来的な拡張も考慮し�
 * **拡張を見据えて計画する**: 追加のドメインにも対応できるようにアーキテクチャを設計します
 
 <div id="use-metadata-to-stay-organized">
-  ## メタデータを活用して整理しやすくする
+  ## メタデータを活用して整理しやすくする {#use-metadata-to-stay-organized}
 </div>
 
 各カスタムドメインで利用できるメタデータフィールドを活用すると、効率的な管理とカスタマイズが可能になります。
@@ -87,7 +87,7 @@ MCD アーキテクチャを設計する際は、将来的な拡張も考慮し�
 * **レポート**: ブランド、リージョン、または顧客ごとに使用状況とパフォーマンスを追跡
 
 <div id="security">
-  ## セキュリティ
+  ## セキュリティ {#security}
 </div>
 
 複数のカスタムドメインを導入する際は、ユースケースに応じて次のセキュリティパターンを考慮してください。
@@ -97,7 +97,7 @@ MCD アーキテクチャを設計する際は、将来的な拡張も考慮し�
 * **証明書管理**: 証明書のライフサイクルを安全に管理します
 
 <div id="domain-validation-in-actions">
-  ### Actions でのドメイン検証
+  ### Actions でのドメイン検証 {#domain-validation-in-actions}
 </div>
 
 [Actions](/docs/ja-jp/customize/actions) を使用すると、認証を特定のカスタムドメインに限定できます。これは、ユーザーが標準の Auth0 ドメイン経由で認証するのを防ぎたい場合や、特定のブランドドメインへのアクセスを制限したい場合に役立ちます。
@@ -122,7 +122,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="organization-based-access-control">
-  ### 組織 ベースのアクセス制御
+  ### 組織 ベースのアクセス制御 {#organization-based-access-control}
 </div>
 
 [Auth0 組織](/docs/ja-jp/manage-users/organizations) を使用している場合、各組織で許可されるカスタムドメインを制限できます。これは、各顧客が独自のブランドドメインを持ち、そのドメイン経由でのみ自社の組織にアクセスすべき B2B シナリオで役立ちます。
@@ -147,7 +147,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="certificate-management">
-  ### 証明書の管理
+  ### 証明書の管理 {#certificate-management}
 </div>
 
 * **有効期限を監視**: 証明書の有効期限に関するアラートを設定します
@@ -155,11 +155,11 @@ exports.onExecutePostLogin = async (event, api) => {
 * **自己管理の手順を文書化**: 自己管理証明書を使用している場合は、明確な運用手順書を整備します
 
 <div id="performance">
-  ## パフォーマンス
+  ## パフォーマンス {#performance}
 </div>
 
 <div id="use-regional-domains">
-  ### リージョン別ドメインを使用する
+  ### リージョン別ドメインを使用する {#use-regional-domains}
 </div>
 
 グローバルなアプリケーションでは、データレジデンシー要件や地域ごとのブランディングに対応するため、リージョン固有のカスタムドメインの使用を検討してください。
@@ -171,11 +171,11 @@ exports.onExecutePostLogin = async (event, api) => {
 </Note>
 
 <div id="branding-and-user-experience">
-  ## ブランディングとユーザーエクスペリエンス
+  ## ブランディングとユーザーエクスペリエンス {#branding-and-user-experience}
 </div>
 
 <div id="keep-branding-consistent">
-  ### ブランディングの一貫性を保つ
+  ### ブランディングの一貫性を保つ {#keep-branding-consistent}
 </div>
 
 MCD は、ブランディングの取り組みに新たな要素を加えます。ユーザーは、あらゆる接点で一貫した体験を期待しています。
@@ -187,7 +187,7 @@ MCD は、ブランディングの取り組みに新たな要素を加えます�
 詳しくは、[B2B](/docs/ja-jp/get-started/architecture-scenarios/business-to-business/branding) および [B2C](/docs/ja-jp/get-started/architecture-scenarios/business-to-consumer/branding) のブランディングガイドラインを参照してください。
 
 <div id="passkey-management">
-  ### パスキーの管理
+  ### パスキーの管理 {#passkey-management}
 </div>
 
 * **明確に伝える**: パスキーはドメインごとに作成されることをユーザーに明確に伝えます
@@ -198,7 +198,7 @@ MCD は、ブランディングの取り組みに新たな要素を加えます�
 詳しいガイダンスについては、[複数のカスタムドメインでのパスキー](/docs/ja-jp/customize/custom-domains/multiple-custom-domains/passkeys)を参照してください。
 
 <div id="user-communication">
-  ### ユーザーとのコミュニケーション
+  ### ユーザーとのコミュニケーション {#user-communication}
 </div>
 
 ユーザーが複数のカスタムドメインを利用する場合:
@@ -209,11 +209,11 @@ MCD は、ブランディングの取り組みに新たな要素を加えます�
 * **サポートドキュメントを整備する**: ドメイン構成についてのわかりやすいドキュメントを維持する
 
 <div id="operations-and-maintenance">
-  ## 運用と保守
+  ## 運用と保守 {#operations-and-maintenance}
 </div>
 
 <div id="monitoring-and-alerting">
-  ### 監視とアラート
+  ### 監視とアラート {#monitoring-and-alerting}
 </div>
 
 次の項目を監視するよう設定します。
@@ -225,7 +225,7 @@ MCD は、ブランディングの取り組みに新たな要素を加えます�
 * **APIパフォーマンス**: ドメイン操作に関するManagement APIのレイテンシを追跡する
 
 <div id="documentation">
-  ### ドキュメント
+  ### ドキュメント {#documentation}
 </div>
 
 包括的なドキュメントを整備・維持します。
@@ -237,7 +237,7 @@ MCD は、ブランディングの取り組みに新たな要素を加えます�
 * **連絡先情報**: 各ドメインの担当チーム／担当者
 
 <div id="testing">
-  ### テスト
+  ### テスト {#testing}
 </div>
 
 本番環境に導入する前に、十分にテストしてください。
@@ -249,7 +249,7 @@ MCD は、ブランディングの取り組みに新たな要素を加えます�
 * **性能テスト**: カスタムドメイン経由の認証に対して負荷テストを実施する
 
 <div id="change-management">
-  ### 変更管理
+  ### 変更管理 {#change-management}
 </div>
 
 カスタムドメインに変更を加える際は、次の点に注意してください。
@@ -261,18 +261,18 @@ MCD は、ブランディングの取り組みに新たな要素を加えます�
 * **変更を周知する**: 予定している変更を関係者に通知する
 
 <div id="common-pitfalls-to-avoid">
-  ## よくある落とし穴
+  ## よくある落とし穴 {#common-pitfalls-to-avoid}
 </div>
 
 <div id="dont-over-complicate-domain-structure">
-  ### ドメイン構造を複雑にしすぎない
+  ### ドメイン構造を複雑にしすぎない {#dont-over-complicate-domain-structure}
 </div>
 
 * **避けるべきパターン**: 想定されるあらゆるバリエーションごとにカスタムドメインを作成する
 * **より良いアプローチ**: まずは中核となる少数のドメインから始め、必要に応じて増やしていく
 
 <div id="dont-forget-to-update-all-integration-points">
-  ### すべての連携箇所を忘れずに更新する
+  ### すべての連携箇所を忘れずに更新する {#dont-forget-to-update-all-integration-points}
 </div>
 
 新しいカスタムドメインを追加する際は、次の項目を更新してください。
@@ -284,28 +284,28 @@ MCD は、ブランディングの取り組みに新たな要素を加えます�
 * 監視とアラートのルール
 
 <div id="dont-neglect-documentation">
-  ### ドキュメント整備をおろそかにしない
+  ### ドキュメント整備をおろそかにしない {#dont-neglect-documentation}
 </div>
 
 * **アンチパターン**: 組織内の暗黙知に頼る
 * **よりよいアプローチ**: ドメインの割り当て内容、メタデータの意味、運用手順を文書化する
 
 <div id="dont-ignore-certificate-management">
-  ### 証明書の管理をおろそかにしないでください
+  ### 証明書の管理をおろそかにしないでください {#dont-ignore-certificate-management}
 </div>
 
 * **アンチパターン**: 証明書の有効期限切れを見過ごすこと
 * **よりよいアプローチ**: 監視と更新のプロセスを自動化すること
 
 <div id="dont-mix-authentication-contexts">
-  ### 認証コンテキストを混在させない
+  ### 認証コンテキストを混在させない {#dont-mix-authentication-contexts}
 </div>
 
 * **アンチパターン**: 関係のないブランドや顧客で同じカスタムドメインを使い回す
 * **より良いアプローチ**: 異なる認証コンテキストを明確に分けて管理する
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * [複数のカスタムドメイン](/docs/ja-jp/customize/custom-domains/multiple-custom-domains)

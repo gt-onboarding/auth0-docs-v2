@@ -20,7 +20,7 @@ import {HowToSchema} from "/snippets/fr-ca/HowToSchema.jsx";
 </Note>
 
 <div id="get-started">
-  ## Pour commencer
+  ## Pour commencer {#get-started}
 </div>
 
 Ce Quickstart montre comment ajouter la connexion Auth0 à une application Web Spring Boot. Vous créerez une application Web sécurisée avec login, logout et une page de profil protégée à l’aide d’Okta Spring Boot Starter, qui configure automatiquement la prise en charge de OAuth2 login dans Spring Security.
@@ -381,7 +381,7 @@ Ce Quickstart montre comment ajouter la connexion Auth0 à une application Web S
 ***
 
 <div id="advanced-usage">
-  ## Utilisation avancée
+  ## Utilisation avancée {#advanced-usage}
 </div>
 
 <Accordion title="Accéder aux claims du profil utilisateur">
@@ -403,7 +403,7 @@ Ce Quickstart montre comment ajouter la connexion Auth0 à une application Web S
 <Accordion title="Contrôle d’accès basé sur les rôles">
   Vous pouvez restreindre l’accès aux pages en fonction des rôles Auth0. Commencez par ajouter les rôles à l’ID token à l’aide d’une Action Auth0, puis utilisez `hasAuthority()` dans votre configuration de sécurité.
 
-  ### Ajouter des rôles aux jetons
+  ### Ajouter des rôles aux jetons {#add-roles-to-tokens}
 
   1. Accédez à [Auth0 Dashboard](https://manage.auth0.com) → **Actions** → **Flows** → **Login**.
   2. Créez une Action personnalisée qui ajoute les rôles sous forme de custom claim à l’ID token :
@@ -417,7 +417,7 @@ Ce Quickstart montre comment ajouter la connexion Auth0 à une application Web S
   };
   ```
 
-  ### Configurer l’autorisation
+  ### Configurer l’autorisation {#configure-authorization}
 
   Mettez à jour votre `SecurityConfig` pour exiger des rôles précis sur les endpoints :
 
@@ -480,7 +480,7 @@ Ce Quickstart montre comment ajouter la connexion Auth0 à une application Web S
 ***
 
 <div id="common-issues">
-  ## Problèmes courants
+  ## Problèmes courants {#common-issues}
 </div>
 
 <AccordionGroup>
@@ -555,7 +555,7 @@ Ce Quickstart montre comment ajouter la connexion Auth0 à une application Web S
 ***
 
 <div id="additional-resources">
-  ## Ressources supplémentaires
+  ## Ressources supplémentaires {#additional-resources}
 </div>
 
 <CardGroup cols={3}>
@@ -587,7 +587,7 @@ Ce Quickstart montre comment ajouter la connexion Auth0 à une application Web S
 ***
 
 <div id="sample-application">
-  ## Application d’exemple
+  ## Application d’exemple {#sample-application}
 </div>
 
 Une application d’exemple complète qui montre le login, l’affichage du profil et le logout avec Auth0 est disponible dans le dépôt d’exemples Auth0.

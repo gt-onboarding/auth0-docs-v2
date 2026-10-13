@@ -12,7 +12,7 @@ OAuth では、アプリケーションがユーザーに代わってAPIにア�
 [サードパーティアプリケーション](/docs/ja-jp/get-started/applications/third-party-applications)では、ユーザー同意が常に必要です。ユーザーは認可リクエストのたびに承認しなければなりません。[ファーストパーティアプリケーション](/docs/ja-jp/get-started/applications/first-party-and-third-party-applications)では、アプリケーションを管理しており、適切に動作すると信頼できるため、設定によっては同意を省略できます。
 
 <div id="consent-dialog">
-  ## 同意ダイアログ
+  ## 同意ダイアログ {#consent-dialog}
 </div>
 
 サードパーティアプリケーションがユーザーを `/authorize` エンドポイントにリダイレクトして API へのアクセスをリクエストすると、Auth0 は、そのアプリケーションがリクエストしている権限の一覧を表示する同意ダイアログを表示します。
@@ -42,7 +42,7 @@ GET /authorize?
 </Callout>
 
 <div id="scope-descriptions">
-  ## スコープの説明
+  ## スコープの説明 {#scope-descriptions}
 </div>
 
 デフォルトでは、同意ページではユーザーに同意を求める際にスコープ名が使用されます。以下のように、わかりやすく表示されるよう、スコープは `action:resource_name` 形式で定義します。
@@ -66,7 +66,7 @@ GET /authorize?
 この設定は、そのテナント上のすべての API の同意プロンプトに影響します。
 
 <div id="handle-rejected-permissions">
-  ## 拒否されたアクセス許可への対応
+  ## 拒否されたアクセス許可への対応 {#handle-rejected-permissions}
 </div>
 
 ユーザーが同意を拒否した場合の動作は、アプリケーションの[リダイレクトポリシー](/docs/ja-jp/get-started/applications/third-party-applications/security-controls#redirect-protection)によって異なります。
@@ -82,7 +82,7 @@ Location: https://partner.example.com/callback?
 ```
 
 <div id="skip-consent-for-first-party-applications">
-  ## ファーストパーティアプリケーションの同意をスキップする
+  ## ファーストパーティアプリケーションの同意をスキップする {#skip-consent-for-first-party-applications}
 </div>
 
 API で **Allow Skipping User Consent** オプションが有効になっている場合、ファーストパーティアプリケーションでは同意ダイアログをスキップできます。
@@ -96,7 +96,7 @@ API で **Allow Skipping User Consent** オプションが有効になってい�
 </Callout>
 
 <div id="consent-with-organizations">
-  ## Organizations における同意
+  ## Organizations における同意 {#consent-with-organizations}
 </div>
 
 サードパーティアプリケーションが[組織](/docs/ja-jp/manage-users/organizations)コンテキストでユーザーを認証する場合、同意は組織ごとに設定されます。ある組織でアプリケーションへの同意を行ったユーザーは、別の組織で同じアプリケーションに対して同意したことにはなりません。
@@ -114,7 +114,7 @@ API で **Allow Skipping User Consent** オプションが有効になってい�
 特定の組織コンテキストで再度同意を求めるには、`/authorize` リクエストに `prompt=consent` を含めます。
 
 <div id="revoke-consent">
-  ## 同意を取り消す
+  ## 同意を取り消す {#revoke-consent}
 </div>
 
 特定のアプリケーションに対するユーザーの同意を取り消すには、次の手順を実行します。
@@ -125,7 +125,7 @@ API で **Allow Skipping User Consent** オプションが有効になってい�
 4. アプリケーションの横にある **取り消す** を選択します。
 
 <div id="password-based-flows">
-  ## パスワードベースのフロー
+  ## パスワードベースのフロー {#password-based-flows}
 </div>
 
 [Resource Owner Password Flow](/docs/ja-jp/get-started/authentication-and-authorization-flow/resource-owner-password-flow) は、サードパーティアプリケーションでは利用できません。ファーストパーティアプリケーションにのみ適用されます。
@@ -133,7 +133,7 @@ API で **Allow Skipping User Consent** オプションが有効になってい�
 ファーストパーティアプリケーションでは、ユーザーは自身のパスワードをアプリケーションに直接提供するため、同意ダイアログは表示されません。これは、ユーザーのアカウントへの完全なアクセス権をそのアプリケーションに与えるのと同等です。
 
 <div id="force-consent">
-  ## 同意を毎回求める
+  ## 同意を毎回求める {#force-consent}
 </div>
 
 ユーザーにログインのたびに同意を求めるには (既存のグラントがある場合も含め) 、`/authorize` request に `prompt=consent` を含めます。
@@ -152,7 +152,7 @@ GET /authorize?
 ```
 
 <div id="learn-more">
-  ## 詳しくはこちら
+  ## 詳しくはこちら {#learn-more}
 </div>
 
 * [サードパーティアプリケーション](/docs/ja-jp/get-started/applications/third-party-applications)

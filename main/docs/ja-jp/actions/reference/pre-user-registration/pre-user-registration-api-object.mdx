@@ -13,13 +13,13 @@ sidebarTitle: 'API オブジェクト'
 pre-user-registration Actions トリガーの API オブジェクトには、以下が含まれます。
 
 <div id="apiaccess">
-  ## `api.access`
+  ## `api.access` {#apiaccess}
 </div>
 
 ログインしようとしているユーザーのアクセスを変更します。たとえば、ログイン試行を拒否できます。
 
 <div id="apiaccessdenyreason-usermessage">
-  ### `api.access.deny(reason, userMessage)`
+  ### `api.access.deny(reason, userMessage)` {#apiaccessdenyreason-usermessage}
 </div>
 
 ユーザーの登録を拒否します。このActionの完了後、サインアップフローは直ちに停止し、
@@ -40,13 +40,13 @@ pre-user-registration Actions トリガーの API オブジェクトには、以
 </Expandable>
 
 <div id="apiuser">
-  ## `api.user`
+  ## `api.user` {#apiuser}
 </div>
 
 ログインするユーザーのメタデータを変更します。
 
 <div id="apiusersetappmetadatakey-value">
-  ### `api.user.setAppMetadata(key, value)`
+  ### `api.user.setAppMetadata(key, value)` {#apiusersetappmetadatakey-value}
 </div>
 
 ログイン中のユーザーのアプリケーション固有のメタデータを設定します。
@@ -68,7 +68,7 @@ pre-user-registration Actions トリガーの API オブジェクトには、以
 </Expandable>
 
 <div id="apiusersetusermetadatakey-value">
-  ### `api.user.setUserMetadata(key, value)`
+  ### `api.user.setUserMetadata(key, value)` {#apiusersetusermetadatakey-value}
 </div>
 
 ログインしているユーザーの一般メタデータを設定します。
@@ -90,13 +90,13 @@ pre-user-registration Actions トリガーの API オブジェクトには、以
 </Expandable>
 
 <div id="apicache">
-  ## `api.cache`
+  ## `api.cache` {#apicache}
 </div>
 
 実行間で保持されるデータを保存・取得します。
 
 <div id="apicachedeletekey">
-  ### `api.cache.delete(key)`
+  ### `api.cache.delete(key)` {#apicachedeletekey}
 </div>
 
 指定したキーのキャッシュ値を表すレコードが存在する場合、そのレコードを削除します。
@@ -110,7 +110,7 @@ pre-user-registration Actions トリガーの API オブジェクトには、以
 </Expandable>
 
 <div id="apicachegetkey">
-  ### `api.cache.get(key)`
+  ### `api.cache.get(key)` {#apicachegetkey}
 </div>
 
 指定したキーに対応するキャッシュ値のレコードが存在する場合は、それを取得します。レコードが見つかった場合、キャッシュ値は返されたオブジェクトの `value` プロパティで取得できます。
@@ -124,7 +124,7 @@ pre-user-registration Actions トリガーの API オブジェクトには、以
 </Expandable>
 
 <div id="apicachesetkey-value-options">
-  ### `api.cache.set(key, value, options)`
+  ### `api.cache.set(key, value, options)` {#apicachesetkey-value-options}
 </div>
 
 指定したキーに文字列値をキャッシュへ保存または更新します。
@@ -182,13 +182,13 @@ pre-user-registration Actions トリガーの API オブジェクトには、以
 </Expandable>
 
 <div id="apivalidation">
-  ## `api.validation`
+  ## `api.validation` {#apivalidation}
 </div>
 
 バリデーションエラーが発生した場合にログイン試行を拒否するなど、ログインするユーザーのアクセスを変更します。
 
 <div id="apivalidationerrorerrorcode-errormessage">
-  ### `api.validation.error(errorCode, errorMessage)`
+  ### `api.validation.error(errorCode, errorMessage)` {#apivalidationerrorerrorcode-errormessage}
 </div>
 
 ユーザーによる登録を拒否します。このActionの完了後、サインアップフローは直ちに停止し、以降のActionsは実行されません。

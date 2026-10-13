@@ -15,7 +15,7 @@ Dans certains cas, vous souhaiterez peut-être modifier le texte de ces pages af
 Vous pouvez personnaliser le texte affiché sur les pages de [Universal Login](/docs/fr-ca/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience) dans toutes les langues prises en charge à partir de l’<Tooltip tip="Auth0 Dashboard : le principal produit d’Auth0 pour configurer vos services." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip> ou de la <Tooltip tip="Auth0 Dashboard : le principal produit d’Auth0 pour configurer vos services." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Management+API">Management API</Tooltip>. Les définitions, valeurs et variables suivantes s’appliquent aux deux méthodes.
 
 <div id="configure-prompts-and-screens">
-  ## Configurer les prompts et les écrans
+  ## Configurer les prompts et les écrans {#configure-prompts-and-screens}
 </div>
 
 Vous pouvez personnaliser n’importe lequel des [prompts et écrans](#prompt-values) disponibles dans l’Auth0 Dashboard ou à l’aide de la [Management API](https://auth0.com/docs/api/management/v2).
@@ -43,7 +43,7 @@ Vous pouvez personnaliser n’importe lequel des [prompts et écrans](#prompt-va
          Si vous souhaitez configurer plusieurs valeurs de `screen` pour un prompt donné, vous devez toutes les inclure dans une seule requête à la Management API.
        </Warning>
 
-    #### Exemple
+#### Exemple {#example}
 
     Vous pouvez définir le composant de texte `description` de l&#39;écran `login` du prompt `login` à `Log in to ACME's website` en effectuant une requête à l&#39;endpoint [Set custom text for a specific prompt](https://auth0.com/docs/api/management/v2#!/Prompts/put_custom_text_by_language) de la Management API, comme suit :
 
@@ -196,7 +196,7 @@ Vous pouvez personnaliser n’importe lequel des [prompts et écrans](#prompt-va
       ```
     </AuthCodeGroup>
 
-    #### Supprimer le texte personnalisé pour une invite
+#### Supprimer le texte personnalisé pour une invite {#delete-custom-text-for-a-prompt}
 
     Si vous souhaitez supprimer tout le texte personnalisé pour un prompt, envoyez une requête à l&#39;endpoint [Set custom text for a specific prompt](https://auth0.com/docs/api/management/v2#!/Prompts/put_custom_text_by_language) de la Management API avec un objet vide (`{}`) comme paramètre `body` :
 
@@ -352,7 +352,7 @@ Vous pouvez personnaliser n’importe lequel des [prompts et écrans](#prompt-va
 </Tabs>
 
 <div id="supported-parameters">
-  ### Paramètres pris en charge
+  ### Paramètres pris en charge {#supported-parameters}
 </div>
 
 | Paramètre  | Définition                                                                                                                                                                                                                                  |
@@ -364,7 +364,7 @@ Vous pouvez personnaliser n’importe lequel des [prompts et écrans](#prompt-va
 | `text`     | Le message affiché à l’utilisateur.                                                                                                                                                                                                         |
 
 <div id="prompt-values">
-  ### Valeurs de prompt
+  ### Valeurs de prompt {#prompt-values}
 </div>
 
 Le terme `prompt` désigne une étape particulière du flux de connexion. Chaque `prompt` comporte au moins un `screen`, et chaque `screen` comprend un ensemble de composants textuels que vous pouvez personnaliser.
@@ -373,7 +373,7 @@ Les valeurs de `prompt` disponibles sont :
 
 <AccordionGroup>
   <Accordion title="flux-dapprobation-asynchrone">
-    ## Écran : async-approval-error
+## Écran : async-approval-error {#screen-async-approval-error}
 
     <Frame>![capture d’écran de référence async-approval-error](/docs/images/universal-login/customize-text/async-approval-error.png)</Frame>
 
@@ -386,7 +386,7 @@ Les valeurs de `prompt` disponibles sont :
     | Cette demande concerne un autre compte. Pour continuer, veuillez vous déconnecter et réessayer avec le bon compte. | `wrong-user-description` |
     | Se déconnecter et réessayer                                                                                        | `wrong-user-link-text`   |
 
-    ## Écran : async-approval-accepted
+## Écran : async-approval-accepted {#screen-async-approval-accepted}
 
     <Frame>![capture d’écran de référence async-approval-accepted](/docs/images/universal-login/customize-text/async-approval-accepted.png)</Frame>
 
@@ -396,7 +396,7 @@ Les valeurs de `prompt` disponibles sont :
     | Vous pouvez maintenant fermer la fenêtre. | `description` |
     | Demande approuvée                         | `eventtitle`  |
 
-    ## Écran : async-approval-denied
+## Écran : async-approval-denied {#screen-async-approval-denied}
 
     <Frame>![capture d’écran de référence async-approval-denied](/docs/images/universal-login/customize-text/async-approval-denied.png)</Frame>
 
@@ -408,7 +408,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="protection-contre-les-attaques-par-force-brute">
-    ## Écran : brute-force-protection-unblock
+## Écran : brute-force-protection-unblock {#screen-brute-force-protection-unblock}
 
     <Frame>![capture d’écran de référence brute-force-protection-unblock](/docs/images/cdy7uua7fh8z/brute-force-unblock.png)</Frame>
 
@@ -419,7 +419,7 @@ Les valeurs de `prompt` disponibles sont :
     | Continuer                | `buttonText`  |
     | $&#123;companyName&#125; | `logoAltText` |
 
-    ## Écran : brute-force-protection-unblock-success
+## Écran : brute-force-protection-unblock-success {#screen-brute-force-protection-unblock-success}
 
     <Frame>![capture d’écran de référence brute-force-protection-unblock-success](/docs/images/cdy7uua7fh8z/brute-force-unblock-success.png)</Frame>
 
@@ -430,7 +430,7 @@ Les valeurs de `prompt` disponibles sont :
     | Continuer                | `buttonText`  |
     | $&#123;companyName&#125; | `logoAltText` |
 
-    ## Écran : brute-force-protection-unblock-failure
+## Écran : brute-force-protection-unblock-failure {#screen-brute-force-protection-unblock-failure}
 
     <Frame>![capture d’écran de référence brute-force-protection-unblock-failure](/docs/images/cdy7uua7fh8z/brute-force-unblock-fail.png)</Frame>
 
@@ -443,7 +443,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="captcha">
-    ## Écran : interstitial-captcha
+## Écran : interstitial-captcha {#screen-interstitial-captcha}
 
     <Frame>![capture d’écran interstitial-captcha](/docs/images/universal-login/customize-text/captcha.png)</Frame>
 
@@ -462,7 +462,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="commun">
-    ## Écran : redeem-ticket
+## Écran : redeem-ticket {#screen-redeem-ticket}
 
     <Frame>![capture d’écran de référence redeem-ticket](/docs/images/cdy7uua7fh8z/7H4DS8I8fnlUgtS4ttpMyK/90006ee36032cc1ee3d9674fe6bcf575/redeem-ticket.png)</Frame>
 
@@ -474,7 +474,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="consentement">
-    ## Écran : consent
+## Écran : consent {#screen-consent}
 
     <Frame>![capture d’écran de référence consent](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/consent.png)</Frame>
 
@@ -495,7 +495,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="formulaire-personnalisé">
-    ## Écran : custom-form
+## Écran : custom-form {#screen-custom-form}
 
     <Frame>![capture d’écran du formulaire personnalisé](/docs/images/universal-login/customize-text/custom-form.png)</Frame>
 
@@ -505,7 +505,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="device-flow">
-    ## Écran: device-code-activation
+## Écran: device-code-activation {#screen-device-code-activation}
 
     <Frame>![capture d’écran de référence device-code-activation](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/device-code-activation.png)</Frame>
 
@@ -521,7 +521,7 @@ Les valeurs de `prompt` disponibles sont :
     | Veuillez entrer le code affiché sur votre appareil                             | `no-code`              |
     | Le code que vous avez entré est invalide                                       | `invalid-code`         |
 
-    ## Écran: device-code-activation-allowed
+## Écran: device-code-activation-allowed {#screen-device-code-activation-allowed}
 
     <Frame>![capture d’écran de référence device-code-activation-allowed](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/device-code-activation-allowed.png)</Frame>
 
@@ -531,7 +531,7 @@ Les valeurs de `prompt` disponibles sont :
     | Votre appareil est maintenant connecté.     | `description` |
     | Félicitations, tout est prêt !              | `eventTitle`  |
 
-    ## Écran: device-code-activation-denied
+## Écran: device-code-activation-denied {#screen-device-code-activation-denied}
 
     <Frame>![capture d’écran de référence device-code-activation-denied](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/device-code-activation-denied.png)</Frame>
 
@@ -541,7 +541,7 @@ Les valeurs de `prompt` disponibles sont :
     | Impossible d’activer votre appareil.        | `description` |
     | Activation refusée                          | `eventTitle`  |
 
-    ## Écran: device-code-confirmation
+## Écran: device-code-confirmation {#screen-device-code-confirmation}
 
     <Frame>![capture d’écran de référence device-code-confirmation](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/device-code-confirmation.png)</Frame>
 
@@ -558,7 +558,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="courriel-identifiant-défi">
-    ## Écran : email-identifier-challenge
+## Écran : email-identifier-challenge {#screen-email-identifier-challenge}
 
     <Frame>![capture d’écran de référence email-identifier-challenge](/docs/images/universal-login/customize-text/email-identifier-challenge.png)</Frame>
 
@@ -599,7 +599,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="courriel-OTP-vérification">
-    ## Écran : email-otp-challenge
+## Écran : email-otp-challenge {#screen-email-otp-challenge}
 
     <Frame>![capture d’écran de référence email-otp-challenge](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/email-otp-challenge.png)</Frame>
 
@@ -621,7 +621,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="vérification-par-courriel">
-    ## Écran : email-verification-result
+## Écran : email-verification-result {#screen-email-verification-result}
 
     <Frame>![capture d’écran de référence email-verification-result](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/email-verification-result.png)</Frame>
 
@@ -642,7 +642,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="invitation">
-    ## Écran : accept-invitation
+## Écran : accept-invitation {#screen-accept-invitation}
 
     <Frame>![capture d’écran de référence accept-invitation](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/accept-invitation.png)</Frame>
 
@@ -656,7 +656,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="connexion">
-    ## Écran: login
+## Écran: login {#screen-login}
 
     <Frame>![capture d’écran de référence login](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/login.png)</Frame>
 
@@ -712,7 +712,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="identifiant-de-connexion">
-    ## Screen : login-id
+## Screen : login-id {#screen-login-id}
 
     <Frame><Frame>![capture d'écran de référence login-id](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/login-id.png)</Frame></Frame>
 
@@ -779,7 +779,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="login-password">
-    ## Écran : login-password
+## Écran : login-password {#screen-login-password}
 
     <Frame>![capture d’écran de référence login-password](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/login-password.png)</Frame>
 
@@ -831,7 +831,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="connexion-sans-mot-de-passe">
-    ## Écran : login-passwordless-email-code
+## Écran : login-passwordless-email-code {#screen-login-passwordless-email-code}
 
     <Frame>![capture d’écran de référence login-passwordless-email-code](/docs/images/cdy7uua7fh8z/6zazshkUI5sdFDd2Fgbo6w/0193e17673250b5293d9581e34316c20/login-passwordless-email-code.png)</Frame>
 
@@ -849,7 +849,7 @@ Les valeurs de `prompt` disponibles sont :
     | Le code n&#39;a pas pu être envoyé. Veuillez réessayer plus tard.                    | `passwordless-authenticator-error` |
     | Un problème est survenu. Veuillez réessayer plus tard.                               | `passwordless-unknown-error`       |
 
-    ## Écran : login-passwordless-email-link
+## Écran : login-passwordless-email-link {#screen-login-passwordless-email-link}
 
     <Frame>![capture d’écran de référence login-passwordless-email-link](/docs/images/cdy7uua7fh8z/7EcEUmoEPC6GVgJjNyTugr/e160cb40af3a0c748ba1f9fe2307488b/login-passwordless-email-link.png)</Frame>
 
@@ -861,7 +861,7 @@ Les valeurs de `prompt` disponibles sont :
     | Courriel envoyé. Vérifiez votre boîte de réception pour obtenir un lien de connexion. | `description`             |
     | Veuillez réessayer plus tard.                                                         | `unknownErrorDescription` |
 
-    ## Écran : login-passwordless-sms-otp
+## Écran : login-passwordless-sms-otp {#screen-login-passwordless-sms-otp}
 
     <Frame>![capture d’écran de référence login-passwordless-sms-otp](/docs/images/cdy7uua7fh8z/5dk4vZpc06UojLdnelUInO/f5fb02e0adeeceaa1b8ce6eef8151bc2/login-passwordless-sms-otp.png)</Frame>
 
@@ -882,7 +882,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="connexion-vérification-courriel">
-    ## Écran : login-email-verification
+## Écran : login-email-verification {#screen-login-email-verification}
 
     <Frame>![capture d’écran de référence login-email-verification](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/login-email-verification.png)</Frame>
 
@@ -904,7 +904,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="déconnexion">
-    ## Écran : logout
+## Écran : logout {#screen-logout}
 
     <Frame>![capture d’écran de référence de l’écran de déconnexion](/docs/images/cdy7uua7fh8z/2lXg143oKAF4OlIilbwDCK/d770603ba5203adff07cf4e23e4fcbbb/logout.png)</Frame>
 
@@ -920,7 +920,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="mfa">
-    ## Écran : mfa-detect-browser-capabilities
+## Écran : mfa-detect-browser-capabilities {#screen-mfa-detect-browser-capabilities}
 
     <Frame>![capture d’écran de référence mfa-detect-browser-capabilities](/docs/images/cdy7uua7fh8z/2D7DbdMRJ7SdwxEzOYYsLX/595c1436aaa38ed342137c4a5227f4b0/mfa-detect-browser-capabilities.png)</Frame>
 
@@ -931,7 +931,7 @@ Les valeurs de `prompt` disponibles sont :
     | JavaScript requis                                                                                                    | `noJSErrorTitle`        |
     | JavaScript n’est pas activé dans votre navigateur. Veuillez l’activer, puis cliquer sur le bouton Recharger la page. | `noJSErrorDescription`  |
 
-    ## Écran : mfa-enroll-result
+## Écran : mfa-enroll-result {#screen-mfa-enroll-result}
 
     <Frame>![capture d’écran de référence mfa-enroll-result](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-enroll-result.png)</Frame>
 
@@ -949,7 +949,7 @@ Les valeurs de `prompt` disponibles sont :
     | La vérification à deux facteurs est déjà activée.                                                             | `alreadyEnrolledDescription` |
     | Un problème est survenu                                                                                       | `genericError`               |
 
-    ## Écran : mfa-login-options
+## Écran : mfa-login-options {#screen-mfa-login-options}
 
     <Frame>![capture d’écran de référence mfa-login-options](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-login-options.png)</Frame>
 
@@ -969,7 +969,7 @@ Les valeurs de `prompt` disponibles sont :
     | Clé de sécurité                                                     | `authenticatorNamesWebauthnRoaming`  |
     | Empreinte digitale ou reconnaissance faciale                        | `authenticatorNamesWebauthnPlatform` |
 
-    ## Écran : mfa-begin-enroll-options
+## Écran : mfa-begin-enroll-options {#screen-mfa-begin-enroll-options}
 
     <Frame>![capture d’écran de référence mfa-begin-enroll-options](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-begin-enroll-options.png)</Frame>
 
@@ -993,7 +993,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="mfa-courriel">
-    ## Écran : mfa-email-challenge
+## Écran : mfa-email-challenge {#screen-mfa-email-challenge}
 
     <Frame>![capture d’écran de référence mfa-email-challenge](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-email-challenge.png)</Frame>
 
@@ -1019,7 +1019,7 @@ Les valeurs de `prompt` disponibles sont :
     | Nous n’avons pas pu envoyer le courriel. Veuillez réessayer plus tard.                      | `mfa-email-challenge-authenticator-error` |
     | Veuillez entrer un code                                                                     | `no-code`                                 |
 
-    ## Écran : mfa-email-list
+## Écran : mfa-email-list {#screen-mfa-email-list}
 
     <Frame>![capture d’écran de référence mfa-email-list](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-email-list.png)</Frame>
 
@@ -1031,7 +1031,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="mfa-otp">
-    ## Écran : mfa-otp-enrollment-qr
+## Écran : mfa-otp-enrollment-qr {#screen-mfa-otp-enrollment-qr}
 
     <Frame>![capture d’écran de référence mfa-otp-enrollment-qr](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-otp-enrollment-qr.png)</Frame>
 
@@ -1053,7 +1053,7 @@ Les valeurs de `prompt` disponibles sont :
     | Vous êtes déjà inscrit à la MFA.                                                                                                 | `user-already-enrolled`   |
     | Veuillez entrer un code                                                                                                          | `no-code`                 |
 
-    ## Écran : mfa-otp-enrollment-code
+## Écran : mfa-otp-enrollment-code {#screen-mfa-otp-enrollment-code}
 
     <Frame>![capture d’écran de référence mfa-otp-enrollment-code](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-otp-enrollment-code.png)</Frame>
 
@@ -1073,7 +1073,7 @@ Les valeurs de `prompt` disponibles sont :
     | Votre transaction d’inscription a expiré; vous devrez recommencer.                                                                     | `transaction-not-found` |
     | Veuillez entrer un code                                                                                                                | `no-code`               |
 
-    ## Écran : mfa-otp-challenge
+## Écran : mfa-otp-challenge {#screen-mfa-otp-challenge}
 
     <Frame>![capture d’écran de référence mfa-otp-challenge](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-otp-challenge.png)</Frame>
 
@@ -1095,7 +1095,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="mfa-phone">
-    ## Écran : mfa-phone-challenge
+## Écran : mfa-phone-challenge {#screen-mfa-phone-challenge}
 
     <Frame>![capture d’écran de référence mfa-phone-challenge](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-phone-challenge.png)</Frame>
 
@@ -1121,7 +1121,7 @@ Les valeurs de `prompt` disponibles sont :
     | Votre transaction d’inscription a expiré; vous devrez recommencer.                                                         | `transaction-not-found` |
     | Veuillez entrer un numéro de téléphone                                                                                     | `no-phone`              |
 
-    ## Écran : mfa-phone-enrollment
+## Écran : mfa-phone-enrollment {#screen-mfa-phone-enrollment}
 
     <Frame>![capture d’écran de référence mfa-phone-enrollment](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-phone-enrollment.png)</Frame>
 
@@ -1149,7 +1149,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="mfa-push">
-    ## Écran : mfa-push-welcome
+## Écran : mfa-push-welcome {#screen-mfa-push-welcome}
 
     <Frame>![capture d’écran de référence mfa-push-welcome](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-push-welcome.png)</Frame>
 
@@ -1164,7 +1164,7 @@ Les valeurs de `prompt` disponibles sont :
     | Utiliser une autre méthode                                                                                                    | `pickAuthenticatorText` |
     | $&#123;companyName&#125;                                                                                                      | `logoAltText`           |
 
-    ## Écran : mfa-push-enrollment-qr
+## Écran : mfa-push-enrollment-qr {#screen-mfa-push-enrollment-qr}
 
     <Frame>![capture d’écran de référence mfa-push-enrollment-qr](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-push-enrollment-qr.png)</Frame>
 
@@ -1178,7 +1178,7 @@ Les valeurs de `prompt` disponibles sont :
     | $&#123;companyName&#125;                                                                         | `logoAltText`                    |
     | Vous devez scanner le code QR avec l’application $&#123;appName&#125; sur votre appareil mobile. | `enrollment-transaction-pending` |
 
-    ## Écran : mfa-push-challenge-push
+## Écran : mfa-push-challenge-push {#screen-mfa-push-challenge-push}
 
     <Frame>![capture d’écran de référence mfa-push-challenge-push](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-push-challenge-push.png)</Frame>
 
@@ -1204,7 +1204,7 @@ Les valeurs de `prompt` disponibles sont :
     | Nous n’avons pas pu envoyer la notification. Veuillez réessayer plus tard.                             | `mfa-push-challenge-authenticator-error` |
     | Notification refusée                                                                                   | `transaction-rejected`                   |
 
-    ## Écran : mfa-push-list
+## Écran : mfa-push-list {#screen-mfa-push-list}
 
     <Frame>![capture d’écran de référence mfa-push-list](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-push-list.png)</Frame>
 
@@ -1216,7 +1216,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="code-de-récupération-mfa">
-    ## Écran : mfa-recovery-code-enrollment
+## Écran : mfa-recovery-code-enrollment {#screen-mfa-recovery-code-enrollment}
 
     <Frame>![capture d’écran de référence mfa-recovery-code-enrollment](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-recovery-code-enrollment.png)</Frame>
 
@@ -1232,7 +1232,7 @@ Les valeurs de `prompt` disponibles sont :
     | $&#123;companyName&#125;                                                                                                                        | `logoAltText`        |
     | Veuillez confirmer que vous avez noté le code                                                                                                   | `no-confirmation`    |
 
-    ## Écran : mfa-recovery-code-challenge
+## Écran : mfa-recovery-code-challenge {#screen-mfa-recovery-code-challenge}
 
     <Frame>![capture d’écran de référence mfa-recovery-code-challenge](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-recovery-code-challenge.png)</Frame>
 
@@ -1254,7 +1254,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="mfa-sms">
-    ## Écran : mfa-country-codes
+## Écran : mfa-country-codes {#screen-mfa-country-codes}
 
     <Frame>![mfa-country-codes reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-country-codes.png)</Frame>
 
@@ -1264,7 +1264,7 @@ Les valeurs de `prompt` disponibles sont :
     | Retour                                                       | `backText`  |
     | Sélectionnez un indicatif de pays                            | `title`     |
 
-    ## Écran : mfa-sms-enrollment
+## Écran : mfa-sms-enrollment {#screen-mfa-sms-enrollment}
 
     <Frame><Frame>![Capture d'écran de référence mfa-sms-enrollment](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-sms-enrollment.png)</Frame></Frame>
 
@@ -1285,7 +1285,7 @@ Les valeurs de `prompt` disponibles sont :
     | Votre transaction d’inscription a expiré. Vous devez recommencer.                                                         | `transaction-not-found`   |
     | Veuillez entrer un numéro de téléphone                                                                                    | `no-phone`                |
 
-    ## Écran : mfa-sms-challenge
+## Écran : mfa-sms-challenge {#screen-mfa-sms-challenge}
 
     <Frame>![mfa-sms-challenge reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-sms-challenge.png)</Frame>
 
@@ -1316,7 +1316,7 @@ Les valeurs de `prompt` disponibles sont :
     | Votre transaction d’inscription a expiré; vous devrez recommencer.                                                        | `transaction-not-found`                |
     | Veuillez entrer un code                                                                                                   | `no-code`                              |
 
-    ## Écran : mfa-sms-list
+## Écran : mfa-sms-list {#screen-mfa-sms-list}
 
     <Frame><Frame>![Capture d'écran de référence mfa-sms-list](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-sms-list.png)</Frame></Frame>
 
@@ -1328,7 +1328,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="mfa-appel-vocal">
-    ## Écran : mfa-voice-enrollment
+## Écran : mfa-voice-enrollment {#screen-mfa-voice-enrollment}
 
     <Frame>![capture d’écran de référence mfa-voice-enrollment](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-voice-enrollment.png)</Frame>
 
@@ -1348,7 +1348,7 @@ Les valeurs de `prompt` disponibles sont :
     | Votre transaction d’inscription a expiré, vous devrez recommencer.                                                             | `transaction-not-found` |
     | Veuillez entrer un numéro de téléphone                                                                                         | `no-phone`              |
 
-    ## Écran : mfa-voice-challenge
+## Écran : mfa-voice-challenge {#screen-mfa-voice-challenge}
 
     <Frame>![capture d’écran de référence mfa-voice-challenge](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-voice-challenge.png)</Frame>
 
@@ -1382,7 +1382,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="mfa-webauthn">
-    ## Écran : mfa-webauthn-platform-enrollment
+## Écran : mfa-webauthn-platform-enrollment {#screen-mfa-webauthn-platform-enrollment}
 
     <Frame>![mfa-webauthn-enrollment reference screenshot](/docs/images/universal-login/text-customization/mfa-webauth-platform-enrollment.png)</Frame>
 
@@ -1400,7 +1400,7 @@ Les valeurs de `prompt` disponibles sont :
     | Pas maintenant                                                                                                                                                                                     | `skipAddingDeviceText`              |
     | Nous n’avons pas pu démarrer l’inscription de l’appareil. Veuillez réessayer plus tard.                                                                                                            | `webauthn-platform-associate-error` |
 
-    ## Écran : mfa-webauthn-roaming-enrollment
+## Écran : mfa-webauthn-roaming-enrollment {#screen-mfa-webauthn-roaming-enrollment}
 
     <Frame><Frame>![Capture d'écran de référence mfa-webauthn-guidance-enrollment](/docs/images/universal-login/text-customization/mfa-webauth-roaming-enrollment.png)</Frame></Frame>
 
@@ -1418,7 +1418,7 @@ Les valeurs de `prompt` disponibles sont :
     | Donnez un nom à votre clé de sécurité pour la reconnaître facilement plus tard.               | `instructions3`            |
     | Nous n’avons pas pu lancer l’inscription de la clé de sécurité. Veuillez réessayer plus tard. | `webauthn-associate-error` |
 
-    ## Screen: mfa-webauthn-platform-challenge
+## Screen: mfa-webauthn-platform-challenge {#screen-mfa-webauthn-platform-challenge}
 
     <Frame>![Capture d'écran de référence mfa-webauthn-challenge-user-initiated](/docs/images/universal-login/text-customization/mfa-webauth-platform-challenge.png)</Frame>
 
@@ -1435,7 +1435,7 @@ Les valeurs de `prompt` disponibles sont :
     | Mémoriser cet appareil pendant 30 jours                                                                      | `rememberMeText`                             |
     | Nous n’avons pas pu démarrer la vérification de l’appareil. Veuillez réessayer plus tard.                    | `webauthn-platform-challenge-error`          |
 
-    ## Écran : mfa-webauthn-roaming-challenge
+## Écran : mfa-webauthn-roaming-challenge {#screen-mfa-webauthn-roaming-challenge}
 
     <Frame>![Capture d'écran de référence mfa-webauthn-challenge-user-initiated](/docs/images/universal-login/text-customization/mfa-webauth-roaming-challenge.png)</Frame>
 
@@ -1452,7 +1452,7 @@ Les valeurs de `prompt` disponibles sont :
     | Mémoriser cet appareil pendant 30 jours                                                                                    | `rememberMeText`                             |
     | Nous n’avons pas pu lancer la vérification de la clé de sécurité. Veuillez réessayer plus tard.                            | `webauthn-challenge-error`                   |
 
-    ## Écran : mfa-webauthn-change-key-nickname
+## Écran : mfa-webauthn-change-key-nickname {#screen-mfa-webauthn-change-key-nickname}
 
     <Frame>![Capture d'écran de référence mfa-webauthn-change-key-nickname](/docs/images/universal-login/text-customization/mfa-webauth-change-key-nickname.png)</Frame>
 
@@ -1476,7 +1476,7 @@ Les valeurs de `prompt` disponibles sont :
     | Une erreur s’est produite lors de la récupération de vos renseignements. Veuillez réessayer. | `error-while-retrieving-authenticator`   |
     | Une erreur s’est produite lors de l’enregistrement du nom. Veuillez réessayer.               | `error-while-patching`                   |
 
-    ## Écran : mfa-webauthn-enrollment-success
+## Écran : mfa-webauthn-enrollment-success {#screen-mfa-webauthn-enrollment-success}
 
     <Frame>![mfa-webauthn-enrollment-success reference screenshot](/docs/images/universal-login/text-customization/mfa-webauthn-enrollment-success.png)</Frame>
 
@@ -1489,7 +1489,7 @@ Les valeurs de `prompt` disponibles sont :
     | Continuer                                                           | `buttonText`          |
     | $&#123;companyName&#125;                                            | `logoAltText`         |
 
-    ## Écran : mfa-webauthn-error
+## Écran : mfa-webauthn-error {#screen-mfa-webauthn-error}
 
     <Frame>![mfa-webauthn-error reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-webauthn-error.png)</Frame>
 
@@ -1506,7 +1506,7 @@ Les valeurs de `prompt` disponibles sont :
     | Non, merci                                                                                       | `refuseAddingAuthenticatorText` |
     | Utiliser le mot de passe                                                                         | `usePasswordText`               |
 
-    ## Écran : mfa-webauthn-not-available-error
+## Écran : mfa-webauthn-not-available-error {#screen-mfa-webauthn-not-available-error}
 
     <Frame>![mfa-webauthn-not-available-error reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/mfa-webauthn-not-available-error.png)</Frame>
 
@@ -1520,7 +1520,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="organisations">
-    ## Écran : organization-selection
+## Écran : organization-selection {#screen-organization-selection}
 
     <Frame>![capture d’écran de référence organization-selection](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/organization-selection.png)</Frame>
 
@@ -1534,7 +1534,7 @@ Les valeurs de `prompt` disponibles sont :
     | $&#123;companyName&#125;                                                    | `logoAltText`          |
     | L’organisation que vous avez saisie n’est pas valide                        | `invalid-organization` |
 
-    ## Écran : organization-picker
+## Écran : organization-picker {#screen-organization-picker}
 
     <Frame>![capture d’écran de référence organization-picker](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/organization-picker-rev2.png)</Frame>
 
@@ -1551,7 +1551,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="réinitialiser-mot-de-passe">
-    ## Écran : reset-password-request
+## Écran : reset-password-request {#screen-reset-password-request}
 
     <Frame>![reset-password-request reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-request.png)</Frame>
 
@@ -1594,7 +1594,7 @@ Les valeurs de `prompt` disponibles sont :
     | L’ID de connexion saisi n’est pas valide                                                                                                                           | `invalid-login-id`                     |
     | Entrez une adresse courriel ou un numéro de téléphone valide. Les numéros de téléphone doivent inclure l’indicatif du pays.                                        | `invalid-email-phone`                  |
 
-    ## Écran : reset-password-email
+## Écran : reset-password-email {#screen-reset-password-email}
 
     <Frame>![reset-password-email reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-email.png)</Frame>
 
@@ -1607,7 +1607,7 @@ Les valeurs de `prompt` disponibles sont :
     | Renvoyer le courriel                                                                                                                                          | `resendLinkText`                       |
     | Veuillez vérifier l’adresse courriel associée au nom d’utilisateur &lt;%= &quot;${courriel}&quot; %&gt; pour savoir comment réinitialiser votre mot de passe. | `usernameDescription`                  |
 
-    ## Écran : reset-password
+## Écran : reset-password {#screen-reset-password}
 
     <Frame><Frame>![capture d'écran de référence reset-password](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password.png)</Frame></Frame>
 
@@ -1635,7 +1635,7 @@ Les valeurs de `prompt` disponibles sont :
     | Cette combinaison d’identifiants a été détectée dans une fuite de données publique sur un autre site Web. Pour continuer, veuillez utiliser un autre mot de passe afin de protéger votre compte. | `password-breached-reset`              |
     | Les mots de passe ne correspondent pas                                                                                                                                                           | `password-mismatch`                    |
 
-    ## Écran : reset-password-success
+## Écran : reset-password-success {#screen-reset-password-success}
 
     <Frame>![reset-password-success reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-success.png)</Frame>
 
@@ -1646,7 +1646,7 @@ Les valeurs de `prompt` disponibles sont :
     | Votre mot de passe a été modifié avec succès.   | `description`                          |
     | Retour à &lt;%= &quot;${clientName}&quot; %&gt; | `buttonText`                           |
 
-    ## Écran : reset-password-error
+## Écran : reset-password-error {#screen-reset-password-error}
 
     <Frame>![reset-password-error reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-error.png)</Frame>
 
@@ -1666,7 +1666,7 @@ Les valeurs de `prompt` disponibles sont :
     | Une erreur s’est produite. Veuillez réessayer plus tard.                                                                                                                               | `auth0-users-validation`               |
     | Nous avons eu un problème lors de l’envoi du courriel. Veuillez réessayer plus tard.                                                                                                   | `reset-password-error`                 |
 
-    ## Écran : reset-password-mfa-email-challenge
+## Écran : reset-password-mfa-email-challenge {#screen-reset-password-mfa-email-challenge}
 
     <Frame>![reset-password-mfa-email-challenge reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-mfa-email-challenge.png)</Frame>
 
@@ -1691,7 +1691,7 @@ Les valeurs de `prompt` disponibles sont :
     | Votre transaction d’inscription a expiré. Vous devrez recommencer.                          | `transaction-not-found`                   |
     | Nous n&#39;avons pas pu envoyer le courriel. Veuillez réessayer plus tard.                  | `mfa-email-challenge-authenticator-error` |
 
-    ## Écran : reset-password-mfa-otp-challenge
+## Écran : reset-password-mfa-otp-challenge {#screen-reset-password-mfa-otp-challenge}
 
     <Frame>![reset-password-mfa-otp-challenge reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-mfa-otp-challenge.png)</Frame>
 
@@ -1710,7 +1710,7 @@ Les valeurs de `prompt` disponibles sont :
     | Trop de tentatives avec un code invalide. Attendez quelques minutes avant de réessayer. | `too-many-failures`                    |
     | Votre transaction d’inscription a expiré. Vous devrez recommencer.                      | `transaction-not-found`                |
 
-    ## Écran : reset-password-mfa-phone-challenge
+## Écran : reset-password-mfa-phone-challenge {#screen-reset-password-mfa-phone-challenge}
 
     <Frame>![reset-password-mfa-phone-challenge reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-mfa-phone-challenge.png)</Frame>
 
@@ -1736,7 +1736,7 @@ Les valeurs de `prompt` disponibles sont :
     | Votre transaction d’enrôlement a expiré. Vous devrez recommencer.                                                | `transaction-not-found`                |
     | Veuillez entrer un numéro de téléphone                                                                           | `no-phone`                             |
 
-    ## Écran : reset-password-mfa-push-challenge-push
+## Écran : reset-password-mfa-push-challenge-push {#screen-reset-password-mfa-push-challenge-push}
 
     <Frame>![reset-password-mfa-push-challenge-push reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-mfa-push-challenge-push.png)</Frame>
 
@@ -1762,7 +1762,7 @@ Les valeurs de `prompt` disponibles sont :
     | Nous n’avons pas pu envoyer la notification. Veuillez réessayer plus tard.                                                          | `mfa-push-challenge-authenticator-error` |
     | Notification rejetée                                                                                                                | `transaction-rejected`                   |
 
-    ## Écran : reset-password-mfa-recovery-code-challenge
+## Écran : reset-password-mfa-recovery-code-challenge {#screen-reset-password-mfa-recovery-code-challenge}
 
     <Frame>![reset-password-mfa-recovery-code-challenge reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-mfa-recovery-code-challenge.png)</Frame>
 
@@ -1782,7 +1782,7 @@ Les valeurs de `prompt` disponibles sont :
     | Trop de codes invalides. Veuillez attendre quelques minutes avant de réessayer.             | `too-many-failures`                    |
     | Votre transaction d’inscription a expiré; vous devrez recommencer.                          | `transaction-not-found`                |
 
-    ## Écran : reset-password-mfa-sms-challenge
+## Écran : reset-password-mfa-sms-challenge {#screen-reset-password-mfa-sms-challenge}
 
     <Frame>![reset-password-mfa-sms-challenge reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-mfa-sms-challenge.png)</Frame>
 
@@ -1812,7 +1812,7 @@ Les valeurs de `prompt` disponibles sont :
     | Vous avez dépassé le nombre maximal de messages par téléphone par heure. Attendez quelques minutes, puis réessayez. | `too-many-sms`                         |
     | Votre transaction d’inscription a expiré; vous devrez recommencer.                                                  | `transaction-not-found`                |
 
-    ## Écran : reset-password-mfa-voice-challenge
+## Écran : reset-password-mfa-voice-challenge {#screen-reset-password-mfa-voice-challenge}
 
     <Frame>![reset-password-mfa-voice-challenge reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-mfa-voice-challenge.png)</Frame>
 
@@ -1843,7 +1843,7 @@ Les valeurs de `prompt` disponibles sont :
     | Vous avez dépassé le nombre maximal de messages téléphoniques autorisés par heure. Attendez quelques minutes avant de réessayer. | `too-many-voice`                       |
     | Votre transaction d’inscription a expiré; vous devrez recommencer.                                                               | `transaction-not-found`                |
 
-    ## Écran : reset-password-mfa-webauthn-platform-challenge
+## Écran : reset-password-mfa-webauthn-platform-challenge {#screen-reset-password-mfa-webauthn-platform-challenge}
 
     <Frame>![reset-password-mfa-webauthn-platform-challenge reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-mfa-webauthn-platform-challenge.png)</Frame>
 
@@ -1861,7 +1861,7 @@ Les valeurs de `prompt` disponibles sont :
     | Mémoriser cet appareil pendant 30 jours                                                              | `rememberMeText`                             |
     | Nous n’avons pas pu démarrer la vérification de l’appareil. Veuillez réessayer plus tard.            | `webauthn-platform-challenge-error`          |
 
-    ## Screen: reset-password-mfa-webauthn-roaming-challenge
+## Screen: reset-password-mfa-webauthn-roaming-challenge {#screen-reset-password-mfa-webauthn-roaming-challenge}
 
     <Frame>![reset-password-mfa-webauthn-roaming-challenge reference screenshot](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/reset-password-mfa-webauthn-roaming-challenge.png)</Frame>
 
@@ -1880,7 +1880,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="inscription-clé-d’accès">
-    ## Écran: passkey-enrollment
+## Écran: passkey-enrollment {#screen-passkey-enrollment}
 
     <Frame>![capture d’écran de référence passkey-enrollment](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/passkey-enrollment.png)</Frame>
 
@@ -1915,7 +1915,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="inscription-locale-par-clé-d’accès">
-    ## Écran: passkey-enrollment-local
+## Écran: passkey-enrollment-local {#screen-passkey-enrollment-local}
 
     <Frame>![capture d’écran de référence de passkey-enrollment-local](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/passkey-enrollment-local.png)</Frame>
 
@@ -1938,7 +1938,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="phone-identifiant-vérification">
-    ## Écran : phone-identifier-challenge
+## Écran : phone-identifier-challenge {#screen-phone-identifier-challenge}
 
     <Frame>![capture d’écran de référence de phone-identifier-challenge](/docs/images/cdy7uua7fh8z/CustomizeULTemplate/phone-identifier-challenge.png)</Frame>
 
@@ -1974,7 +1974,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="phone-identifiant-inscription">
-    ## Écran : phone-identifier-enrollment
+## Écran : phone-identifier-enrollment {#screen-phone-identifier-enrollment}
 
     <Frame>![capture d’écran de référence de phone-identifier-enrollment](/docs/images/cdy7uua7fh8z/CustomizeULTemplate/Phone-identifier-enrollment.png)</Frame>
 
@@ -2002,7 +2002,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="inscription">
-    ## Écran : inscription
+## Écran : inscription {#screen-signup}
 
     <Frame><Frame>![capture d'écran de référence d'inscription](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/signup.png)</Frame></Frame>
 
@@ -2059,7 +2059,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="id-inscription">
-    ## Écran : signup-id
+## Écran : signup-id {#screen-signup-id}
 
     <Frame>![capture d’écran de référence signup-id](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/signup-id.png)</Frame>
 
@@ -2111,7 +2111,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="inscription-avec-mot-de-passe">
-    ## Écran : signup-password
+## Écran : signup-password {#screen-signup-password}
 
     <Frame><Frame>![Capture d'écran de référence signup-password](https://cdn2.auth0.com/docs/1.14516.0/media/articles/universal-login/text-customization/signup-password.png)</Frame></Frame>
 
@@ -2175,7 +2175,7 @@ Les valeurs de `prompt` disponibles sont :
   </Accordion>
 
   <Accordion title="statut">
-    ## Écran : status
+## Écran : status {#screen-status}
 
     <Frame>![capture d’écran de référence status](/docs/images/cdy7uua7fh8z/6sVCv5Bq3QI0rhe21wzU8E/universal-login-text-prompt-status.png)</Frame>
 
@@ -2193,7 +2193,7 @@ Les valeurs de `prompt` disponibles sont :
 </AccordionGroup>
 
 <div id="variables">
-  ## Variables
+  ## Variables {#variables}
 </div>
 
 Certains écrans contiennent des variables dans le texte qui sont remplacées à l’exécution en fonction d’informations contextuelles. Comme des variables différentes sont disponibles pour chaque écran, il n’est pas garanti qu’une variable donnée fonctionne ailleurs que sur son écran d’origine.
@@ -2210,7 +2210,7 @@ Certains écrans contiennent des variables dans le texte qui sont remplacées à
 | $&#123;appName&#125;          | Nom de l’application Guardian Push personnalisée                                                                 |
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [L’expérience Universal Login](/docs/fr-ca/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience)

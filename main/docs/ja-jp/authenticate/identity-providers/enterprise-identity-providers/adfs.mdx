@@ -19,7 +19,7 @@ import {AuthCodeBlock} from "/snippets/ja-jp/AuthCodeBlock.jsx";
 スクリプトを使用して接続を設定することも、手動で設定することもできます。
 
 <div id="scripted-setup">
-  ## スクリプトによる設定
+  ## スクリプトによる設定 {#scripted-setup}
 </div>
 
 Windows PowerShell ウィンドウで、次の 2 つのコマンドを実行します。
@@ -71,7 +71,7 @@ Set-ADFSRelyingPartyTrust –TargetName $realm –IssuanceAuthorizationRules $rS
 ```
 
 <div id="manual-setup-part-1-add-a-relying-party-trust">
-  ## 手動設定パート 1: 証明書利用者信頼を追加する
+  ## 手動設定パート 1: 証明書利用者信頼を追加する {#manual-setup-part-1-add-a-relying-party-trust}
 </div>
 
 1. ADFS Management Console を開きます。
@@ -91,7 +91,7 @@ Set-ADFSRelyingPartyTrust –TargetName $realm –IssuanceAuthorizationRules $rS
 13. **Next** をクリックし、最後に **Close** をクリックします。
 
 <div id="manual-setup-part-2-add-a-claim-issuance-policy-rule">
-  ## 手動設定パート 2: クレーム発行ポリシー ルールを追加する
+  ## 手動設定パート 2: クレーム発行ポリシー ルールを追加する {#manual-setup-part-2-add-a-claim-issuance-policy-rule}
 </div>
 
 1. Windows Server 2019 を使用している場合は、[証明書利用者信頼の追加] ウィザードの完了時に [クレーム発行ポリシーの編集] ダイアログ ボックスが自動的に開きます。Windows 2012 または 2016 を使用している場合は、次の手順に従ってください。
@@ -115,7 +115,7 @@ Set-ADFSRelyingPartyTrust –TargetName $realm –IssuanceAuthorizationRules $rS
 | Surname             | Surname        |
 
 <div id="add-additional-ldap-attributes">
-  ### LDAP 属性を追加する
+  ### LDAP 属性を追加する {#add-additional-ldap-attributes}
 </div>
 
 前の手順で設定したマッピングは、最も一般的に使用されるものです。ただし、ユーザー情報として追加の LDAP 属性が必要な場合は、クレームのマッピングをさらに追加できます。
@@ -129,7 +129,7 @@ Set-ADFSRelyingPartyTrust –TargetName $realm –IssuanceAuthorizationRules $rS
       Auth0 では、クレームタイプの name 部分 (たとえば `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/department` の `department`) がユーザープロファイルの属性名として使用されます。
 
 <div id="next-steps">
-  ## 次のステップ
+  ## 次のステップ {#next-steps}
 </div>
 
 接続が正しく動作するようになったので、次はそれを使用するようにアプリケーションを設定します。手順に沿った Quickstarts を利用することも、ライブラリや API を使用することもできます。

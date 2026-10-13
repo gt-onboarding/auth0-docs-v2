@@ -6,7 +6,7 @@ description: "Renvoie la liste des authentificateurs MFA associés à l’utilis
 import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `GET /mfa/authenticators`
@@ -19,7 +19,7 @@ Pour accéder à ce point de terminaison, vous devez inclure un jeton d’accès
 * `audience`: `https://{yourDomain}/mfa/`
 
 <div id="headers">
-  ## En-têtes
+  ## En-têtes {#headers}
 </div>
 
 <ParamField header="Authorization" type="string" required>
@@ -27,7 +27,7 @@ Pour accéder à ce point de terminaison, vous devez inclure un jeton d’accès
 </ParamField>
 
 <div id="response-schema">
-  ## Schéma de réponse
+  ## Schéma de réponse {#response-schema}
 </div>
 
 <ResponseSchema>
@@ -55,7 +55,7 @@ Pour accéder à ce point de terminaison, vous devez inclure un jeton d’accès
 </ResponseSchema>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                      |

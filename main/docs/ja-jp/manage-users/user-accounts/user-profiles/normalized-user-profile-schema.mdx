@@ -26,7 +26,7 @@ Auth0 が共通スキーマにマッピングする属性を以下に示しま�
 [カスタムデータベース](/docs/ja-jp/authenticate/database-connections/custom-db) 用のログインスクリプトを作成している場合は、ユーザープロファイルの情報を返す必要があります。ユーザーを正しく識別するには、一意で不変の `user_id` プロパティが必須です ([ユーザーを一意に識別する](/docs/ja-jp/manage-users/user-accounts/identify-users) を参照) 。
 
 <div id="additional-attributes">
-  ## 追加属性
+  ## 追加属性 {#additional-attributes}
 </div>
 
 ユーザープロファイルには、`identities` 配列が含まれます。最も一般的なケース (1 つのプロバイダーでログインする場合) では、この配列に含まれる要素は 1 つだけです。ユーザーにリンクされた複数のアカウントがある場合は、関連付けられた各アカウントに対応する要素がこの配列に含まれます。詳しくは、[User Account Linking](/docs/ja-jp/manage-users/user-accounts/user-account-linking) を参照してください。

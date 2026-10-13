@@ -6,7 +6,7 @@ description: "Vérifier l’AMF au moyen d’un code de récupération lorsque l
 import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `POST /oauth/token`
@@ -16,7 +16,7 @@ Vérifie l’authentification multifacteur (AMF) au moyen d’un code de récup�
 Pour vérifier l’authentification AMF au moyen d’un code de récupération, votre application doit inviter l’utilisateur à saisir le code de récupération, puis envoyer une requête à `/oauth/token` avec `grant_type=http://auth0.com/oauth/grant-type/mfa-recovery-code`. Incluez le code de récupération saisi ainsi que le `mfa_token` de l’erreur `mfa_required`. Si le code de récupération est accepté, la réponse sera la même que pour les types d’attribution `password` ou `http://auth0.com/oauth/grant-type/password-realm`. Elle peut aussi inclure un champ `recovery_code`, que l’application doit afficher à l’utilisateur final afin qu’il soit conservé de façon sécuritaire pour une utilisation ultérieure.
 
 <div id="headers">
-  ## En-têtes
+  ## En-têtes {#headers}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -24,7 +24,7 @@ Pour vérifier l’authentification AMF au moyen d’un code de récupération, 
 </ParamField>
 
 <div id="body-parameters">
-  ## Paramètres du corps
+  ## Paramètres du corps {#body-parameters}
 </div>
 
 <div className="prose-sm prose-gray dark:prose-invert">
@@ -64,7 +64,7 @@ Pour vérifier l’authentification AMF au moyen d’un code de récupération, 
 </ParamField>
 
 <div id="response-schema">
-  ## Schéma de réponse
+  ## Schéma de réponse {#response-schema}
 </div>
 
 <ResponseSchema>
@@ -86,7 +86,7 @@ Pour vérifier l’authentification AMF au moyen d’un code de récupération, 
 </ResponseSchema>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                                                               |

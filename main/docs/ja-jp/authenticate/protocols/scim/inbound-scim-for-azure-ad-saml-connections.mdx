@@ -13,7 +13,7 @@ validatedOn: 2026-02-09
 ユーザーを Auth0 の SCIM エンドポイントにプロビジョニングするには、Microsoft Entra ID (旧称 Azure Active Directory) で非ギャラリーのエンタープライズ アプリケーションを設定する必要があります。
 
 <div id="configure-scim-settings-in-auth0">
-  ## Auth0 で SCIM 設定を行う
+  ## Auth0 で SCIM 設定を行う {#configure-scim-settings-in-auth0}
 </div>
 
 1. [<Tooltip tip="..." cta="用語集を表示" href="/docs/ja-jp/glossary?term=Auth0%20Dashboard">Auth0 Dashboard</Tooltip>](https://manage.auth0.com/#/) で、**Authentication &gt; Enterprise &gt; SAML &gt; [YOUR&#95;AUTH0&#95;CONNECTION] &gt; Provisioning** に移動します。
@@ -31,7 +31,7 @@ validatedOn: 2026-02-09
 4. 必要に応じて、**Save Changes** を選択します。
 
 <div id="retrieve-scim-endpoint-url-and-token">
-  ## SCIM エンドポイント URL とトークンを取得する
+  ## SCIM エンドポイント URL とトークンを取得する {#retrieve-scim-endpoint-url-and-token}
 </div>
 
 Microsoft Entra ID テナントで SCIM を設定するには、Auth0 から SCIM エンドポイント URL とトークンを取得する必要があります。これらの値は Auth0 Dashboard から取得できます。
@@ -46,7 +46,7 @@ Microsoft Entra ID テナントで SCIM を設定するには、Auth0 から SCI
 ベストプラクティスについては、[Configure Inbound SCIM deployment guidelines](/docs/ja-jp/authenticate/protocols/scim/configure-inbound-scim#deployment-guidelines) を参照してください。
 
 <div id="configure-scim-in-entra-id-for-saml-apps">
-  ## SAML アプリケーション用に Entra ID で SCIM を設定する
+  ## SAML アプリケーション用に Entra ID で SCIM を設定する {#configure-scim-in-entra-id-for-saml-apps}
 </div>
 
 SAML アプリケーションがまだ登録されていない場合は、[Configure IdP-Initiated SAML Login with Azure as the IdP](https://support.auth0.com/center/s/article/Configure-IdP-Initiated-SAML-Login-with-Azure-as-the-IdP) に従って、Entra ID テナントにカスタムの非ギャラリー エンタープライズ アプリケーションを登録してください。
@@ -71,7 +71,7 @@ SAML アプリケーションがまだ登録されていない場合は、[Confi
 11. **OK** を選択して設定を保存します。これで **Edit Attribute** 画面が閉じます。次に、**Attribute Mapping** 画面で **Save** を選択します。
 
 <div id="testing">
-  ## テスト
+  ## テスト {#testing}
 </div>
 
 1. SCIM 接続をテストするには、エンタープライズ アプリケーションの概要画面で **Manage &gt; Provisioning &gt; Provision on Demand** に移動します。

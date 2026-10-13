@@ -2,7 +2,7 @@
   "pages": [
     "docs/ja-jp/quickstarts",
     {
-      "group": "シングルページアプリ",
+      "group": "Single Page App",
       "pages": [
         "docs/ja-jp/quickstart/spa/react",
         "docs/ja-jp/quickstart/spa/angular",
@@ -40,7 +40,7 @@
       ]
     },
     {
-      "group": "Native/モバイルアプリ",
+      "group": "Native/Mobile App",
       "pages": [
         "docs/ja-jp/quickstart/native/ios-swift",
         "docs/ja-jp/quickstart/native/android",
@@ -61,7 +61,7 @@
       ]
     },
     {
-      "group": "バックエンド/API",
+      "group": "Backend/API",
       "pages": [
         "docs/ja-jp/quickstart/backend/nodejs",
         "docs/ja-jp/quickstart/backend/express-api-beta",

@@ -16,7 +16,7 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
 
 <Tabs>
   <Tab title="React">
-    ## Exigences de configuration
+## Exigences de configuration {#setup-requirements}
 
     <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
       **Configuration d’Auth0 requise**—Assurez-vous que l’API
@@ -24,7 +24,7 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
       →](/docs/fr-ca/get-started/universal-components/web/components/build-delegated-admin#enable-the-my-organization-api)
     </Callout>
 
-    ## Installation
+## Installation {#installation}
 
     <CodeGroup>
       ```bash pnpm wrap lines
@@ -41,7 +41,7 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
       pour les utilitaires partagés et l’intégration avec Auth0.
     </Callout>
 
-    ## Démarrage
+## Démarrage {#get-started}
 
     ```tsx wrap lines
     import { SsoProviderTable } from "@auth0/universal-components-react";
@@ -156,9 +156,9 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
       ```
     </Accordion>
 
-    ## Props
+## Props {#props}
 
-    ### Props requis
+### Props requis {#required-props}
 
     Les props obligatoires sont essentiels au fonctionnement du composant. `SsoProviderTable` exige les deux actions de navigation afin de prendre en charge le workflow habituel de gestion des Providers.
 
@@ -280,7 +280,7 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
 
     ***
 
-    ### Props d&#39;affichage
+### Props d&#39;affichage {#display-props}
 
     Les props d&#39;affichage déterminent la façon dont le composant est rendu, sans modifier son comportement. Utilisez-les pour masquer des sections ou activer le mode lecture seule.
 
@@ -326,7 +326,7 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
 
     ***
 
-    ### Props de l&#39;Action
+### Props de l&#39;Action {#action-props}
 
     Les Props d&#39;action gèrent les interactions de l&#39;utilisateur au-delà de la navigation de base. Elles régissent les opérations de suppression, de retrait et d&#39;activation/désactivation.
 
@@ -492,7 +492,7 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
 
     ***
 
-    ### Props de personnalisation
+### Props de personnalisation {#customization-props}
 
     Les props de personnalisation vous permettent d&#39;adapter le composant à votre image de marque, à votre locale et à vos exigences de validation, sans avoir à modifier le code source.
 
@@ -676,11 +676,11 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
 
     ***
 
-    ## Personnalisation avancée
+## Personnalisation avancée {#advanced-customization}
 
     Le composant `SsoProviderTable` se compose de sous-composants et de hooks plus petits. Vous pouvez les importer individuellement pour créer des workflows personnalisés de gestion des fournisseurs si vous utilisez shadcn.
 
-    ### Sous-composants disponibles
+### Sous-composants disponibles {#available-subcomponents}
 
     Pour des cas d&#39;utilisation avancés, vous pouvez importer des sous-composants individuels afin de créer des interfaces personnalisées de gestion des fournisseurs. C&#39;est utile lorsque vous devez intégrer la table dans une autre mise en page ou personnaliser le rendu des rangées.
 
@@ -735,7 +735,7 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
       </tbody>
     </table>
 
-    ### Hooks disponibles
+### Hooks disponibles {#available-hooks}
 
     Ces hooks fournissent la logique sous-jacente sans aucune UI. Utilisez-les pour créer des interfaces entièrement personnalisées tout en tirant parti de l’intégration au niveau de l’API Auth0.
 
@@ -768,14 +768,14 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
   </Tab>
 
   <Tab title="Next.js">
-    ## Exigences de configuration
+## Exigences de configuration {#setup-requirements-2}
 
     <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
       **Configuration d’Auth0 requise**—Assurez-vous que votre tenant est configuré avec l’API My Organization. [Consultez le guide de configuration
       →](/docs/fr-ca/get-started/universal-components/web/components/build-delegated-admin#configure-auth0-dashboard)
     </Callout>
 
-    ## Installation
+## Installation {#installation-2}
 
     <CodeGroup>
       ```bash npm (Recommended) wrap lines
@@ -792,7 +792,7 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
       @auth0/universal-components-core, qui fournit des utilitaires partagés et l’intégration à Auth0.
     </Callout>
 
-    ## Pour commencer
+## Pour commencer {#get-started-2}
 
     ```tsx page.tsx wrap lines
     import { SsoProviderTable } from "@auth0/universal-components-react";
@@ -887,9 +887,9 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
       ```
     </Accordion>
 
-    ## Props
+## Props {#props-2}
 
-    ### Props principales
+### Props principales {#core-props}
 
     Les props de base sont essentielles au fonctionnement du composant. `SsoProviderTable` exige les deux actions de navigation afin de prendre en charge le workflow habituel de gestion des Providers.
 
@@ -1011,7 +1011,7 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
 
     ***
 
-    ### Props d&#39;affichage
+### Props d&#39;affichage {#display-props-2}
 
     Les props d&#39;affichage déterminent la façon dont le composant est rendu, sans influer sur son comportement. Utilisez-les pour masquer des sections ou activer le mode lecture seule.
 
@@ -1057,7 +1057,7 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
 
     ***
 
-    ### Props de l&#39;Action
+### Props de l&#39;Action {#action-props-2}
 
     Les props d&#39;action gèrent les interactions de l&#39;utilisateur au-delà de la navigation de base. Ce sont elles qui régissent les opérations de suppression, de retrait et d&#39;activation/désactivation.
 
@@ -1223,7 +1223,7 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
 
     ***
 
-    ### Props de personnalisation
+### Props de personnalisation {#customization-props-2}
 
     Les props de personnalisation vous permettent d&#39;adapter le composant à votre image de marque, à votre locale et à vos exigences de validation, sans modifier le code source.
 
@@ -1407,11 +1407,11 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
 
     ***
 
-    ## Personnalisation avancée
+## Personnalisation avancée {#advanced-customization-2}
 
     Le composant `SsoProviderTable` se compose de sous-composants et de hooks plus petits. Vous pouvez les importer individuellement afin de créer des workflows personnalisés de gestion des fournisseurs.
 
-    ### Sous-composants disponibles
+### Sous-composants disponibles {#available-subcomponents-2}
 
     Pour les cas d&#39;utilisation avancés, vous pouvez importer des sous-composants individuels afin de créer des interfaces de gestion des fournisseurs personnalisées. C&#39;est utile lorsque vous devez intégrer la table dans une autre mise en page ou personnaliser le rendu des lignes.
 
@@ -1466,7 +1466,7 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
       </tbody>
     </table>
 
-    ### Hooks disponibles
+### Hooks disponibles {#available-hooks-2}
 
     Ces hooks fournissent la logique sous-jacente, sans aucune UI. Utilisez-les pour créer des interfaces entièrement personnalisées tout en tirant parti de l’intégration au niveau de l’API Auth0.
 
@@ -1499,7 +1499,7 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
   </Tab>
 
   <Tab title="shadcn">
-    ## Exigences de configuration
+## Exigences de configuration {#setup-requirements-3}
 
     <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
       **Configuration d’Auth0 requise**—Assurez-vous que votre tenant est configuré avec
@@ -1507,7 +1507,7 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
       →](/docs/fr-ca/get-started/universal-components/web/components/build-delegated-admin#configure-auth0-dashboard)
     </Callout>
 
-    ## Installation
+## Installation {#installation-3}
 
     ```bash wrap lines
     npx shadcn@latest add https://auth0-universal-components.vercel.app/r/my-organization/sso-provider-table.json
@@ -1518,7 +1518,7 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
       qui fournit des utilitaires partagés et l’intégration à Auth0.
     </Callout>
 
-    ## Commencer
+## Commencer {#get-started-3}
 
     ```tsx wrap lines
     import { SsoProviderTable } from "@/components/auth0/my-organization/sso-provider-table";
@@ -1632,9 +1632,9 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
       ```
     </Accordion>
 
-    ## Props
+## Props {#props-3}
 
-    ### Props principaux
+### Props principaux {#core-props-2}
 
     Les props principales sont essentielles au fonctionnement du composant. `SsoProviderTable` exige les deux actions de navigation afin de prendre en charge le workflow habituel de gestion des Providers.
 
@@ -1756,7 +1756,7 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
 
     ***
 
-    ### Props d&#39;affichage
+### Props d&#39;affichage {#display-props-3}
 
     Les props d&#39;affichage déterminent la façon dont le composant est rendu, sans en modifier le comportement. Utilisez-les pour masquer des sections ou activer le mode lecture seule.
 
@@ -1802,7 +1802,7 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
 
     ***
 
-    ### Props de l&#39;Action
+### Props de l&#39;Action {#action-props-3}
 
     Les props d&#39;action gèrent les interactions de l&#39;utilisateur au-delà de la navigation de base. Elles régissent les opérations de suppression, de retrait ainsi que d&#39;activation et de désactivation.
 
@@ -1968,7 +1968,7 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
 
     ***
 
-    ### Props de personnalisation
+### Props de personnalisation {#customization-props-3}
 
     Les props de personnalisation vous permettent d&#39;adapter le composant à votre image de marque, à votre locale et à vos exigences de validation, sans modifier le code source.
 
@@ -2152,11 +2152,11 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
 
     ***
 
-    ## Personnalisation avancée
+## Personnalisation avancée {#advanced-customization-3}
 
     Le composant `SsoProviderTable` se compose de sous-composants et de hooks plus petits. Vous pouvez les importer individuellement pour créer des workflows personnalisés de gestion des fournisseurs si vous utilisez shadcn.
 
-    ### Sous-composants disponibles
+### Sous-composants disponibles {#available-subcomponents-3}
 
     Pour les cas d&#39;utilisation avancés, vous pouvez importer les sous-composants individuellement afin de créer des interfaces de gestion des fournisseurs sur mesure. C&#39;est utile lorsque vous devez intégrer la table dans un autre layout ou personnaliser le rendu des rows.
 
@@ -2211,7 +2211,7 @@ Le composant `SsoProviderTable` offre une interface unifiée pour afficher et co
       </tbody>
     </table>
 
-    ### Hooks disponibles
+### Hooks disponibles {#available-hooks-3}
 
     Ces hooks fournissent la logique sous-jacente, sans aucune UI. Utilisez-les pour créer des interfaces entièrement personnalisées tout en profitant de l’intégration au niveau de l’API Auth0.
 

@@ -4,7 +4,7 @@ description: "Démarrez le flux implicite OAuth 2.0 pour obtenir des jetons dire
 ---
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `GET /authorize`
@@ -12,11 +12,11 @@ description: "Démarrez le flux implicite OAuth 2.0 pour obtenir des jetons dire
 Il s’agit du type d’autorisation OAuth 2.0 utilisé par les applications web pour accéder à une API.
 
 <div id="responses">
-  ### Réponses
+  ### Réponses {#responses}
 </div>
 
 <div id="302">
-  #### 302
+  #### 302 {#302}
 </div>
 
 Une requête réussie redirigera l’utilisateur vers l’URL de rappel spécifiée avec le jeton d’accès.
@@ -27,7 +27,7 @@ Location: ${account.callback}#access_token=TOKEN&state=STATE&token_type=TYPE&exp
 ```
 
 <div id="remarks">
-  ### Remarques
+  ### Remarques {#remarks}
 </div>
 
 * La valeur `redirect_uri` doit être indiquée comme une URL de rappel valide dans les [paramètres de votre application](https://manage.auth0.com/dashboard).
@@ -37,7 +37,7 @@ Location: ${account.callback}#access_token=TOKEN&state=STATE&token_type=TYPE&exp
 * L’authentification silencieuse vous permet d’exécuter un flux d’authentification dans lequel Auth0 répond uniquement par des redirections, sans jamais afficher de page de connexion. Lorsqu’un jeton d’accès a expiré, l’authentification silencieuse peut être utilisée pour en obtenir un nouveau sans interaction de l’utilisateur, à condition que la session d’authentification unique (SSO) de l’utilisateur n’ait pas expiré.
 
 <div id="learn-more">
-  ### En savoir plus
+  ### En savoir plus {#learn-more}
 </div>
 
 * [Flux implicite](https://auth0.com/docs/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post)
@@ -46,7 +46,7 @@ Location: ${account.callback}#access_token=TOKEN&state=STATE&token_type=TYPE&exp
 * [Authentification silencieuse](https://auth0.com/docs/authenticate/login/configure-silent-authentication)
 
 <div id="query-parameters">
-  ## Paramètres de requête
+  ## Paramètres de requête {#query-parameters}
 </div>
 
 <ParamField query="audience" type="string">
@@ -100,7 +100,7 @@ Location: ${account.callback}#access_token=TOKEN&state=STATE&token_type=TYPE&exp
 </ParamField>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                                                    |

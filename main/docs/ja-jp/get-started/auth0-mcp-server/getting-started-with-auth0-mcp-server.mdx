@@ -13,13 +13,13 @@ sidebarTitle: はじめに
 [Auth0 Model Context Protocol (MCP) Server](/docs/ja-jp/get-started/auth0-mcp-server) をインストールし、よく使われている複数の [MCP クライアント](https://modelcontextprotocol.io/clients) と連携することで、チームやユーザーの活用の幅を広げましょう。
 
 <div id="installation-and-configuration">
-  ## インストールと設定
+  ## インストールと設定 {#installation-and-configuration}
 </div>
 
 ターミナルで次のいずれかのコマンドを実行して、Auth0 MCP Serverをインストールします。
 
 <div id="for-claude-desktop-default">
-  ### Claude Desktop の場合 (デフォルト)
+  ### Claude Desktop の場合 (デフォルト) {#for-claude-desktop-default}
 </div>
 
 ```bash lines
@@ -27,7 +27,7 @@ npx @auth0/auth0-mcp-server init
 ```
 
 <div id="for-cursor">
-  ### Cursor の場合
+  ### Cursor の場合 {#for-cursor}
 </div>
 
 ```bash lines
@@ -35,7 +35,7 @@ npx @auth0/auth0-mcp-server init --client cursor
 ```
 
 <div id="for-windsurf">
-  ### Windsurf向け
+  ### Windsurf向け {#for-windsurf}
 </div>
 
 ```bash lines
@@ -43,7 +43,7 @@ npx @auth0/auth0-mcp-server init --client windsurf
 ```
 
 <div id="other-mcp-clients">
-  ### その他のMCPクライアント
+  ### その他のMCPクライアント {#other-mcp-clients}
 </div>
 
 Auth0 MCP Serverを他のMCPクライアントで使用するには、この設定をクライアントに手動で追加し、変更を反映させるために再起動してください。
@@ -64,7 +64,7 @@ Auth0 MCP Serverを他のMCPクライアントで使用するには、この設�
 ```
 
 <div id="authenticate-with-auth0">
-  ## Auth0 で認証する
+  ## Auth0 で認証する {#authenticate-with-auth0}
 </div>
 
 <Tooltip tip="OAuth 2.0: 認可プロトコルとワークフローを定義する認可フレームワーク。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=OAuth+2.0">OAuth 2.0</Tooltip> のデバイス<Tooltip tip="OAuth 2.0: 認可プロトコルとワークフローを定義する認可フレームワーク。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=authorization+flow">認可フロー</Tooltip>を開始するため、ブラウザーが自動的に開きます。Auth0 アカウントにログインし、求められたアクセス許可を付与してください。
@@ -74,11 +74,11 @@ Auth0 MCP Serverを他のMCPクライアントで使用するには、この設�
 </Callout>
 
 <div id="verify-your-integration">
-  ## 連携を確認する
+  ## 連携を確認する {#verify-your-integration}
 </div>
 
 <div id="claude-desktop">
-  ### Claude Desktop
+  ### Claude Desktop {#claude-desktop}
 </div>
 
 1. 新しくインストールした Auth0 MCP Server が確実に認識されるよう、Claude Desktop を再起動します。
@@ -86,7 +86,7 @@ Auth0 MCP Serverを他のMCPクライアントで使用するには、この設�
 3. Claude Desktop との会話を開始し、Auth0 テナントの管理についてサポートを求めます。
 
 <div id="cursor">
-  ### Cursor
+  ### Cursor {#cursor}
 </div>
 
 1. 新しくインストールした Auth0 MCP Server を Cursor が認識するよう、Cursor を再起動します。
@@ -94,7 +94,7 @@ Auth0 MCP Serverを他のMCPクライアントで使用するには、この設�
 3. Cursor との会話を開始し、Auth0 テナントの管理についてサポートを依頼します。
 
 <div id="windsurf">
-  ### Windsurf
+  ### Windsurf {#windsurf}
 </div>
 
 1. 新しくインストールした Auth0 MCP Server を Windsurf で認識させるため、Windsurf を再起動します。
@@ -102,7 +102,7 @@ Auth0 MCP Serverを他のMCPクライアントで使用するには、この設�
 3. Windsurf との会話を開始し、Auth0 テナントの管理についてサポートを依頼します。
 
 <div id="common-troubleshooting-steps">
-  ## 一般的なトラブルシューティング手順
+  ## 一般的なトラブルシューティング手順 {#common-troubleshooting-steps}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -110,7 +110,7 @@ Auth0 MCP Serverを他のMCPクライアントで使用するには、この設�
 </Callout>
 
 <div id="get-command-line-help">
-  #### コマンドラインヘルプを表示:
+  #### コマンドラインヘルプを表示: {#get-command-line-help}
 </div>
 
 次のコマンドで、利用可能なコマンドの一覧と使用例を確認できます。
@@ -120,7 +120,7 @@ npx @auth0/auth0-mcp-server help
 ```
 
 <div id="authentication-issues">
-  #### 認証に関する問題
+  #### 認証に関する問題 {#authentication-issues}
 </div>
 
 Auth0 テナントで適切な権限が設定されていることを確認し、次の方法で再初期化をお試しください：
@@ -130,7 +130,7 @@ npx @auth0/auth0-mcp-server init
 ```
 
 <div id="connection-failures">
-  #### 接続エラー:
+  #### 接続エラー: {#connection-failures}
 </div>
 
 1. 次のコマンドで、MCP サーバーが実行中であることを確認します。
@@ -142,7 +142,7 @@ npx @auth0/auth0-mcp-server init
 2. サーバーが実行中であることを確認したら、AI クライアントを再起動します。
 
 <div id="claude-cant-connect-to-the-server-error">
-  #### Claude がサーバーに接続できないエラー:
+  #### Claude がサーバーに接続できないエラー: {#claude-cant-connect-to-the-server-error}
 </div>
 
 1. インストール後に Claude Desktop を再起動します。
@@ -153,17 +153,17 @@ npx @auth0/auth0-mcp-server init
    ```
 
 <div id="api-errors">
-  #### API エラー：
+  #### API エラー： {#api-errors}
 </div>
 
 Auth0のトークンの権限と有効期限を確認してください。詳細なログを確認するには、デバッグモードを有効にしてください (以下を参照) 。
 
 <div id="debug-configuration-issues">
-  ## 設定の問題をデバッグする
+  ## 設定の問題をデバッグする {#debug-configuration-issues}
 </div>
 
 <div id="enable-debug-mode">
-  #### デバッグモードを有効にする
+  #### デバッグモードを有効にする {#enable-debug-mode}
 </div>
 
 詳細なログを表示するには、デバッグモードを有効にします：
@@ -173,7 +173,7 @@ export DEBUG=auth0-mcp
 ```
 
 <div id="debug-client-logs">
-  #### MCPクライアントログのデバッグ
+  #### MCPクライアントログのデバッグ {#debug-client-logs}
 </div>
 
 Claude Desktopで詳細なMCPクライアントログを取得できます：
@@ -190,7 +190,7 @@ DEBUG=auth0-mcp npx @auth0/auth0-mcp-server run
 ```
 
 <div id="advanced-debugging-using-mcp-inspector">
-  #### MCP Inspector を使用した高度なデバッグ
+  #### MCP Inspector を使用した高度なデバッグ {#advanced-debugging-using-mcp-inspector}
 </div>
 
 高度なトラブルシューティングには、MCP Inspector を使用してください。
@@ -200,7 +200,7 @@ npx @modelcontextprotocol/inspector -e DEBUG='auth0-mcp' @auth0/auth0-mcp-server
 ```
 
 <div id="next-steps">
-  ## 次のステップ
+  ## 次のステップ {#next-steps}
 </div>
 
 [Auth0 Model Context Protocol (MCP) Server Tools Reference](/docs/ja-jp/get-started/auth0-mcp-server/auth0-mcp-tools-reference)にアクセスしてAuth0 MCP Serverの全機能を確認するか、実践的な例やユースケースについてはAuth0 Model Context Protocol Server Guidesをご覧ください。

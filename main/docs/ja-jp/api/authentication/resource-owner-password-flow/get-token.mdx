@@ -6,7 +6,7 @@ description: "リダイレクトを使用できない信頼できるアプリケ
 import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `POST /oauth/token`
@@ -18,7 +18,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 これは、高い信頼性が求められるアプリが API にアクセスするために使用する OAuth 2.0 のグラントです。このフローでは通常、ユーザーエージェント (ブラウザ) 上の対話型フォームを使って、エンドユーザーに認証情報 (ユーザー名/パスワード) を入力してもらいます。この情報はバックエンドに送信され、そこから Auth0 に送られます。そのため、アプリケーションがこの情報を安全に扱えるほど十分に信頼できることが不可欠です。
 
 <div id="request-headers">
-  ### リクエストヘッダー
+  ### リクエストヘッダー {#request-headers}
 </div>
 
 | Parameter             | Description                                                          |
@@ -26,11 +26,11 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 | `auth0-forwarded-for` | エンドユーザーの IP アドレスを文字列で指定します。サーバー側の環境でブルートフォース対策を有効にする場合は、これを設定してください。 |
 
 <div id="responses">
-  ### レスポンス
+  ### レスポンス {#responses}
 </div>
 
 <div id="200">
-  #### 200
+  #### 200 {#200}
 </div>
 
 リクエストが成功すると、アクセストークンが返されます。
@@ -46,7 +46,7 @@ Content-Type: application/json
 ```
 
 <div id="remarks">
-  ### 備考
+  ### 備考 {#remarks}
 </div>
 
 * アプリケーションに発行されるスコープは、要求したスコープと異なる場合があります。その場合、レスポンスの JSON には `scope` パラメーターが含まれます。
@@ -55,7 +55,7 @@ Content-Type: application/json
 * Auth0 では、ユーザー名とパスワードに加えて、本人確認のためにエンドユーザーへ追加の認証要素の提示を求める場合があります。リクエストでは、多要素認証用の `mfa_token` とともに `mfa_required` エラーが返されることがあります。
 
 <div id="learn-more">
-  ### 詳細はこちら
+  ### 詳細はこちら {#learn-more}
 </div>
 
 * [高信頼アプリケーションから API を呼び出す](https://auth0.com/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow)
@@ -63,7 +63,7 @@ Content-Type: application/json
 * [多要素認証と Resource Owner Password フロー](https://auth0.com/docs/secure/multi-factor-authentication/authenticate-using-ropg-flow-with-mfa)
 
 <div id="headers">
-  ## ヘッダー
+  ## ヘッダー {#headers}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -71,7 +71,7 @@ Content-Type: application/json
 </ParamField>
 
 <div id="body-parameters">
-  ## Body Parameters
+  ## Body Parameters {#body-parameters}
 </div>
 
 <div className="prose-sm prose-gray dark:prose-invert">
@@ -115,7 +115,7 @@ Content-Type: application/json
 </ParamField>
 
 <div id="response-schema">
-  ## レスポンススキーマ
+  ## レスポンススキーマ {#response-schema}
 </div>
 
 <ResponseSchema>
@@ -133,7 +133,7 @@ Content-Type: application/json
 </ResponseSchema>
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | ステータス | 説明             |

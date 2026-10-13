@@ -17,7 +17,7 @@ Il est important de maintenir le nombre de jetons d’actualisation à un niveau
 Vous pouvez accroître la sécurité en utilisant la [rotation des jetons d’actualisation](/docs/fr-ca/secure/tokens/refresh-tokens/refresh-token-rotation), qui émet un nouveau jeton d’actualisation et invalide le jeton précédent à chaque requête faite à Auth0 pour obtenir un nouveau jeton d’accès. La rotation du jeton d’actualisation réduit le risque qu’un jeton d’actualisation soit compromis.
 
 <div id="limitations">
-  ### Limitations
+  ### Limitations {#limitations}
 </div>
 
 * Auth0 limite à 200 le nombre de jetons d’actualisation actifs par utilisateur et par application. Cette limite s’applique uniquement aux jetons actifs. Si la limite est atteinte et qu’un nouveau jeton d’actualisation est créé, le système révoque et supprime le jeton le plus ancien pour cet utilisateur et cette application. Les jetons révoqués et expirés ne sont pas comptabilisés dans cette limite. Pour consulter nos recommandations et pratiques exemplaires afin d’éviter une accumulation excessive de jetons, lisez [Pratiques exemplaires relatives aux jetons](/docs/fr-ca/secure/tokens/token-best-practices).
@@ -25,7 +25,7 @@ Vous pouvez accroître la sécurité en utilisant la [rotation des jetons d’ac
 * Après un [échange de jeton d’actualisation](/docs/fr-ca/secure/tokens/refresh-tokens/use-refresh-tokens), Auth0 ne met pas à jour les propriétés `event.refresh_token.device.last*` pour les jetons sans expiration. Pour savoir comment activer l’expiration des jetons d’actualisation, lisez [Configurer l’expiration des jetons d’actualisation](/docs/fr-ca/secure/tokens/refresh-tokens/configure-refresh-token-expiration).
 
 <div id="enable-oidc-flag">
-  ### Activer l’indicateur OIDC
+  ### Activer l’indicateur OIDC {#enable-oidc-flag}
 </div>
 
 Le comportement du jeton d’actualisation s’applique aux applications conformes à OIDC. Vous pouvez configurer une application pour qu’elle soit conforme à OIDC de l’une des façons suivantes :
@@ -34,11 +34,11 @@ Le comportement du jeton d’actualisation s’applique aux applications conform
 2. Transmettre un claim `audience` à l’endpoint `/authorize` de l’Authentication API.
 
 <div id="sdk-support">
-  ## Soutien pour le SDK
+  ## Soutien pour le SDK {#sdk-support}
 </div>
 
 <div id="for-web-apps">
-  ### Pour les applications web
+  ### Pour les applications web {#for-web-apps}
 </div>
 
 Les SDK Auth0 prennent en charge les jetons d’actualisation, notamment :
@@ -51,7 +51,7 @@ Les SDK Auth0 prennent en charge les jetons d’actualisation, notamment :
 Pour obtenir la liste complète, consultez les [Quickstarts](/docs/fr-ca/quickstart/webapp).
 
 <div id="for-single-page-apps">
-  ### Pour les applications monopages
+  ### Pour les applications monopages {#for-single-page-apps}
 </div>
 
 Offrir une authentification sécurisée dans les SPA comporte plusieurs défis selon le cas d’utilisation de votre application. Les nouveaux mécanismes de protection de la vie privée des navigateurs, comme Intelligent Tracking Prevention (ITP), nuisent à l’expérience utilisateur dans les SPA en bloquant l’accès aux cookies tiers.
@@ -59,7 +59,7 @@ Offrir une authentification sécurisée dans les SPA comporte plusieurs défis s
 Auth0 recommande d’utiliser la <Tooltip tip="Rotation des jetons d’actualisation : stratégie consistant à remplacer fréquemment les jetons d’actualisation afin de minimiser les vulnérabilités. Avec la rotation des jetons d’actualisation, chaque fois que votre application échange un jeton d’actualisation pour obtenir un nouveau jeton d’accès, Auth0 renvoie également un nouveau jeton d’actualisation." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=refresh+token+rotation">rotation des jetons d’actualisation</Tooltip>, qui constitue une méthode sécurisée d’utiliser des jetons d’actualisation dans les SPA tout en offrant aux utilisateurs finaux un accès fluide aux ressources, sans les interruptions de l’expérience utilisateur causées par les technologies de confidentialité des navigateurs comme ITP.
 
 <div id="for-nativemobile-apps">
-  ### Pour les applications natives/mobiles
+  ### Pour les applications natives/mobiles {#for-nativemobile-apps}
 </div>
 
 Pour les applications natives, les jetons d’actualisation améliorent considérablement l’expérience d’authentification. L’utilisateur n’a besoin de s’authentifier qu’une seule fois, au moyen du processus d’authentification Web. Les réauthentifications suivantes peuvent ensuite se faire sans interaction de l’utilisateur, à l’aide du jeton d’actualisation.
@@ -71,7 +71,7 @@ Pour savoir comment utiliser les jetons d’actualisation avec nos SDK mobiles, 
 * [Lock iOS : Enregistrer et renouveler les jetons JWT](/docs/fr-ca/libraries/auth0-swift/auth0-swift-save-and-renew-tokens)
 
 <div id="learn-more">
-  ## Pour en savoir plus
+  ## Pour en savoir plus {#learn-more}
 </div>
 
 * [Obtenir des jetons d’actualisation](/docs/fr-ca/secure/tokens/refresh-tokens/get-refresh-tokens)

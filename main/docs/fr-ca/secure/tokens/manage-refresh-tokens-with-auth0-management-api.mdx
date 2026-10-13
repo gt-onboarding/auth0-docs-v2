@@ -8,7 +8,7 @@ description: Découvrez comment gérer les jetons d’actualisation avec l’Aut
 </Callout>
 
 <div id="management-api-endpoints">
-  ## Points de terminaison de la Management API
+  ## Points de terminaison de la Management API {#management-api-endpoints}
 </div>
 
 La <Tooltip tip="Management API : un produit qui permet aux clients d’effectuer des tâches administratives." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Management+API">Management API</Tooltip> d’Auth0 fournit des points de terminaison pour gérer les jetons d’actualisation individuellement ou en tant qu’ensemble.
@@ -16,7 +16,7 @@ La <Tooltip tip="Management API : un produit qui permet aux clients d’effectu
 Ces points de terminaison complètent les [autres méthodes de révocation des jetons d’actualisation](/docs/fr-ca/secure/tokens/refresh-tokens/revoke-refresh-tokens) et remplacent les points de terminaison de la ressource `device-credentials` en y ajoutant des propriétés étendues et des opérations de révocation en bloc.
 
 <div id="refresh-token-resource">
-  ### Ressource de jeton d’actualisation
+  ### Ressource de jeton d’actualisation {#refresh-token-resource}
 </div>
 
 Vous pouvez consulter ou révoquer un jeton d’actualisation précis à l’aide des points de terminaison suivants :
@@ -27,7 +27,7 @@ Vous pouvez consulter ou révoquer un jeton d’actualisation précis à l’aid
 | Révoquer un jeton d’actualisation par ID                       | `DELETE /api/v2/refresh-tokens/{tokenId}` | `delete:refresh_tokens` |
 
 <div id="user-resource">
-  ### Ressource utilisateur
+  ### Ressource utilisateur {#user-resource}
 </div>
 
 Vous pouvez répertorier ou révoquer tous les jetons d’actualisation d’un utilisateur donné à l’aide des points de terminaison suivants :
@@ -38,7 +38,7 @@ Vous pouvez répertorier ou révoquer tous les jetons d’actualisation d’un u
 | Révoquer tous les jetons d’actualisation d’un utilisateur    | `DELETE /api/v2/users/{userId}/refresh-tokens` | `delete:refresh_tokens` |
 
 <div id="refresh-token-properties">
-  ## Propriétés du jeton d’actualisation
+  ## Propriétés du jeton d’actualisation {#refresh-token-properties}
 </div>
 
 Les <Tooltip tip="Point de terminaison de jeton : point de terminaison du serveur d’autorisation utilisé pour demander des jetons par programmation." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=token+endpoints">points de terminaison de jeton</Tooltip> du jeton d’actualisation renvoient des renseignements pertinents sur le jeton et son historique.
@@ -51,14 +51,14 @@ Les <Tooltip tip="Point de terminaison de jeton : point de terminaison du serve
 | Renseignements sur le client et les serveurs de ressources | Renseignements sommaires sur les applications et les API associées à un jeton d’actualisation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 <div id="limitations">
-  ## Limitations
+  ## Limitations {#limitations}
 </div>
 
 * Les opérations de révocation de jetons d’actualisation (`DELETE`) s’exécutent de façon asynchrone et finissent par devenir cohérentes.
 * Les jetons d’actualisation émis le 21-09-2023 ou après cette date (le 22-02-2024 pour les tenants de la région US-3) contiennent la propriété d’ID de session (`session_id`) avec la valeur appropriée. Les jetons d’actualisation émis avant cette date contiennent cette propriété avec la valeur `null`.
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Jetons d’actualisation](/docs/fr-ca/secure/tokens/refresh-tokens)

@@ -10,7 +10,7 @@ description: "Universal Login の `mfa-push-challenge-push` 画面をカスタ�
 </Frame>
 
 <div id="import">
-  ## インポート
+  ## インポート {#import}
 </div>
 
 各画面には、それぞれ固有のフックとメソッドのセットがあります。SDK は、各画面で **partial import** と **root import** をサポートしています。
@@ -60,7 +60,7 @@ function MfaPushChallengePushScreen() {
 ```
 
 <div id="context-hooks">
-  ## コンテキストフック
+  ## コンテキストフック {#context-hooks}
 </div>
 
 `mfa-push-challenge-push` 画面で、Auth0 のコンテキストデータへの読み取り専用アクセスを提供する画面スコープのフックです。`@auth0/auth0-acul-react/mfa-push-challenge-push` からインポートします。
@@ -172,7 +172,7 @@ function MfaPushChallengePushScreen() {
 </ParamField>
 
 <div id="methods">
-  ## メソッド
+  ## メソッド {#methods}
 </div>
 
 <ParamField body="continueMethod" type="Promise<void>">
@@ -268,7 +268,7 @@ function MfaPushChallengePushScreen() {
 </ParamField>
 
 <div id="commonutility-hooks">
-  ## 共通/ユーティリティ フック
+  ## 共通/ユーティリティ フック {#commonutility-hooks}
 </div>
 
 <ParamField body={<a href="/docs/ja-jp/libraries/acul/react-sdk/API-Reference/Hooks/useMfaPolling">useMfaPolling</a>} type="Hooks">

@@ -12,7 +12,7 @@ Cross App Access (XAA) implémente l’[Identity Assertion Authorization Grant](
 </Note>
 
 <div id="remarks">
-  ## Remarques
+  ## Remarques {#remarks}
 </div>
 
 * L’application demandeuse doit être enregistrée dans le tenant Auth0 de l’application de ressources et la bascule Cross App Access doit être activée.
@@ -20,7 +20,7 @@ Cross App Access (XAA) implémente l’[Identity Assertion Authorization Grant](
 * Les échanges d’ID-JAG sur ce point de terminaison sont limités à 50 % au plus de la limite de débit globale de l’API d’authentification de votre tenant. Pour en savoir plus, consultez [Configurations des limites de débit](/docs/fr-ca/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations).
 
 <div id="request-body">
-  ## Corps de la requête
+  ## Corps de la requête {#request-body}
 </div>
 
 <ParamField body="grant_type" type="string" required>
@@ -44,7 +44,7 @@ Cross App Access (XAA) implémente l’[Identity Assertion Authorization Grant](
 </ParamField>
 
 <div id="response">
-  ## Réponse
+  ## Réponse {#response}
 </div>
 
 | Statut | Description                                                                                                                                                 |
@@ -73,7 +73,7 @@ Cross App Access (XAA) implémente l’[Identity Assertion Authorization Grant](
 </ResponseExample>
 
 <div id="response-fields">
-  ## Champs de réponse
+  ## Champs de réponse {#response-fields}
 </div>
 
 <ResponseField name="access_token" type="string">

@@ -6,7 +6,7 @@ description: "Vérifiez l’AMF au moyen d’un défi hors bande (OOB), comme un
 import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `POST /oauth/token`
@@ -22,13 +22,13 @@ La réponse à cette requête dépend de l’état de la vérification du défi 
 Lorsque la réponse au défi comprend `binding_method: prompt`, votre application doit demander à l’utilisateur de saisir le `binding_code` et l’envoyer dans la requête. Le `binding_code` est habituellement un code à 6 chiffres (semblable à un OTP) inclus dans le défi. Aucun `binding_code` n’est nécessaire si la réponse au défi ne comprenait pas de `binding_method`. Dans ce cas, la réponse sera immédiate : vous recevrez soit une erreur `invalid_grant`, soit un `access_token`.
 
 <div id="learn-more">
-  ### En savoir plus
+  ### En savoir plus {#learn-more}
 </div>
 
 * [Associer des facteurs d’authentification hors bande](https://auth0.com/docs/secure/multi-factor-authentication/authenticate-using-ropg-flow-with-mfa/enroll-challenge-sms-voice-authenticators)
 
 <div id="headers">
-  ## En-têtes
+  ## En-têtes {#headers}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -36,7 +36,7 @@ Lorsque la réponse au défi comprend `binding_method: prompt`, votre applicatio
 </ParamField>
 
 <div id="body-parameters">
-  ## Paramètres du corps de la requête
+  ## Paramètres du corps de la requête {#body-parameters}
 </div>
 
 <div className="prose-sm prose-gray dark:prose-invert">
@@ -80,7 +80,7 @@ Lorsque la réponse au défi comprend `binding_method: prompt`, votre applicatio
 </ParamField>
 
 <div id="response-schema">
-  ## Schéma de réponse
+  ## Schéma de réponse {#response-schema}
 </div>
 
 <ResponseSchema>
@@ -106,7 +106,7 @@ Lorsque la réponse au défi comprend `binding_method: prompt`, votre applicatio
 </ResponseSchema>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                                                        |

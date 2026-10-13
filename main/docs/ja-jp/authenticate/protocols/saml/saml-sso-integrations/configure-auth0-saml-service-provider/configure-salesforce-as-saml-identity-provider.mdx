@@ -12,13 +12,13 @@ title: Salesforce を SAML IDプロバイダーとして構成する
 5. Salesforce IdP への接続をテストします。
 
 <div id="prerequisite">
-  ## 前提条件
+  ## 前提条件 {#prerequisite}
 </div>
 
 [Salesforce.com](http://salesforce.com) のアカウントを登録します。アイデンティティプロバイダーに対応したアカウント種別のいずれかを選択する必要があります。
 
 <div id="obtain-salesforce-certificate-and-metadata">
-  ## Salesforce の証明書とメタデータを取得する
+  ## Salesforce の証明書とメタデータを取得する {#obtain-salesforce-certificate-and-metadata}
 </div>
 
 1. [Salesforce](http://salesforce.com) アカウントにログインします。
@@ -31,7 +31,7 @@ title: Salesforce を SAML IDプロバイダーとして構成する
 8. **Download Metadata** をクリックして、アイデンティティプロバイダーのメタデータをダウンロードします。
 
 <div id="set-up-auth0-as-a-service-provider">
-  ## Auth0 をサービスプロバイダーとして設定する
+  ## Auth0 をサービスプロバイダーとして設定する {#set-up-auth0-as-a-service-provider}
 </div>
 
 Salesforce のアイデンティティプロバイダーと <Tooltip tip="Single Sign-On (SSO): ユーザーが1つのアプリケーションにログインすると、他のアプリケーションにも自動的にログインできるようにするサービス。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=SSO">SSO</Tooltip> で連携できるように、Auth0 をサービスプロバイダーとして設定します。
@@ -57,7 +57,7 @@ Salesforce のアイデンティティプロバイダーと <Tooltip tip="Single
 Auth0 の SAML 接続のメタデータには、次の URL 構文でアクセスできます: `https://{yourDomain}/samlp/metadata?connection={yourConnectionName}`。
 
 <div id="configure-salesforce-as-an-identity-provider">
-  ## Salesforce をアイデンティティプロバイダーとして設定する
+  ## Salesforce をアイデンティティプロバイダーとして設定する {#configure-salesforce-as-an-identity-provider}
 </div>
 
 Auth0 のメタデータを使用して Salesforce を設定し、Auth0 からの SAML ベースの認証リクエストを受信して応答できるようにします。
@@ -77,7 +77,7 @@ Auth0 のメタデータを使用して Salesforce を設定し、Auth0 から�
 4. **Save** をクリックして設定を完了します。
 
 <div id="grant-privileges-to-users-in-salesforce">
-  ## Salesforceでユーザーに権限を付与する
+  ## Salesforceでユーザーに権限を付与する {#grant-privileges-to-users-in-salesforce}
 </div>
 
 1. [**salesforce.com**](http://salesforce.com) を開き、**Setup** をクリックします。
@@ -92,7 +92,7 @@ Auth0 のメタデータを使用して Salesforce を設定し、Auth0 から�
    別の Salesforce プロファイルを使用する場合は、そのプロファイルで接続アプリを有効にし、Salesforce IDプロバイダー経由でログインするすべてのユーザーにそのプロファイルが割り当てられていることを確認してください。
 
 <div id="test-connection-to-salesforce">
-  ## Salesforce への接続をテストする
+  ## Salesforce への接続をテストする {#test-connection-to-salesforce}
 </div>
 
 1. Auth0 Dashboard の [Authentication &gt; Enterprise](https://manage.auth0.com/#/connections/enterprise) セクションに移動し、**SAMLP IDプロバイダー** を選択します。

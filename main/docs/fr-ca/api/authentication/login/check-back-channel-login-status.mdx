@@ -4,7 +4,7 @@ description: "Interrogez régulièrement le point de terminaison de jeton pour v
 ---
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `POST /oauth/token`
@@ -15,7 +15,7 @@ Pour vérifier l’état d’un flux de connexion par canal arrière, interrogez
 * le type d’autorisation `urn:openid:params:grant-type:ciba`
 
 <div id="response-body">
-  ### Corps de la réponse
+  ### Corps de la réponse {#response-body}
 </div>
 
 Si l’utilisateur autorisant n’a pas encore approuvé ou rejeté la requête, vous devriez recevoir une réponse semblable à celle-ci :
@@ -61,7 +61,7 @@ Si l’utilisateur autorisant a approuvé la notification poussée, la requête 
 Une fois qu’un `auth_req_id` a été échangé contre un jeton d’identité ou un jeton d’accès, il ne peut plus être utilisé.
 
 <div id="remarks">
-  ### Remarques
+  ### Remarques {#remarks}
 </div>
 
 Ajoutez un paramètre facultatif pour l’authentification de l’application dans la requête :
@@ -72,7 +72,7 @@ Ajoutez un paramètre facultatif pour l’authentification de l’application da
 * mTLS, pour lequel le paramètre `client_id` est requis et les en-têtes `client-certificate` et `client-certificate-ca-verified` sont requis.
 
 <div id="body-parameters">
-  ## Paramètres du corps
+  ## Paramètres du corps {#body-parameters}
 </div>
 
 <div className="prose-sm prose-gray dark:prose-invert">
@@ -92,7 +92,7 @@ Ajoutez un paramètre facultatif pour l’authentification de l’application da
 </ParamField>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                               |

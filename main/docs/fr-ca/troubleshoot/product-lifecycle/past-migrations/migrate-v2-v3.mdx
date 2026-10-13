@@ -6,7 +6,7 @@ title: Migrer de Search v2 à v3
 User Search v2 est arrivé en fin de vie le **30 juin 2019**. Nous vous recommandons fortement de migrer vers [search engine v3](/docs/fr-ca/manage-users/user-search) (`search_engine=v3`) dès que possible.
 
 <div id="migration-considerations">
-  ## Considérations relatives à la migration
+  ## Considérations relatives à la migration {#migration-considerations}
 </div>
 
 Avant de commencer la migration, voici quelques éléments à savoir :
@@ -22,7 +22,7 @@ Avant de commencer la migration, voici quelques éléments à savoir :
 * Le champ `connection` n’est pas pris en charge dans v3. Vous devriez plutôt utiliser son alias `identities.connection`.
 
 <div id="queries-to-migrate">
-  ## Requêtes à migrer
+  ## Requêtes à migrer {#queries-to-migrate}
 </div>
 
 | Cas d’utilisation                                      | v2                                | v3                                        |
@@ -37,7 +37,7 @@ Avant de commencer la migration, voici quelques éléments à savoir :
 | Expression contenant un mot (de moins de 3 caractères) | `name:*ri`,`name:*a`, `name:*ab*` | *(non pris en charge)*                    |
 
 <div id="impacted-sdks">
-  ## SDKs concernés
+  ## SDKs concernés {#impacted-sdks}
 </div>
 
 Les SDKs suivants utilisent le User Search engine. Si vous les utilisez, assurez-vous d’utiliser les versions indiquées ci-dessous (ou une version ultérieure) et de transmettre le paramètre `search_engine=v3` lors de l’exécution d’opérations de recherche d’utilisateurs.
@@ -52,7 +52,7 @@ Les SDKs suivants utilisent le User Search engine. Si vous les utilisez, assurez
 | [Auth0 Ruby](https://github.com/auth0/ruby-auth0)     | 4.5.0                        | Auth0.Api.V2.Users.users                       | Fournissez le paramètre `search_engine: 'v3'`                      |
 
 <div id="impacted-extensions">
-  ## Extensions concernées
+  ## Extensions concernées {#impacted-extensions}
 </div>
 
 Les Extensions suivantes font appel au User Search engine. Si elles sont installées, assurez-vous d’utiliser les versions indiquées ci-dessous (ou une version ultérieure).
@@ -63,7 +63,7 @@ Les Extensions suivantes font appel au User Search engine. Si elles sont install
 | [Delegated Administration](/docs/fr-ca/customize/extensions/delegated-administration-extension) | 3.1+                       | Si vous utilisez une version antérieure, vous devez mettre à jour manuellement l’extension depuis la page [Extensions](https://manage.auth0.com/#/extensions). Le paramètre de configuration `SEARCH_ENGINE` n’existe plus dans la version 3.1, car seule la version User Search v3 est disponible. |
 
 <div id="leverage-your-tenant-logs-to-find-usage-of-user-search-v2">
-  ## Exploitez les journaux de votre tenant pour repérer l’utilisation de User Search v2
+  ## Exploitez les journaux de votre tenant pour repérer l’utilisation de User Search v2 {#leverage-your-tenant-logs-to-find-usage-of-user-search-v2}
 </div>
 
 Vous pouvez exploiter les [journaux](/docs/fr-ca/deploy-monitor/logs) dans le [Dashboard](https://manage.auth0.com/#/logs) pour repérer les appels au point de terminaison `/api/v2/users` qui utilisent le moteur User Search v2, y compris les appels effectués par les SDK. Ces journaux vous aideront à déterminer où des modifications du code pourraient être nécessaires dans vos applications.

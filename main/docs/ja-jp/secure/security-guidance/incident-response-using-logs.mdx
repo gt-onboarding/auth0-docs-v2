@@ -6,7 +6,7 @@ title: 'インシデント対応: ログの活用'
 攻撃の影響を評価するためにログを確認することは、インシデント対応計画における重要なステップです。このページでは、<Tooltip tip="Auth0 Dashboard: サービスを設定するための Auth0 の主要製品。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip> でログにアクセスする方法と、攻撃の兆候を見つけてアカウントのアクティビティを確認するためのログ検索クエリの例をいくつか紹介します。
 
 <div id="check-auth0-logs">
-  ## Auth0 のログを確認する
+  ## Auth0 のログを確認する {#check-auth0-logs}
 </div>
 
 1. [Auth0 Dashboard にログインします](https://manage.auth0.com/#)
@@ -18,7 +18,7 @@ title: 'インシデント対応: ログの活用'
 一覧からログイベントを選択すると、イベントの **Summary** と、生の JSON を含む **Details** を確認できます。
 
 <div id="log-structure">
-  ### ログの構造
+  ### ログの構造 {#log-structure}
 </div>
 
 各ログイベントには、次のフィールドがあります。
@@ -42,7 +42,7 @@ title: 'インシデント対応: ログの活用'
 | `strategy_type` | イベントに関連する接続のストラテジータイプ。            |
 
 <div id="example-of-failed-login-log-event">
-  ### ログイン失敗のログイベントの例
+  ### ログイン失敗のログイベントの例 {#example-of-failed-login-log-event}
 </div>
 
 以下は、パスワードの誤りによってログインに失敗した場合のログイベントの例です。
@@ -74,7 +74,7 @@ title: 'インシデント対応: ログの活用'
 ```
 
 <div id="indicators-of-an-attack">
-  ## 攻撃の兆候
+  ## 攻撃の兆候 {#indicators-of-an-attack}
 </div>
 
 攻撃を早期に見極めるのは難しい場合がありますが、ログで確認すべきポイントと検索クエリの例を以下に示します。
@@ -98,7 +98,7 @@ title: 'インシデント対応: ログの活用'
 </Callout>
 
 <div id="identify-compromised-user-accounts">
-  ## 侵害された可能性のあるユーザーアカウントを特定する
+  ## 侵害された可能性のあるユーザーアカウントを特定する {#identify-compromised-user-accounts}
 </div>
 
 侵害された可能性のあるユーザーアカウントを特定するには、次の項目を検索します。
@@ -108,7 +108,7 @@ title: 'インシデント対応: ログの活用'
   * `type:"s" AND ip:"99.xxx.xxx.xxx"`
 
 <div id="check-compromised-user-account-activity">
-  ## 侵害されたユーザーアカウントのアクティビティを確認する
+  ## 侵害されたユーザーアカウントのアクティビティを確認する {#check-compromised-user-account-activity}
 </div>
 
 侵害されたユーザーアカウントを特定したら、そのアカウントのアクティビティを確認します。
@@ -119,7 +119,7 @@ title: 'インシデント対応: ログの活用'
 * 最近の <Tooltip tip="Management API: 顧客が管理タスクを実行できるようにする製品。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Management+API">Management API</Tooltip> 呼び出しを検索します: `type:"sapi"`
 
 <div id="delete-or-block-users-from-the-dashboard">
-  ## Auth0 Dashboard でユーザーを削除またはブロックする
+  ## Auth0 Dashboard でユーザーを削除またはブロックする {#delete-or-block-users-from-the-dashboard}
 </div>
 
 1. [Auth0 Dashboard &gt; User Management &gt; Users](https://manage.auth0.com/#/users) に移動します。

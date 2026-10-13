@@ -10,7 +10,7 @@ Le On-Behalf-Of (OBO) Token Exchange ([RFC 8693](https://datatracker.ietf.org/do
 Le nouveau jeton conserve l’identité et les permissions de l’utilisateur d’origine tout en étant limité spécifiquement au service en aval, ce qui permet à ce service de prendre des décisions d’autorisation en fonction de l’utilisateur final. La chaîne de délégation est suivie dans la claim `act` (actor), chaque niveau représentant un service dans la chaîne d’appels. Pour en savoir plus, consultez la [documentation sur le On-Behalf-Of Token Exchange](https://auth0.com/docs/secure/call-apis-on-users-behalf/on-behalf-of-token-exchange).
 
 <div id="remarks">
-  ## Remarques
+  ## Remarques {#remarks}
 </div>
 
 * Seuls les clients d’API personnalisée associés à un serveur de ressources peuvent utiliser l’échange de jeton OBO. Un client d’API personnalisée doit respecter les exigences suivantes :
@@ -26,7 +26,7 @@ Le nouveau jeton conserve l’identité et les permissions de l’utilisateur d�
 * Mettez en cache les jetons d’accès pendant toute la durée de vie du jeton au lieu de demander un nouveau jeton pour chaque appel d’API. Les jetons d’accès peuvent être réutilisés jusqu’à leur expiration; les échanges de jeton répétés gaspillent des ressources, augmentent la latence et peuvent déclencher des limites de débit.
 
 <div id="parameters">
-  ## Paramètres
+  ## Paramètres {#parameters}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -38,7 +38,7 @@ Le nouveau jeton conserve l’identité et les permissions de l’utilisateur d�
 </ParamField>
 
 <div id="request-body">
-  ## Corps de la requête
+  ## Corps de la requête {#request-body}
 </div>
 
 <ParamField body="grant_type" type="string" required>
@@ -74,7 +74,7 @@ Le nouveau jeton conserve l’identité et les permissions de l’utilisateur d�
 </ParamField>
 
 <div id="response">
-  ## Réponse
+  ## Réponse {#response}
 </div>
 
 | Statut | Description                                                                                                                                                                                                       |
@@ -122,7 +122,7 @@ Lorsqu’un client lié à un agent effectue l’échange, le claim `act` décod
 ```
 
 <div id="response-fields">
-  ## Champs de réponse
+  ## Champs de réponse {#response-fields}
 </div>
 
 <ResponseField name="access_token" type="string">

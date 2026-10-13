@@ -3,7 +3,7 @@ title: "Laravel API"
 ---
 
 <div id="by-evan-sims">
-  ##### Evan Sims 著
+  ##### Evan Sims 著 {#by-evan-sims}
 </div>
 
 Auth0 の Laravel SDK を使用すると、トークンベースの認可やルートのアクセス制御を Laravel アプリケーションにすばやく追加できます。このガイドでは、新規または既存の Laravel 9 または 10 のアプリケーションに Auth0 を統合する方法を説明します。ご利用のアカウント向けに設定された例を使ってこの Quickstart を進められるよう、ログインしておくことをおすすめします。
@@ -21,7 +21,7 @@ Auth0 の Laravel SDK を使用すると、トークンベースの認可やル�
 その名のとおり、[アクセストークン](https://auth0.com/docs/secure/tokens/access-tokens)はアクセス制御 (認可) のために使われるものであり、ユーザー情報は含みません。**バックエンドアプリケーションが扱うのはアクセストークンのみです。** トークンを発行したユーザーの情報は、[Management API](https://auth0.com/docs/api/management/v2)を使用して取得できます。これについては後ほど説明します。
 
 <div id="laravel-installation">
-  ## Laravel のインストール
+  ## Laravel のインストール {#laravel-installation}
 </div>
 
 **Laravel アプリケーションをまだセットアップしていない場合は**、新しいプロジェクト用の適切なディレクトリでシェルを開き、次のコマンドを実行します。
@@ -37,7 +37,7 @@ cd auth0-laravel-api
 ```
 
 <div id="sdk-installation">
-  ## SDK のインストール
+  ## SDK のインストール {#sdk-installation}
 </div>
 
 [Auth0 Laravel SDK](https://github.com/auth0/laravel-auth0) をインストールするには、プロジェクトのディレクトリで次のコマンドを実行します。
@@ -53,7 +53,7 @@ php artisan vendor:publish --tag auth0
 ```
 
 <div id="sdk-configuration">
-  ## SDK の設定
+  ## SDK の設定 {#sdk-configuration}
 </div>
 
 [Auth0 CLI](https://github.com/auth0/auth0-cli) をダウンロードするには、プロジェクトのディレクトリから次のコマンドを実行します。
@@ -102,7 +102,7 @@ echo ".auth0.*.json" >> .gitignore
 ```
 
 <div id="access-control">
-  ## アクセス制御
+  ## アクセス制御 {#access-control}
 </div>
 
 Auth0 SDK の認可ガードを使用すると、アプリケーションのルートへのアクセスを制限できます。
@@ -128,7 +128,7 @@ Route::get('/scope', function () {
 ```
 
 <div id="token-information">
-  ## トークン情報
+  ## トークン情報 {#token-information}
 </div>
 
 提供されたアクセストークンに関する情報は、Laravel の `Auth` Facade または `auth()` ヘルパー関数から取得できます。
@@ -152,7 +152,7 @@ Route::get('/', function () {
 ```
 
 <div id="retrieve-user-information">
-  ## ユーザー情報を取得する
+  ## ユーザー情報を取得する {#retrieve-user-information}
 </div>
 
 [Auth0 Management API](https://github.com/auth0/laravel-auth0/blob/main/docs/Management.md) を使用すると、Auth0 から、アクセストークンを作成したユーザーの情報を取得できます。SDK にはこの API の便利なラッパーが用意されており、SDK の `management()` メソッドから利用できます。
@@ -191,7 +191,7 @@ Route::get('/me', function () {
 </Info>
 
 <div id="run-the-application">
-  ## アプリケーションを起動する
+  ## アプリケーションを起動する {#run-the-application}
 </div>
 
 これで、Laravel アプリケーションを起動して、リクエストを受け付けられるようになりました。
@@ -201,7 +201,7 @@ php artisan serve
 ```
 
 <div id="retrieve-a-test-token">
-  ## テストトークンを取得する
+  ## テストトークンを取得する {#retrieve-a-test-token}
 </div>
 
 [こちら](https://auth0.com/docs/secure/tokens/access-tokens/get-access-tokens)でアクセストークンの取得方法について詳しく確認できます。ただし、このクイックスタートでは、[API の設定の「test」ビュー](https://manage.auth0.com/#/apis)にあるアクセストークンをそのまま使用できます。
@@ -211,7 +211,7 @@ php artisan serve
 </Info>
 
 <div id="checkpoint">
-  ## チェックポイント
+  ## チェックポイント {#checkpoint}
 </div>
 
 シェルを開き、アプリケーションにリクエストを送ってみましょう。
@@ -251,7 +251,7 @@ curl --request GET \
 問題が解決しない場合は、SDK の[ドキュメント](https://github.com/auth0/laravel-auth0)または[ドキュメントハブ](https://auth0.com/docs)をご確認ください。また、[コミュニティ](https://community.auth0.com)もぜひご活用ください。チームや他のコミュニティメンバーが質問への回答をお手伝いします。
 
 <div id="additional-reading">
-  ### 参考資料
+  ### 参考資料 {#additional-reading}
 </div>
 
 * [ユーザーリポジトリとモデル](https://github.com/auth0/laravel-auth0/blob/main/docs/Users.md) では、Auth0 Laravel SDK を拡張してカスタムユーザーモデルを使用する方法や、データベースにユーザーを保存・取得する方法について説明しています。

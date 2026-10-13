@@ -12,7 +12,7 @@ OAuth permet aux applications d’accéder aux API au nom de l’utilisateur. Av
 Pour les [applications tierces](/docs/fr-ca/get-started/applications/third-party-applications), le consentement de l’utilisateur est toujours requis. L’utilisateur doit approuver chaque requête d’autorisation. Pour les [applications de première partie](/docs/fr-ca/get-started/applications/first-party-and-third-party-applications), il est possible de ne pas demander ce consentement lorsque cette option est configurée, puisque vous contrôlez l’application et lui faites confiance pour agir de manière appropriée.
 
 <div id="consent-dialog">
-  ## Boîte de dialogue de consentement
+  ## Boîte de dialogue de consentement {#consent-dialog}
 </div>
 
 Lorsqu’une application tierce redirige un utilisateur vers le point de terminaison `/authorize` et demande l’accès à une API, Auth0 affiche une boîte de dialogue de consentement qui répertorie les permissions demandées par l’application.
@@ -42,7 +42,7 @@ Une fois le consentement accordé, l’utilisateur ne voit plus la boîte de dia
 </Callout>
 
 <div id="scope-descriptions">
-  ## Descriptions des scopes
+  ## Descriptions des scopes {#scope-descriptions}
 </div>
 
 Par défaut, la page de consentement utilise les noms de scope pour obtenir le consentement de l’utilisateur. Comme illustré ci-dessous, définissez les scopes au format `action:resource_name` pour un affichage clair :
@@ -66,7 +66,7 @@ Pour afficher le champ **Description** au lieu du nom du scope, définissez l’
 Ce paramètre s’applique aux invites de consentement de toutes les API du tenant.
 
 <div id="handle-rejected-permissions">
-  ## Gérer les permissions refusées
+  ## Gérer les permissions refusées {#handle-rejected-permissions}
 </div>
 
 Lorsqu’un utilisateur refuse de donner son consentement, le comportement dépend de la [politique de redirection](/docs/fr-ca/get-started/applications/third-party-applications/security-controls#redirect-protection) de l’application :
@@ -82,7 +82,7 @@ Location: https://partner.example.com/callback?
 ```
 
 <div id="skip-consent-for-first-party-applications">
-  ## Ignorer le consentement pour les applications de première partie
+  ## Ignorer le consentement pour les applications de première partie {#skip-consent-for-first-party-applications}
 </div>
 
 Les applications de première partie peuvent ignorer la boîte de dialogue de consentement lorsque l’option **Allow Skipping User Consent** est activée pour l’API.
@@ -96,7 +96,7 @@ Les applications tierces exigent toujours le consentement et ne peuvent pas igno
 </Callout>
 
 <div id="consent-with-organizations">
-  ## Consentement avec les Organizations
+  ## Consentement avec les Organizations {#consent-with-organizations}
 </div>
 
 Lorsqu&#39;une application tierce authentifie des utilisateurs dans le contexte d&#39;une [Organization](/docs/fr-ca/manage-users/organizations), le consentement est associé à cette Organization. Un utilisateur qui consent à une application dans une Organization n&#39;a pas consenti à cette même application dans une autre Organization.
@@ -114,7 +114,7 @@ Cela signifie :
 Pour forcer un nouveau consentement dans le contexte d&#39;une Organization précise, incluez `prompt=consent` dans la requête `/authorize`.
 
 <div id="revoke-consent">
-  ## Révoquer le consentement
+  ## Révoquer le consentement {#revoke-consent}
 </div>
 
 Pour révoquer le consentement d’un utilisateur pour une application donnée :
@@ -125,7 +125,7 @@ Pour révoquer le consentement d’un utilisateur pour une application donnée 
 4. Sélectionnez **Revoke** à côté de l’application.
 
 <div id="password-based-flows">
-  ## Flux avec mot de passe
+  ## Flux avec mot de passe {#password-based-flows}
 </div>
 
 Le [Resource Owner Password Flow](/docs/fr-ca/get-started/authentication-and-authorization-flow/resource-owner-password-flow) n’est pas offert pour les applications tierces. Il s’applique uniquement aux applications de première partie.
@@ -133,7 +133,7 @@ Le [Resource Owner Password Flow](/docs/fr-ca/get-started/authentication-and-aut
 Pour les applications de première partie, aucun consentement n’est requis, puisque l’utilisateur fournit directement son mot de passe à l’application, ce qui revient à lui accorder un accès complet à son compte.
 
 <div id="force-consent">
-  ## Forcer le consentement
+  ## Forcer le consentement {#force-consent}
 </div>
 
 Pour obliger les utilisateurs à donner leur consentement à chaque connexion (même s’ils disposent déjà d’une autorisation), incluez `prompt=consent` dans la requête `/authorize` :
@@ -152,7 +152,7 @@ GET /authorize?
 ```
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Applications tierces](/docs/fr-ca/get-started/applications/third-party-applications)

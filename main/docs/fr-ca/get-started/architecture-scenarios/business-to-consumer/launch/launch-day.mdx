@@ -4,13 +4,13 @@ title: Préparation pour le jour du lancement (B2C)
 ---
 
 <div id="notifications-announcements">
-  ## Notifications / annonces
+  ## Notifications / annonces {#notifications-announcements}
 </div>
 
 Pour qu’un lancement se déroule bien, il est utile que toutes les parties prenantes soient au courant du lancement à venir et comprennent le plan de lancement ainsi que leur rôle et leurs responsabilités. En plus d’aviser les équipes qui participeront activement, il peut aussi être utile d’aviser celles dont on pourrait avoir besoin si quelque chose se passe mal. Le fait d’avoir quelqu’un de garde pendant un lancement peut aider à accélérer l’intervention. Assurez-vous d’identifier et d’aviser toute équipe qui pourrait devoir répondre aux questions des clients, y compris sur les réseaux sociaux.
 
 <div id="parties-to-notify">
-  ### Parties à aviser
+  ### Parties à aviser {#parties-to-notify}
 </div>
 
 * Clients
@@ -25,7 +25,7 @@ Pour qu’un lancement se déroule bien, il est utile que toutes les parties pre
 * Équipes de la réussite client (prêtes à répondre aux questions des clients)
 
 <div id="notification-plan">
-  ## Plan de notification
+  ## Plan de notification {#notification-plan}
 </div>
 
 Votre plan de notification devrait inclure des éléments comme l’<Tooltip tip="Audience : identifiant unique de l’audience d’un jeton émis. Appelée aud dans un jeton, sa valeur contient l’ID d’une application (Client ID) pour un ID Token ou d’une API (API Identifier) pour un access token." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=audience">audience</Tooltip> cible, les principaux points à retenir pour cette audience, le contenu du message, le plan de diffusion de la notification et la façon de tester les messages.
@@ -41,7 +41,7 @@ Voici une liste d’éléments à inclure dans le plan :
 * Message test et livraison (s’il y a lieu - effectuer un test pour s’assurer que les notifications sont envoyées)
 
 <div id="notification-distribution">
-  ## Distribution des notifications
+  ## Distribution des notifications {#notification-distribution}
 </div>
 
 Une tactique courante consiste à diffuser les notifications par lots afin d’étaler la charge initiale et de limiter la confusion en cas de problème imprévu. Il est plus facile de corriger des problèmes avec un petit groupe que lors d’un lancement d’envergure.
@@ -51,13 +51,13 @@ Une tactique courante consiste à diffuser les notifications par lots afin d’�
 * Vous pouvez faire un lancement progressif auprès d’une partie des utilisateurs, comme certains clients, certaines régions ou un autre regroupement pertinent pour votre application.
 
 <div id="outage-windows-if-needed">
-  ## Fenêtres d’indisponibilité (au besoin)
+  ## Fenêtres d’indisponibilité (au besoin) {#outage-windows-if-needed}
 </div>
 
 Certaines organisations exigent une demande officielle de fenêtre d’indisponibilité lorsqu’une interruption de service ou un temps d’arrêt est nécessaire pour un lancement. Si c’est le cas dans votre organisation, assurez-vous de déterminer si un temps d’arrêt est requis pour le basculement ou le lancement (ou pour d’autres systèmes dépendants) et de soumettre à l’avance les demandes d’interruption ou de changement nécessaires, en respectant tout délai de préavis applicable.
 
 <div id="cutover-plan-if-needed">
-  ## Plan de bascule (au besoin)
+  ## Plan de bascule (au besoin) {#cutover-plan-if-needed}
 </div>
 
 Certaines lancements impliquent la bascule d’une solution existante vers une nouvelle solution. Si votre projet correspond à ce scénario, assurez-vous de recenser tout ce qui doit être fait, ainsi que les dépendances, le responsable de chaque tâche et l’échéancier requis. Vous pourriez aussi prévoir des remplaçants pour tous les rôles importants ou dans chaque région, au cas où quelqu’un tomberait malade à l’improviste ou serait autrement indisponible. Voici une liste de vérification des éléments à prendre en compte pour le plan de bascule :
@@ -71,7 +71,7 @@ Certaines lancements impliquent la bascule d’une solution existante vers une n
 * Un logiciel à déployer ?
 
 <div id="go-no-go-criteria">
-  ## Critères de décision go / no-go
+  ## Critères de décision go / no-go {#go-no-go-criteria}
 </div>
 
 Dans votre plan de lancement global, il est utile d’établir des critères de décision go/no-go et de discuter à l’avance des types de problèmes qui pourraient survenir, de ceux qui pourraient être réglés et de ceux qui exigeraient un retour à une version antérieure. Un plan de lancement peut prévoir des points de vérification périodiques, avec des critères précisant ce qu’il faut évaluer à chaque étape et combien de temps un problème peut demeurer non résolu.
@@ -91,7 +91,7 @@ Il est aussi utile d’avoir défini des critères pouvant déclencher une déci
 * Découverte d’un problème de sécurité critique
 
 <div id="rollback">
-  ## Retour arrière
+  ## Retour arrière {#rollback}
 </div>
 
 Il est toujours prudent d’avoir un plan de retour arrière ou de rétablissement du lancement, au cas où un imprévu surviendrait et ne pourrait pas être résolu. Passer en revue le plan de lancement pour chaque étape qui comporte un changement peut aider à cerner les tâches ou les modifications requises pour effectuer un retour arrière ou une bascule.
@@ -105,7 +105,7 @@ Il faut aussi prévoir le cas où certaines données sont saisies dans un nouvea
 Si la résolution des problèmes ou le processus de rétablissement risque de prendre plus d’un quart de travail, vous voudrez vous assurer qu’une personne principale, et peut-être une personne secondaire, soit disponible et prête à gérer la situation pendant chaque quart de travail. Si un problème entraîne la nécessité d’une intervention prolongée, bien au-delà d’un seul quart de travail, il y a des limites à la durée pendant laquelle les gens peuvent fonctionner de façon réaliste sans pause. Il peut être utile de prévoir des ressources pour une intervention de type follow-the-sun, au besoin.
 
 <div id="standby-contacts">
-  ## Personnes-ressources de garde
+  ## Personnes-ressources de garde {#standby-contacts}
 </div>
 
 À l’approche du jour du lancement, il est conseillé de recenser toutes les personnes-ressources qui pourraient être nécessaires pour le dépannage ou la résolution de problèmes, et de leur demander d’être de garde et prêtes à aider au besoin. La personne responsable du lancement devrait avoir les coordonnées de chaque personne figurant sur la liste de garde afin d’accélérer les communications.
@@ -113,7 +113,7 @@ Si la résolution des problèmes ou le processus de rétablissement risque de pr
 S’il y a une « salle de lancement », physique ou virtuelle, les personnes de garde devraient savoir où elle se trouve et être prêtes à s’y joindre au besoin. Le fait d’avoir une salle centrale ou une vidéoconférence prêtes peut accélérer les communications et le dépannage entre toutes les parties si un problème survient.
 
 <div id="success-criteria">
-  ## Critères de succès
+  ## Critères de succès {#success-criteria}
 </div>
 
 La préparation d’un lancement réussi demande beaucoup de planification, mais saurez-vous comment en évaluer les résultats? Si vous définissez des critères de succès avant le lancement, vous pourrez déterminer quoi surveiller et si une surveillance supplémentaire ou des vérifications additionnelles doivent être mises en place pour évaluer le lancement. Par exemple, si l’un des critères de succès est le nombre d’inscriptions ou d’ouvertures de session, avez-vous un moyen d’en faire le suivi et avez-vous vérifié que ces données sont exactes?
@@ -121,7 +121,7 @@ La préparation d’un lancement réussi demande beaucoup de planification, mais
 Vous voudrez disposer de statistiques pour pouvoir mettre en valeur le succès de votre lancement. Vous ne voudrez pas découvrir après le lancement que vous n’avez recueilli aucune donnée pour mesurer tout le travail acharné que votre équipe y a consacré.
 
 <div id="risks-mitigations-plan">
-  ## Plan des risques et des mesures d’atténuation
+  ## Plan des risques et des mesures d’atténuation {#risks-mitigations-plan}
 </div>
 
 Ce n’est pas très agréable de penser à ce qui pourrait mal tourner, mais s’il arrive quoi que ce soit, vous serez bien content de l’avoir fait, car le fait d’avoir un plan peut accélérer l’intervention. Voici quelques exemples à prévoir :
@@ -138,7 +138,7 @@ Ce n’est pas très agréable de penser à ce qui pourrait mal tourner, mais s�
 Si vous avez eu une période bêta, il peut être utile d’en examiner les résultats afin de cerner d’autres scénarios de défaillance possibles.
 
 <div id="project-planning-guide">
-  ## Guide de planification de projet
+  ## Guide de planification de projet {#project-planning-guide}
 </div>
 
 Nous mettons à votre disposition un guide de planification au format PDF que vous pouvez télécharger et consulter pour en savoir plus sur les stratégies que nous recommandons.

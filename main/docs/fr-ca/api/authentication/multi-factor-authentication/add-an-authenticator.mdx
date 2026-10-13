@@ -6,7 +6,7 @@ description: "Associez un nouveau authentificateur à un utilisateur pour active
 import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `POST /mfa/associate`
@@ -27,7 +27,7 @@ Pour accéder à ce point de terminaison, vous devez définir un jeton d’accè
 * `audience` : `https://{yourDomain}/mfa/`
 
 <div id="body-parameters">
-  ## Paramètres du corps
+  ## Paramètres du corps {#body-parameters}
 </div>
 
 <ParamField body="client_id" type="string" required>
@@ -59,7 +59,7 @@ Pour accéder à ce point de terminaison, vous devez définir un jeton d’accè
 </ParamField>
 
 <div id="response-schema">
-  ## Schéma de réponse
+  ## Schéma de réponse {#response-schema}
 </div>
 
 <ResponseSchema>
@@ -85,7 +85,7 @@ Pour accéder à ce point de terminaison, vous devez définir un jeton d’accè
 </ResponseSchema>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                                                        |

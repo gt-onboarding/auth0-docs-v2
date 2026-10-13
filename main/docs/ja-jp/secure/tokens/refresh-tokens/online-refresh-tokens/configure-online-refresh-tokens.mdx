@@ -8,13 +8,13 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 <ReleaseStageNotice feature="Online Refresh Tokens" stage="beta" contact="担当のテクニカルアカウントマネージャー" />
 
 <div id="configure-orts">
-  ## ORT を設定する
+  ## ORT を設定する {#configure-orts}
 </div>
 
 Online Refresh Tokens (ORTs) は、Auth0 Dashboard または Management API を使用して、[API (Resource Server) ](/docs/ja-jp/get-started/apis/api-settings) レベルで有効化する必要があります。
 
 <div id="configure-using-the-dashboard">
-  ### Auth0 Dashboard で設定する
+  ### Auth0 Dashboard で設定する {#configure-using-the-dashboard}
 </div>
 
 1. [Auth0 Dashboard &gt; アプリケーション &gt; API](https://manage.auth0.com/#/apis) に移動します。
@@ -30,7 +30,7 @@ Online Refresh Tokens (ORTs) は、Auth0 Dashboard または Management API を�
 セッションのアイドルタイムアウトと絶対有効期間の値を確認して設定するには、[テナントのセッション有効期限](https://manage.auth0.com/#/tenant/advanced) の設定を確認してください。詳細については、[セッションの有効期間を設定する](/docs/ja-jp/manage-users/sessions/configure-session-lifetime) をご覧ください。
 
 <div id="configure-using-the-management-api">
-  ### Management API を使用して設定する
+  ### Management API を使用して設定する {#configure-using-the-management-api}
 </div>
 
 ORT を有効にするには、[Update Resource Server](/docs/ja-jp/api/management/v2/resource-servers/patch-resource-servers-by-id) エンドポイントに `PATCH` リクエストを送信します。
@@ -64,7 +64,7 @@ curl --request GET \
 ```
 
 <div id="get-an-ort">
-  ## ORT を取得する
+  ## ORT を取得する {#get-an-ort}
 </div>
 
 ORT を取得するには、[認可コードフロー](/docs/ja-jp/get-started/authentication-and-authorization-flow/authorization-code-flow) または [PKCE を使用した Authorization Code フロー](/docs/ja-jp/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce) で送信する認可リクエストに `online_access` [スコープ](/docs/ja-jp/get-started/apis/scopes) を含めます。
@@ -109,7 +109,7 @@ curl --request POST \
 </Callout>
 
 <div id="use-an-ort">
-  ## ORT を使用する
+  ## ORT を使用する {#use-an-ort}
 </div>
 
 現在の[アクセストークン](/docs/ja-jp/secure/tokens/access-tokens)の有効期限が切れた場合、またはまもなく切れる場合は、ORT を新しい[アクセストークン](/docs/ja-jp/secure/tokens/access-tokens)に交換します：
@@ -140,7 +140,7 @@ curl --request POST \
 </Callout>
 
 <div id="session-extension-behavior">
-  ### セッション延長の動作
+  ### セッション延長の動作 {#session-extension-behavior}
 </div>
 
 トークン交換が成功するたびに、次のようになります。
@@ -150,7 +150,7 @@ curl --request POST \
 * **SSO は維持されます:** セッションが有効な限り、他のアプリケーションも SSO を通じてトークンを取得できます。
 
 <div id="revoke-an-ort">
-  ## ORTを失効させる
+  ## ORTを失効させる {#revoke-an-ort}
 </div>
 
 ORTを失効させると、token だけでなく Auth0 のセッション全体が終了します。これにより、そのセッションに紐付いたすべてのORTが無効になり、ユーザーのSSOも終了します。
@@ -164,7 +164,7 @@ curl --request POST \
 ```
 
 <div id="use-orts-with-actions">
-  ## ActionsでORTsを使用する
+  ## ActionsでORTsを使用する {#use-orts-with-actions}
 </div>
 
 ORTsは、Auth0の[Actions](/docs/ja-jp/customize/actions/actions-overview)および[post-loginトリガー](/docs/ja-jp/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger)で使用できます。
@@ -195,7 +195,7 @@ exports.onExecutePostLogin = async (event, api) => {
 </Callout>
 
 <div id="learn-more">
-  ## さらに詳しく
+  ## さらに詳しく {#learn-more}
 </div>
 
 * [Online Refresh Tokens](/docs/ja-jp/secure/tokens/refresh-tokens/online-refresh-tokens/online-refresh-tokens)

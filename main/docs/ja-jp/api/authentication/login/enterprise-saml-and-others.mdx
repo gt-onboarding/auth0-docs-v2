@@ -4,7 +4,7 @@ description: "Azure AD、ADFS、SAML などのエンタープライズ ID プロ
 ---
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `GET /authorize`
@@ -14,7 +14,7 @@ Auth0 サービスをエンタープライズ ID プロバイダーに接続す�
 パッシブ認証を行うには、`/authorize` エンドポイントに `GET` リクエストを送信します。すると、認証情報を入力するために、SAML プロバイダー (または `connection` で指定された Windows Azure AD など) へ `302` リダイレクトが返されます。
 
 <div id="remarks">
-  ### 注記
+  ### 注記 {#remarks}
 </div>
 
 * `response_type=token` の場合、ユーザーの認証後、ブラウザーは Access Token と ID Token をアドレスの `location.hash` に含む形で、アプリケーションの `callback URL` にリダイレクトされます。これは、Single-Page Apps (SPAs) や Native Mobile SDKs で一般的に使用されます。
@@ -22,7 +22,7 @@ Auth0 サービスをエンタープライズ ID プロバイダーに接続す�
 * このフローは、ブラウザーベースのパッシブ認証を必要とするアプリケーションで使用されます。
 
 <div id="learn-more">
-  ### 詳細情報
+  ### 詳細情報 {#learn-more}
 </div>
 
 * [SAML](https://auth0.com/docs/authenticate/protocols/saml/saml-configuration)
@@ -31,7 +31,7 @@ Auth0 サービスをエンタープライズ ID プロバイダーに接続す�
 * [Auth0.js /authorize メソッド リファレンス](https://auth0.com/docs/libraries/auth0js#webauth-authorize)
 
 <div id="query-parameters">
-  ## クエリパラメーター
+  ## クエリパラメーター {#query-parameters}
 </div>
 
 <ParamField query="response_type" type="string" required>
@@ -57,7 +57,7 @@ Auth0 サービスをエンタープライズ ID プロバイダーに接続す�
 </ParamField>
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | ステータス | 説明                   |

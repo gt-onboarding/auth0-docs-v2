@@ -16,7 +16,7 @@ export interface TransactionMembers {
 }
 ```
 
-## プロパティ
+## プロパティ {#properties}
 
 <ParamField body="alternateConnections" type={<span><a href="#connection">[Connection]</a> | <a href="#enterpriseconnection">[EnterpriseConnection][]</a></span>} />
 
@@ -37,7 +37,7 @@ export interface TransactionMembers {
 <ParamField body="state" type="string" />
 
 <div id="connection">
-  ## 接続
+  ## 接続 {#connection}
 </div>
 
 ```ts
@@ -49,7 +49,7 @@ export interface Connection {
 ```
 
 <div id="properties">
-  ### プロパティ
+  ### プロパティ {#properties-2}
 </div>
 
 <ParamField body="metadata?" type="Record<string, string>" />
@@ -59,7 +59,7 @@ export interface Connection {
 <ParamField body="strategy" type="string" />
 
 <div id="enterpriseconnection">
-  ## EnterpriseConnection
+  ## EnterpriseConnection {#enterpriseconnection}
 </div>
 
 ```ts
@@ -73,7 +73,7 @@ export interface EnterpriseConnection extends Connection {
 ```
 
 <div id="properties">
-  ### プロパティ
+  ### プロパティ {#properties-3}
 </div>
 
 <ParamField body="metadata?" type="Record<string, string>" />
@@ -93,7 +93,7 @@ export interface EnterpriseConnection extends Connection {
 <ParamField body="strategy" type="string" />
 
 <div id="dbconnection">
-  ## DBConnection
+  ## DBConnection {#dbconnection}
 </div>
 
 ```ts Example
@@ -147,7 +147,7 @@ export interface DBConnection extends Connection {
 ```
 
 <div id="properties">
-  ### プロパティ
+  ### プロパティ {#properties-4}
 </div>
 
 <ParamField body="options" type="object">
@@ -239,7 +239,7 @@ export interface DBConnection extends Connection {
 </ParamField>
 
 <div id="passwordlessconnection">
-  ## PasswordlessConnection
+  ## PasswordlessConnection {#passwordlessconnection}
 </div>
 
 ```ts Example
@@ -251,7 +251,7 @@ export interface PasswordlessConnection extends Connection {
 ```
 
 <div id="properties">
-  ### プロパティ
+  ### プロパティ {#properties-5}
 </div>
 
 <ParamField body="options" type="object">
@@ -261,7 +261,7 @@ export interface PasswordlessConnection extends Connection {
 </ParamField>
 
 <div id="socialconnection">
-  ## ソーシャル接続
+  ## ソーシャル接続 {#socialconnection}
 </div>
 
 ```ts Example
@@ -269,7 +269,7 @@ export interface SocialConnection extends Connection {}
 ```
 
 <div id="passwordpolicy">
-  ## PasswordPolicy
+  ## PasswordPolicy {#passwordpolicy}
 </div>
 
 ```ts
@@ -282,7 +282,7 @@ export interface PasswordPolicy {
 ```
 
 <div id="properties">
-  ### プロパティ
+  ### プロパティ {#properties-6}
 </div>
 
 <ParamField body="enabled?" type="boolean" />

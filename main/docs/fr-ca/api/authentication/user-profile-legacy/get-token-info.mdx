@@ -6,7 +6,7 @@ description: "Point de terminaison déprécié qui valide un JWT et renvoie le p
 import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `POST /tokeninfo`
@@ -18,7 +18,7 @@ import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 Ce point de terminaison valide un JSON Web Token (JWT) (signature et expiration) et renvoie les renseignements sur l’utilisateur associés à la propriété `sub` (ID utilisateur) du token.
 
 <div id="remarks">
-  ### Remarques
+  ### Remarques {#remarks}
 </div>
 
 * Ce point de terminaison renverra trois en-têtes de réponse HTTP qui fournissent des données pertinentes sur ses limites de débit :
@@ -27,14 +27,14 @@ Ce point de terminaison valide un JSON Web Token (JWT) (signature et expiration)
   * `X-RateLimit-Reset` : Temps restant avant la réinitialisation de la limite de débit (`X-RateLimit-Limit`). La valeur est en [secondes depuis l’époque Unix (UTC)](https://en.wikipedia.org/wiki/Unix_time).
 
 <div id="learn-more">
-  ### En savoir plus
+  ### En savoir plus {#learn-more}
 </div>
 
 * [Structure du profil utilisateur](https://auth0.com/docs/manage-users/user-accounts/user-profiles/user-profile-structure)
 * [Politique de limitation du débit de l’API Auth0](https://auth0.com/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy)
 
 <div id="response-schema">
-  ## Schéma de réponse
+  ## Schéma de réponse {#response-schema}
 </div>
 
 <ResponseSchema>
@@ -92,7 +92,7 @@ Ce point de terminaison valide un JSON Web Token (JWT) (signature et expiration)
 </ResponseSchema>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                                                    |

@@ -19,7 +19,7 @@ Pour connecter votre application à Active Directory Federation Services (ADFS) 
 Vous pouvez utiliser un script pour configurer la connexion ou effectuer la configuration manuellement.
 
 <div id="scripted-setup">
-  ## Configuration par script
+  ## Configuration par script {#scripted-setup}
 </div>
 
 Exécutez les deux commandes suivantes dans la fenêtre Windows PowerShell.
@@ -71,7 +71,7 @@ Set-ADFSRelyingPartyTrust –TargetName $realm –IssuanceAuthorizationRules $rS
 ```
 
 <div id="manual-setup-part-1-add-a-relying-party-trust">
-  ## Configuration manuelle, partie 1 : ajouter un Relying Party Trust
+  ## Configuration manuelle, partie 1 : ajouter un Relying Party Trust {#manual-setup-part-1-add-a-relying-party-trust}
 </div>
 
 1. Ouvrez la console de gestion ADFS.
@@ -91,7 +91,7 @@ Set-ADFSRelyingPartyTrust –TargetName $realm –IssuanceAuthorizationRules $rS
 13. Cliquez sur **Suivant**, puis sur **Fermer**.
 
 <div id="manual-setup-part-2-add-a-claim-issuance-policy-rule">
-  ## Configuration manuelle, partie 2 : Ajouter une règle de stratégie d’émission de claims
+  ## Configuration manuelle, partie 2 : Ajouter une règle de stratégie d’émission de claims {#manual-setup-part-2-add-a-claim-issuance-policy-rule}
 </div>
 
 1. Si vous utilisez Windows Server 2019, la boîte de dialogue Edit Claim Issuance Policy s’ouvre automatiquement lorsque vous terminez l’assistant Add Relying Party Trust. Si vous utilisez Windows Server 2012 ou 2016, suivez ces étapes :
@@ -115,7 +115,7 @@ Set-ADFSRelyingPartyTrust –TargetName $realm –IssuanceAuthorizationRules $rS
 | Surname             | Surname                         |
 
 <div id="add-additional-ldap-attributes">
-  ### Ajouter des attributs LDAP supplémentaires
+  ### Ajouter des attributs LDAP supplémentaires {#add-additional-ldap-attributes}
 </div>
 
 Les mappages des étapes précédentes sont les plus courants, mais si vous avez besoin d’attributs LDAP supplémentaires contenant des renseignements sur l’utilisateur, vous pouvez ajouter d’autres mappages de claims.
@@ -129,7 +129,7 @@ Les mappages des étapes précédentes sont les plus courants, mais si vous avez
       Auth0 utilise la partie nom du type de claim (par exemple `department` dans `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/department`) comme nom d’attribut pour le profil utilisateur.
 
 <div id="next-steps">
-  ## Prochaines étapes
+  ## Prochaines étapes {#next-steps}
 </div>
 
 Maintenant que vous disposez d’une connexion fonctionnelle, l’étape suivante consiste à configurer votre application pour l’utiliser. Vous pouvez suivre nos Quickstarts détaillés ou utiliser nos bibliothèques et notre API.

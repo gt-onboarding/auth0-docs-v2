@@ -30,7 +30,7 @@
       ]
     },
     {
-      "group": "エージェント",
+      "group": "Agents",
       "pages": [
         "docs/ja-jp/api/management/v2/agents/get-agents",
         "docs/ja-jp/api/management/v2/agents/post-agent",
@@ -40,14 +40,14 @@
       ]
     },
     {
-      "group": "異常",
+      "group": "Anomaly",
       "pages": [
         "docs/ja-jp/api/management/v2/anomaly/get-ips-by-id",
         "docs/ja-jp/api/management/v2/anomaly/delete-ips-by-id"
       ]
     },
     {
-      "group": "攻撃対策",
+      "group": "Attack Protection",
       "pages": [
         "docs/ja-jp/api/management/v2/attack-protection/get-bot-detection",
         "docs/ja-jp/api/management/v2/attack-protection/patch-bot-detection",
@@ -64,7 +64,7 @@
       ]
     },
     {
-      "group": "ブランド設定",
+      "group": "Branding",
       "pages": [
         "docs/ja-jp/api/management/v2/branding/get-branding",
         "docs/ja-jp/api/management/v2/branding/patch-branding",
@@ -92,7 +92,7 @@
       ]
     },
     {
-      "group": "クライアントグラント",
+      "group": "Client Grants",
       "pages": [
         "docs/ja-jp/api/management/v2/client-grants/get-client-grants",
         "docs/ja-jp/api/management/v2/client-grants/post-client-grants",
@@ -103,7 +103,7 @@
       ]
     },
     {
-      "group": "クライアント",
+      "group": "Clients",
       "pages": [
         "docs/ja-jp/api/management/v2/clients/get-clients",
         "docs/ja-jp/api/management/v2/clients/post-clients",
@@ -123,7 +123,7 @@
       ]
     },
     {
-      "group": "接続プロファイル",
+      "group": "Connection Profiles",
       "pages": [
         "docs/ja-jp/api/management/v2/connection-profiles/get-connection-profiles",
         "docs/ja-jp/api/management/v2/connection-profiles/post-connection-profiles",
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "group": "接続",
+      "group": "Connections",
       "pages": [
         "docs/ja-jp/api/management/v2/connections/get-connections",
         "docs/ja-jp/api/management/v2/connections/post-connections",
@@ -170,19 +170,19 @@
       ]
     },
     {
-      "group": "接続ディレクトリのプロビジョニング",
+      "group": "Connections Directory Provisionings",
       "pages": [
         "docs/ja-jp/api/management/v2/connections-directory-provisionings/get-connections-directory-provisionings"
       ]
     },
     {
-      "group": "接続SCIM設定",
+      "group": "Connections Scim Configurations",
       "pages": [
         "docs/ja-jp/api/management/v2/connections-scim-configurations/get-connections-scim-configurations"
       ]
     },
     {
-      "group": "カスタムドメイン",
+      "group": "Custom Domains",
       "pages": [
         "docs/ja-jp/api/management/v2/custom-domains/get-custom-domains",
         "docs/ja-jp/api/management/v2/custom-domains/post-custom-domains",
@@ -196,7 +196,7 @@
       ]
     },
     {
-      "group": "デバイス資格情報",
+      "group": "Device Credentials",
       "pages": [
         "docs/ja-jp/api/management/v2/device-credentials/get-device-credentials",
         "docs/ja-jp/api/management/v2/device-credentials/post-device-credentials",
@@ -204,7 +204,7 @@
       ]
     },
     {
-      "group": "メールテンプレート",
+      "group": "Email Templates",
       "pages": [
         "docs/ja-jp/api/management/v2/email-templates/post-email-templates",
         "docs/ja-jp/api/management/v2/email-templates/get-email-templates-by-template-name",
@@ -213,7 +213,7 @@
       ]
     },
     {
-      "group": "メール",
+      "group": "Emails",
       "pages": [
         "docs/ja-jp/api/management/v2/emails/get-provider",
         "docs/ja-jp/api/management/v2/emails/delete-provider",
@@ -222,7 +222,7 @@
       ]
     },
     {
-      "group": "イベントストリーム",
+      "group": "Event Streams",
       "pages": [
         "docs/ja-jp/api/management/v2/event-streams/get-event-streams",
         "docs/ja-jp/api/management/v2/event-streams/post-event-streams",
@@ -237,13 +237,13 @@
       ]
     },
     {
-      "group": "イベント",
+      "group": "Events",
       "pages": [
         "docs/ja-jp/api/management/v2/events/subscribe-events"
       ]
     },
     {
-      "group": "実験",
+      "group": "Experimentation",
       "pages": [
         "docs/ja-jp/api/management/v2/experimentation/get-experiments",
         "docs/ja-jp/api/management/v2/experimentation/create-experiment",
@@ -289,7 +289,7 @@
       ]
     },
     {
-      "group": "フォーム",
+      "group": "Forms",
       "pages": [
         "docs/ja-jp/api/management/v2/forms/get-forms",
         "docs/ja-jp/api/management/v2/forms/create-form",
@@ -299,7 +299,7 @@
       ]
     },
     {
-      "group": "グラント",
+      "group": "Grants",
       "pages": [
         "docs/ja-jp/api/management/v2/grants/get-grants",
         "docs/ja-jp/api/management/v2/grants/delete-grants-by-user-id",
@@ -307,7 +307,7 @@
       ]
     },
     {
-      "group": "グループ",
+      "group": "Groups",
       "pages": [
         "docs/ja-jp/api/management/v2/groups/get-groups",
         "docs/ja-jp/api/management/v2/groups/get-group",
@@ -360,7 +360,7 @@
       ]
     },
     {
-      "group": "フック",
+      "group": "Hooks",
       "pages": [
         "docs/ja-jp/api/management/v2/hooks/get-hooks",
         "docs/ja-jp/api/management/v2/hooks/post-hooks",
@@ -374,7 +374,7 @@
       ]
     },
     {
-      "group": "ジョブ",
+      "group": "Jobs",
       "pages": [
         "docs/ja-jp/api/management/v2/jobs/post-users-exports",
         "docs/ja-jp/api/management/v2/jobs/post-users-imports",
@@ -384,7 +384,7 @@
       ]
     },
     {
-      "group": "キー",
+      "group": "Keys",
       "pages": [
         "docs/ja-jp/api/management/v2/keys/get-custom-signing-keys",
         "docs/ja-jp/api/management/v2/keys/delete-custom-signing-keys",
@@ -404,7 +404,7 @@
       ]
     },
     {
-      "group": "ログストリーム",
+      "group": "Log Streams",
       "pages": [
         "docs/ja-jp/api/management/v2/log-streams/get-log-streams",
         "docs/ja-jp/api/management/v2/log-streams/post-log-streams",
@@ -414,14 +414,14 @@
       ]
     },
     {
-      "group": "ログ",
+      "group": "Logs",
       "pages": [
         "docs/ja-jp/api/management/v2/logs/get-logs",
         "docs/ja-jp/api/management/v2/logs/get-logs-by-id"
       ]
     },
     {
-      "group": "ネットワークACL",
+      "group": "Network Acls",
       "pages": [
         "docs/ja-jp/api/management/v2/network-acls/get-network-acls",
         "docs/ja-jp/api/management/v2/network-acls/post-network-acls",
@@ -485,7 +485,7 @@
       ]
     },
     {
-      "group": "プロンプト",
+      "group": "Prompts",
       "pages": [
         "docs/ja-jp/api/management/v2/prompts/get-prompts",
         "docs/ja-jp/api/management/v2/prompts/patch-prompts",
@@ -500,7 +500,7 @@
       ]
     },
     {
-      "group": "レート制限ポリシー",
+      "group": "Rate Limit Policies",
       "pages": [
         "docs/ja-jp/api/management/v2/rate-limit-policies/get-rate-limit-policies",
         "docs/ja-jp/api/management/v2/rate-limit-policies/post-rate-limit-policies",
@@ -510,7 +510,7 @@
       ]
     },
     {
-      "group": "リフレッシュトークン",
+      "group": "Refresh Tokens",
       "pages": [
         "docs/ja-jp/api/management/v2/refresh-tokens/get-refresh-tokens",
         "docs/ja-jp/api/management/v2/refresh-tokens/revoke-refresh-tokens",
@@ -520,7 +520,7 @@
       ]
     },
     {
-      "group": "リソースサーバー",
+      "group": "Resource Servers",
       "pages": [
         "docs/ja-jp/api/management/v2/resource-servers/get-resource-servers",
         "docs/ja-jp/api/management/v2/resource-servers/post-resource-servers",
@@ -530,7 +530,7 @@
       ]
     },
     {
-      "group": "リスク評価",
+      "group": "Risk Assessments",
       "pages": [
         "docs/ja-jp/api/management/v2/risk-assessments/get-risk-assessments-settings",
         "docs/ja-jp/api/management/v2/risk-assessments/patch-risk-assessments-settings",
@@ -539,7 +539,7 @@
       ]
     },
     {
-      "group": "ロール",
+      "group": "Roles",
       "pages": [
         "docs/ja-jp/api/management/v2/roles/get-roles",
         "docs/ja-jp/api/management/v2/roles/post-roles",
@@ -557,7 +557,7 @@
       ]
     },
     {
-      "group": "ルール",
+      "group": "Rules",
       "pages": [
         "docs/ja-jp/api/management/v2/rules/get-rules",
         "docs/ja-jp/api/management/v2/rules/post-rules",
@@ -567,7 +567,7 @@
       ]
     },
     {
-      "group": "ルール設定",
+      "group": "Rules Configs",
       "pages": [
         "docs/ja-jp/api/management/v2/rules-configs/get-rules-configs",
         "docs/ja-jp/api/management/v2/rules-configs/delete-rules-configs-by-key",
@@ -575,7 +575,7 @@
       ]
     },
     {
-      "group": "セルフサービスプロファイル",
+      "group": "Self Service Profiles",
       "pages": [
         "docs/ja-jp/api/management/v2/self-service-profiles/get-self-service-profiles",
         "docs/ja-jp/api/management/v2/self-service-profiles/post-self-service-profiles",
@@ -589,7 +589,7 @@
       ]
     },
     {
-      "group": "セッション",
+      "group": "Sessions",
       "pages": [
         "docs/ja-jp/api/management/v2/sessions/get-session",
         "docs/ja-jp/api/management/v2/sessions/delete-session",
@@ -598,7 +598,7 @@
       ]
     },
     {
-      "group": "統計",
+      "group": "Stats",
       "pages": [
         "docs/ja-jp/api/management/v2/stats/get-active-users",
         "docs/ja-jp/api/management/v2/stats/get-daily"
@@ -612,21 +612,21 @@
       ]
     },
     {
-      "group": "テナント",
+      "group": "Tenants",
       "pages": [
         "docs/ja-jp/api/management/v2/tenants/tenant-settings-route",
         "docs/ja-jp/api/management/v2/tenants/patch-settings"
       ]
     },
     {
-      "group": "チケット",
+      "group": "Tickets",
       "pages": [
         "docs/ja-jp/api/management/v2/tickets/post-email-verification",
         "docs/ja-jp/api/management/v2/tickets/post-password-change"
       ]
     },
     {
-      "group": "トークン交換プロファイル",
+      "group": "Token Exchange Profiles",
       "pages": [
         "docs/ja-jp/api/management/v2/token-exchange-profiles/get-token-exchange-profiles",
         "docs/ja-jp/api/management/v2/token-exchange-profiles/post-token-exchange-profiles",
@@ -636,7 +636,7 @@
       ]
     },
     {
-      "group": "ユーザー属性プロファイル",
+      "group": "User Attribute Profiles",
       "pages": [
         "docs/ja-jp/api/management/v2/user-attribute-profiles/get-user-attribute-profiles",
         "docs/ja-jp/api/management/v2/user-attribute-profiles/post-user-attribute-profiles",
@@ -648,7 +648,7 @@
       ]
     },
     {
-      "group": "ユーザーブロック",
+      "group": "User Blocks",
       "pages": [
         "docs/ja-jp/api/management/v2/user-blocks/get-user-blocks",
         "docs/ja-jp/api/management/v2/user-blocks/delete-user-blocks",
@@ -657,7 +657,7 @@
       ]
     },
     {
-      "group": "ユーザー",
+      "group": "Users",
       "pages": [
         "docs/ja-jp/api/management/v2/users/get-users",
         "docs/ja-jp/api/management/v2/users/post-users",
@@ -701,13 +701,13 @@
       ]
     },
     {
-      "group": "メールアドレス別ユーザー",
+      "group": "Users By Email",
       "pages": [
         "docs/ja-jp/api/management/v2/users-by-email/get-users-by-email"
       ]
     },
     {
-      "group": "検証可能な資格情報",
+      "group": "Verifiable Credentials",
       "pages": [
         "docs/ja-jp/api/management/v2/verifiable-credentials/get-vc-templates",
         "docs/ja-jp/api/management/v2/verifiable-credentials/post-vc-templates",

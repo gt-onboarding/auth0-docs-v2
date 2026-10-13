@@ -7,7 +7,7 @@ validatedOn: 2026-02-06
 ネイティブ iOS アプリケーションに Sign In with Apple を使った認証機能を追加できます。実装の詳細については、Auth0 の [iOS Swift - Sign In with Apple Quickstart](/docs/ja-jp/quickstart/native/ios-swift) を試すことができます。
 
 <div id="how-it-works">
-  ## 仕組み
+  ## 仕組み {#how-it-works}
 </div>
 
 ネイティブアプリでは、Sign in with Apple のログインフローは次のように動作します。
@@ -24,7 +24,7 @@ validatedOn: 2026-02-06
 * **Step 6**: Auth0 はユーザープロファイルを保存し、ルールを実行して認可を行った後、要求に応じて Auth0 の <Tooltip tip="Access Token: API へのアクセスに使用される認可資格情報で、不透明な文字列または JWT の形式を取ります。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=access+tokens">アクセストークン</Tooltip> (<Tooltip tip="Refresh Token: ユーザーに再度ログインを求めることなく、新しい Access Token を取得するために使用されるトークンです。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=refresh+tokens">リフレッシュトークン</Tooltip> と <Tooltip tip="Refresh Token: ユーザーに再度ログインを求めることなく、新しい Access Token を取得するために使用されるトークンです。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=ID+tokens">ID トークン</Tooltip>) を発行します。これらのトークンは、API を保護し、Auth0 で管理されるユーザーに使用されます。
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 Auth0 で ネイティブアプリ向けに Sign In with Apple を設定する前に、次の要件を満たしている必要があります。
@@ -39,7 +39,7 @@ Auth0 で ネイティブアプリ向けに Sign In with Apple を設定する�
 * クラシックログインを使用している場合、またはアプリケーションに `Lock.js` を埋め込んでいる場合は、`Lock.js` バージョン 11.16 以降を使用していることを確認してください。
 
 <div id="configure-and-enable-the-connection-in-auth0">
-  ## Auth0 で接続を設定して有効にする
+  ## Auth0 で接続を設定して有効にする {#configure-and-enable-the-connection-in-auth0}
 </div>
 
 Apple Developer アカウントから必要な資格情報を取得したら、Auth0 でアプリケーションのクライアント設定と接続設定を構成します。
@@ -66,7 +66,7 @@ Apple Developer アカウントから必要な資格情報を取得したら、A
 </Callout>
 
 <div id="logout">
-  ## ログアウト
+  ## ログアウト {#logout}
 </div>
 
 ネイティブ iOS のログイン実装では標準的なブラウザベースのフローを使用しないため、アプリケーションの管理者はログアウトも適切に実行する必要があります。アプリケーションでログアウトが必要な場合は、次の対応を行ってください。
@@ -81,7 +81,7 @@ Apple Developer アカウントから必要な資格情報を取得したら、A
 </Callout>
 
 <div id="learn-more">
-  ## 詳しく見る
+  ## 詳しく見る {#learn-more}
 </div>
 
 * [Rate Limit Policy](/docs/ja-jp/troubleshoot/customer-support/operational-policies/rate-limit-policy)

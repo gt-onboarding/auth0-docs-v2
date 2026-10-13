@@ -14,18 +14,18 @@ Les Actions de ce flux sont bloquantes (synchrones) : elles s’exécutent dans
 </Note>
 
 <div id="references">
-  ## Références
+  ## Références {#references}
 </div>
 
 * [Objet Event](/docs/fr-ca/customize/actions/reference/pre-user-registration/pre-user-registration-event-object) : fournit des informations contextuelles sur la demande d’enregistrement d’un nouvel utilisateur.
 * [Objet API](/docs/fr-ca/customize/actions/reference/pre-user-registration/pre-user-registration-api-object) : fournit des méthodes permettant de modifier le comportement du flux.
 
 <div id="common-use-cases">
-  ## Cas d’utilisation courants
+  ## Cas d’utilisation courants {#common-use-cases}
 </div>
 
 <div id="deny-registration-by-location">
-  ### Rejeter l’enregistrement selon l’emplacement
+  ### Rejeter l’enregistrement selon l’emplacement {#deny-registration-by-location}
 </div>
 
 Une Action pre-user-registration peut être utilisée pour empêcher un utilisateur de s’inscrire :
@@ -51,7 +51,7 @@ exports.onExecutePreUserRegistration = async (event, api) => {
 ```
 
 <div id="set-metadata-in-the-user-profile">
-  ### Définir des métadonnées dans le profil utilisateur
+  ### Définir des métadonnées dans le profil utilisateur {#set-metadata-in-the-user-profile}
 </div>
 
 Une Action pre-user-registration permet d’ajouter des métadonnées au profil utilisateur avant sa création :
@@ -67,7 +67,7 @@ exports.onExecutePreUserRegistration = async (event, api) => {
 ```
 
 <div id="store-a-user-id-from-another-system-in-the-user-profile">
-  ### Stocker l’ID utilisateur d’un autre système dans le profil utilisateur
+  ### Stocker l’ID utilisateur d’un autre système dans le profil utilisateur {#store-a-user-id-from-another-system-in-the-user-profile}
 </div>
 
 Une Action pre-user-registration peut servir à stocker l’ID utilisateur d’un autre système dans le profil utilisateur :
@@ -105,7 +105,7 @@ exports.onExecutePreUserRegistration = async (event, api) => {
 </Callout>
 
 <div id="deny-access-to-specific-ja3ja4-fingerprints">
-  ### Rejeter l’accès en fonction d’empreintes JA3/JA4 précises
+  ### Rejeter l’accès en fonction d’empreintes JA3/JA4 précises {#deny-access-to-specific-ja3ja4-fingerprints}
 </div>
 
 L’objet `event.security_context` contient les valeurs d’empreinte JA3/JA4 associées à la transaction en cours :

@@ -8,7 +8,7 @@ Pour configurer Auth0 comme fournisseur de services (SP) dans une fédération <
 Auth0 permet d’utiliser Auth0 comme SP dans des configurations conformes aux protocoles SAML 1.1 ou SAML 2.0.
 
 <div id="get-metadata-and-certificate-from-the-idp">
-  ## Obtenir les métadonnées et le certificat de l’IdP
+  ## Obtenir les métadonnées et le certificat de l’IdP {#get-metadata-and-certificate-from-the-idp}
 </div>
 
 Vous devrez rassembler certaines métadonnées de configuration auprès de l’IdP pour créer une connexion dans Auth0 :
@@ -20,7 +20,7 @@ Vous devrez rassembler certaines métadonnées de configuration auprès de l’I
 | X509 Signing Certificate | Le certificat de clé publique requis par le SP pour valider la signature des assertions d’authentification signées numériquement par l’IdP. Auth0 accepte les formats .pem et .cer. |
 
 <div id="create-saml-enterprise-connection-in-auth0">
-  ## Créer une connexion d’entreprise SAML dans Auth0
+  ## Créer une connexion d’entreprise SAML dans Auth0 {#create-saml-enterprise-connection-in-auth0}
 </div>
 
 Vous pouvez créer une connexion d’entreprise SAML dans le <Tooltip tip="Auth0 Dashboard : le principal produit d’Auth0 pour configurer vos services." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip> ou à l’aide de l’Auth0 <Tooltip tip="Management API : un produit permettant aux clients d’effectuer des tâches administratives." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Management+API">Management API</Tooltip> :
@@ -68,7 +68,7 @@ Vous pouvez créer une connexion d’entreprise SAML dans le <Tooltip tip="Auth0
     | `signSAMLRequest`    | Boolean | Facultatif    | Active ou désactive la signature des requêtes d’authentification envoyées par Auth0.                                                                                                                                                                                                                                                                                                                                                                                               |
     | `user_id_attribute`  | String  | Facultatif    | Le nom de l’attribut des réponses d’authentification à mapper à la propriété ID utilisateur. Ce champ remplacera tout mappage défini pour la propriété `user_id` dans l’objet `fieldsMap`.                                                                                                                                                                                                                                                                                         |
 
-    #### Exemple de requête
+#### Exemple de requête {#example-request}
 
     ```json lines expandable
     {
@@ -109,7 +109,7 @@ Vous pouvez créer une connexion d’entreprise SAML dans le <Tooltip tip="Auth0
 </Tabs>
 
 <div id="configure-saml-connection-for-proxy-gateways">
-  ### Configurer une connexion SAML pour les passerelles proxy
+  ### Configurer une connexion SAML pour les passerelles proxy {#configure-saml-connection-for-proxy-gateways}
 </div>
 
 Si Auth0 est derrière une passerelle proxy, vous devrez configurer en conséquence les champs `destinationUrl` et `recipientUrl` de la connexion SAML.
@@ -126,7 +126,7 @@ Si Auth0 est derrière une passerelle proxy, vous devrez configurer en conséque
 4. Effectuez une requête au point de terminaison [Update a connection](https://auth0.com/docs/api/management/v2/connections/patch-connections-by-id) de la Management API en incluant l’objet `options` entièrement mis à jour dans le corps de la requête.
 
 <div id="customize-the-request-template">
-  ### Personnaliser le modèle de requête
+  ### Personnaliser le modèle de requête {#customize-the-request-template}
 </div>
 
 Lorsque Auth0 envoie la requête d’authentification à l’IdP, le corps de la requête contient un objet `AuthnRequest`. Vous pouvez personnaliser le modèle utilisé pour cet objet :
@@ -137,7 +137,7 @@ Lorsque Auth0 envoie la requête d’authentification à l’IdP, le corps de la
 4. Sélectionnez **Save Changes**.
 
 <div id="template-variables">
-  #### Variables du modèle
+  #### Variables du modèle {#template-variables}
 </div>
 
 Des variables peuvent être insérées dans le modèle `AuthnRequest` à l’aide de la syntaxe `@@VariableName@@`. Les variables suivantes sont disponibles :
@@ -156,7 +156,7 @@ Des variables peuvent être insérées dans le modèle `AuthnRequest` à l’aid
 | `AssertServiceURLAndDestination` | Déconseillé. Pour les nouvelles configurations, utilisez plutôt `AssertionConsumerServiceURL` et `Destination`.                                                                                                                                                                                                                                                                                                                                                      |
 
 <div id="configure-the-idp">
-  ## Configurer l’IdP
+  ## Configurer l’IdP {#configure-the-idp}
 </div>
 
 Consultez les [paramètres de configuration du fournisseur d’identité SAML](/docs/fr-ca/authenticate/protocols/saml/saml-identity-provider-configuration-settings) pour trouver les métadonnées que vous devrez fournir à l’IdP.
@@ -164,7 +164,7 @@ Consultez les [paramètres de configuration du fournisseur d’identité SAML](/
 Auth0 prend en charge tous les IdP SAML conformes au protocole SAML 1.1 ou SAML 2.0. Vous trouverez ci-dessous des instructions détaillées pour configurer certains fournisseurs en particulier.
 
 <div id="test-connection">
-  ## Tester la connexion
+  ## Tester la connexion {#test-connection}
 </div>
 
 Pour tester votre connexion dans le Dashboard :
@@ -177,7 +177,7 @@ Pour tester votre connexion dans le Dashboard :
 6. Vous serez redirigé vers une page Auth0 affichant le contenu de l’assertion d’authentification envoyée à Auth0 par l’IdP.
 
 <div id="troubleshoot-connection">
-  ## Résoudre les problèmes de connexion
+  ## Résoudre les problèmes de connexion {#troubleshoot-connection}
 </div>
 
 Si votre connexion ne fonctionne pas comme prévu, essayez les étapes suivantes :

@@ -4,7 +4,7 @@ description: "Déconnectez un utilisateur et, au besoin, redirigez-le vers une U
 ---
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `GET /v2/logout`
@@ -16,20 +16,20 @@ Utilisez ce point de terminaison pour déconnecter un utilisateur. Si vous souha
 * Si le paramètre `client_id` est inclus et que l’URL `returnTo` n’est PAS définie, le serveur redirige l’utilisateur vers la première URL de la liste `Allowed Logout URLs` définie dans le Dashboard. Pour en savoir plus, consultez [Déconnecter les utilisateurs des applications](https://auth0.com/docs/authenticate/login/logout/log-users-out-of-applications).
 
 <div id="remarks">
-  ### Remarques
+  ### Remarques {#remarks}
 </div>
 
 * Déconnecter l’utilisateur de son fournisseur d’identité n’est pas une pratique courante; réfléchissez donc à l’expérience utilisateur avant d’utiliser le paramètre de chaîne de requête `federated`.
 * L’exemple de script auth0.js utilise la version 8 de la bibliothèque. Si vous utilisez la version 7 d’auth0.js, veuillez consulter ce [guide de référence](https://auth0.com/docs/libraries/auth0js).
 
 <div id="learn-more">
-  ### En savoir plus
+  ### En savoir plus {#learn-more}
 </div>
 
 * [Déconnexion](https://auth0.com/docs/authenticate/login/logout)
 
 <div id="query-parameters">
-  ## Paramètres de requête
+  ## Paramètres de requête {#query-parameters}
 </div>
 
 <ParamField query="client_id" type="string">
@@ -45,7 +45,7 @@ Utilisez ce point de terminaison pour déconnecter un utilisateur. Si vous souha
 </ParamField>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                                                                         |

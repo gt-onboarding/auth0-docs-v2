@@ -6,7 +6,7 @@ title: MFA のプッシュ通知を設定する
 [iOS](/docs/ja-jp/secure/multi-factor-authentication/auth0-guardian/guardian-for-ios-sdk) および [Android](/docs/ja-jp/secure/multi-factor-authentication/auth0-guardian/guardian-for-android-sdk) 向けの [Guardian](/docs/ja-jp/secure/multi-factor-authentication/auth0-guardian) SDK を使用すると、ベンダー固有のプッシュ通知サービスに対応した独自開発アプリを利用できます。AWS Simple Notification Service (SNS) プラットフォーム用にプッシュ通知を設定することも、Direct to Vendor サービスを使用して Firebase Cloud Messaging (FCM) と Apple Push Notification (APN) の資格情報を Auth0 に直接追加することもできます。
 
 <div id="aws-sns-configuration">
-  ## AWS SNS の設定
+  ## AWS SNS の設定 {#aws-sns-configuration}
 </div>
 
 プッシュ通知を設定する前に、以下の前提条件を満たしてください。
@@ -15,7 +15,7 @@ title: MFA のプッシュ通知を設定する
 2. Platform Application のエンドポイントを作成する権限を持つ AWS Access Key ID を作成します。Guardian は、登録が正常に完了すると、その一環として適切なデバイストークンを使用した Platform Application のエンドポイントを自動的に作成します。
 
 <div id="configure-push-notifications-with-aws-sns">
-  ### AWS SNS を使用してプッシュ通知を設定する
+  ### AWS SNS を使用してプッシュ通知を設定する {#configure-push-notifications-with-aws-sns}
 </div>
 
 Guardian からプッシュ通知を受け取るには、まず Guardian のデフォルトの SNS 設定を上書きする必要があります。その後、Android と iOS のプッシュ通知を設定できます。
@@ -36,7 +36,7 @@ Guardian からプッシュ通知を受け取るには、まず Guardian のデ�
 2. **Save** を選択して変更を保存します。
 
 <div id="configure-push-notifications-for-android-using-fcm">
-  ## FCM を使用して Android のプッシュ通知を設定する
+  ## FCM を使用して Android のプッシュ通知を設定する {#configure-push-notifications-for-android-using-fcm}
 </div>
 
 <Tabs>
@@ -67,7 +67,7 @@ Guardian からプッシュ通知を受け取るには、まず Guardian のデ�
 </Tabs>
 
 <div id="configure-push-notifications-for-ios-using-apns">
-  ## APNs を使用して iOS のプッシュ通知を設定する
+  ## APNs を使用して iOS のプッシュ通知を設定する {#configure-push-notifications-for-ios-using-apns}
 </div>
 
 <Tabs>
@@ -115,7 +115,7 @@ Guardian からプッシュ通知を受け取るには、まず Guardian のデ�
 </Tabs>
 
 <div id="learn-more">
-  ## 詳しくはこちら
+  ## 詳しくはこちら {#learn-more}
 </div>
 
 * [Auth0 Guardian](/docs/ja-jp/secure/multi-factor-authentication/auth0-guardian)

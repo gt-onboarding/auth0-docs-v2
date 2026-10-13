@@ -4,7 +4,7 @@ description: "サインアップ時に新規ユーザーのパスキー登録を
 ---
 
 <div id="endpoint">
-  ## Endpoint
+  ## Endpoint {#endpoint}
 </div>
 
 `POST /passkey/register`
@@ -12,7 +12,7 @@ description: "サインアップ時に新規ユーザーのパスキー登録を
 サインアップ時に新規ユーザーのパスキー登録を開始します。このエンドポイントはパスキー登録セッションを作成し、指定されたユーザープロファイルをデータベース接続のサインアップ属性に照らして検証したうえで、アプリケーションからプラットフォーム認証器に渡すWebAuthnの作成パラメータを返します。認証器からアテステーションが返された後、パスキーグラントを使用して`/oauth/token`でアサーションを交換することで、登録を完了します。
 
 <div id="remarks">
-  ### 注記
+  ### 注記 {#remarks}
 </div>
 
 * アプリケーションの[グラントタイプ](/docs/ja-jp/get-started/applications/application-settings#grant-types)に、`urn:okta:params:oauth:grant-type:webauthn` が含まれている必要があります。
@@ -23,7 +23,7 @@ description: "サインアップ時に新規ユーザーのパスキー登録を
 * ユーザーは、構成されているいずれかの識別子によって既存ユーザーとして判定されます。送信された識別子のいずれかが既存のユーザーに一致した場合、リクエストは `invalid_request` で失敗します。
 
 <div id="request-body">
-  ## リクエスト本文
+  ## リクエスト本文 {#request-body}
 </div>
 
 <ParamField body="client_id" type="string" required>
@@ -85,7 +85,7 @@ description: "サインアップ時に新規ユーザーのパスキー登録を
 </ParamField>
 
 <div id="response">
-  ## レスポンス
+  ## レスポンス {#response}
 </div>
 
 成功時のレスポンスには、WebAuthn の作成パラメータと、後続のアテステーションをこの登録リクエストに紐付ける `auth_session` 値が含まれます。

@@ -10,13 +10,13 @@ title: OneLogin を SAML IDプロバイダーとして設定する
 3. 接続をテストする。
 
 <div id="prerequisite">
-  ## 前提条件
+  ## 前提条件 {#prerequisite}
 </div>
 
 OneLoginのデベロッパーアカウントが必要です。
 
 <div id="configure-onelogin">
-  ## OneLogin を設定する
+  ## OneLogin を設定する {#configure-onelogin}
 </div>
 
 1. [OneLogin](https://www.onelogin.com/) のダッシュボードにログインし、**Apps** &gt; **Add Apps** をクリックします。
@@ -28,7 +28,7 @@ OneLoginのデベロッパーアカウントが必要です。
 7. X.509 証明書 **onelogin.pem** をダウンロードします。
 
 <div id="configure-auth0-connection">
-  ## Auth0 接続を設定する
+  ## Auth0 接続を設定する {#configure-auth0-connection}
 </div>
 
 1. [Dashboard &gt; Authentication &gt; Enterprise &gt; SAMLP](https://manage.auth0.com/#) に移動し、**plus** アイコンをクリックして、新しい接続を作成するページに進みます。
@@ -47,7 +47,7 @@ OneLoginのデベロッパーアカウントが必要です。
    2. ドメイン管理者でない場合は、表示された URL をドメイン管理者に渡して、設定を完了してもらうことができます。
 
 <div id="auth0-configuration-values">
-  ### Auth0 の設定値
+  ### Auth0 の設定値 {#auth0-configuration-values}
 </div>
 
 SAML アプリケーションの設定を完了するには、管理者は Auth0 に関する以下の情報を用意する必要があります。
@@ -67,7 +67,7 @@ SAML アプリケーションの設定を完了するには、管理者は Auth0
 `[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)`
 
 <div id="test-connection">
-  ## 接続をテストする
+  ## 接続をテストする {#test-connection}
 </div>
 
 接続をテストする前に、以下を確認してください。
@@ -78,7 +78,7 @@ SAML アプリケーションの設定を完了するには、管理者は Auth0
 **SAML** 接続の横にある **Try** ボタンをクリックします。問題がなければ、接続が正しく機能していることを示すページにリダイレクトされます。
 
 <div id="identity-provider-initiated-sso">
-  ## IDプロバイダー主導のシングルサインオン
+  ## IDプロバイダー主導のシングルサインオン {#identity-provider-initiated-sso}
 </div>
 
 OneLogin では、ユーザー向けに Application Portal/Launcher が提供されています。この機能を利用するには、OneLogin ダッシュボードの**SAML Consumer URL**を変更し、`connection` パラメーター (例: `https://{yourDomain}/login/callback?connection=onelogin-customer`) を含める必要があります。`onelogin-customer` は、ご利用の Auth0 接続名に置き換えてください。
@@ -86,7 +86,7 @@ OneLogin では、ユーザー向けに Application Portal/Launcher が提供さ
 最後に、その接続で IdP 主導のログインを有効にし、SAML アサーションの処理後にユーザーのリダイレクト先となるアプリケーションを選択してください。詳しくは、[IDプロバイダー主導のシングルサインオンを設定する](/docs/ja-jp/authenticate/protocols/saml/saml-sso-integrations/identity-provider-initiated-single-sign-on)を参照してください。
 
 <div id="edit-connection-mappings">
-  ## 接続マッピングを編集する
+  ## 接続マッピングを編集する {#edit-connection-mappings}
 </div>
 
 OneLogin と Auth0 をそのまま使用している場合、OneLogin 経由でログインし、<Tooltip tip="Auth0 Dashboard: サービスを設定するための Auth0 のメイン製品です。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip>で作成されたユーザーには、必要なプロファイル情報の一部が不足していることがあります。
@@ -94,7 +94,7 @@ OneLogin と Auth0 をそのまま使用している場合、OneLogin 経由で�
 追加のユーザー情報を収集するには、OneLogin dashboard で適切なパラメーターを編集し、そのパラメーターを SAML アサーションに含めて、Auth0 接続でマッピングを作成します。
 
 <div id="user-profile-attributes">
-  ### ユーザープロファイル属性
+  ### ユーザープロファイル属性 {#user-profile-attributes}
 </div>
 
 構築したい機能によっては、標準のユーザープロファイル属性だけでは不十分な場合があります。そのような場合は、カスタム属性を使用して SAML トークンを拡張できます。基本的な例を見ていきましょう。
@@ -112,7 +112,7 @@ SAML トークンには、`FirstName` や `LastName` などの属性が含まれ
 Attribute Macros の詳細については、[OneLogin Help Center](https://support.onelogin.com/hc/en-us/articles/201174464-Attribute-macros) を参照してください。
 
 <div id="add-new-parameter-to-saml-assertion">
-  ### SAML アサーションに新しいパラメーターを追加する
+  ### SAML アサーションに新しいパラメーターを追加する {#add-new-parameter-to-saml-assertion}
 </div>
 
 ここでは例として、すでに送信している 2 つのフィールドを連結した値よりも詳細な情報である `EmailAddress` を、ログインに追加する方法を見ていきます。

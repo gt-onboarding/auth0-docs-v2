@@ -15,7 +15,7 @@ Actions トランザクションメタデータを使用すると、トランザ
 </Callout>
 
 <div id="how-it-works">
-  ## 仕組み
+  ## 仕組み {#how-it-works}
 </div>
 
 トランザクションメタデータを保存するためのキーと値のペアを設定するには、[post-login API object](/docs/ja-jp/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-api-object) `api.transaction.setMetadata` を使用します。
@@ -32,7 +32,7 @@ API オブジェクトと Event オブジェクトは、次のパラメーター
 Actions の記述について詳しくは、[Write Your First Action](/docs/ja-jp/customize/actions/write-your-first-action) を参照してください。
 
 <div id="latency">
-  ## 遅延
+  ## 遅延 {#latency}
 </div>
 
 Actions Transaction Metadata を使用すると、わずかな遅延が追加で発生する可能性があります。遅延の大きさは metadata のペイロードサイズに比例し、Action の中断が発生する場合に影響します。たとえば、<Tooltip tip="" cta="用語集を見る" href="/docs/ja-jp/glossary?term=MFA">MFA</Tooltip> をトリガーする場合、Actions からリダイレクトする場合、または Forms をレンダリングする場合は、ストレージからデータを再読み込みする必要があるため、遅延が問題になる可能性があります。
@@ -40,11 +40,11 @@ Actions Transaction Metadata を使用すると、わずかな遅延が追加で
 ただし、この遅延の可能性は、一連の Actions で必要なデータを取得するために冗長な外向き HTTP リクエストを行う場合に比べれば、最小限にとどまるはずです。
 
 <div id="examples">
-  ## 例
+  ## 例 {#examples}
 </div>
 
 <div id="access-metadata-immediately">
-  ### メタデータにすぐアクセスする
+  ### メタデータにすぐアクセスする {#access-metadata-immediately}
 </div>
 
 トランザクションのメタデータにキーと値のペアを設定し、その値にすぐアクセスできます。
@@ -59,7 +59,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="set-supported-values">
-  ### 対応している値を設定する
+  ### 対応している値を設定する {#set-supported-values}
 </div>
 
 `string`、`number`、`boolean` 型の値を設定できます。
@@ -80,7 +80,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="serialize-values">
-  ### 値をシリアライズする
+  ### 値をシリアライズする {#serialize-values}
 </div>
 
 [制限事項](/docs/ja-jp/customize/actions/limitations#transaction-metadata)の範囲内で、値は`string`としてシリアライズします。
@@ -119,7 +119,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="share-values-between-actions">
-  ### Actions 間で値を共有する
+  ### Actions 間で値を共有する {#share-values-between-actions}
 </div>
 
 同じ実行シーケンス内の Actions 間で、キーと値のペアを共有します。
@@ -146,7 +146,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="update-metadata">
-  ### メタデータを更新する
+  ### メタデータを更新する {#update-metadata}
 </div>
 
 既存のキーに別の値を設定して、メタデータを更新します。
@@ -189,7 +189,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="remove-metadata">
-  ### メタデータを削除する
+  ### メタデータを削除する {#remove-metadata}
 </div>
 
 各キーの値を `null` にすることで、トランザクションメタデータの値を削除できます。
@@ -232,7 +232,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="preserve-values-on-redirect-to-external-sites">
-  ### 外部サイトへのリダイレクト時に値を保持する
+  ### 外部サイトへのリダイレクト時に値を保持する {#preserve-values-on-redirect-to-external-sites}
 </div>
 
 [リダイレクト](/docs/ja-jp/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/redirect-with-actions)中も、トランザクションメタデータを保持します。ユーザーが認証フローを再開すると、その値を利用できます。
@@ -280,7 +280,7 @@ exports.onContinuePostLogin = async (event, api) => {
 ```
 
 <div id="preserve-values-on-forms-rendering">
-  ### Forms のレンダリング時に値を保持する
+  ### Forms のレンダリング時に値を保持する {#preserve-values-on-forms-rendering}
 </div>
 
 [Actions を使用して Forms をレンダリングする](/docs/ja-jp/customize/forms/render) と、トランザクションメタデータの値は保持され、ユーザーが認証フローを続行する際にも利用できます。
@@ -313,7 +313,7 @@ exports.onContinuePostLogin = async (event, api) => {
 ```
 
 <div id="share-values-with-forms">
-  ### Forms と値を共有する
+  ### Forms と値を共有する {#share-values-with-forms}
 </div>
 
 Actions を使って Forms をレンダリングし、トランザクションのメタデータの値を Form に渡せます。

@@ -10,13 +10,13 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 本番環境で定期的に頻繁な呼び出しを行うには、自動的にトークンを取得できるプロセスをバックエンドに構築する必要があります (これにより、有効期限のないトークンを擬似的に再現できます) 。
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 * [Machine-to-Machine アプリケーションを登録する](/docs/ja-jp/get-started/auth0-overview/create-applications/machine-to-machine-apps).
 
 <div id="get-access-tokens">
-  ## アクセストークンを取得する
+  ## アクセストークンを取得する {#get-access-tokens}
 </div>
 
 Auth0 に <Tooltip tip="Management API: お客様が管理タスクを実行できるようにするプロダクト。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Management+API">Management API</Tooltip> v2 トークンをリクエストするには、事前準備の手順で作成した Machine-to-Machine Application の認証情報を使用して、`https://{yourDomain}/oauth/token` エンドポイントに `POST` リクエストを送信します。
@@ -197,13 +197,13 @@ Auth0 に <Tooltip tip="Management API: お客様が管理タスクを実行で�
 以上から、<Tooltip tip="アクセストークン: API へのアクセスに使用される、不透明な文字列または JWT 形式の認可資格情報。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Access+Token">アクセストークン</Tooltip> の有効期限は 24 時間 (86400 秒) で、アプリケーションの読み取りと作成が許可されており、[Bearer Access Token](https://tools.ietf.org/html/rfc6750) であることがわかります。
 
 <div id="use-auth0s-nodejs-client-library">
-  ### Auth0 の Node.js クライアントライブラリを使用する
+  ### Auth0 の Node.js クライアントライブラリを使用する {#use-auth0s-nodejs-client-library}
 </div>
 
 HTTP 呼び出しの代わりに、[node-auth0](https://www.npmjs.com/package/auth0) ライブラリを使用して、[Management API のトークンを自動的に取得](https://www.npmjs.com/package/auth0#user-content-management-api-client)できます。
 
 <div id="use-access-tokens">
-  ## アクセストークンを使用する
+  ## アクセストークンを使用する {#use-access-tokens}
 </div>
 
 このトークンを使用するには、リクエストの `Authorization` ヘッダーに指定します。
@@ -485,7 +485,7 @@ HTTP 呼び出しの代わりに、[node-auth0](https://www.npmjs.com/package/au
 </Callout>
 
 <div id="example-python-implementation">
-  ## 例: Python 実装
+  ## 例: Python 実装 {#example-python-implementation}
 </div>
 
 この Python スクリプトは Management API v2 のアクセストークンを取得し、それを使って [すべてのアプリケーションを取得](https://auth0.com/docs/api/management/v2#!/Clients/get_clients) エンドポイントを呼び出し、レスポンスをコンソールに出力します。
@@ -546,7 +546,7 @@ if __name__ == '__main__':
 ```
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * [テスト用の Management API アクセストークン を取得する](/docs/ja-jp/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-testing)

@@ -10,7 +10,7 @@ import { ReleaseStageNotice } from "/snippets/fr-ca/ReleaseStageNotice.jsx"
 Lorsqu&#39;une requête implique un client lié à un agent, l&#39;environnement d&#39;exécution des Actions expose un objet `event.agent`. Cet objet est absent lorsqu&#39;aucun agent n&#39;est impliqué; le code Actions existant n&#39;est donc pas affecté.
 
 <div id="triggers">
-  ## Déclencheurs
+  ## Déclencheurs {#triggers}
 </div>
 
 `event.agent` est présent dans les déclencheurs suivants :
@@ -21,7 +21,7 @@ Lorsqu&#39;une requête implique un client lié à un agent, l&#39;environnement
 | `post-login`           | Code d’autorisation, échange de jetons ou flux d’appareil lorsque `agent_id` est défini pour le client. |
 
 <div id="eventagent-object">
-  ## Objet `event.agent`
+  ## Objet `event.agent` {#eventagent-object}
 </div>
 
 L’objet `event.agent` a le schéma suivant :
@@ -38,7 +38,7 @@ L’objet `event.agent` a le schéma suivant :
 `event.client` reste inchangé ; il continue de refléter le client OAuth lié qui a authentifié la requête.
 
 <div id="example-custom-claims-on-agent-tokens">
-  ## Exemple : revendications personnalisées dans les jetons d’agent
+  ## Exemple : revendications personnalisées dans les jetons d’agent {#example-custom-claims-on-agent-tokens}
 </div>
 
 Utilisez `event.agent` dans une action `credentials-exchange` pour ajouter le contexte de l’agent aux jetons d’accès :

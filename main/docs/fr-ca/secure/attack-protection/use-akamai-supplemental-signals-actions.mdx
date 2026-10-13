@@ -17,7 +17,7 @@ description: Utilisez les Actions Auth0 avec les signaux Akamai Account Protecto
 Une fois Akamai configuré pour utiliser Supplemental Signals, vous pouvez utiliser les données fournies par ces signaux dans les [Actions Auth0](/docs/fr-ca/customize/actions).
 
 <div id="supported-supplemental-signals-by-action-trigger">
-  ## Supplemental Signals pris en charge par déclencheur d’Action
+  ## Supplemental Signals pris en charge par déclencheur d’Action {#supported-supplemental-signals-by-action-trigger}
 </div>
 
 | Déclencheur            | Objets de signal supplémentaire                         | Objet Event                                                                                                                                                                                        |
@@ -31,7 +31,7 @@ Une fois Akamai configuré pour utiliser Supplemental Signals, vous pouvez utili
 | Credentials Exchange   | Aucun                                                   | N/A                                                                                                                                                                                                |
 
 <div id="supplemental-signal-object-schemas">
-  ## Schémas d’objet de Supplemental Signal
+  ## Schémas d’objet de Supplemental Signal {#supplemental-signal-object-schemas}
 </div>
 
 Les objets `akamaiBot` et `akamaiUserRisk` contiennent plusieurs propriétés que vous pouvez utiliser pour personnaliser votre flux d’authentification.
@@ -153,7 +153,7 @@ Les objets `akamaiBot` et `akamaiUserRisk` contiennent plusieurs propriétés qu
 </ResponseField>
 
 <div id="use-cases">
-  ## Cas d’usage
+  ## Cas d’usage {#use-cases}
 </div>
 
 <AccordionGroup>
@@ -178,7 +178,7 @@ Les objets `akamaiBot` et `akamaiUserRisk` contiennent plusieurs propriétés qu
   <Accordion title="Demander l’authentification multifacteur (MFA) selon les résultats d’Akamai Bot Manager">
     Voici un exemple de la façon dont vous pourriez imposer la MFA selon la propriété `akamaiBot.score`.
 
-    #### Imposer la MFA
+#### Imposer la MFA {#enforce-mfa}
 
     Cette Action effectue deux tâches :
 
@@ -203,7 +203,7 @@ Les objets `akamaiBot` et `akamaiUserRisk` contiennent plusieurs propriétés qu
 
     ```
 
-    #### Nettoyer les métadonnées d’application
+#### Nettoyer les métadonnées d’application {#clean-up-app-metadata}
 
     Cette Action supprime des métadonnées d’application les renseignements sur la MFA propres à la session une fois que l’utilisateur a terminé la MFA avec succès.
 

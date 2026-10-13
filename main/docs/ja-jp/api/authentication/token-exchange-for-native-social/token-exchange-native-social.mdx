@@ -6,7 +6,7 @@ description: "トークン交換グラントを使用して、ネイティブソ
 import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `POST /oauth/token`
@@ -20,21 +20,21 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 このフローで返されるアーティファクト (およびその内容) は、`subject_token_type` とテナントの設定によって決まります。
 
 <div id="remarks">
-  ## 注意事項
+  ## 注意事項 {#remarks}
 </div>
 
 * アプリケーションに発行されるスコープは、要求したスコープと異なる場合があります。その場合、レスポンスJSONに `scope` パラメーターが含まれます。
 * 特定のスコープを要求しない場合、このグラントではアプリケーションが暗黙的に信頼されるため、audience に定義されたすべてのスコープが返されます。返されるスコープはルールでカスタマイズできます。詳しくは、[Calling APIs from Highly Trusted Applications](https://auth0.com/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow) をご覧ください。
 
 <div id="learn-more">
-  ## 詳細情報
+  ## 詳細情報 {#learn-more}
 </div>
 
 * [ネイティブ iOS アプリに Sign In with Apple を追加する](https://auth0.com/docs/authenticate/identity-providers/social-identity-providers/apple-native)
 * [iOS Swift - Sign In with Apple クイックスタート](https://auth0.com/docs/quickstart/native/ios-swift)
 
 <div id="headers">
-  ## ヘッダー
+  ## ヘッダー {#headers}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -42,7 +42,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 </ParamField>
 
 <div id="body-parameters">
-  ## ボディパラメーター
+  ## ボディパラメーター {#body-parameters}
 </div>
 
 <div className="prose-sm prose-gray dark:prose-invert">
@@ -90,7 +90,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 </ParamField>
 
 <div id="response-schema">
-  ## レスポンススキーマ
+  ## レスポンススキーマ {#response-schema}
 </div>
 
 <ResponseSchema statusCode="200">
@@ -126,7 +126,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 </ResponseSchema>
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | Status  | Description |

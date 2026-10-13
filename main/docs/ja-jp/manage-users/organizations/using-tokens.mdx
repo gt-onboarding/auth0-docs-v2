@@ -20,7 +20,7 @@ JWTクレームには2種類あります。
 クレームの詳細については、[JSON Web Token Claims](/docs/ja-jp/secure/tokens/json-web-tokens/json-web-token-claims)を参照してください。
 
 <div id="authenticate-users-through-an-organization">
-  ## 組織を通じてユーザーを認証する
+  ## 組織を通じてユーザーを認証する {#authenticate-users-through-an-organization}
 </div>
 
 組織を通じてユーザーを認証するには、`/authorize` エンドポイントへのリクエストで `organization` パラメーターを渡します。以下の例は、ユーザーが 組織 を通じてログインしたときに返されるトークンを示しています。
@@ -34,7 +34,7 @@ JWTクレームには2種類あります。
 </Callout>
 
 <div id="id-token">
-  ### ID トークン
+  ### ID トークン {#id-token}
 </div>
 
 次の例では、`https://marketplace/roles` と `https://namespace.exampleco.com/` はトークンに追加されたカスタムクレームであり、その他の含まれるクレームは標準のものである点に注目してください。
@@ -57,7 +57,7 @@ JWTクレームには2種類あります。
 ```
 
 <div id="access-token">
-  ### アクセストークン
+  ### アクセストークン {#access-token}
 </div>
 
 ```json lines
@@ -82,7 +82,7 @@ JWTクレームには2種類あります。
 ```
 
 <div id="organization-role-permissions">
-  ## 組織ロールの権限
+  ## 組織ロールの権限 {#organization-role-permissions}
 </div>
 
 <ReleaseStageNotice feature="Organization Roles" stage="ea" terms="true" contact="Auth0 Support" />
@@ -116,7 +116,7 @@ JWTクレームには2種類あります。
 組織ロールの詳細については、[組織ロール](/docs/ja-jp/manage-users/organizations/organization-roles)を参照してください。
 
 <div id="machine-to-machine-access-to-an-organization">
-  ## 組織へのマシンツーマシンアクセス
+  ## 組織へのマシンツーマシンアクセス {#machine-to-machine-access-to-an-organization}
 </div>
 
 マシンツーマシンのユースケースでは、アプリケーションがユーザーではなく自身のためのアクセストークンを取得できるよう、`organization` パラメータを `/oauth/token` エンドポイントへの Client Credentials リクエストに追加します。
@@ -143,7 +143,7 @@ JWTクレームには2種類あります。
 ```
 
 <div id="validate-tokens">
-  ## トークンを検証する
+  ## トークンを検証する {#validate-tokens}
 </div>
 
 `organization` パラメーターが `/authorize` エンドポイントまたは `/oauth/token` エンドポイントの呼び出しに追加されると、Auth0 SDK は、生成されたトークンに含まれて返される `org_id` クレームを自動的に検証します。ただし、セキュリティ上の理由から、トークンを受け取った際には追加の検証も行うべきです。
@@ -172,7 +172,7 @@ JWTクレームには2種類あります。
 API サーバーは、`org_id` に基づいてデータやリソースへのアクセスを適切に分離する必要もあります。これにより、アクセストークンで特定の組織に対応する `org_id` 値を受け取った場合、その組織に関する情報のみにアクセスまたは変更できるようになります。
 
 <div id="learn-more">
-  ## 詳しく見る
+  ## 詳しく見る {#learn-more}
 </div>
 
 * [Auth0 Organizations の仕組みを理解する](/docs/ja-jp/manage-users/organizations/organizations-overview)

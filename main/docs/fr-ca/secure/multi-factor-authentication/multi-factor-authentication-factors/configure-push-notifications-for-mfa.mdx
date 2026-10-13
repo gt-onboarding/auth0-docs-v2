@@ -6,7 +6,7 @@ title: Configurer les notifications push pour la MFA
 Les SDKs [Guardian](/docs/fr-ca/secure/multi-factor-authentication/auth0-guardian) pour [iOS](/docs/fr-ca/secure/multi-factor-authentication/auth0-guardian/guardian-for-ios-sdk) et [Android](/docs/fr-ca/secure/multi-factor-authentication/auth0-guardian/guardian-for-android-sdk) vous permettent d&#39;utiliser une application conçue sur mesure avec des services de notifications push propres à chaque fournisseur. Vous pouvez configurer les notifications push pour la plateforme AWS Simple Notification Service (SNS) ou utiliser les services Direct to Vendor pour ajouter directement dans Auth0 les identifiants Firebase Cloud Messaging (FCM) et Apple Push Notification (APN).
 
 <div id="aws-sns-configuration">
-  ## Configuration d’AWS SNS
+  ## Configuration d’AWS SNS {#aws-sns-configuration}
 </div>
 
 Avant de configurer les notifications push, suivez les prérequis ci-dessous :
@@ -15,7 +15,7 @@ Avant de configurer les notifications push, suivez les prérequis ci-dessous :
 2. Créez un AWS Access Key ID autorisé à créer des points de terminaison de Platform Application. Guardian crée automatiquement un point de terminaison de Platform Application avec le jeton d’appareil approprié dans le cadre d’une inscription réussie.
 
 <div id="configure-push-notifications-with-aws-sns">
-  ### Configurer les notifications push avec AWS SNS
+  ### Configurer les notifications push avec AWS SNS {#configure-push-notifications-with-aws-sns}
 </div>
 
 Pour recevoir des notifications push de Guardian, vous devez d’abord remplacer les paramètres SNS par défaut de Guardian. Vous pourrez ensuite configurer les notifications push pour Android et iOS.
@@ -36,7 +36,7 @@ Pour recevoir des notifications push de Guardian, vous devez d’abord remplacer
 2. Sélectionnez **Save** pour enregistrer vos modifications.
 
 <div id="configure-push-notifications-for-android-using-fcm">
-  ## Configurer les notifications push pour Android avec FCM
+  ## Configurer les notifications push pour Android avec FCM {#configure-push-notifications-for-android-using-fcm}
 </div>
 
 <Tabs>
@@ -67,7 +67,7 @@ Pour recevoir des notifications push de Guardian, vous devez d’abord remplacer
 </Tabs>
 
 <div id="configure-push-notifications-for-ios-using-apns">
-  ## Configurer les notifications push pour iOS à l’aide d’APNs
+  ## Configurer les notifications push pour iOS à l’aide d’APNs {#configure-push-notifications-for-ios-using-apns}
 </div>
 
 <Tabs>
@@ -115,7 +115,7 @@ Pour recevoir des notifications push de Guardian, vous devez d’abord remplacer
 </Tabs>
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Auth0 Guardian](/docs/fr-ca/secure/multi-factor-authentication/auth0-guardian)

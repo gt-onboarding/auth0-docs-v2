@@ -10,7 +10,7 @@ description: "Universal Login の `login-passwordless-email-code` 画面をカ�
 </Frame>
 
 <div id="import">
-  ## インポート
+  ## インポート {#import}
 </div>
 
 各画面には、それぞれ固有のHooksとメソッドがあります。SDK は、各画面で**部分インポート**と**ルートインポート**の両方をサポートしています。
@@ -59,7 +59,7 @@ function EmailCodeForm() {
 ```
 
 <div id="context-hooks">
-  ## Context Hooks
+  ## Context Hooks {#context-hooks}
 </div>
 
 `login-passwordless-email-code` 画面で Auth0 のコンテキストデータに読み取り専用でアクセスできる、画面スコープのHooksです。`@auth0/auth0-acul-react/login-passwordless-email-code` からインポートします。
@@ -171,7 +171,7 @@ function EmailCodeForm() {
 </ParamField>
 
 <div id="methods">
-  ## メソッド
+  ## メソッド {#methods}
 </div>
 
 <ParamField body="resendCode" type="Promise<void>">
@@ -254,7 +254,7 @@ function EmailCodeForm() {
 </ParamField>
 
 <div id="commonutility-hooks">
-  ## 共通/ユーティリティ フック
+  ## 共通/ユーティリティ フック {#commonutility-hooks}
 </div>
 
 <ParamField body={<a href="/docs/ja-jp/libraries/acul/react-sdk/API-Reference/Hooks/useAuth0Themes">useAuth0Themes</a>} type="フック">

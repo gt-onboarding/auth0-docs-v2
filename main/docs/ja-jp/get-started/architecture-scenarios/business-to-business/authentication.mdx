@@ -7,7 +7,7 @@ validatedOn: 2026-02-03
 ユーザーにサービスを提供するには、そのユーザーが誰であるかを識別できなければなりません。このプロセスをユーザー認証と呼びます。ユーザーを認証する方法には、ソーシャルメディアアカウント、ユーザー名とパスワード、 <Tooltip tip="パスワードレス: 第一要素としてパスワードに依存しない認証形式。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=passwordless">パスワードレス</Tooltip> など、さまざまなものがあります。また、ユーザー認証では第一要素だけでなく、<Tooltip tip="パスワードレス: 第一要素としてパスワードに依存しない認証形式。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=multi-factor+authentication">多要素認証</Tooltip> (MFA) を有効にして、さらに強固にすることが推奨される場合も少なくありません。
 
 <Info>
-  ### ベストプラクティス
+  ### ベストプラクティス {#best-practice}
 
   ユーザーをどのように認証するかを設計する際は、セキュリティとユーザー体験の両方を考慮することが重要です。複数の第一要素を用意したり、認証時に複数の要素を必須にしたりすることで、その両方を実現できます。
 </Info>
@@ -43,13 +43,13 @@ Auth0 [Universal Login](#universal-login) は、ユーザー ID とパスワ�
 企業では、ユーザーを組織ごとに分けて管理する必要があることが多く、場合によってはユーザーが複数の組織にアクセスできることもあります。これらのうちどのシナリオが自社に当てはまるかを把握することで、ユーザーがどの接続に存在するかをどのように判断するか、つまりそれが必要かどうか、いつ必要になるのか、どのように実現するのかを明確にできます。これが自社に関連するかどうかを判断するには、[Home Realm Discovery](#home-realm-discovery)を参照してください。
 
 <div id="universal-login">
-  ## Universal Login
+  ## Universal Login {#universal-login}
 </div>
 
 システム内に複数のアプリケーションがありますか。あるいは、今後そうなる予定はありますか。答えが「はい」であれば、一元化されたサインイン体験が必要です。複数のアプリケーション間でシームレスな <Tooltip tip="シングルサインオン（SSO）: ユーザーが1つのアプリケーションにログインすると、他のアプリケーションにも自動的にログインできるようにするサービス。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Single+Sign-on">Single Sign-on</Tooltip> (SSO) 体験を実現するには、認証のためにユーザーをリダイレクトする一元的な場所を用意することが極めて重要です。これにより、将来的にソーシャル認証を追加したり、システムにサードパーティ製アプリケーションを追加したり、ユーザー向けに多要素認証をオプションまたは必須として追加したりする場合でも、一貫した体験を提供できます。さらに、ユーザー体験を向上させる新機能も、追加の開発作業をほとんど、あるいはまったく行うことなく活用できるようになります。
 
 <Info>
-  ### ベストプラクティス
+  ### ベストプラクティス {#best-practice-2}
 
   複数のアプリケーションがある場合は、ユーザー認証のために[一元化された場所](/docs/ja-jp/authenticate/login/auth0-universal-login)にリダイレクトするのがベストプラクティスです。Auth0 では、これは [Universal Login](/docs/ja-jp/authenticate/login/auth0-universal-login) を活用することを意味します。Universal Login には、[SSO](/docs/ja-jp/authenticate/single-sign-on) を含め、セキュリティ面とユーザー体験の両方で多くの利点が標準で備わっています。
 </Info>
@@ -61,7 +61,7 @@ Auth0 Universal Login を使うと、ユーザー認証は短時間で簡単に�
 3. Authorization Server からの[レスポンスを受信して処理する](#application-integration)ように、アプリケーションを設定します。
 
 <div id="home-realm-discovery">
-  ## Home realm discovery
+  ## Home realm discovery {#home-realm-discovery}
 </div>
 
 ホーム レルム ディスカバリー (HRD) とは、ユーザーを認証する前に、そのユーザーがどの ID プロバイダー (または Auth0 のどの接続) に属しているかを特定するプロセスです。HRD には、次の 2 つの方法があります。
@@ -72,13 +72,13 @@ Auth0 Universal Login を使うと、ユーザー認証は短時間で簡単に�
 システムによっては、これらのいずれか一方、または両方の方法が必要になる場合があります。そのため、HRD のすべてのアプローチを理解し、アプリケーションに最も適した方法を適用できるようにしておくことが重要です。
 
 <div id="application-driven-hrd">
-  ### アプリケーション主導の HRD
+  ### アプリケーション主導の HRD {#application-driven-hrd}
 </div>
 
 ユーザーがどのレルムに属しているかを判断する一般的な方法の 1 つは、組織ごとにアプリケーションをブランド分けすることです。通常、この場合は各組織ごとにアプリケーションの専用インスタンスがあり、別々の URL からアクセスします。このコピーまたはインスタンスは、物理的に分離されている場合 (別々のサーバー群で稼働) もあれば、仮想的に分離されている場合 (共有サーバー上で稼働) もあります。一般的には、カスタムホスト名 (`companyA.application1.yourcompany.com`) またはパス (`application1.yourcompany.com/companyA`) で区別されます。
 
 <Info>
-  ### ベストプラクティス
+  ### ベストプラクティス {#best-practice-3}
 
   アプリケーションが必要な特定の接続 (IdP) をすでに把握している場合は、ユーザーを `/authorize` にリダイレクトする際に、`connection` クエリパラメータを使ってその情報を渡すこともできます。
 </Info>
@@ -86,7 +86,7 @@ Auth0 Universal Login を使うと、ユーザー認証は短時間で簡単に�
 アプリケーションがこのケースに当てはまる場合、ホームレルムディスカバリーは、組織固有のアプリケーション設定に `org_id` を保存し、ユーザーを Universal Login にリダイレクトする際に、それを organization パラメータとして送信するだけで簡単に実現できます。これにより、ユーザーはその特定の組織と、その組織に設定された接続に限定されます。
 
 <Info>
-  ### ベストプラクティス
+  ### ベストプラクティス {#best-practice-4}
 
   組織で複数の IdP が必要な場合は、ホームレルムディスカバリーをもう 1 回行う必要が生じることがあります (組織が特定された後) 。Organizations Feature を使用している場合は、通常 Auth0 がこれを処理します。
 </Info>
@@ -96,7 +96,7 @@ Auth0 Universal Login を使うと、ユーザー認証は短時間で簡単に�
 organization パラメータや connection パラメータは、ユーザーを `/authorize` エンドポイントにリダイレクトする際に、クエリパラメータとして追加することで送信できます。詳しくは、[Authentication API docs](https://auth0.com/docs/api/authentication#authorization-code-flow)を参照してください。ただし通常は、アプリケーションの実装言語に対応した SDK を使ってこれを行います。
 
 <div id="hrd-through-universal-login">
-  ### Universal Login を使った HRD
+  ### Universal Login を使った HRD {#hrd-through-universal-login}
 </div>
 
 ホームレルムディスカバリー には、主に 3 つのアプローチがあります。
@@ -112,7 +112,7 @@ organization パラメータや connection パラメータは、ユーザーを 
 </Warning>
 
 <div id="hrd-through-universal-login-using-the-email-subdomain">
-  #### メールのサブドメインを使用した Universal Login での HRD
+  #### メールのサブドメインを使用した Universal Login での HRD {#hrd-through-universal-login-using-the-email-subdomain}
 </div>
 
 ユニバーサルログインページでホームレルムディスカバリーを実装する最も簡単な方法は、ユーザー識別子に含まれるメールのサブドメインを利用して、対応する Identity Provider にマッピングすることです。もちろん、これはメールのサブドメインが組織、または少なくとも Identity Provider と 1 対 1 で対応している場合にのみ機能します。
@@ -125,25 +125,25 @@ organization パラメータや connection パラメータは、ユーザーを 
 2. その Organization に複数の IdP が関連付けられている場合、Auth0 はユーザーに対して、組織を選択するためのボタン、またはユーザー名とパスワードを入力するフォームを表示します。
 
 <div id="hrd-through-universal-login-using-the-identifier-to-realm-map">
-  #### Identifier to Realm Map を使用した Universal Login での HRD
+  #### Identifier to Realm Map を使用した Universal Login での HRD {#hrd-through-universal-login-using-the-identifier-to-realm-map}
 </div>
 
 2 つ目の、より複雑な方法として、識別子と IdP の対応マップを保存し、その情報にアクセスするための公開エンドポイントを提供する方法があります。そうすると、Universal Login ページで接続先を特定し、`connection` を付けて /authorize にリダイレクトし直すことができます。この方法の主な欠点は遅延です。さらに重要なのは、識別子の特定に関わるセキュリティ上の問題です。メールアドレスを使用している場合、特定のメールアドレスがあなたのユーザーかどうかを第三者がはるかに簡単に突き止められるようになります。
 
 <Info>
-  ### ベストプラクティス
+  ### ベストプラクティス {#best-practice-5}
 
   公開エンドポイントには、ハッカーによる情報探索への悪用を防ぎ、サービス拒否攻撃を防止するために、必ずレート制限を適用してください。
 </Info>
 
 <div id="hrd-through-universal-login-using-user-choice">
-  #### ユーザー選択を使った Universal Login による HRD
+  #### ユーザー選択を使った Universal Login による HRD {#hrd-through-universal-login-using-user-choice}
 </div>
 
 もう 1 つの方法は、ユーザーが一覧から選択できるようにすることです。これは、製品を利用している組織の一覧を公開しても問題ない場合に使えます。あるいは、ユーザーが自分の組織名を直接入力できるようにすることもできます。通常は、ユーザーを Universal Login にリダイレクトする前にこれを行います。ユーザーが所属する組織を指定したら、その組織の接続を指定して Auth0 にリダイレクトできます。接続がデータベース接続の場合は、Auth0 がユーザーにユーザー名とパスワードの入力を求めるだけにすることもできます。
 
 <div id="username-and-password-authentication">
-  ## ユーザー名とパスワードによる認証
+  ## ユーザー名とパスワードによる認証 {#username-and-password-authentication}
 </div>
 
 ほぼすべての B2C アプリケーションでは、顧客が新しい認証情報を作成できるようになっています。これは、あらゆるユーザーになじみのある一般的な認証方式です。
@@ -153,13 +153,13 @@ Auth0 では、ユーザー名とパスワードによる認証を複数の方�
 どのような方法でデータベース接続のユーザーを用意する場合でも、それらのユーザーの認証方法はほぼ共通です。ユーザーには、ユーザー名とパスワードを入力するフォームを提示する必要があります。[Universal Login](#universal-login) に関するガイダンスでも述べたように、ユーザー名とパスワードでユーザーを認証する最もシンプルで安全な方法は、一元化されたログインページにリダイレクトし、そこでユーザー名とパスワードを入力してもらうことです。これにより Auth0 は、ユーザーがすでに認証済みかどうかを判断し、不要な場合はログインフォーム自体を省略できます。
 
 <Info>
-  ### ベストプラクティス
+  ### ベストプラクティス {#best-practice-6}
 
   認証情報を一元化されたログインページでのみ収集することで、ユーザーの秘密情報が漏洩する可能性のある箇所を減らせます。また、不要な認証情報の収集も抑えられます。詳しくは [Universal Login](#universal-login) を参照してください。
 </Info>
 
 <div id="application-integration">
-  ## アプリケーション連携
+  ## アプリケーション連携 {#application-integration}
 </div>
 
 ユーザーをどのように認証するかが決まったら、次はその認証をどのように開始するかを決めます。通常、アプリケーションごとに独自の開始ポイントがあります。
@@ -173,7 +173,7 @@ Auth0 では、ユーザー名とパスワードによる認証を複数の方�
 匿名ユーザーにアプリケーションの一部へのアクセスを許可したい場合は、すぐにリダイレクトするのか、それとも必要になったときにだけリダイレクトするのか (あるいはその両方を組み合わせるのか。詳しくは [Redirect Users After Login](/docs/ja-jp/authenticate/login/redirect-users-after-login) を参照してください) を判断する必要があります。ユーザーがサイト内の保護されたバージョン (または領域) へ [deep link](#deep-linking-to-protected-endpoints) できる場合は、どのアプリケーションリンクで Auth0 への自動リダイレクトを発生させるかを決める必要があります。
 
 <div id="anonymous-access">
-  ### 匿名アクセス
+  ### 匿名アクセス {#anonymous-access}
 </div>
 
 ユーザーが初めてアプリケーションを利用する際の体験を考慮することは重要です。アプリケーションが匿名ユーザーによるアクセスをサポートしている場合 (e コマースアプリケーションでは非常に一般的です) 、考慮すべきシナリオがいくつかあります。
@@ -193,13 +193,13 @@ Auth0 では、ユーザー名とパスワードによる認証を複数の方�
 </Warning>
 
 <div id="deep-linking-to-protected-endpoints">
-  ### 保護されたエンドポイントへのディープリンク
+  ### 保護されたエンドポイントへのディープリンク {#deep-linking-to-protected-endpoints}
 </div>
 
 認証済みユーザーしかアクセスできないアプリケーション内の特定のページに、誰かが直接リンクする理由はさまざまです。アプリケーションでこれが可能な場合、ユーザーが未認証であれば、自動的に Auth0 にリダイレクトする必要があります。ユーザーの認証が完了し、<Tooltip tip="認可サーバー: ユーザーのアクセス範囲の境界を定義することに寄与する集中型サーバー。たとえば、認可サーバーはユーザーが利用できるデータ、タスク、機能を制御できます。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=authorization+server">認可サーバー</Tooltip>からアプリケーションに戻った後、ユーザーを最初にアクセスしようとしていた場所へ[リダイレクトできます](/docs/ja-jp/authenticate/login/redirect-users-after-login)。
 
 <div id="best-practice">
-  ### ベストプラクティス
+  ### ベストプラクティス {#best-practice-7}
 </div>
 
 現在主流の認証フレームワークの多くは、Auth0 のような認可サーバーへのリダイレクトに対応するミドルウェアをサポートしています。選定する際は、次の重要な点を考慮してください。
@@ -210,7 +210,7 @@ Auth0 では、ユーザー名とパスワードによる認証を複数の方�
 * 必要に応じて、<Tooltip tip="Refresh Token: ユーザーに再度ログインさせることなく、新しい Access Token を取得するために使用されるトークンです。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Refresh+Tokens">Refresh Tokens</Tooltip> に対応していること
 
 <div id="authenticating-the-user">
-  ### ユーザーの認証
+  ### ユーザーの認証 {#authenticating-the-user}
 </div>
 
 認証とは、ユーザーの本人確認を行うプロセスです。OIDC における認証の結果は、<Tooltip tip="ID Token: リソースへのアクセスではなく、クライアント自身のための認証情報。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=ID+Token">ID Token</Tooltip>です。このトークンにはユーザーに関する情報が含まれており、認可サーバーで定義された 1 つ以上の要素を使用してユーザーが認証した場合にのみ取得できるようにすべきです (最も一般的なのは [ユーザー ID とパスワード](#username-and-password-authentication) です) 。ID Token の取得に加えて、次の点についても考慮が必要になる場合があります。
@@ -224,7 +224,7 @@ Auth0 では、ユーザー名とパスワードによる認証を複数の方�
 </Warning>
 
 <div id="authorization-code-grant-with-or-without-pkce">
-  ### 認可コードグラント (PKCE の有無を問わず)
+  ### 認可コードグラント (PKCE の有無を問わず) {#authorization-code-grant-with-or-without-pkce}
 </div>
 
 お使いの SDK が Authorization Code grant のみをサポートしている場合、または Access Token や <Tooltip tip="Refresh Token: ユーザーに再度ログインさせることなく、新しい Access Token を取得するために使用するトークン。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Refresh+Token">Refresh Token</Tooltip> が必要な場合は、認可コードグラント ([PKCE](/docs/ja-jp/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce) の有無を問わず) を使用して ID Token を取得することもできます。Authorization Code grant では、コードをトークンに交換するための追加の API 呼び出しが必要になるため、ID Token だけが必要な場合は、不必要な待ち時間が増える可能性があります。多くの場合、ID Token への最適なアクセスを実現しつつ、Authorization Code grant のワークフローを活用して Access Token と Refresh Token を安全かつ確実に取得できるようにするため、[hybrid flow](/docs/ja-jp/get-started/authentication-and-authorization-flow/hybrid-flow) が実装されます。
@@ -236,19 +236,19 @@ Auth0 では、ユーザー名とパスワードによる認証を複数の方�
 </Warning>
 
 <div id="attack-protection">
-  ## 攻撃対策
+  ## 攻撃対策 {#attack-protection}
 </div>
 
 認証システムが重要なのは、<Tooltip tip="悪意ある行為者: 危害を加える意図を持って、ビジネスや環境に脅威をもたらす主体（個人または集団）。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=bad+actors">悪意ある行為者</Tooltip>が、本来アクセスしてはならないアプリケーションやユーザーデータにアクセスするのを防ぐためです。こうした悪意ある行為者がシステムにアクセスするまでの間には、できるだけ多くの防御策を設けたいものです。そのための最も簡単な方法の 1 つが、Auth0 の[攻撃対策](/docs/ja-jp/secure/attack-protection)が正しく設定されていることを確認することです。少し時間を取ってこのトピックに関するガイダンスを読み、ご利用の環境で正しく機能していることを確認してください。
 
 <Info>
-  ### ベストプラクティス
+  ### ベストプラクティス {#best-practice-8}
 
   異常検知は Auth0 によってバックグラウンドで処理され、製品に優れたセキュリティ機能を提供します。これを利用する場合は、ユーザーへのメール配信を有効にする前に、[Email Provider](/docs/ja-jp/get-started/architecture-scenarios/business-to-business/operations#email-provider-setup) を設定し、[Email Templates](/docs/ja-jp/get-started/architecture-scenarios/business-to-business/branding#email-template-customization) を構成しておくようにしてください。
 </Info>
 
 <div id="sso-with-legacy-systems">
-  ## レガシーシステムでの SSO
+  ## レガシーシステムでの SSO {#sso-with-legacy-systems}
 </div>
 
 大規模な再構築では、すべてのアプリケーションを一度に更新することが、常に可能または現実的とは限りません。実際、Auth0 との統合では、段階的に進めるアプローチを計画することが、推奨されるベストプラクティスです。アプリケーションがすでにシングルサインオン (SSO) に対応しており、かつレガシー ID システムが OIDC や <Tooltip tip="Security Assertion Markup Language（SAML）：パスワードなしで 2 者間の認証情報のやり取りを可能にする標準化されたプロトコル。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=SAML">SAML</Tooltip> などのプロトコルをサポートしている場合は、Auth0 との統合を進めながら SSO を継続して提供するための方法がいくつかあります。
@@ -257,7 +257,7 @@ Auth0 では、ユーザー名とパスワードによる認証を複数の方�
 * Auth0 からレガシー SSO システムにリダイレクトしてログインさせる。この場合、レガシーシステムを Auth0 の IdP として設定する必要があります (つまり、[SAML](/docs/ja-jp/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-service-provider) または [OIDC](/docs/ja-jp/authenticate/identity-providers/social-identity-providers) を使用) 。
 
 <Info>
-  ### ベストプラクティス
+  ### ベストプラクティス {#best-practice-9}
 
   レガシーシステムでの SSO エクスペリエンスをサポートすると複雑さが増す可能性はありますが、Auth0 との統合時に、よりシームレスなユーザー体験を実現するうえで価値がある場合があります。この方法を採る予定であれば、早い段階で計画しておくことで、実現できる可能性が高まります。すでに一元化されたサービスで SSO を提供していない場合は、それを追加するための複雑さは、得られるメリットに見合わない可能性が高いでしょう。
 </Info>
@@ -265,13 +265,13 @@ Auth0 では、ユーザー名とパスワードによる認証を複数の方�
 これは複雑なトピックであり、現在のレガシーアーキテクチャによっては追加の調査が必要になる可能性が高いため、現在レガシーシステムで SSO をサポートしている場合にのみ検討することをお勧めします。注: 現在、アプリケーションからユーザーを認証するために一元化されたシステムへリダイレクトしており、そのシステムとのセッションがまだない場合にのみ認証情報の入力を求めるのであれば、それはレガシー SSO の実装です。
 
 <div id="enterprise-login">
-  ## エンタープライズログイン
+  ## エンタープライズログイン {#enterprise-login}
 </div>
 
 「bring your own identity」の考え方は、今やほぼすべての B2B アプリケーションで不可欠な要件になっています。多くのエンタープライズ企業は、従業員が新たに認証情報を管理しなくて済むよう、自社の IdP をアプリケーションに統合できることを期待しています。これは、セキュリティを損なうことなくユーザー認証の体験を簡素化できる有効な方法です。さらに、[Universal Login](#universal-login) を使えば、[Enterprise Connections](/docs/ja-jp/authenticate/identity-providers/enterprise-identity-providers) のサポート追加も最小限の影響で簡単に始められます。
 
 <Info>
-  ### ベストプラクティス
+  ### ベストプラクティス {#best-practice-10}
 
   ユーザー向けにエンタープライズ接続をサポートし始めたら、認証時にどの接続先へユーザーを誘導するかを判断できるよう、何らかの形で [ホームレルムディスカバリー](#home-realm-discovery) を必ず実装する必要があります。
 </Info>
@@ -279,19 +279,19 @@ Auth0 では、ユーザー名とパスワードによる認証を複数の方�
 エンタープライズ接続をサポートすると、ユーザーの ID や認証情報は顧客組織の ID プロバイダーによって管理されます。また、特定の ID クレームもそこで管理され、Auth0 はそれらを使用してユーザーの [profile](/docs/ja-jp/get-started/architecture-scenarios/business-to-business/profile-management) を構成します。
 
 <Info>
-  ### ベストプラクティス
+  ### ベストプラクティス {#best-practice-11}
 
   「Bring your own identity」は非常に有用な機能ですが、これを初日からサポートしていない場合はもちろん、サポートしている場合でも、しばらくアプリケーションを利用した後に自社の IdP へ切り替えたいと考える組織が出てくることがあります。そのため、新しい ID を既存のデータベース ID に適切に関連付けられるよう、[ユーザーアカウントのリンク](/docs/ja-jp/manage-users/user-accounts/user-account-linking)を行う手段を用意する必要があります。
 </Info>
 
 <div id="multi-factor-authentication-mfa">
-  ## 多要素認証 (MFA)
+  ## 多要素認証 (MFA) {#multi-factor-authentication-mfa}
 </div>
 
 ユーザー認証情報の悪用がかつてないほど増えている現在、ハッカーによるユーザーの本人確認情報の窃取も日常的に起きており、システムを保護するのは簡単ではありません。そうした中でも、特に効果的な方法の 1 つが、ユーザー自身でアカウント保護のための第 2 要素を設定できるようにすることです。一般には [多要素認証](/docs/ja-jp/secure/multi-factor-authentication) と呼ばれます。これにより、たとえ別のアプリケーションから漏えいしたユーザー名とパスワードが使われた場合でも、正当なユーザー本人だけがアカウントにアクセスできるようになります。
 
 <Info>
-  ### ベストプラクティス
+  ### ベストプラクティス {#best-practice-12}
 
   顧客向けアプリケーションでは、第 2 要素の利用を*必須*にするのではなく、ユーザーが第 2 要素を追加できる*選択肢*として提供することがよくあります。詳しくは、[ユーザーに MFA を追加する選択肢を提供する](https://auth0.com/learn/multifactor-authentication-customers/)を参照してください。
 </Info>
@@ -308,7 +308,7 @@ Auth0 は、ユーザーアカウントへのアクセスを保護するため�
 Guardian や Google Authenticator のような技術を使った MFA ワークフローは、通常、モバイル端末やタブレット上で動作する別アプリケーションを通じて提供されますが、顧客に別アプリケーションをダウンロードしてもらいたくない場合は、Auth0 が提供する [SDK](https://auth0.com/blog/announcing-guardian-whitelabel-sdk/) を使って、既存のモバイルアプリケーションに第 2 要素のワークフローを直接組み込むこともできます。
 
 <div id="project-planning-guide">
-  ## プロジェクト計画ガイド
+  ## プロジェクト計画ガイド {#project-planning-guide}
 </div>
 
 推奨戦略の詳細を確認できるよう、PDF形式の計画ガイドをご用意しています。ダウンロードしてご参照ください。
@@ -316,7 +316,7 @@ Guardian や Google Authenticator のような技術を使った MFA ワーク�
 [B2B IAM プロジェクト計画ガイド](https://assets.ctfassets.net/cdy7uua7fh8z/63F0WOPJdVzsPMxV1Xvp8x/7a329487c5e890d8e820f6a48983b46a/B2B_Project_Planning.pdf)
 
 <div id="multiple-organization-architecture-multitenancy">
-  ## 複数組織アーキテクチャ (マルチテナンシー)
+  ## 複数組織アーキテクチャ (マルチテナンシー) {#multiple-organization-architecture-multitenancy}
 </div>
 
 多くのB2Bプラットフォームでは、顧客ごとに組織の分離やブランディングを何らかの形で実装しており、その結果、Identity and Access Management (IAM) システムが複雑になることがあります。これに当てはまる場合は、このような環境向けのガイダンスやベストプラクティスについて、ぜひ一度ご確認ください。

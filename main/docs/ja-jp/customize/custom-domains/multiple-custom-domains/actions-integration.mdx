@@ -8,13 +8,13 @@ import {AuthCodeBlock} from "/snippets/ja-jp/AuthCodeBlock.jsx";
 [Auth0 Actions](/docs/ja-jp/customize/actions) を使用すると、カスタムコードで認証をカスタマイズできます。[複数のカスタムドメイン](/docs/ja-jp/customize/custom-domains/multiple-custom-domains) を使用している場合は、Actions でカスタムドメインの情報にアクセスして、ドメイン固有のロジックを実装したり、ユーザーを組織に振り分けたり、アクセスポリシーを適用したり、通知をカスタマイズしたりできます。
 
 <div id="accessing-custom-domain-information">
-  ## カスタムドメイン情報へのアクセス
+  ## カスタムドメイン情報へのアクセス {#accessing-custom-domain-information}
 </div>
 
 Actions では、`event.custom_domain` オブジェクトを通じてカスタムドメインの情報にアクセスできます。このオブジェクトには、ドメイン名と、そのドメインに設定されたメタデータが含まれます。
 
 <div id="available-triggers">
-  ### 利用可能なトリガー
+  ### 利用可能なトリガー {#available-triggers}
 </div>
 
 `event.custom_domain` オブジェクトは、以下の Actions トリガーで利用できます。
@@ -35,7 +35,7 @@ Actions では、`event.custom_domain` オブジェクトを通じてカスタ�
 </Note>
 
 <div id="event-object-structure">
-  ### イベントオブジェクトの構造
+  ### イベントオブジェクトの構造 {#event-object-structure}
 </div>
 
 ドメインメタデータが設定された `login.example.com` ドメインを使用する場合:
@@ -62,11 +62,11 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="common-use-cases">
-  ## よくあるユースケース
+  ## よくあるユースケース {#common-use-cases}
 </div>
 
 <div id="conditional-logic-by-domain">
-  ### ドメインごとの条件分岐
+  ### ドメインごとの条件分岐 {#conditional-logic-by-domain}
 </div>
 
 カスタムドメインと標準ドメインのどちらを使用しているかに応じて、異なるルールを適用します。
@@ -86,7 +86,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="email-domain-based-access-control">
-  ### メールドメインに基づくアクセス制御
+  ### メールドメインに基づくアクセス制御 {#email-domain-based-access-control}
 </div>
 
 カスタムドメインのメタデータを使用して、メールドメインごとのアクセスポリシーを適用します。
@@ -140,7 +140,7 @@ exports.onExecutePreUserRegistration = async (event, api) => {
 ```
 
 <div id="application-metadata-based-access-control">
-  ### アプリケーション メタデータに基づくアクセス制御
+  ### アプリケーション メタデータに基づくアクセス制御 {#application-metadata-based-access-control}
 </div>
 
 アプリケーションおよびドメイングループのアクセス ポリシーを、アプリケーションとドメインのメタデータに基づいて適用します:
@@ -170,7 +170,7 @@ exports.onExecuteCredentialsExchange = async (event, api) => {
 ```
 
 <div id="connection-metadata-based-access-control">
-  ### 接続メタデータに基づくアクセス制御
+  ### 接続メタデータに基づくアクセス制御 {#connection-metadata-based-access-control}
 </div>
 
 接続およびドメイングループのアクセスポリシーを、接続とドメインのメタデータを使用して適用します:
@@ -198,7 +198,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="organization-metadata-based-access-control">
-  ### 組織のメタデータに基づくアクセス制御
+  ### 組織のメタデータに基づくアクセス制御 {#organization-metadata-based-access-control}
 </div>
 
 organization とドメイングループに対するアクセスポリシーを、organization とドメインのメタデータを使用して適用します：
@@ -232,7 +232,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="region-based-requests">
-  ### リージョン別のリクエスト
+  ### リージョン別のリクエスト {#region-based-requests}
 </div>
 
 カスタムドメインのメタデータに基づいて、リージョンごとの外部サービスにリクエストを送信します。
@@ -265,11 +265,11 @@ exports.onExecuteCustomEmailProvider = async (event, api) => {
 ```
 
 <div id="learn-more">
-  ## 詳しく見る
+  ## 詳しく見る {#learn-more}
 </div>
 
 <div id="actions-documentation">
-  ### Actions のドキュメント
+  ### Actions のドキュメント {#actions-documentation}
 </div>
 
 * [Auth0 Actions の概要](/docs/ja-jp/customize/actions)
@@ -277,7 +277,7 @@ exports.onExecuteCustomEmailProvider = async (event, api) => {
 * [Actions の制限事項](/docs/ja-jp/customize/actions/limitations)
 
 <div id="event-object-references">
-  ### イベントオブジェクトのリファレンス
+  ### イベントオブジェクトのリファレンス {#event-object-references}
 </div>
 
 * [Post-Login イベントオブジェクト](/docs/ja-jp/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object)
@@ -286,7 +286,7 @@ exports.onExecuteCustomEmailProvider = async (event, api) => {
 * [カスタム電話プロバイダー イベントオブジェクト](/docs/ja-jp/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/actions-triggers-custom-phone-provider-event-object)
 
 <div id="related-topics">
-  ### 関連情報
+  ### 関連情報 {#related-topics}
 </div>
 
 * [複数のカスタムドメイン](/docs/ja-jp/customize/custom-domains/multiple-custom-domains)

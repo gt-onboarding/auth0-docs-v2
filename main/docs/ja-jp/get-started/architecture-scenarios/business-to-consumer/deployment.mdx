@@ -6,7 +6,7 @@ title: デプロイ自動化 (B2C)
 変更管理と [QA](/docs/ja-jp/get-started/architecture-scenarios/business-to-consumer/quality-assurance) のベストプラクティスを取り入れることに加えて、成功している顧客は、自動デプロイプロセスの一部として Auth0 の構成資産管理も統合しています。[SDLC support](/docs/ja-jp/get-started/architecture-scenarios/business-to-consumer/architecture#sdlc-support) の Architecture セクションで説明しているように、開発、テスト、本番の各環境にそれぞれ別個の Auth0 テナントを用意し、各環境のテナント構成がほぼ同一になるようにするのが望ましいです。デプロイ自動化を利用すると、各環境のテナントを同じように構成しやすくなり、環境間の構成の不一致が原因で不具合が発生する可能性を低くできます。
 
 <Info>
-  ### ベストプラクティス
+  ### ベストプラクティス {#best-practice}
 
   どのような方法でデプロイ自動化を構成する場合でも、デプロイ前に rules、custom DB scripts、hooks の単体テストを行い、さらにデプロイ後にはテナントに対していくつかの統合テストも実行することをお勧めします。詳細については、[Quality Assurance](/docs/ja-jp/get-started/architecture-scenarios/business-to-consumer/quality-assurance) ガイダンスを参照してください。
 </Info>
@@ -26,7 +26,7 @@ Auth0 では、デプロイ自動化の方法としていくつかの異なる�
 * Auth0 Deploy CLI tool を使用している場合は keyword replacement を使用する
 
 <div id="tenant-specific-variables">
-  ## テナント固有の変数
+  ## テナント固有の変数 {#tenant-specific-variables}
 </div>
 
 Auth0 では、カスタム[拡張機能](/docs/ja-jp/customize/extensions)内から利用できる変数を設定できます。これらは、Auth0 テナント向けの環境変数のようなものです。開発、テスト、本番の各環境間でコードを移すたびに変わる参照をハードコーディングする代わりに、テナントで設定した変数名を使い、それをカスタム拡張コードから参照できます。これにより、実行時にテナント固有の値が変数に設定されるため、同じカスタムコードを変更せずに異なるテナントで利用しやすくなります。
@@ -37,13 +37,13 @@ Auth0 では、カスタム[拡張機能](/docs/ja-jp/customize/extensions)内�
 * Custom DB Scripts での変数の使用については、[設定パラメーター](/docs/ja-jp/authenticate/database-connections/custom-db/create-db-connection#step-3-add-configuration-parameters)を参照してください
 
 <Info>
-  ### ベストプラクティス
+  ### ベストプラクティス {#best-practice-2}
 
   テナント固有の値だけでなく、カスタムコード内に公開すべきでない機密性の高いシークレットを保持するためにも、変数を使用することを推奨します。カスタムコードを GitHub/GitLab/Bitbucket/VSTS にデプロイしている場合、テナント固有の変数を使うことで、リポジトリ経由で機密値が露出するのを防げます。
 </Info>
 
 <div id="project-planning-guide">
-  ## プロジェクト計画ガイド
+  ## プロジェクト計画ガイド {#project-planning-guide}
 </div>
 
 推奨戦略の詳細を確認できるよう、ダウンロードして参照できるPDF形式の計画ガイドを提供しています。

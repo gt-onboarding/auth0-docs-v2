@@ -9,7 +9,7 @@ Les politiques d’accès aux API pour les applications vous permettent de contr
 Vous pouvez configurer la politique d’accès à l’API d’une application pour chaque API enregistrée dans l’Auth0 Dashboard. Pour en savoir plus, consultez [Configurer la politique d’accès des applications à l’API](#configure-api-application-access-policy).
 
 <div id="user-delegated-access-vs-client-access">
-  ## Accès délégué par l’utilisateur vs accès client
+  ## Accès délégué par l’utilisateur vs accès client {#user-delegated-access-vs-client-access}
 </div>
 
 Vous pouvez configurer des politiques d’accès à l’API de l’application distinctes pour l’accès délégué par l’utilisateur et l’accès client (machine à machine) :
@@ -18,7 +18,7 @@ Vous pouvez configurer des politiques d’accès à l’API de l’application d
 * **Accès délégué par l’utilisateur** : utilisé pour tous les flux d’accès qui génèrent un jeton d’accès associé à un utilisateur final, ce qui permet à l’application d’accéder à une API au nom de l’utilisateur. Les flux d’accès délégué par l’utilisateur n’incluent pas le Client Credentials Flow. Pour en savoir plus sur les flux d’accès délégué par l’utilisateur, consultez [les flux d’authentification et d’autorisation](/docs/fr-ca/get-started/authentication-and-authorization-flow).
 
 <div id="application-api-access-policies">
-  ## Politiques d’accès aux API des applications
+  ## Politiques d’accès aux API des applications {#application-api-access-policies}
 </div>
 
 Les politiques d’accès des applications aux API sont les suivantes :
@@ -34,7 +34,7 @@ Lors de la configuration de la politique d’accès des applications pour une AP
 Lorsque vous définissez la politique d’accès des applications d’une API sur `Per-app authorization`, vous devez fournir explicitement les scopes requis dans la requête de jeton. Cela ne s’applique pas aux requêtes de jeton d’actualisation : si vous omettez les scopes, le serveur d’autorisation suppose que l’application souhaite tous les scopes qui lui ont été accordés dans le jeton d’accès initial. Par conséquent, le serveur d’autorisation renvoie un jeton d’accès avec les mêmes scopes que ceux accordés initialement par le Resource Owner.
 
 <div id="configure-api-application-access-policy">
-  ## Configurer la politique d&#39;accès des applications à l&#39;API
+  ## Configurer la politique d&#39;accès des applications à l&#39;API {#configure-api-application-access-policy}
 </div>
 
 Vous pouvez configurer la politique d&#39;accès des applications à une API à l&#39;aide de l&#39;Auth0 Dashboard ou de la Management API.
@@ -119,7 +119,7 @@ Vous pouvez configurer la politique d&#39;accès des applications à une API à 
 </Tabs>
 
 <div id="api-access-policies-and-third-party-applications">
-  ## Politiques d&#39;accès aux API et applications tierces
+  ## Politiques d&#39;accès aux API et applications tierces {#api-access-policies-and-third-party-applications}
 </div>
 
 Les [applications tierces](/docs/fr-ca/get-started/applications/third-party-applications) exigent toujours un client grant explicite pour accéder à une API, quelle que soit la politique d&#39;accès configurée pour celle-ci.
@@ -144,7 +144,7 @@ Pour en savoir plus, consultez [Configurer les politiques d&#39;accès aux API p
 </Callout>
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Accès des applications aux API : autorisations client](/docs/fr-ca/get-started/applications/application-access-to-apis-client-grants)

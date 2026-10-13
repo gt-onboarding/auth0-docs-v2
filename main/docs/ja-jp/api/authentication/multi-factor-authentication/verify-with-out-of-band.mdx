@@ -6,7 +6,7 @@ description: "プッシュ通知、SMS、音声通話などによるアウトオ
 import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `POST /oauth/token`
@@ -22,13 +22,13 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 チャレンジレスポンスに `binding_method: prompt` が含まれている場合、アプリはユーザーに `binding_code` の入力を求め、それをリクエストの一部として送信する必要があります。`binding_code` は通常、チャレンジの一部として含まれる6桁の数字 (OTPのようなもの) です。チャレンジレスポンスに `binding_method` が含まれていない場合は、`binding_code` は不要です。この場合、レスポンスは即座に返され、`invalid_grant` または `access_token` を受け取ります。
 
 <div id="learn-more">
-  ### 詳細はこちら
+  ### 詳細はこちら {#learn-more}
 </div>
 
 * [アウトオブバンド認証器を紐付ける](https://auth0.com/docs/secure/multi-factor-authentication/authenticate-using-ropg-flow-with-mfa/enroll-challenge-sms-voice-authenticators)
 
 <div id="headers">
-  ## ヘッダー
+  ## ヘッダー {#headers}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -36,7 +36,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 </ParamField>
 
 <div id="body-parameters">
-  ## Body Parameters
+  ## Body Parameters {#body-parameters}
 </div>
 
 <div className="prose-sm prose-gray dark:prose-invert">
@@ -80,7 +80,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 </ParamField>
 
 <div id="response-schema">
-  ## レスポンススキーマ
+  ## レスポンススキーマ {#response-schema}
 </div>
 
 <ResponseSchema>
@@ -106,7 +106,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 </ResponseSchema>
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | Status | Description                             |

@@ -8,13 +8,13 @@ import { ReleaseStageNotice } from "/snippets/fr-ca/ReleaseStageNotice.jsx"
 <ReleaseStageNotice feature="Online Refresh Tokens" stage="bêta" contact="votre gestionnaire de compte technique" />
 
 <div id="configure-orts">
-  ## Configurer les ORT
+  ## Configurer les ORT {#configure-orts}
 </div>
 
 Les Online Refresh Tokens (ORTs) doivent être activés au niveau de l’[API (Resource Server)](/docs/fr-ca/get-started/apis/api-settings), dans l’Auth0 Dashboard ou au moyen de la Management API.
 
 <div id="configure-using-the-dashboard">
-  ### Configurer à l’aide du Dashboard
+  ### Configurer à l’aide du Dashboard {#configure-using-the-dashboard}
 </div>
 
 1. Accédez à [Dashboard &gt; Applications &gt; API](https://manage.auth0.com/#/apis).
@@ -30,7 +30,7 @@ Les Online Refresh Tokens (ORTs) doivent être activés au niveau de l’[API (R
 Pour consulter et configurer les valeurs de délai d’inactivité et de durée de vie absolue des sessions, consultez les paramètres [Expiration de session du tenant](https://manage.auth0.com/#/tenant/advanced). Pour en savoir plus, lisez [Configurer la durée de vie de la session](/docs/fr-ca/manage-users/sessions/configure-session-lifetime).
 
 <div id="configure-using-the-management-api">
-  ### Configurer à l’aide de la Management API
+  ### Configurer à l’aide de la Management API {#configure-using-the-management-api}
 </div>
 
 Pour activer les ORT, effectuez une requête `PATCH` au point de terminaison [Mettre à jour le serveur de ressources](/docs/fr-ca/api/management/v2/resource-servers/patch-resource-servers-by-id) :
@@ -64,7 +64,7 @@ La réponse comprend la propriété `allow_online_access` :
 ```
 
 <div id="get-an-ort">
-  ## Obtenir un ORT
+  ## Obtenir un ORT {#get-an-ort}
 </div>
 
 Pour obtenir un ORT, incluez le [scope](/docs/fr-ca/get-started/apis/scopes) `online_access` dans votre requête d’autorisation à l’aide du [flux de code d’autorisation](/docs/fr-ca/get-started/authentication-and-authorization-flow/authorization-code-flow) ou du [flux de code d’autorisation avec PKCE](/docs/fr-ca/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce).
@@ -109,7 +109,7 @@ La réponse du jeton comprend l’ORT :
 </Callout>
 
 <div id="use-an-ort">
-  ## Utiliser un ORT
+  ## Utiliser un ORT {#use-an-ort}
 </div>
 
 Échangez l’ORT contre un nouveau [jeton d’accès](/docs/fr-ca/secure/tokens/access-tokens) lorsque le jeton d’accès actuel expire ou est sur le point d’expirer :
@@ -140,7 +140,7 @@ Si votre requête comprend la portée `openid`, la réponse contient un nouveau 
 </Callout>
 
 <div id="session-extension-behavior">
-  ### Comportement de la prolongation de session
+  ### Comportement de la prolongation de session {#session-extension-behavior}
 </div>
 
 Chaque échange de jeton réussi :
@@ -150,7 +150,7 @@ Chaque échange de jeton réussi :
 * **Maintient le SSO :** D’autres applications peuvent obtenir des jetons grâce au SSO tant que la session est active.
 
 <div id="revoke-an-ort">
-  ## Révoquer un ORT
+  ## Révoquer un ORT {#revoke-an-ort}
 </div>
 
 Lorsque vous révoquez un ORT, c’est toute la session Auth0 qui prend fin, et non seulement le jeton. Cela invalide tous les ORT liés à cette session et met fin au SSO pour l’utilisateur.
@@ -164,7 +164,7 @@ curl --request POST \
 ```
 
 <div id="use-orts-with-actions">
-  ## Utiliser les ORT avec Actions
+  ## Utiliser les ORT avec Actions {#use-orts-with-actions}
 </div>
 
 Vous pouvez utiliser les ORT avec Auth0 [Actions](/docs/fr-ca/customize/actions/actions-overview) et le [déclencheur post-login](/docs/fr-ca/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger).
@@ -195,7 +195,7 @@ exports.onExecutePostLogin = async (event, api) => {
 </Callout>
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Online Refresh Tokens](/docs/fr-ca/secure/tokens/refresh-tokens/online-refresh-tokens/online-refresh-tokens)

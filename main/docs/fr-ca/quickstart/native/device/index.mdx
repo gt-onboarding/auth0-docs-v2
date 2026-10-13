@@ -5,7 +5,7 @@ title: "Flux d’autorisation de l’appareil"
 import {AuthCodeGroup} from "/snippets/fr-ca/AuthCodeGroup.jsx";
 
 <div id="by-rachel-khoriander">
-  ##### Par Rachel Khoriander
+  ##### Par Rachel Khoriander {#by-rachel-khoriander}
 </div>
 
 Ce tutoriel montre comment faire une requête à votre API à partir d’un appareil à saisie limitée à l’aide du flux d’autorisation de l’appareil.Nous vous recommandons de vous connecter pour suivre ce guide de démarrage rapide avec des exemples configurés pour votre compte.
@@ -25,7 +25,7 @@ Auth0 permet à votre application de mettre facilement en œuvre le flux d’aut
 * Authentication API : poursuivez votre lecture pour apprendre à appeler directement notre API. Pour une expérience interactive, consultez notre [Device Flow Playground](https://auth0.github.io/device-flow-playground/).
 
 <div id="prerequisites">
-  ## Prérequis
+  ## Prérequis {#prerequisites}
 </div>
 
 **Avant de commencer ce tutoriel :**
@@ -45,7 +45,7 @@ Auth0 permet à votre application de mettre facilement en œuvre le flux d’aut
 * [Configurez les paramètres du code utilisateur de l’appareil](/docs/fr-ca/get-started/tenant-settings/configure-device-user-code-settings) pour définir le jeu de caractères, le format et la longueur de votre code utilisateur généré aléatoirement.
 
 <div id="steps">
-  ## Étapes
+  ## Étapes {#steps}
 </div>
 
 1. [Demander un code d’appareil](#request-device-code) (Flux de l’appareil) : Demandez un code d’appareil que l’utilisateur pourra utiliser pour autoriser l’appareil.
@@ -61,7 +61,7 @@ Facultatif : [Explorer des exemples de cas d’utilisation](#sample-use-cases)
 Facultatif : [Dépannage](#troubleshooting)
 
 <div id="request-device-code">
-  ## Demander un code d’appareil
+  ## Demander un code d’appareil {#request-device-code}
 </div>
 
 Une fois que l’utilisateur a lancé son application de l’appareil et souhaite autoriser l’appareil, vous devrez obtenir un code d’appareil. Lorsque l’utilisateur ouvre sa session sur son appareil avec navigateur, ce code sera associé à cette session.
@@ -69,7 +69,7 @@ Une fois que l’utilisateur a lancé son application de l’appareil et souhait
 Pour obtenir le code d’appareil, votre application doit envoyer une requête à l’[URL de code d’appareil](https://auth0.com/docs/api/authentication#get-device-code), en incluant le Client ID.
 
 <div id="example-post-to-device-code-url">
-  ### Exemple de requête POST à l’URL de code d’appareil
+  ### Exemple de requête POST à l’URL de code d’appareil {#example-post-to-device-code-url}
 </div>
 
 <AuthCodeGroup>
@@ -216,7 +216,7 @@ Pour obtenir le code d’appareil, votre application doit envoyer une requête �
 </AuthCodeGroup>
 
 <div id="device-code-parameters">
-  #### Paramètres du code d’appareil
+  #### Paramètres du code d’appareil {#device-code-parameters}
 </div>
 
 Notez que lorsque vous demandez un code d’appareil pour appeler une API personnalisée, vous :
@@ -235,7 +235,7 @@ Notez que lorsque vous demandez un code d’appareil pour appeler une API person
 | `audience`       | L’identifiant unique de l’API à laquelle votre application souhaite accéder. Utilisez la valeur **Identifier** dans l’onglet [Settings](https://manage.auth0.com/#/apis) de l’API que vous avez créée dans le cadre des prérequis de ce tutoriel. Notez que cela doit être encodé dans l’URL.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
 <div id="device-code-response">
-  ### Réponse du code d’appareil
+  ### Réponse du code d’appareil {#device-code-response}
 </div>
 
 Si tout se passe bien, vous recevrez une réponse HTTP 200 avec une charge utile contenant `device_code`, `user_code`, `verification_uri` ainsi que les valeurs `expires_in`, `interval` et `verification_uri_complete` :
@@ -278,7 +278,7 @@ Si tout se passe bien, vous recevrez une réponse HTTP 200 avec une charge utile
 </Info>
 
 <div id="request-device-activation">
-  ## Demander l’activation de l’appareil
+  ## Demander l’activation de l’appareil {#request-device-activation}
 </div>
 
 Une fois que vous avez reçu un `device_code` et un `user_code`, vous devez demander à l’utilisateur d’ouvrir l’adresse `verification_uri` sur son ordinateur portable ou son téléphone intelligent, puis d’entrer le `user_code` :
@@ -292,7 +292,7 @@ Le `device_code` n’est pas destiné à l’utilisateur et ne devrait pas être
 </Info>
 
 <div id="request-tokens">
-  ## Jetons de requête
+  ## Jetons de requête {#request-tokens}
 </div>
 
 Pendant que vous attendez que l’utilisateur active l’appareil, commencez à interroger périodiquement l’URL du jeton pour demander un jeton d’accès. En utilisant l’intervalle d’interrogation extrait (`interval`) à l’étape précédente, vous devrez envoyer une requête `POST` à l’[URL du jeton](https://auth0.com/docs/api/authentication#device-auth) en y joignant le `device_code`.
@@ -300,7 +300,7 @@ Pendant que vous attendez que l’utilisateur active l’appareil, commencez à 
 Pour éviter les erreurs causées par la latence du réseau, vous devriez commencer à compter chaque intervalle après avoir reçu la réponse à la dernière requête d’interrogation.
 
 <div id="example-request-token-post-to-token-url">
-  ### Exemple de requête POST pour obtenir un jeton à l’URL du jeton
+  ### Exemple de requête POST pour obtenir un jeton à l’URL du jeton {#example-request-token-post-to-token-url}
 </div>
 
 <AuthCodeGroup>
@@ -447,7 +447,7 @@ Pour éviter les erreurs causées par la latence du réseau, vous devriez commen
 </AuthCodeGroup>
 
 <div id="token-request-parameters">
-  #### Paramètres de la requête de jeton
+  #### Paramètres de la requête de jeton {#token-request-parameters}
 </div>
 
 | Nom du paramètre | Description                                                                                                                                                                                                                                                                                 |
@@ -457,13 +457,13 @@ Pour éviter les erreurs causées par la latence du réseau, vous devriez commen
 | `client_id`      | Le Client ID de votre application. Vous trouverez cette valeur dans les [Application Settings](https://manage.auth0.com/#/Applications/\{yourClientId}/settings).                                                                                                                    |
 
 <div id="token-responses">
-  ### Réponses du token
+  ### Réponses du token {#token-responses}
 </div>
 
 Pendant que vous attendez que l’utilisateur autorise l’appareil, il se peut que vous receviez différentes réponses `HTTP 4xx` :
 
 <div id="authorization-pending">
-  #### Autorisation en attente
+  #### Autorisation en attente {#authorization-pending}
 </div>
 
 Cette erreur s’affiche pendant que vous attendez que l’utilisateur intervienne. Continuez à vérifier l’état en utilisant l’intervalle suggéré obtenu à l’étape précédente de ce tutoriel.
@@ -478,7 +478,7 @@ Cette erreur s’affiche pendant que vous attendez que l’utilisateur intervien
 ```
 
 <div id="slow-down">
-  #### Ralentissez
+  #### Ralentissez {#slow-down}
 </div>
 
 Vous effectuez des vérifications trop fréquentes. Ralentissez et utilisez l’intervalle suggéré indiqué à l’étape précédente de ce tutoriel. Pour éviter cette erreur en raison de la latence du réseau, commencez à compter chaque intervalle après la réception de la réponse à la dernière requête de polling.
@@ -493,7 +493,7 @@ Vous effectuez des vérifications trop fréquentes. Ralentissez et utilisez l’
 ```
 
 <div id="expired-token">
-  #### Jeton expiré
+  #### Jeton expiré {#expired-token}
 </div>
 
 L’utilisateur n’a pas autorisé l’appareil assez rapidement; le `device_code` a donc expiré. Votre application doit aviser l’utilisateur que le processus a expiré et lui demander de le relancer.
@@ -512,7 +512,7 @@ L’utilisateur n’a pas autorisé l’appareil assez rapidement; le `device_co
 ```
 
 <div id="access-denied">
-  #### Accès refusé
+  #### Accès refusé {#access-denied}
 </div>
 
 Enfin, si l’accès vous est refusé, vous recevrez :
@@ -533,7 +533,7 @@ Cela peut se produire pour diverses raisons, notamment :
 * une [Rule](/docs/fr-ca/customize/rules) configurée a refusé l’accès
 
 <div id="user-authorization">
-  ## Autorisation de l’utilisateur
+  ## Autorisation de l’utilisateur {#user-authorization}
 </div>
 
 L’utilisateur numérisera le code QR ou ouvrira la page d’activation et saisira le code utilisateur :
@@ -560,7 +560,7 @@ Une fois l’authentification effectuée et le consentement obtenu, l’invite d
 À ce stade, l’utilisateur s’est authentifié et l’appareil a été autorisé.
 
 <div id="receive-tokens">
-  ## Recevoir des jetons
+  ## Recevoir des jetons {#receive-tokens}
 </div>
 
 Pendant que l’utilisateur s’authentifie et autorise l’appareil, l’application de l’appareil continue d’interroger l’URL des jetons pour demander un jeton d’accès.
@@ -592,7 +592,7 @@ Une fois que l’utilisateur a autorisé l’appareil, vous recevrez une répons
 </Warning>
 
 <div id="call-your-api">
-  ## Appeler votre API
+  ## Appeler votre API {#call-your-api}
 </div>
 
 Pour appeler votre API, l’application doit transmettre le jeton d’accès récupéré comme jeton Bearer dans l’en-tête Authorization de votre requête HTTP.
@@ -733,7 +733,7 @@ Pour appeler votre API, l’application doit transmettre le jeton d’accès ré
 </AuthCodeGroup>
 
 <div id="refresh-tokens">
-  ## Jetons d’actualisation
+  ## Jetons d’actualisation {#refresh-tokens}
 </div>
 
 Vous avez déjà reçu un [jeton d’actualisation](/docs/fr-ca/secure/tokens/refresh-tokens) si vous suivez ce tutoriel et avez effectué les étapes suivantes :
@@ -746,7 +746,7 @@ Vous pouvez utiliser le jeton d’actualisation pour obtenir un nouveau jeton d�
 Pour actualiser votre jeton, faites une requête `POST` au point de terminaison `/oauth/token` dans l’Authentication API, en utilisant `grant_type=refresh_token`.
 
 <div id="example-refresh-token-post-to-token-url">
-  ### Exemple de requête POST de refresh token vers l’URL du jeton
+  ### Exemple de requête POST de refresh token vers l’URL du jeton {#example-refresh-token-post-to-token-url}
 </div>
 
 <AuthCodeGroup>
@@ -895,7 +895,7 @@ Pour actualiser votre jeton, faites une requête `POST` au point de terminaison 
 </AuthCodeGroup>
 
 <div id="refresh-token-request-parameters">
-  #### Paramètres de la requête de jeton d’actualisation
+  #### Paramètres de la requête de jeton d’actualisation {#refresh-token-request-parameters}
 </div>
 
 | Nom du paramètre | Description                                                                                                                                                                                                                                                                   |
@@ -907,7 +907,7 @@ Pour actualiser votre jeton, faites une requête `POST` au point de terminaison 
 | `scope`          | (Facultatif) Liste des permissions de scope demandées, séparées par des espaces. S&#39;il n&#39;est pas envoyé, les scopes d&#39;origine seront utilisés ; sinon, vous pouvez demander un ensemble réduit de scopes. Notez que cette valeur doit être encodée dans l&#39;URL. |
 
 <div id="refresh-token-response">
-  ### Réponse du jeton d’actualisation
+  ### Réponse du jeton d’actualisation {#refresh-token-response}
 </div>
 
 Si tout se passe bien, vous recevrez une réponse `HTTP 200` dont le corps contient un nouveau `access_token`, un `id_token` (facultatif), la durée de validité du jeton en secondes (`expires_in`), les valeurs de `scope` accordées et le `token_type` :
@@ -927,11 +927,11 @@ Si tout se passe bien, vous recevrez une réponse `HTTP 200` dont le corps conti
 </Warning>
 
 <div id="sample-use-cases">
-  ## Exemples de cas d’utilisation
+  ## Exemples de cas d’utilisation {#sample-use-cases}
 </div>
 
 <div id="detect-device-authorization-flow-use">
-  ### Détecter l’utilisation du flux d’autorisation de l’appareil
+  ### Détecter l’utilisation du flux d’autorisation de l’appareil {#detect-device-authorization-flow-use}
 </div>
 
 Vous pouvez utiliser les [Rules](/docs/fr-ca/customize/rules) pour déterminer si la transaction en cours utilise le flux d’autorisation de l’appareil. Pour ce faire, vérifiez la propriété `protocol` de l’objet `context` :
@@ -947,7 +947,7 @@ function (user, context, callback) {
 ```
 
 <div id="sample-implementations">
-  ### Exemples de mises en œuvre
+  ### Exemples de mises en œuvre {#sample-implementations}
 </div>
 
 * [Device Authorization Playground](https://auth0.github.io/device-flow-playground/)
@@ -955,13 +955,13 @@ function (user, context, callback) {
 * [CLI (Node.js)](https://gist.github.com/panva/652c61e7d847e0ed99926c324fa91b36) : Exemple de mise en œuvre d’une CLI qui utilise le flux d’autorisation de l’appareil au lieu du flux de code d’autorisation. La principale différence, c’est que votre CLI n’a pas besoin d’héberger un serveur web ni d’écouter sur un port.
 
 <div id="troubleshooting">
-  # Dépannage
+  # Dépannage {#troubleshooting}
 </div>
 
 Les [journaux du tenant](/docs/fr-ca/deploy-monitor/logs) sont créés pour chaque interaction et peuvent être utilisés pour le dépannage.
 
 <div id="error-codes">
-  ## Codes d’erreur
+  ## Codes d’erreur {#error-codes}
 </div>
 
 | Code    | Nom                                                  | Description                           |
@@ -973,7 +973,7 @@ Les [journaux du tenant](/docs/fr-ca/deploy-monitor/logs) sont créés pour chaq
 | `sede`  | Échange réussite                                     | code de l’appareil pour jeton d’accès |
 
 <div id="limitations">
-  ## Limitations
+  ## Limitations {#limitations}
 </div>
 
 Pour utiliser le flux d’autorisation de l’appareil, les appareils doivent :
@@ -992,7 +992,7 @@ De plus, le flux d’autorisation de l’appareil ne permet pas :
 Nous prenons entièrement en charge [Draft 15](https://tools.ietf.org/html/draft-ietf-oauth-device-flow-15), sauf pour les clients confidentiels.
 
 <div id="keep-reading">
-  ## Pour en savoir plus
+  ## Pour en savoir plus {#keep-reading}
 </div>
 
 * [Le protocole OAuth 2.0](/docs/fr-ca/authenticate/protocols/oauth)

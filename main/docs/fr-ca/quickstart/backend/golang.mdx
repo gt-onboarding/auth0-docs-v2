@@ -46,7 +46,7 @@ AUTH0_AUDIENCE='{yourApiIdentifier}'`;
 </Note>
 
 <div id="get-started">
-  ## Pour commencer
+  ## Pour commencer {#get-started}
 </div>
 
 Vous allez créer une API Go avec trois points de terminaison illustrant différents niveaux de protection : accès public, authentification par JWT et permissions à portée limitée. La mise en œuvre complète utilise [go-jwt-middleware v3](https://github.com/auth0/go-jwt-middleware) avec la bibliothèque standard `net/http` de Go.
@@ -605,7 +605,7 @@ Vous allez créer une API Go avec trois points de terminaison illustrant différ
 ***
 
 <div id="calling-your-api">
-  ## Appeler votre API
+  ## Appeler votre API {#calling-your-api}
 </div>
 
 Vous pouvez appeler votre API protégée à partir de n’importe quelle application en transmettant un jeton d’accès dans l’en-tête `Authorization` en tant que jeton Bearer.
@@ -728,7 +728,7 @@ Vous pouvez appeler votre API protégée à partir de n’importe quelle applica
 ***
 
 <div id="advanced-usage">
-  ## Utilisation avancée
+  ## Utilisation avancée {#advanced-usage}
 </div>
 
 <Accordion title="Sécurité DPoP (Proof-of-Possession)">
@@ -805,12 +805,12 @@ Vous pouvez appeler votre API protégée à partir de n’importe quelle applica
 ***
 
 <div id="troubleshooting">
-  ## Dépannage
+  ## Dépannage {#troubleshooting}
 </div>
 
 <AccordionGroup>
   <Accordion title="Problèmes courants et solutions">
-    ### &quot;Échec de la validation du JWT&quot; ou 401 Unauthorized
+### &quot;Échec de la validation du JWT&quot; ou 401 Unauthorized {#failed-to-validate-jwt-or-401-unauthorized}
 
     **Problème :** L’API ne parvient pas à trouver ou à valider le jeton d’accès.
 
@@ -821,7 +821,7 @@ Vous pouvez appeler votre API protégée à partir de n’importe quelle applica
     3. Vérifiez que le jeton n’est pas expiré
     4. Assurez-vous d’utiliser un **jeton d’accès**, et non un ID token
 
-    ### &quot;incompatibilité de la claim aud&quot;
+### &quot;incompatibilité de la claim aud&quot; {#aud-claim-mismatch}
 
     **Problème :** L’audience du jeton ne correspond pas à celle de votre API.
 
@@ -837,7 +837,7 @@ Vous pouvez appeler votre API protégée à partir de n’importe quelle applica
 
     L’application cliente doit aussi demander un jeton avec le bon paramètre d’audience.
 
-    ### &quot;méthode de signature inattendue&quot;
+### &quot;méthode de signature inattendue&quot; {#unexpected-signing-method}
 
     **Problème :** L’algorithme du jeton ne correspond pas à la configuration du validateur.
 
@@ -847,7 +847,7 @@ Vous pouvez appeler votre API protégée à partir de n’importe quelle applica
     2. Assurez-vous que votre validateur utilise `validator.RS256`
     3. N’utilisez jamais `validator.HS256` pour des jetons Auth0, sauf si cela a été configuré explicitement
 
-    ### Point de terminaison JWKS inaccessible
+### Point de terminaison JWKS inaccessible {#jwks-endpoint-unreachable}
 
     **Problème :** Le fournisseur de mise en cache JWKS ne parvient pas à joindre le point de terminaison de clé publique d’Auth0.
 
@@ -857,7 +857,7 @@ Vous pouvez appeler votre API protégée à partir de n’importe quelle applica
     2. Testez le point de terminaison JWKS manuellement : `curl https://YOUR_AUTH0_DOMAIN/.well-known/jwks.json`
     3. Vérifiez que la région Auth0 est correcte (us/eu/au)
 
-    ### Chemin d’importation incorrect
+### Chemin d’importation incorrect {#wrong-import-path}
 
     **Problème :** `cannot find package "github.com/auth0/go-jwt-middleware/v3/..."`
 
@@ -871,7 +871,7 @@ Vous pouvez appeler votre API protégée à partir de n’importe quelle applica
     import "github.com/auth0/go-jwt-middleware/validator"
     ```
 
-    ### Erreurs liées au décalage d’horloge / jeton expiré
+### Erreurs liées au décalage d’horloge / jeton expiré {#clock-skew-token-expired-errors}
 
     **Problème :** L’horloge du serveur n’est pas synchronisée, ce qui fait paraître expirés des jetons valides.
 
@@ -881,7 +881,7 @@ Vous pouvez appeler votre API protégée à partir de n’importe quelle applica
     validator.WithAllowedClockSkew(60*time.Second)
     ```
 
-    ### Échec de l’extraction des claims
+### Échec de l’extraction des claims {#claims-extraction-fails}
 
     **Problème :** `Failed to retrieve claims` lors de l’utilisation des génériques.
 
@@ -896,7 +896,7 @@ Vous pouvez appeler votre API protégée à partir de n’importe quelle applica
 ***
 
 <div id="next-steps">
-  ## Prochaines étapes
+  ## Prochaines étapes {#next-steps}
 </div>
 
 Maintenant que vous disposez d’une API protégée, pensez à explorer :
@@ -909,7 +909,7 @@ Maintenant que vous disposez d’une API protégée, pensez à explorer :
 ***
 
 <div id="resources">
-  ## Ressources
+  ## Ressources {#resources}
 </div>
 
 * **[go-jwt-middleware GitHub](https://github.com/auth0/go-jwt-middleware)** — Code source, exemples et prise en charge de DPoP

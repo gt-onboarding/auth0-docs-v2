@@ -8,19 +8,19 @@ Auth0.Android は、Android アプリでユーザーを認証し、[Auth0 API](/
 GitHub の [Auth0.Android リポジトリ](https://github.com/auth0/Auth0.Android) をご覧ください。
 
 <div id="requirements">
-  ## 要件
+  ## 要件 {#requirements}
 </div>
 
 Android API バージョン 21 以降が必要です。
 
 <div id="installation">
-  ## インストール
+  ## インストール {#installation}
 </div>
 
 SDK をプロジェクトに追加します。このライブラリを使用すると、Auth0 の Authentication API と Management API にリクエストを送信できます。
 
 <div id="add-auth0-to-gradle">
-  ### Gradle に Auth0 を追加する
+  ### Gradle に Auth0 を追加する {#add-auth0-to-gradle}
 </div>
 
 アプリの `build.gradle` の dependencies セクションに、以下を追加します。
@@ -53,7 +53,7 @@ android {
 ```
 
 <div id="permissions">
-  ### 権限
+  ### 権限 {#permissions}
 </div>
 
 アプリケーションの `AndroidManifest.xml` ファイルを開き、次の権限を追加します。
@@ -63,7 +63,7 @@ android {
 ```
 
 <div id="configure-for-universal-login">
-  ## Universal Login 向けの設定
+  ## Universal Login 向けの設定 {#configure-for-universal-login}
 </div>
 
 まず、[Auth0 Dashboard &gt; アプリケーション](https://manage.auth0.com/#/applications) に移動し、編集するアプリケーションの名前をクリックします。**Allowed Callback URLs** で、URL が次の形式になっていることを確認します。
@@ -103,7 +103,7 @@ android {
 </Callout>
 
 <div id="initialize-auth0">
-  ## Auth0を初期化する
+  ## Auth0を初期化する {#initialize-auth0}
 </div>
 
 Auth0の<Tooltip tip="Client ID: Auth0から登録済みリソースに付与される識別値。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=client+ID">client ID</Tooltip>とドメイン値を使用して、新しい`Auth0`オブジェクトを作成します。このオブジェクトは、後でAuth0のエンドポイントとやり取りする際に使用します。
@@ -115,13 +115,13 @@ val auth0 = Auth0("{yourClientId}", "YOUR_DOMAIN")
 このオブジェクトは、[こちらの使用例](https://github.com/auth0/Auth0.Android/tree/master#usage)のように、Android コンテキストを使って初期化することもできます。
 
 <div id="next-steps">
-  ## 次のステップ
+  ## 次のステップ {#next-steps}
 </div>
 
 [`WebAuthProvider` クラスを使用して、アプリケーションでユーザーのログインとログアウトを行う](/docs/ja-jp/libraries/auth0-android/auth0-android-login-logout-and-user-profiles)
 
 <div id="reset-user-password">
-  ### ユーザーのパスワードをリセットする
+  ### ユーザーのパスワードをリセットする {#reset-user-password}
 </div>
 
 ユーザーのパスワードリセットを開始するには、ユーザーのメールアドレスとデータベース接続名をパラメータとして指定して、`resetPassword` を呼び出します。
@@ -129,7 +129,7 @@ val auth0 = Auth0("{yourClientId}", "YOUR_DOMAIN")
 パスワードリセットのリクエストは、ネットワーク関連のエラーが発生した場合は失敗しますが、指定されたメールアドレスがデータベース内に存在しない場合でも失敗しません (セキュリティ上の理由によるものです) 。
 
 <div id="learn-more">
-  ## 詳しくはこちら
+  ## 詳しくはこちら {#learn-more}
 </div>
 
 * [Auth0.Android Login、Logout、ユーザープロファイル](/docs/ja-jp/libraries/auth0-android/auth0-android-login-logout-and-user-profiles)

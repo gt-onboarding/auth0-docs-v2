@@ -9,7 +9,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 このガイドでは、単一のカスタムドメイン設定から[複数のカスタムドメイン](/docs/ja-jp/customize/custom-domains/multiple-custom-domains)への移行方法を説明します。ブランドや地域、顧客セグメントごとにドメインを追加する場合でも、スムーズに移行できるよう、このガイドで手順を追って説明します。
 
 <div id="migration-scenarios">
-  ## 移行シナリオ
+  ## 移行シナリオ {#migration-scenarios}
 </div>
 
 状況に最も合うシナリオを選択してください。
@@ -21,7 +21,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 | **正規ドメインから移行する**  | 現在 Auth0 の正規ドメイン (例：`tenant.auth0.com`) を使用しており、カスタムドメインに移行したい場合 | 複数ドメインでの初回カスタムドメイン導入  | 中～高 | なし (並行運用)        |
 
 <div id="pre-migration-checklist">
-  ## 移行前チェックリスト
+  ## 移行前チェックリスト {#pre-migration-checklist}
 </div>
 
 移行を開始する前に、以下の項目が完了していることを確認してください。
@@ -37,11 +37,11 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 * 関係者とユーザーに通知している (必要な場合)
 
 <div id="migration-steps">
-  ## 移行手順
+  ## 移行手順 {#migration-steps}
 </div>
 
 <div id="add-your-new-custom-domains">
-  ### 新しいカスタムドメインを追加する
+  ### 新しいカスタムドメインを追加する {#add-your-new-custom-domains}
 </div>
 
 [Auth0 Dashboard](/docs/ja-jp/customize/custom-domains/multiple-custom-domains#configure-multiple-custom-domains) または [Management API](https://auth0.com/docs/api/management/v2) を使用して、新しいカスタムドメインを追加します。
@@ -75,13 +75,13 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 </AuthCodeGroup>
 
 <div id="verify-domain-ownership">
-  ### ドメインの所有権を確認する
+  ### ドメインの所有権を確認する {#verify-domain-ownership}
 </div>
 
 新しいカスタムドメインごとに、ドメイン所有権の確認手続きを完了します。
 
 <div id="for-auth0-managed-certificates">
-  #### Auth0 管理の証明書を使用する場合
+  #### Auth0 管理の証明書を使用する場合 {#for-auth0-managed-certificates}
 </div>
 
 1. Auth0 から提供された CNAME レコードを控えておきます
@@ -101,7 +101,7 @@ curl --request POST \
 ```
 
 <div id="for-self-managed-certificates">
-  #### 自己管理の証明書を使用する場合
+  #### 自己管理の証明書を使用する場合 {#for-self-managed-certificates}
 </div>
 
 1. DNS に必要な TXT レコードを追加します
@@ -110,7 +110,7 @@ curl --request POST \
 4. ドメインを検証します
 
 <div id="configure-default-domain-optional">
-  ### デフォルトのドメインを設定する (任意)
+  ### デフォルトのドメインを設定する (任意) {#configure-default-domain-optional}
 </div>
 
 メールとAPI呼び出しで1つのドメインをデフォルトで使用する場合は、[そのドメインをデフォルトのドメインとして設定します](/docs/ja-jp/customize/custom-domains/multiple-custom-domains/default-domain):
@@ -126,13 +126,13 @@ curl --request PATCH \
 ```
 
 <div id="update-application-configurations">
-  ### アプリケーション設定を更新する
+  ### アプリケーション設定を更新する {#update-application-configurations}
 </div>
 
 適切なカスタムドメインを使用するよう、アプリケーションの設定を更新します。
 
 <div id="sdk-configuration">
-  #### SDK の設定
+  #### SDK の設定 {#sdk-configuration}
 </div>
 
 Auth0 SDK の初期化設定を更新します。
@@ -190,7 +190,7 @@ Auth0 SDK の初期化設定を更新します。
 </AuthCodeGroup>
 
 <div id="callback-urls">
-  #### コールバック URL
+  #### コールバック URL {#callback-urls}
 </div>
 
 Auth0 Dashboard でアプリケーションのコールバック URL を更新します。
@@ -210,7 +210,7 @@ Auth0 Dashboard でアプリケーションのコールバック URL を更新�
    ```
 
 <div id="update-email-templates">
-  ### メールテンプレートを更新する
+  ### メールテンプレートを更新する {#update-email-templates}
 </div>
 
 メールテンプレートでカスタムドメインの情報を使えるようにするには、次の手順を行います。
@@ -224,13 +224,13 @@ Auth0 Dashboard でアプリケーションのコールバック URL を更新�
 </Note>
 
 <div id="update-social-identity-providers-idp">
-  ### ソーシャルIDプロバイダー (IdP) を更新する
+  ### ソーシャルIDプロバイダー (IdP) を更新する {#update-social-identity-providers-idp}
 </div>
 
 ソーシャルIDプロバイダーのリダイレクトURIを更新します：
 
 <div id="google">
-  #### Google
+  #### Google {#google}
 </div>
 
 1. [Google Cloud Console](https://console.cloud.google.com) を開きます
@@ -238,7 +238,7 @@ Auth0 Dashboard でアプリケーションのコールバック URL を更新�
 3. **Authorized redirect URIs** に `https://new-domain.example.com/login/callback` を追加します
 
 <div id="facebook">
-  #### Facebook
+  #### Facebook {#facebook}
 </div>
 
 1. [Facebook Developers](https://developers.facebook.com) にアクセスします
@@ -246,19 +246,19 @@ Auth0 Dashboard でアプリケーションのコールバック URL を更新�
 3. **有効な OAuth リダイレクト URI** に `https://new-domain.example.com/login/callback` を追加します
 
 <div id="other-providers">
-  #### その他のプロバイダー
+  #### その他のプロバイダー {#other-providers}
 </div>
 
 設定済みのすべてのソーシャルプロバイダーについて、各プロバイダーのドキュメントに従ってリダイレクトURIを更新します。
 
 <div id="update-enterprise-connections-if-applicable">
-  ### エンタープライズ接続を更新する (必要に応じて)
+  ### エンタープライズ接続を更新する (必要に応じて) {#update-enterprise-connections-if-applicable}
 </div>
 
 SAML、WS-Fed、Azure AD、またはその他のエンタープライズ接続を使用している場合は、各接続の設定を更新してください。
 
 <div id="saml-connections">
-  #### SAML 接続
+  #### SAML 接続 {#saml-connections}
 </div>
 
 Assertion Consumer Service (ACS) URL を更新します。
@@ -272,7 +272,7 @@ https://new-domain.example.com/login/callback?connection={connectionName}
 </Callout>
 
 <div id="azure-ad-connections">
-  #### Azure AD 接続
+  #### Azure AD 接続 {#azure-ad-connections}
 </div>
 
 1. Azure Active Directory &gt; **App registrations** に移動します
@@ -280,13 +280,13 @@ https://new-domain.example.com/login/callback?connection={connectionName}
 3. **リダイレクト URI** に `https://new-domain.example.com/login/callback` を追加します
 
 <div id="adfs-connections">
-  #### ADFS 接続
+  #### ADFS 接続 {#adfs-connections}
 </div>
 
 ADFS の設定でエンドポイントを更新し、新しいカスタムドメインを使用してください。
 
 <div id="test-authentication">
-  ### 認証をテストする
+  ### 認証をテストする {#test-authentication}
 </div>
 
 移行を完了する前に、次の項目を十分にテストしてください。
@@ -299,7 +299,7 @@ ADFS の設定でエンドポイントを更新し、新しいカスタムドメ
 6. **トークンの検証**: JWT に正しい `iss` クレームが含まれていることを確認します
 
 <div id="monitor-and-verify">
-  ### 監視と検証
+  ### 監視と検証 {#monitor-and-verify}
 </div>
 
 移行後:
@@ -311,7 +311,7 @@ ADFS の設定でエンドポイントを更新し、新しいカスタムドメ
 5. すべてのアプリケーションで、想定どおりのカスタムドメインが使用されていることを確認する
 
 <div id="decommission-old-domain-if-applicable">
-  ### 古いドメインの廃止 (該当する場合)
+  ### 古いドメインの廃止 (該当する場合) {#decommission-old-domain-if-applicable}
 </div>
 
 既存のカスタムドメインを置き換える場合:
@@ -328,7 +328,7 @@ curl --request DELETE \
 ```
 
 <div id="migration-patterns">
-  ## 移行パターン
+  ## 移行パターン {#migration-patterns}
 </div>
 
 <AccordionGroup>
@@ -376,13 +376,13 @@ curl --request DELETE \
 </AccordionGroup>
 
 <div id="handling-existing-user-sessions">
-  ## 既存のユーザーセッションへの対応
+  ## 既存のユーザーセッションへの対応 {#handling-existing-user-sessions}
 </div>
 
 カスタムドメインの移行時には、既存のユーザーセッションに影響が生じる場合があります。
 
 <div id="session-considerations">
-  ### セッションに関する注意点
+  ### セッションに関する注意点 {#session-considerations}
 </div>
 
 * 古いドメインで作成されたセッションは、有効期限が切れるまで引き続き有効です
@@ -390,7 +390,7 @@ curl --request DELETE \
 * ドメインをまたぐセッションには、慎重な計画が必要です
 
 <div id="recommended-approach">
-  ### 推奨アプローチ
+  ### 推奨アプローチ {#recommended-approach}
 </div>
 
 1. **ユーザーへの通知**: 再度ログインが必要になる可能性があることをユーザーに伝える
@@ -399,13 +399,13 @@ curl --request DELETE \
 4. **明確な案内**: ユーザーに問題が発生した場合に備え、わかりやすい案内を提供する
 
 <div id="rollback-plan">
-  ## ロールバック手順
+  ## ロールバック手順 {#rollback-plan}
 </div>
 
 移行中に問題が発生した場合:
 
 <div id="immediate-rollback">
-  ### 即時ロールバック
+  ### 即時ロールバック {#immediate-rollback}
 </div>
 
 1. アプリケーションの設定を以前のドメインを使用する状態に戻す
@@ -413,7 +413,7 @@ curl --request DELETE \
 3. 問題を記録し、トラブルシューティングに備える
 
 <div id="partial-rollback">
-  ### 部分的なロールバック
+  ### 部分的なロールバック {#partial-rollback}
 </div>
 
 1. 影響を受けたアプリケーションを特定する
@@ -422,7 +422,7 @@ curl --request DELETE \
 4. 準備が整ったら再移行する
 
 <div id="complete-rollback">
-  ### 完全なロールバック
+  ### 完全なロールバック {#complete-rollback}
 </div>
 
 1. すべてのアプリケーション設定を更新し、古いドメインを使用する
@@ -431,11 +431,11 @@ curl --request DELETE \
 4. あらためて移行を試みるための予定を立てる
 
 <div id="troubleshooting">
-  ## トラブルシューティング
+  ## トラブルシューティング {#troubleshooting}
 </div>
 
 <div id="common-issues-and-solutions">
-  ### よくある問題と解決策
+  ### よくある問題と解決策 {#common-issues-and-solutions}
 </div>
 
 | 問題                     | 原因                             | 解決策                                                       |
@@ -449,7 +449,7 @@ curl --request DELETE \
 | 証明書エラー                 | 証明書がプロビジョニングされていないか、有効期限が切れている | ドメインを確認し、証明書のプロビジョニングが完了するまで待つか、証明書を更新する                  |
 
 <div id="getting-help">
-  ### サポートを受ける
+  ### サポートを受ける {#getting-help}
 </div>
 
 移行中に問題が発生した場合は、以下をお試しください：
@@ -464,7 +464,7 @@ curl --request DELETE \
    * エラーメッセージまたはログ
 
 <div id="post-migration-best-practices">
-  ## 移行後のベストプラクティス
+  ## 移行後のベストプラクティス {#post-migration-best-practices}
 </div>
 
 移行が完了したら:
@@ -477,7 +477,7 @@ curl --request DELETE \
 6. **拡張を見据えて計画する**: 将来的に追加のドメインをどのように管理するかを検討します
 
 <div id="learn-more">
-  ## 詳しくはこちら
+  ## 詳しくはこちら {#learn-more}
 </div>
 
 * [複数のカスタムドメイン](/docs/ja-jp/customize/custom-domains/multiple-custom-domains)

@@ -14,7 +14,7 @@
           "group": "Classes",
           "pages": [
             {
-              "group": "Connexion",
+              "group": "Login",
               "pages": [
                 "docs/fr-ca/libraries/acul/js-sdk/Screens/classes/Login",
                 "docs/fr-ca/libraries/acul/js-sdk/Screens/classes/LoginEmailVerification",
@@ -28,7 +28,7 @@
               ]
             },
             {
-              "group": "Inscription",
+              "group": "Sign up",
               "pages": [
                 "docs/fr-ca/libraries/acul/js-sdk/Screens/classes/Signup",
                 "docs/fr-ca/libraries/acul/js-sdk/Screens/classes/SignupId",
@@ -74,7 +74,7 @@
               ]
             },
             {
-              "group": "Mot de passe",
+              "group": "Password",
               "pages": [
                 "docs/fr-ca/libraries/acul/js-sdk/Screens/classes/ResetPassword",
                 "docs/fr-ca/libraries/acul/js-sdk/Screens/classes/ResetPasswordEmail",
@@ -93,7 +93,7 @@
               ]
             },
             {
-              "group": "Appareil",
+              "group": "Device",
               "pages": [
                 "docs/fr-ca/libraries/acul/js-sdk/Screens/classes/DeviceCodeActivation",
                 "docs/fr-ca/libraries/acul/js-sdk/Screens/classes/DeviceCodeActivationAllowed",
@@ -102,14 +102,14 @@
               ]
             },
             {
-              "group": "Consentement",
+              "group": "Consent",
               "pages": [
                 "docs/fr-ca/libraries/acul/js-sdk/Screens/classes/Consent",
                 "docs/fr-ca/libraries/acul/js-sdk/Screens/classes/CustomizedConsent"
               ]
             },
             {
-              "group": "Autre",
+              "group": "Other",
               "pages": [
                 "docs/fr-ca/libraries/acul/js-sdk/Screens/classes/AcceptInvitation",
                 "docs/fr-ca/libraries/acul/js-sdk/Screens/classes/BruteForceProtectionUnblock",
@@ -154,10 +154,10 @@
       "pages": [
         "docs/fr-ca/libraries/acul/react-sdk",
         {
-          "group": "Écrans",
+          "group": "Screens",
           "pages": [
             {
-              "group": "Connexion",
+              "group": "Login",
               "pages": [
                 "docs/fr-ca/libraries/acul/react-sdk/API-Reference/Screens/login/index",
                 "docs/fr-ca/libraries/acul/react-sdk/API-Reference/Screens/login-email-verification/index",
@@ -171,7 +171,7 @@
               ]
             },
             {
-              "group": "Inscription",
+              "group": "Signup",
               "pages": [
                 "docs/fr-ca/libraries/acul/react-sdk/API-Reference/Screens/signup/index",
                 "docs/fr-ca/libraries/acul/react-sdk/API-Reference/Screens/signup-id/index",
@@ -217,7 +217,7 @@
               ]
             },
             {
-              "group": "Mot de passe",
+              "group": "Password",
               "pages": [
                 "docs/fr-ca/libraries/acul/react-sdk/API-Reference/Screens/reset-password/index",
                 "docs/fr-ca/libraries/acul/react-sdk/API-Reference/Screens/reset-password-email/index",
@@ -236,7 +236,7 @@
               ]
             },
             {
-              "group": "Appareil",
+              "group": "Device",
               "pages": [
                 "docs/fr-ca/libraries/acul/react-sdk/API-Reference/Screens/device-code-activation/index",
                 "docs/fr-ca/libraries/acul/react-sdk/API-Reference/Screens/device-code-activation-allowed/index",
@@ -245,14 +245,14 @@
               ]
             },
             {
-              "group": "Consentement",
+              "group": "Consent",
               "pages": [
                 "docs/fr-ca/libraries/acul/react-sdk/API-Reference/Screens/consent/index",
                 "docs/fr-ca/libraries/acul/react-sdk/API-Reference/Screens/customized-consent/index"
               ]
             },
             {
-              "group": "Autre",
+              "group": "Other",
               "pages": [
                 "docs/fr-ca/libraries/acul/react-sdk/API-Reference/Screens/accept-invitation/index",
                 "docs/fr-ca/libraries/acul/react-sdk/API-Reference/Screens/email-identifier-challenge/index",
@@ -269,7 +269,7 @@
               ]
             },
             {
-              "group": "Protection contre les attaques",
+              "group": "Attack Protection",
               "pages": [
                 "docs/fr-ca/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock/index",
                 "docs/fr-ca/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock-success/index",
@@ -309,7 +309,7 @@
       ]
     },
     {
-      "group": "Auth0-PHP",
+      "group": "auth0-php",
       "pages": [
         "docs/fr-ca/libraries/auth0-php",
         "docs/fr-ca/libraries/auth0-php/auth0-php-basic-use",

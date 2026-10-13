@@ -5,7 +5,7 @@ description: "Mettez en œuvre des cas d’usage courants de Tenant ACL grâce �
 ---
 
 <div id="block-a-request">
-  ## Bloquer une requête
+  ## Bloquer une requête {#block-a-request}
 </div>
 
 Cet exemple de règle Tenant ACL bloque le trafic entrant provenant d’un code de pays de géolocalisation donné.
@@ -167,7 +167,7 @@ Voici un exemple de page de blocage :
 ![Un exemple de page de blocage](/docs/images/tenants/block-page-example.png)
 
 <div id="allow-a-request">
-  ## Autoriser une requête
+  ## Autoriser une requête {#allow-a-request}
 </div>
 
 Cet exemple de règle Tenant ACL n’autorise le trafic qu’en provenance d’un code de pays de géolocalisation précis.
@@ -310,7 +310,7 @@ Cet exemple de règle Tenant ACL n’autorise le trafic qu’en provenance d’u
 </Tabs>
 
 <div id="redirect-a-request">
-  ## Rediriger une requête
+  ## Rediriger une requête {#redirect-a-request}
 </div>
 
 Cet exemple de règle Tenant ACL redirige tout le trafic provenant d’un code de pays de géolocalisation donné.
@@ -464,7 +464,7 @@ Cet exemple de règle Tenant ACL redirige tout le trafic provenant d’un code d
 </Tabs>
 
 <div id="complex-comparisons">
-  ## Comparaisons complexes
+  ## Comparaisons complexes {#complex-comparisons}
 </div>
 
 Vous pouvez combiner les opérateurs `match` et `not_match` dans une seule règle Tenant ACL pour appliquer des politiques d’accès granulaires.
@@ -626,7 +626,7 @@ Cet exemple de règle Tenant ACL évalue les signaux `geo_country_code` et `geo_
 </Tabs>
 
 <div id="enforce-traffic-through-specific-infrastructure">
-  ## Forcer le trafic à passer par une infrastructure précise
+  ## Forcer le trafic à passer par une infrastructure précise {#enforce-traffic-through-specific-infrastructure}
 </div>
 
 Vous pouvez combiner les signaux `hostnames` et `connecting_ipv4_cidrs` pour acheminer les requêtes vers votre tenant exclusivement par votre infrastructure autorisée, comme un proxy inverse ou un VPN.

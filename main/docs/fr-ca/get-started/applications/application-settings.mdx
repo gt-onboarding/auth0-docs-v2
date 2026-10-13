@@ -12,13 +12,13 @@ Sur la page [Applications](https://manage.auth0.com/#/applications) du Dashboard
 <Frame>![Liste des applications du Dashboard](/docs/images/cdy7uua7fh8z/1ecNwGgFQZxdP57p0tp3jT/cd608fcfae22e195b604e2707e5a848d/App_List_-_EN.png)</Frame>
 
 <div id="basic-settings">
-  ## Paramètres de base
+  ## Paramètres de base {#basic-settings}
 </div>
 
 Lorsque vous modifiez les paramètres d’une application existante ou que vous créez une nouvelle application, vous entrez les renseignements relatifs à l’application dans la vue **Settings**.
 
 <div id="basic-information">
-  ### Renseignements de base
+  ### Renseignements de base {#basic-information}
 </div>
 
 <Frame>![Onglet Renseignements de base des paramètres de l’application dans Dashboard Applications](/docs/images/cdy7uua7fh8z/2GPUw7BODYuYYH3658Upz3/92a49ec57e6b4d07be96093989baac03/2023-04-11_15-34-58.png)</Frame>
@@ -30,7 +30,7 @@ Lorsque vous modifiez les paramètres d’une application existante ou que vous 
 * **Description** : Une description en texte libre de l’objectif de l’application. Maximum de 140 caractères.
 
 <div id="application-properties">
-  ### Propriétés de l’application
+  ### Propriétés de l’application {#application-properties}
 </div>
 
 <Frame>![Dashboard Applications Onglet Paramètres de l’application Propriétés de l’application](/docs/images/cdy7uua7fh8z/4Z66jnQOVFwNo5iuHtdlxo/153fabafccac939aa15c23a65ba974cb/Application_Properties_-_English.png)</Frame>
@@ -45,7 +45,7 @@ Lorsque vous modifiez les paramètres d’une application existante ou que vous 
   * [Application monopage](/docs/fr-ca/get-started/auth0-overview/create-applications/single-page-web-apps) : applications JavaScript qui exécutent la majeure partie de leur logique d’interface utilisateur dans un navigateur Web, en communiquant avec un serveur Web principalement au moyen d’API (comme AngularJS + Node.js ou React).
 
 <div id="application-uris">
-  ### URI de l’application
+  ### URI de l’application {#application-uris}
 </div>
 
 <Frame>![Dashboard Applications Application Settings Application URIs](/docs/images/cdy7uua7fh8z/1QhW2i4fTCCp8owey2tMPI/a19f7fc3f84118920d0e5cb2357144da/Application_URIs.png)</Frame>
@@ -83,7 +83,7 @@ N’utilisez pas d’espaces réservés génériques ni d’URL localhost dans l
 </Warning>
 
 <div id="id-token">
-  ### ID Token
+  ### ID Token {#id-token}
 </div>
 
 Dans la section **ID Token**, saisissez l’**expiration de l’ID Token** (en secondes), soit le délai avant l’expiration du `id_token` d’Auth0. La valeur par défaut est de 36 000 secondes, soit 10 heures.
@@ -93,7 +93,7 @@ Dans la section **ID Token**, saisissez l’**expiration de l’ID Token** (en s
 </Callout>
 
 <div id="refresh-token-rotation">
-  ### Rotation des jetons d’actualisation
+  ### Rotation des jetons d’actualisation {#refresh-token-rotation}
 </div>
 
 Dans la section **<Tooltip tip="jeton d’actualisation : jeton utilisé pour obtenir un Access Token renouvelé sans obliger les utilisateurs à se connecter de nouveau." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Refresh+Token">jeton d’actualisation</Tooltip> Rotation**, activez ou désactivez la rotation. Lorsqu’elle est activée, chaque échange d’un jeton d’actualisation entraîne l’émission d’un nouveau jeton d’actualisation et l’invalidation du jeton existant. Cela permet de détecter automatiquement la réutilisation d’un jeton s’il est compromis. De plus, saisissez la **période de chevauchement de la rotation** (en secondes). Cet intervalle correspond au délai de tolérance pendant lequel le même `refresh_token` peut être utilisé pour demander un `access_token` sans déclencher la détection automatique de réutilisation. Pour en savoir plus, consultez [Rotation des jetons d’actualisation](/docs/fr-ca/secure/tokens/refresh-tokens/refresh-token-rotation).
@@ -101,7 +101,7 @@ Dans la section **<Tooltip tip="jeton d’actualisation : jeton utilisé pour o
 <Frame>![Dashboard Applications Applications Settings Tab Rotation des jetons d’actualisation](/docs/images/cdy7uua7fh8z/Rk6i8MUVWZG34P7K6aurb/9457a6ea7ca5942522778c7ed7925023/Screenshot_2024-11-05_at_18.14.22.png)</Frame>
 
 <div id="refresh-token-expiration">
-  ### Expiration du jeton d’actualisation
+  ### Expiration du jeton d’actualisation {#refresh-token-expiration}
 </div>
 
 Dans la section **Expiration du jeton d’actualisation**, activez ou désactivez l’expiration absolue et l’expiration pour inactivité, puis définissez la durée de validité (en secondes) de chacune. Pour en savoir plus, consultez [Configurer l’expiration du jeton d’actualisation](/docs/fr-ca/secure/tokens/refresh-tokens/configure-refresh-token-expiration).
@@ -109,7 +109,7 @@ Dans la section **Expiration du jeton d’actualisation**, activez ou désactive
 <Frame>![Dashboard Applications Applications Settings Tab Refresh Token Expiration](/docs/images/cdy7uua7fh8z/2EnpIEc4kBxjnS3T67xPzC/22fdb95e2a2f31cee6f01e02d0a709c2/Refresh_Token_Expiration_-_English.png)</Frame>
 
 <div id="open-redirect-protection">
-  ### Protection contre les redirections ouvertes
+  ### Protection contre les redirections ouvertes {#open-redirect-protection}
 </div>
 
 Détermine comment Auth0 gère les redirections pour les applications tierces. Ce paramètre n’est disponible que pour les applications tierces avec des contrôles de sécurité renforcés.
@@ -123,7 +123,7 @@ Ne désactivez la protection contre les redirections ouvertes que pour les appli
 Pour en savoir plus, consultez [Protection contre les redirections](/docs/fr-ca/get-started/applications/third-party-applications/security-controls#redirect-protection).
 
 <div id="advanced-settings">
-  ## Paramètres avancés
+  ## Paramètres avancés {#advanced-settings}
 </div>
 
 La section **Paramètres avancés** vous permet de :
@@ -133,7 +133,7 @@ La section **Paramètres avancés** vous permet de :
 * Définir le ou les types d’octroi pour l’application
 
 <div id="application-metadata">
-  ### Métadonnées de l’application
+  ### Métadonnées de l’application {#application-metadata}
 </div>
 
 Les métadonnées de l’application sont des clés et des valeurs de type chaîne personnalisées (chacune pouvant contenir au maximum 255 caractères), définies pour chaque application. Les métadonnées sont exposées dans l’objet application sous `client_metadata`, et dans les rules sous `context.clientMetadata`. Vous pouvez créer jusqu’à 10 ensembles de métadonnées.
@@ -141,7 +141,7 @@ Les métadonnées de l’application sont des clés et des valeurs de type chaî
 <Frame>![Dashboard Applications Applications Settings Tab Advanced Settings Application Metadata Tab](/docs/images/cdy7uua7fh8z/7GWHyQloNihda3fuYiVEWQ/b3cced7c53690e6f3cbf7b2e23ff8646/App_Metadata_-_English.png)</Frame>
 
 <div id="device-settings">
-  ### Device Settings
+  ### Device Settings {#device-settings}
 </div>
 
 Si vous développez une application mobile, saisissez les paramètres iOS/Android nécessaires.
@@ -152,7 +152,7 @@ Si vous développez une application mobile, saisissez les paramètres iOS/Androi
 <Frame>![Dashboard Applications Application Settings Tab Advanced Settings Device Settings Tab](/docs/images/cdy7uua7fh8z/YKKPtWtswHn2FZGFSVWNw/086b32e41b3fd446ac8aa678be33648d/Device_Settings_-_EN.png)</Frame>
 
 <div id="oauth">
-  ### OAuth
+  ### OAuth {#oauth}
 </div>
 
 <Frame>![Tableau de bord Applications Onglet Paramètres de l’application Onglet Paramètres avancés Onglet OAuth](/docs/images/cdy7uua7fh8z/OAuth-tab.png)</Frame>
@@ -165,7 +165,7 @@ Si vous développez une application mobile, saisissez les paramètres iOS/Androi
 * Utilisez le commutateur pour indiquer si votre application est **OIDC Conformant** ou non. Les applications marquées comme OIDC Conformant suivront strictement la spécification OIDC.
 
 <div id="grant-types">
-  ### Types d’octroi
+  ### Types d’octroi {#grant-types}
 </div>
 
 Sélectionnez les types d’octroi à activer ou à désactiver pour votre application. Les types d’octroi disponibles dépendent du type d’application et de la [propriété de l’application](/docs/fr-ca/get-started/applications/first-party-and-third-party-applications). Les applications tierces dotées de contrôles de sécurité renforcés prennent en charge `authorization_code`, `refresh_token` et `client_credentials`.
@@ -173,7 +173,7 @@ Sélectionnez les types d’octroi à activer ou à désactiver pour votre appli
 <Frame>![Dashboard Applications Paramètres de l’application onglet Paramètres avancés onglet Types d’octroi](/docs/images/cdy7uua7fh8z/4ZMq4VfeGsKsKfZVFwSqe8/a0057749551915ac8d24b151bc27e875/Grant_Types_-_English.png)</Frame>
 
 <div id="ws-federation">
-  ### WS-Federation
+  ### WS-Federation {#ws-federation}
 </div>
 
 Gérez ou ajoutez les paramètres WS-Federation.
@@ -181,7 +181,7 @@ Gérez ou ajoutez les paramètres WS-Federation.
 <Frame>![Dashboard Applications, onglet Paramètres de l’application, onglet Avancé, onglet WS-Federation](/docs/images/cdy7uua7fh8z/3zuhwy8aQfveqIep1NilGk/8e1b9e5e2cbb3c2e7ac9caf7f6d508cb/WS-Federation_-_English.png)</Frame>
 
 <div id="certificates">
-  ### Certificats
+  ### Certificats {#certificates}
 </div>
 
 Gérez ou ajoutez le certificat de signature, ainsi que son empreinte numérique et son empreinte.
@@ -189,13 +189,13 @@ Gérez ou ajoutez le certificat de signature, ainsi que son empreinte numérique
 <Frame>![Dashboard Applications Advanced Settings onglet Certificates](/docs/images/cdy7uua7fh8z/5eB167clrfOiBEtyrMOtkn/fba0b689fda32cb9fd16eba1c0725c65/dashboard-applications-applications-settings-advanced-certificates.png)</Frame>
 
 <div id="endpoints">
-  ### Points de terminaison
+  ### Points de terminaison {#endpoints}
 </div>
 
 Consultez les informations sur les points de terminaison pour OAuth, <Tooltip tip="Security Assertion Markup Language (SAML) : protocole normalisé permettant à deux parties d’échanger des informations d’authentification sans mot de passe." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=SAML">SAML</Tooltip>, et <Tooltip tip="Security Assertion Markup Language (SAML) : protocole normalisé permettant à deux parties d’échanger des informations d’authentification sans mot de passe." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=WS-Fed">WS-Fed</Tooltip>, comme les URL Authorization et Metadata.
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Créer des applications](/docs/fr-ca/get-started/auth0-overview/create-applications)

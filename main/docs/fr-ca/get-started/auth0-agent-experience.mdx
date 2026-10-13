@@ -8,7 +8,7 @@ L’[Agent Experience Score](https://auth0.com/agent-experience) mesure l’effi
 Utilisez cette ressource pour en savoir plus sur la méthodologie de notation, notamment sur la façon dont les scores sont calculés, les dimensions mesurées et la manière dont les notes sont attribuées.
 
 <div id="test-specifications">
-  ## Spécifications des tests
+  ## Spécifications des tests {#test-specifications}
 </div>
 
 Les agents IA — Claude Code, GitHub Copilot, Gemini CLI — exécutent des tâches d’intégration Auth0 dans des environnements de développement isolés. Chaque agent utilise les mêmes outils qu’un développeur utiliserait dans un environnement réaliste : un espace de travail, un shell et des outils de gestion de fichiers comme Auth0 CLI. Les consignes sont courtes et réalistes : « ajoute l’authentification à mon application Next.js », et non des procédures étape par étape.
@@ -16,7 +16,7 @@ Les agents IA — Claude Code, GitHub Copilot, Gemini CLI — exécutent des tâ
 Chaque modèle est testé avec et sans les outils Auth0 ([MCP Server](/docs/fr-ca/get-started/auth0-mcp-server/getting-started-with-auth0-mcp-server) et [Agent Skills](/docs/fr-ca/quickstart/agent-skills)). L’écart entre ces scores représente l’impact mesurable des outils d’IA d’Auth0 sur l’expérience des développeurs.
 
 <div id="score-dimensions">
-  ## Dimensions du score
+  ## Dimensions du score {#score-dimensions}
 </div>
 
 Chaque exécution est évaluée selon 8 dimensions réparties en deux catégories — 50 % pour le processus et 50 % pour le résultat. Cinq dimensions évaluent de bout en bout le processus suivi par l’agent avec les outils Auth0. Trois dimensions évaluent le résultat final. Chaque dimension est notée individuellement de 0 à 100, puis pondérée et intégrée au score global.
@@ -33,7 +33,7 @@ Chaque exécution est évaluée selon 8 dimensions réparties en deux catégorie
 | **Sécurité**                    | Résultat  | 10 %        | Score déterminé selon que l’agent a codé en dur des secrets, stocké des jetons de façon non sécurisée ou validé des informations d’identification dans le code source.                                                                                       |
 
 <div id="grades">
-  ## Notes
+  ## Notes {#grades}
 </div>
 
 Les scores globaux se traduisent en notes alphabétiques :
@@ -49,7 +49,7 @@ Les scores globaux se traduisent en notes alphabétiques :
 Les notes sont calibrées pour correspondre à l’intuition des développeurs. Un score de 91 devrait correspondre à du code que vous accepteriez après une révision minimale. Un score de 55 devrait correspondre à quelque chose qui exige un vrai travail de correction.
 
 <div id="result-validation">
-  ## Validation des résultats
+  ## Validation des résultats {#result-validation}
 </div>
 
 Chaque évaluateur vérifie le code généré — pas le texte ni les explications. Les évaluateurs s’assurent que le code compile, importe de vrais packages, appelle de véritables méthodes du SDK et n’introduit pas de vulnérabilités de sécurité.
@@ -64,13 +64,13 @@ Les résultats sont validés à plusieurs niveaux :
 * **Examen d’ensemble** : Un juge LLM évalue l’exactitude globale de la mise en œuvre.
 
 <div id="estimated-cost-and-time">
-  ## Coût et temps estimés
+  ## Coût et temps estimés {#estimated-cost-and-time}
 </div>
 
 La page des résultats affiche le coût estimé et le temps estimé pour chaque configuration. Ces valeurs correspondent à une seule exécution d’évaluation avec Auth0 MCP + Skills activés.
 
 <div id="estimated-cost">
-  ### Coût estimé
+  ### Coût estimé {#estimated-cost}
 </div>
 
 Le coût est calculé en fonction du nombre total de jetons consommés pendant l’exécution d’évaluation (jetons d’entrée + jetons de sortie), multiplié par le tarif par jeton publié par le fournisseur du modèle. Auth0 ne facture pas l’exécution des évaluations — le coût correspond à ce que vous paieriez à votre fournisseur de modèle pour une utilisation équivalente de jetons.
@@ -82,7 +82,7 @@ Le tarif des jetons varie selon le modèle et le fournisseur. Pour connaître le
 * [Tarification de Google (Gemini)](https://ai.google.dev/gemini-api/docs/pricing/)
 
 <div id="estimated-time">
-  ### Temps estimé
+  ### Temps estimé {#estimated-time}
 </div>
 
 Le temps correspond à la durée réelle d’une exécution de l’évaluation, de la soumission du prompt jusqu’au résultat final. Il inclut toute l’activité de l’agent : lecture de fichiers, appels d’outils, attente des réponses de l’API et écriture de code.
@@ -97,7 +97,7 @@ Le temps peut varier selon :
 Le temps n’est pas normalisé d’un fournisseur à l’autre. Un temps plus court reflète à la fois l’efficacité du modèle et la performance de l’infrastructure du fournisseur.
 
 <div id="learn-more">
-  ## Pour en savoir plus
+  ## Pour en savoir plus {#learn-more}
 </div>
 
 * [Agent Experience Score](https://auth0.com/agent-experience)

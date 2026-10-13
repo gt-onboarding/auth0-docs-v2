@@ -8,7 +8,7 @@ title: ネイティブ Android アプリに Sign In with Google を追加する
 以下のセクションでは、Sign in with Google の設定に必要な手順と方法について詳しく説明します。
 
 <div id="how-it-works">
-  ## 仕組み
+  ## 仕組み {#how-it-works}
 </div>
 
 この機能は Android の Credential Manager を使用して、Auth0 で保護された Android アプリケーションでの Sign In with Google を容易にします。以下の手順は、Sign In with Google における一般的なユーザーのワークフローを示しています。
@@ -25,7 +25,7 @@ title: ネイティブ Android アプリに Sign In with Google を追加する
 8. Auth0 サーバーは `access_token` を Android アプリケーションに返します。
 
 <div id="before-you-begin">
-  ## 始める前に
+  ## 始める前に {#before-you-begin}
 </div>
 
 Sign In with Google の設定を開始する前に、次の条件を満たしていることを確認してください。
@@ -35,7 +35,7 @@ Sign In with Google の設定を開始する前に、次の条件を満たして
 * [Android の Credential Manager](https://developer.android.com/identity/sign-in/credential-manager-siwg) を使用して、Android アプリケーションに Sign In with Google が追加されていること。
 
 <div id="configuring-sign-in-with-google-for-android-applications">
-  ## Android アプリケーション向けの Sign In with Google の設定
+  ## Android アプリケーション向けの Sign In with Google の設定 {#configuring-sign-in-with-google-for-android-applications}
 </div>
 
 Sign In with Google を実装するには、主に 3 つの手順があります。
@@ -47,7 +47,7 @@ Sign In with Google を実装するには、主に 3 つの手順があります
 以下の各セクションでは、これらの手順それぞれの技術的な詳細を説明します。
 
 <div id="create-credentials-in-the-google-cloud-console">
-  ### Google Cloud Console で資格情報を作成する
+  ### Google Cloud Console で資格情報を作成する {#create-credentials-in-the-google-cloud-console}
 </div>
 
 まず、Google Cloud Console で次の項目を設定する必要があります。
@@ -67,7 +67,7 @@ Sign In with Google を実装するには、主に 3 つの手順があります
 </Callout>
 
 <div id="configure-auth0">
-  ### Auth0 を設定する
+  ### Auth0 を設定する {#configure-auth0}
 </div>
 
 Sign in with Google のフローでは、Auth0 と Android アプリケーションの間で行われる<Tooltip tip="OAuth 2.0: 認可プロトコルとワークフローを定義する認可フレームワーク。" cta="用語集を表示" href="/docs/ja-jp/glossary?term=OAuth+2.0">OAuth 2.0</Tooltip>トークン交換を利用します。
@@ -109,7 +109,7 @@ Google Cloud Console で資格情報を作成したら、Android 向け Credenti
 </Tabs>
 
 <div id="update-code-in-the-android-application">
-  ### Androidアプリケーションのコードを更新する
+  ### Androidアプリケーションのコードを更新する {#update-code-in-the-android-application}
 </div>
 
 次の例は、Microsoft、ユーザー名とパスワード、またはエンタープライズ フェデレーションなど、Google 以外の認証で使用される Web フローを補完するものです。
@@ -173,13 +173,13 @@ when (creds) {
 ```
 
 <div id="additional-authentication-scenarios">
-  ## 追加の認証シナリオ
+  ## 追加の認証シナリオ {#additional-authentication-scenarios}
 </div>
 
 現在の Google 実装では、エンタープライズ フェデレーションや追加の <Tooltip tip="多要素認証（MFA）: SMS 経由のコードなど、ユーザー名とパスワードに加えて認証要素を使用するユーザー認証プロセス。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=multi-factor+authentication">多要素認証</Tooltip> (MFA) チャレンジに関する明確なガイダンスは提供されていませんが、Web エクスペリエンスに移行することで、これらの機能に対応できます。
 
 <div id="enterprise-federation">
-  ### エンタープライズ フェデレーション
+  ### エンタープライズ フェデレーション {#enterprise-federation}
 </div>
 
 Auth0 はエンタープライズ フェデレーションをサポートしており、外部の[エンタープライズ アイデンティティプロバイダー](/docs/ja-jp/authenticate/identity-providers/enterprise-identity-providers) (Okta Workforce、ADFS、その他の OIDC 互換システムなど) を Auth0 テナントに接続できます。これにより、ユーザーは既存の社内資格情報を使って認証できるようになります。
@@ -197,7 +197,7 @@ WebAuthProvider.login(account)
 ```
 
 <div id="mfa-considerations-during-token-exchange">
-  ### トークン交換時のMFAに関する考慮事項
+  ### トークン交換時のMFAに関する考慮事項 {#mfa-considerations-during-token-exchange}
 </div>
 
 Google OAuth 接続のポリシーで多要素認証が必要な場合、Auth0 はトークン交換中にアプリケーションへエラーを返します。 このエラーは、アプリケーションへのレスポンスに含まれます。

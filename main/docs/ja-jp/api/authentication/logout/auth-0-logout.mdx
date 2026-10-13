@@ -4,7 +4,7 @@ description: "ユーザーをログアウトし、必要に応じてログアウ
 ---
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `GET /v2/logout`
@@ -16,20 +16,20 @@ description: "ユーザーをログアウトし、必要に応じてログアウ
 * `client_id` パラメーターが含まれていて、`returnTo` URL が設定されていない場合、サーバーは Dashboard で設定されている最初の `Allowed Logout URLs` にユーザーを戻します。詳しくは、[Log Users Out of Applications](https://auth0.com/docs/authenticate/login/logout/log-users-out-of-applications) を参照してください。
 
 <div id="remarks">
-  ### 備考
+  ### 備考 {#remarks}
 </div>
 
 * ユーザーをID プロバイダーからログアウトさせるのは一般的ではないため、`federated` クエリ文字列パラメーターを使用する前に、ユーザー体験への影響をよく検討してください。
 * auth0.js スクリプトのサンプルでは、ライブラリのバージョン 8 を使用しています。auth0.js バージョン 7 を使用している場合は、こちらの[リファレンスガイド](https://auth0.com/docs/libraries/auth0js)を参照してください。
 
 <div id="learn-more">
-  ### 詳細はこちら
+  ### 詳細はこちら {#learn-more}
 </div>
 
 * [ログアウト](https://auth0.com/docs/authenticate/login/logout)
 
 <div id="query-parameters">
-  ## クエリパラメータ
+  ## クエリパラメータ {#query-parameters}
 </div>
 
 <ParamField query="client_id" type="string">
@@ -45,7 +45,7 @@ description: "ユーザーをログアウトし、必要に応じてログアウ
 </ParamField>
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | Status | Description                       |

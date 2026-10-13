@@ -12,7 +12,7 @@ Vous pouvez importer en bloc des données utilisateur existantes dans une connex
 Pour importer en bloc des données utilisateur, créez d’abord un fichier de données utilisateur au format JSON attendu par Auth0, puis lancez une tâche pour importer ces données à l’aide du Dashboard ou de la Management API.
 
 <div id="prerequisites">
-  ## Prérequis
+  ## Prérequis {#prerequisites}
 </div>
 
 <Tabs>
@@ -36,7 +36,7 @@ Pour importer en bloc des données utilisateur, créez d’abord un fichier de d
 </Tabs>
 
 <div id="1-create-the-user-data-file">
-  ## 1. Créer le fichier de données utilisateur
+  ## 1. Créer le fichier de données utilisateur {#1-create-the-user-data-file}
 </div>
 
 Commencez par mettre vos données utilisateur existantes au format JSON afin de les importer dans Auth0, en respectant la structure définie dans le [schéma JSON des données utilisateur et la référence des propriétés](/docs/fr-ca/manage-users/user-migration/bulk-user-import-database-schema-and-examples).
@@ -60,7 +60,7 @@ Les points suivants peuvent vous être utiles lors de la création du fichier de
   Si un utilisateur ne s’est pas connecté à l’aide du `custom_password_hash` importé initialement, vous pouvez le mettre à jour en soumettant de nouveau les données utilisateur avec une valeur différente pour `custom_password_hash` dans une nouvelle tâche avec les upserts activés.
 
 <div id="2-import-the-user-data-into-your-database-connection">
-  ## 2. Importez les données utilisateur dans votre connexion à une base de données
+  ## 2. Importez les données utilisateur dans votre connexion à une base de données {#2-import-the-user-data-into-your-database-connection}
 </div>
 
 <Tabs>
@@ -367,7 +367,7 @@ Les points suivants peuvent vous être utiles lors de la création du fichier de
 </Tabs>
 
 <div id="3-check-job-status">
-  ## 3. Vérifier le statut d’une tâche
+  ## 3. Vérifier le statut d’une tâche {#3-check-job-status}
 </div>
 
 <Tabs>
@@ -415,7 +415,7 @@ Les points suivants peuvent vous être utiles lors de la création du fichier de
 Les tâches échouent en cas d’erreur, mais non lorsque les renseignements utilisateur sont non valides (par exemple, une adresse courriel non valide).
 
 <div id="limits">
-  ## Limites
+  ## Limites {#limits}
 </div>
 
 * Un maximum de deux tâches d’importation peut s’exécuter simultanément par tenant.
@@ -429,7 +429,7 @@ Les tâches échouent en cas d’erreur, mais non lorsque les renseignements uti
 * Les upserts ne fusionnent ni `user_metadata` ni `app_metadata`. Les métadonnées existantes sont entièrement remplacées par les nouvelles métadonnées.
 
 <div id="best-practices-for-large-scale-migrations">
-  ## Bonnes pratiques pour les migrations à grande échelle
+  ## Bonnes pratiques pour les migrations à grande échelle {#best-practices-for-large-scale-migrations}
 </div>
 
 Lors de l’importation de grandes quantités de données utilisateur (nécessitant 10 tâches ou plus), nous recommandons les stratégies suivantes :

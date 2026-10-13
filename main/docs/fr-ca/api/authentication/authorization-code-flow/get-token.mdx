@@ -7,7 +7,7 @@ import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 import { ReleaseStageNotice } from "/snippets/fr-ca/ReleaseStageNotice.jsx"
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `POST /oauth/token`
@@ -25,7 +25,7 @@ Notez que les seuls flux OAuth 2.0 qui permettent de récupérer un jeton d’ac
 C’est le flux que les applications Web traditionnelles utilisent pour accéder à une API. Utilisez ce point de terminaison pour échanger un code d’autorisation contre un jeton.
 
 <div id="headers">
-  ## En-têtes
+  ## En-têtes {#headers}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -33,7 +33,7 @@ C’est le flux que les applications Web traditionnelles utilisent pour accéder
 </ParamField>
 
 <div id="body-parameters">
-  ## Paramètres du Body
+  ## Paramètres du Body {#body-parameters}
 </div>
 
 <div className="prose-sm prose-gray dark:prose-invert">
@@ -61,7 +61,7 @@ C’est le flux que les applications Web traditionnelles utilisent pour accéder
 </ParamField>
 
 <div id="response-schema">
-  ## Schéma de réponse
+  ## Schéma de réponse {#response-schema}
 </div>
 
 <ResponseSchema>
@@ -87,7 +87,7 @@ C’est le flux que les applications Web traditionnelles utilisent pour accéder
 </ResponseSchema>
 
 <div id="agent-access-tokens">
-  ## Jetons d’accès des agents
+  ## Jetons d’accès des agents {#agent-access-tokens}
 </div>
 
 <ReleaseStageNotice feature="Agents en tant que principal" stage="ea" contact="Auth0 Support" terms="true" />
@@ -101,7 +101,7 @@ Lorsque l’application qui échange le code d’autorisation est liée à un ag
 Si le jeton d’accès contient déjà un acteur issu d’un transfert de session ou d’un échange de jetons On-Behalf-Of, cet acteur prévaut et aucun acteur d’agent n’est ajouté. Ces claims s’appliquent uniquement au jeton d’accès; le jeton d’identité n’est pas affecté. Le schéma de l’objet de réponse demeure inchangé. Pour en savoir plus, consultez [Profils de jetons d’accès](/docs/fr-ca/secure/tokens/access-tokens/access-token-profiles#claims).
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                   |

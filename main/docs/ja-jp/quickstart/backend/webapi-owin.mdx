@@ -19,7 +19,7 @@ import {HowToSchema} from "/snippets/ja-jp/HowToSchema.jsx";
 </Info>
 
 <div id="get-started">
-  ## はじめに
+  ## はじめに {#get-started}
 </div>
 
 Auth0 を使用すると、あらゆる種類のアプリケーションに認可を追加できます。このガイドでは、`Microsoft.Owin.Security.Jwt` パッケージを使用して、新規または既存の ASP.NET OWIN Web API アプリケーションに Auth0 を統合する方法を説明します。各 Auth0 API では API 識別子が使用され、アプリケーションがアクセストークンを検証するにはこれが必要です。
@@ -127,7 +127,7 @@ Auth0 を使用すると、あらゆる種類のアプリケーションに認�
     ```
 
     <Warning>
-      ### 末尾のバックスラッシュを忘れないでください
+### 末尾のバックスラッシュを忘れないでください {#do-not-forget-the-trailing-backslash}
 
       `ValidIssuer` に指定する URL には、末尾のバックスラッシュが含まれていることを必ず確認してください。JWT の発行者 claim と完全に一致している必要があるためです。これはよくある設定ミスで、API 呼び出しが正しく認証されない原因になります。
     </Warning>
@@ -236,7 +236,7 @@ Auth0 を使用すると、あらゆる種類のアプリケーションに認�
 </Check>
 
 <div id="additional-resources">
-  ## 追加リソース
+  ## 追加リソース {#additional-resources}
 </div>
 
 <CardGroup cols={3}>

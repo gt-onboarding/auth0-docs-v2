@@ -4,7 +4,7 @@ title: Meilleures pratiques pour les connexions Passwordless
 ---
 
 <div id="implement-login">
-  ## Implémenter la connexion
+  ## Implémenter la connexion {#implement-login}
 </div>
 
 Vous pouvez implémenter l’<Tooltip tip="Passwordless : forme d’authentification qui ne repose pas sur un mot de passe comme premier facteur." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Passwordless">authentification sans mot de passe</Tooltip> en redirigeant vers le <Tooltip tip="Passwordless : forme d’authentification qui ne repose pas sur un mot de passe comme premier facteur." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Universal+Login">Universal Login</Tooltip> d’Auth0, en intégrant la connexion directement dans votre application ou en combinant les deux dans la même application.
@@ -18,7 +18,7 @@ Pour savoir comment implémenter l’authentification sans mot de passe, consult
 * [Passwordless Authentication with Embedded Login](/docs/fr-ca/authenticate/passwordless/implement-login/embedded-login)
 
 <div id="use-sms-and-email-as-authentication-factors">
-  ## Utiliser les SMS et le courriel comme facteurs d’authentification
+  ## Utiliser les SMS et le courriel comme facteurs d’authentification {#use-sms-and-email-as-authentication-factors}
 </div>
 
 La mise en œuvre de l’authentification sans mot de passe d’Auth0 permet d’authentifier les utilisateurs à l’aide d’un seul facteur. Ce facteur peut être un code à usage unique envoyé par courriel ou par SMS, ou un Magic Link envoyé par courriel.
@@ -31,7 +31,7 @@ Même si le courriel ou les SMS peuvent être plus sécuritaires qu’un mot de 
 Pour ces raisons, nous recommandons que, si vous utilisez l’authentification sans mot de passe, vous mettiez aussi en œuvre la [Multi-factor Authentication (MFA)](/docs/fr-ca/secure/multi-factor-authentication) au moyen d’un facteur différent lorsque l’utilisateur effectue une opération sensible sur le plan de la sécurité.
 
 <div id="prevent-phishing-attacks">
-  ## Se prémunir contre les attaques d’hameçonnage
+  ## Se prémunir contre les attaques d’hameçonnage {#prevent-phishing-attacks}
 </div>
 
 Voici à quoi pourrait ressembler une attaque d’hameçonnage :
@@ -50,7 +50,7 @@ Your verification code for accessing's Acme @@application.name@@ is @@code@@
 ```
 
 <div id="prevent-brute-force-attacks">
-  ## Prévenir les attaques par force brute
+  ## Prévenir les attaques par force brute {#prevent-brute-force-attacks}
 </div>
 
 Auth0 offre les protections suivantes contre les attaques par force brute :
@@ -63,7 +63,7 @@ Auth0 offre les protections suivantes contre les attaques par force brute :
 La durée d’expiration du code à usage unique peut être modifiée dans [Auth0 Dashboard &gt; Authentication &gt; Passwordless](https://manage.auth0.com/#/connections/passwordless).
 
 <div id="prevent-user-enumeration-attacks">
-  ## Prévenir les attaques d’énumération d’utilisateurs
+  ## Prévenir les attaques d’énumération d’utilisateurs {#prevent-user-enumeration-attacks}
 </div>
 
 L’énumération d’utilisateurs se produit lorsqu’un acteur malveillant utilise des techniques de force brute pour deviner ou confirmer l’existence d’utilisateurs valides dans un système.
@@ -73,13 +73,13 @@ Lorsque **Disable Sign Ups** est activé, votre application peut devenir vulnér
 Si vous activez malgré tout **Disable Signs Ups**, la [Brute-force Protection](/docs/fr-ca/secure/attack-protection/brute-force-protection) peut réduire le risque associé à certaines de ces attaques, mais elle ne protège pas entièrement votre application.
 
 <div id="link-accounts">
-  ## Lier des comptes
+  ## Lier des comptes {#link-accounts}
 </div>
 
 Les utilisateurs peuvent vouloir s’authentifier à l’aide de différents facteurs sans mot de passe au fil du temps. Par exemple, ils peuvent d’abord s’inscrire au moyen d’un SMS, puis commencer plus tard à s’authentifier par courriel. Vous pouvez le faire en leur permettant de lier leurs différents profils au moyen de la [liaison de comptes](/docs/fr-ca/manage-users/user-accounts/user-account-linking/link-user-accounts).
 
 <div id="set-the-auth0-forwarded-for-header-for-rate-limit-purposes">
-  ## Définir l’en-tête auth0-forwarded-for pour la limite de requêtes
+  ## Définir l’en-tête auth0-forwarded-for pour la limite de requêtes {#set-the-auth0-forwarded-for-header-for-rate-limit-purposes}
 </div>
 
 Le point de terminaison `/passwordless/start` est assorti d’une [limite de débit](/docs/fr-ca/troubleshoot/customer-support/operational-policies/rate-limit-policy) de 50 requêtes par heure et par adresse IP. Si vous appelez l’API côté serveur, l’adresse IP de votre backend peut facilement atteindre ces limites de débit. Pour savoir comment résoudre ce problème, consultez la section sur la limitation du débit dans les points de terminaison Passwordless de [Utiliser les API Passwordless](/docs/fr-ca/authenticate/passwordless/implement-login/embedded-login/relevant-api-endpoints).

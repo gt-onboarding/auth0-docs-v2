@@ -6,7 +6,7 @@ title: Passer de Rules à Actions
 Lorsque vous convertissez des Rules existantes en Actions, vous devez associer la nouvelle Action au déclencheur Post-Login (`post-login`) du flux de connexion. Si vous suivez les étapes ci-dessous et gardez vos Actions dans le même ordre que vos Rules d’origine, la fonctionnalité devrait être identique.
 
 <div id="plan-your-migration">
-  ## Planifiez votre migration
+  ## Planifiez votre migration {#plan-your-migration}
 </div>
 
 Les Actions post-login s’exécutent après les Rules existantes. Vous pouvez donc convertir les Rules une à une dans le Dashboard, ou toutes en même temps à l’aide de la <Tooltip tip="Management API : un produit permettant aux clients d’effectuer des tâches administratives." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Management+API">Management API</Tooltip>.
@@ -25,7 +25,7 @@ C’est pourquoi nous vous recommandons de migrer votre pipeline étape par éta
 </Card>
 
 <div id="understand-limitations">
-  ## Comprendre les limites
+  ## Comprendre les limites {#understand-limitations}
 </div>
 
 Bien que les Actions puissent prendre en charge la grande majorité de ce que les Rules permettent de faire, vous devriez connaître certaines limites avant de commencer votre migration. (N’oubliez pas : pendant la migration, vous pouvez exécuter à la fois des Rules et des Actions.)
@@ -35,7 +35,7 @@ Bien que les Actions puissent prendre en charge la grande majorité de ce que le
 Pour obtenir la liste complète des limites, consultez [Actions Limitations](/docs/fr-ca/customize/actions/limitations).
 
 <div id="convert-code">
-  ## Convertir le code
+  ## Convertir le code {#convert-code}
 </div>
 
 Pour convertir une Rule en Action, vous devez remplacer le code propre aux Rules par du code Actions. Cette section présente les tâches à effectuer pour convertir une Rule fonctionnelle en son Action équivalente.
@@ -47,7 +47,7 @@ Pour convertir une Rule en Action, vous devez remplacer le code propre aux Rules
 </Card>
 
 <div id="copy-rule-code-to-a-new-action">
-  ### Copier le code d’une Rule dans une nouvelle Action
+  ### Copier le code d’une Rule dans une nouvelle Action {#copy-rule-code-to-a-new-action}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -66,7 +66,7 @@ Pour convertir une Rule en Action, vous devez remplacer le code propre aux Rules
 5. Effectuez les changements décrits dans le reste de cet article à mesure que vous intégrez le code à la fonction.
 
 <div id="change-the-function-declaration">
-  ### Modifier la déclaration de la fonction
+  ### Modifier la déclaration de la fonction {#change-the-function-declaration}
 </div>
 
 Les Rules utilisent une fonction déclarée classique avec les paramètres `user`, `context` et `callback`, tandis que les Actions utilisent une fonction exportée sous un nom précis. Apportez la modification suivante; pour l’instant, ignorez toute erreur qui s’affiche.
@@ -88,7 +88,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="change-how-user-data-is-accessed">
-  ### Modifier la façon d’accéder aux données utilisateur
+  ### Modifier la façon d’accéder aux données utilisateur {#change-how-user-data-is-accessed}
 </div>
 
 Dans Rules, les données sur l’utilisateur qui se connecte sont stockées dans l’[objet `user`](/docs/fr-ca/customize/rules/user-object-in-rules). Dans Actions, ces données se trouvent dans la propriété `user` de l’[objet `event`](/docs/fr-ca/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object). La plupart des propriétés existantes sont accessibles à cet endroit.
@@ -126,7 +126,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="change-how-context-data-is-accessed">
-  ### Modifier la façon d’accéder aux données de contexte
+  ### Modifier la façon d’accéder aux données de contexte {#change-how-context-data-is-accessed}
 </div>
 
 Dans Rules, les données sur la session de login en cours sont stockées dans l’[`objet context`](/docs/fr-ca/customize/rules/context-object). Avec Actions, ces données ont été restructurées et déplacées vers l’[`objet event`](/docs/fr-ca/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object). Un grand nombre de propriétés ont été déplacées telles quelles, mais certaines ont été regroupées pour plus de clarté.
@@ -172,7 +172,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="convert-dependencies">
-  ### Convertir les dépendances
+  ### Convertir les dépendances {#convert-dependencies}
 </div>
 
 Les Rules gèrent les dépendances d’une façon qui oblige à inclure le numéro de version dans une instruction `require`. Les Actions utilisent une syntaxe CommonJS plus standard et exigent que les versions soient indiquées à l’extérieur de l’éditeur de code.
@@ -208,7 +208,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="convert-callbacks">
-  ### Convertir les callbacks
+  ### Convertir les callbacks {#convert-callbacks}
 </div>
 
 Lorsqu’une Rule a terminé son traitement, elle doit appeler la fonction `callback()` et transmettre une erreur si la connexion échoue. À l’inverse, les Actions peuvent utiliser `return` en cas de réussite, ou appeler une méthode `api` en fournissant un message si la connexion échoue. Toutes les occurrences de `callback()` dans une Rule doivent être supprimées ou remplacées par `api.access.deny()` en cas d’échec. Dans les Rules comme dans les Actions, si le traitement doit s’arrêter en raison d’une condition particulière, utilisez une instruction `return`.
@@ -251,7 +251,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="change-handling-of-secrets">
-  ### Modifier la gestion des secrets
+  ### Modifier la gestion des secrets {#change-handling-of-secrets}
 </div>
 
 Dans Rules, vous définissez des valeurs de configuration globalement, ce qui signifie que toutes les Rules peuvent accéder à toutes les valeurs secrètes. (Pour en savoir plus, consultez [Store Rule Configurations](/docs/fr-ca/customize/rules/configuration).) Dans Actions, vous définissez des valeurs de configuration pour chaque Action individuellement. Vous ne pouvez pas accéder à la valeur secrète d’une Action à l’extérieur du contexte de cette Action.
@@ -285,7 +285,7 @@ exports.onExecutePostLogin = async (event, api) => {
 Comme pour Rules, Auth0 chiffre toutes les valeurs secrètes lorsqu’elles sont stockées.
 
 <div id="convert-custom-claims-in-tokens">
-  ### Convertir les claims personnalisés dans les jetons
+  ### Convertir les claims personnalisés dans les jetons {#convert-custom-claims-in-tokens}
 </div>
 
 Les Rules et les Actions peuvent toutes deux ajouter des claims personnalisés aux jetons d’identification et aux <Tooltip tip="Jeton d’accès : information d’autorisation, sous la forme d’une chaîne opaque ou d’un JWT, utilisée pour accéder à une API." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=access+tokens">jetons d’accès</Tooltip>. Dans les Rules, cela correspond à une propriété de l’objet `context`, tandis que dans les Actions, on utilise une méthode de l’[`objet api`](/docs/fr-ca/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-api-object).
@@ -325,7 +325,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="convert-multi-factor-triggering">
-  ### Convertir le déclenchement de l’authentification multifacteur
+  ### Convertir le déclenchement de l’authentification multifacteur {#convert-multi-factor-triggering}
 </div>
 
 Dans Rules, l’<Tooltip tip="authentification multifacteur (MFA) : processus d’authentification de l’utilisateur qui repose sur un facteur supplémentaire au nom d’utilisateur et au mot de passe, comme un code par SMS." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=multi-factor+authentication">authentification multifacteur</Tooltip> peut être déclenchée en modifiant la propriété `multifactor` de l’[objet `context`](/docs/fr-ca/customize/rules/context-object). Dans Actions, cela se fait à l’aide d’une [méthode de l’objet `api`](/docs/fr-ca/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-api-object).
@@ -358,7 +358,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="convert-user-metadata-updates">
-  ### Convertir les mises à jour des métadonnées de l’utilisateur
+  ### Convertir les mises à jour des métadonnées de l’utilisateur {#convert-user-metadata-updates}
 </div>
 
 Dans les Rules, la mise à jour des propriétés `user_metadata` et `app_metadata` nécessite une requête à la Management API, ce qui peut entraîner des erreurs de [limite de débit](/docs/fr-ca/troubleshoot/customer-support/operational-policies/rate-limit-policy/management-api-endpoint-rate-limits). Actions offre toutefois un moyen d’indiquer plusieurs modifications aux métadonnées de l’utilisateur tout en n’effectuant qu’une seule requête à la Management API.
@@ -400,7 +400,7 @@ exports.onExecutePostLogin = async (event, api) => {
 Si des Actions exécutées par la suite doivent mettre à jour les métadonnées utilisateur, elles devront appeler `api.user.setUserMetadata` ou `api.user.setAppMetadata`. Dans Actions, plusieurs appels à ces fonctions, dans une ou plusieurs Actions, se traduiront par un seul appel à la Management API une fois le flux terminé.
 
 <div id="convert-other-management-api-calls">
-  ### Convertir d’autres appels à la Management API
+  ### Convertir d’autres appels à la Management API {#convert-other-management-api-calls}
 </div>
 
 En général, nous ne recommandons pas d’appeler la Management API à partir d’un chemin critique à fort trafic, comme les Rules ou les Actions. Les requêtes vers toutes les API Auth0 sont [assujetties à des limites de débit](/docs/fr-ca/troubleshoot/customer-support/operational-policies/rate-limit-policy), y compris les appels effectués depuis des points d’extensibilité, et appeler une API pour toutes les connexions pourrait facilement entraîner des connexions échouées pendant les périodes de fort trafic.
@@ -472,7 +472,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="convert-redirects">
-  ### Convertir les redirections
+  ### Convertir les redirections {#convert-redirects}
 </div>
 
 Les Rules peuvent rediriger un utilisateur en cours de connexion vers une page externe, puis attendre une réponse. Dans ce cas, toutes les Rules qui précèdent la redirection s’exécutent deux fois : une fois avant la redirection et une autre au retour de la réponse. La logique de redirection et de réponse se trouve généralement dans la même Rule.
@@ -517,7 +517,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="convert-current-sso-clients-references">
-  ### Convertir les références aux clients SSO actuels
+  ### Convertir les références aux clients SSO actuels {#convert-current-sso-clients-references}
 </div>
 
 L’objet `context.sso` des Rules fournit des renseignements sur la session en cours et sur les clients qui l’utilisent. Pour en savoir plus, consultez l’entrée `context.sso` dans [Propriétés de l’objet context dans les Rules](/docs/fr-ca/customize/rules/context-object). Des renseignements semblables sont disponibles dans l’objet `event.session` des Actions.
@@ -550,7 +550,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="complete-the-migration">
-  ## Terminer la migration
+  ## Terminer la migration {#complete-the-migration}
 </div>
 
 Une fois votre nouveau code Actions rédigé et testé, vous devez activer l’Action et désactiver la Rule. Ces deux tâches peuvent être effectuées rapidement l’une après l’autre, mais selon l’ordre choisi, il peut y avoir une courte période pendant laquelle les deux s’exécutent, ou aucune des deux. Comme les Rules actives s’exécutent avant les Actions déployées, si vous commencez par la fin de votre pipeline de Rules et remontez vers le début, vous pouvez conserver une partie de la logique dans les Rules pendant que vous créez et testez le reste dans les Actions.

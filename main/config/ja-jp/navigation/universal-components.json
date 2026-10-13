@@ -7,14 +7,14 @@
       ]
     },
     {
-      "group": "Web コンポーネント",
+      "group": "Web Components",
       "icon": "globe",
       "pages": [
         "docs/ja-jp/get-started/universal-components/web/web-overview",
         "docs/ja-jp/get-started/universal-components/web/auth0-component-provider",
         "docs/ja-jp/get-started/universal-components/web/universal-components-style",
         {
-          "group": "コンポーネント",
+          "group": "Components",
           "pages": [
             {
               "group": "My Organization",
@@ -40,13 +40,13 @@
       ]
     },
     {
-      "group": "iOS コンポーネント",
+      "group": "iOS Components",
       "icon": "apple",
       "pages": [
         "docs/ja-jp/get-started/universal-components/ios/ios-overview",
         "docs/ja-jp/get-started/universal-components/ios/ios-theming",
         {
-          "group": "コンポーネント",
+          "group": "Components",
           "pages": [
             {
               "group": "My Account",
@@ -61,13 +61,13 @@
       ]
     },
     {
-      "group": "Android コンポーネント",
+      "group": "Android Components",
       "icon": "android",
       "pages": [
         "docs/ja-jp/get-started/universal-components/android/android-overview",
         "docs/ja-jp/get-started/universal-components/android/android-theming",
         {
-          "group": "コンポーネント",
+          "group": "Components",
           "pages": [
             {
               "group": "My Account",

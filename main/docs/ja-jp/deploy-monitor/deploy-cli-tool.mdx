@@ -13,7 +13,7 @@ Auth0 Deploy CLI は、Auth0 テナントの設定管理に役立つツールで
 サポート対象のリソースタイプ: `actions`, `branding`, `client grants`, `clients (applications)`, `connections`, `custom domains`, `email templates`, `emails`, `grants`, `guardian`, `hook secrets`, `log streams`, `migrations`, `organizations`, `pages`, `prompts`, `resource servers (APIs)`, `roles`, `tenant settings`, `themes`.
 
 <div id="highlights">
-  ## 主な特長
+  ## 主な特長 {#highlights}
 </div>
 
 * **マルチ環境対応:** フィーチャーブランチから本番環境まで、アプリケーションの Auth0 連携をテストできるように設計されています。
@@ -21,7 +21,7 @@ Auth0 Deploy CLI は、Auth0 テナントの設定管理に役立つツールで
 * **柔軟性:** CLI または Node モジュールとして、CI/CD ワークフローに組み込めます。
 
 <div id="get-started">
-  ## はじめに
+  ## はじめに {#get-started}
 </div>
 
 このガイドでは、Deploy CLI をスタンドアロンの CLI として使用開始するための手順を説明します。Deploy CLI を実行する前に、主に次の 3 つの手順が必要です。
@@ -35,7 +35,7 @@ Auth0 Deploy CLI は、Auth0 テナントの設定管理に役立つツールで
 </Warning>
 
 <div id="install-the-deploy-cli">
-  ### Deploy CLI をインストールする
+  ### Deploy CLI をインストールする {#install-the-deploy-cli}
 </div>
 
 スタンドアロンのコマンドラインツールとして実行するには、次のコマンドを実行します。
@@ -43,7 +43,7 @@ Auth0 Deploy CLI は、Auth0 テナントの設定管理に役立つツールで
 `npm install -g auth0-deploy-cli`
 
 <div id="create-a-dedicated-auth0-application">
-  ### 専用の Auth0アプリケーションを作成する
+  ### 専用の Auth0アプリケーションを作成する {#create-a-dedicated-auth0-application}
 </div>
 
 Deploy CLI から<Tooltip tip="Management API: お客様が管理タスクを実行できるようにする製品。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Management+API">Management API</Tooltip>を呼び出せるようにするには、ツールが使用する専用の Auth0アプリケーションを作成する必要があります。
@@ -65,7 +65,7 @@ Deploy CLI から<Tooltip tip="Management API: お客様が管理タスクを実
 </Callout>
 
 <div id="client-scopes">
-  #### クライアントのスコープ
+  #### クライアントのスコープ {#client-scopes}
 </div>
 
 Deploy CLI で Management の操作を実行できるようにするには、対象のアプリケーションにスコープを付与する必要があります。
@@ -73,7 +73,7 @@ Deploy CLI で Management の操作を実行できるようにするには、対
 最小権限の原則に従い、付与された権限の範囲内で動作します。`read:clients` を選択する必要がありますが、Management の管理対象にあるすべてのリソースタイプについて、`read:*`、`create:*`、`update:*` 権限を選択することを推奨します。削除を有効にするには、`delete:*` スコープが必要です。
 
 <div id="configure-the-deploy-cli">
-  ### Deploy CLI を設定する
+  ### Deploy CLI を設定する {#configure-the-deploy-cli}
 </div>
 
 Deploy CLI は、次の 2 つの方法で設定できます。
@@ -92,7 +92,7 @@ Deploy CLI は、次の 2 つの方法で設定できます。
 これらの値は、先ほど作成した専用の Auth0 アプリケーションの **設定** タブで確認できます。
 
 <div id="call-the-deploy-cli">
-  ### Deploy CLI を実行する
+  ### Deploy CLI を実行する {#call-the-deploy-cli}
 </div>
 
 Deploy CLI の `export` コマンドは、次のコマンドで実行できます。

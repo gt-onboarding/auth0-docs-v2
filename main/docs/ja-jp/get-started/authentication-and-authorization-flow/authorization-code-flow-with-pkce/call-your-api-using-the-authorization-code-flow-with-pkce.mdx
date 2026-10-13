@@ -17,7 +17,7 @@ Auth0 では、次の方法でアプリに Authorization Code Flow with Proof Ke
 * [Authentication API](https://auth0.com/docs/api/authentication): 独自のソリューションを構築したい場合は、このまま読み進めて API を直接呼び出す方法を確認してください。
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 **このチュートリアルを始める前に:**
@@ -33,7 +33,7 @@ Auth0 では、次の方法でアプリに Authorization Code Flow with Proof Ke
   * API がリフレッシュトークンを受け取り、以前のトークンの有効期限が切れたときに新しいトークンを取得できるようにするには、**オフラインアクセスの許可** を有効にします。
 
 <div id="steps">
-  ## 手順
+  ## 手順 {#steps}
 </div>
 
 1. [コードベリファイアを作成する](#create-code-verifier):
@@ -52,13 +52,13 @@ Auth0 では、次の方法でアプリに Authorization Code Flow with Proof Ke
 任意: [サンプルのユースケースを確認する](#sample-use-cases)。
 
 <div id="create-code-verifier">
-  ### code verifier を作成する
+  ### code verifier を作成する {#create-code-verifier}
 </div>
 
 `code_verifier` を作成します。これは、最終的にトークンをリクエストするために Auth0 に送信される、暗号学的にランダムな Base64 エンコード済みのキーです。
 
 <div id="javascript-sample">
-  #### Javascript のサンプル
+  #### Javascript のサンプル {#javascript-sample}
 </div>
 
 ```javascript lines
@@ -73,7 +73,7 @@ function base64URLEncode(str) {
 var verifier = base64URLEncode(crypto.randomBytes(32));
 ```
 
-#### Java の例
+#### Java の例 {#java-sample}
 
 ```java lines
 // 依存関係: Apache Commons Codec
@@ -87,7 +87,7 @@ String verifier = Base64.getUrlEncoder().withoutPadding().encodeToString(code);
 ```
 
 <div id="android-sample">
-  #### Android サンプル
+  #### Android サンプル {#android-sample}
 </div>
 
 ```kotlin lines
@@ -101,7 +101,7 @@ String verifier = Base64.encodeToString(code, Base64.URL_SAFE | Base64.NO_WRAP |
 ```
 
 <div id="swift-5-sample">
-  #### Swift 5のサンプル
+  #### Swift 5のサンプル {#swift-5-sample}
 </div>
 
 ```swift lines
@@ -114,7 +114,7 @@ let verifier = Data(buffer).base64EncodedString()
 ```
 
 <div id="objective-c-sample">
-  #### Objective-C のサンプル
+  #### Objective-C のサンプル {#objective-c-sample}
 </div>
 
 ```objc lines
@@ -127,12 +127,12 @@ NSString *verifier = [[[[data base64EncodedStringWithOptions:0]
 ```
 
 <div id="create-code-challenge">
-  ### code challenge を作成する
+  ### code challenge を作成する {#create-code-challenge}
 </div>
 
 `authorization_code` をリクエストするために Auth0 に送信する `code_challenge` を、`code_verifier` から生成します。
 
-#### Javascript の例
+#### Javascript の例 {#javascript-sample-2}
 
 ```javascript lines
 // 依存関係: Node.js cryptoモジュール
@@ -144,7 +144,7 @@ var challenge = base64URLEncode(sha256(verifier));
 ```
 
 <div id="java-sample">
-  #### Java のサンプル
+  #### Java のサンプル {#java-sample-2}
 </div>
 
 ```java lines
@@ -160,7 +160,7 @@ String challenge = Base64.encodeBase64URLSafeString(digest);
 ```
 
 <div id="swift-5-sample">
-  #### Swift 5のサンプル
+  #### Swift 5のサンプル {#swift-5-sample-2}
 </div>
 
 ```swift lines
@@ -180,7 +180,7 @@ let challenge = hash.base64EncodedString()
     .replacingOccurrences(of: "=", with: "")
 ```
 
-#### Objective-Cのサンプル
+#### Objective-Cのサンプル {#objective-c-sample-2}
 
 ```objc lines
 // 依存関係: Apple Common Cryptoライブラリ
@@ -197,7 +197,7 @@ NSString *challenge = [[[[hash base64EncodedStringWithOptions:0]
 ```
 
 <div id="authorize-user">
-  ### ユーザーを認可する
+  ### ユーザーを認可する {#authorize-user}
 </div>
 
 `code_verifier` と `code_challenge` を作成したら、ユーザーの認可を得る必要があります。これは技術的には <Tooltip tip="Authorization Flow: OAuth 2.0 フレームワークで規定された authorization grant（または workflow）。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=authorization+flow">認可フロー</Tooltip> の始まりにあたり、このステップには次のプロセスの 1 つ以上が含まれることがあります。
@@ -210,7 +210,7 @@ NSString *challenge = [[[[hash base64EncodedStringWithOptions:0]
 ユーザーを認可するには、アプリからユーザーを [認可 URL](https://auth0.com/docs/api/authentication#authorization-code-grant-pkce-) に送る必要があります。その際、前のステップで生成した `code_challenge` と、`code_challenge` の生成に使用したメソッドを含めます。
 
 <div id="example-authorization-url">
-  #### 認可 URL の例
+  #### 認可 URL の例 {#example-authorization-url}
 </div>
 
 export const codeExample1 = `https://{yourDomain}/authorize?
@@ -225,7 +225,7 @@ export const codeExample1 = `https://{yourDomain}/authorize?
 
 <AuthCodeBlock children={codeExample1} language="http" />
 
-##### パラメータ
+##### パラメータ {#parameters}
 
 カスタム API の呼び出し時にユーザーを認可する場合は、次の点に注意してください。
 
@@ -262,7 +262,7 @@ export const codeExample2 = `<a href="https://{yourDomain}/authorize?
 <AuthCodeBlock children={codeExample2} language="html" />
 
 <div id="response">
-  #### レスポンス
+  #### レスポンス {#response}
 </div>
 
 問題なく進めば、`HTTP 302` レスポンスが返されます。認可コードは URL の末尾に含まれます。
@@ -273,12 +273,12 @@ Location: {yourCallbackUrl}?code={authorizationCode}&state=xyzABC123
 ```
 
 <div id="request-tokens">
-  ### トークンをリクエストする
+  ### トークンをリクエストする {#request-tokens}
 </div>
 
 認可コードを取得したら、次はそれをトークンと交換する必要があります。前のステップで取得した認可コード (`code`) を使い、`code_verifier` を添えて [トークン URL](https://auth0.com/docs/api/authentication#authorization-code-pkce-) に `POST` リクエストを送信する必要があります。
 
-#### トークンURLへのPOST例
+#### トークンURLへのPOST例 {#example-post-to-token-url}
 
 <AuthCodeGroup>
   ```bash cURL
@@ -428,7 +428,7 @@ Location: {yourCallbackUrl}?code={authorizationCode}&state=xyzABC123
 </AuthCodeGroup>
 
 <div id="parameters">
-  ##### パラメーター
+  ##### パラメーター {#parameters-2}
 </div>
 
 | パラメーター名         | 説明                                                                                                                                 |
@@ -440,7 +440,7 @@ Location: {yourCallbackUrl}?code={authorizationCode}&state=xyzABC123
 | `redirect_uri`  | Application Settings で設定した有効なコールバック URL です。これは、このチュートリアルの前のステップで認可 URL に渡した `redirect_uri` と完全に一致している必要があります。なお、URL エンコードが必要です。 |
 
 <div id="response">
-  #### レスポンス
+  #### レスポンス {#response-2}
 </div>
 
 問題なく処理されると、`access_token`、`refresh_token`、`id_token`、`token_type` の各値を含むペイロードとともに、HTTP 200 レスポンスが返されます。
@@ -470,7 +470,7 @@ Location: {yourCallbackUrl}?code={authorizationCode}&state=xyzABC123
 </Warning>
 
 <div id="call-api">
-  ### API を呼び出す
+  ### API を呼び出す {#call-api}
 </div>
 
 ネイティブ／モバイル アプリケーションから API を呼び出すには、取得したアクセストークンを HTTP request の Authorization ヘッダーで Bearer トークンとして渡す必要があります。
@@ -611,7 +611,7 @@ Location: {yourCallbackUrl}?code={authorizationCode}&state=xyzABC123
 </AuthCodeGroup>
 
 <div id="refresh-tokens">
-  ### リフレッシュトークン
+  ### リフレッシュトークン {#refresh-tokens}
 </div>
 
 このチュートリアルをここまで進め、次の内容を完了していれば、すでに[リフレッシュトークン](/docs/ja-jp/secure/tokens/refresh-tokens)を受け取っています。
@@ -624,7 +624,7 @@ Location: {yourCallbackUrl}?code={authorizationCode}&state=xyzABC123
 トークンを更新するには、`grant_type=refresh_token` を使用して、Authentication API の `/oauth/token` エンドポイントに `POST` リクエストを送信します。
 
 <div id="example-post-to-token-url">
-  #### トークン URL への POST の例
+  #### トークン URL への POST の例 {#example-post-to-token-url-2}
 </div>
 
 <AuthCodeGroup>
@@ -771,7 +771,7 @@ Location: {yourCallbackUrl}?code={authorizationCode}&state=xyzABC123
 </AuthCodeGroup>
 
 <div id="parameters">
-  ##### パラメーター
+  ##### パラメーター {#parameters-3}
 </div>
 
 | パラメーター名         | 説明                                                                                                                            |
@@ -782,7 +782,7 @@ Location: {yourCallbackUrl}?code={authorizationCode}&state=xyzABC123
 | `scope`         |  (省略可能) 要求するスコープ権限をスペース区切りで指定した一覧です。送信しない場合は元のスコープが使用され、送信した場合はスコープをより限定して要求できます。なお、URL エンコードが必要です。                           |
 
 <div id="response">
-  #### レスポンス
+  #### レスポンス {#response-3}
 </div>
 
 問題なく進めば、新しい `access_token`、その有効期間 (秒単位の `expires_in`) 、付与された `scope` 値、および `token_type` を含むペイロードとともに、`HTTP 200` レスポンスが返されます。最初のトークンのスコープに `openid` が含まれている場合、レスポンスには新しい `id_token` も含まれます。
@@ -802,11 +802,11 @@ Location: {yourCallbackUrl}?code={authorizationCode}&state=xyzABC123
 </Warning>
 
 <div id="sample-use-cases">
-  ### 使用例
+  ### 使用例 {#sample-use-cases}
 </div>
 
 <div id="customize-tokens">
-  #### トークンをカスタマイズする
+  #### トークンをカスタマイズする {#customize-tokens}
 </div>
 
 Actions を使うと、返されるアクセストークンのスコープを変更したり、アクセストークンや ID トークンにクレームを追加したりできます。 (Actions の詳細については、[Auth0 Actions](/docs/ja-jp/customize/actions) をご覧ください。) これを行うには、次の Action を追加します。この Action は、ユーザーの認証後に実行されます。
@@ -830,13 +830,13 @@ exports.onExecutePostLogin = async (event, api) => {
 </Warning>
 
 <div id="view-sample-application-mobile-app-api">
-  #### サンプルアプリケーションを見る: モバイルアプリ + API
+  #### サンプルアプリケーションを見る: モバイルアプリ + API {#view-sample-application-mobile-app-api}
 </div>
 
 実装例については、[Mobile + API](/docs/ja-jp/get-started/architecture-scenarios/mobile-api) アーキテクチャシナリオを参照してください。このチュートリアルシリーズには、[GitHub で参照できるコードサンプル](https://github.com/auth0-samples/auth0-pnp-exampleco-timesheets) も用意されています。
 
 <div id="learn-more">
-  ## 詳しくはこちら
+  ## 詳しくはこちら {#learn-more}
 </div>
 
 * [OAuth 2.0 認可フレームワーク](/docs/ja-jp/authenticate/protocols/oauth)

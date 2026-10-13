@@ -10,7 +10,7 @@ Pour ce faire, ajoutez le paramètre de chaîne de requête `federated` à l’U
 `https://{yourDomain}/oidc/logout?federated`
 
 <div id="federated-logout-support">
-  ## Prise en charge de la déconnexion fédérée
+  ## Prise en charge de la déconnexion fédérée {#federated-logout-support}
 </div>
 
 Les fournisseurs d’identité suivants prennent en charge la déconnexion fédérée :
@@ -37,13 +37,13 @@ Les fournisseurs d’identité suivants prennent en charge la déconnexion féd�
 * Microsoft Viva Engage
 
 <div id="clear-application-session">
-  ## Effacer la session de l’application
+  ## Effacer la session de l’application {#clear-application-session}
 </div>
 
 Le point de terminaison de déconnexion d’Auth0 vous déconnecte d’Auth0 et, au besoin, de votre fournisseur d’identité. Il ne vous déconnecte pas de votre application ! C’est à vous de le faire de votre côté. Vous devez déconnecter l’utilisateur de votre application en effaçant sa session.
 
 <div id="alternative-logout">
-  ## Déconnexion alternative
+  ## Déconnexion alternative {#alternative-logout}
 </div>
 
 Pour ajouter la déconnexion fédérée au [point de terminaison de déconnexion alternatif](https://auth0.com/docs/api/authentication#logout), ajoutez le paramètre de chaîne de requête `federated` à l’URL de déconnexion :
@@ -51,7 +51,7 @@ Pour ajouter la déconnexion fédérée au [point de terminaison de déconnexion
 `https://{yourDomain}/v2/logout?federated`
 
 <div id="alternative-logout-limitations">
-  ### Limites de la déconnexion alternative
+  ### Limites de la déconnexion alternative {#alternative-logout-limitations}
 </div>
 
 * Aucune validation n’est effectuée sur les URL fournies comme valeur du paramètre `returnTo`, ni sur les informations de chaîne de requête ou de hachage incluses dans l’URL.
@@ -60,7 +60,7 @@ Pour ajouter la déconnexion fédérée au [point de terminaison de déconnexion
 * Si vous êtes un utilisateur Enterprise d’Auth0, le <Tooltip tip="Single Sign-On (SSO) : Service qui, après qu’un utilisateur se connecte à une application, connecte automatiquement cet utilisateur aux autres applications." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=SSO">SSO</Tooltip> est généralement activé pour plusieurs applications, par exemple SharePoint, quelques applications .NET, quelques applications Java, Zendesk, etc. Dans ce cas, il est très fréquent que, lorsque les utilisateurs se déconnectent, cela doive se faire pour l’ensemble de leurs applications.
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Déconnecter les utilisateurs des applications](/docs/fr-ca/authenticate/login/logout/log-users-out-of-applications)

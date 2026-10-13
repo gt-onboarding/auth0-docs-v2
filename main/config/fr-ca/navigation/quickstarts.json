@@ -2,7 +2,7 @@
   "pages": [
     "docs/fr-ca/quickstarts",
     {
-      "group": "Application monopage",
+      "group": "Single Page App",
       "pages": [
         "docs/fr-ca/quickstart/spa/react",
         "docs/fr-ca/quickstart/spa/angular",
@@ -14,7 +14,7 @@
       ]
     },
     {
-      "group": "Application Web classique",
+      "group": "Regular Web App",
       "pages": [
         "docs/fr-ca/quickstart/webapp/nextjs",
         "docs/fr-ca/quickstart/webapp/nuxt",
@@ -40,7 +40,7 @@
       ]
     },
     {
-      "group": "Application native ou mobile",
+      "group": "Native/Mobile App",
       "pages": [
         "docs/fr-ca/quickstart/native/ios-swift",
         "docs/fr-ca/quickstart/native/android",

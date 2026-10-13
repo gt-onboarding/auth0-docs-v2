@@ -10,7 +10,7 @@ Avec les sessions persistantes, les utilisateurs peuvent fermer leur navigateur 
 </Warning>
 
 <div id="browser-limitations">
-  ## Limitations du navigateur
+  ## Limitations du navigateur {#browser-limitations}
 </div>
 
 Dans certains cas, les sessions non persistantes **ne peuvent pas** être imposées par les paramètres du tenant. En voici quelques exemples :
@@ -23,7 +23,7 @@ Dans certains cas, les sessions non persistantes **ne peuvent pas** être impos�
 </Callout>
 
 <div id="sessions">
-  ## Sessions
+  ## Sessions {#sessions}
 </div>
 
 Les sessions se composent d’un cookie dans le navigateur et d’un enregistrement de session sur le serveur. Dans les sessions non persistantes, les cookies ne sont pas enregistrés, et un délai d’expiration du tenant est défini, de sorte que les utilisateurs n’aient pas à se déconnecter manuellement sur un appareil.
@@ -31,7 +31,7 @@ Les sessions se composent d’un cookie dans le navigateur et d’un enregistrem
 La durée de vie de la session détermine combien de temps le système conserve la session de connexion et se configure par tenant. L’expiration absolue d’une session est définie au moment de sa création. Vous pouvez activer les paramètres de session non persistante pour les sessions utilisateur, ou permettre à la session de se poursuivre même après la fermeture du navigateur. Vous pouvez ajuster l’expiration absolue et les paramètres de session non persistante dans le Dashboard ou dans la <Tooltip tip="Management API : Un produit permettant aux clients d’effectuer des tâches administratives." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Management+API">Management API</Tooltip>. Pour en savoir plus, consultez [Configurer les paramètres de durée de vie de la session](/docs/fr-ca/manage-users/sessions/configure-session-lifetime-settings).
 
 <div id="cookies">
-  ## Cookies
+  ## Cookies {#cookies}
 </div>
 
 La plateforme Auth0 utilise trois types de cookies : session, <Tooltip tip="Authentification multifacteur (MFA) : processus d’authentification de l’utilisateur qui utilise un facteur en plus du nom d’utilisateur et du mot de passe, comme un code par SMS." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Multi-Factor+Authentication">Authentification multifacteur</Tooltip>, et device. Ils passent tous en mode non persistant une fois votre tenant Auth0 configuré. Le délai d’expiration du tenant déclenche l’expiration de la session.
@@ -45,7 +45,7 @@ Lorsque les sessions non persistantes sont activées, les cookies suivants seron
 Pour en savoir plus sur les cookies, consultez [les cookies de l’Authentication API](/docs/fr-ca/manage-users/cookies/authentication-api-cookies).
 
 <div id="tenant-configuration">
-  ## Configuration du tenant
+  ## Configuration du tenant {#tenant-configuration}
 </div>
 
 Vous pouvez configurer votre tenant pour gérer les sessions de l’une des deux façons suivantes :
@@ -64,7 +64,7 @@ Pour configurer ces paramètres dans le Dashboard :
    | Maximum Session Lifetime | Durée (en minutes) après laquelle un utilisateur devra se connecter de nouveau, peu importe son activité. Cette valeur sera remplacée par les limites du système si elle dépasse 43 200 minutes (30 jours) pour Developer ou Developer Pro, ou 525 600 minutes (365 jours) pour les forfaits Enterprise.             |
 
 <div id="management-api">
-  ## Management API
+  ## Management API {#management-api}
 </div>
 
 Vous pouvez utiliser la Management API pour activer les sessions non persistantes et définir des valeurs pour la durée de vie de la session, la durée d’inactivité de la session et les propriétés des cookies de session. Pour en savoir plus, consultez le [point de terminaison Tenant Update de la Management API](https://auth0.com/docs/api/management/v2/tenants/patch-settings).

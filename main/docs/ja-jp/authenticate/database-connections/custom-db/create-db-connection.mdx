@@ -19,7 +19,7 @@ validatedOn: 2026-07-27
 これらのテンプレートは変更できるほか、独自のテンプレートを一から作成して、あらゆる種類の外部ユーザーストアに接続することもできます。
 
 <div id="instructions">
-  ## 手順
+  ## 手順 {#instructions}
 </div>
 
 <Steps titleSize="h3">
@@ -143,17 +143,17 @@ validatedOn: 2026-07-27
 </Steps>
 
 <div id="next-steps">
-  ## 次のステップ
+  ## 次のステップ {#next-steps}
 </div>
 
 <div id="enable-automatic-migration">
-  ### 自動移行を有効にする
+  ### 自動移行を有効にする {#enable-automatic-migration}
 </div>
 
 外部ユーザーストアを引き続き IdP として使用できます。代わりに Auth0 のユーザーストアに移行する場合は、[ユーザーを Auth0 に段階的に移行](/docs/ja-jp/manage-users/user-migration/configure-automatic-migration-from-your-database)できます (*trickle* 移行または *lazy* 移行と呼ばれることもあります) 。
 
 <div id="enable-organization-context">
-  ### 組織コンテキストを有効にする
+  ### 組織コンテキストを有効にする {#enable-organization-context}
 </div>
 
 [Organizations](/docs/ja-jp/manage-users/organizations) でカスタムデータベース接続を使用している場合は、[`context` オブジェクト](/docs/ja-jp/authenticate/database-connections/custom-db/custom-database-connections-scripts#context-object)を有効にすることで、`id`、`name`、`metadata` などの組織の詳細をデータベースアクションスクリプトで利用できるようになります。
@@ -202,7 +202,7 @@ function login(email, password, context, callback) { ... }
 組織コンテキスト付きでイベントがトリガーされると、対応するデータは、常に空の `context` オブジェクトが渡される [Delete スクリプト](/docs/ja-jp/authenticate/database-connections/custom-db/templates/delete) を除く、すべてのデータベースアクションスクリプトで利用できます。
 
 <div id="limits-and-considerations">
-  ## 制限事項と考慮事項
+  ## 制限事項と考慮事項 {#limits-and-considerations}
 </div>
 
 * Auth0 は、カスタムデータベースから渡されるユーザー名とパスワードの組み合わせをサニタイズまたは検証しません。

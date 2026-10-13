@@ -9,7 +9,7 @@ Auth0の正規化されたユーザープロファイルは、いくつかの異
 * **メタデータ**: カスタマイズ可能な属性に追加のユーザー情報を格納するための補助的な保存領域として機能する、2つのサブオブジェクトです: `user_metadata` と `app_metadata`。`app_metadata` と `user_metadata` の使い分けを含む詳細については、[Understand How Metadata Works in User Profiles](/docs/ja-jp/manage-users/user-accounts/metadata) を参照してください。
 
 <div id="user-profile-attributes">
-  ## ユーザープロファイル属性
+  ## ユーザープロファイル属性 {#user-profile-attributes}
 </div>
 
 以下の属性はユーザープロファイルで使用できます。多くはルート属性 (`user` オブジェクトの最上位、つまりルートレベルに格納される属性) であり、以下に記載するとおり、一部は更新、インポート、エクスポートが可能です。
@@ -50,7 +50,7 @@ Auth0の正規化されたユーザープロファイルは、いくつかの異
 | `username`                  | テキスト         |  (一意の) ユーザーのユーザー名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Y                                       | Y                                                                                        | Y                                                               | N                                                                                           | Y                                                                |
 
 <div id="user-profile-validation">
-  ### ユーザープロファイルのバリデーション
+  ### ユーザープロファイルのバリデーション {#user-profile-validation}
 </div>
 
 Auth0 では、ユーザープロファイル内の特定のフィールドに対して、所定のバリデーションスキーマを受け付けます。プロファイル属性値を設定する際の要件については、以下の表を参照してください。
@@ -78,7 +78,7 @@ Auth0 では、ユーザープロファイル内の特定のフィールドに�
 * `custom_password_hash` (object): 別のアルゴリズムで作成された、ユーザーの接続に対するハッシュ化済みパスワードです。`password_hash` フィールドの代わりに使用します。一括インポート処理中は、ユーザーが最初にインポートされた `custom_password_hash` を使ってログインしていない場合に限り、`custom_password_hash` を更新できます。
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * [一括ユーザーインポート](/docs/ja-jp/manage-users/user-migration/bulk-user-imports)

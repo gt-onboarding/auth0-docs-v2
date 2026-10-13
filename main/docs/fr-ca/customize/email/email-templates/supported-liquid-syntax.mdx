@@ -17,7 +17,7 @@ Pour un aperçu de la syntaxe Liquid, consultez l’[introduction à LiquidJS](h
 Cette page répertorie les balises, les filtres et les variables pris en charge dans les modèles de courriel.
 
 <div id="tags">
-  ## Balises
+  ## Balises {#tags}
 </div>
 
 Tous les modèles de courriel prennent en charge les balises Liquid suivantes :
@@ -33,13 +33,13 @@ Tous les modèles de courriel prennent en charge les balises Liquid suivantes :
 Vous pouvez consulter des descriptions et des exemples de balises Liquid sur la [page des balises de LiquidJS](https://liquidjs.com/tags/overview.html).
 
 <div id="debug-tag">
-  ### balise debug
+  ### balise debug {#debug-tag}
 </div>
 
 Pour faciliter le débogage et le développement, notre balise personnalisée `{% debug %}` affiche un résumé des variables de modèle disponibles dans votre modèle au moment du rendu.
 
 <div id="filters">
-  ## Filtres
+  ## Filtres {#filters}
 </div>
 
 Tous les modèles de courriels prennent en charge les filtres Liquid suivants :
@@ -56,7 +56,7 @@ Tous les modèles de courriels prennent en charge les filtres Liquid suivants :
 Vous trouverez la description et des exemples des filtres Liquid sur la [page des filtres de LiquidJS](https://liquidjs.com/filters/overview.html).
 
 <div id="general-variables">
-  ## Variables générales
+  ## Variables générales {#general-variables}
 </div>
 
 Les variables suivantes sont disponibles pour les champs **From Address**, **Subject** et **Message** de chaque modèle (sauf indication contraire).
@@ -139,7 +139,7 @@ Pour utiliser des domaines personnalisés dans les courriels, assurez-vous d’a
 3. défini un [domaine personnalisé par défaut](/docs/fr-ca/customize/custom-domains/multiple-custom-domains/default-domain) si vous utilisez plusieurs domaines personnalisés
 
 <div id="redirect-to-variables">
-  ### Variables de Redirect To
+  ### Variables de Redirect To {#redirect-to-variables}
 </div>
 
 Dans les modèles de courriel comportant un champ d’URL **Redirect To**, seules les trois variables suivantes sont prises en charge :
@@ -155,13 +155,13 @@ Dans les modèles de courriel comportant un champ d’URL **Redirect To**, seule
   Le domaine de rappel vous permet de rediriger les utilisateurs vers un chemin de l’application qui a déclenché l’action à l’aide d’une syntaxe comme `{{ application.callback_domain }}/result_page`.
 
 <div id="template-specific-variables">
-  ## Variables propres aux modèles
+  ## Variables propres aux modèles {#template-specific-variables}
 </div>
 
 En plus des variables Liquid communes offertes à tous les modèles de courriel, les modèles de courriel suivants comportent des variables supplémentaires.
 
 <div id="blocked-account-email-template-variables">
-  ### Variables du modèle de courriel pour un compte bloqué
+  ### Variables du modèle de courriel pour un compte bloqué {#blocked-account-email-template-variables}
 </div>
 
 * `user.source_ip`
@@ -170,25 +170,25 @@ En plus des variables Liquid communes offertes à tous les modèles de courriel,
 * `url`, le lien de déblocage du compte
 
 <div id="change-password-code-email-template-variables">
-  ### Variables du modèle de courriel de changement de mot de passe (code)
+  ### Variables du modèle de courriel de changement de mot de passe (code) {#change-password-code-email-template-variables}
 </div>
 
 * `code`, le code de changement de mot de passe
 
 <div id="change-password-link-email-template-variables">
-  ### Variables du modèle de courriel pour le lien de changement de mot de passe
+  ### Variables du modèle de courriel pour le lien de changement de mot de passe {#change-password-link-email-template-variables}
 </div>
 
 * `url`, le lien de réinitialisation du mot de passe
 
 <div id="mfa-enrollment-email-template-variables">
-  ### Variables du modèle de courriel d’inscription à l’AMF
+  ### Variables du modèle de courriel d’inscription à l’AMF {#mfa-enrollment-email-template-variables}
 </div>
 
 * `link`, le lien d’inscription à l’AMF.
 
 <div id="passwordless-otp-email-template-variables">
-  ### Variables du modèle de courriel Passwordless OTP
+  ### Variables du modèle de courriel Passwordless OTP {#passwordless-otp-email-template-variables}
 </div>
 
 * `send`, avec une valeur de `link`, `link_ios`, `link_android` ou `code`, selon le type de courriel Passwordless demandé
@@ -197,7 +197,7 @@ En plus des variables Liquid communes offertes à tous les modèles de courriel,
 * `operation`, avec une valeur de `change_email` pour une opération de changement de courriel Passwordless
 
 <div id="user-invitation-email-template-variables">
-  ### Variables du modèle de courriel d’invitation d’un utilisateur
+  ### Variables du modèle de courriel d’invitation d’un utilisateur {#user-invitation-email-template-variables}
 </div>
 
 * `inviter.name`
@@ -206,13 +206,13 @@ En plus des variables Liquid communes offertes à tous les modèles de courriel,
 * `roles.description`
 
 <div id="verification-email-code-template-variables">
-  ### Variables du modèle du courriel de vérification (code)
+  ### Variables du modèle du courriel de vérification (code) {#verification-email-code-template-variables}
 </div>
 
 * `code`, le code de vérification
 
 <div id="verification-email-link-template-variables">
-  ### Variables du modèle du courriel de vérification (lien)
+  ### Variables du modèle du courriel de vérification (lien) {#verification-email-link-template-variables}
 </div>
 
 * `url`, le lien de vérification

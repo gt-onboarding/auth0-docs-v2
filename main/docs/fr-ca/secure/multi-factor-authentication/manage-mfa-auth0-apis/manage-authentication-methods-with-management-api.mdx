@@ -21,14 +21,14 @@ L’[Auth0 Management API](https://auth0.com/docs/api/management/v2) fournit plu
 Cette méthode repose sur une authentification effectuée au moyen d’une application confidentielle. Pour en savoir plus sur les applications confidentielles et les applications publiques, consultez [Applications confidentielles et publiques](/docs/fr-ca/get-started/applications/confidential-and-public-applications).
 
 <div id="get-all-authentication-methods">
-  ## Obtenir toutes les méthodes d’authentification
+  ## Obtenir toutes les méthodes d’authentification {#get-all-authentication-methods}
 </div>
 
 Utilisez le point de terminaison [Récupère la liste des méthodes d’authentification](https://auth0.com/docs/api/management/v2#!/Users/get_authentication_methods) pour obtenir la liste de toutes les méthodes d’authentification qu’un utilisateur a complètement ou partiellement configurées.
 
 Ce point de terminaison nécessite le scope : `read:authentication_methods`.
 
-### Exemples
+### Exemples {#examples}
 
 La requête suivante renvoie la liste de toutes les méthodes d’authentification d’un utilisateur donné.
 
@@ -158,7 +158,7 @@ La requête suivante renvoie la liste de toutes les méthodes d’authentificati
   ```
 </AuthCodeGroup>
 
-### Réponses
+### Réponses {#responses}
 
 Pour chaque requête valide, l’<Tooltip tip="Management API : Un produit permettant aux clients d’effectuer des tâches administratives." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Management+API">Management API</Tooltip> renverra une réponse au format JSON.
 
@@ -175,14 +175,14 @@ Pour chaque requête valide, l’<Tooltip tip="Management API : Un produit perm
 ```
 
 <div id="get-a-single-authentication-method">
-  ## Obtenir une seule méthode d’authentification
+  ## Obtenir une seule méthode d’authentification {#get-a-single-authentication-method}
 </div>
 
 Utilisez le point de terminaison [Obtenir une méthode d’authentification par ID](https://auth0.com/docs/api/management/v2#!/Users/get_authentication_methods_by_authentication_method_id) pour récupérer une méthode d’authentification d’un utilisateur en indiquant l’ID de la méthode d’authentification.
 
 Ce point de terminaison nécessite le scope suivant : `read:authentication_methods`.
 
-### Exemples
+### Exemples {#examples-2}
 
 La requête suivante renvoie une seule méthode d’authentification pour un utilisateur à partir de l’ID de la méthode d’authentification indiquée.
 
@@ -312,7 +312,7 @@ La requête suivante renvoie une seule méthode d’authentification pour un uti
   ```
 </AuthCodeGroup>
 
-### Réponses
+### Réponses {#responses-2}
 
 Pour chaque requête valide, la Management API renverra une réponse au format JSON.
 
@@ -327,7 +327,7 @@ Pour chaque requête valide, la Management API renverra une réponse au format J
 ```
 
 <div id="create-an-authentication-method">
-  ## Créer une méthode d’authentification
+  ## Créer une méthode d’authentification {#create-an-authentication-method}
 </div>
 
 Utilisez le point de terminaison [Crée une méthode d’authentification pour un utilisateur donné](https://auth0.com/docs/api/management/v2#!/Users/post_authentication_methods) pour créer une méthode d’authentification pour un utilisateur, y compris par SMS, courriel, mot de passe à usage unique (OTP) ou WebAuthn avec clés de sécurité. Pour en savoir plus sur les facteurs d’authentification MFA disponibles, consultez [Facteurs d’authentification multifacteur](/docs/fr-ca/secure/multi-factor-authentication/multi-factor-authentication-factors).
@@ -339,13 +339,13 @@ Ce point de terminaison nécessite le scope `create:authentication_methods`.
 </Warning>
 
 <div id="sms">
-  ### SMS
+  ### SMS {#sms}
 </div>
 
 Envoyez un OTP aux utilisateurs par SMS; ils seront ensuite invités à le saisir avant de pouvoir terminer l’authentification.
 
 <div id="examples">
-  #### Exemples
+  #### Exemples {#examples-3}
 </div>
 
 La requête suivante crée une méthode d’authentification par SMS pour un utilisateur.
@@ -488,7 +488,7 @@ La requête suivante crée une méthode d’authentification par SMS pour un uti
 </AuthCodeGroup>
 
 <div id="responses">
-  #### Réponses
+  #### Réponses {#responses-3}
 </div>
 
 Pour chaque requête valide, la Management API renvoie une réponse au format JSON.
@@ -504,13 +504,13 @@ Pour chaque requête valide, la Management API renvoie une réponse au format JS
 ```
 
 <div id="email">
-  ### Email
+  ### Email {#email}
 </div>
 
 Envoyez un OTP aux utilisateurs par courriel. Ils devront ensuite le saisir avant de pouvoir terminer l’authentification. Le facteur Email n’est pris en charge que lorsqu’un utilisateur n’a aucun autre facteur disponible.
 
 <div id="examples">
-  #### Exemples
+  #### Exemples {#examples-4}
 </div>
 
 La requête suivante crée une méthode d’authentification par courriel pour l’utilisateur.
@@ -653,7 +653,7 @@ La requête suivante crée une méthode d’authentification par courriel pour l
 </AuthCodeGroup>
 
 <div id="responses">
-  #### Réponses
+  #### Réponses {#responses-4}
 </div>
 
 Pour chaque requête valide, la Management API renverra une réponse au format JSON.
@@ -669,13 +669,13 @@ Pour chaque requête valide, la Management API renverra une réponse au format J
 ```
 
 <div id="one-time-passwords-otp">
-  ### Mots de passe à usage unique (OTP)
+  ### Mots de passe à usage unique (OTP) {#one-time-passwords-otp}
 </div>
 
 Permettez aux utilisateurs d’utiliser une application d’authentification, comme Google Authenticator, sur leur appareil personnel pour générer un OTP qui change périodiquement et qu’ils devront saisir avant de terminer l’authentification.
 
 <div id="examples">
-  #### Exemples
+  #### Exemples {#examples-5}
 </div>
 
 La requête suivante crée une méthode d’authentification OTP pour un utilisateur.
@@ -818,7 +818,7 @@ La requête suivante crée une méthode d’authentification OTP pour un utilisa
 </AuthCodeGroup>
 
 <div id="responses">
-  #### Réponses
+  #### Réponses {#responses-5}
 </div>
 
 Pour chaque requête valide, la Management API renvoie une réponse au format JSON.
@@ -834,13 +834,13 @@ Pour chaque requête valide, la Management API renvoie une réponse au format JS
 ```
 
 <div id="webauthn-with-security-keys">
-  ### WebAuthn avec des clés de sécurité
+  ### WebAuthn avec des clés de sécurité {#webauthn-with-security-keys}
 </div>
 
 Permettez aux utilisateurs d’utiliser des clés de sécurité conformes à FIDO (par exemple, [Yubikey](https://www.yubico.com/) ou [Google Titan](https://cloud.google.com/titan-security-key)) pour l’authentification multifacteur.
 
 <div id="examples">
-  #### Exemples
+  #### Exemples {#examples-6}
 </div>
 
 La requête suivante crée, pour un utilisateur, une méthode d’authentification WebAuthn avec des clés de sécurité.
@@ -989,7 +989,7 @@ La requête suivante crée, pour un utilisateur, une méthode d’authentificati
 </AuthCodeGroup>
 
 <div id="responses">
-  #### Réponses
+  #### Réponses {#responses-6}
 </div>
 
 Pour chaque requête valide, la Management API renvoie une réponse au format JSON.
@@ -1007,14 +1007,14 @@ Pour chaque requête valide, la Management API renvoie une réponse au format JS
 ```
 
 <div id="replace-all-authentication-methods">
-  ## Remplacer toutes les méthodes d’authentification
+  ## Remplacer toutes les méthodes d’authentification {#replace-all-authentication-methods}
 </div>
 
 Utilisez le [point de terminaison Met à jour toutes les méthodes d’authentification en les remplaçant par celles fournies](https://auth0.com/docs/api/management/v2#!/Users/put_authentication_methods) pour remplacer toutes les méthodes d’authentification existantes par celles fournies.
 
 Cet point de terminaison nécessite le scope `update:authentication_methods`.
 
-### Exemples
+### Exemples {#examples-7}
 
 La requête suivante remplace toutes les méthodes d’authentification existantes d’un utilisateur.
 
@@ -1162,7 +1162,7 @@ La requête suivante remplace toutes les méthodes d’authentification existant
   ```
 </AuthCodeGroup>
 
-### Réponses
+### Réponses {#responses-7}
 
 Pour chaque requête valide, la Management API renvoie une réponse au format JSON.
 
@@ -1186,14 +1186,14 @@ Pour chaque requête valide, la Management API renvoie une réponse au format JS
 ```
 
 <div id="update-a-single-authentication-method">
-  ## Mettre à jour une seule méthode d’authentification
+  ## Mettre à jour une seule méthode d’authentification {#update-a-single-authentication-method}
 </div>
 
 Utilisez le point de terminaison [Updates an authentication method](https://auth0.com/docs/api/management/v2#!/Users/patch_authentication_methods_by_authentication_method_id) pour mettre à jour une seule méthode d’authentification d’un utilisateur.
 
 Ce point de terminaison nécessite le scope : `update:authentication_methods`.
 
-### Exemples
+### Exemples {#examples-8}
 
 La requête suivante met à jour une seule méthode d’authentification pour un utilisateur en fonction de l’ID de la méthode d’authentification spécifiée.
 
@@ -1334,7 +1334,7 @@ La requête suivante met à jour une seule méthode d’authentification pour un
   ```
 </AuthCodeGroup>
 
-### Réponses
+### Réponses {#responses-8}
 
 Pour chaque requête valide, la Management API renverra une réponse au format JSON.
 
@@ -1357,14 +1357,14 @@ Pour chaque requête valide, la Management API renverra une réponse au format J
 ```
 
 <div id="delete-all-authentication-methods">
-  ## Supprimer toutes les méthodes d’authentification
+  ## Supprimer toutes les méthodes d’authentification {#delete-all-authentication-methods}
 </div>
 
 Utilisez le point de terminaison [Supprimer toutes les méthodes d’authentification de l’utilisateur spécifié](https://auth0.com/docs/api/management/v2#!/Users/delete_authentication_methods) pour supprimer toutes les méthodes d’authentification d’un utilisateur.
 
 Ce point de terminaison nécessite le scope suivant : `delete:authentication_methods`.
 
-### Exemples
+### Exemples {#examples-9}
 
 La requête suivante supprime toutes les méthodes d’authentification d’un utilisateur.
 
@@ -1494,17 +1494,17 @@ La requête suivante supprime toutes les méthodes d’authentification d’un u
   ```
 </AuthCodeGroup>
 
-### Réponses
+### Réponses {#responses-9}
 
 Pour chaque requête valide, la Management API renvoie une réponse avec un code d’état `204` et un corps de la réponse vide.
 
 <div id="delete-a-single-authentication-method">
-  ## Supprimer une seule méthode d’authentification
+  ## Supprimer une seule méthode d’authentification {#delete-a-single-authentication-method}
 </div>
 
 Utilisez le point de terminaison [Deletes an authentication method by ID](https://auth0.com/docs/api/management/v2#!/Users/delete_authentication_methods_by_authentication_method_id) pour supprimer une méthode d’authentification d’un utilisateur.
 
-### Exemples
+### Exemples {#examples-10}
 
 La requête suivante supprime une méthode d’authentification précise d’un utilisateur à partir de l’ID de la méthode d’authentification indiquée.
 
@@ -1634,12 +1634,12 @@ La requête suivante supprime une méthode d’authentification précise d’un 
   ```
 </AuthCodeGroup>
 
-### Réponses
+### Réponses {#responses-10}
 
 Pour chaque requête valide, la Management API renvoie une réponse avec un code d’état `204` et un corps de la réponse vide.
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Facteurs d’authentification multifacteur](/docs/fr-ca/secure/multi-factor-authentication/multi-factor-authentication-factors)

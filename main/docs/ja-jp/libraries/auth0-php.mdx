@@ -14,7 +14,7 @@ Auth0-PHP SDK は PHP アプリケーションに統合でき、ユーザーの�
 Auth0-PHP リポジトリはオープンソースで、[GitHub で公開されています](https://github.com/auth0/auth0-PHP)。バグ報告、機能強化の提案、プルリクエストなど、あらゆる貢献を歓迎しています。
 
 <div id="requirements">
-  ## 要件
+  ## 要件 {#requirements}
 </div>
 
 * PHP 8.2 以降
@@ -25,7 +25,7 @@ Auth0-PHP リポジトリはオープンソースで、[GitHub で公開され�
 * [PSR-7 HTTP Messages](https://packagist.org/providers/psr/http-message-implementation) の実装
 
 <div id="installation">
-  ## インストール
+  ## インストール {#installation}
 </div>
 
 Auth0 PHP SDK をインストールするには、PHP の標準的な依存関係管理ツールである [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos) が必要です。Composer を使用すると、プロジェクトに必要な依存ライブラリを宣言し、それらをインストールできます。先に進む前に、Composer がインストールされていて、シェルから利用できることを確認してください。
@@ -39,7 +39,7 @@ composer require auth0/auth0-php
 これにより、プロジェクト内に `vendor` サブフォルダーが作成され、PHP SDK の利用に必要な依存関係がすべてダウンロードされます。さらに、SDK をアプリケーションで動作させるために必要な `vendor/autoload.php` ファイルも作成されます。これは後でインポートします。
 
 <div id="get-started">
-  ## はじめに
+  ## はじめに {#get-started}
 </div>
 
 Auth0 の Authentication API と Management API を使用するには、無料の Auth0 アカウントとアプリケーションが必要です。
@@ -50,7 +50,7 @@ Auth0 の Authentication API と Management API を使用するには、無料�
 4. 以下で使用する必要な資格情報を確認するには、**設定** タブをクリックします。詳しくは、[アプリケーション設定](/docs/ja-jp/get-started/applications/application-settings) を参照してください。
 
 <div id="configure-the-sdk">
-  ## SDK を設定する
+  ## SDK を設定する {#configure-the-sdk}
 </div>
 
 機密性の高い Auth0 の資格情報は、[環境変数](https://secure.php.net/manual/en/reserved.variables.environment.php)を使って保存・読み込みすることをおすすめします。こうすることで、アプリケーションにこれらの情報をハードコードする必要がなくなります。アプリケーションの資格情報を保存するために、プロジェクトのルート ディレクトリに `.env` ファイルを作成しましょう。
@@ -83,7 +83,7 @@ composer require vlucas/phpdotenv
 ```
 
 <div id="initialize-the-sdk">
-  ## SDK を初期化する
+  ## SDK を初期化する {#initialize-the-sdk}
 </div>
 
 新しい PHP アプリケーション内で SDK のインスタンスを設定して初期化する準備が整いました。まず、このデモで使用する PHP のソースファイル `index.php` を作成し、次のスニペットから始めましょう。
@@ -114,7 +114,7 @@ $auth0 = new \Auth0\SDK\Auth0([
 * [PHP Backend API](/docs/ja-jp/quickstart/backend/php/)
 
 <div id="learn-more">
-  ## 詳細情報
+  ## 詳細情報 {#learn-more}
 </div>
 
 * [Login、Logout、ユーザープロファイルを管理する](/docs/ja-jp/libraries/auth0-php/auth0-php-basic-use)

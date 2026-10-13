@@ -4,7 +4,7 @@ description: "Lancez un flux de code d’autorisation OAuth 2.0 pour obtenir le 
 ---
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `GET /authorize`
@@ -12,7 +12,7 @@ description: "Lancez un flux de code d’autorisation OAuth 2.0 pour obtenir le 
 Pour amorcer un flux d’autorisation OAuth 2.0, votre application doit d’abord rediriger l’utilisateur vers l’URL d’autorisation.
 
 <div id="authorize-endpoint">
-  ## Point de terminaison d’autorisation
+  ## Point de terminaison d’autorisation {#authorize-endpoint}
 </div>
 
 Cette requête vise à obtenir le consentement de l’utilisateur pour appeler l’API (précisée dans `audience`) et effectuer certaines actions (précisées dans `scope`) en son nom. Auth0 authentifiera l’utilisateur et obtiendra son consentement, à moins que celui-ci n’ait déjà été accordé. Si vous modifiez la valeur de `scope`, Auth0 exigera de nouveau le consentement de l’utilisateur.
@@ -28,7 +28,7 @@ L’[octroi par mot de passe du propriétaire de la ressource](https://auth0.com
 Selon le flux OAuth 2.0 que vous mettez en œuvre, les paramètres varient légèrement. Pour déterminer quel flux convient le mieux à votre situation, consultez : [Quel flux OAuth 2.0 devrais-je utiliser ?](https://auth0.com/docs/get-started/authentication-and-authorization-flow/which-oauth-2-0-flow-should-i-use).
 
 <div id="query-parameters">
-  ## Paramètres de requête
+  ## Paramètres de requête {#query-parameters}
 </div>
 
 <ParamField query="audience" type="string" required>
@@ -80,7 +80,7 @@ Selon le flux OAuth 2.0 que vous mettez en œuvre, les paramètres varient lég�
 </ParamField>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                          |

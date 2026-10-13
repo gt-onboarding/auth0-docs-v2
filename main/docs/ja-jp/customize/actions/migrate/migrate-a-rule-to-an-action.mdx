@@ -6,13 +6,13 @@ title: 移行ツール
 [Auth0 Dashboard](https://manage.auth0.com/) の ルール 移行ツールを使用すると、ルール から Actions への移行プロセスを簡素化できます。新しいツールは、ルール から Action への切り替えを容易にするだけでなく、一般的な ルール パターンに対する組み込みのガイダンスや修正も提供します。
 
 <div id="before-migration">
-  ## 移行前
+  ## 移行前 {#before-migration}
 </div>
 
 移行を始める前に、[ルールからActionsへの移行](/docs/ja-jp/customize/actions/migrate/migrate-from-rules-to-actions)を参照してください。この移行ガイドでは、ルールとActionsの違いをわかりやすく説明しており、移行を進める際に役立ちます。
 
 <div id="rule-migration-order">
-  ### ルールの移行順序
+  ### ルールの移行順序 {#rule-migration-order}
 </div>
 
 ルールは Actions より前に実行されるため、ルールは実行順の逆順で移行する必要があります。既存のフローで最後に実行される ルール から移行を始め、そこから時系列をさかのぼって最初の ルール へ進めてください。
@@ -20,13 +20,13 @@ title: 移行ツール
 この順序で移行しないと、ルール と Actions の実行順における依存関係によって予期しない副作用が生じ、エラーが発生する可能性があります。
 
 <div id="safely-rolling-back">
-  ### 安全にロールバックする
+  ### 安全にロールバックする {#safely-rolling-back}
 </div>
 
 移行ツールを使えば、問題が発生しても安全かつ簡単にロールバックできます。ルール を再度有効にし、対応する Action のロジックはスキップしてください。
 
 <div id="migrating-a-rule">
-  ## ルール の移行
+  ## ルール の移行 {#migrating-a-rule}
 </div>
 
 ルール の移行を開始するには、**Auth Pipeline &gt; Rules** を選択します。選択すると、ルールが表示され、各ルールを個別に移行するためのオプションが表示されます。
@@ -38,7 +38,7 @@ title: 移行ツール
 </Callout>
 
 <div id="migrate-to-action">
-  ### Migrate to Action
+  ### Migrate to Action {#migrate-to-action}
 </div>
 
 **Migrate to Action** を選択すると、ツールで新しい Action を作成するよう求められます。
@@ -62,7 +62,7 @@ title: 移行ツール
 `api.rules.wasExecuted()` 関数の詳細については、[Actions Triggers: post-login - API Object](/docs/ja-jp/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-api-object) を参照してください。
 
 <div id="rewrite-rule-code">
-  ## Rule のコードを書き換える
+  ## Rule のコードを書き換える {#rewrite-rule-code}
 </div>
 
 Actions Editor で **ルール** ボタンを選択し、ルール移行ツールを開きます。ここでは、移行された Rule のコードをすぐに参照できます。サイドバーで、選択した Rule のコードを確認してください。
@@ -90,7 +90,7 @@ Actions Editor では、コードのリファクタリングが必要な箇所�
 たとえば Rule の `callback` 関数では、エラー時には [`api.access.deny`](/docs/ja-jp/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger/pre-user-registration-api-object) を使用し、成功時には `return` することが推奨されます。
 
 <div id="test-the-new-action">
-  ### 新しいActionをテストする
+  ### 新しいActionをテストする {#test-the-new-action}
 </div>
 
 Actions は、移行作業において重要な要素であるため、エディター内で直接テストできます。詳しくは、[Actions をテストする](/docs/ja-jp/customize/actions/test-actions)を参照してください。
@@ -100,7 +100,7 @@ Actions は、移行作業において重要な要素であるため、エディ
 </Warning>
 
 <div id="automatically-enabling-the-action">
-  ### Action を自動的に有効化する
+  ### Action を自動的に有効化する {#automatically-enabling-the-action}
 </div>
 
 Action のコードを更新し、切り替える準備ができたら:
@@ -117,7 +117,7 @@ Action をフローに追加する方法について詳しくは、[最初の Ac
 </Callout>
 
 <div id="migrate-remaining-rules">
-  ## 残りのルールを移行する
+  ## 残りのルールを移行する {#migrate-remaining-rules}
 </div>
 
 このプロセスは、ログインフロー内の各 ルール を移行する際に繰り返し実行できます。ルールは、ログインフローで実行される順序とは逆の順番で移行する必要があることに注意してください。

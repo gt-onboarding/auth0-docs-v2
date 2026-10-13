@@ -2,7 +2,7 @@
   "pages": [
     "docs/ja-jp/troubleshoot",
     {
-      "group": "カスタマーサポート",
+      "group": "Customer Support",
       "pages": [
         "docs/ja-jp/troubleshoot/customer-support/support-plans",
         "docs/ja-jp/troubleshoot/customer-support/product-support-matrix",
@@ -13,7 +13,7 @@
       "root": "docs/ja-jp/troubleshoot/customer-support"
     },
     {
-      "group": "アカウントとプランの管理",
+      "group": "Account and Plan Management",
       "pages": [
         "docs/ja-jp/troubleshoot/customer-support/update-billing-information",
         "docs/ja-jp/troubleshoot/customer-support/manage-subscriptions",
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "group": "運用ポリシー",
+      "group": "Operational Policies",
       "pages": [
         "docs/ja-jp/troubleshoot/customer-support/operational-policies/billing-policy",
         "docs/ja-jp/troubleshoot/customer-support/operational-policies/public-cloud-service-endpoints",
@@ -33,12 +33,12 @@
         "docs/ja-jp/troubleshoot/customer-support/operational-policies/load-testing-policy",
         "docs/ja-jp/troubleshoot/customer-support/operational-policies/penetration-testing-policy",
         {
-          "group": "レート制限ポリシー",
+          "group": "Rate Limit Policy",
           "pages": [
             "docs/ja-jp/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-use-cases",
             "docs/ja-jp/troubleshoot/customer-support/operational-policies/rate-limit-policy/custom-rate-limit-policies",
             {
-              "group": "レート制限の構成",
+              "group": "Rate Limit Configurations",
               "pages": [
                 "docs/ja-jp/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/free-public",
                 "docs/ja-jp/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/essentials-professional-b2b",
@@ -62,12 +62,12 @@
       "root": "docs/ja-jp/troubleshoot/customer-support/operational-policies"
     },
     {
-      "group": "製品ライフサイクル",
+      "group": "Product Lifecycle",
       "pages": [
         "docs/ja-jp/troubleshoot/product-lifecycle/product-release-stages",
         "docs/ja-jp/troubleshoot/product-lifecycle/migration-process",
         {
-          "group": "非推奨化と移行",
+          "group": "Deprecations and Migrations",
           "pages": [
             "docs/ja-jp/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications",
             "docs/ja-jp/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-nodejs-22",
@@ -78,7 +78,7 @@
           "root": "docs/ja-jp/troubleshoot/product-lifecycle/deprecations-and-migrations"
         },
         {
-          "group": "過去の移行",
+          "group": "Past Migrations",
           "pages": [
             "docs/ja-jp/troubleshoot/product-lifecycle/past-migrations/migrate-nodejs-16-to-nodejs-18",
             "docs/ja-jp/troubleshoot/product-lifecycle/past-migrations/migrate-from-edge-js-extensibility-features",

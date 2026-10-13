@@ -6,7 +6,7 @@ description: "入力に制約のあるデバイス向けの Device Authorization
 import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `POST /oauth/device/code`
@@ -14,7 +14,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 このフローは、入力手段が限られたデバイスからAPIにアクセスするためのものです。ユーザーがデバイスを認可できるようにするデバイスコードを取得するには、このエンドポイントを使用します。
 
 <div id="request-example">
-  ## リクエスト例
+  ## リクエスト例 {#request-example}
 </div>
 
 ```http
@@ -25,7 +25,7 @@ client_id=${account.clientId}&scope=SCOPE&audience=API_IDENTIFIER
 ```
 
 <div id="response-values">
-  ### レスポンス値
+  ### レスポンス値 {#response-values}
 </div>
 
 | Value                       | Description                               |
@@ -38,14 +38,14 @@ client_id=${account.clientId}&scope=SCOPE&audience=API_IDENTIFIER
 | `interval`                  | トークンをリクエストする際のポーリング間隔 (秒) です。             |
 
 <div id="remarks">
-  ### 注記
+  ### 注記 {#remarks}
 </div>
 
 * Refresh Token を取得するには、`scope` に `offline_access` を含めます。
 * 返された デバイスコード を使用して、token endpoint に アクセストークン をリクエストします。
 
 <div id="token-request-example">
-  ### トークンリクエストの例
+  ### トークンリクエストの例 {#token-request-example}
 </div>
 
 ```http
@@ -56,11 +56,11 @@ client_id=${account.clientId}&device_code=YOUR_DEVICE_CODE&grant_type=urn:ietf:p
 ```
 
 <div id="responses">
-  ### レスポンス
+  ### レスポンス {#responses}
 </div>
 
 <div id="200">
-  #### 200
+  #### 200 {#200}
 </div>
 
 リクエストが成功すると、アクセストークンが返されます。
@@ -78,7 +78,7 @@ Content-Type: application/json
 ```
 
 <div id="error-responses">
-  ### エラーレスポンス
+  ### エラーレスポンス {#error-responses}
 </div>
 
 ```json
@@ -100,7 +100,7 @@ Content-Type: application/json
 ```
 
 <div id="learn-more">
-  ### 詳細
+  ### 詳細 {#learn-more}
 </div>
 
 * [Device Authorization Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/device-authorization-flow)
@@ -108,7 +108,7 @@ Content-Type: application/json
 * [Management Dashboard での Device Code Grant の設定](https://auth0.com/docs/get-started/applications/update-grant-types)
 
 <div id="body-parameters">
-  ## Body パラメーター
+  ## Body パラメーター {#body-parameters}
 </div>
 
 <ParamField body="client_id" type="string" required>
@@ -128,7 +128,7 @@ Content-Type: application/json
 </ParamField>
 
 <div id="response-schema">
-  ## レスポンススキーマ
+  ## レスポンススキーマ {#response-schema}
 </div>
 
 <ResponseSchema>
@@ -158,7 +158,7 @@ Content-Type: application/json
 </ResponseSchema>
 
 <div id="response-messages">
-  ## 応答メッセージ
+  ## 応答メッセージ {#response-messages}
 </div>
 
 | ステータス | 説明                    |

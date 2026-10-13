@@ -8,7 +8,7 @@ import {AuthCodeBlock} from "/snippets/fr-ca/AuthCodeBlock.jsx";
 Lock peut être configuré à l’aide du paramètre `options` transmis au constructeur. Ces options peuvent modifier le comportement du widget Lock, la façon dont il gère les connexions, les champs d’inscription supplémentaires requis pour votre projet, ainsi que la langue, les textes, les couleurs et les images du widget, et bien plus encore. Consultez la liste ci-dessous si vous savez ce que vous cherchez, ou parcourez les options pour obtenir plus de détails.
 
 <div id="ui">
-  ## Interface utilisateur
+  ## Interface utilisateur {#ui}
 </div>
 
 | Option                                                                 | Description                                                                                                                                                                              |
@@ -30,7 +30,7 @@ Lock peut être configuré à l’aide du paramètre `options` transmis au const
 | [scrollGlobalMessagesIntoView](#scrollglobalmessagesintoview-boolean-) | Indique si un `globalMessage` doit être amené dans la zone visible de l’utilisateur                                                                                                      |
 
 <div id="theme">
-  ## Thème
+  ## Thème {#theme}
 </div>
 
 Les options du thème sont regroupées dans la propriété `theme` de l’objet `options`.
@@ -43,7 +43,7 @@ Les options du thème sont regroupées dans la propriété `theme` de l’objet 
 | [primaryColor](#primarycolor-string-)                | Couleur du bouton principal dans le widget                  |
 
 <div id="authentication">
-  ## Authentification
+  ## Authentification {#authentication}
 </div>
 
 Les options d’authentification sont regroupées dans la propriété `auth` de l’objet `options`.
@@ -61,7 +61,7 @@ Les options d’authentification sont regroupées dans la propriété `auth` de 
 | [sso](#sso-boolean-)                          | Détermine si l’authentification unique (SSO) est activée ou non dans Lock                                                                                                                                                                                                |
 
 <div id="database">
-  ## Database
+  ## Database {#database}
 </div>
 
 | Option                                                          | Description                                                                                                                 |
@@ -81,7 +81,7 @@ Les options d’authentification sont regroupées dans la propriété `auth` de 
 | [usernameStyle](#usernamestyle-string-)                         | Limite le champ username à accepter uniquement des valeurs &quot;username&quot; ou uniquement des valeurs &quot;email&quot; |
 
 <div id="enterprise">
-  ## Enterprise
+  ## Enterprise {#enterprise}
 </div>
 
 | Option                                                              | Description                                  |
@@ -89,7 +89,7 @@ Les options d’authentification sont regroupées dans la propriété `auth` de 
 | [defaultEnterpriseConnection](#defaultenterpriseconnection-string-) | Indique une connexion s’il y en a plus d’une |
 
 <div id="passwordless">
-  ## Passwordless
+  ## Passwordless {#passwordless}
 </div>
 
 | Option                                            | Description                                                                                                                                                                                                                                                                |
@@ -97,7 +97,7 @@ Les options d’authentification sont regroupées dans la propriété `auth` de 
 | [passwordlessMethod](#passwordlessmethod-string-) | Lorsque vous utilisez `Auth0LockPasswordless` avec une connexion par courriel, cette option vous permet de choisir si vous voulez envoyer un [code](/docs/fr-ca/authenticate/passwordless) ou un [lien magique](/docs/fr-ca/authenticate/passwordless) pour authentifier l’utilisateur |
 
 <div id="other">
-  ### Autres
+  ### Autres {#other}
 </div>
 
 | Option                                                | Description                                                                                                                |
@@ -110,16 +110,16 @@ Les options d’authentification sont regroupées dans la propriété `auth` de 
 ***
 
 <div id="ui-options">
-  ## Options de l’interface UI
+  ## Options de l’interface UI {#ui-options}
 </div>
 
-### allowAutocomplete {Booléen}
+### allowAutocomplete {Booléen} {#allowautocomplete-boolean}
 
 Détermine si les champs d’adresse courriel ou de nom d’utilisateur autorisent l’autocomplétion (`<input autocomplete />`). La valeur par défaut est `false`.
 
 `allowAutocomplete: true`
 
-### allowPasswordAutocomplete {Boolean}
+### allowPasswordAutocomplete {Boolean} {#allowpasswordautocomplete-boolean}
 
 Détermine si le champ de mot de passe autorise le remplissage automatique (`<input autocomplete />`). La valeur par défaut est `false`.
 
@@ -127,7 +127,7 @@ Réglez `allowPasswordAutocomplete` à `true` pour assurer la prise en charge de
 
 `allowPasswordAutocomplete: true`
 
-### allowShowPassword {Boolean}
+### allowShowPassword {Boolean} {#allowshowpassword-boolean}
 
 Cette option détermine s’il faut ajouter ou non une case à cocher à l’UI qui, une fois sélectionnée, permet à l’utilisateur d’afficher son mot de passe pendant la saisie. Par défaut, cette option est définie à `false`.
 
@@ -137,7 +137,7 @@ Lock avec `allowShowPassword` défini à `true` et la case cochée pour afficher
 
 <Frame>![Option de Lock : autoriser l’affichage du mot de passe](/docs/images/cdy7uua7fh8z/6G8LJaNjaMl5zUrwGi5UJQ/44dc951b70077b0ec6bc04d2f0413b12/lock-allowshowpassword.png)</Frame>
 
-### allowedConnections {Tableau}
+### allowedConnections {Tableau} {#allowedconnections-array}
 
 Tableau des connexions à utiliser pour les actions `signin|signup|reset`. Par défaut, toutes les connexions activées sont utilisées.
 
@@ -151,19 +151,19 @@ Exemples de `allowedConnections` :
 
 <Frame>![Option Lock : Connexions autorisées - Base de données](/docs/images/cdy7uua7fh8z/1mllPDLFCCETwQ9MeGEf3W/763728971302656618ef3bd131ab83b1/lock-allowedconnections-database.png)</Frame><Frame>![Option Lock : Connexions autorisées - Social](/docs/images/cdy7uua7fh8z/7uYN4ebrLLM8bjx1fee8j0/1e716cca3e1bae990063e9226dfe9ac2/lock-allowedconnections-social.png)</Frame>
 
-### autoclose {Boolean}
+### autoclose {Boolean} {#autoclose-boolean}
 
 Détermine si Lock se fermera automatiquement après une connexion réussie. La valeur par défaut est faux. Si Lock n’est pas `closable`, il ne se fermera pas, même si cette option est définie sur vrai.
 
 `autoclose: true`
 
-### autofocus {Boolean}
+### autofocus {Boolean} {#autofocus-boolean}
 
 Si cette valeur est `true`, le focus est placé sur le premier champ du widget. La valeur par défaut est `false` lors de l’affichage sur un appareil mobile, ou si une option `container` est fournie; dans tous les autres cas, la valeur par défaut est `true`.
 
 `autofocus: false`
 
-### avatar {Object}
+### avatar {Object} {#avatar-object}
 
 Par défaut, Gravatar est utilisé pour récupérer l’avatar de l’utilisateur et son nom d’affichage, mais vous pouvez aussi les obtenir d’une autre source grâce à l’option `avatar`.
 
@@ -197,7 +197,7 @@ Comportement par défaut avec Gravatar :
 
 <Frame>![Option Lock : Avatar](/docs/images/cdy7uua7fh8z/69Nz0QoQifPWpfBZwX15J0/204aad93cde406f0ed3771ce38766f56/lock-avatar.png)</Frame>
 
-### closable {Boolean}
+### closable {Boolean} {#closable-boolean}
 
 Détermine si Lock peut être fermé. Lorsqu’une option `container` est fournie, sa valeur est toujours `false`; sinon, la valeur par défaut est `true`.
 
@@ -205,7 +205,7 @@ Détermine si Lock peut être fermé. Lorsqu’une option `container` est fourni
 
 <Frame>![Option de Lock : Fermable](/docs/images/cdy7uua7fh8z/2qwXtPQev1nlpyOQauXKBO/f967e1157972ecbf5b030b3be3600f2e/lock-closable.png)</Frame>
 
-### container {String}
+### container {String} {#container-string}
 
 L’`id` de l’élément HTML dans lequel le widget sera affiché.
 
@@ -229,7 +229,7 @@ Le widget s’affiche alors directement dans votre `div`, plutôt que dans une f
 
 <Frame>![Option de Lock : Conteneur](/docs/images/cdy7uua7fh8z/5L4S47Yfset2DR9pjcqVrX/1c4d1928cf75acf40129ffd01394bf33/lock-container.png)</Frame>
 
-### message flash {Objet}
+### message flash {Objet} {#flashmessage-object}
 
 Affiche un message flash de type `error` ou `success` lorsque Lock s’affiche. Cet objet possède les propriétés suivantes :
 
@@ -245,7 +245,7 @@ var options = {
 };
 ```
 
-### language {String}
+### language {String} {#language-string}
 
 Indique la langue du widget. La valeur par défaut est « en ». Consultez le [répertoire d’internationalisation](https://github.com/auth0/lock/blob/master/src/i18n/) pour obtenir la liste à jour des langues offertes.
 
@@ -253,7 +253,7 @@ Indique la langue du widget. La valeur par défaut est « en ». Consultez le 
 
 <Frame>![Option Lock : Langue](/docs/images/cdy7uua7fh8z/3u3lytCUBDbcKmXFV34OUv/5cf5d7e1af9593a3b094f32815a4da11/lock-language.png)</Frame>
 
-### languageDictionary {object}
+### languageDictionary {object} {#languagedictionary-object}
 
 Permet de personnaliser tous les textes affichés dans Lock. La valeur par défaut est {"{}"}. Consultez la [spécification du Language Dictionary en anglais](https://github.com/auth0/lock/blob/master/src/i18n/en.js) pour obtenir la liste complète des valeurs de `languageDictionary` que cet object permet de modifier.
 
@@ -270,7 +270,7 @@ var options = {
 
 Par ailleurs, consultez la page [Personnalisation des messages d’erreur](/docs/fr-ca/customize/login-pages/classic-login/customize-lock-error-messages) ou la page [Internationalisation](/docs/fr-ca/customize/internationalization-and-localization/lock-internationalization) pour en savoir plus sur l’utilisation de l’option `languageDictionary`.
 
-### popupOptions {Object}
+### popupOptions {Object} {#popupoptions-object}
 
 Permet de personnaliser l’emplacement de la fenêtre contextuelle sur l’écran. Toutes les options de position et de taille prises en charge par window.open sont acceptées. La valeur par défaut est {"{}"}.
 
@@ -285,7 +285,7 @@ var options = {
 };
 ```
 
-### rememberLastLogin {Boolean}
+### rememberLastLogin {Boolean} {#rememberlastlogin-boolean}
 
 Détermine s’il faut afficher ou non un écran qui vous permet de vous connecter rapidement avec le compte utilisé la dernière fois.
 Récupère les données de <Tooltip tip="Single Sign-On (SSO) : service qui, après qu’un utilisateur se connecte à une application, le connecte automatiquement à d’autres applications." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Single+Sign-on">l’authentification unique</Tooltip> (SSO) et active le message **Votre dernière connexion avec**. La valeur par défaut est `true`. Cette information provient de la session Auth0 de l’utilisateur; cette fonctionnalité reste donc disponible aussi longtemps que dure sa session Auth0 (ce qui est configurable).
@@ -297,14 +297,14 @@ Les nouveaux tenants [ont automatiquement Seamless SSO activé](/docs/fr-ca/get-
 * Vous avez utilisé Lock dans une [Hosted Login Page](/docs/fr-ca/authenticate/login/auth0-universal-login) avec une session établie au moyen de l’[authentification sans mot de passe](/docs/fr-ca/libraries/lock/lock-configuration#passwordlessmethod-string-).
 * Vous avez utilisé Lock dans un scénario d’[embedded login](/docs/fr-ca/authenticate/login/universal-vs-embedded-login) où `responseType: code` (indiquant l’[Authorization Code Flow](/docs/fr-ca/get-started/authentication-and-authorization-flow/authorization-code-flow), qui est utilisé pour les Regular Web Apps).
 
-### scrollGlobalMessagesIntoView {booléen}
+### scrollGlobalMessagesIntoView {booléen} {#scrollglobalmessagesintoview-boolean}
 
 Détermine s’il faut faire défiler la page pour afficher un `globalMessage` dans la zone visible de l’utilisateur. La valeur par défaut est `true`.
 
 `scrollGlobalMessagesIntoView: false`
 
 <div id="theme-options">
-  ## Options de thème
+  ## Options de thème {#theme-options}
 </div>
 
 Les options de thème sont regroupées dans la propriété `theme` de l’objet `options`.
@@ -327,7 +327,7 @@ var options = {
 };
 ```
 
-### authButtons {Objet}
+### authButtons {Objet} {#authbuttons-object}
 
 Permet de personnaliser les boutons dans Lock avec des connexions OAuth2 personnalisées. Chaque connexion personnalisée dont vous voulez personnaliser le bouton doit être indiquée par son nom, avec son propre ensemble de paramètres. Les paramètres personnalisables sont indiqués ci-dessous :
 
@@ -355,7 +355,7 @@ var options = {
 };
 ```
 
-### labeledSubmitButton {booléen}
+### labeledSubmitButton {booléen} {#labeledsubmitbutton-boolean}
 
 Cette option indique si le bouton de soumission doit comporter un libellé ou non, et vaut `true` par défaut. Lorsqu’elle est définie à `false`, une icône s’affiche à la place.
 
@@ -371,7 +371,7 @@ var options = {
 
 Si le label est défini sur true, sa valeur par défaut, le texte du label peut être personnalisé à l’aide de l’option [languageDictionary](#languagedictionary-object-).
 
-### logo {String}
+### logo {String} {#logo-string}
 
 La valeur de `logo` est l’URL d’une image qui sera affichée dans l’en-tête de Lock; par défaut, le logo d’Auth0 est utilisé. Une hauteur maximale de `58px` est recommandée pour une meilleure expérience utilisateur.
 
@@ -385,7 +385,7 @@ var options = {
 
 <Frame>![Personnalisation de l’interface de Lock - Logo](/docs/images/cdy7uua7fh8z/FdOAKKy71rTbFjIlZEL8D/2eef96008095d85388daaa461707901d/lock-theme-logo.png)</Frame>
 
-### primaryColor {String}
+### primaryColor {String} {#primarycolor-string}
 
 La propriété `primaryColor` définit la couleur principale de Lock; toutes les couleurs utilisées dans le widget en seront dérivées. Cette option est utile lorsque vous fournissez un `logo` personnalisé, afin de vous assurer que toutes les couleurs s’harmonisent bien avec la palette du `logo`. La valeur par défaut est `#ea5323`.
 
@@ -401,7 +401,7 @@ var options = {
 <Frame>![Personnalisation de l’interface utilisateur de Lock - couleur principale](/docs/images/cdy7uua7fh8z/1qQjeTmXJyIziv400VPaOn/48dd3cb8a72a6e88b2634b4b8a8bed63/lock-theme-primarycolor.png)</Frame>
 
 <div id="authentication-options">
-  ## Options d’authentification
+  ## Options d’authentification {#authentication-options}
 </div>
 
 Les options d’authentification sont regroupées dans la propriété `auth` de l’objet `options`.
@@ -428,7 +428,7 @@ var options = {
 };
 ```
 
-### audience {String}
+### audience {String} {#audience-string}
 
 L’option `audience` indique l’API qui utilisera le <Tooltip tip="Access Token : justificatif d’autorisation, sous la forme d’une chaîne opaque ou d’un JWT, utilisé pour accéder à une API." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Access+Token">Access Token</Tooltip> reçu après l’authentification.
 
@@ -440,7 +440,7 @@ export const codeExample = `var options = {
 
 <AuthCodeBlock children={codeExample} language="js" />
 
-### autoParseHash {Boolean}
+### autoParseHash {Boolean} {#autoparsehash-boolean}
 
 Lorsque `autoParseHash` est défini sur `true`, Lock analysera la chaîne `window.location.hash` au moment de son instanciation. S’il est défini sur `false`, vous devrez reprendre manuellement le processus d’authentification à l’aide de la méthode [resumeAuth](/docs/fr-ca/libraries/lock/lock-api-reference).
 
@@ -452,7 +452,7 @@ var options = {
 };
 ```
 
-### connectionScopes {Object}
+### connectionScopes {Object} {#connectionscopes-object}
 
 Cette option vous permet de définir les portées à envoyer à la connexion sociale OAuth2 pour l’authentification.
 
@@ -468,7 +468,7 @@ var options = {
 
 Vous pouvez obtenir auprès du fournisseur concerné la liste des scopes propres à vos connexions sociales. Par exemple, la documentation de [Facebook for Developers](https://developers.facebook.com/docs/facebook-login/permissions/) présente une liste des permissions distinctes pouvant être demandées pour votre connexion.
 
-### params {Object}
+### params {Object} {#params-object}
 
 Vous pouvez envoyer des paramètres au moment d’amorcer une connexion en les ajoutant à l’objet options. L’exemple ci-dessous ajoute un paramètre `state` dont la valeur est `foo`, ainsi qu’un paramètre `scope` (qui comprend la portée, puis les attributs demandés).
 
@@ -485,7 +485,7 @@ var options = {
 
 Pour en savoir plus sur les paramètres pris en charge, consultez [Paramètres d’authentification de Lock](/docs/fr-ca/libraries/lock/lock-authentication-parameters).
 
-### redirect {Boolean}
+### redirect {Boolean} {#redirect-boolean}
 
 La valeur par défaut est true. Lorsqu’il est défini à true, le mode de redirection est utilisé. S’il est défini à false, le [mode popup](/docs/fr-ca/libraries/lock/lock-authentication-modes) est utilisé.
 
@@ -497,7 +497,7 @@ var options = {
 };
 ```
 
-### redirectUrl {String}
+### redirectUrl {String} {#redirecturl-string}
 
 L’URL vers laquelle Auth0 redirigera l’utilisateur après l’authentification. Par défaut, la valeur est la chaîne vide &quot;&quot; (aucune URL de redirection).
 
@@ -511,7 +511,7 @@ var options = {
 
 Lorsque `redirectUrl` est fourni (c’est-à-dire défini sur une valeur non vide), l’option `responseType` prendra par défaut la valeur `code` si elle n’est pas définie manuellement.
 
-### responseMode {String}
+### responseMode {String} {#responsemode-string}
 
 Doit être défini sur `"form_post"` si vous souhaitez que le code ou le jeton soit transmis au `redirectUrl` au moyen d’une requête HTTP POST, plutôt que d’être inclus dans les paramètres de requête ou le fragment de celle-ci.
 
@@ -525,7 +525,7 @@ var options = {
 };
 ```
 
-### responseType {String}
+### responseType {String} {#responsetype-string}
 
 La valeur de `responseType` doit être réglée à &quot;token&quot; pour les applications monopages, et à &quot;code&quot; dans les autres cas. Par défaut, la valeur est &quot;code&quot; lorsque redirectUrl est fourni, et &quot;token&quot; sinon.
 
@@ -539,7 +539,7 @@ var options = {
 
 Lorsque `responseType` est défini sur `code`, Lock n’affichera jamais le message **Votre dernière connexion avec**, et demandera toujours à l’utilisateur de saisir ses identifiants.
 
-## sso {Booléen}
+## sso {Booléen} {#sso-boolean}
 
 La valeur par défaut est true. Lorsqu’elle est définie sur true, l’[authentification unique](/docs/fr-ca/authenticate/single-sign-on) est activée dans Lock.
 
@@ -552,10 +552,10 @@ var options = {
 ```
 
 <div id="database-options">
-  ## Options Database
+  ## Options Database {#database-options}
 </div>
 
-### additionalSignUpFields {Array}
+### additionalSignUpFields {Array} {#additionalsignupfields-array}
 
 Des champs de saisie supplémentaires peuvent être ajoutés à l’écran d’inscription à l’aide de l’option `additionalSignUpFields`. Chaque option ajoutée de cette façon est ensuite ajoutée au `user_metadata` de l’utilisateur. Pour en savoir plus, consultez [Comprendre le fonctionnement des métadonnées dans les profils utilisateur](/docs/fr-ca/manage-users/user-accounts/metadata). Chaque champ doit avoir un `name` et un `placeholder`, et une URL d’`icon` peut aussi être fournie. De plus, une valeur initiale peut être fournie avec l’option `prefill`, qui peut être une chaîne contenant la valeur ou une fonction qui l’obtient. Les autres options dépendent du type de champ, qui est défini à l’aide de l’option `type` et dont la valeur par défaut est &quot;text&quot;.
 
@@ -566,7 +566,7 @@ Des champs de saisie supplémentaires peuvent être ajoutés à l’écran d’i
 Les nouveaux champs sont affichés sous les champs de saisie habituels de l’inscription, dans l’ordre où ils sont fournis.
 
 <div id="text-fields">
-  #### Champs de texte
+  #### Champs de texte {#text-fields}
 </div>
 
 Les champs de texte sont le type de champ supplémentaire d’inscription par défaut. Notez qu’il est aussi possible de fournir une fonction `validator`.
@@ -621,7 +621,7 @@ var options = {
 <Frame>![Option de Lock : champs d’inscription supplémentaires](/docs/images/cdy7uua7fh8z/2KPDGZb3caq57caJ90w53k/e092bdb4a4d93589aa006f796ff20fca/lock-additionalsignupfields.png)</Frame>
 
 <div id="select-field">
-  #### Champ de sélection
+  #### Champ de sélection {#select-field}
 </div>
 
 Le champ d’inscription `type: "select"` vous permet d’utiliser des menus déroulants afin que l’utilisateur puisse choisir une valeur.
@@ -671,7 +671,7 @@ var options = {
 ```
 
 <div id="checkbox-field">
-  #### Champ de case à cocher
+  #### Champ de case à cocher {#checkbox-field}
 </div>
 
 Le troisième type de champ d’inscription personnalisé est `type: "checkbox"`. La valeur `prefill` permet de définir l’état par défaut de la case à cocher (`true` ou `false`) et elle est obligatoire.
@@ -688,7 +688,7 @@ var options = {
 ```
 
 <div id="hidden-field">
-  #### Champ masqué
+  #### Champ masqué {#hidden-field}
 </div>
 
 Le champ d’inscription `type: "hidden"` vous permet d’utiliser un champ masqué avec une valeur fixe.
@@ -705,7 +705,7 @@ var options = {
 
 Dans certains cas d’utilisation, il peut être possible d’utiliser les données `additionalSignUpFields` dans les modèles de courriel, par exemple une option de préférence linguistique, dont la valeur pourrait ensuite servir à définir la langue des communications par courriel générées à partir de modèles.
 
-### allowLogin {booléen}
+### allowLogin {booléen} {#allowlogin-boolean}
 
 Lorsqu’elle est définie à `false`, cette option empêche le widget d’afficher l’écran de connexion. C’est utile si vous voulez utiliser le widget uniquement pour les inscriptions (les onglets de connexion et d’inscription dans l’écran d’inscription seront masqués) ou pour réinitialiser des mots de passe (le bouton de retour dans l’écran mot de passe oublié sera masqué). Dans ce cas, vous devrez peut-être aussi préciser les options `initialScreen`, `allowForgotPassword` et `allowSignUp`. Par défaut, cette option est définie à `true`.
 
@@ -713,7 +713,7 @@ Lorsqu’elle est définie à `false`, cette option empêche le widget d’affic
 
 <Frame>![Option Lock : autoriser la connexion](/docs/images/cdy7uua7fh8z/6gI4aSLHXLzhcHiR9aWMET/d05c2a08a3895278b01150ecf894cb5f/lock-allowlogin.png)</Frame>
 
-### allowForgotPassword {booléen}
+### allowForgotPassword {booléen} {#allowforgotpassword-boolean}
 
 Lorsque sa valeur est `false`, `allowForgotPassword` masque le lien « Vous ne vous souvenez pas de votre mot de passe? » dans l’écran de connexion, ce qui rend l’écran mot de passe oublié inaccessible. La valeur par défaut est `true`. Si vous utilisez une connexion à la base de données avec une base de données personnalisée qui n’a pas de script Change Password, l’écran mot de passe oublié ne sera pas disponible.
 
@@ -721,7 +721,7 @@ Lorsque sa valeur est `false`, `allowForgotPassword` masque le lien « Vous ne 
 
 <Frame>![Option Lock : Autoriser mot de passe oublié](/docs/images/cdy7uua7fh8z/1L6wJS3UnWK1VGKYMFhAB9/2ddcf2d462255e78a8b78958c2503809/lock-allowforgotpassword.png)</Frame>
 
-### allowSignUp {Booléen}
+### allowSignUp {Booléen} {#allowsignup-boolean}
 
 Lorsqu’elle est définie à `false`, cette option masque les onglets de connexion et d’inscription sur l’écran de connexion, ce qui rend l’écran d’inscription inaccessible. Sa valeur par défaut est `true`. Gardez à l’esprit que si la connexion à la base de données a les inscriptions désactivées ou si vous utilisez une base de données personnalisée qui n’a pas de script Create, l’écran d’inscription ne sera pas disponible.
 
@@ -731,43 +731,43 @@ Gardez aussi à l’esprit que cette option contrôle **uniquement** l’apparen
 
 <Frame>![Option Lock : Autoriser l’inscription](/docs/images/cdy7uua7fh8z/2BNlYe99EFlRmIlhoLZiEB/f280d865cb16fa5fecda952271cb18bf/lock-allowsignup.png)</Frame>
 
-### defaultDatabaseConnection {String}
+### defaultDatabaseConnection {String} {#defaultdatabaseconnection-string}
 
 Indique la connexion à la base de données qui sera utilisée lorsqu’il y en a plus d’une.
 
 `defaultDatabaseConnection: 'test-database'`
 
-### initialScreen {String}
+### initialScreen {String} {#initialscreen-string}
 
 Le nom de l’écran qui s’affiche à l’ouverture du widget. Les valeurs acceptées sont `login`, `signUp` et `forgotPassword`. Si cette option n’est pas précisée, le widget affichera par défaut le premier écran disponible dans cette liste.
 
 `initialScreen: 'forgotPassword'`
 
-### loginAfterSignUp {Booléen}
+### loginAfterSignUp {Booléen} {#loginaftersignup-boolean}
 
 Indique si l’utilisateur ouvrira automatiquement une session après une inscription réussie. La valeur par défaut est `true`.
 
 `loginAfterSignUp: false`
 
-### forgotPasswordLink {String}
+### forgotPasswordLink {String} {#forgotpasswordlink-string}
 
 Définissez l’URL d’une page permettant à l’utilisateur de réinitialiser son mot de passe. Lorsqu’elle est définie comme une chaîne non vide, l’utilisateur est redirigé vers l’URL fournie lorsqu’il clique sur le lien « Vous ne vous souvenez pas de votre mot de passe ? » dans l’écran de connexion.
 
 `forgotPasswordLink: 'https://yoursite.com/reset-password'`
 
-### showTerms {booléen}
+### showTerms {booléen} {#showterms-boolean}
 
 Si la valeur est définie à `true`, la chaîne `languageDictionary.signUpTerms` s’affiche. La valeur par défaut est `true`.
 
 `showTerms: false`
 
-### mustAcceptTerms {booléen}
+### mustAcceptTerms {booléen} {#mustacceptterms-boolean}
 
 Lorsqu’elle est définie sur `true`, une case à cocher s’affiche à côté des conditions générales et doit être cochée avant l’inscription. Les conditions générales peuvent être définies au moyen de l’option `languageDictionary`. Cette option ne s’applique qu’aux utilisateurs qui s’inscrivent avec des connexions à la base de données. La valeur par défaut est `false`.
 
 `mustAcceptTerms: true`
 
-### prefill {Objet}
+### prefill {Objet} {#prefill-object}
 
 Permet de définir la valeur initiale des champs de courriel et/ou de nom d’utilisateur. Si omis, aucune valeur initiale n’est fournie.
 
@@ -781,67 +781,67 @@ var options = {
 };
 ```
 
-### signUpLink {String}
+### signUpLink {String} {#signuplink-string}
 
 Définissez l’URL à ouvrir lorsque vous cliquez sur le bouton d’inscription. Lorsqu’elle est définie sur une chaîne non vide, cette option force `allowSignUp` à `true`.
 
 `signUpLink: 'https://yoursite.com/signup'`
 
-### usernameStyle {String}
+### usernameStyle {String} {#usernamestyle-string}
 
 Détermine ce qui sera utilisé pour identifier l’utilisateur pour une connexion à la base de données dont l’indicateur `requires_username` est activé (s’il ne l’est pas, l’option `usernameStyle` sera ignorée). Les valeurs possibles sont `"username"` et `"email"`. Par défaut, `username` et `email` sont tous deux autorisés; définir cette option limitera la connexion à l’un ou à l’autre.
 
 `usernameStyle: 'username'`
 
 <div id="enterprise-options">
-  ## Options d’entreprise
+  ## Options d’entreprise {#enterprise-options}
 </div>
 
-### defaultEnterpriseConnection {String}
+### defaultEnterpriseConnection {String} {#defaultenterpriseconnection-string}
 
 Précise la connexion d’entreprise à utiliser pour permettre le login avec un username et un Password lorsqu’il y a plus d’une connexion disponible ou lorsqu’il y a aussi une connexion à la base de données. Si un `defaultDatabaseConnection` est fourni, la connexion à la base de données sera utilisée et cette option sera ignorée.
 
 `defaultEnterpriseConnection: 'test-database'`
 
-### defaultADUsernameFromEmailPrefix {booléen}
+### defaultADUsernameFromEmailPrefix {booléen} {#defaultadusernamefromemailprefix-boolean}
 
 Détermine le nom d’utilisateur AD de remplacement à partir du préfixe de l’adresse courriel. Par défaut, la valeur est `true`.
 
 `defaultADUsernameFromEmailPrefix: false`
 
 <div id="passwordless-options">
-  ## Options Passwordless
+  ## Options Passwordless {#passwordless-options}
 </div>
 
-### passwordlessMethod {String}
+### passwordlessMethod {String} {#passwordlessmethod-string}
 
 Lorsque vous utilisez `Auth0LockPasswordless` avec une connexion par courriel, vous pouvez utiliser cette option pour choisir entre l’envoi d’un [code](/docs/fr-ca/authenticate/passwordless) ou d’un [lien magique](/docs/fr-ca/authenticate/passwordless) pour authentifier l’utilisateur. Les valeurs possibles pour les connexions par courriel sont `code` et `link`. La valeur par défaut est `code`. Les connexions SMS <Tooltip tip="Sans mot de passe : forme d’authentification qui ne repose pas sur un mot de passe comme premier facteur." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=passwordless">sans mot de passe</Tooltip> utiliseront toujours `code`.
 
 `passwordlessMethod: code`
 
 <div id="other-options">
-  ## Autres options
+  ## Autres options {#other-options}
 </div>
 
-### configurationBaseUrl {String}
+### configurationBaseUrl {String} {#configurationbaseurl-string}
 
 Remplace l’URL de base des paramètres de l’application. Par défaut, cette option utilise le domaine fourni. Cette option n’est nécessaire que si votre cas d’utilisation particulier exige que votre application n’utilise pas le comportement par défaut.
 
 `configurationBaseUrl: "https://www.example.com"`
 
-### languageBaseUrl {String}
+### languageBaseUrl {String} {#languagebaseurl-string}
 
 Remplace l’URL source des traductions fournies par Auth0. Par défaut, cette option utilise l’URL du CDN d’Auth0 `https://cdn.auth0.com`, puisque c’est là que sont stockées toutes les traductions fournies. En indiquant une autre valeur, vous pouvez utiliser une autre source pour les traductions de langue, au besoin.
 
 `languageBaseUrl: "https://www.example.com"`
 
-### hashCleanup {Booléen}
+### hashCleanup {Booléen} {#hashcleanup-boolean}
 
 Lorsque l’option `hashCleanup` est activée, elle supprime la partie hachage de l’URL de rappel après l’authentification de l’utilisateur. La valeur par défaut est true.
 
 `hashCleanup: false`
 
-### connectionResolver {Function}
+### connectionResolver {Function} {#connectionresolver-function}
 
 Lorsqu’il est utilisé, ce point d’extensibilité permet de choisir la connexion à utiliser en fonction du nom d’utilisateur.
 
@@ -849,7 +849,7 @@ Prend `username`, `context` et `callback` comme paramètres. Le callback attend 
 
 Cette fonctionnalité est en version bêta. Si vous trouvez un bogue, veuillez ouvrir une [issue](https://github.com/auth0/lock/issues/new) sur GitHub.
 
-### leeway {Integer}
+### leeway {Integer} {#leeway-integer}
 
 L’option `leeway` peut être définie comme un entier — une valeur en secondes — qui sert à tenir compte d’un décalage entre les horloges lors de l’expiration des <Tooltip tip="ID Token : jeton destiné au client lui-même, plutôt qu’à l’accès à une ressource." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=ID+Token">ID Token</Tooltip>. En général, cette valeur ne dépasse pas une ou deux minutes.
 

@@ -14,7 +14,7 @@ Auth0 peut s’intégrer à Microsoft Azure Active Directory (désormais appelé
 Pour les nouvelles connexions, consultez [Nouvelles connexions](/docs/fr-ca/authenticate/protocols/scim/inbound-scim-for-new-azure-ad-connections).
 
 <div id="configure-scim-settings-in-auth0">
-  ## Configurer les paramètres SCIM dans Auth0
+  ## Configurer les paramètres SCIM dans Auth0 {#configure-scim-settings-in-auth0}
 </div>
 
 1. Dans votre [Auth0 Dashboard](https://manage.auth0.com/#/), accédez à **Authentication &gt; Enterprise &gt; Microsoft Azure AD &gt; [votre-connexion] &gt; Settings.**
@@ -24,7 +24,7 @@ Pour les nouvelles connexions, consultez [Nouvelles connexions](/docs/fr-ca/auth
 5. Passez en revue les **Additional Mappings** pour vous assurer que les attributs SCIM étendus sont mappés vers les attributs Auth0 de votre choix. Consultez le [mappage d’attributs](/docs/fr-ca/authenticate/protocols/scim/configure-inbound-scim#attribute-mapping) pour en savoir plus.
 
 <div id="retrieve-scim-endpoint-url-and-token">
-  ## Récupérer l’URL du point de terminaison SCIM et le jeton
+  ## Récupérer l’URL du point de terminaison SCIM et le jeton {#retrieve-scim-endpoint-url-and-token}
 </div>
 
 Cette section utilise le <Tooltip tip="Auth0 Dashboard : le principal produit d’Auth0 pour configurer vos services." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip>, mais vous pouvez aussi effectuer ces étapes avec la <Tooltip tip="Management API : un produit qui permet aux clients d’effectuer des tâches administratives." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Management+API">Management API</Tooltip>. Consultez la section [Deployment Guidelines](/docs/fr-ca/authenticate/protocols/scim/configure-inbound-scim#deployment-guidelines) pour connaître les meilleures pratiques.
@@ -34,7 +34,7 @@ Cette section utilise le <Tooltip tip="Auth0 Dashboard : le principal produit d
 3. Sélectionnez les scopes suivants : `get:users`, `patch:users` et `delete:users`.
 
 <div id="configure-scim-in-azure-ad-for-oidc-apps">
-  ## Configurer SCIM dans Azure AD pour les applications OIDC
+  ## Configurer SCIM dans Azure AD pour les applications OIDC {#configure-scim-in-azure-ad-for-oidc-apps}
 </div>
 
 1. Confirmez qu’une application OpenID Connect a déjà été enregistrée pour votre application dans la section **Microsoft Entra ID &gt; Inscriptions d’applications** d’[Azure Portal](https://portal.azure.com).
@@ -58,7 +58,7 @@ Cette section utilise le <Tooltip tip="Auth0 Dashboard : le principal produit d
 13. Sélectionnez **X** dans le coin supérieur droit pour revenir à l’écran **Provisioning**.
 
 <div id="testing">
-  ## Test
+  ## Test {#testing}
 </div>
 
 1. À l’écran **Vue d’ensemble** de l’application **Enterprise**, sélectionnez **Manage &gt; Provisioning**, puis **Provision on Demand** pour tester la connexion SCIM.

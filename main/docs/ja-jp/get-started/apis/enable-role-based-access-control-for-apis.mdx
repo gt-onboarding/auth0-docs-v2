@@ -16,7 +16,7 @@ RBAC が有効な場合、<Tooltip tip="Access Token: API へのアクセスに�
 </Callout>
 
 <div id="dashboard">
-  ## Auth0 Dashboard
+  ## Auth0 Dashboard {#dashboard}
 </div>
 
 1. [Auth0 Dashboard &gt; アプリケーション &gt; APIs](https://manage.auth0.com/#/apis) に移動し、表示したい API の名前をクリックします。
@@ -34,7 +34,7 @@ RBAC が有効な場合、<Tooltip tip="Access Token: API へのアクセスに�
    利用可能なトークンダイアレクトの詳細については、[トークン方言のオプション](#token-dialect-options) を参照してください。
 
 <div id="management-api">
-  ## Management API
+  ## Management API {#management-api}
 </div>
 
 Management API を使用して RBAC を有効にするには、[リソースサーバーを更新するエンドポイント](https://auth0.com/docs/api/management/v2/resource-servers/patch-resource-servers-by-id) に PATCH リクエストを送信します。PATCH リクエストで、`enforce_policies` を `true` に設定します。
@@ -205,7 +205,7 @@ Management API を使用して RBAC を有効にするには、[リソースサ�
 | `TOKEN_DIALECT`         | 指定した API のアクセストークンの トークンダイアレクト。詳しくは、[Token dialect options](#token-dialect-options) を参照してください。                     |
 
 <div id="token-dialect-options">
-  ### トークンダイアレクトのオプション
+  ### トークンダイアレクトのオプション {#token-dialect-options}
 </div>
 
 Auth0 は次のトークンダイアレクトをサポートしています。
@@ -218,7 +218,7 @@ Auth0 は次のトークンダイアレクトをサポートしています。
 | `rfc9068_profile_authz` | `permissions` クレームを含む RFC 9068 トークンプロファイル (`rfc9068_profile`) です。アクセストークンの `scope` クレームには、リクエストされた権限とユーザーに割り当てられた権限の積集合が含まれます。アクセストークンの `permissions` クレームには、ユーザーに割り当てられたすべての権限が含まれます。権限の取得に必要な呼び出し回数を最小限に抑えられますが、トークンサイズは大きくなります。                                                                                                                |
 
 <div id="learn-more">
-  ## 詳細情報
+  ## 詳細情報 {#learn-more}
 </div>
 
 * [ロールベースのアクセス制御のユーザー管理](/docs/ja-jp/manage-users/access-control/configure-core-rbac/rbac-users)

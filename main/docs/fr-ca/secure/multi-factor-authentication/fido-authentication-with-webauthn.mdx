@@ -22,7 +22,7 @@ WebAuthn permet aux utilisateurs de s’authentifier avec deux types d’authent
 * Les **authentificateurs de plateforme** sont associés à un appareil et fonctionnent uniquement sur cet appareil. Par exemple, la Touch Bar du MacBook, Windows Hello, Touch ID/Face ID sur iOS, ainsi que la reconnaissance faciale ou d’empreinte sur Android. Les données biométriques sont stockées sur l’appareil et ne sont jamais envoyées au serveur. Lorsque la biométrie ne peut pas être utilisée, d’autres méthodes d’authentification sont généralement offertes. Par exemple, si vous portez un masque, au lieu d’utiliser Face ID, vous pouvez entrer votre code d’accès.
 
 <div id="webauthn-and-web-origins">
-  ## WebAuthn et les origines Web
+  ## WebAuthn et les origines Web {#webauthn-and-web-origins}
 </div>
 
 WebAuthn fonctionne en générant une paire de clés privée/publique pour chaque [origine Web](https://en.wikipedia.org/wiki/Same-origin_policy), enregistrée dans l’appareil ou la clé de sécurité.
@@ -30,7 +30,7 @@ WebAuthn fonctionne en générant une paire de clés privée/publique pour chaqu
 Comme la paire de clés est liée au domaine, les utilisateurs sont protégés contre les tentatives d’hameçonnage. Si un attaquant les incite à utiliser WebAuthn dans un autre domaine, l’authentificateur WebAuthn n’aura pas de paire de clés pour ce domaine et l’authentification échouera. L’attaquant n’obtiendra aucune donnée permettant d’identifier l’utilisateur.
 
 <div id="roaming-authenticators">
-  ## Authentificateurs itinérants
+  ## Authentificateurs itinérants {#roaming-authenticators}
 </div>
 
 Pour savoir comment activer les authentificateurs itinérants dans Auth0, consultez la documentation [WebAuthn with clés de sécurité](/docs/fr-ca/secure/multi-factor-authentication/fido-authentication-with-webauthn/configure-webauthn-security-keys-for-mfa).
@@ -51,7 +51,7 @@ Dans le flux de défi, on demande à l’utilisateur d’utiliser sa clé de sé
 <Frame>![undefined](/docs/images/cdy7uua7fh8z/6cATwflHcqYECdI0J75AXi/1802a4b44aa394b2d7885ccfbaa299be/security-key-challenge.png)</Frame>
 
 <div id="platform-authenticators">
-  ## Authentificateurs de plateforme
+  ## Authentificateurs de plateforme {#platform-authenticators}
 </div>
 
 Pour savoir comment activer les authentificateurs de plateforme, consultez la documentation [WebAuthn avec biométrie de l’appareil](/docs/fr-ca/secure/multi-factor-authentication/fido-authentication-with-webauthn/configure-webauthn-device-biometrics-for-mfa).
@@ -73,7 +73,7 @@ La prochaine fois qu’ils se connectent à partir de cet appareil, les utilisat
 <Frame>![Défi AMF WebAuthn avec biométrie de l’appareil](/docs/images/cdy7uua7fh8z/Y9gbCvOtQ3uEm7a0lPQwS/1244401ecd935586cf2433173e659751/image.png)</Frame>
 
 <div id="webauthn-as-multi-factor-authentication">
-  ## WebAuthn comme authentification multifacteur
+  ## WebAuthn comme authentification multifacteur {#webauthn-as-multi-factor-authentication}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -87,13 +87,13 @@ La prochaine fois qu’ils se connectent à partir de cet appareil, les utilisat
 </Callout>
 
 <div id="webauthnme">
-  ## Webauthn.me
+  ## Webauthn.me {#webauthnme}
 </div>
 
 Auth0 tient à jour [webauthn.me](https://a0.to/webauthme-auth0-docs), qui propose [des renseignements détaillés](https://webauthn.me/introduction) sur WebAuthn ainsi qu’une liste à jour des navigateurs compatibles avec WebAuthn.
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Configurer WebAuthn avec la biométrie de l’appareil pour l’AMF](/docs/fr-ca/secure/multi-factor-authentication/fido-authentication-with-webauthn/configure-webauthn-device-biometrics-for-mfa)

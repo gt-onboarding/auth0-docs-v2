@@ -9,7 +9,7 @@ Initialise une requête passive d’information d’identification WebAuthn à l
 Appelez cette méthode une seule fois lorsque l’écran de connexion est initialisé (par exemple, au chargement de la page). Si Conditional Mediation n’est pas prise en charge par le navigateur, la méthode n’a simplement aucun effet.
 
 <div id="parameters">
-  ## Paramètres
+  ## Paramètres {#parameters}
 </div>
 
 <ParamField body="inputId?" type="string">
@@ -23,7 +23,7 @@ Appelez cette méthode une seule fois lorsque l’écran de connexion est initia
 </ParamField>
 
 <div id="returns">
-  ## Renvoie
+  ## Renvoie {#returns}
 </div>
 
 `Promise`&lt;`void`&gt;
@@ -31,7 +31,7 @@ Appelez cette méthode une seule fois lorsque l’écran de connexion est initia
 Est résolue lorsque l’enregistrement de l’interface utilisateur conditionnelle est terminé.
 
 <div id="example">
-  ## Exemple
+  ## Exemple {#example}
 </div>
 
 ```typescript
@@ -48,7 +48,7 @@ initializeLogin().catch(console.error);
 ```
 
 <div id="gotchas">
-  ## Pièges à éviter
+  ## Pièges à éviter {#gotchas}
 </div>
 
 * L’attribut `autocomplete` **doit contenir exactement** `"username webauthn"`. L’ajout de jetons non liés comme `"email"` ou `"text"` empêchera les navigateurs d’afficher le menu déroulant de clé d’accès.
@@ -56,7 +56,7 @@ initializeLogin().catch(console.error);
 * Si Conditional Mediation n’est pas pris en charge par le navigateur, le SDK n’effectuera simplement aucune action.
 
 <div id="remarks">
-  ## Remarques
+  ## Remarques {#remarks}
 </div>
 
 Cette méthode délègue à l’utilitaire interne `registerPasskeyAutofill()` et renvoie un `AbortController` exécuté en arrière-plan pour gérer la durée de vie de la requête. Elle ne doit être appelée qu’une seule fois par cycle de vie de la page.
