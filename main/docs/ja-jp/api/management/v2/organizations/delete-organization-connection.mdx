@@ -1,0 +1,14 @@
+---
+title: 組織の接続を削除
+openapi: /docs/ja-jp/oas/management/v2/management-api-oas.json DELETE
+  /organizations/{id}/connections/{connection_id}
+playground: interactive
+deprecated: false
+---
+
+import { ApiReleaseLifecycle } from "/snippets/ja-jp/ApiReleaseLifecycle.jsx";
+import { Scopes } from "/snippets/ja-jp/ApiScopes.jsx";
+
+<ApiReleaseLifecycle releaseLifecycle="EA" />
+
+<Scopes scopes={["delete:organization_connections"]} />

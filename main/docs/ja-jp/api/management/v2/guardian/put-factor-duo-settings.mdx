@@ -1,0 +1,14 @@
+---
+title: Duo の認証要素設定を更新
+openapi: /docs/ja-jp/oas/management/v2/management-api-oas.json PUT
+  /guardian/factors/duo/settings
+playground: interactive
+deprecated: false
+---
+
+import { ApiReleaseLifecycle } from "/snippets/ja-jp/ApiReleaseLifecycle.jsx";
+import { Scopes } from "/snippets/ja-jp/ApiScopes.jsx";
+
+<ApiReleaseLifecycle releaseLifecycle="GA" />
+
+<Scopes scopes={["update:guardian_factors"]} />

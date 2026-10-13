@@ -1,0 +1,14 @@
+---
+title: Publier un jeton SCIM
+openapi: /docs/fr-ca/oas/management/v2/management-api-oas.json POST
+  /connections/{id}/scim-configuration/tokens
+playground: interactive
+deprecated: false
+---
+
+import { ApiReleaseLifecycle } from "/snippets/fr-ca/ApiReleaseLifecycle.jsx";
+import { Scopes } from "/snippets/fr-ca/ApiScopes.jsx";
+
+<ApiReleaseLifecycle releaseLifecycle="GA" />
+
+<Scopes scopes={["create:scim_token"]} />

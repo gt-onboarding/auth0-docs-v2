@@ -1,0 +1,14 @@
+---
+title: Tester le fournisseur téléphonique
+openapi: /docs/fr-ca/oas/management/v2/management-api-oas.json POST
+  /branding/phone/providers/{id}/try
+playground: interactive
+deprecated: false
+---
+
+import { ApiReleaseLifecycle } from "/snippets/fr-ca/ApiReleaseLifecycle.jsx";
+import { Scopes } from "/snippets/fr-ca/ApiScopes.jsx";
+
+<ApiReleaseLifecycle releaseLifecycle="GA" />
+
+<Scopes scopes={["create:phone_providers"]} />

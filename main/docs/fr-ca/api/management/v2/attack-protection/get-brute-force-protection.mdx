@@ -1,0 +1,14 @@
+---
+title: Obtenir la protection contre les attaques par force brute
+openapi: /docs/fr-ca/oas/management/v2/management-api-oas.json GET
+  /attack-protection/brute-force-protection
+playground: interactif
+deprecated: false
+---
+
+import { ApiReleaseLifecycle } from "/snippets/fr-ca/ApiReleaseLifecycle.jsx";
+import { Scopes } from "/snippets/fr-ca/ApiScopes.jsx";
+
+<ApiReleaseLifecycle releaseLifecycle="GA" />
+
+<Scopes scopes={["read:attack_protection"]} />

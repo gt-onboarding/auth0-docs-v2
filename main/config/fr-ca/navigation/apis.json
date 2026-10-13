@@ -1,0 +1,34 @@
+{
+  "groups": [
+    {
+      "group": " ",
+      "pages": [
+        "docs/fr-ca/api"
+      ]
+    },
+    {
+      "group": "API My Account",
+      "root": "docs/fr-ca/api/myaccount",
+      "icon": "list",
+      "$ref": "./generated/myaccount.json"
+    },
+    {
+      "group": "API Mon organisation",
+      "root": "docs/fr-ca/api/myorganization",
+      "icon": "list",
+      "$ref": "./generated/myorganization.json"
+    },
+    {
+      "group": "API Management",
+      "root": "docs/fr-ca/api/management/v2",
+      "icon": "list",
+      "$ref": "./generated/management.json"
+    },
+    {
+      "group": "Authentication API",
+      "root": "docs/fr-ca/api/authentication",
+      "icon": "list",
+      "$ref": "./api.authentication.json"
+    }
+  ]
+}

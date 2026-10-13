@@ -1,0 +1,14 @@
+---
+title: Renvoyer un événement par ID d’événement
+openapi: /docs/fr-ca/oas/management/v2/management-api-oas.json POST
+  /event-streams/{id}/redeliver/{event_id}
+playground: interactive
+deprecated: false
+---
+
+import { ApiReleaseLifecycle } from "/snippets/fr-ca/ApiReleaseLifecycle.jsx";
+import { Scopes } from "/snippets/fr-ca/ApiScopes.jsx";
+
+<ApiReleaseLifecycle releaseLifecycle="GA" />
+
+<Scopes scopes={["update:event_deliveries"]} />

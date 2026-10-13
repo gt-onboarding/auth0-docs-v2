@@ -1,0 +1,86 @@
+{
+  "tabs": [
+    {
+      "pages": [
+        "docs/fr-ca/index"
+      ],
+      "tab": "Accueil"
+    },
+    {
+      "tab": "Pour commencer",
+      "icon": "play",
+      "$ref": "./navigation/get-started.json"
+    },
+    {
+      "tab": "Authentifier",
+      "icon": "/icons/authenticate.svg",
+      "$ref": "./navigation/authenticate.json"
+    },
+    {
+      "tab": "Gérer les utilisateurs",
+      "icon": "/icons/manage-users.svg",
+      "$ref": "./navigation/manage-users.json"
+    },
+    {
+      "tab": "Personnaliser",
+      "icon": "/icons/customize.svg",
+      "$ref": "./navigation/customize.json"
+    },
+    {
+      "tab": "Sécuriser",
+      "icon": "shield-check",
+      "$ref": "./navigation/secure.json"
+    },
+    {
+      "tab": "Déployer et surveiller",
+      "icon": "chart-simple",
+      "$ref": "./navigation/deploy-and-monitor.json"
+    },
+    {
+      "tab": "Agents d’IA et MCP",
+      "icon": "robot",
+      "$ref": "./navigation/ai-agents-mcp.json"
+    },
+    {
+      "tab": "Plateforme",
+      "icon": "/icons/platform.svg",
+      "$ref": "./navigation/platform.json"
+    },
+    {
+      "icon": "/icons/dev-tools.svg",
+      "menu": [
+        {
+          "item": "API",
+          "icon": "/icons/apis.svg",
+          "$ref": "./navigation/apis.json"
+        },
+        {
+          "item": "SDK",
+          "icon": "/icons/sdks.svg",
+          "$ref": "./navigation/sdk-libraries.json"
+        },
+        {
+          "item": "Catalogue des événements",
+          "icon": "/icons/events-catalog.svg",
+          "$ref": "./navigation/generated/events-catalog.json"
+        },
+        {
+          "item": "Référence d’Actions",
+          "icon": "/icons/actions-reference.svg",
+          "$ref": "./navigation/generated/actions-reference.json"
+        },
+        {
+          "item": "Catalogue des journaux du tenant",
+          "icon": "/icons/tenant-logs.svg",
+          "$ref": "./navigation/generated/tenant-logs.json"
+        },
+        {
+          "item": "Universal Components",
+          "icon": "/icons/universal-components.svg",
+          "$ref": "./navigation/universal-components.json"
+        }
+      ],
+      "tab": "Outils de développement"
+    }
+  ]
+}

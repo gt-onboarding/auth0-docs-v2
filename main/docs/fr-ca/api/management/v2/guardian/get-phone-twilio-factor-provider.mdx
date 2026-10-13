@@ -1,0 +1,14 @@
+---
+title: Obtenir le fournisseur Twilio pour le facteur téléphonique
+openapi: /docs/fr-ca/oas/management/v2/management-api-oas.json GET
+  /guardian/factors/phone/providers/twilio
+playground: interactif
+deprecated: faux
+---
+
+import { ApiReleaseLifecycle } from "/snippets/fr-ca/ApiReleaseLifecycle.jsx";
+import { Scopes } from "/snippets/fr-ca/ApiScopes.jsx";
+
+<ApiReleaseLifecycle releaseLifecycle="GA" />
+
+<Scopes scopes={["read:guardian_factors"]} />

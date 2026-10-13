@@ -1,0 +1,14 @@
+---
+title: Créer la vérification d’un domaine d’organisation
+openapi: /docs/fr-ca/oas/myorganization/myorganization-api-oas.json POST
+  /domains/{domain_id}/verify
+playground: simple
+deprecated: false
+---
+
+import { ApiReleaseLifecycle } from "/snippets/fr-ca/ApiReleaseLifecycle.jsx";
+import { Scopes } from "/snippets/fr-ca/ApiScopes.jsx";
+
+<ApiReleaseLifecycle releaseLifecycle="EA" />
+
+<Scopes scopes={["update:my_org:domains"]} />

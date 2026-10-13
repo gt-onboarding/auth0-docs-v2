@@ -1,0 +1,14 @@
+---
+title: 有効な接続をPOST
+openapi: /docs/ja-jp/oas/management/v2/management-api-oas.json POST
+  /organizations/{id}/enabled_connections
+playground: interactive
+deprecated: false
+---
+
+import { ApiReleaseLifecycle } from "/snippets/ja-jp/ApiReleaseLifecycle.jsx";
+import { Scopes } from "/snippets/ja-jp/ApiScopes.jsx";
+
+<ApiReleaseLifecycle releaseLifecycle="GA" />
+
+<Scopes scopes={["create:organization_connections"]} />
