@@ -11,7 +11,7 @@ Vous pouvez configurer votre tenant à l’aide des paramètres SMTP d’un four
 </Callout>
 
 <div id="smtp-server-requirements">
-  ## Exigences du serveur SMTP
+  ## Exigences du serveur SMTP {#smtp-server-requirements}
 </div>
 
 Le serveur SMTP doit :
@@ -22,13 +22,13 @@ Le serveur SMTP doit :
 * Autoriser les connexions entrantes en provenance des [adresses IP d’Auth0](/docs/fr-ca/secure/security-guidance/data-security/allowlist).
 
 <div id="configure-tenants-with-an-smtp-server">
-  ## Configurer des tenants à l’aide d’un serveur SMTP
+  ## Configurer des tenants à l’aide d’un serveur SMTP {#configure-tenants-with-an-smtp-server}
 </div>
 
 Vous pouvez configurer votre tenant avec un serveur SMTP dans l’Auth0 Dashboard ou au moyen de la Management API.
 
 <div id="using-the-auth0-dashboard">
-  ### Utilisation de l’Auth0 Dashboard
+  ### Utilisation de l’Auth0 Dashboard {#using-the-auth0-dashboard}
 </div>
 
 Pour configurer votre tenant avec un serveur SMTP à l’aide de l’Auth0 Dashboard :
@@ -44,7 +44,7 @@ Pour configurer votre tenant avec un serveur SMTP à l’aide de l’Auth0 Dashb
 Vous pouvez ensuite envoyer un courriel de test en cliquant sur le bouton **Send Test Email**. Si vous ne recevez pas de courriel de confirmation après quelques minutes, consultez vos [logs Auth0](https://manage.auth0.com/#/logs) pour vérifier s’il y a eu des échecs.
 
 <div id="using-the-management-api">
-  ### Utiliser la Management API
+  ### Utiliser la Management API {#using-the-management-api}
 </div>
 
 Pour configurer votre tenant avec un serveur SMTP à l’aide de la Management API, utilisez le point de terminaison `/api/v2/emails/provider`.
@@ -54,7 +54,7 @@ Pour configurer votre tenant avec un serveur SMTP à l’aide de la Management A
 * Pour mettre à jour un fournisseur de courriel existant, envoyez une [requête `PATCH` à `/api/v2/emails/provider`](/docs/fr-ca/api/management/v2/emails/patch-provider). Lorsque vous modifiez l’hôte, le port ou le nom d’utilisateur, vous [devez fournir un mot de passe](/docs/fr-ca/troubleshoot/product-lifecycle/deprecations-and-migrations#allow-omitting-password-on-smtp-email-provider-host-related-changes).
 
 <div id="additional-considerations">
-  ## Considérations supplémentaires
+  ## Considérations supplémentaires {#additional-considerations}
 </div>
 
 * Si vous avez besoin de soutien pour des protocoles d’authentification autres que LOGIN, vous pouvez [écrire une Action pour vous connecter à votre serveur SMTP](/docs/fr-ca/customize/email/configure-a-custom-email-provider).

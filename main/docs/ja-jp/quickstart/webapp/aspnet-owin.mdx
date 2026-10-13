@@ -22,7 +22,7 @@ Auth0 を使用すると、ASP.NET OWIN アプリケーションに数分で認�
 </Callout>
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 始める前に、次のものを用意してください。
@@ -32,7 +32,7 @@ Auth0 を使用すると、ASP.NET OWIN アプリケーションに数分で認�
 * [Visual Studio 2019 以降](https://visualstudio.microsoft.com/) (または .NET Framework MVC プロジェクトをサポートする任意の IDE)
 
 <div id="steps">
-  ## ステップ
+  ## ステップ {#steps}
 </div>
 
 <Steps>
@@ -289,7 +289,7 @@ Auth0 を使用すると、ASP.NET OWIN アプリケーションに数分で認�
     ```
 
     <Note>
-      ##### チェックポイント
+##### チェックポイント {#checkpoint}
 
       アプリケーションを実行し、`/Account/Login` にアクセスします。Auth0 Universal Login ページにリダイレクトされるはずです。サインイン後は、アプリケーションのホームページにリダイレクトされて戻ります。Redirect URI エラーが表示される場合は、Auth0 アプリケーションの設定にある callback URL が、アプリケーションの実行 URL と完全に一致していることを確認してください。
     </Note>
@@ -321,7 +321,7 @@ Auth0 を使用すると、ASP.NET OWIN アプリケーションに数分で認�
     ビューは、Auth0 が ID トークンを返したときに OIDC ミドルウェアが抽出したクレームをもとに生成された `UserProfileViewModel` を受け取ります。
 
     <Note>
-      ##### チェックポイント
+##### チェックポイント {#checkpoint-2}
 
       ログイン後、`/Account/UserProfile` に移動します。名前、メールアドレス、プロフィール画像が表示されるはずです。名前またはメールアドレスが空の場合は、`OpenIdConnectAuthenticationOptions` の `Scope` に `"openid profile email"` が含まれていることを確認してください。
     </Note>
@@ -345,7 +345,7 @@ Auth0 を使用すると、ASP.NET OWIN アプリケーションに数分で認�
     レイアウト内でナビゲーションリンクを表示している箇所の `<nav>` 要素内に、これを追加します。
 
     <Note>
-      ##### チェックポイント
+##### チェックポイント {#checkpoint-3}
 
       アプリケーションを実行します。ナビゲーションに **ログイン** リンクが表示されるはずです。サインインすると、それがあなたの名前 (プロファイルへのリンク) と **ログアウト** リンクに変わるはずです。**ログアウト** をクリックするとサインアウトされ、ホームページに戻るはずです。
     </Note>
@@ -357,7 +357,7 @@ Auth0 を使用すると、ASP.NET OWIN アプリケーションに数分で認�
 </Check>
 
 <div id="common-issues">
-  ## よくある問題
+  ## よくある問題 {#common-issues}
 </div>
 
 <AccordionGroup>
@@ -425,7 +425,7 @@ Auth0 を使用すると、ASP.NET OWIN アプリケーションに数分で認�
 </AccordionGroup>
 
 <div id="advanced-usage">
-  ## 高度な使い方
+  ## 高度な使い方 {#advanced-usage}
 </div>
 
 <Accordion title="ログインパラメーターをカスタマイズする">
@@ -486,7 +486,7 @@ Auth0 を使用すると、ASP.NET OWIN アプリケーションに数分で認�
 ***
 
 <div id="additional-resources">
-  ## 追加リソース
+  ## 追加リソース {#additional-resources}
 </div>
 
 <CardGroup cols={2}>

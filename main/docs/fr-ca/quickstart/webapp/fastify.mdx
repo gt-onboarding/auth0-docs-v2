@@ -53,7 +53,7 @@ APP_BASE_URL=http://localhost:3000`;
 </Note>
 
 <div id="get-started">
-  ## Pour commencer
+  ## Pour commencer {#get-started}
 </div>
 
 Ce guide de démarrage rapide montre comment ajouter l’authentification Auth0 à une application Fastify. Vous créerez une application web sécurisée avec des fonctionnalités de login, de logout et de profil utilisateur à l’aide de l’Auth0 Fastify SDK.
@@ -564,7 +564,7 @@ Ce guide de démarrage rapide montre comment ajouter l’authentification Auth0 
 ***
 
 <div id="advanced-usage">
-  ## Utilisation avancée
+  ## Utilisation avancée {#advanced-usage}
 </div>
 
 <Accordion title="Appeler des API protégées avec des jetons d’accès">
@@ -775,12 +775,12 @@ Ce guide de démarrage rapide montre comment ajouter l’authentification Auth0 
 ***
 
 <div id="troubleshooting">
-  ## Dépannage
+  ## Dépannage {#troubleshooting}
 </div>
 
 <AccordionGroup>
   <Accordion title="Problèmes courants et solutions">
-    ### Erreur « invalid state » après la connexion
+### Erreur « invalid state » après la connexion {#invalid-state-error-after-login}
 
     **Problème :** Le paramètre `state` de la requête d’authentification ne correspond pas à celui du callback.
 
@@ -790,7 +790,7 @@ Ce guide de démarrage rapide montre comment ajouter l’authentification Auth0 
     2. Vérifiez que l’URL de rappel correspond exactement dans l’Auth0 Dashboard (y compris `/auth/callback`)
     3. Vérifiez que `SESSION_SECRET` est défini et contient au moins 64 caractères
 
-    ### Erreur « session is undefined »
+### Erreur « session is undefined » {#session-is-undefined-error}
 
     **Problème :** Impossible de récupérer les données de session.
 
@@ -808,7 +808,7 @@ Ce guide de démarrage rapide montre comment ajouter l’authentification Auth0 
     fastify.get('/profile', async (request, reply) => { ... });
     ```
 
-    ### Incompatibilité de l’URL de rappel
+### Incompatibilité de l’URL de rappel {#callback-url-mismatch}
 
     **Problème :** Erreur « Callback URL mismatch » renvoyée par Auth0.
 
@@ -818,7 +818,7 @@ Ce guide de démarrage rapide montre comment ajouter l’authentification Auth0 
     2. Ajoutez `http://localhost:3000/auth/callback` à **Allowed Callback URLs**
     3. L’URL doit correspondre exactement (y compris le chemin `/auth/callback`)
 
-    ### Les variables d’environnement ne se chargent pas
+### Les variables d’environnement ne se chargent pas {#environment-variables-not-loading}
 
     **Problème :** Les valeurs de configuration sont `undefined`.
 
@@ -842,7 +842,7 @@ Ce guide de démarrage rapide montre comment ajouter l’authentification Auth0 
 ***
 
 <div id="next-steps">
-  ## Prochaines étapes
+  ## Prochaines étapes {#next-steps}
 </div>
 
 Maintenant que l’authentification fonctionne, pensez à explorer :
@@ -855,7 +855,7 @@ Maintenant que l’authentification fonctionne, pensez à explorer :
 ***
 
 <div id="resources">
-  ## Ressources
+  ## Ressources {#resources}
 </div>
 
 * **[auth0-fastify GitHub](https://github.com/auth0/auth0-fastify)** - Code source et exemples

@@ -22,7 +22,7 @@ Apprenez à configurer l’authentification mTLS pour un tenant.
 Pour commencer, vous devez configurer et vérifier un [domaine personnalisé](/docs/fr-ca/customize/custom-domains).
 
 <div id="create-a-custom-domain">
-  ### Créer un domaine personnalisé
+  ### Créer un domaine personnalisé {#create-a-custom-domain}
 </div>
 
 Au niveau du tenant, vous devez configurer un [domaine personnalisé](/docs/fr-ca/customize/custom-domains) pour accepter les en-têtes mTLS avec la [Management API](https://auth0.com/docs/api/management/v2). Comme le [Customer Edge](/docs/fr-ca/get-started/applications/configure-mtls/set-up-the-customer-edge) est chargé de valider les certificats clients, définissez `type` sur `self_managed_certs` dans la requête POST :
@@ -43,7 +43,7 @@ curl --location --request POST 'https://$tenant/api/v2/custom-domains' \
 Une requête réussie renvoie un identifiant servant à vérifier le <Tooltip tip="Domaine personnalisé : domaine tiers doté d’un nom spécialisé ou personnalisé." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=custom+domain">domaine personnalisé</Tooltip>. Pour en savoir plus, consultez la documentation de l’API [Configurer un nouveau domaine personnalisé](https://auth0.com/docs/api/management/v2/custom-domains/post-custom-domains).
 
 <div id="patch-an-existing-custom-domain">
-  ### Mettre à jour un domaine personnalisé existant
+  ### Mettre à jour un domaine personnalisé existant {#patch-an-existing-custom-domain}
 </div>
 
 Vous pouvez configurer un domaine personnalisé existant pour qu’il accepte des en-têtes mTLS avec la [Management API](https://auth0.com/docs/api/management/v2). Toutefois, vous ne pouvez pas mettre à jour le `type` d’un domaine personnalisé existant.
@@ -67,7 +67,7 @@ curl --location --request POST 'https://$tenant/api/v2/custom-domains/:id' \
 Pour en savoir plus, consultez la documentation de l’API [Mettre à jour la configuration du domaine personnalisé](https://auth0.com/docs/api/management/v2/custom-domains/patch-custom-domains-by-id).
 
 <div id="verify-the-custom-domain">
-  ### Vérifier le domaine personnalisé
+  ### Vérifier le domaine personnalisé {#verify-the-custom-domain}
 </div>
 
 Avant qu’Auth0 n’accepte les requêtes de création et de mise à jour du domaine personnalisé, il doit d’abord vérifier le domaine. Utilisez la [Management API](https://auth0.com/docs/api/management/v2) pour envoyer la requête POST suivante afin de vérifier le domaine personnalisé :
@@ -83,7 +83,7 @@ Lorsque Auth0 vérifie le domaine personnalisé pour la première fois, la répo
 Pour en savoir plus, consultez la documentation de l’API [Vérifier un domaine personnalisé](https://auth0.com/docs/api/management/v2/custom-domains/patch-custom-domains-by-id).
 
 <div id="enable-mtls-endpoint-aliases">
-  ### Activer les alias de point de terminaison mTLS
+  ### Activer les alias de point de terminaison mTLS {#enable-mtls-endpoint-aliases}
 </div>
 
 Lorsque la négociation mTLS demande au client de présenter un certificat client, le navigateur Web affiche une boîte de dialogue modale permettant aux utilisateurs de sélectionner un certificat. Cela complique l’expérience utilisateur et devrait être évité pour les points de terminaison où mTLS n’est pas nécessaire, comme le point de terminaison `/authorize`. Par conséquent, les clients qui prennent en charge le trafic mTLS et non mTLS sur des domaines distincts devraient activer les alias de point de terminaison mTLS.
@@ -131,7 +131,7 @@ Vous pouvez activer les alias de point de terminaison mTLS à l’aide d’<Tool
 </Tabs>
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Authentification avec mTLS](/docs/fr-ca/get-started/authentication-and-authorization-flow/authenticate-with-mtls)

@@ -15,7 +15,7 @@ title: Installer Authorization Extension
 </Callout>
 
 <div id="prerequisite">
-  ## Prérequis
+  ## Prérequis {#prerequisite}
 </div>
 
 Avant de commencer, assurez-vous d’avoir déjà une application pouvant être utilisée avec l’Authorization Extension. Vous pouvez utiliser les types d’applications suivants :
@@ -27,7 +27,7 @@ Avant de commencer, assurez-vous d’avoir déjà une application pouvant être 
 Les applications sans type assigné ou les applications machine à machine ne peuvent pas être utilisées avec cette extension.
 
 <div id="install-extension">
-  ## Installer l’extension
+  ## Installer l’extension {#install-extension}
 </div>
 
 1. Accédez à [Auth0 Dashboard &gt; Extensions](https://manage.auth0.com/#/extensions).
@@ -47,7 +47,7 @@ Lorsque vous cliquez sur le lien pour ouvrir l’extension pour la première foi
 <Frame>![Dashboard - Extensions - Authorization Dashboard - Users](/docs/images/cdy7uua7fh8z/1ALaqm8mvtleQfm3XKvBtf/73fb69c35e2eed4dae74b1baa8e372a2/auth-dashboard-v2.png)</Frame>
 
 <div id="webtask-storage">
-  ### Webtask Storage
+  ### Webtask Storage {#webtask-storage}
 </div>
 
 L’extension utilisera Webtask Storage par défaut, et vous serez limité à 500 Ko de données. Cela correspond à :
@@ -56,7 +56,7 @@ L’extension utilisera Webtask Storage par défaut, et vous serez limité à 50
 * 20 groupes et 7000 utilisateurs, chaque utilisateur étant membre de 3 groupes
 
 <div id="amazon-s3">
-  ### Amazon S3
+  ### Amazon S3 {#amazon-s3}
 </div>
 
 Vous pouvez aussi utiliser Amazon S3 comme fournisseur de stockage. Amazon S3 est une plateforme de stockage de fichiers, ce qui signifie qu’elle effectue les écritures en parallèle. Cela peut entraîner des problèmes, mais la logique de stockage de l’extension tente d’en tenir compte. Toutefois, si vous automatisez la création de groupes, de rôles ou de permissions, Auth0 recommande d’utiliser des requêtes séquentielles à l’API.
@@ -102,7 +102,7 @@ Pour utiliser Amazon S3, vous devez :
 ```
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Configurer l’Authorization Extension](/docs/fr-ca/customize/extensions/authorization-extension/configure-authorization-extension)

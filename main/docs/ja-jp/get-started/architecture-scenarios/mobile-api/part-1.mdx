@@ -6,7 +6,7 @@ title: ソリューション概要（モバイルアプリ + API）
 Timesheets API へのアクセスを、認可されたユーザーとアプリケーションのみに限定するため、ExampleCo は [OAuth 2.0 authorization framework](https://tools.ietf.org/html/rfc6749) を採用することにしました。このフレームワークでは、さまざまな認可フローを利用して Timesheets API と通信する必要がある各種アプリケーションを容易に認可できるため、同社が求める柔軟性を実現できます。
 
 <div id="api-authentication-and-authorization">
-  ## API の認証と認可
+  ## API の認証と認可 {#api-authentication-and-authorization}
 </div>
 
 API は、アプリケーションの機能をほかのアプリケーションに公開する仕組みです。アプリケーションは、API のエンドポイントにメッセージを送信してリクエストを行い、そのレスポンスとして情報を受け取ることができます。
@@ -53,7 +53,7 @@ API では、公開されているさまざまなエンドポイントに対し�
 </Card>
 
 <div id="proof-key-for-code-exchange-pkce">
-  ## Proof Key for Code Exchange (PKCE)
+  ## Proof Key for Code Exchange (PKCE) {#proof-key-for-code-exchange-pkce}
 </div>
 
 OAuth 2 では、さまざまなユースケースに対応するために複数のグラントタイプが用意されています。このユースケースでは、モバイルアプリケーションから API にアクセスするため、[Proof Key for Code Exchange (PKCE) を使用する Authorization Code Flow](/docs/ja-jp/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce) を利用します。
@@ -77,7 +77,7 @@ PKCE では、Application は認可リクエストごとに、`code_verifier` �
 </Callout>
 
 <div id="authorization-extension">
-  ## Authorization Extension
+  ## Authorization Extension {#authorization-extension}
 </div>
 
 [Auth0 Authorization Extension](/docs/ja-jp/customize/extensions/authorization-extension)を使用すると、ユーザーにロール、グループ、権限を割り当てることで、アプリケーションに認可機能を追加できます。

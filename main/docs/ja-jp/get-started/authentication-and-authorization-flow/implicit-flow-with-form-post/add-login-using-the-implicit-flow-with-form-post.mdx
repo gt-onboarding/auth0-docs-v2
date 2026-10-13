@@ -18,7 +18,7 @@ Form Post を使用する Implicit Flow を実装するには、次のリソー�
 ログインが成功すると、アプリケーションはユーザーの [ID トークン](/docs/ja-jp/secure/tokens/id-tokens) にアクセスできるようになります。<Tooltip tip="ID トークン: リソースへのアクセスではなく、クライアント自体のための資格情報です。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=ID+token">ID トークン</Tooltip> には、基本的なユーザープロファイル情報が含まれます。
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 Auth0 にアプリを登録します。詳しくは、[シングルページアプリケーションの登録](/docs/ja-jp/get-started/auth0-overview/create-applications/single-page-web-apps)を参照してください。
@@ -28,7 +28,7 @@ Auth0 にアプリを登録します。詳しくは、[シングルページア�
 * アプリケーションの **グラントタイプ** に **Implicit** が含まれていることを確認します。詳しくは、[グラントタイプの更新](/docs/ja-jp/get-started/applications/update-grant-types)を参照してください。
 
 <div id="authorize-user">
-  ## ユーザーを認可する
+  ## ユーザーを認可する {#authorize-user}
 </div>
 
 ユーザーの認可を取得し、アプリにリダイレクトして戻します。フローを開始するには、まずユーザーの認可を取得する必要があります。このステップには、次のプロセスの 1 つ以上が含まれる場合があります。
@@ -41,7 +41,7 @@ Auth0 にアプリを登録します。詳しくは、[シングルページア�
 ユーザーを認可するには、アプリからユーザーを認可 URL に送信する必要があります。
 
 <div id="authorization-url-example">
-  ### 認可URLの例
+  ### 認可URLの例 {#authorization-url-example}
 </div>
 
 export const codeExample1 = `https://{yourDomain}/authorize?
@@ -56,7 +56,7 @@ export const codeExample1 = `https://{yourDomain}/authorize?
 <AuthCodeBlock children={codeExample1} language="http" />
 
 <div id="parameters">
-  ### パラメータ
+  ### パラメータ {#parameters}
 </div>
 
 | Parameter Name  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -88,7 +88,7 @@ export const codeExample2 = `<a href="https://{yourDomain}/authorize?
 <AuthCodeBlock children={codeExample2} language="html" />
 
 <div id="response">
-  ### レスポンス
+  ### レスポンス {#response}
 </div>
 
 問題なく進むと、`HTTP 302` レスポンスが返されます。要求した資格情報はレスポンスボディにエンコードされています：
@@ -117,11 +117,11 @@ Auth0 は、認可 URL の呼び出し時に含めた state 値も返します�
 ID トークンには、デコードして抽出する必要のあるユーザー情報が含まれています。
 
 <div id="use-cases">
-  ## ユースケース
+  ## ユースケース {#use-cases}
 </div>
 
 <div id="basic-authentication-request">
-  ### 基本的な認証リクエスト
+  ### 基本的な認証リクエスト {#basic-authentication-request}
 </div>
 
 この例では、ステップ 1 でユーザーを認証する際に送信できる、最も基本的なリクエストを示します。Auth0 のログイン画面が表示され、設定済みの任意の接続を使ってユーザーがサインインできます。
@@ -138,7 +138,7 @@ export const codeExample3 = `https://{yourDomain}/authorize?
 これにより、ID トークンが返されます。この ID トークンはリダイレクト URL から取得できます。
 
 <div id="request-users-name-and-profile-picture">
-  ### ユーザーの名前とプロフィール画像を要求する
+  ### ユーザーの名前とプロフィール画像を要求する {#request-users-name-and-profile-picture}
 </div>
 
 この例では、通常のユーザー認証に加えて、名前やプロフィール画像などの追加のユーザー情報を要求する方法を示します。
@@ -171,7 +171,7 @@ export const codeExample4 = `https://{yourDomain}/authorize?
 ```
 
 <div id="request-user-log-in-with-github">
-  ### GitHub でユーザーをログインさせる
+  ### GitHub でユーザーをログインさせる {#request-user-log-in-with-github}
 </div>
 
 通常のユーザー認証に加えて、この例では GitHub のようなソーシャルアイデンティティプロバイダーにユーザーを直接リダイレクトする方法を示します。この例を機能させるには、[Auth0 Dashboard &gt; 認証 &gt; Social](https://manage.auth0.com/#/connections/social) に移動して、適切な接続を設定する必要があります。接続名は **設定** タブで確認してください。
@@ -206,7 +206,7 @@ export const codeExample5 = `https://{yourDomain}/authorize?
 ```
 
 <div id="learn-more">
-  ## 詳細情報
+  ## 詳細情報 {#learn-more}
 </div>
 
 * [OAuth 2.0 認可フレームワーク](/docs/ja-jp/authenticate/protocols/oauth)

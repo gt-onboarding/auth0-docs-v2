@@ -31,7 +31,7 @@ title: ルールでメタデータを管理する
 ```
 
 <div id="read-metadata">
-  ## メタデータを読み取る
+  ## メタデータを読み取る {#read-metadata}
 </div>
 
 <Tooltip tip="Management API: お客様が管理タスクを実行できるようにする製品。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Management+API">Management API</Tooltip> とルールを使用して、メタデータを読み取ることができます。また、`user_metadata` で次のようなプロファイル関連情報を検索することもできます。
@@ -72,7 +72,7 @@ console.log(user.app_metadata.plan); // "full"
 利用可能なメタデータを読み取るには、適切なユーザープロパティにアクセスする必要があります。
 
 <div id="read-app-metadata">
-  ### アプリのメタデータを読み取る
+  ### アプリのメタデータを読み取る {#read-app-metadata}
 </div>
 
 ユーザーのロールに基づいて判定できます。
@@ -88,7 +88,7 @@ function(user, context, callback){
 ```
 
 <div id="read-user-metadata">
-  ### ユーザーメタデータを読み取る
+  ### ユーザーメタデータを読み取る {#read-user-metadata}
 </div>
 
 色の好みなど、特定の設定に基づいて判断できます。
@@ -104,7 +104,7 @@ function(user, context, callback){
 ```
 
 <div id="read-application-metadata-clientmetadata">
-  ### アプリケーションのメタデータ (`clientMetadata`) を読み取る
+  ### アプリケーションのメタデータ (`clientMetadata`) を読み取る {#read-application-metadata-clientmetadata}
 </div>
 
 アプリケーションのメタデータ (`clientMetadata`) は、`context` オブジェクトの最上位にある省略可能なプロパティです。既存のアプリケーションでは、このプロパティには値が設定されていません。
@@ -120,7 +120,7 @@ function(user, context, callback){
 ```
 
 <div id="update-metadata">
-  ## メタデータを更新する
+  ## メタデータを更新する {#update-metadata}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -128,7 +128,7 @@ function(user, context, callback){
 </Callout>
 
 <div id="update-app-metadata">
-  ### アプリのメタデータを更新
+  ### アプリのメタデータを更新 {#update-app-metadata}
 </div>
 
 ユーザーに管理者ロールを追加するには:
@@ -169,7 +169,7 @@ function(user, context, callback){
 ```
 
 <div id="update-user-metadata">
-  ### ユーザーメタデータを更新する
+  ### ユーザーメタデータを更新する {#update-user-metadata}
 </div>
 
 ユーザープロファイルにユーザーの `fontSize` 設定を追加するには:
@@ -211,7 +211,7 @@ function(user, context, callback){
 ```
 
 <div id="update-app-and-user-metadata-simultaneously">
-  ### アプリとユーザーのメタデータを同時に更新する
+  ### アプリとユーザーのメタデータを同時に更新する {#update-app-and-user-metadata-simultaneously}
 </div>
 
 ルールの処理時間を短縮するため、同じルール内で `app_metadata` と `user_metadata` の両方を更新できます。
@@ -267,17 +267,17 @@ function(user, context, callback){
 ```
 
 <div id="delete-metadata">
-  ## メタデータの削除
+  ## メタデータの削除 {#delete-metadata}
 </div>
 
 <div id="delete-app-metadata-properties-and-values">
-  ### アプリのメタデータのプロパティと値を削除する
+  ### アプリのメタデータのプロパティと値を削除する {#delete-app-metadata-properties-and-values}
 </div>
 
 プロパティを削除するには、その値を `null` に設定します。
 
 <div id="delete-users-roles-example">
-  #### ユーザーのロールを削除する例
+  #### ユーザーのロールを削除する例 {#delete-users-roles-example}
 </div>
 
 ユーザーのロールを削除するには、以下のサンプルルールを使用します。
@@ -315,7 +315,7 @@ function(user, context, callback){
 ```
 
 <div id="delete-single-property-value-example">
-  #### 単一のプロパティ値を削除する例
+  #### 単一のプロパティ値を削除する例 {#delete-single-property-value-example}
 </div>
 
 プロパティの値を1つだけ削除するには、その値を削除します。たとえば、ユーザープロファイルから `writer` ロールを削除するには、次のようにします。
@@ -363,7 +363,7 @@ function(user, context, callback){
 `roles` プロパティは引き続き存在しますが、値は含まれていない点に注意してください。
 
 <div id="delete-user-metadata-properties-and-values">
-  ### ユーザーのメタデータのプロパティと値を削除する
+  ### ユーザーのメタデータのプロパティと値を削除する {#delete-user-metadata-properties-and-values}
 </div>
 
 ユーザーの色の設定を削除するには:
@@ -402,7 +402,7 @@ function(user, context, callback){
 ```
 
 <div id="learn-more">
-  ## 詳細情報
+  ## 詳細情報 {#learn-more}
 </div>
 
 * [ルール内から Management API を使用する](/docs/ja-jp/customize/rules/use-management-api)

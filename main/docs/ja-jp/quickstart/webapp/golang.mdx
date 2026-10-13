@@ -22,7 +22,7 @@ import {HowToSchema} from "/snippets/ja-jp/HowToSchema.jsx";
 </Note>
 
 <div id="get-started">
-  ## はじめに
+  ## はじめに {#get-started}
 </div>
 
 このクイックスタートでは、Go の Web アプリケーションに Auth0 認証を追加する方法を説明します。[go-auth0](https://github.com/auth0/go-auth0) SDK と Go の標準 `net/http` ライブラリを使用して、ログイン、ログアウト、ユーザープロファイル機能を備えたサーバーサイドアプリを構築します。
@@ -146,7 +146,7 @@ SESSION_SECRET=a-long-random-secret-key-for-cookie-encryption`;
         4. Application Details ページで **設定** タブに切り替えます
         5. **Domain**、**Client ID**、**Client Secret** の値を確認します
 
-        ### callback URL を設定する
+### callback URL を設定する {#configure-callback-urls}
 
         callback URL は、ユーザーの認証完了後に Auth0 がリダイレクトするアプリケーション内の URL です。設定していない場合、ログイン後にユーザーはアプリケーションへ戻れません。
 
@@ -156,7 +156,7 @@ SESSION_SECRET=a-long-random-secret-key-for-cookie-encryption`;
         http://localhost:3000/callback
         ```
 
-        ### ログアウト URL を設定する
+### ログアウト URL を設定する {#configure-logout-urls}
 
         ログアウト URL は、ユーザーのログアウト後に Auth0 が戻ることのできるアプリケーション内の URL です。設定していない場合、ユーザーはアプリケーションからログアウトできず、エラーが表示されます。
 
@@ -166,7 +166,7 @@ SESSION_SECRET=a-long-random-secret-key-for-cookie-encryption`;
         http://localhost:3000
         ```
 
-        ### 環境ファイルを作成する
+### 環境ファイルを作成する {#create-your-environment-file}
 
         dashboard の値を使って、プロジェクトのルートディレクトリに `.env` ファイルを作成します。
 
@@ -743,7 +743,7 @@ SESSION_SECRET=a-long-random-secret-key-for-cookie-encryption`;
 ***
 
 <div id="advanced-usage">
-  ## 高度な使い方
+  ## 高度な使い方 {#advanced-usage}
 </div>
 
 <Accordion title="ミドルウェアでルートを保護する">
@@ -833,12 +833,12 @@ SESSION_SECRET=a-long-random-secret-key-for-cookie-encryption`;
 ***
 
 <div id="troubleshooting">
-  ## トラブルシューティング
+  ## トラブルシューティング {#troubleshooting}
 </div>
 
 <AccordionGroup>
   <Accordion title="よくある問題と解決策">
-    ### 「認可コードをトークンに交換できませんでした」
+### 「認可コードをトークンに交換できませんでした」 {#failed-to-exchange-authorization-code-for-token}
 
     **問題:** コールバック ハンドラーが認可コードを交換できません。
 
@@ -848,7 +848,7 @@ SESSION_SECRET=a-long-random-secret-key-for-cookie-encryption`;
     2. `AUTH0_CALLBACK_URL` が Auth0 のアプリケーション設定の **Allowed Callback URLs** と完全に一致していることを確認します
     3. 認可コードの有効期限が切れていないことを確認します (コードは 1 回しか使用できず、有効期間も短くなっています)
 
-    ### 「ユーザー情報を取得できませんでした」
+### 「ユーザー情報を取得できませんでした」 {#failed-to-get-user-info}
 
     **問題:** `/userinfo` エンドポイントがエラーを返します。
 
@@ -858,7 +858,7 @@ SESSION_SECRET=a-long-random-secret-key-for-cookie-encryption`;
     2. アクセストークンが有効で、有効期限切れになっていないことを確認します
     3. Auth0 ドメインへのネットワーク接続を確認します
 
-    ### 「無効な state パラメーター」
+### 「無効な state パラメーター」 {#invalid-state-parameter}
 
     **問題:** コールバック内の state パラメーターがセッションと一致しません。
 
@@ -868,7 +868,7 @@ SESSION_SECRET=a-long-random-secret-key-for-cookie-encryption`;
     2. リクエスト間でセッションストアのシークレットが変更されていないことを確認します
     3. ログインフロー中に複数のブラウザータブを使用していないことを確認します
 
-    ### ユーザーがログアウトできない
+### ユーザーがログアウトできない {#users-cant-log-out}
 
     **問題:** ログアウトをクリックした後、ユーザーに Auth0 のエラーページが表示されます。
 
@@ -878,7 +878,7 @@ SESSION_SECRET=a-long-random-secret-key-for-cookie-encryption`;
     2. `client_id` パラメーターがアプリケーションのクライアント IDと一致していることを確認します
     3. `returnTo` URL が許可されているログアウト URL のいずれか 1 つと完全に一致していることを確認します
 
-    ### セッションデータが保持されない
+### セッションデータが保持されない {#session-data-not-persisting}
 
     **問題:** リクエスト間でユーザープロファイルデータが消えてしまいます。
 
@@ -893,7 +893,7 @@ SESSION_SECRET=a-long-random-secret-key-for-cookie-encryption`;
 ***
 
 <div id="next-steps">
-  ## 次のステップ
+  ## 次のステップ {#next-steps}
 </div>
 
 認証が機能するようになったら、次の内容も確認してみましょう。
@@ -907,7 +907,7 @@ SESSION_SECRET=a-long-random-secret-key-for-cookie-encryption`;
 ***
 
 <div id="resources">
-  ## リソース
+  ## リソース {#resources}
 </div>
 
 * **[go-auth0 GitHub](https://github.com/auth0/go-auth0)** — ソースコードとドキュメント

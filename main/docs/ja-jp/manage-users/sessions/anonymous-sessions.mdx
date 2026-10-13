@@ -29,11 +29,11 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 </Warning>
 
 <div id="how-it-works">
-  ## 仕組み
+  ## 仕組み {#how-it-works}
 </div>
 
 <div id="gather-anonymous-sessions-data">
-  ### 匿名セッションのデータを収集する
+  ### 匿名セッションのデータを収集する {#gather-anonymous-sessions-data}
 </div>
 
 まだ認証されていないユーザーも含め、ユーザーに関する情報の収集を開始すると、アプリケーションは `/anonymous/token` エンドポイントに `POST` リクエストを送信します。
@@ -76,7 +76,7 @@ sequenceDiagram
 ```
 
 <div id="transfer-anonymous-sessions-data-to-users-metadata">
-  ### 匿名セッションのデータをユーザーのメタデータに移行する
+  ### 匿名セッションのデータをユーザーのメタデータに移行する {#transfer-anonymous-sessions-data-to-users-metadata}
 </div>
 
 匿名セッション中のユーザーがログインまたは新規登録する際、アプリケーションはCookieまたはHTTPヘッダーを使用して、`anonymous_session_token`を`/authorize`エンドポイントに渡します。
@@ -130,7 +130,7 @@ Auth0 では、[`pre-user-registration`](/docs/ja-jp/customize/actions/explore-t
 Actions を使用した匿名セッションについて詳しくは、[匿名セッションのユースケース](/docs/ja-jp/manage-users/sessions/anonymous-sessions/anonymous-sessions-use-cases)をご覧ください。
 
 <div id="end-the-anonymous-session-after-transfer">
-  ### 転送後に匿名セッションを終了する
+  ### 転送後に匿名セッションを終了する {#end-the-anonymous-session-after-transfer}
 </div>
 
 ユーザーが認証されても、匿名セッションは自動的に無効化されません。セッションを終了するには、`/anonymous/logout` エンドポイントを使用します。
@@ -148,7 +148,7 @@ if (wasAnonymousSession) {
 ```
 
 <div id="best-practices">
-  ## ベストプラクティス
+  ## ベストプラクティス {#best-practices}
 </div>
 
 匿名セッションに関するベストプラクティスは以下のとおりです。
@@ -166,7 +166,7 @@ if (wasAnonymousSession) {
 * [メタデータの更新](/docs/ja-jp/manage-users/sessions/anonymous-sessions/configure-anonymous-sessions#update-the-session-with-metadata)はまとめて行い、最小限に抑えます。メタデータを頻繁に更新しないでください。
 
 <div id="limitations">
-  ## 制限事項
+  ## 制限事項 {#limitations}
 </div>
 
 * 匿名セッションでは、[パスワードリセット](/docs/ja-jp/customize/actions/explore-triggers/password-reset-triggers#password-reset-triggers)フローはサポートされていません。
@@ -176,7 +176,7 @@ if (wasAnonymousSession) {
 * リフレッシュトークンを持つユーザーはすでにログイン済みであるため、匿名セッションでは[リフレッシュトークン交換](/docs/ja-jp/secure/call-apis-on-users-behalf/token-vault/configure-token-vault#configure-token-exchange)はサポートされていません。
 
 <div id="learn-more">
-  ## 詳細情報
+  ## 詳細情報 {#learn-more}
 </div>
 
 * [匿名セッションを設定する](/docs/ja-jp/manage-users/sessions/anonymous-sessions/configure-anonymous-sessions) 匿名セッションの設定方法について説明します。

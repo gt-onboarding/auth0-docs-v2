@@ -4,7 +4,7 @@ description: "アプリケーションから API アドオンにユーザーの�
 ---
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `POST /delegation`
@@ -18,7 +18,7 @@ description: "アプリケーションから API アドオンにユーザーの�
 既存のトークンがある場合、このエンドポイントは `target` アプリのシークレットで署名された新しいトークンを生成します。これは、ユーザーのIDをアプリケーションから API に渡すために使用されます。
 
 <div id="remarks">
-  ### 備考
+  ### 備考 {#remarks}
 </div>
 
 * `profile` の scope 値は、エンドユーザーのデフォルトのプロフィール Claim (`name`、`family_name`、`given_name`、`middle_name`、`nickname`、`preferred_username`、`profile`、`picture`、`website`、`gender`、`birthdate`、`zoneinfo`、`locale`、`updated_at`) へのアクセスを要求します。
@@ -35,14 +35,14 @@ description: "アプリケーションから API アドオンにユーザーの�
   * `X-RateLimit-Reset`: rate limit (`X-RateLimit-Limit`) がリセットされるまでの残り時間。値は [UTC epoch seconds](https://en.wikipedia.org/wiki/Unix_time) です。
 
 <div id="learn-more">
-  ### 詳細はこちら
+  ### 詳細はこちら {#learn-more}
 </div>
 
 * [委譲トークン](https://auth0.com/docs/secure/tokens/delegation-tokens)
 * [Auth0 API レート制限ポリシー](https://auth0.com/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy)
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | ステータス | 説明               |

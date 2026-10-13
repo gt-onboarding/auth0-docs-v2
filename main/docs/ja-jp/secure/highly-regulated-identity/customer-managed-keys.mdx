@@ -18,7 +18,7 @@ Auth0 Keys の詳細については、[Auth0 のキー階層](/docs/ja-jp/secure
 </Callout>
 
 <div id="control-your-own-key">
-  ## 独自のキーを管理する
+  ## 独自のキーを管理する {#control-your-own-key}
 </div>
 
 Auth0 <Tooltip tip="Management API: 顧客が管理タスクを実行できるようにする製品。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Management+API">Management API</Tooltip> の [Rekey](https://auth0.com/docs/api/management/v2/keys/post-encryption-rekey) エンドポイントを使用すると、Tenant Master Key のライフサイクルを管理して、次のことができます。
@@ -27,7 +27,7 @@ Auth0 <Tooltip tip="Management API: 顧客が管理タスクを実行できる�
 * 新しい Tenant Master Key を使用して Namespace Key をローテーションし、再暗号化する。
 
 <div id="permissions">
-  ### 権限
+  ### 権限 {#permissions}
 </div>
 
 rekey エンドポイントへのアクセスを付与するには、次の権限を使用します。
@@ -37,7 +37,7 @@ rekey エンドポイントへのアクセスを付与するには、次の権�
 | `create:encryption_keys` `update:encryption_keys` | Management API の Rekey エンドポイントを使用して、Auth0 テナントのキー階層のローテーションと再暗号化を行えます。 |
 
 <div id="endpoint">
-  ### エンドポイント
+  ### エンドポイント {#endpoint}
 </div>
 
 Management API の [Rekey](https://auth0.com/docs/api/management/v2/keys/post-encryption-rekey) エンドポイントを使用すると、Tenant Master Key のローテーション、Namespace Keys のローテーションと再暗号化を実行できます。
@@ -54,7 +54,7 @@ Management API の [Rekey](https://auth0.com/docs/api/management/v2/keys/post-en
 </Callout>
 
 <div id="bring-your-own-key">
-  ## Bring Your Own Key
+  ## Bring Your Own Key {#bring-your-own-key}
 </div>
 
 <Warning>
@@ -71,7 +71,7 @@ Bring Your Own Key を使用すると、次のことができます。
 Bring Your Own Key を有効にするには、[Auth0 Dashboard](/docs/ja-jp/secure/highly-regulated-identity/customer-managed-keys/customer-managed-keys-dashboard) または [Management API](/docs/ja-jp/secure/highly-regulated-identity/customer-managed-keys/customer-managed-keys-management-api) を使用できます。
 
 <div id="monitor-customer-managed-keys-log-events">
-  ## Customer Managed Keys のログイベントを監視する
+  ## Customer Managed Keys のログイベントを監視する {#monitor-customer-managed-keys-log-events}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -98,7 +98,7 @@ KMS 操作が失敗したことを示す `kms_key_management_failure` イベン�
 KMS キーの状態変更を示す `kms_key_state_changed` イベントコード。
 
 <div id="auth0-key-hierarchy">
-  ## Auth0 のキー階層
+  ## Auth0 のキー階層 {#auth0-key-hierarchy}
 </div>
 
 Auth0 のアプリケーション層では、Auth0 はエンベロープ暗号化を使用して、お客様のシークレットとデータを保護します。
@@ -113,7 +113,7 @@ Auth0 のエンベロープ暗号化の階層は次のキーで構成されて�
 | データ暗号化キー  | AES-256-GCM                                                    | データと一緒に保存                              |
 
 <div id="environment-root-key">
-  ### Environment Root Key
+  ### Environment Root Key {#environment-root-key}
 </div>
 
 Environment Root Key は階層の最上位にあり、Tenant Master Key をラップすることで、Auth0 の外部で漏えいしたり改ざんされたりするのを防ぎます。
@@ -132,7 +132,7 @@ Auth0 では、Auth0 Cloud Service Provider に応じて、以下の algorithms 
 </Callout>
 
 <div id="tenant-master-keys">
-  ### Tenant Master Keys
+  ### Tenant Master Keys {#tenant-master-keys}
 </div>
 
 各テナントには、暗号化された Tenant Master Key が Auth0 Key Management Service に保存されており、これによって Namespace keys が暗号化されます。
@@ -144,7 +144,7 @@ Tenant Master Key の暗号化に使用されるアルゴリズムは AES256 GCM
 </Callout>
 
 <div id="namespace-keys">
-  ### Namespace Keys
+  ### Namespace Keys {#namespace-keys}
 </div>
 
 Namespace Keys は、テナント内で異なる用途に使われる暗号化キーを分離するためのものです。Namespace Keys の数と用途は Auth0 によって内部的に設定されており、カスタマイズすることはできません。
@@ -154,7 +154,7 @@ Namespace Keys の暗号化と復号には、Tenant Master Key へのアクセ�
 Namespace Keys は Auth0 Key Management Service 内にあり、AES256 GCM アルゴリズムで暗号化されています。
 
 <div id="data-encryption-keys">
-  ### データ暗号化キー
+  ### データ暗号化キー {#data-encryption-keys}
 </div>
 
 Auth0 Key Management Service は、後続のデータ暗号化リクエストに対応するために、異なるデータ暗号化キーを安全に生成します。Auth0 Key Management Service は、新しいデータ暗号化キーを定期的に発行することで、セキュリティとパフォーマンスを最適化します。

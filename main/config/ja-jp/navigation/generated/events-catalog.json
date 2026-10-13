@@ -2,7 +2,7 @@
   "pages": [
     "docs/ja-jp/events",
     {
-      "group": "グループ",
+      "group": "Group",
       "pages": [
         "docs/ja-jp/events/group/group.created",
         "docs/ja-jp/events/group/group.deleted",
@@ -12,7 +12,7 @@
       ]
     },
     {
-      "group": "組織",
+      "group": "Organization",
       "pages": [
         "docs/ja-jp/events/organization/organization.connection.added",
         "docs/ja-jp/events/organization/organization.connection.removed",
@@ -27,7 +27,7 @@
       ]
     },
     {
-      "group": "ユーザー",
+      "group": "User",
       "pages": [
         "docs/ja-jp/events/user/user.created",
         "docs/ja-jp/events/user/user.deleted",

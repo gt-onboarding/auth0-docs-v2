@@ -26,7 +26,7 @@ AUTH0_CLIENT_ID={yourClientId}`;
 このガイドでは、OAuth 2.0 の[認可コードフロー + PKCE](/docs/ja-jp/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce)を使用して、`auth0_flutter` SDK で Flutter の Windows デスクトップアプリにログイン、ログアウト、ユーザープロファイルの表示を追加する方法を説明します。
 
 <div id="get-started">
-  ## はじめる
+  ## はじめる {#get-started}
 </div>
 
 <Steps>
@@ -218,11 +218,11 @@ AUTH0_CLIENT_ID={yourClientId}`;
 ***
 
 <div id="troubleshoot-advanced-use">
-  ## トラブルシューティングと高度な使い方
+  ## トラブルシューティングと高度な使い方 {#troubleshoot-advanced-use}
 </div>
 
 <Accordion title="よくある問題と解決策">
-  ### ブラウザーは開くが、アプリがコールバックを受信しない
+  ### ブラウザーは開くが、アプリがコールバックを受信しない {#browser-opens-but-app-doesnt-receive-callback}
 
   **症状**: ブラウザーでの Auth0 login は成功するものの、アプリが資格情報を受け取りません。
 
@@ -234,7 +234,7 @@ AUTH0_CLIENT_ID={yourClientId}`;
   4. タスク マネージャーで古いインスタンスが残っていないことを確認します。
   5. `flutter clean && flutter run -d windows` を実行して、完全に再ビルドします。
 
-  ### 5 分後に認証がタイムアウトする
+  ### 5 分後に認証がタイムアウトする {#authentication-times-out-after-5-minutes}
 
   **症状**: Login が止まったように見え、最終的に失敗します。
 
@@ -245,7 +245,7 @@ AUTH0_CLIENT_ID={yourClientId}`;
   3. ファイアウォールまたはアンチウイルスが名前付きパイプをブロックしていないこと。
   4. 古いインスタンスをすべて終了し、再ビルドすること。
 
-  ### URI を転送せずに 2 つ目のアプリ インスタンスが起動する
+  ### URI を転送せずに 2 つ目のアプリ インスタンスが起動する {#second-app-instance-launches-instead-of-forwarding-uri}
 
   **症状**: 既存のアプリがコールバックを受信する代わりに、新しいウィンドウが開きます。
 
@@ -255,7 +255,7 @@ AUTH0_CLIENT_ID={yourClientId}`;
   2. `main.cpp` 内のミューテックス名が統一されていることを確認します。
   3. 次のコマンドで再ビルドします: `flutter clean && flutter run -d windows`。
 
-  ### WindowsWebAuthentication が見つからない
+  ### WindowsWebAuthentication が見つからない {#windowswebauthentication-not-found}
 
   **症状**: `windowsWebAuthentication` を参照するコンパイル エラーが発生します。
 
@@ -268,7 +268,7 @@ AUTH0_CLIENT_ID={yourClientId}`;
 
   更新するには `flutter pub get` を実行します。
 
-  ### Callback URL の不一致エラー
+  ### Callback URL の不一致エラー {#callback-url-mismatch-error}
 
   **症状**: Auth0 から &quot;redirect&#95;uri&#95;mismatch&quot; エラーが返されます。
 
@@ -313,7 +313,7 @@ AUTH0_CLIENT_ID={yourClientId}`;
 ***
 
 <div id="next-steps">
-  ## 次のステップ
+  ## 次のステップ {#next-steps}
 </div>
 
 * [Auth0 Flutter SDK on GitHub](https://github.com/auth0/auth0-flutter) — ソースコードと Issue トラッカー。

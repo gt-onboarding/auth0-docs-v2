@@ -11,17 +11,17 @@ title: SAML IDプロバイダーとして ADFS を設定する
 4. 統合を有効にしてテストする。
 
 <div id="configure-adfs">
-  ## ADFS の構成
+  ## ADFS の構成 {#configure-adfs}
 </div>
 
 <div id="add-relying-party-trust">
-  ### 証明書利用者信頼の追加
+  ### 証明書利用者信頼の追加 {#add-relying-party-trust}
 </div>
 
 <Tooltip tip="Relying Party: ユーザーの認証を外部のアイデンティティプロバイダーに依存するエンティティ（サービスやアプリケーションなど）。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=relying+party">証明書利用者</Tooltip>信頼を追加する方法については、[https://docs.microsoft.com](https://docs.microsoft.com) の [証明書利用者信頼を作成する](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/operations/create-a-relying-party-trust) をご覧ください。
 
 <div id="create-using-federation-metadata">
-  #### フェデレーション メタデータを使用して作成する
+  #### フェデレーション メタデータを使用して作成する {#create-using-federation-metadata}
 </div>
 
 [フェデレーション メタデータを使用してクレーム対応の 証明書利用者信頼 を作成する (MSDN)](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/operations/create-a-relying-party-trust#to-create-a-claims-aware-relying-party-trust-using-federation-metadata) の手順に従ってください。手順 4 の **Federation metadata address** に入力する URL は、次のいずれかの形式にする必要があります。
@@ -39,7 +39,7 @@ JP: `https://{yourTenantName}.jp.auth0.com/samlp/metadata?connection=CONNECTION_
 証明書利用者信頼 の作成が完了したら、[次のセクションに進んでください](#edit-claim-issuance-policy)。
 
 <div id="create-manually">
-  #### 手動で作成する
+  #### 手動で作成する {#create-manually}
 </div>
 
 1. ADFS のインスタンスを起動し、**Add Relying Party Trust** ウィザードを開始します。
@@ -54,7 +54,7 @@ JP: `https://{yourTenantName}.jp.auth0.com/samlp/metadata?connection=CONNECTION_
 10. **Configure claims issuance policy for this application** チェックボックスが選択されていることを確認し、**Close** をクリックします。
 
 <div id="edit-claim-issuance-policy">
-  ### クレーム発行ポリシーの編集
+  ### クレーム発行ポリシーの編集 {#edit-claim-issuance-policy}
 </div>
 
 **Add Relying Party Trust** ウィザードを閉じると、**Edit Claim Issuance Policy** ウィンドウが表示されます。
@@ -78,7 +78,7 @@ JP: `https://{yourTenantName}.jp.auth0.com/samlp/metadata?connection=CONNECTION_
 7. **Edit Claim Issuance Policy** ウィンドウで **Apply** をクリックします。これでこのウィンドウを閉じることができます。
 
 <div id="export-signing-certificate">
-  ### 署名証明書のエクスポート
+  ### 署名証明書のエクスポート {#export-signing-certificate}
 </div>
 
 最後に、Auth0 にアップロードするために、ADFS コンソールから署名証明書をエクスポートする必要があります。
@@ -90,7 +90,7 @@ JP: `https://{yourTenantName}.jp.auth0.com/samlp/metadata?connection=CONNECTION_
 5. 証明書の設定が正しいことを確認し、**Finish** をクリックします。
 
 <div id="create-saml-connection-with-auth0-as-service-provider">
-  ## Auth0 をサービスプロバイダーとして SAML 接続を作成する
+  ## Auth0 をサービスプロバイダーとして SAML 接続を作成する {#create-saml-connection-with-auth0-as-service-provider}
 </div>
 
 1. [Auth0 をサービスプロバイダーとして使用する](/docs/ja-jp/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-service-provider)SAML 接続の作成チュートリアルに従います。指示が表示されたら、ADFS からエクスポートした署名証明書をアップロードします。
@@ -102,7 +102,7 @@ JP: `https://{yourTenantName}.jp.auth0.com/samlp/metadata?connection=CONNECTION_
 | ------ | --- |
 
 <div id="edit-relying-party-trust">
-  ## 証明書利用者信頼 の編集
+  ## 証明書利用者信頼 の編集 {#edit-relying-party-trust}
 </div>
 
 1. ADFS コンソールで、左側のナビゲーションペインから **ADFS &gt; Relying Party Trusts** に移動します。先ほど作成した 証明書利用者信頼 を選択し、**Properties** (右側のナビゲーションペインにあります) をクリックします。
@@ -112,7 +112,7 @@ JP: `https://{yourTenantName}.jp.auth0.com/samlp/metadata?connection=CONNECTION_
 5. **OK** をクリックします。最後に、**Apply** をクリックして Properties ウィンドウを閉じます.
 
 <div id="enable-sign-requests-optional">
-  ## 署名リクエストを有効にする (任意)
+  ## 署名リクエストを有効にする (任意) {#enable-sign-requests-optional}
 </div>
 
 必要に応じて、ADFS サーバーに送信する SAML リクエストに署名できます。
@@ -123,7 +123,7 @@ JP: `https://{yourTenantName}.jp.auth0.com/samlp/metadata?connection=CONNECTION_
 4. ADFS に戻り、Relying Party のプロパティダイアログの **Signatures** タブから、ダウンロードした証明書を読み込みます。
 
 <div id="enable-and-test-the-integration">
-  ## 統合を有効にしてテストする
+  ## 統合を有効にしてテストする {#enable-and-test-the-integration}
 </div>
 
 統合をテストする前に、次の手順が完了していることを確認してください。

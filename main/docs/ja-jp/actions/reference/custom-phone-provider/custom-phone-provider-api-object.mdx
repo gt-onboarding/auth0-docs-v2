@@ -13,13 +13,13 @@ sidebarTitle: 'API オブジェクト'
 custom-phone-provider Actions トリガーの API オブジェクトには、以下が含まれます。
 
 <div id="apicache">
-  ## `api.cache`
+  ## `api.cache` {#apicache}
 </div>
 
 キャッシュを変更します。
 
 <div id="apicachedeletekey">
-  ### `api.cache.delete(key)`
+  ### `api.cache.delete(key)` {#apicachedeletekey}
 </div>
 
 指定されたキーにキャッシュ値のレコードが存在する場合は、そのレコードを削除します。
@@ -33,7 +33,7 @@ custom-phone-provider Actions トリガーの API オブジェクトには、以
 </Expandable>
 
 <div id="apicachegetkey">
-  ### `api.cache.get(key)`
+  ### `api.cache.get(key)` {#apicachegetkey}
 </div>
 
 指定されたキーのキャッシュ値を表すレコードが存在する場合は、
@@ -49,7 +49,7 @@ custom-phone-provider Actions トリガーの API オブジェクトには、以
 </Expandable>
 
 <div id="apicachesetkey-value-options">
-  ### `api.cache.set(key, value, options)`
+  ### `api.cache.set(key, value, options)` {#apicachesetkey-value-options}
 </div>
 
 指定したキーに文字列値をキャッシュへ保存または更新します。
@@ -108,7 +108,7 @@ custom-phone-provider Actions トリガーの API オブジェクトには、以
 </Expandable>
 
 <div id="apinotification">
-  ## `api.notification`
+  ## `api.notification` {#apinotification}
 </div>
 
 通知イベントを再試行するか、破棄するかを指定します。
@@ -116,7 +116,7 @@ custom-phone-provider Actions トリガーの API オブジェクトには、以
 複数回呼び出された場合は、最後の呼び出しのみが考慮されます。
 
 <div id="apinotificationdropreason">
-  ### `api.notification.drop(reason)`
+  ### `api.notification.drop(reason)` {#apinotificationdropreason}
 </div>
 
 呼び出すと、通知イベントは復旧せずに失敗したものと見なされます。
@@ -132,7 +132,7 @@ custom-phone-provider Actions トリガーの API オブジェクトには、以
 </Expandable>
 
 <div id="apinotificationretryreason">
-  ### `api.notification.retry(reason)`
+  ### `api.notification.retry(reason)` {#apinotificationretryreason}
 </div>
 
 呼び出されると、この通知イベントは失敗として扱われますが、復旧可能です。

@@ -26,7 +26,7 @@
           "assign_membership_on_login": false,
           "attributes": [
             {
-              "description": "Nom d’utilisateur préféré",
+              "description": "Preferred Username",
               "is_extra": false,
               "is_missing": false,
               "is_required": true,
@@ -76,7 +76,7 @@
         "value": {
           "attributes": [
             {
-              "description": "Nom d’utilisateur préféré",
+              "description": "Preferred Username",
               "is_extra": false,
               "is_missing": false,
               "is_required": true,
@@ -287,11 +287,11 @@
               "name": "Example API",
               "scopes": [
                 {
-                  "description": "Accès en lecture aux données",
+                  "description": "Read access to data",
                   "value": "read:data"
                 },
                 {
-                  "description": "Accès en écriture aux données",
+                  "description": "Write access to data",
                   "value": "write:data"
                 }
               ]
@@ -301,7 +301,7 @@
               "name": "Another API",
               "scopes": [
                 {
-                  "description": "Gérer les ressources",
+                  "description": "Manage resources",
                   "value": "manage:resources"
                 }
               ]
@@ -322,7 +322,7 @@
         "value": {
           "attributes": [
             {
-              "description": "Nom d’utilisateur préféré",
+              "description": "Preferred Username",
               "is_extra": false,
               "is_missing": false,
               "is_required": true,
@@ -353,7 +353,7 @@
           "assign_membership_on_login": false,
           "attributes": [
             {
-              "description": "Nom d’utilisateur préféré",
+              "description": "Preferred Username",
               "is_extra": false,
               "is_missing": false,
               "is_required": true,
@@ -469,7 +469,7 @@
         "value": {
           "roles": [
             {
-              "description": "Administrateur de l’organisation",
+              "description": "Organization administrator",
               "id": "rol_BKW1BKIfBKd0BaI0",
               "name": "admin"
             },
@@ -521,12 +521,12 @@
         "value": {
           "roles": [
             {
-              "description": "Description de role1",
+              "description": "role1 description",
               "id": "rol_SO2j0sFo9NFa3F9w",
               "name": "role1"
             },
             {
-              "description": "Description de role2",
+              "description": "role2 description",
               "id": "rol_BO2j1sFo9NFa3F9w",
               "name": "role2"
             }
@@ -548,7 +548,7 @@
             {
               "app_type": "non_interactive",
               "client_id": "abc123def456",
-              "description": "Client machine à machine pour les services backend",
+              "description": "Machine-to-machine client for backend services",
               "grant_types": [
                 "client_credentials"
               ],
@@ -558,7 +558,7 @@
             {
               "app_type": "non_interactive",
               "client_id": "xyz789ghi012",
-              "description": "Un autre client machine à machine",
+              "description": "Another machine-to-machine client",
               "grant_types": [
                 "client_credentials"
               ],
@@ -592,7 +592,7 @@
               "assign_membership_on_login": false,
               "attributes": [
                 {
-                  "description": "Nom d’utilisateur préféré",
+                  "description": "Preferred Username",
                   "is_extra": false,
                   "is_missing": false,
                   "is_required": true,
@@ -632,7 +632,7 @@
               "assign_membership_on_login": false,
               "attributes": [
                 {
-                  "description": "Nom d’utilisateur préféré",
+                  "description": "Preferred Username",
                   "is_extra": false,
                   "is_missing": false,
                   "is_required": true,
@@ -768,12 +768,12 @@
           "next": "abc123",
           "roles": [
             {
-              "description": "Rôle d’administrateur avec accès complet",
+              "description": "Administrator role with full access",
               "id": "rol_BKI0BKI0BKI0BKI0",
               "name": "Admin"
             },
             {
-              "description": "Rôle d’utilisateur standard avec accès limité",
+              "description": "Standard user role with limited access",
               "id": "rol_BKI0BKI0BKI0BKI1",
               "name": "User"
             }
@@ -830,7 +830,7 @@
           "assign_membership_on_login": false,
           "attributes": [
             {
-              "description": "Nom d’utilisateur préféré",
+              "description": "Preferred Username",
               "is_extra": false,
               "is_missing": false,
               "is_required": true,
@@ -896,13 +896,13 @@
     },
     "headers": {
       "Retry-After": {
-        "description": "Le nombre de secondes que le client doit attendre avant d’effectuer une nouvelle requête.",
+        "description": "The number of seconds the client should wait before making a new request.",
         "schema": {
           "type": "integer"
         }
       },
       "X-Auth0-Error-Kind": {
-        "description": "Indicateur signalant que la limite de débit dépassée est une limite globale (par tenant).",
+        "description": "An indicator that the rate limit exceeded a is global (per tenant) limit.",
         "schema": {
           "enum": [
             "global-rate-limit"
@@ -911,19 +911,19 @@
         }
       },
       "X-RateLimit-Limit": {
-        "description": "Le nombre de requêtes autorisées dans la fenêtre actuelle de limite de débit.",
+        "description": "The number of allowed requests in the current rate limit window.",
         "schema": {
           "type": "integer"
         }
       },
       "X-RateLimit-Remaining": {
-        "description": "Le nombre de requêtes restantes dans la fenêtre actuelle de limite de débit.",
+        "description": "The number of remaining requests in the current rate limit window.",
         "schema": {
           "type": "integer"
         }
       },
       "X-RateLimit-Reset": {
-        "description": "L’horodatage Unix indiquant quand la fenêtre actuelle de limite de débit est réinitialisée.",
+        "description": "The Unix timestamp indicating when the current rate limit window resets.",
         "schema": {
           "type": "integer"
         }
@@ -931,7 +931,7 @@
     },
     "parameters": {
       "FieldsQueryParameter": {
-        "description": "Liste de champs séparés par des virgules à inclure ou à exclure dans le résultat (selon la valeur fournie pour include_fields). Laissez vide pour récupérer tous les champs.",
+        "description": "Comma-separated list of fields to include or exclude (based on value provided for include_fields) in the result. Leave empty to retrieve all fields.",
         "in": "query",
         "name": "fields",
         "required": false,
@@ -958,7 +958,7 @@
         }
       },
       "IncludeFieldsQueryParameter": {
-        "description": "Indique si les champs spécifiés doivent être inclus (true) ou exclus (false). La valeur par défaut est true",
+        "description": "Whether specified fields are to be included (true) or excluded (false). Defaults to true",
         "in": "query",
         "name": "include_fields",
         "required": false,
@@ -976,7 +976,7 @@
         }
       },
       "IsEnabledRequestQueryParameter": {
-        "description": "Indique si la liste de répertoires d’utilisateurs renvoyée est filtrée selon leur état d’activation.",
+        "description": "Whether the returned list of user stores are filtered on their enabled status.",
         "in": "query",
         "name": "is_enabled",
         "required": false,
@@ -985,7 +985,7 @@
         }
       },
       "MemberAccessLevelFilterQueryParameter": {
-        "description": "Lorsqu’il est présent, seules les connexions dont le niveau d’accès des membres de l’organisation correspond à l’une des valeurs fournies sont renvoyées. Les valeurs acceptées sont full, limited, readonly et none.",
+        "description": "When present, only connections whose Organization Member Access Level matches one of the provided values are returned. Accepted values are full, limited, readonly and none.",
         "in": "query",
         "name": "member_access_level",
         "required": false,
@@ -998,7 +998,7 @@
         }
       },
       "MemberInvitationFieldsQueryParameter": {
-        "description": "Liste de champs séparés par des virgules à inclure ou à exclure dans le résultat (selon la valeur fournie pour include_fields). Laissez vide pour récupérer tous les champs. Remarque : vous ne pouvez pas filtrer sur ticket_id, et cette valeur ne sera renvoyée que si les champs ne sont pas filtrés.",
+        "description": "Comma-separated list of fields to include or exclude (based on value provided for include_fields) in the result. Leave empty to retrieve all fields. Note: you cannot filter on ticket_id and this value will only be returned when fields are not filtered.",
         "in": "query",
         "name": "fields",
         "required": false,
@@ -1010,7 +1010,7 @@
         }
       },
       "NameFilterQueryParameter": {
-        "description": "Filtre facultatif sur le nom (insensible à la casse).",
+        "description": "An optional filter on the name (case-insensitive).",
         "in": "query",
         "name": "name",
         "required": false,
@@ -1021,7 +1021,7 @@
         }
       },
       "OrgClientIdPathParameter": {
-        "description": "L’ID du client",
+        "description": "The ID of the client",
         "in": "path",
         "name": "client_id",
         "required": true,
@@ -1054,7 +1054,7 @@
         }
       },
       "PaginationFromQueryParameter": {
-        "description": "Curseur facultatif à partir duquel commencer la sélection (exclusif).",
+        "description": "An optional cursor from which to start the selection (exclusive).",
         "in": "query",
         "name": "from",
         "required": false,
@@ -1065,7 +1065,7 @@
         }
       },
       "PaginationTakeQueryParameter": {
-        "description": "Nombre de résultats par page. La valeur par défaut est 50.",
+        "description": "Number of results per page. Defaults to 50.",
         "in": "query",
         "name": "take",
         "required": false,
@@ -1077,7 +1077,7 @@
         }
       },
       "SortQueryParameter": {
-        "description": "Champ à utiliser pour le tri. Utilisez field:order, où order vaut 1 pour l’ordre croissant et -1 pour l’ordre décroissant. La valeur par défaut est created_at:-1",
+        "description": "Field to sort by. Use field:order where order is 1 for ascending and -1 for descending. Defaults to created_at:-1",
         "in": "query",
         "name": "sort",
         "required": false,
@@ -1088,7 +1088,7 @@
         }
       },
       "UserPermissionsRequestQueryParameter": {
-        "description": "Liste de permissions séparées par des virgules pour vérifier l’accès de l’utilisateur.",
+        "description": "Comma-separated list of permissions to confirm the user's access.",
         "in": "query",
         "name": "permissions",
         "required": true,
@@ -1286,7 +1286,7 @@
     },
     "responses": {
       "AssignOrganizationMemberRolesResponse": {
-        "description": "Le ou les rôles ont été attribués au membre avec succès.",
+        "description": "Role(s) successfully assigned to member.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1328,7 +1328,7 @@
             }
           }
         },
-        "description": "Corps de la requête invalide. Le message varie selon la cause."
+        "description": "Invalid request body. The message will vary depending on the cause."
       },
       "ClientErrorConfigConflictResponse": {
         "content": {
@@ -1343,7 +1343,7 @@
             }
           }
         },
-        "description": "Configuration du serveur manquante ou invalide, contactez l’administrateur de tenant."
+        "description": "Missing or invalid server configuration, contact tenant admin."
       },
       "ClientErrorDomainAssociationConflictResponse": {
         "content": {
@@ -1358,7 +1358,7 @@
             }
           }
         },
-        "description": "Le domaine est déjà associé à ce fournisseur d’identité."
+        "description": "Domain is already associated with this identity provider."
       },
       "ClientErrorDomainConflictResponse": {
         "content": {
@@ -1373,7 +1373,7 @@
             }
           }
         },
-        "description": "Le nom de domaine existe déjà."
+        "description": "Domain name already exists."
       },
       "ClientErrorInsufficientScopeResponse": {
         "content": {
@@ -1388,7 +1388,7 @@
             }
           }
         },
-        "description": "Scope insuffisant."
+        "description": "Insufficient scope."
       },
       "ClientErrorNotFoundOrgOrClientResponse": {
         "content": {
@@ -1406,7 +1406,7 @@
             }
           }
         },
-        "description": "Ressource introuvable."
+        "description": "Resource not found."
       },
       "ClientErrorNotFoundOrgOrIdpResponse": {
         "content": {
@@ -1424,7 +1424,7 @@
             }
           }
         },
-        "description": "Ressource introuvable."
+        "description": "Resource not found."
       },
       "ClientErrorNotFoundOrganizationResponse": {
         "content": {
@@ -1439,7 +1439,7 @@
             }
           }
         },
-        "description": "Organisation introuvable."
+        "description": "Organization not found."
       },
       "ClientErrorTooManyRequestsResponse": {
         "content": {
@@ -1454,7 +1454,7 @@
             }
           }
         },
-        "description": "Trop de requêtes. Vérifiez les en-têtes X-RateLimit-Limit, X-RateLimit-Remaining et X-RateLimit-Reset.",
+        "description": "Too many requests. Check the X-RateLimit-Limit, X-RateLimit-Remaining and X-RateLimit-Reset headers.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1486,7 +1486,7 @@
             }
           }
         },
-        "description": "Non autorisé : jeton manquant, invalide ou expiré."
+        "description": "Unauthorized: token missing, invalid or expired."
       },
       "CreateClientGrantResponse": {
         "content": {
@@ -1496,7 +1496,7 @@
             }
           }
         },
-        "description": "L’autorisation du client a été créée avec succès.",
+        "description": "Client grant successfully created.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1523,7 +1523,7 @@
             }
           }
         },
-        "description": "Client créé avec succès.",
+        "description": "Client successfully created.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1555,7 +1555,7 @@
             }
           }
         },
-        "description": "La configuration de provisionnement a été créée avec succès.",
+        "description": "Provisioning configuration successfully created.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1587,7 +1587,7 @@
             }
           }
         },
-        "description": "Fournisseur d’identité créé avec succès.",
+        "description": "Identity provider successfully created.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1619,7 +1619,7 @@
             }
           }
         },
-        "description": "Le domaine a été associé au fournisseur d’identité avec succès.",
+        "description": "Domain successfully associated with identity provider.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1651,7 +1651,7 @@
             }
           }
         },
-        "description": "Le jeton SCIM de provisionnement a été créé avec succès.",
+        "description": "Provisioning SCIM token successfully created.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1683,7 +1683,7 @@
             }
           }
         },
-        "description": "Créer des invitations de membres pour une organisation.",
+        "description": "Create Member Invitations for an Organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1715,7 +1715,7 @@
             }
           }
         },
-        "description": "Le domaine a été créé avec succès pour l’organisation.",
+        "description": "Domain successfully created for organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1735,7 +1735,7 @@
         }
       },
       "DeleteClientResponse": {
-        "description": "Client supprimé avec succès.",
+        "description": "Client successfully deleted.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1755,7 +1755,7 @@
         }
       },
       "DeleteIdentityProviderResponse": {
-        "description": "Le fournisseur d’identité a bien été supprimé de l’organisation.",
+        "description": "The identity provider was successfully removed from the organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1775,7 +1775,7 @@
         }
       },
       "DeleteIdpDomainResponse": {
-        "description": "Le domaine a bien été supprimé du fournisseur d’identité.",
+        "description": "The domain was successfully removed from the identity provider.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1795,7 +1795,7 @@
         }
       },
       "DeleteIdpProvisioningConfigResponse": {
-        "description": "La configuration de provisionnement a bien été supprimée du fournisseur d’identité.",
+        "description": "The Provisioning config was successfully removed from the identity provider.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1815,7 +1815,7 @@
         }
       },
       "DeleteIdpProvisioningScimTokenResponse": {
-        "description": "Le jeton SCIM de provisionnement a été supprimé avec succès.",
+        "description": "The Provisioning SCIM token was successfully deleted.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1835,7 +1835,7 @@
         }
       },
       "DeleteMemberInvitationResponse": {
-        "description": "L’invitation de membre a été supprimée avec succès.",
+        "description": "Member invitation was successfully deleted.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1855,7 +1855,7 @@
         }
       },
       "DeleteMemberInvitationsResponse": {
-        "description": "Les invitations destinées aux membres ont été supprimées avec succès.",
+        "description": "Member invitations were successfully deleted.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1875,7 +1875,7 @@
         }
       },
       "DeleteMyOrganizationResponse": {
-        "description": "L’organisation a été supprimée avec succès.",
+        "description": "The organization was successfully deleted.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1895,7 +1895,7 @@
         }
       },
       "DeleteOrganizationDomainResponse": {
-        "description": "Le domaine a bien été supprimé de l’organisation.",
+        "description": "The domain was successfully removed from the organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1915,7 +1915,7 @@
         }
       },
       "DeleteOrganizationMembershipsResponse": {
-        "description": "Les abonnements de l’organisation ont été supprimés avec succès.",
+        "description": "The Organization memberships were removed successfully.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1935,7 +1935,7 @@
         }
       },
       "DetachIdpProviderResponse": {
-        "description": "Le fournisseur d’identité a bien été dissocié de l’organisation.",
+        "description": "The identity provider was successfully detached from the organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1967,7 +1967,7 @@
             }
           }
         },
-        "description": "Les API autorisées ont été récupérées avec succès.",
+        "description": "Allowed APIs successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1999,7 +1999,7 @@
             }
           }
         },
-        "description": "La configuration a été récupérée avec succès.",
+        "description": "Configuration successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2031,7 +2031,7 @@
             }
           }
         },
-        "description": "La configuration de provisionnement a été récupérée avec succès.",
+        "description": "Provisioning config successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2063,7 +2063,7 @@
             }
           }
         },
-        "description": "Fournisseur d’identité récupéré avec succès.",
+        "description": "Identity provider successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2095,7 +2095,7 @@
             }
           }
         },
-        "description": "La configuration du fournisseur d’identité a été récupérée avec succès.",
+        "description": "Identity provider configuration successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2127,7 +2127,7 @@
             }
           }
         },
-        "description": "Obtenir une invitation de membre pour une organisation par ID.",
+        "description": "Get Member Invitation for an Organization by Id.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2159,7 +2159,7 @@
             }
           }
         },
-        "description": "Les rôles attribués à l’invitation destinée au membre ont été récupérés avec succès.",
+        "description": "Retrieved the roles assigned to the member invitation successfully.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2191,7 +2191,7 @@
             }
           }
         },
-        "description": "Les détails de l’organisation ont été récupérés avec succès.",
+        "description": "Organization details successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2223,7 +2223,7 @@
             }
           }
         },
-        "description": "Le domaine de l’organisation a été récupéré avec succès.",
+        "description": "Organization domain successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2255,7 +2255,7 @@
             }
           }
         },
-        "description": "Récupérer un membre de l’organisation.",
+        "description": "Retrieve a member of the organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2287,7 +2287,7 @@
             }
           }
         },
-        "description": "Les permissions de l’utilisateur ont été récupérées avec succès.",
+        "description": "User permissions successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2319,7 +2319,7 @@
             }
           }
         },
-        "description": "Clients récupérés avec succès.",
+        "description": "Clients successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2351,7 +2351,7 @@
             }
           }
         },
-        "description": "Lister les fournisseurs d’identité pour un domaine d’organisation.",
+        "description": "List identity providers for an organization domain.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2383,7 +2383,7 @@
             }
           }
         },
-        "description": "Liste des fournisseurs d’identité récupérée avec succès.",
+        "description": "List of identity providers successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2415,7 +2415,7 @@
             }
           }
         },
-        "description": "Lister les jetons SCIM de provisionnement pour un fournisseur d’identité.",
+        "description": "List Provisioning SCIM tokens for an identity provider.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2447,7 +2447,7 @@
             }
           }
         },
-        "description": "Lister les invitations de membres pour une organisation.",
+        "description": "List Members Invitations for an Organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2479,7 +2479,7 @@
             }
           }
         },
-        "description": "Lister les domaines d’une organisation.",
+        "description": "List domains for an organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2511,7 +2511,7 @@
             }
           }
         },
-        "description": "Les rôles du membre ont été récupérés avec succès.",
+        "description": "Retrieved memeber roles successfully.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2543,7 +2543,7 @@
             }
           }
         },
-        "description": "Lister les membres d’une organisation.",
+        "description": "List members for an organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2575,7 +2575,7 @@
             }
           }
         },
-        "description": "Récupérer les rôles pour l’organisation.",
+        "description": "Retrieve roles for the organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2607,7 +2607,7 @@
             }
           }
         },
-        "description": "Récupérez les répertoires d’utilisateurs d’une organisation.",
+        "description": "Retrieve user stores for an Organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2639,7 +2639,7 @@
             }
           }
         },
-        "description": "La vérification du domaine de l’organisation a été lancée avec succès.",
+        "description": "Organization domain verification successfully started.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2659,7 +2659,7 @@
         }
       },
       "UnassignOrganizationMemberRolesResponse": {
-        "description": "Le ou les rôles ont été retirés au membre avec succès.",
+        "description": "Role(s) successfully unassigned from member.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2691,7 +2691,7 @@
             }
           }
         },
-        "description": "Le fournisseur d’identité a été mis à jour avec succès.",
+        "description": "Identity provider successfully updated.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2723,7 +2723,7 @@
             }
           }
         },
-        "description": "Les détails de l’organisation ont été récupérés avec succès.",
+        "description": "Organization details successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2755,7 +2755,7 @@
             }
           }
         },
-        "description": "Corps de la requête invalide. Le message varie selon la cause."
+        "description": "Invalid request body. The message will vary depending on the cause."
       }
     },
     "schemas": {
@@ -2763,17 +2763,17 @@
         "additionalProperties": false,
         "properties": {
           "identifier": {
-            "description": "Identifiant unique de l’API. Cette valeur sera utilisée comme paramètre audience dans les demandes d’autorisation.",
+            "description": "Unique identifier for the API. This value will be used as the audience parameter on authorization calls.",
             "type": "string"
           },
           "name": {
-            "description": "Un nom convivial pour l’API. Les caractères suivants ne sont pas autorisés < >",
+            "description": "A friendly name for the API. The following characters are not allowed < >",
             "maxLength": 200,
             "pattern": "^[^<>]+$",
             "type": "string"
           },
           "scopes": {
-            "description": "Les scopes disponibles pour cette API.",
+            "description": "The scopes available for this API.",
             "items": {
               "$ref": "#/components/schemas/AllowedApiScope"
             },
@@ -2791,11 +2791,11 @@
         "additionalProperties": false,
         "properties": {
           "description": {
-            "description": "Une description du scope.",
+            "description": "A description of the scope.",
             "type": "string"
           },
           "value": {
-            "description": "La valeur du scope.",
+            "description": "The scope value.",
             "type": "string"
           }
         },
@@ -2808,27 +2808,27 @@
       "BaseUserAttributeMapItem": {
         "properties": {
           "description": {
-            "description": "La description de l’attribut utilisateur.",
+            "description": "The description of the user attribute.",
             "type": "string"
           },
           "is_extra": {
-            "description": "Indique si cet attribut ne fait pas partie du schéma défini par l’administrateur, mais est fourni par la source. La propriété sera supprimée lors d’une opération d’actualisation.",
+            "description": "Indicates whether this attribute is not part of the admin defined schema but is provided by the source. The property will be removed when a refresh operation is performed.",
             "type": "boolean"
           },
           "is_missing": {
-            "description": "Indique si cet attribut est attendu, mais n’est pas fourni par le schéma défini par l’administrateur. La propriété sera ajoutée lors d’une opération d’actualisation.",
+            "description": "Indicates whether this attribute is expected but not provided by the admin defined schema. The property will be added when a refresh operation is performed.",
             "type": "boolean"
           },
           "is_required": {
-            "description": "Indique si l’attribut est requis.",
+            "description": "Indicates if the attribute is required.",
             "type": "boolean"
           },
           "label": {
-            "description": "Le libellé de l’attribut utilisateur.",
+            "description": "The label of the user attribute.",
             "type": "string"
           },
           "user_attribute": {
-            "description": "Le nom de l’attribut utilisateur.",
+            "description": "The name of the user attribute.",
             "type": "string"
           }
         },
@@ -2840,38 +2840,38 @@
         "type": "object"
       },
       "ClientAppTypeEnum": {
-        "description": "Le type d’application que représente ce client",
+        "description": "The type of application this client represents",
         "enum": [
           "non_interactive"
         ],
         "type": "string"
       },
       "ClientDescription": {
-        "description": "Description en texte libre de ce client (longueur maximale : 140 caractères).",
+        "description": "Free text description of this client (max length: 140 characters).",
         "maxLength": 140,
         "type": "string"
       },
       "ClientGrantTypeEnum": {
-        "description": "Type d’autorisation OAuth 2.0",
+        "description": "OAuth 2.0 grant type",
         "enum": [
           "client_credentials"
         ],
         "type": "string"
       },
       "ClientGrantTypes": {
-        "description": "Liste des types d’autorisation pris en charge pour cette application. Accepte uniquement ['client_credentials']",
+        "description": "List of grant types supported for this application. Only accepts ['client_credentials']",
         "items": {
           "$ref": "#/components/schemas/ClientGrantTypeEnum"
         },
         "type": "array"
       },
       "ClientId": {
-        "description": "ID de ce client.",
+        "description": "ID of this client.",
         "type": "string"
       },
       "ClientJwtAlgEnum": {
         "default": "HS256",
-        "description": "Algorithme utilisé pour signer les JWT.",
+        "description": "Algorithm used to sign JWTs.",
         "enum": [
           "HS256",
           "RS256",
@@ -2887,26 +2887,26 @@
             "$ref": "#/components/schemas/ClientJwtAlgEnum"
           },
           "lifetime_in_seconds": {
-            "description": "Nombre de secondes pendant lesquelles le JWT sera valide",
+            "description": "Number of seconds the JWT will be valid",
             "minimum": 0,
             "type": "number"
           },
           "secret_encoded": {
-            "description": "Indique si le secret du client est encodé en base64",
+            "description": "Whether the client secret is base64 encoded",
             "type": "boolean"
           }
         },
         "type": "object"
       },
       "ClientName": {
-        "description": "Nom de ce client (longueur minimale : 1 caractère, n’autorise pas < ni >).",
+        "description": "Name of this client (min length: 1 character, does not allow < or >).",
         "maxLength": 50,
         "minLength": 1,
         "pattern": "^[^<>]+$",
         "type": "string"
       },
       "ClientTokenEndpointAuthMethodEnum": {
-        "description": "Méthode d’authentification pour le point de terminaison de jeton",
+        "description": "Authentication method for the token endpoint",
         "enum": [
           "client_secret_post",
           "client_secret_basic",
@@ -2918,15 +2918,15 @@
         "additionalProperties": false,
         "properties": {
           "audience": {
-            "description": "L’audience (identifiant d’API) de cette autorisation du client.",
+            "description": "The audience (API identifier) of this client grant.",
             "type": "string"
           },
           "client_id": {
-            "description": "ID du client.",
+            "description": "ID of the client.",
             "type": "string"
           },
           "scope": {
-            "description": "Portées autorisées pour cette autorisation du client.",
+            "description": "Scopes allowed for this client grant.",
             "items": {
               "maxLength": 280,
               "minLength": 1,
@@ -2952,24 +2952,24 @@
         "additionalProperties": false,
         "properties": {
           "audience": {
-            "description": "L’audience (identifiant d’API) de cette autorisation du client.",
+            "description": "The audience (API identifier) of this client grant.",
             "type": "string"
           },
           "client_id": {
-            "description": "ID du client.",
+            "description": "ID of the client.",
             "type": "string"
           },
           "created_at": {
-            "description": "La date et l’heure de création de l’autorisation du client au format ISO 8601.",
+            "description": "The ISO 8601 date and time when the client grant was created.",
             "format": "date-time",
             "type": "string"
           },
           "id": {
-            "description": "ID de l’autorisation du client.",
+            "description": "ID of the client grant.",
             "type": "string"
           },
           "scope": {
-            "description": "Les portées autorisées pour cette autorisation du client.",
+            "description": "The scopes allowed for this client grant.",
             "items": {
               "maxLength": 280,
               "minLength": 1,
@@ -3031,11 +3031,11 @@
             "$ref": "#/components/schemas/ClientId"
           },
           "client_secret": {
-            "description": "Secret du client (retourné UNIQUEMENT à la création, jamais par la suite)",
+            "description": "Client secret (ONLY returned on creation, never again)",
             "type": "string"
           },
           "created_at": {
-            "description": "Horodatage de création du client",
+            "description": "Timestamp when the client was created",
             "format": "date-time",
             "type": "string"
           },
@@ -3055,7 +3055,7 @@
             "$ref": "#/components/schemas/ClientTokenEndpointAuthMethodEnum"
           },
           "updated_at": {
-            "description": "Horodatage de la dernière mise à jour du client",
+            "description": "Timestamp when the client was last updated",
             "format": "date-time",
             "type": "string"
           }
@@ -3129,7 +3129,7 @@
         "additionalProperties": false,
         "properties": {
           "token_lifetime": {
-            "description": "Durée de validité du jeton en secondes. Ne pas définir pour les jetons sans expiration.",
+            "description": "Lifetime of the token in seconds. Do not set for non-expiring tokens.",
             "exclusiveMinimum": 900,
             "type": "integer"
           }
@@ -3143,14 +3143,14 @@
         "additionalProperties": false,
         "properties": {
           "email": {
-            "description": "L’adresse courriel de la personne invitée.",
+            "description": "The invitee's email.",
             "format": "email",
             "maxLength": 320,
             "minLength": 1,
             "type": "string"
           },
           "roles": {
-            "description": "Liste des ID de rôles à associer à l’utilisateur.",
+            "description": "List of role IDs to associate with the user.",
             "items": {
               "$ref": "#/components/schemas/RoleId"
             },
@@ -3169,7 +3169,7 @@
         "additionalProperties": false,
         "properties": {
           "identity_provider_id": {
-            "description": "Identifiant du fournisseur d’identité. Au moins un des champs identity_provider_id ou user_store_id doit être fourni.",
+            "description": "Identity provider identifier. At least one of identity_provider_id or user_store_id must be provided.",
             "pattern": "^con_[A-Za-z0-9]{16}$",
             "type": "string"
           },
@@ -3186,7 +3186,7 @@
           },
           "ttl_sec": {
             "default": 604800,
-            "description": "Nombre de secondes pendant lesquelles l’invitation est valide avant d’expirer. S’il n’est pas précisé ou s’il est défini à 0, ce paramètre prend par défaut la valeur de 604800 secondes (7 jours). Valeur maximale : 2592000 secondes (30 jours).",
+            "description": "Number of seconds for which the invitation is valid before expiration. If unspecified or set to 0, this value defaults to 604800 seconds (7 days). Max value: 2592000 seconds (30 days).",
             "maximum": 2592000,
             "minimum": 0,
             "type": "integer"
@@ -3219,11 +3219,11 @@
         "$ref": "#/components/schemas/OrgDomain"
       },
       "CrossAppAccessResourceApp": {
-        "description": "Configuration de l’application de ressources pour l’accès interapplications.",
+        "description": "Cross-app access resource application configuration.",
         "properties": {
           "status": {
             "$ref": "#/components/schemas/CrossAppAccessResourceAppStatusEnum",
-            "description": "L’état de l’application de ressources pour l’accès interapplications."
+            "description": "The status of the cross-app access resource application."
           }
         },
         "required": [
@@ -3232,7 +3232,7 @@
         "type": "object"
       },
       "CrossAppAccessResourceAppStatusEnum": {
-        "description": "L’état de l’application de ressources pour l’accès interapplications.",
+        "description": "The status of the cross-app access resource application.",
         "enum": [
           "enabled",
           "disabled"
@@ -3280,7 +3280,7 @@
           {
             "properties": {
               "display_name": {
-                "description": "Nom du fournisseur d’identité utilisé sur l’écran de connexion.",
+                "description": "Identity provider name used on the login screen.",
                 "maxLength": 128,
                 "minLength": 1,
                 "type": "string"
@@ -3289,7 +3289,7 @@
                 "$ref": "#/components/schemas/IdpId"
               },
               "name": {
-                "description": "Le nom du fournisseur d’identité",
+                "description": "The name of the identity provider",
                 "maxLength": 128,
                 "minLength": 1,
                 "type": "string"
@@ -3307,19 +3307,19 @@
         "additionalProperties": false,
         "properties": {
           "detail": {
-            "description": "Description détaillée de l’erreur.",
+            "description": "A detailed description of the error.",
             "type": "string"
           },
           "status": {
-            "description": "Le code d’état HTTP résultant de la requête.",
+            "description": "The HTTP status code result of the request.",
             "type": "integer"
           },
           "title": {
-            "description": "Brève description de l’erreur.",
+            "description": "A brief description of the error.",
             "type": "string"
           },
           "type": {
-            "description": "URI qui décrit l’erreur.",
+            "description": "A URI that describes the error.",
             "format": "uri",
             "type": "string"
           }
@@ -3351,7 +3351,7 @@
         "additionalProperties": false,
         "properties": {
           "allowed_strategies": {
-            "description": "Tableau des stratégies prises en charge",
+            "description": "Array of supported strategies",
             "items": {
               "$ref": "#/components/schemas/IdpStrategyEnum"
             },
@@ -3432,7 +3432,7 @@
         "additionalProperties": false,
         "properties": {
           "next": {
-            "description": "Curseur de pagination pour la page de résultats suivante",
+            "description": "Pagination cursor for the next page of results",
             "type": "string"
           },
           "roles": {
@@ -3548,7 +3548,7 @@
         "type": "object"
       },
       "IdentityProvidersConfigEnabledFeaturesEnum": {
-        "description": "Fonctionnalités activées pour le fournisseur d’identité",
+        "description": "The enabled features for the identity provider",
         "enum": [
           "provisioning",
           "universal_logout"
@@ -3557,14 +3557,14 @@
       },
       "IdentityProvidersConfigOrganization": {
         "additionalProperties": false,
-        "description": "La configuration de l’organisation pour les fournisseurs d’identité.",
+        "description": "The organization config for identity providers.",
         "properties": {
           "can_set_assign_membership_on_login": {
-            "description": "Si l’administrateur de l’organisation peut définir assign_membership_on_login",
+            "description": "If Org Admin can set assign_membership_on_login",
             "type": "boolean"
           },
           "can_set_show_as_button": {
-            "description": "Si l’administrateur de l’organisation peut définir show_as_button",
+            "description": "If Org Admin can set show_as_button",
             "type": "boolean"
           }
         },
@@ -3575,17 +3575,17 @@
         "type": "object"
       },
       "IdentityProvidersConfigProvisioningMethodsEnum": {
-        "description": "Méthode de provisionnement du fournisseur d’identité",
+        "description": "The provisioning method for the identity provider",
         "enum": [
           "scim"
         ],
         "type": "string"
       },
       "IdentityProvidersConfigStrategyBase": {
-        "description": "Configurations de stratégie des fournisseurs d’identité",
+        "description": "Identity providers strategy configs",
         "properties": {
           "enabled_features": {
-            "description": "Fonctionnalités activées pour un paramètre de substitution de la stratégie de profil des connexions.",
+            "description": "Enabled features for a connections profile strategy override.",
             "items": {
               "$ref": "#/components/schemas/IdentityProvidersConfigEnabledFeaturesEnum"
             },
@@ -3606,7 +3606,7 @@
         "type": "object"
       },
       "IdentityProvidersConfigStrategyOverride": {
-        "description": "Paramètres de substitution propres à la stratégie pour les fournisseurs d’identité",
+        "description": "Strategy-specific overrides for identity providers",
         "properties": {
           "adfs": {
             "$ref": "#/components/schemas/IdentityProviderConfigAdfs"
@@ -3639,7 +3639,7 @@
             "additionalProperties": false,
             "properties": {
               "adfs_server": {
-                "description": "Le paramètre adfs_server correspond à l’URL publique utilisée par les parties de confiance et les clients internes pour communiquer avec un serveur ADFS dans le cadre de l’authentification et de l’émission de jetons",
+                "description": "The adfs_server is the public-facing URL that relying parties and internal clients use to communicate with an ADFS server for authentication and token issuance",
                 "type": "string"
               }
             },
@@ -3653,7 +3653,7 @@
             "additionalProperties": false,
             "properties": {
               "fedMetadataXml": {
-                "description": "Dans ADFS, un fichier XML Federation Metadata est un document essentiel qui sert de référence pour établir une relation de confiance entre un serveur ADFS et d’autres parties de confiance qui souhaitent utiliser les informations d’identité fournies par ADFS.",
+                "description": "A Federation Metadata XML file in ADFS is a crucial document that serves as a blueprint for establishing trust between an ADFS server and other relying parties that want to consume identity information from ADFS.",
                 "type": "string"
               }
             },
@@ -3672,7 +3672,7 @@
             "additionalProperties": false,
             "properties": {
               "adfs_server": {
-                "description": "Le paramètre adfs_server correspond à l’URL publique utilisée par les parties de confiance et les clients internes pour communiquer avec un serveur ADFS dans le cadre de l’authentification et de l’émission de jetons",
+                "description": "The adfs_server is the public-facing URL that relying parties and internal clients use to communicate with an ADFS server for authentication and token issuance",
                 "type": "string"
               }
             },
@@ -3683,7 +3683,7 @@
             "additionalProperties": false,
             "properties": {
               "fedMetadataXml": {
-                "description": "Dans ADFS, un fichier XML Federation Metadata est un document essentiel qui sert de référence pour établir une relation de confiance entre un serveur ADFS et d’autres parties de confiance qui souhaitent utiliser les informations d’identité fournies par ADFS.",
+                "description": "A Federation Metadata XML file in ADFS is a crucial document that serves as a blueprint for establishing trust between an ADFS server and other relying parties that want to consume identity information from ADFS.",
                 "type": "string"
               }
             },
@@ -3702,7 +3702,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpAdfsOptionsRequest",
-                "description": "Options spécifiques au fournisseur d’identité."
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "adfs"
@@ -3715,7 +3715,7 @@
             "type": "object"
           }
         ],
-        "description": "Options spécifiques au fournisseur d’identité.",
+        "description": "Identity provider specific options.",
         "title": "IdP ADFS Request",
         "type": "object",
         "unevaluatedProperties": false
@@ -3729,7 +3729,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpAdfsOptionsResponse",
-                "description": "Options spécifiques au fournisseur d’identité."
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "adfs"
@@ -3742,7 +3742,7 @@
             "type": "object"
           }
         ],
-        "description": "Options spécifiques au fournisseur d’identité.",
+        "description": "Identity provider specific options.",
         "title": "IdP ADFS Response",
         "type": "object",
         "unevaluatedProperties": false
@@ -3756,7 +3756,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpAdfsOptionsRequest",
-                "description": "Options spécifiques au fournisseur d’identité.  Nécessite que access_level soit défini sur 'full'."
+                "description": "Identity provider specific options.  Requires access_level to be 'full'."
               }
             },
             "type": "object"
@@ -3775,17 +3775,17 @@
                 "readOnly": true
               },
               "assign_membership_on_login": {
-                "description": "Si true, l’utilisateur deviendra membre de l’organisation lors de la connexion.",
+                "description": "If true, the user will be made a member of the organization upon login.",
                 "type": "boolean"
               },
               "display_name": {
-                "description": "Nom du fournisseur d’identité utilisé sur l’écran de connexion.",
+                "description": "Identity provider name used on the login screen.",
                 "maxLength": 128,
                 "minLength": 1,
                 "type": "string"
               },
               "domains": {
-                "description": "Liste des domaines pour Home Realm Discovery (HRD)",
+                "description": "List of domains for Home Realm Discovery (HRD)",
                 "items": {
                   "type": "string"
                 },
@@ -3795,17 +3795,17 @@
                 "$ref": "#/components/schemas/IdpId"
               },
               "is_enabled": {
-                "description": "True si le fournisseur d’identité est activé pour l’organisation.",
+                "description": "True if the identity provider is enabled for the organization.",
                 "type": "boolean"
               },
               "name": {
-                "description": "Le nom du fournisseur d’identité",
+                "description": "The name of the identity provider",
                 "maxLength": 128,
                 "minLength": 1,
                 "type": "string"
               },
               "show_as_button": {
-                "description": "Permet d’afficher un bouton pour la connexion sur la page de connexion (nouvelle expérience seulement). Si false, elle pourra être utilisée uniquement par Home Realm Discovery (HRD).",
+                "description": "Enables showing a button for the connection in the login page (new experience only). If false, it will be usable only by Home Realm Discovery (HRD).",
                 "type": "boolean"
               },
               "strategy": {
@@ -3829,17 +3829,17 @@
                 "readOnly": true
               },
               "assign_membership_on_login": {
-                "description": "Si true, l’utilisateur deviendra membre de l’organisation lors de la connexion.",
+                "description": "If true, the user will be made a member of the organization upon login.",
                 "type": "boolean"
               },
               "display_name": {
-                "description": "Nom du fournisseur d’identité utilisé sur l’écran de connexion.",
+                "description": "Identity provider name used on the login screen.",
                 "maxLength": 128,
                 "minLength": 1,
                 "type": "string"
               },
               "domains": {
-                "description": "Liste des domaines pour Home Realm Discovery (HRD)",
+                "description": "List of domains for Home Realm Discovery (HRD)",
                 "items": {
                   "type": "string"
                 },
@@ -3849,11 +3849,11 @@
                 "$ref": "#/components/schemas/IdpId"
               },
               "is_enabled": {
-                "description": "True si le fournisseur d’identité est activé pour l’organisation.",
+                "description": "True if the identity provider is enabled for the organization.",
                 "type": "boolean"
               },
               "name": {
-                "description": "Le nom du fournisseur d’identité",
+                "description": "The name of the identity provider",
                 "maxLength": 128,
                 "type": [
                   "string",
@@ -3861,7 +3861,7 @@
                 ]
               },
               "show_as_button": {
-                "description": "Permet d’afficher un bouton pour la connexion sur la page de connexion (nouvelle expérience seulement). Si false, elle pourra être utilisée uniquement par Home Realm Discovery (HRD).",
+                "description": "Enables showing a button for the connection in the login page (new experience only). If false, it will be usable only by Home Realm Discovery (HRD).",
                 "type": "boolean"
               },
               "strategy": {
@@ -3876,7 +3876,7 @@
         ]
       },
       "IdpConnectionDeletionBehaviorEnum": {
-        "description": "Indique si la suppression d’une connexion est toujours autorisée, ou seulement lorsque la connexion n’a aucun utilisateur associé",
+        "description": "Specifies whether deletion of a connection is always allowed, or only when the connection has no associated users",
         "enum": [
           "allow",
           "allow_if_empty"
@@ -3887,19 +3887,19 @@
         "additionalProperties": false,
         "properties": {
           "client_id": {
-            "description": "Identifiant unique de votre application Google enregistrée.",
+            "description": "Unique identifier for your registered Google application.",
             "type": "string"
           },
           "client_secret": {
-            "description": "Chaîne utilisée pour obtenir l’accès à votre application Google enregistrée",
+            "description": "String used to gain access to your registered Google application",
             "type": "string"
           },
           "domain": {
-            "description": "Nom de domaine Google Workspace de votre organisation.",
+            "description": "Google Workspace domain name for your organization.",
             "type": "string"
           },
           "icon_url": {
-            "description": "URL pointant vers un fichier image représentant votre application cliente.",
+            "description": "A URL pointing to an image file that represents your client application.",
             "type": "string"
           }
         },
@@ -3914,15 +3914,15 @@
         "additionalProperties": false,
         "properties": {
           "client_id": {
-            "description": "Identifiant unique de votre application Google enregistrée.",
+            "description": "Unique identifier for your registered Google application.",
             "type": "string"
           },
           "domain": {
-            "description": "Nom de domaine Google Workspace de votre organisation.",
+            "description": "Google Workspace domain name for your organization.",
             "type": "string"
           },
           "icon_url": {
-            "description": "URL pointant vers un fichier image représentant votre application cliente.",
+            "description": "A URL pointing to an image file that represents your client application.",
             "type": "string"
           }
         },
@@ -3937,7 +3937,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpGoogleAppsOptionsRequest",
-                "description": "Options spécifiques au fournisseur d’identité."
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "google-apps"
@@ -3950,7 +3950,7 @@
             "type": "object"
           }
         ],
-        "description": "Options spécifiques au fournisseur d’identité.",
+        "description": "Identity provider specific options.",
         "title": "IdP Google Workforce Request",
         "type": "object",
         "unevaluatedProperties": false
@@ -3964,7 +3964,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpGoogleAppsOptionsResponse",
-                "description": "Options spécifiques au fournisseur d’identité."
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "google-apps"
@@ -3977,7 +3977,7 @@
             "type": "object"
           }
         ],
-        "description": "Options spécifiques au fournisseur d’identité.",
+        "description": "Identity provider specific options.",
         "title": "IdP Google Workforce Response",
         "type": "object",
         "unevaluatedProperties": false
@@ -3991,19 +3991,19 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpGoogleAppsOptionsRequest",
-                "description": "Options spécifiques au fournisseur d’identité.  Nécessite que access_level soit défini sur 'full'."
+                "description": "Identity provider specific options.  Requires access_level to be 'full'."
               }
             },
             "type": "object"
           }
         ],
-        "description": "Options spécifiques au fournisseur d’identité.  Nécessite que access_level soit défini sur 'full'.",
+        "description": "Identity provider specific options.  Requires access_level to be 'full'.",
         "title": "IdP Google Workforce Update Request",
         "type": "object",
         "unevaluatedProperties": false
       },
       "IdpId": {
-        "description": "Identifiant du fournisseur d’identité.",
+        "description": "Identity provider identifier.",
         "pattern": "^con_[A-Za-z0-9]{16}$",
         "readOnly": true,
         "type": "string"
@@ -4069,14 +4069,14 @@
         ]
       },
       "IdpMinimalResponse": {
-        "description": "Structure minimale du fournisseur d’identité renvoyée dans les réponses de liste pour les connexions que l’administrateur de l’Organisation ne peut pas configurer (access_level none), mais qu’il peut tout de même afficher grâce à leur niveau d’accès des membres de l’Organisation. Les champs de configuration des connexions sont intentionnellement omis.",
+        "description": "Minimal identity provider shape returned in list responses for connections the Organization Administrator cannot configure (access_level none) but can still surface via their Organization Member Access Level. Connection configuration fields are intentionally omitted.",
         "properties": {
           "access_level": {
             "$ref": "#/components/schemas/OrganizationAccessLevelEnum",
             "readOnly": true
           },
           "display_name": {
-            "description": "Nom du fournisseur d’identité utilisé sur l’écran de connexion.",
+            "description": "Identity provider name used on the login screen.",
             "maxLength": 128,
             "minLength": 1,
             "type": "string"
@@ -4085,11 +4085,11 @@
             "$ref": "#/components/schemas/IdpId"
           },
           "is_enabled": {
-            "description": "Vrai si le fournisseur d’identité est activé pour l’organisation.",
+            "description": "True if the identity provider is enabled for the organization.",
             "type": "boolean"
           },
           "name": {
-            "description": "Le nom du fournisseur d’identité",
+            "description": "The name of the identity provider",
             "maxLength": 128,
             "type": [
               "string",
@@ -4110,15 +4110,15 @@
         "additionalProperties": false,
         "properties": {
           "client_id": {
-            "description": "Identifiant fourni par votre fournisseur. Identifiant unique de votre application enregistrée.",
+            "description": "The identifier given to you by your provider. Unique identifier for your registered application.",
             "type": "string"
           },
           "client_secret": {
-            "description": "Disponible si le canal arrière a été choisi précédemment. Secret fourni par votre fournisseur; chaque fournisseur gère cette étape différemment.",
+            "description": "Available if Back Channel is chosen earlier. The secret given to you by your provider and each provider manages this step differently.",
             "type": "string"
           },
           "discovery_url": {
-            "description": "URL à laquelle le fournisseur d’identité OIDC publie son information de configuration du fournisseur OpenID",
+            "description": "The URL where the OIDC Identity Provider publishes its OpenID Provider Configuration Information",
             "type": "string"
           },
           "type": {
@@ -4136,11 +4136,11 @@
         "additionalProperties": false,
         "properties": {
           "client_id": {
-            "description": "Identifiant fourni par votre fournisseur. Identifiant unique de votre application enregistrée.",
+            "description": "The identifier given to you by your provider. Unique identifier for your registered application.",
             "type": "string"
           },
           "discovery_url": {
-            "description": "L’URL où le fournisseur d’identité OIDC publie son information de configuration du fournisseur OpenID",
+            "description": "The URL where the OIDC Identity Provider publishes its OpenID Provider Configuration Information",
             "type": "string"
           },
           "type": {
@@ -4150,7 +4150,7 @@
         "type": "object"
       },
       "IdpOidcOptionsTypeEnum": {
-        "description": "Sélectionnez si les échanges d’authentification se font par communication serveur à serveur (canal arrière) ou dans le navigateur à l’aide de Implicit Flow with Form Post (canal frontal)",
+        "description": "Select whether authentication exchanges occur via server-to-server communication (Back Channel) or through the browser using Implicit Flow with Form Post (Front Channel)",
         "enum": [
           "front_channel",
           "back_channel"
@@ -4166,7 +4166,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpOidcOptionsRequest",
-                "description": "Options spécifiques au fournisseur d’identité."
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "oidc"
@@ -4179,7 +4179,7 @@
             "type": "object"
           }
         ],
-        "description": "Options spécifiques au fournisseur d’identité.",
+        "description": "Identity provider specific options.",
         "title": "IdP OIDC Request",
         "type": "object",
         "unevaluatedProperties": false
@@ -4199,7 +4199,7 @@
               },
               "options": {
                 "$ref": "#/components/schemas/IdpOidcOptionsResponse",
-                "description": "Options spécifiques au fournisseur d’identité."
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "oidc"
@@ -4213,7 +4213,7 @@
             "type": "object"
           }
         ],
-        "description": "Options spécifiques au fournisseur d’identité.",
+        "description": "Identity provider specific options.",
         "title": "IdP OIDC Response",
         "type": "object",
         "unevaluatedProperties": false
@@ -4227,13 +4227,13 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpOidcOptionsRequest",
-                "description": "Options spécifiques au fournisseur d’identité.  Nécessite que access_level soit défini sur 'full'."
+                "description": "Identity provider specific options.  Requires access_level to be 'full'."
               }
             },
             "type": "object"
           }
         ],
-        "description": "Options spécifiques au fournisseur d’identité.  Nécessite que access_level soit défini sur 'full'.",
+        "description": "Identity provider specific options.  Requires access_level to be 'full'.",
         "title": "IdP OIDC Update Request",
         "type": "object",
         "unevaluatedProperties": false
@@ -4242,19 +4242,19 @@
         "additionalProperties": false,
         "properties": {
           "client_id": {
-            "description": "Identifiant unique de votre application Okta enregistrée",
+            "description": "Unique identifier for your registered Okta application",
             "type": "string"
           },
           "client_secret": {
-            "description": "Chaîne utilisée pour obtenir l’accès à votre application Okta enregistrée.",
+            "description": "String used to gain access to your registered Okta application.",
             "type": "string"
           },
           "domain": {
-            "description": "Le nom de domaine Okta de votre organisation.",
+            "description": "Okta's domain name for your organization.",
             "type": "string"
           },
           "icon_url": {
-            "description": "Une URL pointant vers un fichier image qui représente votre application cliente.",
+            "description": "A URL pointing to an image file that represents your client application.",
             "type": "string"
           }
         },
@@ -4269,15 +4269,15 @@
         "additionalProperties": false,
         "properties": {
           "client_id": {
-            "description": "Identifiant unique de votre application Okta enregistrée",
+            "description": "Unique identifier for your registered Okta application",
             "type": "string"
           },
           "domain": {
-            "description": "Le nom de domaine Okta de votre organisation.",
+            "description": "Okta's domain name for your organization.",
             "type": "string"
           },
           "icon_url": {
-            "description": "Une URL pointant vers un fichier image qui représente votre application cliente.",
+            "description": "A URL pointing to an image file that represents your client application.",
             "type": "string"
           }
         },
@@ -4292,7 +4292,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpOktaOptionsRequest",
-                "description": "Options spécifiques au fournisseur d’identité."
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "okta"
@@ -4305,7 +4305,7 @@
             "type": "object"
           }
         ],
-        "description": "Options spécifiques au fournisseur d’identité.",
+        "description": "Identity provider specific options.",
         "title": "IdP Okta Request",
         "type": "object",
         "unevaluatedProperties": false
@@ -4325,7 +4325,7 @@
               },
               "options": {
                 "$ref": "#/components/schemas/IdpOktaOptionsResponse",
-                "description": "Options spécifiques au fournisseur d’identité."
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "okta"
@@ -4339,7 +4339,7 @@
             "type": "object"
           }
         ],
-        "description": "Options spécifiques au fournisseur d’identité.",
+        "description": "Identity provider specific options.",
         "title": "IdP Okta Response",
         "type": "object",
         "unevaluatedProperties": false
@@ -4353,34 +4353,34 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpOktaOptionsRequest",
-                "description": "Options spécifiques au fournisseur d’identité.  Nécessite que access_level soit défini sur 'full'."
+                "description": "Identity provider specific options.  Requires access_level to be 'full'."
               }
             },
             "type": "object"
           }
         ],
-        "description": "Options spécifiques au fournisseur d’identité.  Nécessite que access_level soit défini sur 'full'.",
+        "description": "Identity provider specific options.  Requires access_level to be 'full'.",
         "title": "IdP Okta Update Request",
         "type": "object",
         "unevaluatedProperties": false
       },
       "IdpOptionsIdpInitiated": {
-        "description": "Un objet contenant le détail de configuration des flux d’authentification unique initiés par l’Identity Provider (IdP)",
+        "description": "An object containing configuration details for Identity Provider (IdP) initiated single sign-on flows",
         "properties": {
           "client_authorizequery": {
-            "description": "Ce champ représente un modèle servant à construire la chaîne de requête d’autorisation lors de l’initialisation d’un flux initié par l’IdP vers un client précis",
+            "description": "This field represents a template for constructing the authorization query string when initiating an IdP-initiated flow to a specific client",
             "type": "string"
           },
           "client_id": {
-            "description": "Le client ID de votre application par défaut pour laquelle le flux initié par l’IdP est configuré",
+            "description": "The client ID of your default application for which the IdP-initiated flow is being configured",
             "type": "string"
           },
           "client_protocol": {
-            "description": "Il s’agit du protocole utilisé pour connecter l’application par défaut sélectionnée",
+            "description": "This is the protocol used to connect your selected default application",
             "type": "string"
           },
           "enabled": {
-            "description": "Un indicateur précisant si le SSO initié par l’IdP est activé pour cette connexion",
+            "description": "A flag indicating whether IdP-initiated SSO is enabled for this connection",
             "type": "boolean"
           }
         },
@@ -4393,25 +4393,25 @@
             "$ref": "#/components/schemas/IdpSignAlgDigestTypeEnum"
           },
           "icon_url": {
-            "description": "Une URL pointant vers un fichier image qui représente votre application cliente.",
+            "description": "A URL pointing to an image file that represents your client application.",
             "type": "string"
           },
           "idpInitiated": {
             "$ref": "#/components/schemas/IdpOptionsIdpInitiated"
           },
           "pingFederateBaseUrl": {
-            "description": "URL fournie par PingFederate qui renvoie les informations utilisées pour créer la connexion",
+            "description": "URL provided by PingFederate which returns information used for creating the connection",
             "type": "string"
           },
           "signSAMLRequest": {
-            "description": "Indique si PingFederate doit signer numériquement les requêtes d’authentification SAML sortantes destinées aux parties utilisatrices",
+            "description": "Indicates whether PingFederate should digitally sign outgoing SAML authentication requests to relying parties",
             "type": "boolean"
           },
           "signatureAlgorithm": {
             "$ref": "#/components/schemas/IdpSignAlgTypeEnum"
           },
           "signingCert": {
-            "description": "Clé publique du serveur PingFederate (encodée en PEM ou CER) que vous avez récupérée auprès de l’IdP",
+            "description": "PingFederate Server public key (encoded in PEM or CER) you retrieved from the IdP",
             "type": "string"
           }
         },
@@ -4428,7 +4428,7 @@
         "additionalProperties": false,
         "properties": {
           "cert": {
-            "description": "Valeur dérivée du décodage de signingCert. Elle ne doit pas être mise à jour directement; mettez plutôt à jour signingCertificate afin de décoder une nouvelle valeur pour ce champ",
+            "description": "A value derived from decoding the signingCert. This should not be updated directly, instead update the signingCertificate to decode a new value for this field",
             "readOnly": true,
             "type": "string"
           },
@@ -4436,18 +4436,18 @@
             "$ref": "#/components/schemas/IdpSignAlgDigestTypeEnum"
           },
           "icon_url": {
-            "description": "Une URL pointant vers un fichier image qui représente votre application cliente.",
+            "description": "A URL pointing to an image file that represents your client application.",
             "type": "string"
           },
           "idpInitiated": {
             "$ref": "#/components/schemas/IdpOptionsIdpInitiated"
           },
           "pingFederateBaseUrl": {
-            "description": "URL fournie par PingFederate qui renvoie les informations utilisées pour créer la connexion",
+            "description": "URL provided by PingFederate which returns information used for creating the connection",
             "type": "string"
           },
           "signSAMLRequest": {
-            "description": "Indique si PingFederate doit signer numériquement les requêtes d’authentification SAML sortantes destinées aux parties utilisatrices",
+            "description": "Indicates whether PingFederate should digitally sign outgoing SAML authentication requests to relying parties",
             "type": "boolean"
           },
           "signatureAlgorithm": {
@@ -4465,7 +4465,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpPingFederateOptionsRequest",
-                "description": "Options spécifiques au fournisseur d’identité."
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "pingfederate"
@@ -4478,7 +4478,7 @@
             "type": "object"
           }
         ],
-        "description": "Options spécifiques au fournisseur d’identité.",
+        "description": "Identity provider specific options.",
         "title": "IdP Ping Request",
         "type": "object",
         "unevaluatedProperties": false
@@ -4492,7 +4492,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpPingFederateOptionsResponse",
-                "description": "Options spécifiques au fournisseur d’identité."
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "pingfederate"
@@ -4505,7 +4505,7 @@
             "type": "object"
           }
         ],
-        "description": "Options spécifiques au fournisseur d’identité.",
+        "description": "Identity provider specific options.",
         "title": "IdP Ping Response",
         "type": "object",
         "unevaluatedProperties": false
@@ -4519,19 +4519,19 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpPingFederateOptionsRequest",
-                "description": "Options spécifiques au fournisseur d’identité.  Nécessite que access_level soit défini sur 'full'."
+                "description": "Identity provider specific options.  Requires access_level to be 'full'."
               }
             },
             "type": "object"
           }
         ],
-        "description": "Options spécifiques au fournisseur d’identité.  Nécessite que access_level soit défini sur 'full'.",
+        "description": "Identity provider specific options.  Requires access_level to be 'full'.",
         "title": "IdP Ping Update Request",
         "type": "object",
         "unevaluatedProperties": false
       },
       "IdpProtocolBindingTypeEnum": {
-        "description": "HTTP binding pris en charge par l’IdP.",
+        "description": "HTTP binding supported by the IdP.",
         "enum": [
           "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect",
           "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
@@ -4550,7 +4550,7 @@
             "$ref": "#/components/schemas/IdpId"
           },
           "identity_provider_name": {
-            "description": "Le nom du fournisseur d’identité",
+            "description": "The name of the identity provider",
             "maxLength": 128,
             "minLength": 1,
             "readOnly": true,
@@ -4563,7 +4563,7 @@
             "$ref": "#/components/schemas/IdpStrategyEnum"
           },
           "user_id_attribute": {
-            "description": "L’ID de l’utilisateur",
+            "description": "The ID of the user",
             "type": "string"
           }
         },
@@ -4578,7 +4578,7 @@
         "type": "object"
       },
       "IdpProvisioningMethodEnum": {
-        "description": "Le type de la méthode de provisionnement d’un fournisseur d’identité",
+        "description": "The type of an identity provider's provisioning method",
         "enum": [
           "none",
           "scim"
@@ -4586,7 +4586,7 @@
         "type": "string"
       },
       "IdpProvisioningScimTokenId": {
-        "description": "Identifiant du jeton de provisionnement SCIM du fournisseur d’identité.",
+        "description": "Identity provider Scim Provisioning Token identifier.",
         "pattern": "^tok_[A-Za-z0-9]{16}$",
         "readOnly": true,
         "type": "string"
@@ -4599,7 +4599,7 @@
           {
             "properties": {
               "provisioning_field": {
-                "description": "Le nom du champ de provisionnement.",
+                "description": "The name of the provisioning field.",
                 "type": "string"
               }
             },
@@ -4618,32 +4618,32 @@
             "additionalProperties": false,
             "properties": {
               "bindingMethod": {
-                "description": "Définit la liaison HTTP précise utilisée pour l’envoi des messages SAML.",
+                "description": "Defines the specific HTTP binding used for sending SAML messages.",
                 "type": "string"
               },
               "cert": {
-                "description": "Certificat de signature (encodé en PEM ou CER) que vous avez récupéré auprès de l’IdP",
+                "description": "Signing certificate (encoded in PEM or CER) you retrieved from the IdP",
                 "type": "string"
               },
               "digestAlgorithm": {
                 "$ref": "#/components/schemas/IdpSignAlgDigestTypeEnum"
               },
               "icon_url": {
-                "description": "Une URL pointant vers un fichier image qui représente votre application cliente.",
+                "description": "A URL pointing to an image file that represents your client application.",
                 "type": "string"
               },
               "idpInitiated": {
                 "$ref": "#/components/schemas/IdpOptionsIdpInitiated"
               },
               "metadataUrl": {
-                "description": "URL fournie par le fournisseur SAML qui renvoie les informations utilisées pour créer la connexion",
+                "description": "URL provided by SAML provider which returns information used for creating the connection",
                 "type": "string"
               },
               "protocolBinding": {
                 "$ref": "#/components/schemas/IdpProtocolBindingTypeEnum"
               },
               "signSAMLRequest": {
-                "description": "Lorsque cette option est activée, la requête d’authentification SAML sera signée.",
+                "description": "When enabled, the SAML authentication request will be signed.",
                 "type": "boolean"
               },
               "signatureAlgorithm": {
@@ -4661,18 +4661,18 @@
             "additionalProperties": false,
             "properties": {
               "bindingMethod": {
-                "description": "Définit la liaison HTTP précise utilisée pour l’envoi des messages SAML.",
+                "description": "Defines the specific HTTP binding used for sending SAML messages.",
                 "type": "string"
               },
               "cert": {
-                "description": "Certificat de signature (encodé en PEM ou CER) que vous avez récupéré auprès de l’IdP",
+                "description": "Signing certificate (encoded in PEM or CER) you retrieved from the IdP",
                 "type": "string"
               },
               "digestAlgorithm": {
                 "$ref": "#/components/schemas/IdpSignAlgDigestTypeEnum"
               },
               "icon_url": {
-                "description": "Une URL pointant vers un fichier image qui représente votre application cliente.",
+                "description": "A URL pointing to an image file that represents your client application.",
                 "type": "string"
               },
               "idpInitiated": {
@@ -4682,11 +4682,11 @@
                 "$ref": "#/components/schemas/IdpProtocolBindingTypeEnum"
               },
               "signInEndpoint": {
-                "description": "L’URL du point de terminaison de connexion de l’IdP",
+                "description": "The endpoint URL for the IdP sign-in",
                 "type": "string"
               },
               "signSAMLRequest": {
-                "description": "Lorsque cette option est activée, la requête d’authentification SAML sera signée.",
+                "description": "When enabled, the SAML authentication request will be signed.",
                 "type": "boolean"
               },
               "signatureAlgorithm": {
@@ -4709,32 +4709,32 @@
             "additionalProperties": false,
             "properties": {
               "bindingMethod": {
-                "description": "Définit la liaison HTTP précise utilisée pour l’envoi des messages SAML.",
+                "description": "Defines the specific HTTP binding used for sending SAML messages.",
                 "type": "string"
               },
               "cert": {
-                "description": "Certificat de signature (encodé en PEM ou CER) que vous avez récupéré auprès de l’IdP",
+                "description": "Signing certificate (encoded in PEM or CER) you retrieved from the IdP",
                 "type": "string"
               },
               "digestAlgorithm": {
                 "$ref": "#/components/schemas/IdpSignAlgDigestTypeEnum"
               },
               "icon_url": {
-                "description": "Une URL pointant vers un fichier image qui représente votre application cliente.",
+                "description": "A URL pointing to an image file that represents your client application.",
                 "type": "string"
               },
               "idpInitiated": {
                 "$ref": "#/components/schemas/IdpOptionsIdpInitiated"
               },
               "metadataUrl": {
-                "description": "URL fournie par le fournisseur SAML qui renvoie les informations utilisées pour créer la connexion",
+                "description": "URL provided by SAML provider which returns information used for creating the connection",
                 "type": "string"
               },
               "protocolBinding": {
                 "$ref": "#/components/schemas/IdpProtocolBindingTypeEnum"
               },
               "signSAMLRequest": {
-                "description": "Lorsque cette option est activée, la requête d’authentification SAML sera signée.",
+                "description": "When enabled, the SAML authentication request will be signed.",
                 "type": "boolean"
               },
               "signatureAlgorithm": {
@@ -4748,18 +4748,18 @@
             "additionalProperties": false,
             "properties": {
               "bindingMethod": {
-                "description": "Définit la liaison HTTP précise utilisée pour l’envoi des messages SAML.",
+                "description": "Defines the specific HTTP binding used for sending SAML messages.",
                 "type": "string"
               },
               "cert": {
-                "description": "Certificat de signature (encodé en PEM ou CER) que vous avez récupéré auprès de l’IdP",
+                "description": "Signing certificate (encoded in PEM or CER) you retrieved from the IdP",
                 "type": "string"
               },
               "digestAlgorithm": {
                 "$ref": "#/components/schemas/IdpSignAlgDigestTypeEnum"
               },
               "icon_url": {
-                "description": "Une URL pointant vers un fichier image qui représente votre application cliente.",
+                "description": "A URL pointing to an image file that represents your client application.",
                 "type": "string"
               },
               "idpInitiated": {
@@ -4769,11 +4769,11 @@
                 "$ref": "#/components/schemas/IdpProtocolBindingTypeEnum"
               },
               "signInEndpoint": {
-                "description": "L’URL du point de terminaison de connexion de l’IdP",
+                "description": "The endpoint URL for the IdP sign-in",
                 "type": "string"
               },
               "signSAMLRequest": {
-                "description": "Lorsqu’elle est activée, la demande d’authentification SAML sera signée.",
+                "description": "When enabled, the SAML authentication request will be signed.",
                 "type": "boolean"
               },
               "signatureAlgorithm": {
@@ -4794,7 +4794,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpSamlpOptionsRequest",
-                "description": "Options spécifiques au fournisseur d’identité."
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "samlp"
@@ -4807,7 +4807,7 @@
             "type": "object"
           }
         ],
-        "description": "Options spécifiques au fournisseur d’identité.",
+        "description": "Identity provider specific options.",
         "title": "IdP SAML Request",
         "type": "object",
         "unevaluatedProperties": false
@@ -4827,7 +4827,7 @@
               },
               "options": {
                 "$ref": "#/components/schemas/IdpSamlpOptionsResponse",
-                "description": "Options spécifiques au fournisseur d’identité."
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "samlp"
@@ -4841,7 +4841,7 @@
             "type": "object"
           }
         ],
-        "description": "Options spécifiques au fournisseur d’identité.",
+        "description": "Identity provider specific options.",
         "title": "IdP SAML Response",
         "type": "object",
         "unevaluatedProperties": false
@@ -4855,13 +4855,13 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpSamlpOptionsRequest",
-                "description": "Options spécifiques au fournisseur d’identité.  Nécessite que access_level soit défini sur 'full'."
+                "description": "Identity provider specific options.  Requires access_level to be 'full'."
               }
             },
             "type": "object"
           }
         ],
-        "description": "Options spécifiques au fournisseur d’identité.  Nécessite que access_level soit défini sur 'full'.",
+        "description": "Identity provider specific options.  Requires access_level to be 'full'.",
         "title": "IdP SAML Update Request",
         "type": "object",
         "unevaluatedProperties": false
@@ -4869,23 +4869,23 @@
       "IdpScimTokenBase": {
         "properties": {
           "created_at": {
-            "description": "L’horodatage de création du jeton.",
+            "description": "The token's created at timestamp.",
             "format": "date-time",
             "type": "string"
           },
           "scopes": {
-            "description": "Les scopes du jeton.",
+            "description": "The token's scopes.",
             "items": {
               "type": "string"
             },
             "type": "array"
           },
           "token_id": {
-            "description": "L’identifiant du jeton.",
+            "description": "The token identifier.",
             "type": "string"
           },
           "valid_until": {
-            "description": "L’horodatage indiquant jusqu’à quand le jeton est valide (n’existe pas pour les jetons sans expiration).",
+            "description": "The token's valid until at timestamp (will not exist for non-expiring tokens).",
             "format": "date-time",
             "type": "string"
           }
@@ -4904,7 +4904,7 @@
           {
             "properties": {
               "token": {
-                "description": "Le jeton du client SCIM.",
+                "description": "The SCIM client's token.",
                 "type": "string"
               }
             },
@@ -4931,7 +4931,7 @@
         "type": "object"
       },
       "IdpSignAlgDigestTypeEnum": {
-        "description": "Sélectionnez l’algorithme de condensé utilisé pour la signature",
+        "description": "Select the algorithm digest used for signing",
         "enum": [
           "sha256",
           "sha1"
@@ -4939,7 +4939,7 @@
         "type": "string"
       },
       "IdpSignAlgTypeEnum": {
-        "description": "Sélectionnez l’algorithme utilisé pour la signature",
+        "description": "Select the algorithm used for signing",
         "enum": [
           "rsa-sha256",
           "rsa-sha1"
@@ -4947,7 +4947,7 @@
         "type": "string"
       },
       "IdpStrategyEnum": {
-        "description": "Le type de fournisseur d’identité",
+        "description": "The type of the identity provider",
         "enum": [
           "adfs",
           "google-apps",
@@ -4964,21 +4964,21 @@
           {
             "properties": {
               "assign_membership_on_login": {
-                "description": "Si true, l’utilisateur deviendra membre de l’organisation lors de la connexion. Nécessite que access_level soit défini sur 'full' ou 'limited'.",
+                "description": "If true, the user will be made a member of the organization upon login. Requires access_level to be 'full' or 'limited'.",
                 "type": "boolean"
               },
               "display_name": {
-                "description": "Nom du fournisseur d’identité utilisé sur l’écran de connexion. Nécessite que access_level soit défini sur 'full'",
+                "description": "Identity provider name used on the login screen. Requires access_level to be 'full'",
                 "maxLength": 128,
                 "minLength": 1,
                 "type": "string"
               },
               "is_enabled": {
-                "description": "True si le fournisseur d’identité est activé pour l’organisation. Nécessite que access_level soit défini sur 'full' ou 'limited'",
+                "description": "True if the identity provider is enabled for the organization. Requires access_level to be 'full' or 'limited'",
                 "type": "boolean"
               },
               "show_as_button": {
-                "description": "Permet d’afficher un bouton pour la connexion sur la page de connexion (nouvelle expérience seulement). Si false, elle pourra être utilisée uniquement par Home Realm Discovery (HRD). Nécessite que access_level soit défini sur 'full' ou 'limited'",
+                "description": "Enables showing a button for the connection in the login page (new experience only). If false, it will be usable only by Home Realm Discovery (HRD). Requires access_level to be 'full' or 'limited'",
                 "type": "boolean"
               }
             },
@@ -5020,7 +5020,7 @@
                 "properties": {
                   "options": {
                     "$ref": "#/components/schemas/IdpAdfsOptionsRequest",
-                    "description": "Options spécifique au fournisseur d’identité. Nécessite que access_level soit défini sur 'full'."
+                    "description": "Identity provider specific options.  Requires access_level to be 'full'."
                   }
                 },
                 "type": "object"
@@ -5039,13 +5039,13 @@
                 "properties": {
                   "options": {
                     "$ref": "#/components/schemas/IdpGoogleAppsOptionsRequest",
-                    "description": "Options spécifique au fournisseur d’identité. Nécessite que access_level soit défini sur 'full'."
+                    "description": "Identity provider specific options.  Requires access_level to be 'full'."
                   }
                 },
                 "type": "object"
               }
             ],
-            "description": "Options spécifique au fournisseur d’identité. Nécessite que access_level soit défini sur 'full'.",
+            "description": "Identity provider specific options.  Requires access_level to be 'full'.",
             "title": "IdP Google Workforce Update Request",
             "type": "object",
             "unevaluatedProperties": false
@@ -5059,13 +5059,13 @@
                 "properties": {
                   "options": {
                     "$ref": "#/components/schemas/IdpOidcOptionsRequest",
-                    "description": "Options spécifique au fournisseur d’identité. Nécessite que access_level soit défini sur 'full'."
+                    "description": "Identity provider specific options.  Requires access_level to be 'full'."
                   }
                 },
                 "type": "object"
               }
             ],
-            "description": "Options spécifique au fournisseur d’identité. Nécessite que access_level soit défini sur 'full'.",
+            "description": "Identity provider specific options.  Requires access_level to be 'full'.",
             "title": "IdP OIDC Update Request",
             "type": "object",
             "unevaluatedProperties": false
@@ -5079,13 +5079,13 @@
                 "properties": {
                   "options": {
                     "$ref": "#/components/schemas/IdpOktaOptionsRequest",
-                    "description": "Options spécifiques au fournisseur d’identité.  Peut nécessiter que access_level soit défini sur 'full'."
+                    "description": "Identity provider specific options.  Requires access_level to be 'full'."
                   }
                 },
                 "type": "object"
               }
             ],
-            "description": "Options spécifiques au fournisseur d’identité.  Peut nécessiter que access_level soit défini sur 'full'.",
+            "description": "Identity provider specific options.  Requires access_level to be 'full'.",
             "title": "IdP Okta Update Request",
             "type": "object",
             "unevaluatedProperties": false
@@ -5099,13 +5099,13 @@
                 "properties": {
                   "options": {
                     "$ref": "#/components/schemas/IdpPingFederateOptionsRequest",
-                    "description": "Options spécifiques au fournisseur d’identité.  Peut nécessiter que access_level soit défini sur 'full'."
+                    "description": "Identity provider specific options.  Requires access_level to be 'full'."
                   }
                 },
                 "type": "object"
               }
             ],
-            "description": "Options spécifiques au fournisseur d’identité.  Peut nécessiter que access_level soit défini sur 'full'.",
+            "description": "Identity provider specific options.  Requires access_level to be 'full'.",
             "title": "IdP Ping Update Request",
             "type": "object",
             "unevaluatedProperties": false
@@ -5119,13 +5119,13 @@
                 "properties": {
                   "options": {
                     "$ref": "#/components/schemas/IdpSamlpOptionsRequest",
-                    "description": "Options spécifiques au fournisseur d’identité.  Peut nécessiter que access_level soit défini sur 'full'."
+                    "description": "Identity provider specific options.  Requires access_level to be 'full'."
                   }
                 },
                 "type": "object"
               }
             ],
-            "description": "Options spécifiques au fournisseur d’identité.  Peut nécessiter que access_level soit défini sur 'full'.",
+            "description": "Identity provider specific options.  Requires access_level to be 'full'.",
             "title": "IdP SAML Update Request",
             "type": "object",
             "unevaluatedProperties": false
@@ -5139,13 +5139,13 @@
                 "properties": {
                   "options": {
                     "$ref": "#/components/schemas/IdpWaadOptionsRequest",
-                    "description": "Options spécifiques au fournisseur d’identité.  Nécessite que access_level soit défini sur 'full'."
+                    "description": "Identity provider specific options.  Requires access_level to be 'full'."
                   }
                 },
                 "type": "object"
               }
             ],
-            "description": "Options spécifiques au fournisseur d’identité.  Peut nécessiter que access_level soit défini sur 'full'.",
+            "description": "Identity provider specific options.  Requires access_level to be 'full'.",
             "title": "IdP Microsoft Azure AD Update Request",
             "type": "object",
             "unevaluatedProperties": false
@@ -5185,7 +5185,7 @@
           {
             "properties": {
               "sso_field": {
-                "description": "Le ou les noms du champ sso.",
+                "description": "The name(s) of the sso field.",
                 "items": {
                   "type": "string"
                 },
@@ -5205,19 +5205,19 @@
         "additionalProperties": false,
         "properties": {
           "client_id": {
-            "description": "Identifiant unique de votre application Azure AD enregistrée.",
+            "description": "Unique identifier for your registered Azure AD application.",
             "type": "string"
           },
           "client_secret": {
-            "description": "Chaîne utilisée pour obtenir l’accès à votre application Azure AD enregistrée.",
+            "description": "String used to gain access to your registered Azure AD application.",
             "type": "string"
           },
           "icon_url": {
-            "description": "Une URL pointant vers un fichier image qui représente votre application cliente.",
+            "description": "A URL pointing to an image file that represents your client application.",
             "type": "string"
           },
           "tenant_domain": {
-            "description": "Le nom de votre domaine Azure AD. Vous le trouverez sur la page Overview de votre annuaire Azure AD dans le portail Microsoft Azure.",
+            "description": "Your Azure AD domain name. You can find this on your Azure AD directory's overview page in the Microsoft Azure portal.",
             "type": "string"
           }
         },
@@ -5232,15 +5232,15 @@
         "additionalProperties": false,
         "properties": {
           "client_id": {
-            "description": "Identifiant unique de votre application Azure AD enregistrée.",
+            "description": "Unique identifier for your registered Azure AD application.",
             "type": "string"
           },
           "icon_url": {
-            "description": "Une URL pointant vers un fichier image qui représente votre application cliente.",
+            "description": "A URL pointing to an image file that represents your client application.",
             "type": "string"
           },
           "tenant_domain": {
-            "description": "Le nom de votre domaine Azure AD. Vous le trouverez sur la page Overview de votre annuaire Azure AD dans le portail Microsoft Azure.",
+            "description": "Your Azure AD domain name. You can find this on your Azure AD directory's overview page in the Microsoft Azure portal.",
             "type": "string"
           }
         },
@@ -5255,7 +5255,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpWaadOptionsRequest",
-                "description": "Options spécifiques au fournisseur d’identité."
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "waad"
@@ -5268,7 +5268,7 @@
             "type": "object"
           }
         ],
-        "description": "Options spécifiques au fournisseur d’identité.",
+        "description": "Identity provider specific options.",
         "title": "IdP Microsoft Azure AD Request",
         "type": "object",
         "unevaluatedProperties": false
@@ -5282,7 +5282,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpWaadOptionsResponse",
-                "description": "Options spécifiques au fournisseur d’identité."
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "waad"
@@ -5295,7 +5295,7 @@
             "type": "object"
           }
         ],
-        "description": "Options spécifiques au fournisseur d’identité.",
+        "description": "Identity provider specific options.",
         "title": "IdP Microsoft Azure AD Response",
         "type": "object",
         "unevaluatedProperties": false
@@ -5309,19 +5309,19 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpWaadOptionsRequest",
-                "description": "Options spécifiques au fournisseur d’identité.  Nécessite que access_level soit défini sur 'full'."
+                "description": "Identity provider specific options.  Requires access_level to be 'full'."
               }
             },
             "type": "object"
           }
         ],
-        "description": "Options spécifiques au fournisseur d’identité.  Nécessite que access_level soit défini sur 'full'.",
+        "description": "Identity provider specific options.  Requires access_level to be 'full'.",
         "title": "IdP Microsoft Azure AD Update Request",
         "type": "object",
         "unevaluatedProperties": false
       },
       "InvitationId": {
-        "description": "L’ID de l’invitation du membre",
+        "description": "The id of the member invitation",
         "pattern": "^uinv_[A-Za-z0-9]{16}$",
         "readOnly": true,
         "type": "string"
@@ -5387,7 +5387,7 @@
             "type": "array"
           },
           "next": {
-            "description": "Curseur de pagination pour la page de résultats suivante.",
+            "description": "Pagination cursor for the next page of results.",
             "type": "string"
           }
         },
@@ -5397,7 +5397,7 @@
         "additionalProperties": false,
         "properties": {
           "next": {
-            "description": "Curseur de pagination pour la page de résultats suivante",
+            "description": "Pagination cursor for the next page of results",
             "type": "string"
           },
           "organization_domains": {
@@ -5422,7 +5422,7 @@
             "type": "array"
           },
           "next": {
-            "description": "Curseur de pagination pour la page de résultats suivante.",
+            "description": "Pagination cursor for the next page of results.",
             "type": "string"
           }
         },
@@ -5432,7 +5432,7 @@
         "additionalProperties": false,
         "properties": {
           "next": {
-            "description": "Curseur de pagination pour la page de résultats suivante",
+            "description": "Pagination cursor for the next page of results",
             "type": "string"
           },
           "roles": {
@@ -5466,12 +5466,12 @@
         "additionalProperties": false,
         "properties": {
           "created_at": {
-            "description": "L’horodatage au format ISO 8601 représentant l’heure de création de l’invitation.",
+            "description": "The ISO 8601 formatted timestamp representing the creation time of the invitation.",
             "format": "date-time",
             "type": "string"
           },
           "expires_at": {
-            "description": "L’horodatage au format ISO 8601 représentant l’heure d’expiration de l’invitation.",
+            "description": "The ISO 8601 formatted timestamp representing the expiration time of the invitation.",
             "format": "date-time",
             "type": "string"
           },
@@ -5482,7 +5482,7 @@
             "$ref": "#/components/schemas/IdpId"
           },
           "invitation_url": {
-            "description": "L’URL d’invitation à envoyer à la personne invitée.",
+            "description": "The invitation url to be sent to the invitee.",
             "format": "uri",
             "type": "string"
           },
@@ -5503,7 +5503,7 @@
             "type": "array"
           },
           "ticket_id": {
-            "description": "L’ID du ticket d’invitation.",
+            "description": "The ID of the invitation ticket.",
             "type": "string"
           }
         },
@@ -5513,7 +5513,7 @@
         "additionalProperties": false,
         "properties": {
           "email": {
-            "description": "Le courriel de la personne invitée.",
+            "description": "The invitee's email.",
             "format": "email",
             "maxLength": 320,
             "minLength": 1,
@@ -5526,7 +5526,7 @@
         "additionalProperties": false,
         "properties": {
           "name": {
-            "description": "Le nom de l’invitant.",
+            "description": "The inviter's name.",
             "maxLength": 300,
             "minLength": 1,
             "type": "string"
@@ -5536,13 +5536,13 @@
       },
       "OrgBranding": {
         "additionalProperties": false,
-        "description": "Le thème définit l’apparence des pages de connexion.",
+        "description": "Theme defines how to style the login pages.",
         "properties": {
           "colors": {
             "$ref": "#/components/schemas/OrgBrandingColors"
           },
           "logo_url": {
-            "description": "URL du logo à afficher sur la page de connexion.",
+            "description": "URL of logo to display on login page.",
             "format": "uri",
             "pattern": "^https://.*",
             "type": [
@@ -5555,15 +5555,15 @@
       },
       "OrgBrandingColors": {
         "additionalProperties": false,
-        "description": "Jeu de couleurs utilisé pour personnaliser les pages de connexion.",
+        "description": "Color scheme used to customize the login pages.",
         "properties": {
           "page_background": {
-            "description": "Couleur HEX de l’arrière-plan.",
+            "description": "HEX Color for background.",
             "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
             "type": "string"
           },
           "primary": {
-            "description": "Couleur HEX des éléments principaux.",
+            "description": "HEX Color for primary elements.",
             "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
             "type": "string"
           }
@@ -5576,7 +5576,7 @@
       },
       "OrgClient": {
         "additionalProperties": false,
-        "description": "Client API associé à l’organisation. Prend actuellement en charge uniquement les clients M2M (non_interactive).",
+        "description": "API Client associated with the organization. Currently only supports M2M (non_interactive) clients.",
         "properties": {
           "app_type": {
             "$ref": "#/components/schemas/ClientAppTypeEnum"
@@ -5612,7 +5612,7 @@
             "$ref": "#/components/schemas/OrgBranding"
           },
           "display_name": {
-            "description": "Le nom convivial de cette organisation.",
+            "description": "Friendly name of this organization.",
             "maxLength": 255,
             "minLength": 1,
             "type": "string"
@@ -5621,7 +5621,7 @@
             "$ref": "#/components/schemas/OrgId"
           },
           "name": {
-            "description": "Le nom de cette organisation.",
+            "description": "The name of this organization.",
             "maxLength": 50,
             "minLength": 1,
             "type": "string"
@@ -5645,11 +5645,11 @@
             "$ref": "#/components/schemas/OrgDomainStatusEnum"
           },
           "verification_host": {
-            "description": "Stocke le domaine complet où l’enregistrement TXT doit être ajouté.",
+            "description": "Stores the full domain where the TXT record should be added.",
             "type": "string"
           },
           "verification_txt": {
-            "description": "Valeur utilisée pour vérifier le domaine.",
+            "description": "Value used to verify the domain.",
             "type": "string"
           }
         },
@@ -5664,18 +5664,18 @@
         "type": "object"
       },
       "OrgDomainId": {
-        "description": "Identifiant du domaine de l’organisation.",
+        "description": "Organization domain identifier.",
         "pattern": "^ord_[A-Za-z0-9]{22}$",
         "readOnly": true,
         "type": "string"
       },
       "OrgDomainName": {
-        "description": "Nom de domaine.",
+        "description": "Domain name.",
         "pattern": "^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9])\\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9-]*[A-Za-z0-9])$",
         "type": "string"
       },
       "OrgDomainStatusEnum": {
-        "description": "Statut du domaine de l’organisation.",
+        "description": "Organization domain status.",
         "enum": [
           "failed",
           "pending",
@@ -5684,7 +5684,7 @@
         "type": "string"
       },
       "OrgId": {
-        "description": "Identifiant de l’organisation.",
+        "description": "Organization identifier.",
         "pattern": "^org_[A-Za-z0-9]{16}$",
         "readOnly": true,
         "type": "string"
@@ -5697,7 +5697,7 @@
           {
             "properties": {
               "roles": {
-                "description": "Les rôles du membre. Seuls les 10 premiers rôles sont renvoyés ici ; utilisez GET /my-org/v1/members/{user_id}/roles pour récupérer la liste complète. Inclus seulement lorsque le jeton contient la portée read:my_org:member_roles et que « roles » est demandé dans le tableau fields.",
+                "description": "The member's roles. Only the first 10 roles are returned here; use GET /my-org/v1/members/{user_id}/roles to retrieve the full list. Only included when the token carries the read:my_org:member_roles scope and 'roles' is requested in the fields array.",
                 "items": {
                   "$ref": "#/components/schemas/Role"
                 },
@@ -5717,24 +5717,24 @@
           {
             "properties": {
               "created_at": {
-                "description": "Date et heure de création de cet utilisateur (format ISO_8601).",
+                "description": "Date and time when this user was created (ISO_8601 format).",
                 "format": "date-time",
                 "readOnly": true,
                 "type": "string"
               },
               "last_login": {
-                "description": "Date et heure de la dernière connexion de cet utilisateur (format ISO_8601).",
+                "description": "Last date and time this user logged in (ISO_8601 format).",
                 "format": "date-time",
                 "readOnly": true,
                 "type": "string"
               },
               "phone_number": {
-                "description": "Numéro de téléphone associé à l’utilisateur.",
+                "description": "Phone number associated with the user.",
                 "readOnly": true,
                 "type": "string"
               },
               "updated_at": {
-                "description": "Date et heure de la dernière mise à jour de cet utilisateur (format ISO_8601).",
+                "description": "Date and time when this user was last updated (ISO_8601 format).",
                 "format": "date-time",
                 "readOnly": true,
                 "type": "string"
@@ -5752,17 +5752,17 @@
         "type": "object"
       },
       "OrgMemberId": {
-        "description": "L’ID utilisateur.",
+        "description": "The user ID.",
         "pattern": "^(?=.{1,1024}$).+\\|.+$",
         "type": "string"
       },
       "OrgMemberIdReadOnly": {
-        "description": "L’ID utilisateur.",
+        "description": "The user ID.",
         "readOnly": true,
         "type": "string"
       },
       "OrgThirdPartyClientAccessEnum": {
-        "description": "Une valeur d’accès client tiers valide",
+        "description": "A valid third-party client access value",
         "enum": [
           "allow",
           "block"
@@ -5770,7 +5770,7 @@
         "type": "string"
       },
       "OrganizationAccessLevelEnum": {
-        "description": "Le niveau d’accès autorisé pour l’Organisation",
+        "description": "The access level allowed for the Organization",
         "enum": [
           "none",
           "readonly",
@@ -5818,7 +5818,7 @@
         "type": "object"
       },
       "RoleId": {
-        "description": "L’ID d’un rôle pouvant être attribué à un membre d’une organisation.",
+        "description": "The ID of a role that can be assigned to a member of an organization.",
         "pattern": "^rol_[A-Za-z0-9]{16}$",
         "type": "string"
       },
@@ -5826,7 +5826,7 @@
         "$ref": "#/components/schemas/OrgDomain"
       },
       "SubjectTypeEnum": {
-        "description": "Le type de sujet",
+        "description": "The type of subject type",
         "enum": [
           "client",
           "user"
@@ -5848,23 +5848,23 @@
       "UserAttributes": {
         "properties": {
           "email": {
-            "description": "Courriel",
+            "description": "Email",
             "type": "string"
           },
           "family_name": {
-            "description": "Nom de famille",
+            "description": "Last name",
             "type": "string"
           },
           "given_name": {
-            "description": "Prénom",
+            "description": "First name",
             "type": "string"
           },
           "name": {
-            "description": "Nom complet",
+            "description": "Full Name",
             "type": "string"
           },
           "nickname": {
-            "description": "Pseudonyme de l’utilisateur",
+            "description": "User nickname",
             "type": "string"
           }
         },
@@ -5877,19 +5877,19 @@
             "$ref": "#/components/schemas/OrganizationAccessLevelEnum"
           },
           "display_name": {
-            "description": "Nom d’affichage du répertoire d’utilisateurs",
+            "description": "User store display name",
             "type": "string"
           },
           "id": {
-            "description": "ID du répertoire d’utilisateurs",
+            "description": "User store Id",
             "type": "string"
           },
           "is_enabled": {
-            "description": "Indique si le répertoire d’utilisateurs est activé",
+            "description": "Is the user store enabled",
             "type": "boolean"
           },
           "name": {
-            "description": "Nom du répertoire d’utilisateurs",
+            "description": "User store name",
             "type": "string"
           }
         },
@@ -5899,19 +5899,19 @@
         "additionalProperties": false,
         "properties": {
           "detail": {
-            "description": "Description détaillée de l’erreur.",
+            "description": "A detailed description of the error.",
             "type": "string"
           },
           "field": {
-            "description": "Nom du paramètre non valide.",
+            "description": "The name of the invalid parameter.",
             "type": "string"
           },
           "pointer": {
-            "description": "Pointeur JSON indiquant l’emplacement exact de l’erreur dans un document JSON en cours de validation.",
+            "description": "JSON Pointer that points to the exact location of the error in a JSON document being validated.",
             "type": "string"
           },
           "source": {
-            "description": "Précise la source de l’erreur (p. ex., le corps, la requête ou l’en-tête dans un message HTML).",
+            "description": "Specifies the source of the error (e.g., body, query, or header in an HTML message).",
             "type": "string"
           }
         },
@@ -5924,15 +5924,15 @@
         "additionalProperties": false,
         "properties": {
           "status": {
-            "description": "Le code d’état HTTP résultant de la requête.",
+            "description": "The HTTP status code result of the request.",
             "type": "integer"
           },
           "title": {
-            "description": "Brève description de l’erreur.",
+            "description": "A brief description of the error.",
             "type": "string"
           },
           "type": {
-            "description": "URI qui décrit l’erreur.",
+            "description": "A URI that describes the error.",
             "format": "uri",
             "type": "string"
           },
@@ -5952,7 +5952,7 @@
         "type": "object"
       },
       "XAuth0RateLimitRead": {
-        "description": "Renseignements sur la limite de requêtes pour les opérations de lecture",
+        "description": "Rate limit information for read operations",
         "properties": {
           "friendly_name": {
             "const": "My Org API Rate Limit Read",
@@ -5975,7 +5975,7 @@
         "type": "object"
       },
       "XAuth0RateLimitWrite": {
-        "description": "Renseignements sur la limite de requêtes pour les opérations d’écriture",
+        "description": "Rate limit information for write operations",
         "properties": {
           "friendly_name": {
             "const": "My Org API  Rate Limit  Write",
@@ -6101,7 +6101,7 @@
     }
   },
   "info": {
-    "description": "API My organisation",
+    "description": "My Organization API",
     "license": {
       "name": "UNLICENSED",
       "url": "https://auth0.com"
@@ -6114,7 +6114,7 @@
   "paths": {
     "/": {
       "delete": {
-        "description": "Supprimer définitivement cette organisation.",
+        "description": "Permanently delete this Organization.",
         "operationId": "DeleteMyOrganization",
         "parameters": [],
         "responses": {
@@ -6143,7 +6143,7 @@
             ]
           }
         ],
-        "summary": "Supprimer cette organisation",
+        "summary": "Delete this Organization",
         "tags": [
           "orgDetails"
         ],
@@ -6159,7 +6159,7 @@
     },
     "/config": {
       "get": {
-        "description": "Récupérez la configuration de l’API My organisation. Renvoie uniquement `connection_deletion_behavior` et `allowed_strategies`. Les attributs d’identifiant comme `user_attribute_profile_id` et `connection_profile_id` ne sont pas inclus. Mettez ces informations en cache, car elles ne changent pas fréquemment.",
+        "description": "Retrieve the My Organization API configuration. Returns only the `connection_deletion_behavior` and `allowed_strategies`. Identifier attributes such as `user_attribute_profile_id` and `connection_profile_id` are not included. Cache this information, as it does not change frequently.",
         "operationId": "GetOrgConfiguration",
         "parameters": [],
         "responses": {
@@ -6191,7 +6191,7 @@
             ]
           }
         ],
-        "summary": "Récupérer la configuration de l’API My organisation",
+        "summary": "Get My Organization API configuration",
         "tags": [
           "config"
         ],
@@ -6211,7 +6211,7 @@
     },
     "/config/identity-providers": {
       "get": {
-        "description": "Récupérez le [profil de connexion](https://auth0.com/docs/authenticate/enterprise-connections/connection-profile) de cette application. Vous devriez mettre ces informations en cache, car elles ne changent pas fréquemment.",
+        "description": "Retrieve the [Connection Profile](https://auth0.com/docs/authenticate/enterprise-connections/connection-profile) for this application. You should cache this information as it does not change frequently.",
         "operationId": "GetIdpConfiguration",
         "parameters": [],
         "responses": {
@@ -6243,7 +6243,7 @@
             ]
           }
         ],
-        "summary": "Récupérer la configuration du fournisseur d’identité",
+        "summary": "Get Identity Provider configuration",
         "tags": [
           "config"
         ],
@@ -6264,7 +6264,7 @@
     },
     "/delete-member-invitations": {
       "post": {
-        "description": "Révoquez un ensemble d’invitations destinées aux membres, spécifiées par leurs ID, pour cette organisation.",
+        "description": "Revoke a set of member invitations specified by IDs for this Organization.",
         "operationId": "DeleteInvitations",
         "requestBody": {
           "$ref": "#/components/requestBodies/DeleteMemberInvitationsRequest"
@@ -6301,7 +6301,7 @@
             ]
           }
         ],
-        "summary": "Révoquer les invitations destinées à un membre",
+        "summary": "Revoke member invitations",
         "tags": [
           "orgMemberManagement"
         ],
@@ -6319,7 +6319,7 @@
     },
     "/delete-memberships": {
       "post": {
-        "description": "Supprimez un membre de cette organisation. Le compte d’utilisateur sous-jacent n’est pas supprimé.",
+        "description": "Remove one member from this Organization. The underlying user account is not deleted.",
         "operationId": "DeleteOrganizationMemberships",
         "parameters": [],
         "requestBody": {
@@ -6357,7 +6357,7 @@
             ]
           }
         ],
-        "summary": "Supprimer des adhésions",
+        "summary": "Delete memberships",
         "tags": [
           "orgMemberManagement"
         ],
@@ -6376,7 +6376,7 @@
     },
     "/details": {
       "get": {
-        "description": "Récupérez les détails de cette organisation, y compris le nom d’affichage et les options d’image de marque. Pour en savoir plus sur Auth0 Organizations, consultez [Organizations](https://auth0.com/docs/manage-users/organizations).",
+        "description": "Retrieve details for this Organization, including display name and branding options. To learn more about Auth0 Organizations, read [Organizations](https://auth0.com/docs/manage-users/organizations).",
         "operationId": "GetOrganizationDetails",
         "parameters": [],
         "responses": {
@@ -6408,7 +6408,7 @@
             ]
           }
         ],
-        "summary": "Récupérer les détails de l’organisation",
+        "summary": "Get Organization details",
         "tags": [
           "orgDetails"
         ],
@@ -6422,7 +6422,7 @@
         "x-swagger-docs": true
       },
       "patch": {
-        "description": "Mettez à jour les détails de cette organisation, comme le nom d’affichage et les options d’image de marque. Pour en savoir plus sur Auth0 Organizations, consultez [Organizations](https://auth0.com/docs/manage-users/organizations).",
+        "description": "Update details for this Organization, such as display name and branding options. To learn more about Auth0 Organizations, read [Organizations](https://auth0.com/docs/manage-users/organizations).",
         "operationId": "UpdateOrganizationDetails",
         "parameters": [],
         "requestBody": {
@@ -6460,7 +6460,7 @@
             ]
           }
         ],
-        "summary": "Mettre à jour les détails de l’organisation",
+        "summary": "Update Organization details",
         "tags": [
           "orgDetails"
         ],
@@ -6476,7 +6476,7 @@
     },
     "/domains": {
       "get": {
-        "description": "Récupérez la liste de tous les domaines en attente et vérifiés pour cette organisation.",
+        "description": "Retrieve a list of all pending and verified domains for this Organization.",
         "operationId": "ListOrganizationDomains",
         "parameters": [
           {
@@ -6518,7 +6518,7 @@
             ]
           }
         ],
-        "summary": "Lister les domaines",
+        "summary": "List domains",
         "tags": [
           "orgDomainManagement"
         ],
@@ -6536,7 +6536,7 @@
         "x-swagger-docs": true
       },
       "post": {
-        "description": "Créez un domaine pour une organisation Auth0 et activez éventuellement la découverte d’organisation pour les membres pendant le flux de connexion des utilisateurs",
+        "description": "Create a domain for an Auth0 Organization and optionally enable Organization Discovery for members during the user login flow",
         "operationId": "CreateOrganizationDomain",
         "parameters": [],
         "requestBody": {
@@ -6577,7 +6577,7 @@
             ]
           }
         ],
-        "summary": "Créer un domaine",
+        "summary": "Create a domain",
         "tags": [
           "orgDomainManagement"
         ],
@@ -6596,7 +6596,7 @@
     },
     "/domains/{domain_id}": {
       "delete": {
-        "description": "Supprimez un domaine d’une organisation Auth0 à l’aide de son ID de domaine unique, y compris tous les détails associés et son statut de vérification.",
+        "description": "Delete an Auth0 Organization domain using its unique domain ID, including all associated details and verification status.",
         "operationId": "DeleteOrganizationDomain",
         "parameters": [
           {
@@ -6635,7 +6635,7 @@
             ]
           }
         ],
-        "summary": "Supprimer un domaine",
+        "summary": "Delete a domain",
         "tags": [
           "orgDomainManagement"
         ],
@@ -6652,7 +6652,7 @@
         "x-swagger-docs": true
       },
       "get": {
-        "description": "Récupérez les détails d’un domaine d’une organisation Auth0 à l’aide de son ID de domaine unique, y compris le nom du domaine et son statut de vérification actuel.",
+        "description": "Retrieve the details of an Auth0 Organization domain using its unique domain ID, including the domain name and its current verification status.",
         "operationId": "GetOrganizationDomain",
         "parameters": [
           {
@@ -6691,7 +6691,7 @@
             ]
           }
         ],
-        "summary": "Récupérer un domaine",
+        "summary": "Get a domain",
         "tags": [
           "orgDomainManagement"
         ],
@@ -6710,7 +6710,7 @@
     },
     "/domains/{domain_id}/identity-providers": {
       "get": {
-        "description": "Récupérez la liste des fournisseurs d’identité associés à un domaine précisé par son ID pour cette organisation.",
+        "description": "Retrieve the list of Identity Providers associated with a domain specified by ID for this Organization.",
         "operationId": "GetOrganizationDomainIdentityProviders",
         "parameters": [
           {
@@ -6751,7 +6751,7 @@
             ]
           }
         ],
-        "summary": "Lister les fournisseurs d’identité d’un domaine",
+        "summary": "List Identity Providers for a domain",
         "tags": [
           "orgDomainManagement"
         ],
@@ -6771,7 +6771,7 @@
     },
     "/domains/{domain_id}/verify": {
       "post": {
-        "description": "Lancez le processus de vérification d’un domaine précisé par son ID pour cette organisation.",
+        "description": "Initiate the verification process for a domain specified by ID for this Organization.",
         "operationId": "CreateOrganizationDomainVerification",
         "parameters": [
           {
@@ -6810,7 +6810,7 @@
             ]
           }
         ],
-        "summary": "Démarrer la vérification du domaine",
+        "summary": "Start domain verification",
         "tags": [
           "orgDomainManagement"
         ],
@@ -6830,7 +6830,7 @@
     },
     "/identity-providers": {
       "get": {
-        "description": "Récupérez la liste complète des fournisseurs d’identité et de leurs configurations respectives associés à une organisation Auth0.",
+        "description": "Retrieve the comprehensive list of identity providers and their respective configurations associated with an Auth0 Organization.",
         "operationId": "ListOrganizationIdentityProviders",
         "parameters": [
           {
@@ -6869,7 +6869,7 @@
             ]
           }
         ],
-        "summary": "Lister les fournisseurs d’identité",
+        "summary": "List Identity Providers",
         "tags": [
           "idpManagement"
         ],
@@ -6887,7 +6887,7 @@
         "x-swagger-docs": true
       },
       "post": {
-        "description": "Créez un nouveau fournisseur d’identité d’entreprise en utilisant les paramètres et les détails de configuration spécifiés pour cette organisation.",
+        "description": "Create a new enterprise Identity Provider utilizing the specified configuration settings and details for this Auth0 Organization.",
         "operationId": "CreateOrganizationIdentityProvider",
         "parameters": [],
         "requestBody": {
@@ -6928,7 +6928,7 @@
             ]
           }
         ],
-        "summary": "Créer un fournisseur d’identité",
+        "summary": "Create an Identity Provider",
         "tags": [
           "idpManagement"
         ],
@@ -6947,7 +6947,7 @@
     },
     "/identity-providers/{idp_id}": {
       "delete": {
-        "description": "Supprimez de cette organisation un fournisseur d’identité précisé par son ID. Cela supprimera l’association ainsi que le fournisseur d’identité sous-jacent. Les membres ne pourront plus s’authentifier à l’aide de ce fournisseur d’identité.",
+        "description": "Delete an Identity Provider specified by ID from this Organization. This will remove the association and delete the underlying Identity Provider. Members will no longer be able to authenticate using this Identity Provider.",
         "operationId": "DeleteOrganizationIdentityProvider",
         "parameters": [
           {
@@ -6986,7 +6986,7 @@
             ]
           }
         ],
-        "summary": "Supprimer un fournisseur d’identité",
+        "summary": "Delete an Identity Provider",
         "tags": [
           "idpManagement"
         ],
@@ -7003,7 +7003,7 @@
         "x-swagger-docs": true
       },
       "get": {
-        "description": "Récupérez les détails d’un fournisseur d’identité précisé par son ID pour cette organisation.",
+        "description": "Retrieve details of an Identity Provider specified by ID for this Organization.",
         "operationId": "GetOrganizationIdentityProvider",
         "parameters": [
           {
@@ -7042,7 +7042,7 @@
             ]
           }
         ],
-        "summary": "Récupérer un fournisseur d’identité",
+        "summary": "Get an Identity Provider",
         "tags": [
           "idpManagement"
         ],
@@ -7059,7 +7059,7 @@
         "x-swagger-docs": true
       },
       "patch": {
-        "description": "Mettez à jour les détails d’un fournisseur d’identité précisé par son ID pour cette organisation.",
+        "description": "Update the details of an Identity Provider specified by ID for this Organization.",
         "operationId": "UpdateOrganizationIdentityProvider",
         "parameters": [
           {
@@ -7101,7 +7101,7 @@
             ]
           }
         ],
-        "summary": "Mettre à jour un fournisseur d’identité",
+        "summary": "Update an Identity Provider",
         "tags": [
           "idpManagement"
         ],
@@ -7120,7 +7120,7 @@
     },
     "/identity-providers/{idp_id}/detach": {
       "post": {
-        "description": "Retirez de cette organisation un fournisseur d’identité précisé par son ID. Cela supprime uniquement l’association; le fournisseur d’identité sous-jacent n’est pas supprimé. Les membres ne pourront plus s’authentifier à l’aide de ce fournisseur d’identité.",
+        "description": "Remove an Identity Provider specified by ID from this Organization. This only removes the association; the underlying Identity Provider is not deleted. Members will no longer be able to authenticate using this Identity Provider.",
         "operationId": "DetachOrganizationIdentityProviderDomain",
         "parameters": [
           {
@@ -7159,7 +7159,7 @@
             ]
           }
         ],
-        "summary": "Dissocier le fournisseur d’identité",
+        "summary": "Detach Identity Provider",
         "tags": [
           "idpManagement"
         ],
@@ -7178,7 +7178,7 @@
     },
     "/identity-providers/{idp_id}/domains": {
       "post": {
-        "description": "Associez un domaine à un fournisseur d’identité précisé par son ID pour cette organisation. Le domaine doit être revendiqué et vérifié.",
+        "description": "Associate a domain with an Identity Provider specified by ID for this Organization. The domain must be claimed and verified.",
         "operationId": "CreateOrganizationIdentityProviderDomain",
         "parameters": [
           {
@@ -7223,7 +7223,7 @@
             ]
           }
         ],
-        "summary": "Associer un domaine à un fournisseur d’identité",
+        "summary": "Associate a domain with an Identity Provider",
         "tags": [
           "idpManagement"
         ],
@@ -7243,7 +7243,7 @@
     },
     "/identity-providers/{idp_id}/domains/{domain}": {
       "delete": {
-        "description": "Supprimez d’un fournisseur d’identité précisé par son ID pour cette organisation un domaine précisé par son nom.",
+        "description": "Remove a domain specified by name from an Identity Provider specified by ID for this Organization.",
         "operationId": "DeleteOrganizationIdentityProviderDomain",
         "parameters": [
           {
@@ -7285,7 +7285,7 @@
             ]
           }
         ],
-        "summary": "Retirer un domaine d’un fournisseur d’identité",
+        "summary": "Remove a domain from an Identity Provider",
         "tags": [
           "idpManagement"
         ],
@@ -7305,7 +7305,7 @@
     },
     "/identity-providers/{idp_id}/provisioning": {
       "delete": {
-        "description": "Supprimez la configuration de provisionnement d’un fournisseur d’identité précisé par son ID pour cette organisation.",
+        "description": "Delete the Provisioning Configuration for an Identity Provider specified by ID for this Organization.",
         "operationId": "DeleteProvisioningConfiguration",
         "parameters": [
           {
@@ -7344,7 +7344,7 @@
             ]
           }
         ],
-        "summary": "Supprimer une configuration de provisionnement",
+        "summary": "Delete a Provisioning Configuration",
         "tags": [
           "idpManagement"
         ],
@@ -7362,7 +7362,7 @@
         "x-swagger-docs": true
       },
       "get": {
-        "description": "Récupérez la configuration de provisionnement d’un fournisseur d’identité précisé par son ID pour cette organisation.",
+        "description": "Retrieve the Provisioning Configuration for an Identity Provider specified by ID for this Organization.",
         "operationId": "GetIdpProvisioningConfiguration",
         "parameters": [
           {
@@ -7401,7 +7401,7 @@
             ]
           }
         ],
-        "summary": "Récupérer une configuration de provisionnement",
+        "summary": "Get a Provisioning Configuration",
         "tags": [
           "idpManagement"
         ],
@@ -7419,7 +7419,7 @@
         "x-swagger-docs": true
       },
       "post": {
-        "description": "Créez une nouvelle configuration de provisionnement pour un fournisseur d’identité précisé par son ID pour cette organisation.",
+        "description": "Create a new Provisioning Configuration for an Identity Provider specified by ID for this Organization.",
         "operationId": "CreateIdpProvisioningConfiguration",
         "parameters": [
           {
@@ -7458,7 +7458,7 @@
             ]
           }
         ],
-        "summary": "Créer une configuration de provisionnement",
+        "summary": "Create a Provisioning Configuration",
         "tags": [
           "idpManagement"
         ],
@@ -7478,7 +7478,7 @@
     },
     "/identity-providers/{idp_id}/provisioning/scim-tokens": {
       "get": {
-        "description": "Récupérez la liste des [jetons SCIM](https://auth0.com/docs/authenticate/protocols/scim/configure-inbound-scim#scim-endpoints-and-tokens) pour la configuration de provisionnement d’un fournisseur d’identité précisé par son ID pour cette organisation.",
+        "description": "Retrieve a list of [SCIM tokens](https://auth0.com/docs/authenticate/protocols/scim/configure-inbound-scim#scim-endpoints-and-tokens) for the Provisioning Configuration of an Identity Provider specified by ID for this Organization.",
         "operationId": "ListIdpProvisioningScimTokens",
         "parameters": [
           {
@@ -7517,7 +7517,7 @@
             ]
           }
         ],
-        "summary": "Lister les jetons SCIM de provisionnement",
+        "summary": "List Provisioning SCIM tokens",
         "tags": [
           "idpManagement"
         ],
@@ -7536,7 +7536,7 @@
         "x-swagger-docs": true
       },
       "post": {
-        "description": "Créez un nouveau jeton SCIM pour la configuration de provisionnement d’un fournisseur d’identité précisé par son ID pour cette organisation.",
+        "description": "Create a new SCIM token for the Provisioning Configuration of an Identity Provider specified by ID for this Organization.",
         "operationId": "CreateIdpProvisioningScimToken",
         "parameters": [
           {
@@ -7578,7 +7578,7 @@
             ]
           }
         ],
-        "summary": "Créer un jeton SCIM de provisionnement",
+        "summary": "Create a Provisioning SCIM token",
         "tags": [
           "idpManagement"
         ],
@@ -7599,7 +7599,7 @@
     },
     "/identity-providers/{idp_id}/provisioning/scim-tokens/{idp_scim_token_id}": {
       "delete": {
-        "description": "Révoquez un jeton SCIM précisé par l’ID du jeton pour la configuration de provisionnement d’un fournisseur d’identité précisé par son ID pour cette organisation.",
+        "description": "Revoke a SCIM token specified by token ID for the Provisioning Configuration of an Identity Provider specified by ID for this Organization.",
         "operationId": "DeleteIdpProvisioningScimToken",
         "parameters": [
           {
@@ -7641,7 +7641,7 @@
             ]
           }
         ],
-        "summary": "Révoquer un jeton SCIM de provisionnement",
+        "summary": "Revoke a Provisioning SCIM token",
         "tags": [
           "idpManagement"
         ],
@@ -7662,7 +7662,7 @@
     },
     "/identity-providers/{idp_id}/provisioning/update-attributes": {
       "put": {
-        "description": "Actualisez le mappage d’attributs de la configuration de provisionnement d’un fournisseur d’identité précisé par son ID pour cette organisation. Les mappages sont réinitialisés aux valeurs par défaut définies par l’administrateur.",
+        "description": "Refresh the attribute mapping for the Provisioning Configuration of an Identity Provider specified by ID for this Organization. Mappings are reset to the admin-defined defaults.",
         "operationId": "UpdateIdpProvisioningConfigurationAttributes",
         "parameters": [
           {
@@ -7704,7 +7704,7 @@
             ]
           }
         ],
-        "summary": "Actualiser le mappage des attributs de la configuration de provisionnement",
+        "summary": "Refresh Provisioning Configuration attribute mapping",
         "tags": [
           "idpManagement"
         ],
@@ -7724,7 +7724,7 @@
     },
     "/identity-providers/{idp_id}/update-attributes": {
       "put": {
-        "description": "Actualisez le mappage d’attributs d’un fournisseur d’identité précisé par son ID pour cette organisation. Les mappages sont réinitialisés aux valeurs par défaut définies par l’administrateur.",
+        "description": "Refresh the attribute mapping for an Identity Provider specified by ID for this Organization. Mappings are reset to the admin-defined defaults.",
         "operationId": "UpdateOrganizationIdentityProviderAttributes",
         "parameters": [
           {
@@ -7766,7 +7766,7 @@
             ]
           }
         ],
-        "summary": "Actualiser le mappage des attributs du fournisseur d’identité",
+        "summary": "Refresh Identity Provider attribute mapping",
         "tags": [
           "idpManagement"
         ],
@@ -7785,7 +7785,7 @@
     },
     "/member-invitations": {
       "get": {
-        "description": "Récupérez la liste de toutes les invitations destinées aux membres de cette organisation.",
+        "description": "Retrieve a list of all member invitations for this Organization.",
         "operationId": "ListInvitations",
         "parameters": [
           {
@@ -7836,7 +7836,7 @@
             ]
           }
         ],
-        "summary": "Lister les invitations destinées à un membre",
+        "summary": "List member invitations",
         "tags": [
           "orgMemberManagement"
         ],
@@ -7853,7 +7853,7 @@
         "x-release-lifecycle": "beta"
       },
       "post": {
-        "description": "Créez une ou plusieurs invitations destinées aux membres de cette organisation. Si une invitation active existe déjà pour un utilisateur, la génération d’une nouvelle invitation révoquera automatiquement toutes les invitations en attente pour cet utilisateur. Les rôles spécifiés dans la charge utile seront attribués à l’utilisateur lorsqu’il acceptera l’invitation.",
+        "description": "Create one or more member invitations for this Organization. If an active invitation already exists for a user, generating a new invitation will automatically revoke any outstanding invitations for that user. Roles specified in the payload will be granted to the user upon acceptance of the invitation.",
         "operationId": "CreateInvitations",
         "parameters": [
           {
@@ -7899,7 +7899,7 @@
             ]
           }
         ],
-        "summary": "Créer des invitations destinées à un membre",
+        "summary": "Create member invitations",
         "tags": [
           "orgMemberManagement"
         ],
@@ -7917,7 +7917,7 @@
     },
     "/member-invitations/{invitation_id}": {
       "delete": {
-        "description": "Révoquez une invitation destinée à un membre, spécifiée par son ID, pour cette organisation.",
+        "description": "Revoke a member invitation specified by ID for this Organization.",
         "operationId": "DeleteInvitation",
         "parameters": [
           {
@@ -7956,7 +7956,7 @@
             ]
           }
         ],
-        "summary": "Révoquer une invitation destinée à un membre",
+        "summary": "Revoke a member invitation",
         "tags": [
           "orgMemberManagement"
         ],
@@ -7972,7 +7972,7 @@
         "x-release-lifecycle": "beta"
       },
       "get": {
-        "description": "Récupérez les détails d’une invitation destinée à un membre, spécifiée par son ID, pour cette organisation.",
+        "description": "Retrieve details of a member invitation specified by ID for this Organization.",
         "operationId": "GetInvitation",
         "parameters": [
           {
@@ -8017,7 +8017,7 @@
             ]
           }
         ],
-        "summary": "Obtenir une invitation destinée à un membre",
+        "summary": "Get a member invitation",
         "tags": [
           "orgMemberManagement"
         ],
@@ -8036,7 +8036,7 @@
     },
     "/member-invitations/{invitation_id}/roles": {
       "get": {
-        "description": "Récupérez les rôles attribués à une invitation destinée à un membre, spécifiée par son ID, pour cette organisation.",
+        "description": "Retrieve the roles assigned to a member invitation specified by ID for this Organization.",
         "operationId": "ListMemberInvitationRoles",
         "parameters": [
           {
@@ -8075,7 +8075,7 @@
             ]
           }
         ],
-        "summary": "Lister les rôles d’une invitation destinée à un membre",
+        "summary": "List roles for a member invitation",
         "tags": [
           "orgMemberManagement"
         ],
@@ -8095,12 +8095,12 @@
     },
     "/members": {
       "get": {
-        "description": "Récupérez la liste de tous les membres de cette organisation. Le champ `roles` n’est inclus pour un membre que lorsque le jeton contient aussi la portée `read:my_org:member_roles` ; sans cette portée, le champ `roles` est omis de la réponse.",
+        "description": "Retrieve a list of all members for this Organization. The `roles` field is only included for each member when the token also carries the `read:my_org:member_roles` scope; without that scope the `roles` field is omitted from the response.",
         "operationId": "ListOrganizationMembers",
         "parameters": [
           {
             "$ref": "#/components/parameters/FieldsQueryParameter",
-            "description": "Liste de champs séparés par des virgules à inclure ou à exclure (selon la valeur fournie pour include_fields) dans le résultat. Laissez vide pour récupérer tous les champs. Le champ 'roles' n’est pas renvoyé par défaut ; il n’est inclus que lorsque 'roles' est explicitement demandé dans la liste des champs (mode inclusion) et que le jeton contient aussi la portée read:my_org:member_roles. Si 'roles' est demandé sans cette portée, il est silencieusement omis de la réponse."
+            "description": "Comma-separated list of fields to include or exclude (based on value provided for include_fields) in the result. Leave empty to retrieve all fields. The 'roles' field is not returned by default; it is only included when 'roles' is explicitly requested in the fields list (include mode) and the token also carries the read:my_org:member_roles scope. If 'roles' is requested without that scope, it is silently omitted from the response."
           },
           {
             "$ref": "#/components/parameters/IncludeFieldsQueryParameter"
@@ -8156,7 +8156,7 @@
             ]
           }
         ],
-        "summary": "Lister les membres",
+        "summary": "List members",
         "tags": [
           "orgMemberManagement"
         ],
@@ -8175,7 +8175,7 @@
     },
     "/members/{user_id}": {
       "get": {
-        "description": "Récupérez les détails d’un membre spécifié par son ID utilisateur pour cette organisation.",
+        "description": "Retrieve details of a member specified by user ID for this Organization.",
         "operationId": "GetOrganizationMember",
         "parameters": [
           {
@@ -8220,7 +8220,7 @@
             ]
           }
         ],
-        "summary": "Obtenir un membre",
+        "summary": "Get a member",
         "tags": [
           "orgMemberManagement"
         ],
@@ -8239,7 +8239,7 @@
     },
     "/members/{user_id}/roles": {
       "delete": {
-        "description": "Retirez des rôles d’un membre spécifié par son ID pour cette organisation.",
+        "description": "Remove roles from a member specified by ID for this Organization.",
         "operationId": "UnassignOrganizationMemberRolesLegacy",
         "parameters": [
           {
@@ -8281,7 +8281,7 @@
             ]
           }
         ],
-        "summary": "Retirer les rôles d’un membre",
+        "summary": "Remove roles from a member",
         "tags": [
           "orgMemberManagement"
         ],
@@ -8298,7 +8298,7 @@
         "x-release-lifecycle": "beta"
       },
       "get": {
-        "description": "Récupérez la liste des rôles attribués à un membre spécifié par son ID pour cette organisation.",
+        "description": "Retrieve a list of roles assigned to a member specified by ID for this Organization.",
         "operationId": "ListOrgMemberRoles",
         "parameters": [
           {
@@ -8343,7 +8343,7 @@
             ]
           }
         ],
-        "summary": "Lister les rôles d’un membre",
+        "summary": "List member roles",
         "tags": [
           "orgMemberManagement"
         ],
@@ -8361,7 +8361,7 @@
         "x-release-lifecycle": "beta"
       },
       "post": {
-        "description": "Attribuez des rôles à un membre spécifié par son ID pour cette organisation.",
+        "description": "Assign roles to a member specified by ID for this Organization.",
         "operationId": "AssignOrganizationMemberRoles",
         "parameters": [
           {
@@ -8403,7 +8403,7 @@
             ]
           }
         ],
-        "summary": "Attribuer des rôles à un membre",
+        "summary": "Assign roles to a member",
         "tags": [
           "orgMemberManagement"
         ],
@@ -8422,7 +8422,7 @@
     },
     "/members/{user_id}/unassign-roles": {
       "post": {
-        "description": "Retirez des rôles d’un membre spécifié par son ID pour cette organisation.",
+        "description": "Remove roles from a member specified by ID for this Organization.",
         "operationId": "UnassignOrganizationMemberRoles",
         "parameters": [
           {
@@ -8464,7 +8464,7 @@
             ]
           }
         ],
-        "summary": "Retirer les rôles d’un membre",
+        "summary": "Remove roles from a member",
         "tags": [
           "orgMemberManagement"
         ],
@@ -8483,7 +8483,7 @@
     },
     "/roles": {
       "get": {
-        "description": "Récupérez la liste des rôles disponibles pouvant être associés aux membres et aux invitations de cette organisation. Seuls les rôles rendus visibles à cette organisation par l’administrateur de tenant sont renvoyés.",
+        "description": "Retrieve the list of roles available for binding to members and invitations for this Organization. Only roles made visible to this Organization by the Tenant Admin are returned.",
         "operationId": "ListRoles",
         "parameters": [
           {
@@ -8525,7 +8525,7 @@
             ]
           }
         ],
-        "summary": "Lister les rôles",
+        "summary": "List roles",
         "tags": [
           "roles"
         ],
@@ -8549,7 +8549,7 @@
       "variables": {
         "tenantDomain": {
           "default": "{TENANT}.auth0.com",
-          "description": "Domaine du tenant Auth0"
+          "description": "Auth0 Tenant Domain"
         }
       }
     },
@@ -8558,7 +8558,7 @@
       "variables": {
         "tenantDomain": {
           "default": "{TENANT}.auth0.com",
-          "description": "Domaine du tenant Auth0"
+          "description": "Auth0 Tenant Domain"
         }
       }
     }
@@ -8570,42 +8570,42 @@
       "x-displayName": "Configuration"
     },
     {
-      "description": "Gérez les détails liés à votre organisation.",
+      "description": "Manage details related to your organization.",
       "name": "orgDetails",
       "x-displayName": "Organization Details Management"
     },
     {
-      "description": "Gérez les fournisseurs d’identité de votre organisation.",
+      "description": "Manage Identity Providers for your Organization.",
       "name": "idpManagement",
       "x-displayName": "Identity Provider Management"
     },
     {
-      "description": "Gérer les répertoires d’utilisateurs de votre organisation.",
+      "description": "Manage User Stores for your Organization.",
       "name": "userStoresManagement",
       "x-displayName": "User Stores Management"
     },
     {
-      "description": "Gérer les domaines associés à votre organisation",
+      "description": "Manage domains related to your organization",
       "name": "orgDomainManagement",
       "x-displayName": "Domain Management"
     },
     {
-      "description": "Gérer les membres de votre organisation",
+      "description": "Manage members related to your organization",
       "name": "orgMemberManagement",
       "x-displayName": "Member Management"
     },
     {
-      "description": "Gérer les autorisations client de votre organisation",
+      "description": "Manage client grants for your organization",
       "name": "clientGrantManagement",
       "x-displayName": "Client Grant Management"
     },
     {
-      "description": "Gérer les clients API de votre organisation",
+      "description": "Manage API clients for your organization",
       "name": "clientManagement",
       "x-displayName": "Client Management"
     },
     {
-      "description": "Gérer les rôles de votre organisation",
+      "description": "Manage roles for your organization",
       "name": "roles",
       "x-displayName": "Roles"
     }

@@ -4,7 +4,7 @@ description: "OAuth 2.0 Implicit Flow を開始し、認可エンドポイント
 ---
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `GET /authorize`
@@ -12,11 +12,11 @@ description: "OAuth 2.0 Implicit Flow を開始し、認可エンドポイント
 これは、ウェブアプリがAPIにアクセスする際に利用するOAuth 2.0の認可グラントです。
 
 <div id="responses">
-  ### レスポンス
+  ### レスポンス {#responses}
 </div>
 
 <div id="302">
-  #### 302
+  #### 302 {#302}
 </div>
 
 リクエストが成功すると、ユーザーはアクセストークン付きで指定されたコールバックURLにリダイレクトされます。
@@ -27,7 +27,7 @@ Location: ${account.callback}#access_token=TOKEN&state=STATE&token_type=TYPE&exp
 ```
 
 <div id="remarks">
-  ### 注意事項
+  ### 注意事項 {#remarks}
 </div>
 
 * `redirect_uri` の値は、[Application&#39;s Settings](https://manage.auth0.com/dashboard) で有効なコールバック URL として指定する必要があります。
@@ -37,7 +37,7 @@ Location: ${account.callback}#access_token=TOKEN&state=STATE&token_type=TYPE&exp
 * サイレント認証 を使うと、Auth0 がリダイレクトのみを返し、ログインページを表示しない認証フローを実行できます。アクセストークンの有効期限が切れた場合でも、ユーザーのシングルサインオン (SSO) セッションが有効であれば、ユーザーの操作なしで新しいトークンを取得できます。
 
 <div id="learn-more">
-  ### 詳細情報
+  ### 詳細情報 {#learn-more}
 </div>
 
 * [Implicit Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post)
@@ -46,7 +46,7 @@ Location: ${account.callback}#access_token=TOKEN&state=STATE&token_type=TYPE&exp
 * [サイレント認証](https://auth0.com/docs/authenticate/login/configure-silent-authentication)
 
 <div id="query-parameters">
-  ## クエリパラメーター
+  ## クエリパラメーター {#query-parameters}
 </div>
 
 <ParamField query="audience" type="string">
@@ -100,7 +100,7 @@ Location: ${account.callback}#access_token=TOKEN&state=STATE&token_type=TYPE&exp
 </ParamField>
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | ステータス | 説明                                     |

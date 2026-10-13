@@ -26,7 +26,7 @@
           "assign_membership_on_login": false,
           "attributes": [
             {
-              "description": "優先ユーザー名",
+              "description": "Preferred Username",
               "is_extra": false,
               "is_missing": false,
               "is_required": true,
@@ -76,7 +76,7 @@
         "value": {
           "attributes": [
             {
-              "description": "優先ユーザー名",
+              "description": "Preferred Username",
               "is_extra": false,
               "is_missing": false,
               "is_required": true,
@@ -287,11 +287,11 @@
               "name": "Example API",
               "scopes": [
                 {
-                  "description": "データへの読み取りアクセス",
+                  "description": "Read access to data",
                   "value": "read:data"
                 },
                 {
-                  "description": "データへの書き込みアクセス",
+                  "description": "Write access to data",
                   "value": "write:data"
                 }
               ]
@@ -301,7 +301,7 @@
               "name": "Another API",
               "scopes": [
                 {
-                  "description": "リソースの管理",
+                  "description": "Manage resources",
                   "value": "manage:resources"
                 }
               ]
@@ -322,7 +322,7 @@
         "value": {
           "attributes": [
             {
-              "description": "優先ユーザー名",
+              "description": "Preferred Username",
               "is_extra": false,
               "is_missing": false,
               "is_required": true,
@@ -353,7 +353,7 @@
           "assign_membership_on_login": false,
           "attributes": [
             {
-              "description": "優先ユーザー名",
+              "description": "Preferred Username",
               "is_extra": false,
               "is_missing": false,
               "is_required": true,
@@ -469,7 +469,7 @@
         "value": {
           "roles": [
             {
-              "description": "組織管理者",
+              "description": "Organization administrator",
               "id": "rol_BKW1BKIfBKd0BaI0",
               "name": "admin"
             },
@@ -521,12 +521,12 @@
         "value": {
           "roles": [
             {
-              "description": "role1 の説明",
+              "description": "role1 description",
               "id": "rol_SO2j0sFo9NFa3F9w",
               "name": "role1"
             },
             {
-              "description": "role2 の説明",
+              "description": "role2 description",
               "id": "rol_BO2j1sFo9NFa3F9w",
               "name": "role2"
             }
@@ -548,7 +548,7 @@
             {
               "app_type": "non_interactive",
               "client_id": "abc123def456",
-              "description": "バックエンドサービス向けのマシンツーマシンクライアント",
+              "description": "Machine-to-machine client for backend services",
               "grant_types": [
                 "client_credentials"
               ],
@@ -558,7 +558,7 @@
             {
               "app_type": "non_interactive",
               "client_id": "xyz789ghi012",
-              "description": "別のマシンツーマシンクライアント",
+              "description": "Another machine-to-machine client",
               "grant_types": [
                 "client_credentials"
               ],
@@ -592,7 +592,7 @@
               "assign_membership_on_login": false,
               "attributes": [
                 {
-                  "description": "優先ユーザー名",
+                  "description": "Preferred Username",
                   "is_extra": false,
                   "is_missing": false,
                   "is_required": true,
@@ -632,7 +632,7 @@
               "assign_membership_on_login": false,
               "attributes": [
                 {
-                  "description": "優先ユーザー名",
+                  "description": "Preferred Username",
                   "is_extra": false,
                   "is_missing": false,
                   "is_required": true,
@@ -768,12 +768,12 @@
           "next": "abc123",
           "roles": [
             {
-              "description": "完全なアクセス権を持つ管理者ロール",
+              "description": "Administrator role with full access",
               "id": "rol_BKI0BKI0BKI0BKI0",
               "name": "Admin"
             },
             {
-              "description": "制限付きアクセス権を持つ標準ユーザーロール",
+              "description": "Standard user role with limited access",
               "id": "rol_BKI0BKI0BKI0BKI1",
               "name": "User"
             }
@@ -830,7 +830,7 @@
           "assign_membership_on_login": false,
           "attributes": [
             {
-              "description": "優先ユーザー名",
+              "description": "Preferred Username",
               "is_extra": false,
               "is_missing": false,
               "is_required": true,
@@ -896,13 +896,13 @@
     },
     "headers": {
       "Retry-After": {
-        "description": "クライアントが新しいリクエストを行う前に待機すべき秒数。",
+        "description": "The number of seconds the client should wait before making a new request.",
         "schema": {
           "type": "integer"
         }
       },
       "X-Auth0-Error-Kind": {
-        "description": "超過したレート制限がグローバル（テナント単位）の制限であることを示す指標。",
+        "description": "An indicator that the rate limit exceeded a is global (per tenant) limit.",
         "schema": {
           "enum": [
             "global-rate-limit"
@@ -911,19 +911,19 @@
         }
       },
       "X-RateLimit-Limit": {
-        "description": "現在のレート制限ウィンドウで許可されているリクエスト数。",
+        "description": "The number of allowed requests in the current rate limit window.",
         "schema": {
           "type": "integer"
         }
       },
       "X-RateLimit-Remaining": {
-        "description": "現在のレート制限ウィンドウで残っているリクエスト数。",
+        "description": "The number of remaining requests in the current rate limit window.",
         "schema": {
           "type": "integer"
         }
       },
       "X-RateLimit-Reset": {
-        "description": "現在のレート制限ウィンドウがリセットされる時刻を示す Unix タイムスタンプ。",
+        "description": "The Unix timestamp indicating when the current rate limit window resets.",
         "schema": {
           "type": "integer"
         }
@@ -931,7 +931,7 @@
     },
     "parameters": {
       "FieldsQueryParameter": {
-        "description": "結果に含める、または除外するフィールドのカンマ区切りリスト（include_fields に指定した値に応じます）。すべてのフィールドを取得するには空のままにします。",
+        "description": "Comma-separated list of fields to include or exclude (based on value provided for include_fields) in the result. Leave empty to retrieve all fields.",
         "in": "query",
         "name": "fields",
         "required": false,
@@ -958,7 +958,7 @@
         }
       },
       "IncludeFieldsQueryParameter": {
-        "description": "指定したフィールドを含める（true）か、除外する（false）か。既定値は true です。",
+        "description": "Whether specified fields are to be included (true) or excluded (false). Defaults to true",
         "in": "query",
         "name": "include_fields",
         "required": false,
@@ -976,7 +976,7 @@
         }
       },
       "IsEnabledRequestQueryParameter": {
-        "description": "返されるユーザーストアの一覧を有効ステータスでフィルタリングするかどうか。",
+        "description": "Whether the returned list of user stores are filtered on their enabled status.",
         "in": "query",
         "name": "is_enabled",
         "required": false,
@@ -985,7 +985,7 @@
         }
       },
       "MemberAccessLevelFilterQueryParameter": {
-        "description": "指定した場合、組織メンバーアクセスレベルが指定値のいずれかと一致する接続のみが返されます。有効な値は full、limited、readonly、none です。",
+        "description": "When present, only connections whose Organization Member Access Level matches one of the provided values are returned. Accepted values are full, limited, readonly and none.",
         "in": "query",
         "name": "member_access_level",
         "required": false,
@@ -998,7 +998,7 @@
         }
       },
       "MemberInvitationFieldsQueryParameter": {
-        "description": "結果に含める、または除外するフィールドのカンマ区切りリスト（include_fields に指定した値に応じます）。すべてのフィールドを取得するには空のままにします。注: ticket_id では絞り込みできず、この値はフィールドを絞り込んでいない場合にのみ返されます。",
+        "description": "Comma-separated list of fields to include or exclude (based on value provided for include_fields) in the result. Leave empty to retrieve all fields. Note: you cannot filter on ticket_id and this value will only be returned when fields are not filtered.",
         "in": "query",
         "name": "fields",
         "required": false,
@@ -1010,7 +1010,7 @@
         }
       },
       "NameFilterQueryParameter": {
-        "description": "名前による任意のフィルター（大文字と小文字を区別しません）。",
+        "description": "An optional filter on the name (case-insensitive).",
         "in": "query",
         "name": "name",
         "required": false,
@@ -1021,7 +1021,7 @@
         }
       },
       "OrgClientIdPathParameter": {
-        "description": "クライアントID",
+        "description": "The ID of the client",
         "in": "path",
         "name": "client_id",
         "required": true,
@@ -1054,7 +1054,7 @@
         }
       },
       "PaginationFromQueryParameter": {
-        "description": "選択を開始する位置を示す任意のカーソル（この値自体は含まれません）。",
+        "description": "An optional cursor from which to start the selection (exclusive).",
         "in": "query",
         "name": "from",
         "required": false,
@@ -1065,7 +1065,7 @@
         }
       },
       "PaginationTakeQueryParameter": {
-        "description": "1ページあたりの結果数。既定値は 50 です。",
+        "description": "Number of results per page. Defaults to 50.",
         "in": "query",
         "name": "take",
         "required": false,
@@ -1077,7 +1077,7 @@
         }
       },
       "SortQueryParameter": {
-        "description": "並べ替えるフィールド。order には昇順の場合は 1、降順の場合は -1 を指定し、field:order の形式で指定します。既定値は created_at:-1 です。",
+        "description": "Field to sort by. Use field:order where order is 1 for ascending and -1 for descending. Defaults to created_at:-1",
         "in": "query",
         "name": "sort",
         "required": false,
@@ -1088,7 +1088,7 @@
         }
       },
       "UserPermissionsRequestQueryParameter": {
-        "description": "ユーザーのアクセスを確認するための権限のカンマ区切りリストです。",
+        "description": "Comma-separated list of permissions to confirm the user's access.",
         "in": "query",
         "name": "permissions",
         "required": true,
@@ -1286,7 +1286,7 @@
     },
     "responses": {
       "AssignOrganizationMemberRolesResponse": {
-        "description": "ロールがメンバーに正常に割り当てられました。",
+        "description": "Role(s) successfully assigned to member.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1328,7 +1328,7 @@
             }
           }
         },
-        "description": "無効なリクエスト本文です。メッセージは原因によって異なります。"
+        "description": "Invalid request body. The message will vary depending on the cause."
       },
       "ClientErrorConfigConflictResponse": {
         "content": {
@@ -1343,7 +1343,7 @@
             }
           }
         },
-        "description": "サーバー構成が不足しているか無効です。tenant の管理者に問い合わせてください。"
+        "description": "Missing or invalid server configuration, contact tenant admin."
       },
       "ClientErrorDomainAssociationConflictResponse": {
         "content": {
@@ -1358,7 +1358,7 @@
             }
           }
         },
-        "description": "ドメインはすでにこのアイデンティティプロバイダーに関連付けられています。"
+        "description": "Domain is already associated with this identity provider."
       },
       "ClientErrorDomainConflictResponse": {
         "content": {
@@ -1373,7 +1373,7 @@
             }
           }
         },
-        "description": "ドメイン名はすでに存在します。"
+        "description": "Domain name already exists."
       },
       "ClientErrorInsufficientScopeResponse": {
         "content": {
@@ -1388,7 +1388,7 @@
             }
           }
         },
-        "description": "スコープが不足しています。"
+        "description": "Insufficient scope."
       },
       "ClientErrorNotFoundOrgOrClientResponse": {
         "content": {
@@ -1406,7 +1406,7 @@
             }
           }
         },
-        "description": "リソースが見つかりません。"
+        "description": "Resource not found."
       },
       "ClientErrorNotFoundOrgOrIdpResponse": {
         "content": {
@@ -1424,7 +1424,7 @@
             }
           }
         },
-        "description": "リソースが見つかりません。"
+        "description": "Resource not found."
       },
       "ClientErrorNotFoundOrganizationResponse": {
         "content": {
@@ -1439,7 +1439,7 @@
             }
           }
         },
-        "description": "組織が見つかりません。"
+        "description": "Organization not found."
       },
       "ClientErrorTooManyRequestsResponse": {
         "content": {
@@ -1454,7 +1454,7 @@
             }
           }
         },
-        "description": "リクエストが多すぎます。X-RateLimit-Limit、X-RateLimit-Remaining、X-RateLimit-Reset ヘッダーを確認してください。",
+        "description": "Too many requests. Check the X-RateLimit-Limit, X-RateLimit-Remaining and X-RateLimit-Reset headers.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1486,7 +1486,7 @@
             }
           }
         },
-        "description": "認証されていません: token がないか、無効か、有効期限が切れています。"
+        "description": "Unauthorized: token missing, invalid or expired."
       },
       "CreateClientGrantResponse": {
         "content": {
@@ -1496,7 +1496,7 @@
             }
           }
         },
-        "description": "クライアントグラントが正常に作成されました。",
+        "description": "Client grant successfully created.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1523,7 +1523,7 @@
             }
           }
         },
-        "description": "クライアントが正常に作成されました。",
+        "description": "Client successfully created.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1555,7 +1555,7 @@
             }
           }
         },
-        "description": "プロビジョニング設定が正常に作成されました。",
+        "description": "Provisioning configuration successfully created.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1587,7 +1587,7 @@
             }
           }
         },
-        "description": "アイデンティティプロバイダーが正常に作成されました。",
+        "description": "Identity provider successfully created.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1619,7 +1619,7 @@
             }
           }
         },
-        "description": "ドメインがアイデンティティプロバイダーに正常に関連付けられました。",
+        "description": "Domain successfully associated with identity provider.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1651,7 +1651,7 @@
             }
           }
         },
-        "description": "プロビジョニングSCIMトークンが正常に作成されました。",
+        "description": "Provisioning SCIM token successfully created.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1683,7 +1683,7 @@
             }
           }
         },
-        "description": "Organizationのメンバー招待を作成します。",
+        "description": "Create Member Invitations for an Organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1715,7 +1715,7 @@
             }
           }
         },
-        "description": "organizationのドメインが正常に作成されました。",
+        "description": "Domain successfully created for organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1735,7 +1735,7 @@
         }
       },
       "DeleteClientResponse": {
-        "description": "クライアントが正常に削除されました。",
+        "description": "Client successfully deleted.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1755,7 +1755,7 @@
         }
       },
       "DeleteIdentityProviderResponse": {
-        "description": "アイデンティティプロバイダーがorganizationから正常に削除されました。",
+        "description": "The identity provider was successfully removed from the organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1775,7 +1775,7 @@
         }
       },
       "DeleteIdpDomainResponse": {
-        "description": "ドメインがアイデンティティプロバイダーから正常に削除されました。",
+        "description": "The domain was successfully removed from the identity provider.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1795,7 +1795,7 @@
         }
       },
       "DeleteIdpProvisioningConfigResponse": {
-        "description": "プロビジョニング設定がアイデンティティプロバイダーから正常に削除されました。",
+        "description": "The Provisioning config was successfully removed from the identity provider.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1815,7 +1815,7 @@
         }
       },
       "DeleteIdpProvisioningScimTokenResponse": {
-        "description": "プロビジョニングSCIMトークンが正常に削除されました。",
+        "description": "The Provisioning SCIM token was successfully deleted.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1835,7 +1835,7 @@
         }
       },
       "DeleteMemberInvitationResponse": {
-        "description": "メンバー招待が正常に削除されました。",
+        "description": "Member invitation was successfully deleted.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1855,7 +1855,7 @@
         }
       },
       "DeleteMemberInvitationsResponse": {
-        "description": "メンバー招待が正常に削除されました。",
+        "description": "Member invitations were successfully deleted.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1875,7 +1875,7 @@
         }
       },
       "DeleteMyOrganizationResponse": {
-        "description": "組織が正常に削除されました。",
+        "description": "The organization was successfully deleted.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1895,7 +1895,7 @@
         }
       },
       "DeleteOrganizationDomainResponse": {
-        "description": "ドメインがorganizationから正常に削除されました。",
+        "description": "The domain was successfully removed from the organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1915,7 +1915,7 @@
         }
       },
       "DeleteOrganizationMembershipsResponse": {
-        "description": "組織のメンバーシップは正常に削除されました。",
+        "description": "The Organization memberships were removed successfully.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1935,7 +1935,7 @@
         }
       },
       "DetachIdpProviderResponse": {
-        "description": "アイデンティティプロバイダーがorganizationから正常に関連付け解除されました。",
+        "description": "The identity provider was successfully detached from the organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1967,7 +1967,7 @@
             }
           }
         },
-        "description": "許可されたAPIが正常に取得されました。",
+        "description": "Allowed APIs successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -1999,7 +1999,7 @@
             }
           }
         },
-        "description": "Configurationが正常に取得されました。",
+        "description": "Configuration successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2031,7 +2031,7 @@
             }
           }
         },
-        "description": "プロビジョニング設定が正常に取得されました。",
+        "description": "Provisioning config successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2063,7 +2063,7 @@
             }
           }
         },
-        "description": "アイデンティティプロバイダーが正常に取得されました。",
+        "description": "Identity provider successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2095,7 +2095,7 @@
             }
           }
         },
-        "description": "アイデンティティプロバイダーの設定が正常に取得されました。",
+        "description": "Identity provider configuration successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2127,7 +2127,7 @@
             }
           }
         },
-        "description": "IDでOrganizationのメンバー招待を取得します。",
+        "description": "Get Member Invitation for an Organization by Id.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2159,7 +2159,7 @@
             }
           }
         },
-        "description": "メンバー招待に割り当てられているロールが正常に取得されました。",
+        "description": "Retrieved the roles assigned to the member invitation successfully.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2191,7 +2191,7 @@
             }
           }
         },
-        "description": "organizationの詳細が正常に取得されました。",
+        "description": "Organization details successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2223,7 +2223,7 @@
             }
           }
         },
-        "description": "組織ドメインが正常に取得されました。",
+        "description": "Organization domain successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2255,7 +2255,7 @@
             }
           }
         },
-        "description": "organizationのメンバーを取得します。",
+        "description": "Retrieve a member of the organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2287,7 +2287,7 @@
             }
           }
         },
-        "description": "ユーザー権限が正常に取得されました。",
+        "description": "User permissions successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2319,7 +2319,7 @@
             }
           }
         },
-        "description": "クライアントが正常に取得されました。",
+        "description": "Clients successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2351,7 +2351,7 @@
             }
           }
         },
-        "description": "組織ドメインのアイデンティティプロバイダーを一覧表示します。",
+        "description": "List identity providers for an organization domain.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2383,7 +2383,7 @@
             }
           }
         },
-        "description": "アイデンティティプロバイダーの一覧が正常に取得されました。",
+        "description": "List of identity providers successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2415,7 +2415,7 @@
             }
           }
         },
-        "description": "アイデンティティプロバイダーのプロビジョニングSCIMトークンを一覧表示します。",
+        "description": "List Provisioning SCIM tokens for an identity provider.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2447,7 +2447,7 @@
             }
           }
         },
-        "description": "Organizationのメンバー招待を一覧表示します。",
+        "description": "List Members Invitations for an Organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2479,7 +2479,7 @@
             }
           }
         },
-        "description": "organizationのドメインを一覧表示します。",
+        "description": "List domains for an organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2511,7 +2511,7 @@
             }
           }
         },
-        "description": "メンバーのロールが正常に取得されました。",
+        "description": "Retrieved memeber roles successfully.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2543,7 +2543,7 @@
             }
           }
         },
-        "description": "organizationのメンバーを一覧表示します。",
+        "description": "List members for an organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2575,7 +2575,7 @@
             }
           }
         },
-        "description": "組織のロールを取得します。",
+        "description": "Retrieve roles for the organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2607,7 +2607,7 @@
             }
           }
         },
-        "description": "組織のユーザーストアを取得します。",
+        "description": "Retrieve user stores for an Organization.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2639,7 +2639,7 @@
             }
           }
         },
-        "description": "組織ドメインの検証が正常に開始されました。",
+        "description": "Organization domain verification successfully started.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2659,7 +2659,7 @@
         }
       },
       "UnassignOrganizationMemberRolesResponse": {
-        "description": "メンバーへのロールの割り当てが正常に解除されました。",
+        "description": "Role(s) successfully unassigned from member.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2691,7 +2691,7 @@
             }
           }
         },
-        "description": "アイデンティティプロバイダーが正常に更新されました。",
+        "description": "Identity provider successfully updated.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2723,7 +2723,7 @@
             }
           }
         },
-        "description": "organizationの詳細が正常に取得されました。",
+        "description": "Organization details successfully retrieved.",
         "headers": {
           "Retry-After": {
             "$ref": "#/components/headers/Retry-After"
@@ -2755,7 +2755,7 @@
             }
           }
         },
-        "description": "無効なリクエスト本文です。メッセージは原因によって異なります。"
+        "description": "Invalid request body. The message will vary depending on the cause."
       }
     },
     "schemas": {
@@ -2763,17 +2763,17 @@
         "additionalProperties": false,
         "properties": {
           "identifier": {
-            "description": "APIの一意の識別子。この値は認可リクエストで audience パラメーターとして使用されます。",
+            "description": "Unique identifier for the API. This value will be used as the audience parameter on authorization calls.",
             "type": "string"
           },
           "name": {
-            "description": "APIの表示名。次の文字は使用できません < >",
+            "description": "A friendly name for the API. The following characters are not allowed < >",
             "maxLength": 200,
             "pattern": "^[^<>]+$",
             "type": "string"
           },
           "scopes": {
-            "description": "このAPIで利用可能なscopes。",
+            "description": "The scopes available for this API.",
             "items": {
               "$ref": "#/components/schemas/AllowedApiScope"
             },
@@ -2791,11 +2791,11 @@
         "additionalProperties": false,
         "properties": {
           "description": {
-            "description": "scopeの説明。",
+            "description": "A description of the scope.",
             "type": "string"
           },
           "value": {
-            "description": "scope値。",
+            "description": "The scope value.",
             "type": "string"
           }
         },
@@ -2808,27 +2808,27 @@
       "BaseUserAttributeMapItem": {
         "properties": {
           "description": {
-            "description": "ユーザー属性の説明。",
+            "description": "The description of the user attribute.",
             "type": "string"
           },
           "is_extra": {
-            "description": "この属性が管理者定義のschemaには含まれていないものの、ソースから提供されているかどうかを示します。更新操作を実行すると、このプロパティは削除されます。",
+            "description": "Indicates whether this attribute is not part of the admin defined schema but is provided by the source. The property will be removed when a refresh operation is performed.",
             "type": "boolean"
           },
           "is_missing": {
-            "description": "この属性が想定されているものの、管理者定義のschemaでは提供されていないかどうかを示します。更新操作を実行すると、このプロパティは追加されます。",
+            "description": "Indicates whether this attribute is expected but not provided by the admin defined schema. The property will be added when a refresh operation is performed.",
             "type": "boolean"
           },
           "is_required": {
-            "description": "この属性が必須かどうかを示します。",
+            "description": "Indicates if the attribute is required.",
             "type": "boolean"
           },
           "label": {
-            "description": "ユーザー属性のラベル。",
+            "description": "The label of the user attribute.",
             "type": "string"
           },
           "user_attribute": {
-            "description": "ユーザー属性の名前。",
+            "description": "The name of the user attribute.",
             "type": "string"
           }
         },
@@ -2840,38 +2840,38 @@
         "type": "object"
       },
       "ClientAppTypeEnum": {
-        "description": "このクライアントが表すアプリケーションの種類",
+        "description": "The type of application this client represents",
         "enum": [
           "non_interactive"
         ],
         "type": "string"
       },
       "ClientDescription": {
-        "description": "このクライアントの自由記述の説明（最大長: 140 文字）。",
+        "description": "Free text description of this client (max length: 140 characters).",
         "maxLength": 140,
         "type": "string"
       },
       "ClientGrantTypeEnum": {
-        "description": "OAuth 2.0 のグラントタイプ",
+        "description": "OAuth 2.0 grant type",
         "enum": [
           "client_credentials"
         ],
         "type": "string"
       },
       "ClientGrantTypes": {
-        "description": "このアプリケーションでサポートされるグラントタイプの一覧。受け付けるのは ['client_credentials'] のみです",
+        "description": "List of grant types supported for this application. Only accepts ['client_credentials']",
         "items": {
           "$ref": "#/components/schemas/ClientGrantTypeEnum"
         },
         "type": "array"
       },
       "ClientId": {
-        "description": "このクライアントの ID。",
+        "description": "ID of this client.",
         "type": "string"
       },
       "ClientJwtAlgEnum": {
         "default": "HS256",
-        "description": "JWT の署名に使用するアルゴリズム。",
+        "description": "Algorithm used to sign JWTs.",
         "enum": [
           "HS256",
           "RS256",
@@ -2887,26 +2887,26 @@
             "$ref": "#/components/schemas/ClientJwtAlgEnum"
           },
           "lifetime_in_seconds": {
-            "description": "JWT の有効期間（秒）",
+            "description": "Number of seconds the JWT will be valid",
             "minimum": 0,
             "type": "number"
           },
           "secret_encoded": {
-            "description": "クライアントシークレットが base64 エンコードされているかどうか",
+            "description": "Whether the client secret is base64 encoded",
             "type": "boolean"
           }
         },
         "type": "object"
       },
       "ClientName": {
-        "description": "このクライアントの名前（最小長: 1 文字、< または > は使用できません）。",
+        "description": "Name of this client (min length: 1 character, does not allow < or >).",
         "maxLength": 50,
         "minLength": 1,
         "pattern": "^[^<>]+$",
         "type": "string"
       },
       "ClientTokenEndpointAuthMethodEnum": {
-        "description": "token endpoint の認証方法",
+        "description": "Authentication method for the token endpoint",
         "enum": [
           "client_secret_post",
           "client_secret_basic",
@@ -2918,15 +2918,15 @@
         "additionalProperties": false,
         "properties": {
           "audience": {
-            "description": "このクライアントグラントの audience（API 識別子）。",
+            "description": "The audience (API identifier) of this client grant.",
             "type": "string"
           },
           "client_id": {
-            "description": "クライアントの ID。",
+            "description": "ID of the client.",
             "type": "string"
           },
           "scope": {
-            "description": "このクライアントグラントで許可されているスコープ。",
+            "description": "Scopes allowed for this client grant.",
             "items": {
               "maxLength": 280,
               "minLength": 1,
@@ -2952,24 +2952,24 @@
         "additionalProperties": false,
         "properties": {
           "audience": {
-            "description": "このクライアントグラントの audience（API 識別子）。",
+            "description": "The audience (API identifier) of this client grant.",
             "type": "string"
           },
           "client_id": {
-            "description": "クライアントの ID。",
+            "description": "ID of the client.",
             "type": "string"
           },
           "created_at": {
-            "description": "クライアントグラントが作成された ISO 8601 形式の日時。",
+            "description": "The ISO 8601 date and time when the client grant was created.",
             "format": "date-time",
             "type": "string"
           },
           "id": {
-            "description": "クライアントグラントの ID。",
+            "description": "ID of the client grant.",
             "type": "string"
           },
           "scope": {
-            "description": "このクライアントグラントで許可されているスコープ。",
+            "description": "The scopes allowed for this client grant.",
             "items": {
               "maxLength": 280,
               "minLength": 1,
@@ -3031,11 +3031,11 @@
             "$ref": "#/components/schemas/ClientId"
           },
           "client_secret": {
-            "description": "クライアントシークレット（返されるのは作成時のみで、それ以降は返されません）",
+            "description": "Client secret (ONLY returned on creation, never again)",
             "type": "string"
           },
           "created_at": {
-            "description": "クライアントの作成日時を示すタイムスタンプ",
+            "description": "Timestamp when the client was created",
             "format": "date-time",
             "type": "string"
           },
@@ -3055,7 +3055,7 @@
             "$ref": "#/components/schemas/ClientTokenEndpointAuthMethodEnum"
           },
           "updated_at": {
-            "description": "クライアントが最後に更新された日時を示すタイムスタンプ",
+            "description": "Timestamp when the client was last updated",
             "format": "date-time",
             "type": "string"
           }
@@ -3129,7 +3129,7 @@
         "additionalProperties": false,
         "properties": {
           "token_lifetime": {
-            "description": "token の有効期間（秒）。有効期限のない token には設定しないでください。",
+            "description": "Lifetime of the token in seconds. Do not set for non-expiring tokens.",
             "exclusiveMinimum": 900,
             "type": "integer"
           }
@@ -3143,14 +3143,14 @@
         "additionalProperties": false,
         "properties": {
           "email": {
-            "description": "招待されるユーザーのメールアドレス。",
+            "description": "The invitee's email.",
             "format": "email",
             "maxLength": 320,
             "minLength": 1,
             "type": "string"
           },
           "roles": {
-            "description": "ユーザーに関連付けるロール ID の一覧。",
+            "description": "List of role IDs to associate with the user.",
             "items": {
               "$ref": "#/components/schemas/RoleId"
             },
@@ -3169,7 +3169,7 @@
         "additionalProperties": false,
         "properties": {
           "identity_provider_id": {
-            "description": "アイデンティティプロバイダーの識別子。identity_provider_id または user_store_id の少なくとも一方を指定する必要があります。",
+            "description": "Identity provider identifier. At least one of identity_provider_id or user_store_id must be provided.",
             "pattern": "^con_[A-Za-z0-9]{16}$",
             "type": "string"
           },
@@ -3186,7 +3186,7 @@
           },
           "ttl_sec": {
             "default": 604800,
-            "description": "招待の有効期限が切れるまでの有効秒数。指定しない場合、または 0 に設定した場合、この値はデフォルトで 604800 秒（7 日）になります。最大値: 2592000 秒（30 日）。",
+            "description": "Number of seconds for which the invitation is valid before expiration. If unspecified or set to 0, this value defaults to 604800 seconds (7 days). Max value: 2592000 seconds (30 days).",
             "maximum": 2592000,
             "minimum": 0,
             "type": "integer"
@@ -3219,11 +3219,11 @@
         "$ref": "#/components/schemas/OrgDomain"
       },
       "CrossAppAccessResourceApp": {
-        "description": "クロスアプリアクセス用リソースアプリケーションの設定。",
+        "description": "Cross-app access resource application configuration.",
         "properties": {
           "status": {
             "$ref": "#/components/schemas/CrossAppAccessResourceAppStatusEnum",
-            "description": "クロスアプリアクセス用リソースアプリケーションのステータス。"
+            "description": "The status of the cross-app access resource application."
           }
         },
         "required": [
@@ -3232,7 +3232,7 @@
         "type": "object"
       },
       "CrossAppAccessResourceAppStatusEnum": {
-        "description": "クロスアプリアクセス用リソースアプリケーションのステータス。",
+        "description": "The status of the cross-app access resource application.",
         "enum": [
           "enabled",
           "disabled"
@@ -3280,7 +3280,7 @@
           {
             "properties": {
               "display_name": {
-                "description": "ログイン画面で使用されるIDプロバイダー名。",
+                "description": "Identity provider name used on the login screen.",
                 "maxLength": 128,
                 "minLength": 1,
                 "type": "string"
@@ -3289,7 +3289,7 @@
                 "$ref": "#/components/schemas/IdpId"
               },
               "name": {
-                "description": "アイデンティティプロバイダーの名前",
+                "description": "The name of the identity provider",
                 "maxLength": 128,
                 "minLength": 1,
                 "type": "string"
@@ -3307,19 +3307,19 @@
         "additionalProperties": false,
         "properties": {
           "detail": {
-            "description": "エラーの詳細な説明。",
+            "description": "A detailed description of the error.",
             "type": "string"
           },
           "status": {
-            "description": "request の HTTP ステータスコードの結果。",
+            "description": "The HTTP status code result of the request.",
             "type": "integer"
           },
           "title": {
-            "description": "エラーの簡単な説明。",
+            "description": "A brief description of the error.",
             "type": "string"
           },
           "type": {
-            "description": "エラーの説明を示す URI。",
+            "description": "A URI that describes the error.",
             "format": "uri",
             "type": "string"
           }
@@ -3351,7 +3351,7 @@
         "additionalProperties": false,
         "properties": {
           "allowed_strategies": {
-            "description": "サポートされているストラテジーの配列",
+            "description": "Array of supported strategies",
             "items": {
               "$ref": "#/components/schemas/IdpStrategyEnum"
             },
@@ -3432,7 +3432,7 @@
         "additionalProperties": false,
         "properties": {
           "next": {
-            "description": "結果の次のページを取得するためのページネーションカーソル",
+            "description": "Pagination cursor for the next page of results",
             "type": "string"
           },
           "roles": {
@@ -3548,7 +3548,7 @@
         "type": "object"
       },
       "IdentityProvidersConfigEnabledFeaturesEnum": {
-        "description": "アイデンティティプロバイダーで有効な機能",
+        "description": "The enabled features for the identity provider",
         "enum": [
           "provisioning",
           "universal_logout"
@@ -3557,14 +3557,14 @@
       },
       "IdentityProvidersConfigOrganization": {
         "additionalProperties": false,
-        "description": "アイデンティティプロバイダー用のorganization設定。",
+        "description": "The organization config for identity providers.",
         "properties": {
           "can_set_assign_membership_on_login": {
-            "description": "Org Admin が assign_membership_on_login を設定できるかどうか",
+            "description": "If Org Admin can set assign_membership_on_login",
             "type": "boolean"
           },
           "can_set_show_as_button": {
-            "description": "Org Admin が show_as_button を設定できるかどうか",
+            "description": "If Org Admin can set show_as_button",
             "type": "boolean"
           }
         },
@@ -3575,17 +3575,17 @@
         "type": "object"
       },
       "IdentityProvidersConfigProvisioningMethodsEnum": {
-        "description": "アイデンティティプロバイダーのプロビジョニング方法",
+        "description": "The provisioning method for the identity provider",
         "enum": [
           "scim"
         ],
         "type": "string"
       },
       "IdentityProvidersConfigStrategyBase": {
-        "description": "アイデンティティプロバイダーのstrategy設定",
+        "description": "Identity providers strategy configs",
         "properties": {
           "enabled_features": {
-            "description": "接続のプロファイルstrategyオーバーライドで有効な機能。",
+            "description": "Enabled features for a connections profile strategy override.",
             "items": {
               "$ref": "#/components/schemas/IdentityProvidersConfigEnabledFeaturesEnum"
             },
@@ -3606,7 +3606,7 @@
         "type": "object"
       },
       "IdentityProvidersConfigStrategyOverride": {
-        "description": "アイデンティティプロバイダー向けのstrategy固有のオーバーライド",
+        "description": "Strategy-specific overrides for identity providers",
         "properties": {
           "adfs": {
             "$ref": "#/components/schemas/IdentityProviderConfigAdfs"
@@ -3639,7 +3639,7 @@
             "additionalProperties": false,
             "properties": {
               "adfs_server": {
-                "description": "adfs_server は、認証とトークン発行のために、証明書利用者と内部クライアントが ADFS サーバーと通信する際に使用する公開 URL です",
+                "description": "The adfs_server is the public-facing URL that relying parties and internal clients use to communicate with an ADFS server for authentication and token issuance",
                 "type": "string"
               }
             },
@@ -3653,7 +3653,7 @@
             "additionalProperties": false,
             "properties": {
               "fedMetadataXml": {
-                "description": "ADFS の Federation Metadata XML ファイルは、ADFS サーバーと、ADFS からアイデンティティ情報を取得しようとする他の証明書利用者との間で信頼関係を確立するための基盤となる重要な文書です。",
+                "description": "A Federation Metadata XML file in ADFS is a crucial document that serves as a blueprint for establishing trust between an ADFS server and other relying parties that want to consume identity information from ADFS.",
                 "type": "string"
               }
             },
@@ -3672,7 +3672,7 @@
             "additionalProperties": false,
             "properties": {
               "adfs_server": {
-                "description": "adfs_server は、認証とトークン発行のために、証明書利用者と内部クライアントが ADFS サーバーと通信する際に使用する公開 URL です",
+                "description": "The adfs_server is the public-facing URL that relying parties and internal clients use to communicate with an ADFS server for authentication and token issuance",
                 "type": "string"
               }
             },
@@ -3683,7 +3683,7 @@
             "additionalProperties": false,
             "properties": {
               "fedMetadataXml": {
-                "description": "ADFS の Federation Metadata XML ファイルは、ADFS サーバーと、ADFS からアイデンティティ情報を取得しようとする他の証明書利用者との間で信頼関係を確立するための基盤となる重要な文書です。",
+                "description": "A Federation Metadata XML file in ADFS is a crucial document that serves as a blueprint for establishing trust between an ADFS server and other relying parties that want to consume identity information from ADFS.",
                 "type": "string"
               }
             },
@@ -3702,7 +3702,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpAdfsOptionsRequest",
-                "description": "IDプロバイダー固有のオプション。"
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "adfs"
@@ -3715,7 +3715,7 @@
             "type": "object"
           }
         ],
-        "description": "IDプロバイダー固有のオプション。",
+        "description": "Identity provider specific options.",
         "title": "IdP ADFS Request",
         "type": "object",
         "unevaluatedProperties": false
@@ -3729,7 +3729,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpAdfsOptionsResponse",
-                "description": "IDプロバイダー固有のオプション。"
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "adfs"
@@ -3742,7 +3742,7 @@
             "type": "object"
           }
         ],
-        "description": "IDプロバイダー固有のオプション。",
+        "description": "Identity provider specific options.",
         "title": "IdP ADFS Response",
         "type": "object",
         "unevaluatedProperties": false
@@ -3756,7 +3756,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpAdfsOptionsRequest",
-                "description": "IDプロバイダー固有のオプション。access_level が 'full' である必要があります。"
+                "description": "Identity provider specific options.  Requires access_level to be 'full'."
               }
             },
             "type": "object"
@@ -3775,17 +3775,17 @@
                 "readOnly": true
               },
               "assign_membership_on_login": {
-                "description": "true の場合、ユーザーはログイン時に組織のメンバーになります。",
+                "description": "If true, the user will be made a member of the organization upon login.",
                 "type": "boolean"
               },
               "display_name": {
-                "description": "ログイン画面で使用されるIDプロバイダー名。",
+                "description": "Identity provider name used on the login screen.",
                 "maxLength": 128,
                 "minLength": 1,
                 "type": "string"
               },
               "domains": {
-                "description": "ホームレルムディスカバリー（HRD）用ドメインの一覧",
+                "description": "List of domains for Home Realm Discovery (HRD)",
                 "items": {
                   "type": "string"
                 },
@@ -3795,17 +3795,17 @@
                 "$ref": "#/components/schemas/IdpId"
               },
               "is_enabled": {
-                "description": "アイデンティティプロバイダーが組織に対して有効な場合は true。",
+                "description": "True if the identity provider is enabled for the organization.",
                 "type": "boolean"
               },
               "name": {
-                "description": "アイデンティティプロバイダーの名前",
+                "description": "The name of the identity provider",
                 "maxLength": 128,
                 "minLength": 1,
                 "type": "string"
               },
               "show_as_button": {
-                "description": "ログインページにこの接続のボタンを表示できるようにします（新しいエクスペリエンスのみ）。false の場合は、ホームレルムディスカバリー（HRD）でのみ使用できます。",
+                "description": "Enables showing a button for the connection in the login page (new experience only). If false, it will be usable only by Home Realm Discovery (HRD).",
                 "type": "boolean"
               },
               "strategy": {
@@ -3829,17 +3829,17 @@
                 "readOnly": true
               },
               "assign_membership_on_login": {
-                "description": "true の場合、ユーザーはログイン時に組織のメンバーになります。",
+                "description": "If true, the user will be made a member of the organization upon login.",
                 "type": "boolean"
               },
               "display_name": {
-                "description": "ログイン画面で使用されるIDプロバイダー名。",
+                "description": "Identity provider name used on the login screen.",
                 "maxLength": 128,
                 "minLength": 1,
                 "type": "string"
               },
               "domains": {
-                "description": "ホームレルムディスカバリー（HRD）用ドメインの一覧",
+                "description": "List of domains for Home Realm Discovery (HRD)",
                 "items": {
                   "type": "string"
                 },
@@ -3849,11 +3849,11 @@
                 "$ref": "#/components/schemas/IdpId"
               },
               "is_enabled": {
-                "description": "アイデンティティプロバイダーが組織に対して有効な場合は true。",
+                "description": "True if the identity provider is enabled for the organization.",
                 "type": "boolean"
               },
               "name": {
-                "description": "アイデンティティプロバイダーの名前",
+                "description": "The name of the identity provider",
                 "maxLength": 128,
                 "type": [
                   "string",
@@ -3861,7 +3861,7 @@
                 ]
               },
               "show_as_button": {
-                "description": "ログインページにこの接続のボタンを表示できるようにします（新しいエクスペリエンスのみ）。false の場合は、ホームレルムディスカバリー（HRD）でのみ使用できます。",
+                "description": "Enables showing a button for the connection in the login page (new experience only). If false, it will be usable only by Home Realm Discovery (HRD).",
                 "type": "boolean"
               },
               "strategy": {
@@ -3876,7 +3876,7 @@
         ]
       },
       "IdpConnectionDeletionBehaviorEnum": {
-        "description": "接続の削除を常に許可するか、接続に関連付けられたユーザーがいない場合にのみ許可するかを指定します",
+        "description": "Specifies whether deletion of a connection is always allowed, or only when the connection has no associated users",
         "enum": [
           "allow",
           "allow_if_empty"
@@ -3887,19 +3887,19 @@
         "additionalProperties": false,
         "properties": {
           "client_id": {
-            "description": "登録済みの Google アプリケーションの一意の識別子。",
+            "description": "Unique identifier for your registered Google application.",
             "type": "string"
           },
           "client_secret": {
-            "description": "登録済みの Google アプリケーションへのアクセスに使用する文字列",
+            "description": "String used to gain access to your registered Google application",
             "type": "string"
           },
           "domain": {
-            "description": "組織の Google Workspace ドメイン名。",
+            "description": "Google Workspace domain name for your organization.",
             "type": "string"
           },
           "icon_url": {
-            "description": "クライアントアプリケーションを表す画像ファイルの URL。",
+            "description": "A URL pointing to an image file that represents your client application.",
             "type": "string"
           }
         },
@@ -3914,15 +3914,15 @@
         "additionalProperties": false,
         "properties": {
           "client_id": {
-            "description": "登録済みの Google アプリケーションの一意の識別子。",
+            "description": "Unique identifier for your registered Google application.",
             "type": "string"
           },
           "domain": {
-            "description": "組織の Google Workspace ドメイン名。",
+            "description": "Google Workspace domain name for your organization.",
             "type": "string"
           },
           "icon_url": {
-            "description": "クライアントアプリケーションを表す画像ファイルの URL。",
+            "description": "A URL pointing to an image file that represents your client application.",
             "type": "string"
           }
         },
@@ -3937,7 +3937,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpGoogleAppsOptionsRequest",
-                "description": "IDプロバイダー固有のオプション。"
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "google-apps"
@@ -3950,7 +3950,7 @@
             "type": "object"
           }
         ],
-        "description": "IDプロバイダー固有のオプション。",
+        "description": "Identity provider specific options.",
         "title": "IdP Google Workforce Request",
         "type": "object",
         "unevaluatedProperties": false
@@ -3964,7 +3964,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpGoogleAppsOptionsResponse",
-                "description": "IDプロバイダー固有のオプション。"
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "google-apps"
@@ -3977,7 +3977,7 @@
             "type": "object"
           }
         ],
-        "description": "IDプロバイダー固有のオプション。",
+        "description": "Identity provider specific options.",
         "title": "IdP Google Workforce Response",
         "type": "object",
         "unevaluatedProperties": false
@@ -3991,19 +3991,19 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpGoogleAppsOptionsRequest",
-                "description": "IDプロバイダー固有のオプション。access_level が 'full' である必要があります。"
+                "description": "Identity provider specific options.  Requires access_level to be 'full'."
               }
             },
             "type": "object"
           }
         ],
-        "description": "IDプロバイダー固有のオプション。access_level が 'full' である必要があります。",
+        "description": "Identity provider specific options.  Requires access_level to be 'full'.",
         "title": "IdP Google Workforce Update Request",
         "type": "object",
         "unevaluatedProperties": false
       },
       "IdpId": {
-        "description": "IDプロバイダーの識別子。",
+        "description": "Identity provider identifier.",
         "pattern": "^con_[A-Za-z0-9]{16}$",
         "readOnly": true,
         "type": "string"
@@ -4069,14 +4069,14 @@
         ]
       },
       "IdpMinimalResponse": {
-        "description": "組織管理者は設定できない（access_level が none）が、組織メンバーアクセスレベルにより表示できる接続について、リストレスポンスで返される最小限のIDプロバイダー形式。接続の設定フィールドは意図的に省略されています。",
+        "description": "Minimal identity provider shape returned in list responses for connections the Organization Administrator cannot configure (access_level none) but can still surface via their Organization Member Access Level. Connection configuration fields are intentionally omitted.",
         "properties": {
           "access_level": {
             "$ref": "#/components/schemas/OrganizationAccessLevelEnum",
             "readOnly": true
           },
           "display_name": {
-            "description": "ログイン画面で使用されるIDプロバイダー名。",
+            "description": "Identity provider name used on the login screen.",
             "maxLength": 128,
             "minLength": 1,
             "type": "string"
@@ -4085,11 +4085,11 @@
             "$ref": "#/components/schemas/IdpId"
           },
           "is_enabled": {
-            "description": "IDプロバイダーが組織で有効な場合は True。",
+            "description": "True if the identity provider is enabled for the organization.",
             "type": "boolean"
           },
           "name": {
-            "description": "IDプロバイダーの名前",
+            "description": "The name of the identity provider",
             "maxLength": 128,
             "type": [
               "string",
@@ -4110,15 +4110,15 @@
         "additionalProperties": false,
         "properties": {
           "client_id": {
-            "description": "プロバイダーから提供された識別子です。登録済みアプリケーションの一意の識別子。",
+            "description": "The identifier given to you by your provider. Unique identifier for your registered application.",
             "type": "string"
           },
           "client_secret": {
-            "description": "前の手順で Back Channel を選択した場合に使用できます。シークレットはプロバイダーから提供され、この手順の扱いはプロバイダーごとに異なります。",
+            "description": "Available if Back Channel is chosen earlier. The secret given to you by your provider and each provider manages this step differently.",
             "type": "string"
           },
           "discovery_url": {
-            "description": "OIDC の IDプロバイダーが OpenID Provider Configuration Information を公開する URL",
+            "description": "The URL where the OIDC Identity Provider publishes its OpenID Provider Configuration Information",
             "type": "string"
           },
           "type": {
@@ -4136,11 +4136,11 @@
         "additionalProperties": false,
         "properties": {
           "client_id": {
-            "description": "プロバイダーから提供された識別子です。登録済みアプリケーションの一意の識別子。",
+            "description": "The identifier given to you by your provider. Unique identifier for your registered application.",
             "type": "string"
           },
           "discovery_url": {
-            "description": "OIDC の IDプロバイダーが OpenID Provider Configuration Information を公開している URL",
+            "description": "The URL where the OIDC Identity Provider publishes its OpenID Provider Configuration Information",
             "type": "string"
           },
           "type": {
@@ -4150,7 +4150,7 @@
         "type": "object"
       },
       "IdpOidcOptionsTypeEnum": {
-        "description": "認証のやり取りをサーバー間通信（バックチャネル）で行うか、Implicit Flow with Form Post を使用してブラウザー経由（フロントチャネル）で行うかを選択します",
+        "description": "Select whether authentication exchanges occur via server-to-server communication (Back Channel) or through the browser using Implicit Flow with Form Post (Front Channel)",
         "enum": [
           "front_channel",
           "back_channel"
@@ -4166,7 +4166,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpOidcOptionsRequest",
-                "description": "IDプロバイダー固有のオプション。"
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "oidc"
@@ -4179,7 +4179,7 @@
             "type": "object"
           }
         ],
-        "description": "IDプロバイダー固有のオプション。",
+        "description": "Identity provider specific options.",
         "title": "IdP OIDC Request",
         "type": "object",
         "unevaluatedProperties": false
@@ -4199,7 +4199,7 @@
               },
               "options": {
                 "$ref": "#/components/schemas/IdpOidcOptionsResponse",
-                "description": "IDプロバイダー固有のオプション。"
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "oidc"
@@ -4213,7 +4213,7 @@
             "type": "object"
           }
         ],
-        "description": "IDプロバイダー固有のオプション。",
+        "description": "Identity provider specific options.",
         "title": "IdP OIDC Response",
         "type": "object",
         "unevaluatedProperties": false
@@ -4227,13 +4227,13 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpOidcOptionsRequest",
-                "description": "IDプロバイダー固有のオプション。access_level が 'full' である必要があります。"
+                "description": "Identity provider specific options.  Requires access_level to be 'full'."
               }
             },
             "type": "object"
           }
         ],
-        "description": "IDプロバイダー固有のオプション。access_level が 'full' である必要があります。",
+        "description": "Identity provider specific options.  Requires access_level to be 'full'.",
         "title": "IdP OIDC Update Request",
         "type": "object",
         "unevaluatedProperties": false
@@ -4242,19 +4242,19 @@
         "additionalProperties": false,
         "properties": {
           "client_id": {
-            "description": "登録済みの Okta アプリケーションの一意の識別子",
+            "description": "Unique identifier for your registered Okta application",
             "type": "string"
           },
           "client_secret": {
-            "description": "登録済みの Okta アプリケーションへのアクセスに使用する文字列。",
+            "description": "String used to gain access to your registered Okta application.",
             "type": "string"
           },
           "domain": {
-            "description": "組織に対応する Okta のドメイン名。",
+            "description": "Okta's domain name for your organization.",
             "type": "string"
           },
           "icon_url": {
-            "description": "クライアントアプリケーションを表す画像ファイルを指す URL。",
+            "description": "A URL pointing to an image file that represents your client application.",
             "type": "string"
           }
         },
@@ -4269,15 +4269,15 @@
         "additionalProperties": false,
         "properties": {
           "client_id": {
-            "description": "登録済みの Okta アプリケーションの一意の識別子",
+            "description": "Unique identifier for your registered Okta application",
             "type": "string"
           },
           "domain": {
-            "description": "組織に対応する Okta のドメイン名。",
+            "description": "Okta's domain name for your organization.",
             "type": "string"
           },
           "icon_url": {
-            "description": "クライアントアプリケーションを表す画像ファイルを指す URL。",
+            "description": "A URL pointing to an image file that represents your client application.",
             "type": "string"
           }
         },
@@ -4292,7 +4292,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpOktaOptionsRequest",
-                "description": "IDプロバイダー固有のオプション。"
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "okta"
@@ -4305,7 +4305,7 @@
             "type": "object"
           }
         ],
-        "description": "IDプロバイダー固有のオプション。",
+        "description": "Identity provider specific options.",
         "title": "IdP Okta Request",
         "type": "object",
         "unevaluatedProperties": false
@@ -4325,7 +4325,7 @@
               },
               "options": {
                 "$ref": "#/components/schemas/IdpOktaOptionsResponse",
-                "description": "IDプロバイダー固有のオプション。"
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "okta"
@@ -4339,7 +4339,7 @@
             "type": "object"
           }
         ],
-        "description": "IDプロバイダー固有のオプション。",
+        "description": "Identity provider specific options.",
         "title": "IdP Okta Response",
         "type": "object",
         "unevaluatedProperties": false
@@ -4353,34 +4353,34 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpOktaOptionsRequest",
-                "description": "IDプロバイダー固有のオプション。access_level が 'full' である必要があります。"
+                "description": "Identity provider specific options.  Requires access_level to be 'full'."
               }
             },
             "type": "object"
           }
         ],
-        "description": "IDプロバイダー固有のオプション。access_level が 'full' である必要があります。",
+        "description": "Identity provider specific options.  Requires access_level to be 'full'.",
         "title": "IdP Okta Update Request",
         "type": "object",
         "unevaluatedProperties": false
       },
       "IdpOptionsIdpInitiated": {
-        "description": "IDプロバイダー（IdP）によって開始されるシングルサインオンフローの設定詳細を含むオブジェクト",
+        "description": "An object containing configuration details for Identity Provider (IdP) initiated single sign-on flows",
         "properties": {
           "client_authorizequery": {
-            "description": "このフィールドは、特定のクライアントに対してIdP開始フローを開始する際の認可クエリ文字列を構築するためのテンプレートです",
+            "description": "This field represents a template for constructing the authorization query string when initiating an IdP-initiated flow to a specific client",
             "type": "string"
           },
           "client_id": {
-            "description": "IdP開始フローの設定対象であるデフォルトのアプリケーションのclient ID",
+            "description": "The client ID of your default application for which the IdP-initiated flow is being configured",
             "type": "string"
           },
           "client_protocol": {
-            "description": "選択したデフォルトのアプリケーションの接続に使用されるプロトコルです",
+            "description": "This is the protocol used to connect your selected default application",
             "type": "string"
           },
           "enabled": {
-            "description": "この接続でIdP-Initiated SSOが有効かどうかを示すフラグ",
+            "description": "A flag indicating whether IdP-initiated SSO is enabled for this connection",
             "type": "boolean"
           }
         },
@@ -4393,25 +4393,25 @@
             "$ref": "#/components/schemas/IdpSignAlgDigestTypeEnum"
           },
           "icon_url": {
-            "description": "クライアントアプリケーションを表す画像ファイルを指す URL。",
+            "description": "A URL pointing to an image file that represents your client application.",
             "type": "string"
           },
           "idpInitiated": {
             "$ref": "#/components/schemas/IdpOptionsIdpInitiated"
           },
           "pingFederateBaseUrl": {
-            "description": "接続の作成に使用される情報を返す、PingFederate 提供の URL",
+            "description": "URL provided by PingFederate which returns information used for creating the connection",
             "type": "string"
           },
           "signSAMLRequest": {
-            "description": "PingFederate が relying party 宛ての送信 SAML authentication request にデジタル署名するかどうかを示します",
+            "description": "Indicates whether PingFederate should digitally sign outgoing SAML authentication requests to relying parties",
             "type": "boolean"
           },
           "signatureAlgorithm": {
             "$ref": "#/components/schemas/IdpSignAlgTypeEnum"
           },
           "signingCert": {
-            "description": "IdP から取得した PingFederate Server の公開鍵（PEM または CER でエンコード）",
+            "description": "PingFederate Server public key (encoded in PEM or CER) you retrieved from the IdP",
             "type": "string"
           }
         },
@@ -4428,7 +4428,7 @@
         "additionalProperties": false,
         "properties": {
           "cert": {
-            "description": "signingCert をデコードして導出された値です。この値は直接更新せず、代わりに signingCertificate を更新してこのフィールドの新しい値をデコードしてください",
+            "description": "A value derived from decoding the signingCert. This should not be updated directly, instead update the signingCertificate to decode a new value for this field",
             "readOnly": true,
             "type": "string"
           },
@@ -4436,18 +4436,18 @@
             "$ref": "#/components/schemas/IdpSignAlgDigestTypeEnum"
           },
           "icon_url": {
-            "description": "クライアントアプリケーションを表す画像ファイルを指す URL。",
+            "description": "A URL pointing to an image file that represents your client application.",
             "type": "string"
           },
           "idpInitiated": {
             "$ref": "#/components/schemas/IdpOptionsIdpInitiated"
           },
           "pingFederateBaseUrl": {
-            "description": "接続の作成に使用される情報を返す、PingFederate 提供の URL",
+            "description": "URL provided by PingFederate which returns information used for creating the connection",
             "type": "string"
           },
           "signSAMLRequest": {
-            "description": "PingFederate が relying party 宛ての送信 SAML authentication request にデジタル署名するかどうかを示します",
+            "description": "Indicates whether PingFederate should digitally sign outgoing SAML authentication requests to relying parties",
             "type": "boolean"
           },
           "signatureAlgorithm": {
@@ -4465,7 +4465,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpPingFederateOptionsRequest",
-                "description": "IDプロバイダー固有のオプション。"
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "pingfederate"
@@ -4478,7 +4478,7 @@
             "type": "object"
           }
         ],
-        "description": "IDプロバイダー固有のオプション。",
+        "description": "Identity provider specific options.",
         "title": "IdP Ping Request",
         "type": "object",
         "unevaluatedProperties": false
@@ -4492,7 +4492,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpPingFederateOptionsResponse",
-                "description": "IDプロバイダー固有のオプション。"
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "pingfederate"
@@ -4505,7 +4505,7 @@
             "type": "object"
           }
         ],
-        "description": "IDプロバイダー固有のオプション。",
+        "description": "Identity provider specific options.",
         "title": "IdP Ping Response",
         "type": "object",
         "unevaluatedProperties": false
@@ -4519,19 +4519,19 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpPingFederateOptionsRequest",
-                "description": "IDプロバイダー固有のオプション。access_level が 'full' である必要があります。"
+                "description": "Identity provider specific options.  Requires access_level to be 'full'."
               }
             },
             "type": "object"
           }
         ],
-        "description": "IDプロバイダー固有のオプション。access_level が 'full' である必要があります。",
+        "description": "Identity provider specific options.  Requires access_level to be 'full'.",
         "title": "IdP Ping Update Request",
         "type": "object",
         "unevaluatedProperties": false
       },
       "IdpProtocolBindingTypeEnum": {
-        "description": "IdP がサポートする HTTPバインディング。",
+        "description": "HTTP binding supported by the IdP.",
         "enum": [
           "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect",
           "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
@@ -4550,7 +4550,7 @@
             "$ref": "#/components/schemas/IdpId"
           },
           "identity_provider_name": {
-            "description": "アイデンティティプロバイダーの名前",
+            "description": "The name of the identity provider",
             "maxLength": 128,
             "minLength": 1,
             "readOnly": true,
@@ -4563,7 +4563,7 @@
             "$ref": "#/components/schemas/IdpStrategyEnum"
           },
           "user_id_attribute": {
-            "description": "ユーザーのID",
+            "description": "The ID of the user",
             "type": "string"
           }
         },
@@ -4578,7 +4578,7 @@
         "type": "object"
       },
       "IdpProvisioningMethodEnum": {
-        "description": "アイデンティティプロバイダーのプロビジョニング方式の種類",
+        "description": "The type of an identity provider's provisioning method",
         "enum": [
           "none",
           "scim"
@@ -4586,7 +4586,7 @@
         "type": "string"
       },
       "IdpProvisioningScimTokenId": {
-        "description": "IDプロバイダーの Scim Provisioning Token の識別子。",
+        "description": "Identity provider Scim Provisioning Token identifier.",
         "pattern": "^tok_[A-Za-z0-9]{16}$",
         "readOnly": true,
         "type": "string"
@@ -4599,7 +4599,7 @@
           {
             "properties": {
               "provisioning_field": {
-                "description": "Provisioningフィールドの名前。",
+                "description": "The name of the provisioning field.",
                 "type": "string"
               }
             },
@@ -4618,32 +4618,32 @@
             "additionalProperties": false,
             "properties": {
               "bindingMethod": {
-                "description": "SAML メッセージの送信に使用する特定の HTTPバインディングを定義します。",
+                "description": "Defines the specific HTTP binding used for sending SAML messages.",
                 "type": "string"
               },
               "cert": {
-                "description": "IdP から取得した署名証明書（PEM または CER でエンコード）",
+                "description": "Signing certificate (encoded in PEM or CER) you retrieved from the IdP",
                 "type": "string"
               },
               "digestAlgorithm": {
                 "$ref": "#/components/schemas/IdpSignAlgDigestTypeEnum"
               },
               "icon_url": {
-                "description": "クライアントアプリケーションを表す画像ファイルを指す URL。",
+                "description": "A URL pointing to an image file that represents your client application.",
                 "type": "string"
               },
               "idpInitiated": {
                 "$ref": "#/components/schemas/IdpOptionsIdpInitiated"
               },
               "metadataUrl": {
-                "description": "接続の作成に使用される情報を返す、SAML プロバイダーが提供する URL",
+                "description": "URL provided by SAML provider which returns information used for creating the connection",
                 "type": "string"
               },
               "protocolBinding": {
                 "$ref": "#/components/schemas/IdpProtocolBindingTypeEnum"
               },
               "signSAMLRequest": {
-                "description": "有効にすると、SAML認証リクエストに署名されます。",
+                "description": "When enabled, the SAML authentication request will be signed.",
                 "type": "boolean"
               },
               "signatureAlgorithm": {
@@ -4661,18 +4661,18 @@
             "additionalProperties": false,
             "properties": {
               "bindingMethod": {
-                "description": "SAML メッセージの送信に使用する特定の HTTPバインディングを定義します。",
+                "description": "Defines the specific HTTP binding used for sending SAML messages.",
                 "type": "string"
               },
               "cert": {
-                "description": "IdP から取得した署名証明書（PEM または CER でエンコード）",
+                "description": "Signing certificate (encoded in PEM or CER) you retrieved from the IdP",
                 "type": "string"
               },
               "digestAlgorithm": {
                 "$ref": "#/components/schemas/IdpSignAlgDigestTypeEnum"
               },
               "icon_url": {
-                "description": "クライアントアプリケーションを表す画像ファイルを指す URL。",
+                "description": "A URL pointing to an image file that represents your client application.",
                 "type": "string"
               },
               "idpInitiated": {
@@ -4682,11 +4682,11 @@
                 "$ref": "#/components/schemas/IdpProtocolBindingTypeEnum"
               },
               "signInEndpoint": {
-                "description": "IdP サインイン用の endpoint URL",
+                "description": "The endpoint URL for the IdP sign-in",
                 "type": "string"
               },
               "signSAMLRequest": {
-                "description": "有効にすると、SAML認証リクエストに署名されます。",
+                "description": "When enabled, the SAML authentication request will be signed.",
                 "type": "boolean"
               },
               "signatureAlgorithm": {
@@ -4709,32 +4709,32 @@
             "additionalProperties": false,
             "properties": {
               "bindingMethod": {
-                "description": "SAML メッセージの送信に使用する特定の HTTPバインディングを定義します。",
+                "description": "Defines the specific HTTP binding used for sending SAML messages.",
                 "type": "string"
               },
               "cert": {
-                "description": "IdP から取得した署名証明書（PEM または CER でエンコード）",
+                "description": "Signing certificate (encoded in PEM or CER) you retrieved from the IdP",
                 "type": "string"
               },
               "digestAlgorithm": {
                 "$ref": "#/components/schemas/IdpSignAlgDigestTypeEnum"
               },
               "icon_url": {
-                "description": "クライアントアプリケーションを表す画像ファイルを指す URL。",
+                "description": "A URL pointing to an image file that represents your client application.",
                 "type": "string"
               },
               "idpInitiated": {
                 "$ref": "#/components/schemas/IdpOptionsIdpInitiated"
               },
               "metadataUrl": {
-                "description": "接続の作成に使用される情報を返す、SAML プロバイダーが提供する URL",
+                "description": "URL provided by SAML provider which returns information used for creating the connection",
                 "type": "string"
               },
               "protocolBinding": {
                 "$ref": "#/components/schemas/IdpProtocolBindingTypeEnum"
               },
               "signSAMLRequest": {
-                "description": "有効にすると、SAML認証リクエストに署名されます。",
+                "description": "When enabled, the SAML authentication request will be signed.",
                 "type": "boolean"
               },
               "signatureAlgorithm": {
@@ -4748,18 +4748,18 @@
             "additionalProperties": false,
             "properties": {
               "bindingMethod": {
-                "description": "SAMLメッセージの送信に使用する特定のHTTPバインディングを定義します。",
+                "description": "Defines the specific HTTP binding used for sending SAML messages.",
                 "type": "string"
               },
               "cert": {
-                "description": "IdPから取得した署名証明書（PEMまたはCERでエンコードされたもの）",
+                "description": "Signing certificate (encoded in PEM or CER) you retrieved from the IdP",
                 "type": "string"
               },
               "digestAlgorithm": {
                 "$ref": "#/components/schemas/IdpSignAlgDigestTypeEnum"
               },
               "icon_url": {
-                "description": "クライアントアプリケーションを表す画像ファイルを指すURL。",
+                "description": "A URL pointing to an image file that represents your client application.",
                 "type": "string"
               },
               "idpInitiated": {
@@ -4769,11 +4769,11 @@
                 "$ref": "#/components/schemas/IdpProtocolBindingTypeEnum"
               },
               "signInEndpoint": {
-                "description": "IdP サインイン用の endpoint URL",
+                "description": "The endpoint URL for the IdP sign-in",
                 "type": "string"
               },
               "signSAMLRequest": {
-                "description": "有効にすると、SAML認証リクエストに署名されます。",
+                "description": "When enabled, the SAML authentication request will be signed.",
                 "type": "boolean"
               },
               "signatureAlgorithm": {
@@ -4794,7 +4794,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpSamlpOptionsRequest",
-                "description": "IDプロバイダー固有のオプション。"
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "samlp"
@@ -4807,7 +4807,7 @@
             "type": "object"
           }
         ],
-        "description": "IDプロバイダー固有のオプション。",
+        "description": "Identity provider specific options.",
         "title": "IdP SAML Request",
         "type": "object",
         "unevaluatedProperties": false
@@ -4827,7 +4827,7 @@
               },
               "options": {
                 "$ref": "#/components/schemas/IdpSamlpOptionsResponse",
-                "description": "IDプロバイダー固有のオプション。"
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "samlp"
@@ -4841,7 +4841,7 @@
             "type": "object"
           }
         ],
-        "description": "IDプロバイダー固有のオプション。",
+        "description": "Identity provider specific options.",
         "title": "IdP SAML Response",
         "type": "object",
         "unevaluatedProperties": false
@@ -4855,13 +4855,13 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpSamlpOptionsRequest",
-                "description": "IDプロバイダー固有のオプション。access_level が 'full' である必要があります。"
+                "description": "Identity provider specific options.  Requires access_level to be 'full'."
               }
             },
             "type": "object"
           }
         ],
-        "description": "IDプロバイダー固有のオプション。access_level が 'full' である必要があります。",
+        "description": "Identity provider specific options.  Requires access_level to be 'full'.",
         "title": "IdP SAML Update Request",
         "type": "object",
         "unevaluatedProperties": false
@@ -4869,23 +4869,23 @@
       "IdpScimTokenBase": {
         "properties": {
           "created_at": {
-            "description": "トークンの作成日時を表すタイムスタンプ。",
+            "description": "The token's created at timestamp.",
             "format": "date-time",
             "type": "string"
           },
           "scopes": {
-            "description": "トークンのscopes。",
+            "description": "The token's scopes.",
             "items": {
               "type": "string"
             },
             "type": "array"
           },
           "token_id": {
-            "description": "token identifier。",
+            "description": "The token identifier.",
             "type": "string"
           },
           "valid_until": {
-            "description": "トークンの有効期限を表すタイムスタンプ（有効期限のないトークンには存在しません）。",
+            "description": "The token's valid until at timestamp (will not exist for non-expiring tokens).",
             "format": "date-time",
             "type": "string"
           }
@@ -4904,7 +4904,7 @@
           {
             "properties": {
               "token": {
-                "description": "SCIMクライアントのトークン。",
+                "description": "The SCIM client's token.",
                 "type": "string"
               }
             },
@@ -4931,7 +4931,7 @@
         "type": "object"
       },
       "IdpSignAlgDigestTypeEnum": {
-        "description": "署名に使用するダイジェストアルゴリズムを選択します",
+        "description": "Select the algorithm digest used for signing",
         "enum": [
           "sha256",
           "sha1"
@@ -4939,7 +4939,7 @@
         "type": "string"
       },
       "IdpSignAlgTypeEnum": {
-        "description": "署名に使用するアルゴリズムを選択します",
+        "description": "Select the algorithm used for signing",
         "enum": [
           "rsa-sha256",
           "rsa-sha1"
@@ -4947,7 +4947,7 @@
         "type": "string"
       },
       "IdpStrategyEnum": {
-        "description": "アイデンティティプロバイダーの種類",
+        "description": "The type of the identity provider",
         "enum": [
           "adfs",
           "google-apps",
@@ -4964,21 +4964,21 @@
           {
             "properties": {
               "assign_membership_on_login": {
-                "description": "true の場合、ユーザーはログイン時に組織のメンバーになります。access_level は 'full' または 'limited' である必要があります。",
+                "description": "If true, the user will be made a member of the organization upon login. Requires access_level to be 'full' or 'limited'.",
                 "type": "boolean"
               },
               "display_name": {
-                "description": "ログイン画面で使用されるアイデンティティプロバイダー名。access_level は 'full' である必要があります",
+                "description": "Identity provider name used on the login screen. Requires access_level to be 'full'",
                 "maxLength": 128,
                 "minLength": 1,
                 "type": "string"
               },
               "is_enabled": {
-                "description": "アイデンティティプロバイダーが組織に対して有効な場合は true。access_level は 'full' または 'limited' である必要があります",
+                "description": "True if the identity provider is enabled for the organization. Requires access_level to be 'full' or 'limited'",
                 "type": "boolean"
               },
               "show_as_button": {
-                "description": "ログインページにこの接続のボタンを表示できるようにします（新しいエクスペリエンスのみ）。false の場合は、ホームレルムディスカバリー（HRD）でのみ使用できます。access_level は 'full' または 'limited' である必要があります",
+                "description": "Enables showing a button for the connection in the login page (new experience only). If false, it will be usable only by Home Realm Discovery (HRD). Requires access_level to be 'full' or 'limited'",
                 "type": "boolean"
               }
             },
@@ -5020,7 +5020,7 @@
                 "properties": {
                   "options": {
                     "$ref": "#/components/schemas/IdpAdfsOptionsRequest",
-                    "description": "IDプロバイダー固有のオプション。access_level は 'full' である必要があります。"
+                    "description": "Identity provider specific options.  Requires access_level to be 'full'."
                   }
                 },
                 "type": "object"
@@ -5039,13 +5039,13 @@
                 "properties": {
                   "options": {
                     "$ref": "#/components/schemas/IdpGoogleAppsOptionsRequest",
-                    "description": "IDプロバイダー固有のオプション。access_level は 'full' である必要があります。"
+                    "description": "Identity provider specific options.  Requires access_level to be 'full'."
                   }
                 },
                 "type": "object"
               }
             ],
-            "description": "IDプロバイダー固有のオプション。access_level は 'full' である必要があります。",
+            "description": "Identity provider specific options.  Requires access_level to be 'full'.",
             "title": "IdP Google Workforce Update Request",
             "type": "object",
             "unevaluatedProperties": false
@@ -5059,13 +5059,13 @@
                 "properties": {
                   "options": {
                     "$ref": "#/components/schemas/IdpOidcOptionsRequest",
-                    "description": "IDプロバイダー固有のオプション。access_level は 'full' である必要があります。"
+                    "description": "Identity provider specific options.  Requires access_level to be 'full'."
                   }
                 },
                 "type": "object"
               }
             ],
-            "description": "IDプロバイダー固有のオプション。access_level は 'full' である必要があります。",
+            "description": "Identity provider specific options.  Requires access_level to be 'full'.",
             "title": "IdP OIDC Update Request",
             "type": "object",
             "unevaluatedProperties": false
@@ -5079,13 +5079,13 @@
                 "properties": {
                   "options": {
                     "$ref": "#/components/schemas/IdpOktaOptionsRequest",
-                    "description": "IDプロバイダー固有のオプション。access_level は 'full' に設定されている必要があります。"
+                    "description": "Identity provider specific options.  Requires access_level to be 'full'."
                   }
                 },
                 "type": "object"
               }
             ],
-            "description": "IDプロバイダー固有のオプション。access_level は 'full' に設定されている必要があります。",
+            "description": "Identity provider specific options.  Requires access_level to be 'full'.",
             "title": "IdP Okta Update Request",
             "type": "object",
             "unevaluatedProperties": false
@@ -5099,13 +5099,13 @@
                 "properties": {
                   "options": {
                     "$ref": "#/components/schemas/IdpPingFederateOptionsRequest",
-                    "description": "IDプロバイダー固有のオプション。access_level は 'full' に設定されている必要があります。"
+                    "description": "Identity provider specific options.  Requires access_level to be 'full'."
                   }
                 },
                 "type": "object"
               }
             ],
-            "description": "IDプロバイダー固有のオプション。access_level は 'full' に設定されている必要があります。",
+            "description": "Identity provider specific options.  Requires access_level to be 'full'.",
             "title": "IdP Ping Update Request",
             "type": "object",
             "unevaluatedProperties": false
@@ -5119,13 +5119,13 @@
                 "properties": {
                   "options": {
                     "$ref": "#/components/schemas/IdpSamlpOptionsRequest",
-                    "description": "IDプロバイダー固有のオプション。access_level は 'full' に設定されている必要があります。"
+                    "description": "Identity provider specific options.  Requires access_level to be 'full'."
                   }
                 },
                 "type": "object"
               }
             ],
-            "description": "IDプロバイダー固有のオプション。access_level は 'full' に設定されている必要があります。",
+            "description": "Identity provider specific options.  Requires access_level to be 'full'.",
             "title": "IdP SAML Update Request",
             "type": "object",
             "unevaluatedProperties": false
@@ -5139,13 +5139,13 @@
                 "properties": {
                   "options": {
                     "$ref": "#/components/schemas/IdpWaadOptionsRequest",
-                    "description": "IDプロバイダー固有のオプション。access_level は 'full' に設定されている必要があります。"
+                    "description": "Identity provider specific options.  Requires access_level to be 'full'."
                   }
                 },
                 "type": "object"
               }
             ],
-            "description": "IDプロバイダー固有のオプション。access_level は 'full' に設定されている必要があります。",
+            "description": "Identity provider specific options.  Requires access_level to be 'full'.",
             "title": "IdP Microsoft Azure AD Update Request",
             "type": "object",
             "unevaluatedProperties": false
@@ -5185,7 +5185,7 @@
           {
             "properties": {
               "sso_field": {
-                "description": "sso フィールド名。",
+                "description": "The name(s) of the sso field.",
                 "items": {
                   "type": "string"
                 },
@@ -5205,19 +5205,19 @@
         "additionalProperties": false,
         "properties": {
           "client_id": {
-            "description": "登録済みのAzure ADアプリケーションの一意の識別子。",
+            "description": "Unique identifier for your registered Azure AD application.",
             "type": "string"
           },
           "client_secret": {
-            "description": "登録済みのAzure ADアプリケーションへのアクセスに使用する文字列。",
+            "description": "String used to gain access to your registered Azure AD application.",
             "type": "string"
           },
           "icon_url": {
-            "description": "クライアントアプリケーションを表す画像ファイルを指すURL。",
+            "description": "A URL pointing to an image file that represents your client application.",
             "type": "string"
           },
           "tenant_domain": {
-            "description": "Azure ADのドメイン名。Microsoft Azure ポータルの Azure AD ディレクトリの概要ページで確認できます。",
+            "description": "Your Azure AD domain name. You can find this on your Azure AD directory's overview page in the Microsoft Azure portal.",
             "type": "string"
           }
         },
@@ -5232,15 +5232,15 @@
         "additionalProperties": false,
         "properties": {
           "client_id": {
-            "description": "登録済みのAzure ADアプリケーションの一意の識別子。",
+            "description": "Unique identifier for your registered Azure AD application.",
             "type": "string"
           },
           "icon_url": {
-            "description": "クライアントアプリケーションを表す画像ファイルを指すURL。",
+            "description": "A URL pointing to an image file that represents your client application.",
             "type": "string"
           },
           "tenant_domain": {
-            "description": "Azure ADのドメイン名。Microsoft Azure ポータルの Azure AD ディレクトリの概要ページで確認できます。",
+            "description": "Your Azure AD domain name. You can find this on your Azure AD directory's overview page in the Microsoft Azure portal.",
             "type": "string"
           }
         },
@@ -5255,7 +5255,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpWaadOptionsRequest",
-                "description": "IDプロバイダー固有のオプション。"
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "waad"
@@ -5268,7 +5268,7 @@
             "type": "object"
           }
         ],
-        "description": "IDプロバイダー固有のオプション。",
+        "description": "Identity provider specific options.",
         "title": "IdP Microsoft Azure AD Request",
         "type": "object",
         "unevaluatedProperties": false
@@ -5282,7 +5282,7 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpWaadOptionsResponse",
-                "description": "IDプロバイダー固有のオプション。"
+                "description": "Identity provider specific options."
               },
               "strategy": {
                 "const": "waad"
@@ -5295,7 +5295,7 @@
             "type": "object"
           }
         ],
-        "description": "IDプロバイダー固有のオプション。",
+        "description": "Identity provider specific options.",
         "title": "IdP Microsoft Azure AD Response",
         "type": "object",
         "unevaluatedProperties": false
@@ -5309,19 +5309,19 @@
             "properties": {
               "options": {
                 "$ref": "#/components/schemas/IdpWaadOptionsRequest",
-                "description": "IDプロバイダー固有のオプション。access_level が 'full' である必要があります。"
+                "description": "Identity provider specific options.  Requires access_level to be 'full'."
               }
             },
             "type": "object"
           }
         ],
-        "description": "IDプロバイダー固有のオプション。access_level が 'full' である必要があります。",
+        "description": "Identity provider specific options.  Requires access_level to be 'full'.",
         "title": "IdP Microsoft Azure AD Update Request",
         "type": "object",
         "unevaluatedProperties": false
       },
       "InvitationId": {
-        "description": "メンバー招待のID",
+        "description": "The id of the member invitation",
         "pattern": "^uinv_[A-Za-z0-9]{16}$",
         "readOnly": true,
         "type": "string"
@@ -5387,7 +5387,7 @@
             "type": "array"
           },
           "next": {
-            "description": "結果の次のページのページネーションカーソル。",
+            "description": "Pagination cursor for the next page of results.",
             "type": "string"
           }
         },
@@ -5397,7 +5397,7 @@
         "additionalProperties": false,
         "properties": {
           "next": {
-            "description": "結果の次のページのページネーションカーソル",
+            "description": "Pagination cursor for the next page of results",
             "type": "string"
           },
           "organization_domains": {
@@ -5422,7 +5422,7 @@
             "type": "array"
           },
           "next": {
-            "description": "結果の次のページのページネーションカーソル。",
+            "description": "Pagination cursor for the next page of results.",
             "type": "string"
           }
         },
@@ -5432,7 +5432,7 @@
         "additionalProperties": false,
         "properties": {
           "next": {
-            "description": "結果の次のページを取得するためのページネーションカーソル",
+            "description": "Pagination cursor for the next page of results",
             "type": "string"
           },
           "roles": {
@@ -5466,12 +5466,12 @@
         "additionalProperties": false,
         "properties": {
           "created_at": {
-            "description": "招待の作成日時を表すISO 8601形式のタイムスタンプ。",
+            "description": "The ISO 8601 formatted timestamp representing the creation time of the invitation.",
             "format": "date-time",
             "type": "string"
           },
           "expires_at": {
-            "description": "招待の有効期限を表すISO 8601形式のタイムスタンプ。",
+            "description": "The ISO 8601 formatted timestamp representing the expiration time of the invitation.",
             "format": "date-time",
             "type": "string"
           },
@@ -5482,7 +5482,7 @@
             "$ref": "#/components/schemas/IdpId"
           },
           "invitation_url": {
-            "description": "被招待者に送信する招待URL。",
+            "description": "The invitation url to be sent to the invitee.",
             "format": "uri",
             "type": "string"
           },
@@ -5503,7 +5503,7 @@
             "type": "array"
           },
           "ticket_id": {
-            "description": "招待ticketのID。",
+            "description": "The ID of the invitation ticket.",
             "type": "string"
           }
         },
@@ -5513,7 +5513,7 @@
         "additionalProperties": false,
         "properties": {
           "email": {
-            "description": "被招待者のメールアドレス。",
+            "description": "The invitee's email.",
             "format": "email",
             "maxLength": 320,
             "minLength": 1,
@@ -5526,7 +5526,7 @@
         "additionalProperties": false,
         "properties": {
           "name": {
-            "description": "招待者の名前。",
+            "description": "The inviter's name.",
             "maxLength": 300,
             "minLength": 1,
             "type": "string"
@@ -5536,13 +5536,13 @@
       },
       "OrgBranding": {
         "additionalProperties": false,
-        "description": "Themeはログインページのスタイルを定義します。",
+        "description": "Theme defines how to style the login pages.",
         "properties": {
           "colors": {
             "$ref": "#/components/schemas/OrgBrandingColors"
           },
           "logo_url": {
-            "description": "ログインページに表示するロゴのURL。",
+            "description": "URL of logo to display on login page.",
             "format": "uri",
             "pattern": "^https://.*",
             "type": [
@@ -5555,15 +5555,15 @@
       },
       "OrgBrandingColors": {
         "additionalProperties": false,
-        "description": "ログインページのカスタマイズに使用する配色。",
+        "description": "Color scheme used to customize the login pages.",
         "properties": {
           "page_background": {
-            "description": "背景のHEXカラー。",
+            "description": "HEX Color for background.",
             "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
             "type": "string"
           },
           "primary": {
-            "description": "主要な要素のHEXカラー。",
+            "description": "HEX Color for primary elements.",
             "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
             "type": "string"
           }
@@ -5576,7 +5576,7 @@
       },
       "OrgClient": {
         "additionalProperties": false,
-        "description": "組織に関連付けられた API Client。現在サポートされているのは M2M（non_interactive）クライアントのみです。",
+        "description": "API Client associated with the organization. Currently only supports M2M (non_interactive) clients.",
         "properties": {
           "app_type": {
             "$ref": "#/components/schemas/ClientAppTypeEnum"
@@ -5612,7 +5612,7 @@
             "$ref": "#/components/schemas/OrgBranding"
           },
           "display_name": {
-            "description": "このorganizationの表示名。",
+            "description": "Friendly name of this organization.",
             "maxLength": 255,
             "minLength": 1,
             "type": "string"
@@ -5621,7 +5621,7 @@
             "$ref": "#/components/schemas/OrgId"
           },
           "name": {
-            "description": "このorganizationの名前。",
+            "description": "The name of this organization.",
             "maxLength": 50,
             "minLength": 1,
             "type": "string"
@@ -5645,11 +5645,11 @@
             "$ref": "#/components/schemas/OrgDomainStatusEnum"
           },
           "verification_host": {
-            "description": "TXTレコードを追加する完全なドメインを保存します。",
+            "description": "Stores the full domain where the TXT record should be added.",
             "type": "string"
           },
           "verification_txt": {
-            "description": "ドメインの検証に使用する値。",
+            "description": "Value used to verify the domain.",
             "type": "string"
           }
         },
@@ -5664,18 +5664,18 @@
         "type": "object"
       },
       "OrgDomainId": {
-        "description": "組織ドメインの識別子。",
+        "description": "Organization domain identifier.",
         "pattern": "^ord_[A-Za-z0-9]{22}$",
         "readOnly": true,
         "type": "string"
       },
       "OrgDomainName": {
-        "description": "ドメイン名。",
+        "description": "Domain name.",
         "pattern": "^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9])\\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9-]*[A-Za-z0-9])$",
         "type": "string"
       },
       "OrgDomainStatusEnum": {
-        "description": "組織ドメインのステータス。",
+        "description": "Organization domain status.",
         "enum": [
           "failed",
           "pending",
@@ -5684,7 +5684,7 @@
         "type": "string"
       },
       "OrgId": {
-        "description": "組織ID。",
+        "description": "Organization identifier.",
         "pattern": "^org_[A-Za-z0-9]{16}$",
         "readOnly": true,
         "type": "string"
@@ -5697,7 +5697,7 @@
           {
             "properties": {
               "roles": {
-                "description": "メンバーのロール。ここでは最初の 10 個のロールのみが返されます。完全なリストを取得するには、GET /my-org/v1/members/{user_id}/roles を使用してください。トークンに read:my_org:member_roles スコープが含まれ、fields 配列で 'roles' がリクエストされた場合にのみ含まれます。",
+                "description": "The member's roles. Only the first 10 roles are returned here; use GET /my-org/v1/members/{user_id}/roles to retrieve the full list. Only included when the token carries the read:my_org:member_roles scope and 'roles' is requested in the fields array.",
                 "items": {
                   "$ref": "#/components/schemas/Role"
                 },
@@ -5717,24 +5717,24 @@
           {
             "properties": {
               "created_at": {
-                "description": "このユーザーが作成された日時（ISO_8601 形式）。",
+                "description": "Date and time when this user was created (ISO_8601 format).",
                 "format": "date-time",
                 "readOnly": true,
                 "type": "string"
               },
               "last_login": {
-                "description": "このユーザーが最後にログインした日時（ISO_8601 形式）。",
+                "description": "Last date and time this user logged in (ISO_8601 format).",
                 "format": "date-time",
                 "readOnly": true,
                 "type": "string"
               },
               "phone_number": {
-                "description": "ユーザーに関連付けられた電話番号。",
+                "description": "Phone number associated with the user.",
                 "readOnly": true,
                 "type": "string"
               },
               "updated_at": {
-                "description": "このユーザーが最後に更新された日時（ISO_8601 形式）。",
+                "description": "Date and time when this user was last updated (ISO_8601 format).",
                 "format": "date-time",
                 "readOnly": true,
                 "type": "string"
@@ -5752,17 +5752,17 @@
         "type": "object"
       },
       "OrgMemberId": {
-        "description": "ユーザーID。",
+        "description": "The user ID.",
         "pattern": "^(?=.{1,1024}$).+\\|.+$",
         "type": "string"
       },
       "OrgMemberIdReadOnly": {
-        "description": "ユーザーID。",
+        "description": "The user ID.",
         "readOnly": true,
         "type": "string"
       },
       "OrgThirdPartyClientAccessEnum": {
-        "description": "有効なサードパーティクライアントアクセス値",
+        "description": "A valid third-party client access value",
         "enum": [
           "allow",
           "block"
@@ -5770,7 +5770,7 @@
         "type": "string"
       },
       "OrganizationAccessLevelEnum": {
-        "description": "組織に許可されるアクセスレベル",
+        "description": "The access level allowed for the Organization",
         "enum": [
           "none",
           "readonly",
@@ -5818,7 +5818,7 @@
         "type": "object"
       },
       "RoleId": {
-        "description": "組織のメンバーに割り当て可能なロールの ID。",
+        "description": "The ID of a role that can be assigned to a member of an organization.",
         "pattern": "^rol_[A-Za-z0-9]{16}$",
         "type": "string"
       },
@@ -5826,7 +5826,7 @@
         "$ref": "#/components/schemas/OrgDomain"
       },
       "SubjectTypeEnum": {
-        "description": "subject type の種類",
+        "description": "The type of subject type",
         "enum": [
           "client",
           "user"
@@ -5852,19 +5852,19 @@
             "type": "string"
           },
           "family_name": {
-            "description": "姓",
+            "description": "Last name",
             "type": "string"
           },
           "given_name": {
-            "description": "名",
+            "description": "First name",
             "type": "string"
           },
           "name": {
-            "description": "氏名",
+            "description": "Full Name",
             "type": "string"
           },
           "nickname": {
-            "description": "ユーザーのニックネーム",
+            "description": "User nickname",
             "type": "string"
           }
         },
@@ -5877,19 +5877,19 @@
             "$ref": "#/components/schemas/OrganizationAccessLevelEnum"
           },
           "display_name": {
-            "description": "ユーザーストアの表示名",
+            "description": "User store display name",
             "type": "string"
           },
           "id": {
-            "description": "ユーザーストア ID",
+            "description": "User store Id",
             "type": "string"
           },
           "is_enabled": {
-            "description": "ユーザーストアが有効かどうか",
+            "description": "Is the user store enabled",
             "type": "boolean"
           },
           "name": {
-            "description": "ユーザーストア名",
+            "description": "User store name",
             "type": "string"
           }
         },
@@ -5899,19 +5899,19 @@
         "additionalProperties": false,
         "properties": {
           "detail": {
-            "description": "エラーの詳細な説明。",
+            "description": "A detailed description of the error.",
             "type": "string"
           },
           "field": {
-            "description": "無効なパラメーターの名前。",
+            "description": "The name of the invalid parameter.",
             "type": "string"
           },
           "pointer": {
-            "description": "検証対象の JSON ドキュメント内で、エラーの正確な位置を示す JSON Pointer。",
+            "description": "JSON Pointer that points to the exact location of the error in a JSON document being validated.",
             "type": "string"
           },
           "source": {
-            "description": "エラーの発生元（例: HTML メッセージ内の body、query、または header）を指定します。",
+            "description": "Specifies the source of the error (e.g., body, query, or header in an HTML message).",
             "type": "string"
           }
         },
@@ -5924,15 +5924,15 @@
         "additionalProperties": false,
         "properties": {
           "status": {
-            "description": "request の HTTP ステータスコードの結果。",
+            "description": "The HTTP status code result of the request.",
             "type": "integer"
           },
           "title": {
-            "description": "エラーの簡単な説明。",
+            "description": "A brief description of the error.",
             "type": "string"
           },
           "type": {
-            "description": "エラーの説明を示す URI。",
+            "description": "A URI that describes the error.",
             "format": "uri",
             "type": "string"
           },
@@ -5952,7 +5952,7 @@
         "type": "object"
       },
       "XAuth0RateLimitRead": {
-        "description": "読み取り操作のレート制限情報",
+        "description": "Rate limit information for read operations",
         "properties": {
           "friendly_name": {
             "const": "My Org API Rate Limit Read",
@@ -5975,7 +5975,7 @@
         "type": "object"
       },
       "XAuth0RateLimitWrite": {
-        "description": "書き込み操作のレート制限情報",
+        "description": "Rate limit information for write operations",
         "properties": {
           "friendly_name": {
             "const": "My Org API  Rate Limit  Write",
@@ -6101,7 +6101,7 @@
     }
   },
   "info": {
-    "description": "My 組織 API",
+    "description": "My Organization API",
     "license": {
       "name": "UNLICENSED",
       "url": "https://auth0.com"
@@ -6114,7 +6114,7 @@
   "paths": {
     "/": {
       "delete": {
-        "description": "この組織を完全に削除します。",
+        "description": "Permanently delete this Organization.",
         "operationId": "DeleteMyOrganization",
         "parameters": [],
         "responses": {
@@ -6143,7 +6143,7 @@
             ]
           }
         ],
-        "summary": "この組織を削除",
+        "summary": "Delete this Organization",
         "tags": [
           "orgDetails"
         ],
@@ -6159,7 +6159,7 @@
     },
     "/config": {
       "get": {
-        "description": "My 組織 API の設定を取得します。返されるのは `connection_deletion_behavior` と `allowed_strategies` のみです。`user_attribute_profile_id` や `connection_profile_id` などの識別子属性は含まれません。この情報は頻繁には変更されないため、キャッシュしてください。",
+        "description": "Retrieve the My Organization API configuration. Returns only the `connection_deletion_behavior` and `allowed_strategies`. Identifier attributes such as `user_attribute_profile_id` and `connection_profile_id` are not included. Cache this information, as it does not change frequently.",
         "operationId": "GetOrgConfiguration",
         "parameters": [],
         "responses": {
@@ -6191,7 +6191,7 @@
             ]
           }
         ],
-        "summary": "My 組織 API の設定を取得",
+        "summary": "Get My Organization API configuration",
         "tags": [
           "config"
         ],
@@ -6211,7 +6211,7 @@
     },
     "/config/identity-providers": {
       "get": {
-        "description": "このアプリケーションの [Connection Profile](https://auth0.com/docs/authenticate/enterprise-connections/connection-profile) を取得します。この情報は頻繁には変更されないため、キャッシュしてください。",
+        "description": "Retrieve the [Connection Profile](https://auth0.com/docs/authenticate/enterprise-connections/connection-profile) for this application. You should cache this information as it does not change frequently.",
         "operationId": "GetIdpConfiguration",
         "parameters": [],
         "responses": {
@@ -6243,7 +6243,7 @@
             ]
           }
         ],
-        "summary": "IDプロバイダーの設定を取得",
+        "summary": "Get Identity Provider configuration",
         "tags": [
           "config"
         ],
@@ -6264,7 +6264,7 @@
     },
     "/delete-member-invitations": {
       "post": {
-        "description": "この組織について、ID で指定された複数のメンバー招待を取り消します。",
+        "description": "Revoke a set of member invitations specified by IDs for this Organization.",
         "operationId": "DeleteInvitations",
         "requestBody": {
           "$ref": "#/components/requestBodies/DeleteMemberInvitationsRequest"
@@ -6301,7 +6301,7 @@
             ]
           }
         ],
-        "summary": "メンバー招待を取り消す",
+        "summary": "Revoke member invitations",
         "tags": [
           "orgMemberManagement"
         ],
@@ -6319,7 +6319,7 @@
     },
     "/delete-memberships": {
       "post": {
-        "description": "この組織からメンバーを1人削除します。元のユーザーアカウントは削除されません。",
+        "description": "Remove one member from this Organization. The underlying user account is not deleted.",
         "operationId": "DeleteOrganizationMemberships",
         "parameters": [],
         "requestBody": {
@@ -6357,7 +6357,7 @@
             ]
           }
         ],
-        "summary": "メンバーシップを削除",
+        "summary": "Delete memberships",
         "tags": [
           "orgMemberManagement"
         ],
@@ -6376,7 +6376,7 @@
     },
     "/details": {
       "get": {
-        "description": "表示名やブランディングオプションなど、この組織の詳細を取得します。Auth0 Organizations の詳細については、[Organizations](https://auth0.com/docs/manage-users/organizations) を参照してください。",
+        "description": "Retrieve details for this Organization, including display name and branding options. To learn more about Auth0 Organizations, read [Organizations](https://auth0.com/docs/manage-users/organizations).",
         "operationId": "GetOrganizationDetails",
         "parameters": [],
         "responses": {
@@ -6408,7 +6408,7 @@
             ]
           }
         ],
-        "summary": "組織の詳細を取得",
+        "summary": "Get Organization details",
         "tags": [
           "orgDetails"
         ],
@@ -6422,7 +6422,7 @@
         "x-swagger-docs": true
       },
       "patch": {
-        "description": "表示名やブランディングオプションなど、この組織の詳細を更新します。Auth0 Organizations の詳細については、[Organizations](https://auth0.com/docs/manage-users/organizations) を参照してください。",
+        "description": "Update details for this Organization, such as display name and branding options. To learn more about Auth0 Organizations, read [Organizations](https://auth0.com/docs/manage-users/organizations).",
         "operationId": "UpdateOrganizationDetails",
         "parameters": [],
         "requestBody": {
@@ -6460,7 +6460,7 @@
             ]
           }
         ],
-        "summary": "組織の詳細を更新",
+        "summary": "Update Organization details",
         "tags": [
           "orgDetails"
         ],
@@ -6476,7 +6476,7 @@
     },
     "/domains": {
       "get": {
-        "description": "この組織の保留中および検証済みのすべてのドメインの一覧を取得します。",
+        "description": "Retrieve a list of all pending and verified domains for this Organization.",
         "operationId": "ListOrganizationDomains",
         "parameters": [
           {
@@ -6518,7 +6518,7 @@
             ]
           }
         ],
-        "summary": "ドメインを一覧表示",
+        "summary": "List domains",
         "tags": [
           "orgDomainManagement"
         ],
@@ -6536,7 +6536,7 @@
         "x-swagger-docs": true
       },
       "post": {
-        "description": "Auth0 組織のドメインを作成し、必要に応じてユーザーのログインフロー中にメンバー向けの組織検出を有効にします",
+        "description": "Create a domain for an Auth0 Organization and optionally enable Organization Discovery for members during the user login flow",
         "operationId": "CreateOrganizationDomain",
         "parameters": [],
         "requestBody": {
@@ -6577,7 +6577,7 @@
             ]
           }
         ],
-        "summary": "ドメインを作成",
+        "summary": "Create a domain",
         "tags": [
           "orgDomainManagement"
         ],
@@ -6596,7 +6596,7 @@
     },
     "/domains/{domain_id}": {
       "delete": {
-        "description": "固有のドメイン ID を使用して、関連するすべての詳細および検証ステータスを含む Auth0 組織ドメインを削除します。",
+        "description": "Delete an Auth0 Organization domain using its unique domain ID, including all associated details and verification status.",
         "operationId": "DeleteOrganizationDomain",
         "parameters": [
           {
@@ -6635,7 +6635,7 @@
             ]
           }
         ],
-        "summary": "ドメインを削除",
+        "summary": "Delete a domain",
         "tags": [
           "orgDomainManagement"
         ],
@@ -6652,7 +6652,7 @@
         "x-swagger-docs": true
       },
       "get": {
-        "description": "固有のドメイン ID を使用して、ドメイン名と現在の検証ステータスを含む Auth0 組織ドメインの詳細を取得します。",
+        "description": "Retrieve the details of an Auth0 Organization domain using its unique domain ID, including the domain name and its current verification status.",
         "operationId": "GetOrganizationDomain",
         "parameters": [
           {
@@ -6691,7 +6691,7 @@
             ]
           }
         ],
-        "summary": "ドメインを取得",
+        "summary": "Get a domain",
         "tags": [
           "orgDomainManagement"
         ],
@@ -6710,7 +6710,7 @@
     },
     "/domains/{domain_id}/identity-providers": {
       "get": {
-        "description": "この組織の、ID で指定されたドメインに関連付けられた IDプロバイダーの一覧を取得します。",
+        "description": "Retrieve the list of Identity Providers associated with a domain specified by ID for this Organization.",
         "operationId": "GetOrganizationDomainIdentityProviders",
         "parameters": [
           {
@@ -6751,7 +6751,7 @@
             ]
           }
         ],
-        "summary": "ドメインのIDプロバイダーを一覧表示",
+        "summary": "List Identity Providers for a domain",
         "tags": [
           "orgDomainManagement"
         ],
@@ -6771,7 +6771,7 @@
     },
     "/domains/{domain_id}/verify": {
       "post": {
-        "description": "この組織の、ID で指定されたドメインの検証プロセスを開始します。",
+        "description": "Initiate the verification process for a domain specified by ID for this Organization.",
         "operationId": "CreateOrganizationDomainVerification",
         "parameters": [
           {
@@ -6810,7 +6810,7 @@
             ]
           }
         ],
-        "summary": "ドメイン検証を開始",
+        "summary": "Start domain verification",
         "tags": [
           "orgDomainManagement"
         ],
@@ -6830,7 +6830,7 @@
     },
     "/identity-providers": {
       "get": {
-        "description": "この組織に関連付けられたすべての IDプロバイダーとそれぞれの設定の一覧を取得します。",
+        "description": "Retrieve the comprehensive list of identity providers and their respective configurations associated with an Auth0 Organization.",
         "operationId": "ListOrganizationIdentityProviders",
         "parameters": [
           {
@@ -6869,7 +6869,7 @@
             ]
           }
         ],
-        "summary": "IDプロバイダーを一覧表示",
+        "summary": "List Identity Providers",
         "tags": [
           "idpManagement"
         ],
@@ -6887,7 +6887,7 @@
         "x-swagger-docs": true
       },
       "post": {
-        "description": "この組織に、指定された設定と詳細を使用して新しいエンタープライズ IDプロバイダーを作成します。",
+        "description": "Create a new enterprise Identity Provider utilizing the specified configuration settings and details for this Auth0 Organization.",
         "operationId": "CreateOrganizationIdentityProvider",
         "parameters": [],
         "requestBody": {
@@ -6928,7 +6928,7 @@
             ]
           }
         ],
-        "summary": "IDプロバイダーを作成",
+        "summary": "Create an Identity Provider",
         "tags": [
           "idpManagement"
         ],
@@ -6947,7 +6947,7 @@
     },
     "/identity-providers/{idp_id}": {
       "delete": {
-        "description": "この組織から、ID で指定された IDプロバイダーを削除します。これにより関連付けが解除され、基盤となる IDプロバイダーも削除されます。メンバーはこの IDプロバイダーを使用して認証できなくなります。",
+        "description": "Delete an Identity Provider specified by ID from this Organization. This will remove the association and delete the underlying Identity Provider. Members will no longer be able to authenticate using this Identity Provider.",
         "operationId": "DeleteOrganizationIdentityProvider",
         "parameters": [
           {
@@ -6986,7 +6986,7 @@
             ]
           }
         ],
-        "summary": "IDプロバイダーを削除",
+        "summary": "Delete an Identity Provider",
         "tags": [
           "idpManagement"
         ],
@@ -7003,7 +7003,7 @@
         "x-swagger-docs": true
       },
       "get": {
-        "description": "この組織の、ID で指定された IDプロバイダーの詳細を取得します。",
+        "description": "Retrieve details of an Identity Provider specified by ID for this Organization.",
         "operationId": "GetOrganizationIdentityProvider",
         "parameters": [
           {
@@ -7042,7 +7042,7 @@
             ]
           }
         ],
-        "summary": "IDプロバイダーを取得",
+        "summary": "Get an Identity Provider",
         "tags": [
           "idpManagement"
         ],
@@ -7059,7 +7059,7 @@
         "x-swagger-docs": true
       },
       "patch": {
-        "description": "この組織の、ID で指定された IDプロバイダーの詳細を更新します。",
+        "description": "Update the details of an Identity Provider specified by ID for this Organization.",
         "operationId": "UpdateOrganizationIdentityProvider",
         "parameters": [
           {
@@ -7101,7 +7101,7 @@
             ]
           }
         ],
-        "summary": "IDプロバイダーを更新",
+        "summary": "Update an Identity Provider",
         "tags": [
           "idpManagement"
         ],
@@ -7120,7 +7120,7 @@
     },
     "/identity-providers/{idp_id}/detach": {
       "post": {
-        "description": "この組織から、ID で指定された IDプロバイダーを削除します。解除されるのは関連付けのみで、基盤となる IDプロバイダーは削除されません。メンバーはこの IDプロバイダーを使用して認証できなくなります。",
+        "description": "Remove an Identity Provider specified by ID from this Organization. This only removes the association; the underlying Identity Provider is not deleted. Members will no longer be able to authenticate using this Identity Provider.",
         "operationId": "DetachOrganizationIdentityProviderDomain",
         "parameters": [
           {
@@ -7159,7 +7159,7 @@
             ]
           }
         ],
-        "summary": "IDプロバイダーの関連付けを解除",
+        "summary": "Detach Identity Provider",
         "tags": [
           "idpManagement"
         ],
@@ -7178,7 +7178,7 @@
     },
     "/identity-providers/{idp_id}/domains": {
       "post": {
-        "description": "この組織の、ID で指定された IDプロバイダーにドメインを関連付けます。ドメインはクレーム済みかつ検証済みである必要があります。",
+        "description": "Associate a domain with an Identity Provider specified by ID for this Organization. The domain must be claimed and verified.",
         "operationId": "CreateOrganizationIdentityProviderDomain",
         "parameters": [
           {
@@ -7223,7 +7223,7 @@
             ]
           }
         ],
-        "summary": "ドメインをIDプロバイダーに関連付ける",
+        "summary": "Associate a domain with an Identity Provider",
         "tags": [
           "idpManagement"
         ],
@@ -7243,7 +7243,7 @@
     },
     "/identity-providers/{idp_id}/domains/{domain}": {
       "delete": {
-        "description": "この組織の、ID で指定された IDプロバイダーから、名前で指定されたドメインを削除します。",
+        "description": "Remove a domain specified by name from an Identity Provider specified by ID for this Organization.",
         "operationId": "DeleteOrganizationIdentityProviderDomain",
         "parameters": [
           {
@@ -7285,7 +7285,7 @@
             ]
           }
         ],
-        "summary": "IDプロバイダーからドメインの関連付けを解除",
+        "summary": "Remove a domain from an Identity Provider",
         "tags": [
           "idpManagement"
         ],
@@ -7305,7 +7305,7 @@
     },
     "/identity-providers/{idp_id}/provisioning": {
       "delete": {
-        "description": "この組織の、ID で指定された IDプロバイダーのプロビジョニング設定を削除します。",
+        "description": "Delete the Provisioning Configuration for an Identity Provider specified by ID for this Organization.",
         "operationId": "DeleteProvisioningConfiguration",
         "parameters": [
           {
@@ -7344,7 +7344,7 @@
             ]
           }
         ],
-        "summary": "プロビジョニング設定を削除",
+        "summary": "Delete a Provisioning Configuration",
         "tags": [
           "idpManagement"
         ],
@@ -7362,7 +7362,7 @@
         "x-swagger-docs": true
       },
       "get": {
-        "description": "この組織の、ID で指定された IDプロバイダーのプロビジョニング設定を取得します。",
+        "description": "Retrieve the Provisioning Configuration for an Identity Provider specified by ID for this Organization.",
         "operationId": "GetIdpProvisioningConfiguration",
         "parameters": [
           {
@@ -7401,7 +7401,7 @@
             ]
           }
         ],
-        "summary": "プロビジョニング設定を取得",
+        "summary": "Get a Provisioning Configuration",
         "tags": [
           "idpManagement"
         ],
@@ -7419,7 +7419,7 @@
         "x-swagger-docs": true
       },
       "post": {
-        "description": "この組織の、ID で指定された IDプロバイダーに新しいプロビジョニング設定を作成します。",
+        "description": "Create a new Provisioning Configuration for an Identity Provider specified by ID for this Organization.",
         "operationId": "CreateIdpProvisioningConfiguration",
         "parameters": [
           {
@@ -7458,7 +7458,7 @@
             ]
           }
         ],
-        "summary": "プロビジョニング設定を作成",
+        "summary": "Create a Provisioning Configuration",
         "tags": [
           "idpManagement"
         ],
@@ -7478,7 +7478,7 @@
     },
     "/identity-providers/{idp_id}/provisioning/scim-tokens": {
       "get": {
-        "description": "この組織の、ID で指定された IDプロバイダーのプロビジョニング設定の [SCIM トークン](https://auth0.com/docs/authenticate/protocols/scim/configure-inbound-scim#scim-endpoints-and-tokens) の一覧を取得します。",
+        "description": "Retrieve a list of [SCIM tokens](https://auth0.com/docs/authenticate/protocols/scim/configure-inbound-scim#scim-endpoints-and-tokens) for the Provisioning Configuration of an Identity Provider specified by ID for this Organization.",
         "operationId": "ListIdpProvisioningScimTokens",
         "parameters": [
           {
@@ -7517,7 +7517,7 @@
             ]
           }
         ],
-        "summary": "プロビジョニング SCIM トークンを一覧表示",
+        "summary": "List Provisioning SCIM tokens",
         "tags": [
           "idpManagement"
         ],
@@ -7536,7 +7536,7 @@
         "x-swagger-docs": true
       },
       "post": {
-        "description": "この組織の、ID で指定された IDプロバイダーのプロビジョニング設定に新しい SCIM トークンを作成します。",
+        "description": "Create a new SCIM token for the Provisioning Configuration of an Identity Provider specified by ID for this Organization.",
         "operationId": "CreateIdpProvisioningScimToken",
         "parameters": [
           {
@@ -7578,7 +7578,7 @@
             ]
           }
         ],
-        "summary": "プロビジョニング SCIM トークンを作成",
+        "summary": "Create a Provisioning SCIM token",
         "tags": [
           "idpManagement"
         ],
@@ -7599,7 +7599,7 @@
     },
     "/identity-providers/{idp_id}/provisioning/scim-tokens/{idp_scim_token_id}": {
       "delete": {
-        "description": "この組織の、ID で指定された IDプロバイダーのプロビジョニング設定について、トークン ID で指定された SCIM トークンを取り消します。",
+        "description": "Revoke a SCIM token specified by token ID for the Provisioning Configuration of an Identity Provider specified by ID for this Organization.",
         "operationId": "DeleteIdpProvisioningScimToken",
         "parameters": [
           {
@@ -7641,7 +7641,7 @@
             ]
           }
         ],
-        "summary": "プロビジョニング SCIM トークンを取り消す",
+        "summary": "Revoke a Provisioning SCIM token",
         "tags": [
           "idpManagement"
         ],
@@ -7662,7 +7662,7 @@
     },
     "/identity-providers/{idp_id}/provisioning/update-attributes": {
       "put": {
-        "description": "この組織の、ID で指定された IDプロバイダーのプロビジョニング設定の属性マッピングを更新します。マッピングは管理者が定義したデフォルトにリセットされます。",
+        "description": "Refresh the attribute mapping for the Provisioning Configuration of an Identity Provider specified by ID for this Organization. Mappings are reset to the admin-defined defaults.",
         "operationId": "UpdateIdpProvisioningConfigurationAttributes",
         "parameters": [
           {
@@ -7704,7 +7704,7 @@
             ]
           }
         ],
-        "summary": "プロビジョニング設定の属性マッピングを更新",
+        "summary": "Refresh Provisioning Configuration attribute mapping",
         "tags": [
           "idpManagement"
         ],
@@ -7724,7 +7724,7 @@
     },
     "/identity-providers/{idp_id}/update-attributes": {
       "put": {
-        "description": "この組織の、ID で指定された IDプロバイダーの属性マッピングを更新します。マッピングは管理者が定義したデフォルトにリセットされます。",
+        "description": "Refresh the attribute mapping for an Identity Provider specified by ID for this Organization. Mappings are reset to the admin-defined defaults.",
         "operationId": "UpdateOrganizationIdentityProviderAttributes",
         "parameters": [
           {
@@ -7766,7 +7766,7 @@
             ]
           }
         ],
-        "summary": "IDプロバイダーの属性マッピングを更新",
+        "summary": "Refresh Identity Provider attribute mapping",
         "tags": [
           "idpManagement"
         ],
@@ -7785,7 +7785,7 @@
     },
     "/member-invitations": {
       "get": {
-        "description": "この組織のすべてのメンバー招待の一覧を取得します。",
+        "description": "Retrieve a list of all member invitations for this Organization.",
         "operationId": "ListInvitations",
         "parameters": [
           {
@@ -7836,7 +7836,7 @@
             ]
           }
         ],
-        "summary": "メンバー招待を一覧表示",
+        "summary": "List member invitations",
         "tags": [
           "orgMemberManagement"
         ],
@@ -7853,7 +7853,7 @@
         "x-release-lifecycle": "beta"
       },
       "post": {
-        "description": "この組織のメンバー招待を1件以上作成します。ユーザーに対して有効な招待がすでに存在する場合、新しい招待を作成すると、そのユーザーに対する未処理の招待はすべて自動的に取り消されます。ペイロードで指定されたロールは、ユーザーが招待を承諾すると付与されます。",
+        "description": "Create one or more member invitations for this Organization. If an active invitation already exists for a user, generating a new invitation will automatically revoke any outstanding invitations for that user. Roles specified in the payload will be granted to the user upon acceptance of the invitation.",
         "operationId": "CreateInvitations",
         "parameters": [
           {
@@ -7899,7 +7899,7 @@
             ]
           }
         ],
-        "summary": "メンバー招待を作成",
+        "summary": "Create member invitations",
         "tags": [
           "orgMemberManagement"
         ],
@@ -7917,7 +7917,7 @@
     },
     "/member-invitations/{invitation_id}": {
       "delete": {
-        "description": "この組織について、ID で指定されたメンバー招待を取り消します。",
+        "description": "Revoke a member invitation specified by ID for this Organization.",
         "operationId": "DeleteInvitation",
         "parameters": [
           {
@@ -7956,7 +7956,7 @@
             ]
           }
         ],
-        "summary": "メンバー招待を取り消す",
+        "summary": "Revoke a member invitation",
         "tags": [
           "orgMemberManagement"
         ],
@@ -7972,7 +7972,7 @@
         "x-release-lifecycle": "beta"
       },
       "get": {
-        "description": "この組織について、ID で指定されたメンバー招待の詳細を取得します。",
+        "description": "Retrieve details of a member invitation specified by ID for this Organization.",
         "operationId": "GetInvitation",
         "parameters": [
           {
@@ -8017,7 +8017,7 @@
             ]
           }
         ],
-        "summary": "メンバー招待を取得",
+        "summary": "Get a member invitation",
         "tags": [
           "orgMemberManagement"
         ],
@@ -8036,7 +8036,7 @@
     },
     "/member-invitations/{invitation_id}/roles": {
       "get": {
-        "description": "この組織について、ID で指定されたメンバー招待に割り当てられているロールを取得します。",
+        "description": "Retrieve the roles assigned to a member invitation specified by ID for this Organization.",
         "operationId": "ListMemberInvitationRoles",
         "parameters": [
           {
@@ -8075,7 +8075,7 @@
             ]
           }
         ],
-        "summary": "メンバー招待のロールを一覧表示",
+        "summary": "List roles for a member invitation",
         "tags": [
           "orgMemberManagement"
         ],
@@ -8095,12 +8095,12 @@
     },
     "/members": {
       "get": {
-        "description": "この組織のすべてのメンバーの一覧を取得します。各メンバーの `roles` フィールドは、トークンに `read:my_org:member_roles` スコープも含まれている場合にのみ含まれます。このスコープがない場合、`roles` フィールドはレスポンスから省略されます。",
+        "description": "Retrieve a list of all members for this Organization. The `roles` field is only included for each member when the token also carries the `read:my_org:member_roles` scope; without that scope the `roles` field is omitted from the response.",
         "operationId": "ListOrganizationMembers",
         "parameters": [
           {
             "$ref": "#/components/parameters/FieldsQueryParameter",
-            "description": "結果に含める、または除外するフィールドのカンマ区切りリストです（include_fields に指定した値に基づきます）。すべてのフィールドを取得するには空のままにします。`roles` フィールドはデフォルトでは返されず、フィールドリストで `roles` が明示的に指定され（include モード）、かつトークンに read:my_org:member_roles スコープも含まれている場合にのみ含まれます。このスコープなしで `roles` が要求された場合、レスポンスから何も通知されずに省略されます。"
+            "description": "Comma-separated list of fields to include or exclude (based on value provided for include_fields) in the result. Leave empty to retrieve all fields. The 'roles' field is not returned by default; it is only included when 'roles' is explicitly requested in the fields list (include mode) and the token also carries the read:my_org:member_roles scope. If 'roles' is requested without that scope, it is silently omitted from the response."
           },
           {
             "$ref": "#/components/parameters/IncludeFieldsQueryParameter"
@@ -8156,7 +8156,7 @@
             ]
           }
         ],
-        "summary": "メンバーを一覧表示",
+        "summary": "List members",
         "tags": [
           "orgMemberManagement"
         ],
@@ -8175,7 +8175,7 @@
     },
     "/members/{user_id}": {
       "get": {
-        "description": "この組織について、ユーザー ID で指定されたメンバーの詳細を取得します。",
+        "description": "Retrieve details of a member specified by user ID for this Organization.",
         "operationId": "GetOrganizationMember",
         "parameters": [
           {
@@ -8220,7 +8220,7 @@
             ]
           }
         ],
-        "summary": "メンバーを取得",
+        "summary": "Get a member",
         "tags": [
           "orgMemberManagement"
         ],
@@ -8239,7 +8239,7 @@
     },
     "/members/{user_id}/roles": {
       "delete": {
-        "description": "この組織について、ID で指定されたメンバーからロールを削除します。",
+        "description": "Remove roles from a member specified by ID for this Organization.",
         "operationId": "UnassignOrganizationMemberRolesLegacy",
         "parameters": [
           {
@@ -8281,7 +8281,7 @@
             ]
           }
         ],
-        "summary": "メンバーからロールを削除",
+        "summary": "Remove roles from a member",
         "tags": [
           "orgMemberManagement"
         ],
@@ -8298,7 +8298,7 @@
         "x-release-lifecycle": "beta"
       },
       "get": {
-        "description": "この組織について、ID で指定されたメンバーに割り当てられているロールの一覧を取得します。",
+        "description": "Retrieve a list of roles assigned to a member specified by ID for this Organization.",
         "operationId": "ListOrgMemberRoles",
         "parameters": [
           {
@@ -8343,7 +8343,7 @@
             ]
           }
         ],
-        "summary": "メンバーのロールを一覧表示",
+        "summary": "List member roles",
         "tags": [
           "orgMemberManagement"
         ],
@@ -8361,7 +8361,7 @@
         "x-release-lifecycle": "beta"
       },
       "post": {
-        "description": "この組織について、ID で指定されたメンバーにロールを割り当てます。",
+        "description": "Assign roles to a member specified by ID for this Organization.",
         "operationId": "AssignOrganizationMemberRoles",
         "parameters": [
           {
@@ -8403,7 +8403,7 @@
             ]
           }
         ],
-        "summary": "メンバーにロールを割り当てる",
+        "summary": "Assign roles to a member",
         "tags": [
           "orgMemberManagement"
         ],
@@ -8422,7 +8422,7 @@
     },
     "/members/{user_id}/unassign-roles": {
       "post": {
-        "description": "この組織について、ID で指定されたメンバーからロールを削除します。",
+        "description": "Remove roles from a member specified by ID for this Organization.",
         "operationId": "UnassignOrganizationMemberRoles",
         "parameters": [
           {
@@ -8464,7 +8464,7 @@
             ]
           }
         ],
-        "summary": "メンバーからロールを削除",
+        "summary": "Remove roles from a member",
         "tags": [
           "orgMemberManagement"
         ],
@@ -8483,7 +8483,7 @@
     },
     "/roles": {
       "get": {
-        "description": "この組織について、メンバーおよび招待に割り当て可能なロールの一覧を取得します。Tenant Admin によりこの組織で表示可能にされたロールのみが返されます。",
+        "description": "Retrieve the list of roles available for binding to members and invitations for this Organization. Only roles made visible to this Organization by the Tenant Admin are returned.",
         "operationId": "ListRoles",
         "parameters": [
           {
@@ -8525,7 +8525,7 @@
             ]
           }
         ],
-        "summary": "ロールを一覧表示",
+        "summary": "List roles",
         "tags": [
           "roles"
         ],
@@ -8565,47 +8565,47 @@
   ],
   "tags": [
     {
-      "description": "設定",
+      "description": "Configuration",
       "name": "config",
       "x-displayName": "Configuration"
     },
     {
-      "description": "組織に関する詳細を管理します。",
+      "description": "Manage details related to your organization.",
       "name": "orgDetails",
       "x-displayName": "Organization Details Management"
     },
     {
-      "description": "組織のIDプロバイダーを管理します。",
+      "description": "Manage Identity Providers for your Organization.",
       "name": "idpManagement",
       "x-displayName": "Identity Provider Management"
     },
     {
-      "description": "組織のユーザーストアを管理します。",
+      "description": "Manage User Stores for your Organization.",
       "name": "userStoresManagement",
       "x-displayName": "User Stores Management"
     },
     {
-      "description": "組織に関連するドメインを管理します",
+      "description": "Manage domains related to your organization",
       "name": "orgDomainManagement",
       "x-displayName": "Domain Management"
     },
     {
-      "description": "組織に関連するメンバーを管理します",
+      "description": "Manage members related to your organization",
       "name": "orgMemberManagement",
       "x-displayName": "Member Management"
     },
     {
-      "description": "組織のクライアントグラントを管理します",
+      "description": "Manage client grants for your organization",
       "name": "clientGrantManagement",
       "x-displayName": "Client Grant Management"
     },
     {
-      "description": "組織の API クライアントを管理します",
+      "description": "Manage API clients for your organization",
       "name": "clientManagement",
       "x-displayName": "Client Management"
     },
     {
-      "description": "組織のロールを管理します",
+      "description": "Manage roles for your organization",
       "name": "roles",
       "x-displayName": "Roles"
     }

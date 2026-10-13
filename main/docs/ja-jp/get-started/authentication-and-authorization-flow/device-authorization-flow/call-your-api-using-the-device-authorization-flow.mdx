@@ -17,7 +17,7 @@ Auth0 を使えば、アプリに Device <Tooltip tip="Authorization フロー: 
 * [Authentication API](https://auth0.com/docs/api/authentication): Auth0 の API を直接呼び出す方法については、このまま読み進めてください。対話形式で試したい場合は、[Device Flow Playground](https://auth0.github.io/device-flow-playground/)を参照してください。
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 このチュートリアルを始める前に、以下を確認してください。
@@ -37,7 +37,7 @@ Auth0 を使えば、アプリに Device <Tooltip tip="Authorization フロー: 
 * ランダムに生成されるユーザーコードの文字セット、形式、長さを定義するため、[デバイスのユーザーコード設定を構成します](/docs/ja-jp/get-started/tenant-settings/configure-device-user-code-settings)。
 
 <div id="steps">
-  ## 手順
+  ## 手順 {#steps}
 </div>
 
 1. [デバイスコードをリクエストする](#request-device-code) (Device Flow): ユーザーがデバイスを認可するために使用するデバイスコードをリクエストします。
@@ -53,7 +53,7 @@ Auth0 を使えば、アプリに Device <Tooltip tip="Authorization フロー: 
 任意: [トラブルシューティング](#troubleshoot)。
 
 <div id="request-device-code">
-  ### デバイスコードをリクエストする
+  ### デバイスコードをリクエストする {#request-device-code}
 </div>
 
 ユーザーがデバイスアプリを起動してデバイスを認可しようとする場合は、デバイスコードを取得する必要があります。ユーザーがブラウザベースのデバイスでセッションを開始すると、このコードはそのセッションに関連付けられます。
@@ -61,7 +61,7 @@ Auth0 を使えば、アプリに Device <Tooltip tip="Authorization フロー: 
 デバイスコードを取得するには、アプリから [device code URL](https://auth0.com/docs/api/authentication#get-device-code) にコードをリクエストし、その際に <Tooltip tip="Client ID: Auth0 から登録済みリソースに付与される識別値。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Client+ID">Client ID</Tooltip> を含める必要があります。
 
 <div id="example-post-to-device-code-url">
-  #### デバイスコードURL への POST の例
+  #### デバイスコードURL への POST の例 {#example-post-to-device-code-url}
 </div>
 
 <AuthCodeGroup>
@@ -204,7 +204,7 @@ Auth0 を使えば、アプリに Device <Tooltip tip="Authorization フロー: 
 </AuthCodeGroup>
 
 <div id="device-code-parameters">
-  ##### デバイスコードのパラメーター
+  ##### デバイスコードのパラメーター {#device-code-parameters}
 </div>
 
 カスタム API を呼び出すためのデバイスコードをリクエストする場合は、次の点に注意してください。
@@ -223,7 +223,7 @@ Auth0 を使えば、アプリに Device <Tooltip tip="Authorization フロー: 
 | `audience`  | アプリがアクセスする API の一意の識別子です。このチュートリアルの前提条件として作成した API の [設定](https://manage.auth0.com/#/apis) タブにある **Identifier** の値を使用してください。なお、これは URL エンコードする必要があります。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 <div id="device-code-response">
-  #### デバイスコードのレスポンス
+  #### デバイスコードのレスポンス {#device-code-response}
 </div>
 
 正常に処理されると、`device_code`、`user_code`、`verification_uri`、`expires_in`、`interval`、`verification_uri_complete` の各値を含むペイロードを含む `HTTP 200` レスポンスが返されます：
@@ -266,7 +266,7 @@ Auth0 を使えば、アプリに Device <Tooltip tip="Authorization フロー: 
 </Callout>
 
 <div id="request-device-activation">
-  ### デバイスのアクティベーションをリクエストする
+  ### デバイスのアクティベーションをリクエストする {#request-device-activation}
 </div>
 
 `device_code` と `user_code` を受け取ったら、ユーザーにノートパソコンまたはスマートフォンで `verification_uri` にアクセスし、`user_code` を入力するよう案内する必要があります。
@@ -280,7 +280,7 @@ Auth0 を使えば、アプリに Device <Tooltip tip="Authorization フロー: 
 </Callout>
 
 <div id="request-tokens">
-  ### トークンをリクエストする
+  ### トークンをリクエストする {#request-tokens}
 </div>
 
 ユーザーがデバイスを有効化するのを待つ間に、<Tooltip tip="Access Token: API へのアクセスに使用される Authorization 資格情報で、opaque な文字列または JWT の形式です。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Access+Token">アクセストークン</Tooltip> をリクエストするため、token URL へのポーリングを開始します。前のステップで取得したポーリング間隔 (`interval`) を使って、`device_code` を含めたうえで [token URL](https://auth0.com/docs/api/authentication#device-auth) に `POST` する必要があります。
@@ -288,7 +288,7 @@ Auth0 を使えば、アプリに Device <Tooltip tip="Authorization フロー: 
 ネットワーク遅延によるエラーを避けるため、各間隔は、直前のポーリング リクエストへのレスポンスを受信してから数え始めてください。
 
 <div id="example-request-token-post-to-token-url">
-  #### token URL に token をリクエストする POST の例
+  #### token URL に token をリクエストする POST の例 {#example-request-token-post-to-token-url}
 </div>
 
 <AuthCodeGroup>
@@ -435,7 +435,7 @@ Auth0 を使えば、アプリに Device <Tooltip tip="Authorization フロー: 
 </AuthCodeGroup>
 
 <div id="token-request-parameters">
-  ##### トークンリクエストのパラメータ
+  ##### トークンリクエストのパラメータ {#token-request-parameters}
 </div>
 
 | パラメータ名        | 説明                                                                                                                                                                                              |
@@ -445,13 +445,13 @@ Auth0 を使えば、アプリに Device <Tooltip tip="Authorization フロー: 
 | `client_id`   | お使いのアプリケーションの Client ID です。この値は [アプリケーション設定](https://manage.auth0.com/#/Applications/\{yourClientId}/settings) で確認できます。                                                                         |
 
 <div id="token-responses">
-  #### トークン応答
+  #### トークン応答 {#token-responses}
 </div>
 
 ユーザーがデバイスを認可するまでの間、`HTTP 4xx` レスポンスがいくつか返されることがあります。
 
 <div id="authorization-pending">
-  ##### 認可保留中
+  ##### 認可保留中 {#authorization-pending}
 </div>
 
 ユーザーが操作を完了するまで、このエラーが表示されます。このチュートリアルの前のStepで取得した推奨間隔で、ポーリングを続けてください。
@@ -465,7 +465,7 @@ HTTP/1.1 403 Forbidden
 ```
 
 <div id="slow-down">
-  ##### 速度を落とす
+  ##### 速度を落とす {#slow-down}
 </div>
 
 ポーリングの間隔が短すぎます。このチュートリアルの前のステップで取得した推奨の間隔を使用してください。ネットワーク遅延によってこのエラーが発生するのを防ぐには、最後のポーリング リクエストへのレスポンスを受信してから、次の間隔の計測を開始してください。
@@ -479,7 +479,7 @@ HTTP/1.1 429 Too Many Requests
 ```
 
 <div id="expired-token">
-  ##### 期限切れのトークン
+  ##### 期限切れのトークン {#expired-token}
 </div>
 
 ユーザーによるデバイスの認可が間に合わなかったため、`device_code` は期限切れになっています。アプリケーションは、フローの有効期限が切れたことをユーザーに通知し、フローを再度開始するよう促す必要があります。
@@ -497,7 +497,7 @@ HTTP/1.1 403 Bad Request
 ```
 
 <div id="access-denied">
-  ##### アクセスが拒否されました
+  ##### アクセスが拒否されました {#access-denied}
 </div>
 
 最後に、アクセスが拒否された場合は、以下が表示されます。
@@ -517,7 +517,7 @@ HTTP/1.1 403 Forbidden
 * 設定されたルールによってアクセスが拒否された (詳しくは、[Auth0 ルール](/docs/ja-jp/customize/rules) を参照してください。)
 
 <div id="authorize-user">
-  ### ユーザーを認可する
+  ### ユーザーを認可する {#authorize-user}
 </div>
 
 ユーザーは、QRコードをスキャンするか、アクティベーションページを開いてユーザーコードを入力します。
@@ -544,7 +544,7 @@ HTTP/1.1 403 Forbidden
 この時点で、ユーザーの認証が完了し、デバイスは認可されています。
 
 <div id="receive-tokens">
-  ### トークンを受け取る
+  ### トークンを受け取る {#receive-tokens}
 </div>
 
 ユーザーがデバイスの認証と認可を行っている間も、デバイスアプリはアクセストークンを要求するために Token URL へのリクエストを継続的にポーリングします。
@@ -576,7 +576,7 @@ HTTP/1.1 403 Forbidden
 </Warning>
 
 <div id="call-your-api">
-  ### API を呼び出す
+  ### API を呼び出す {#call-your-api}
 </div>
 
 API を呼び出すには、アプリケーションで取得した アクセストークン を Bearer トークンとして HTTP リクエストの Authorization ヘッダーに含める必要があります。
@@ -717,7 +717,7 @@ API を呼び出すには、アプリケーションで取得した アクセス
 </AuthCodeGroup>
 
 <div id="refresh-tokens">
-  ### リフレッシュトークン
+  ### リフレッシュトークン {#refresh-tokens}
 </div>
 
 このチュートリアルに沿ってここまで進め、次の作業を完了していれば、すでにリフレッシュトークンを受け取っています。
@@ -730,7 +730,7 @@ API を呼び出すには、アプリケーションで取得した アクセス
 トークンを更新するには、`grant_type=refresh_token` を使用して、Authentication API の `/oauth/token` エンドポイントに `POST` リクエストを送信します。
 
 <div id="example-refresh-token-post-to-token-url">
-  #### Token URL へのリフレッシュトークンの POST の例
+  #### Token URL へのリフレッシュトークンの POST の例 {#example-refresh-token-post-to-token-url}
 </div>
 
 <AuthCodeGroup>
@@ -879,7 +879,7 @@ API を呼び出すには、アプリケーションで取得した アクセス
 </AuthCodeGroup>
 
 <div id="refresh-token-request-parameters">
-  ##### リフレッシュトークンのリクエストパラメーター
+  ##### リフレッシュトークンのリクエストパラメーター {#refresh-token-request-parameters}
 </div>
 
 | パラメーター名         | 説明                                                                                                                          |
@@ -891,7 +891,7 @@ API を呼び出すには、アプリケーションで取得した アクセス
 | `scope`         |  (任意) 要求するスコープ権限のスペース区切りリストです。送信しない場合は元のスコープが使用され、送信する場合はスコープを絞って要求できます。なお、URL エンコードが必要です。                                  |
 
 <div id="refresh-token-response">
-  #### リフレッシュトークンのレスポンス
+  #### リフレッシュトークンのレスポンス {#refresh-token-response}
 </div>
 
 問題がなければ、新しい`access_token`、`id_token` (任意) 、トークンの有効期限 (秒)  (`expires_in`) 、付与された`scope`値、`token_type`を含むペイロード付きの`HTTP 200`レスポンスを受け取ります。
@@ -911,11 +911,11 @@ API を呼び出すには、アプリケーションで取得した アクセス
 </Warning>
 
 <div id="sample-use-cases">
-  ## 使用例
+  ## 使用例 {#sample-use-cases}
 </div>
 
 <div id="detect-device-authorization-flow-use">
-  ### Device Authorization Flow の使用を検出する
+  ### Device Authorization Flow の使用を検出する {#detect-device-authorization-flow-use}
 </div>
 
 ルールを使用すると、現在のトランザクションで Device Authorization Flow が使われているかどうかを検出できます。 (ルールの詳細については、[Auth0 ルール](/docs/ja-jp/customize/rules) を参照してください。) その場合は、`context` オブジェクトの `protocol` プロパティを確認します。
@@ -931,7 +931,7 @@ function (user, context, callback) {
 ```
 
 <div id="sample-implementations">
-  ### サンプル実装
+  ### サンプル実装 {#sample-implementations}
 </div>
 
 * [Device Authorization Playground](https://auth0.github.io/device-flow-playground/)
@@ -939,13 +939,13 @@ function (user, context, callback) {
 * [CLI (Node.js)](https://gist.github.com/panva/ebaacfe433a8677bdbf458f6e1132045): 認可コードフローではなく Device Authorization Flow を使用する CLI のサンプル実装です。主な違いは、CLI で Web サーバーを立ち上げてポートを待ち受ける必要がないことです。
 
 <div id="troubleshoot">
-  ## トラブルシューティング
+  ## トラブルシューティング {#troubleshoot}
 </div>
 
 テナントログは、発生したあらゆる操作について作成され、問題の切り分けに利用できます。詳しくは、[ログ](/docs/ja-jp/deploy-monitor/logs)を参照してください。
 
 <div id="error-codes">
-  ### エラーコード
+  ### エラーコード {#error-codes}
 </div>
 
 | Code    | Name                   | Description         |
@@ -957,7 +957,7 @@ function (user, context, callback) {
 | `sede`  | 交換に成功                  | デバイスコードをアクセストークンに交換 |
 
 <div id="limitations">
-  ### 制限事項
+  ### 制限事項 {#limitations}
 </div>
 
 Device Authorization Flow を使用するには、デバイスが次の要件を満たしている必要があります。
@@ -977,7 +977,7 @@ Device Authorization Flow を使用するには、デバイスが次の要件を
 <Tooltip tip="Confidential Client: 信頼できるバックエンドサーバーを使用して資格情報を安全に保持できるクライアント（アプリケーション）です。たとえば、安全なバックエンドを持つ Web アプリケーションや machine-to-machine（M2M）アプリケーションが該当します。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=confidential+Clients">confidential Clients</Tooltip> を除き、Draft 15 全体をサポートしています。詳しくは、[ietf.org の OAuth 2.0 Device Authorization Grant Draft 15](https://tools.ietf.org/html/draft-ietf-oauth-device-flow-15) を参照してください。
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * [OAuth 2.0 認可フレームワーク](/docs/ja-jp/authenticate/protocols/oauth)

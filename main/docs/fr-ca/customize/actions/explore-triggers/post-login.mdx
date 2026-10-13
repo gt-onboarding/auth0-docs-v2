@@ -10,18 +10,18 @@ Le déclencheur `post-login` s’exécute lorsqu’un utilisateur s’authentifi
 Les Actions de ce flow sont bloquantes (synchrones) : elles s’exécutent dans le cadre du processus du déclencheur et empêchent le reste du pipeline Auth0 de s’exécuter jusqu’à ce que l’Action soit terminée.
 
 <div id="references">
-  ## Références
+  ## Références {#references}
 </div>
 
 * [Objet Event](/docs/fr-ca/customize/actions/reference/post-login/post-login-event-object) : fournit des renseignements contextuels sur un utilisateur qui se connecte à l’aide d’Auth0.
 * [Objet API](/docs/fr-ca/customize/actions/reference/post-login/post-login-api-object) : fournit des méthodes pour modifier le comportement du flux.
 
 <div id="common-use-cases">
-  ## Cas d’utilisation courants
+  ## Cas d’utilisation courants {#common-use-cases}
 </div>
 
 <div id="access-control">
-  ### Contrôle d’accès
+  ### Contrôle d’accès {#access-control}
 </div>
 
 Vous pouvez utiliser une Action post-login pour mettre en œuvre une logique personnalisée afin de rejeter l’accès d’un utilisateur qui tente d’accéder à une application :
@@ -39,7 +39,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="allow-access-only-on-weekdays-for-a-specific-application">
-  ### Autoriser l’accès à une application précise uniquement les jours de semaine
+  ### Autoriser l’accès à une application précise uniquement les jours de semaine {#allow-access-only-on-weekdays-for-a-specific-application}
 </div>
 
 Si vous avez une application à laquelle vous souhaitez limiter l’accès aux jours de semaine, vous pouvez créer l’Action suivante :
@@ -61,7 +61,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="deny-access-to-anyone-calling-an-api">
-  ### Rejeter l’accès à toute personne qui appelle une API
+  ### Rejeter l’accès à toute personne qui appelle une API {#deny-access-to-anyone-calling-an-api}
 </div>
 
 Supposons que vous souhaitiez rejeter l’accès à tous les utilisateurs qui appellent une API. Vous devez alors rejeter l’accès en fonction de la valeur de l’<Tooltip tip="Audience : identifiant unique du destinataire d’un jeton émis. Nommée aud dans un jeton, sa valeur contient l’ID d’une application (Client ID) pour un ID Token ou d’une API (API Identifier) pour un Access Token." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=audience">audience</Tooltip> de votre API, que vous trouverez dans le champ **API Audience** de votre API, sous [Dashboard &gt; Applications &gt; APIs](https://manage.auth0.com/#/apis). Pour ce faire, créez l’Action suivante :
@@ -80,7 +80,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="add-user-roles-to-id-and-access-tokens">
-  ### Ajouter les rôles utilisateur aux jetons d’ID et d’accès
+  ### Ajouter les rôles utilisateur aux jetons d’ID et d’accès {#add-user-roles-to-id-and-access-tokens}
 </div>
 
 Pour ajouter des rôles utilisateur aux jetons émis par Auth0, utilisez l’objet `event.authorization` ainsi que les méthodes `api.idToken.setCustomClaim` et `api.accessToken.setCustomClaim` :
@@ -105,7 +105,7 @@ exports.onExecutePostLogin = async (event, api) => {
 </Note>
 
 <div id="enrich-the-user-profile">
-  ### Enrichir le profil utilisateur
+  ### Enrichir le profil utilisateur {#enrich-the-user-profile}
 </div>
 
 Auth0 offre un système permettant de stocker des métadonnées dans un [profil utilisateur](/docs/fr-ca/manage-users/user-accounts/user-profiles/normalized-user-profiles). Pour définir `user_metadata` ou `app_metadata` dans le profil d’un utilisateur lors de sa connexion, utilisez les fonctions `api.user.setUserMetadata` ou `api.user.setAppMetadata` :
@@ -123,7 +123,7 @@ exports.onExecutePostLogin = async (event, api) => {
 Une fois toutes les Actions post-connexion exécutées, le profil utilisateur sera mis à jour en une seule opération. Cette opération est soumise à la limite de débit &quot;Write Users&quot; [rate limit](/docs/fr-ca/troubleshoot/customer-support/operational-policies/rate-limit-policy/management-api-endpoint-rate-limits).
 
 <div id="enforce-custom-mfa-policy">
-  ### Appliquer une politique MFA personnalisée
+  ### Appliquer une politique MFA personnalisée {#enforce-custom-mfa-policy}
 </div>
 
 Une Action post-login peut servir à exiger dynamiquement la <Tooltip tip="Authentification multifacteur (MFA) : processus d’authentification des utilisateurs qui utilise un facteur supplémentaire, comme un code par SMS, en plus du nom d’utilisateur et du mot de passe." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=MFA">MFA</Tooltip> pour un utilisateur selon les besoins de votre application :
@@ -144,7 +144,7 @@ exports.onExecutePostLogin = async (event, api) => {
 Un fournisseur MFA doit être configuré pour activer l’authentification multifacteur lors d’une connexion. Pour en savoir plus, consultez [l’authentification multifacteur](/docs/fr-ca/secure/multi-factor-authentication).
 
 <div id="reduce-friction-with-passkeys">
-  ### Réduire les frictions grâce aux passkeys
+  ### Réduire les frictions grâce aux passkeys {#reduce-friction-with-passkeys}
 </div>
 
 Une Action post-login peut réduire les frictions en contournant dynamiquement la MFA pour un utilisateur qui s’est authentifié à l’aide d’une passkey :
@@ -170,7 +170,7 @@ exports.onExecutePostLogin = async (event, api) => {
 La connexion doit avoir les passkeys et la MFA activées. Pour en savoir plus, consultez [Passkeys](/docs/fr-ca/authenticate/database-connections/passkeys) et [Multi-Factor Authentication](/docs/fr-ca/secure/multi-factor-authentication).
 
 <div id="redirect-the-user-to-an-external-site">
-  ### Rediriger l’utilisateur vers un site externe
+  ### Rediriger l’utilisateur vers un site externe {#redirect-the-user-to-an-external-site}
 </div>
 
 À l’instar des [Redirect Rules](/docs/fr-ca/customize/rules/redirect-users), une Action post-login peut être utilisée pour rediriger l’utilisateur vers un site externe. Une fois l’opération terminée, l’utilisateur peut être redirigé vers Auth0 pour poursuivre son login flow. Dans l’exemple ci-dessous, une Redirect Action invite l’utilisateur à indiquer sa couleur préférée :
@@ -221,7 +221,7 @@ Le pipeline Actions est suspendu pendant la redirection de l’utilisateur. Lors
 Pour en savoir plus sur les Actions de redirection, consultez [Redirection avec Actions](/docs/fr-ca/customize/actions/redirect-with-actions).
 
 <div id="modify-scopes-on-an-access-token">
-  ### Modifier les portées d’un jeton d’accès
+  ### Modifier les portées d’un jeton d’accès {#modify-scopes-on-an-access-token}
 </div>
 
 Lorsque vous modifiez les portées associées à un <Tooltip tip="Jeton d’accès : justificatif d’autorisation, sous la forme d’une chaîne opaque ou d’un JWT, utilisé pour accéder à une API." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=access+token">jeton d’accès</Tooltip>, veillez à respecter les pratiques exemplaires relatives à la spécification de l’audience :
@@ -242,7 +242,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="deny-access-to-specific-ja3ja4-fingerprints">
-  ### Rejeter l’accès en fonction d’empreintes JA3/JA4 précises
+  ### Rejeter l’accès en fonction d’empreintes JA3/JA4 précises {#deny-access-to-specific-ja3ja4-fingerprints}
 </div>
 
 L’objet `event.security_context` contient les valeurs d’empreinte JA3/JA4 de la transaction en cours :
@@ -263,7 +263,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Gérer les métadonnées utilisateur à l’aide du déclencheur d’action post-login](/docs/fr-ca/manage-users/user-accounts/metadata/manage-user-metadata)

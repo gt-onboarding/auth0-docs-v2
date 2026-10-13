@@ -11,7 +11,7 @@ Pour vous préparer à ce changement et vous assurer que vos intégrations conti
 Pour en savoir plus sur les échéanciers de migration, consultez l’article sur les [Dépréciations et migrations](/docs/fr-ca/troubleshoot/product-lifecycle/deprecations-and-migrations).
 
 <div id="verify-affected-tenants">
-  ## Vérifier les tenants touchés
+  ## Vérifier les tenants touchés {#verify-affected-tenants}
 </div>
 
 <Warning>
@@ -26,7 +26,7 @@ Vous pouvez utiliser l’Auth0 Dashboard pour vérifier si un tenant a accès à
    * La bascule est **désactivée** : aucune autre mesure n’est requise.
 
 <div id="identify-affected-integrations">
-  ## Identifier les intégrations concernées
+  ## Identifier les intégrations concernées {#identify-affected-integrations}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -52,7 +52,7 @@ Certains services de la plateforme Auth0 et certaines extensions peuvent génér
 De plus, la présence d’un avis de dépréciation pour une application cliente donnée n’indique pas nécessairement que l’application est touchée. Par exemple, si l’une de vos applications récupère, au moyen de `GET`, des informations sur une connexion, y compris le champ `enabled_clients` obsolète, mais ne traite pas le champ renvoyé dans la réponse, la dépréciation prévue de ce champ n’a aucune incidence.
 
 <div id="review-extensions-usage">
-  ## Vérifier l’utilisation des extensions
+  ## Vérifier l’utilisation des extensions {#review-extensions-usage}
 </div>
 
 Les extensions suivantes peuvent déclencher des avis de dépréciation dans les journaux du tenant :
@@ -67,7 +67,7 @@ Les deux premières extensions sont remplacées par des fonctionnalités de l’
 * Utilisez la fonctionnalité [Social Identity Providers](/docs/fr-ca/authenticate/identity-providers/social-identity-providers#auth0-dashboard) du Dashboard pour remplacer l’extension Custom Social Connections.
 
 <div id="update-your-integrations">
-  ## Mettez à jour vos intégrations
+  ## Mettez à jour vos intégrations {#update-your-integrations}
 </div>
 
 Pour les applications et les intégrations qui utilisent les points de terminaison de connexion concernés pour récupérer (`GET`) ou mettre à jour (`PATCH`) le champ `enabled_clients`, vous devez les modifier afin d’utiliser les points de terminaison dédiés à la gestion des clients :
@@ -76,7 +76,7 @@ Pour les applications et les intégrations qui utilisent les points de terminais
 * **Pour écrire :** [Mettre à jour les clients activés pour une connexion](https://auth0.com/docs/api/management/v2/connections/patch-clients).
 
 <div id="update-sdks-and-tools">
-  ## Mettre à jour les SDK et les outils
+  ## Mettre à jour les SDK et les outils {#update-sdks-and-tools}
 </div>
 
 Les versions suivantes des SDK et des outils prennent en charge les nouveaux points de terminaison :
@@ -94,7 +94,7 @@ Auth0 Deploy CLI et Auth0 Terraform Provider n’exigent aucune modification à 
 Les SDK Ruby et PHP de la Management API sont en attente de mise à jour.
 
 <div id="opt-out-finalize-migration">
-  ## Désactivation (finaliser la migration)
+  ## Désactivation (finaliser la migration) {#opt-out-finalize-migration}
 </div>
 
 Une fois que vous vous êtes assuré que les intégrations ne dépendent plus du comportement obsolète, vous devriez configurer le tenant pour le désactiver explicitement.

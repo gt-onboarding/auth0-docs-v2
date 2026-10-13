@@ -17,7 +17,7 @@ description: Akamai Account Protector シグナルを使用して、Akamai の�
 Akamai で Supplemental Signals を使用するように設定すると、それらのシグナルから提供されるデータを [Auth0 Actions](/docs/ja-jp/customize/actions) で利用できます。
 
 <div id="supported-supplemental-signals-by-action-trigger">
-  ## Action トリガー別のサポート対象 Supplemental Signals
+  ## Action トリガー別のサポート対象 Supplemental Signals {#supported-supplemental-signals-by-action-trigger}
 </div>
 
 | トリガー                   | Supplemental Signals オブジェクト                             | イベントオブジェクト                                                                                                                                                                                         |
@@ -31,7 +31,7 @@ Akamai で Supplemental Signals を使用するように設定すると、それ
 | Credentials Exchange   | なし                                                      | 該当なし                                                                                                                                                                                               |
 
 <div id="supplemental-signal-object-schemas">
-  ## Supplemental Signals オブジェクトのスキーマ
+  ## Supplemental Signals オブジェクトのスキーマ {#supplemental-signal-object-schemas}
 </div>
 
 `akamaiBot` オブジェクトと `akamaiUserRisk` オブジェクトには、認証フローをカスタマイズするために使用できる複数のプロパティが含まれています。
@@ -153,7 +153,7 @@ Akamai で Supplemental Signals を使用するように設定すると、それ
 </ResponseField>
 
 <div id="use-cases">
-  ## 利用例
+  ## 利用例 {#use-cases}
 </div>
 
 <AccordionGroup>
@@ -178,7 +178,7 @@ Akamai で Supplemental Signals を使用するように設定すると、それ
   <Accordion title="Akamai Bot Manager の結果に基づいて多要素認証（MFA）を要求する">
     `akamaiBot.score` プロパティに基づいて MFA を強制する方法の例を以下に示します。
 
-    #### MFA を強制する
+#### MFA を強制する {#enforce-mfa}
 
     この Action は 2 つのタスクを実行します。
 
@@ -203,7 +203,7 @@ Akamai で Supplemental Signals を使用するように設定すると、それ
 
     ```
 
-    #### アプリメタデータをクリーンアップする
+#### アプリメタデータをクリーンアップする {#clean-up-app-metadata}
 
     この Action は、ユーザーが MFA を正常に完了した後、アプリメタデータからセッション固有の MFA 情報を削除します。
 

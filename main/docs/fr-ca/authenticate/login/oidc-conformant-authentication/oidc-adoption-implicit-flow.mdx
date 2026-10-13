@@ -12,11 +12,11 @@ Traditionnellement, le [flux implicite](/docs/fr-ca/get-started/authentication-a
 De plus, le pipeline conforme à OIDC a une incidence sur le flux implicite dans les domaines suivants : la requête d’authentification, la réponse d’authentification, la structure du jeton d’ID et la structure du jeton d’accès.
 
 <div id="authentication-request">
-  ## Requête d’authentification
+  ## Requête d’authentification {#authentication-request}
 </div>
 
 <div id="legacy">
-  ### version antérieure
+  ### version antérieure {#legacy}
 </div>
 
 ```http lines
@@ -32,7 +32,7 @@ GET /authorize?
 Le paramètre `device` n’est nécessaire que si vous demandez un jeton d’actualisation en incluant la portée `offline_access`. Pour en savoir plus, consultez [Jetons d’actualisation](/docs/fr-ca/secure/tokens/refresh-tokens).
 
 <div id="oidc-conformant">
-  ### conforme à OIDC
+  ### conforme à OIDC {#oidc-conformant}
 </div>
 
 ```http lines
@@ -53,10 +53,10 @@ GET /authorize?
 * `nonce` doit être une chaîne aléatoire sécurisée sur le plan cryptographique. Pour en savoir plus, consultez [Atténuer les attaques par rejeu lors de l’utilisation du flux implicite](/docs/fr-ca/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post/mitigate-replay-attacks-when-using-the-implicit-flow).
 
 <div id="authentication-response">
-  ## Réponse d’authentification
+  ## Réponse d’authentification {#authentication-response}
 </div>
 
-### Version antérieure
+### Version antérieure {#legacy-2}
 
 ```json lines
 HTTP/1.1 302 Found
@@ -72,7 +72,7 @@ Location: https://app.example.com/#
 * Le jeton d’accès renvoyé est valide pour appeler le point de terminaison [`/userinfo`](https://auth0.com/docs/api/authentication#get-user-info).
 * Un jeton d’actualisation n’est renvoyé que si un paramètre `device` a été transmis et si la portée `offline_access` a été demandée.
 
-### Conforme à OIDC
+### Conforme à OIDC {#oidc-conformant-2}
 
 ```json lines
 HTTP/1.1 302 Found
@@ -89,10 +89,10 @@ Location: https://app.example.com/#
   Les jetons d’actualisation ne sont pas autorisés dans l’Implicit grant. Utilisez plutôt `prompt=none`.
 
 <div id="id-token-structure">
-  ## Structure du jeton d’ID
+  ## Structure du jeton d’ID {#id-token-structure}
 </div>
 
-### Version antérieure
+### Version antérieure {#legacy-3}
 
 export const codeExample1 = `{
     "sub": "auth0|alice",
@@ -107,7 +107,7 @@ export const codeExample1 = `{
 
 <AuthCodeBlock children={codeExample1} language="json" filename="JSON" />
 
-### Conforme à OIDC
+### Conforme à OIDC {#oidc-conformant-3}
 
 export const codeExample2 = `{
     "sub": "auth0|alice",
@@ -127,11 +127,11 @@ export const codeExample2 = `{
 * Après avoir validé le jeton d’ID, l’application doit valider le <Tooltip tip="Nonce : nombre arbitraire émis une seule fois dans un protocole d’authentification pour détecter et prévenir les attaques par rejeu." cta="Consulter le glossaire" href="/docs/fr-ca/glossary?term=nonce">nonce</Tooltip> afin d’atténuer les attaques par rejeu.
 
 <div id="access-token-structure-optional">
-  ## Structure du jeton d’accès (facultatif)
+  ## Structure du jeton d’accès (facultatif) {#access-token-structure-optional}
 </div>
 
 <div id="legacy">
-  ### version antérieure
+  ### version antérieure {#legacy-4}
 </div>
 
 ```bash HTTP lines
@@ -140,7 +140,7 @@ SlAV32hkKG
 
 Le jeton d’accès renvoyé est opaque et n’est valide que pour effectuer une requête au point de terminaison `/userinfo`.
 
-### Conforme à OIDC
+### Conforme à OIDC {#oidc-conformant-4}
 
 export const codeExample3 = `{
     "sub": "auth0|alice",
@@ -161,7 +161,7 @@ export const codeExample3 = `{
 * Un jeton d’accès opaque peut tout de même être renvoyé si `/userinfo` est la seule <Tooltip tip="Audience : identificateur unique de l’audience d’un token émis. Nommée aud dans un token, sa valeur contient l’ID d’une application (Client ID) pour un ID Token ou d’une API (API Identifier) pour un Access Token." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=audience">audience</Tooltip> spécifiée.
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Jetons d’accès avec OIDC](/docs/fr-ca/authenticate/login/oidc-conformant-authentication/oidc-adoption-access-tokens)

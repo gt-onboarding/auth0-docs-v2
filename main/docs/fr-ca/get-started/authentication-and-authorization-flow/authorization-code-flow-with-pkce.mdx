@@ -28,7 +28,7 @@ Dans ces situations, <Tooltip tip="OAuth 2.0 : cadre d’autorisation qui défi
 Le flux de code d’autorisation amélioré par PKCE introduit un secret créé par l’application appelante et que le <Tooltip tip="Serveur d’autorisation : serveur centralisé qui contribue à définir les limites de l’accès d’un utilisateur. Par exemple, votre serveur d’autorisation peut contrôler les données, tâches et fonctionnalités offertes à un utilisateur." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=authorization+server">serveur d’autorisation</Tooltip> peut vérifier; ce secret s’appelle le Code Verifier. De plus, l’application appelante crée une valeur dérivée du Code Verifier appelée le Code Challenge et envoie cette valeur en HTTPS pour obtenir un code d’autorisation. Ainsi, un attaquant malveillant ne peut intercepter que le code d’autorisation et ne peut pas l’échanger contre un jeton sans le Code Verifier.
 
 <div id="how-it-works">
-  ## Fonctionnement
+  ## Fonctionnement {#how-it-works}
 </div>
 
 Comme le flux de code d’autorisation avec PKCE s’appuie sur le [flux de code d’autorisation](/docs/fr-ca/get-started/authentication-and-authorization-flow/authorization-code-flow) standard, les étapes sont très similaires.
@@ -52,7 +52,7 @@ Comme le flux de code d’autorisation avec PKCE s’appuie sur le [flux de code
 </Callout>
 
 <div id="how-to-implement-it">
-  ## Comment l’implémenter
+  ## Comment l’implémenter {#how-to-implement-it}
 </div>
 
 La façon la plus simple d’implémenter le flux de code d’autorisation avec PKCE est de [suivre nos Quickstarts pour applications natives](/docs/fr-ca/quickstart/native) ou de [suivre nos Quickstarts pour SPA](/docs/fr-ca/quickstart/spa).
@@ -76,7 +76,7 @@ Selon votre type d’application, vous pouvez aussi utiliser nos SDK mobiles ou 
 Vous pouvez suivre nos tutoriels pour utiliser nos points de terminaison d’API afin d’[ajouter la connexion à l’aide du flux de code d’autorisation avec PKCE](/docs/fr-ca/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce/add-login-using-the-authorization-code-flow-with-pkce) ou d’[appeler votre API à l’aide du flux de code d’autorisation avec PKCE](/docs/fr-ca/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce/call-your-api-using-the-authorization-code-flow-with-pkce).
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Auth0 Rules](/docs/fr-ca/customize/rules)

@@ -11,7 +11,7 @@ Ce script est utilisé uniquement dans les scénarios d’authentification héri
 S’il est activé, ce script est exécuté lorsqu’un utilisateur clique sur le lien contenu dans le courriel de vérification envoyé par Auth0.
 
 <div id="verify-function">
-  ## Fonction Verify
+  ## Fonction Verify {#verify-function}
 </div>
 
 La fonction `verify` doit :
@@ -21,7 +21,7 @@ La fonction `verify` doit :
 * Retourner une erreur si l’action de mise à jour a échoué.
 
 <div id="definition">
-  ### Définition
+  ### Définition {#definition}
 </div>
 
 La fonction `verify` accepte deux paramètres et renvoie une fonction `callback` :
@@ -60,13 +60,13 @@ function verify(email, callback) {
 ```
 
 <div id="callback-function">
-  ## Fonction de rappel
+  ## Fonction de rappel {#callback-function}
 </div>
 
 La fonction `callback` sert à transmettre les données du profil utilisateur ou les données d’erreur au sein du pipeline.
 
 <div id="definition">
-  ### Définition
+  ### Définition {#definition-2}
 </div>
 
 La fonction `callback` accepte jusqu’à deux paramètres et retourne une fonction :
@@ -81,7 +81,7 @@ callback(error, [verified]): function
 | `verified` | Boolean | Facultatif  | Contient une valeur indiquant l’état de vérification de l’utilisateur dans la base de données externe (`true` ou `false`). Obligatoire seulement si la valeur est `true`. |
 
 <div id="return-a-success">
-  ### Renvoyer un succès
+  ### Renvoyer un succès {#return-a-success}
 </div>
 
 Si l’état de vérification de l&#39;utilisateur a été mis à jour avec succès dans la base de données externe, passez la valeur `null` pour le paramètre `error` et la valeur `true` pour le paramètre `verified` :
@@ -97,7 +97,7 @@ callback(null, true);
 </Callout>
 
 <div id="return-an-error">
-  ### Retourner une erreur
+  ### Retourner une erreur {#return-an-error}
 </div>
 
 Si une erreur se produit, le paramètre `error` doit contenir des renseignements pertinents sur la nature du problème :
@@ -107,7 +107,7 @@ return callback(new Error("My custom error message."));
 ```
 
 <div id="language-specific-script-examples">
-  ## Exemples de scripts par langage
+  ## Exemples de scripts par langage {#language-specific-script-examples}
 </div>
 
 Auth0 fournit des scripts d’exemple pour les langages et technologies suivants :

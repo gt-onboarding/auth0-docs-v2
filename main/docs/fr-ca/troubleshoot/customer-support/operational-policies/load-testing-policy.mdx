@@ -18,7 +18,7 @@ Seuls les clients ayant souscrit à un abonnement Enterprise peuvent effectuer d
 </Callout>
 
 <div id="acceptable-testing-windows">
-  ## Fenêtres de test autorisées
+  ## Fenêtres de test autorisées {#acceptable-testing-windows}
 </div>
 
 Les clients du nuage public doivent planifier leurs tests de charge pendant les fenêtres de test hors pointe suivantes :
@@ -35,7 +35,7 @@ Les clients du nuage public doivent planifier leurs tests de charge pendant les 
 Dans des circonstances tout à fait exceptionnelles, Auth0 peut accorder des exceptions à cette règle.
 
 <div id="change-freeze-policy">
-  ## Politique de gel des changements
+  ## Politique de gel des changements {#change-freeze-policy}
 </div>
 
 <Warning>
@@ -45,7 +45,7 @@ Dans des circonstances tout à fait exceptionnelles, Auth0 peut accorder des exc
 Pour voir les périodes de gel des changements actuellement prévues, consultez la [Politique de gel des changements](/docs/fr-ca/troubleshoot/customer-support/operational-policies/change-freeze-policy).
 
 <div id="holiday-load-testing-policy">
-  ## Politique de tests de charge pendant la période des Fêtes
+  ## Politique de tests de charge pendant la période des Fêtes {#holiday-load-testing-policy}
 </div>
 
 **Mise à jour :** 1er novembre 2022
@@ -62,7 +62,7 @@ Pendant la période des Fêtes, les demandes de tests de charge doivent respecte
   * S’il est nécessaire d’exécuter plus d’un test à la fois, la demande doit être transmise à un directeur de la plateforme ou à un vice-président pour approbation.
 
 <div id="submit-load-testing-request">
-  ## Soumettre une demande de test de charge
+  ## Soumettre une demande de test de charge {#submit-load-testing-request}
 </div>
 
 Vous pouvez soumettre une demande de test de charge dans l’[Auth0 Support Center](https://support.auth0.com).
@@ -78,13 +78,13 @@ Vous pouvez soumettre une demande de test de charge dans l’[Auth0 Support Cent
 </Warning>
 
 <div id="required-load-testing-information">
-  ### Renseignements requis pour la demande de test de charge
+  ### Renseignements requis pour la demande de test de charge {#required-load-testing-information}
 </div>
 
 Votre demande de test de charge doit inclure les renseignements suivants.
 
 <div id="general">
-  #### Généralités
+  #### Généralités {#general}
 </div>
 
 * Une description du test à effectuer
@@ -94,13 +94,13 @@ Votre demande de test de charge doit inclure les renseignements suivants.
 * Les plateformes à utiliser pour le test (ordinateur de bureau/portable, iOS, Android, autres)
 
 <div id="tenant">
-  #### Tenant
+  #### Tenant {#tenant}
 </div>
 
 * Le nom et la région du tenant Auth0 à utiliser lors du test
 
 <div id="features">
-  #### Fonctionnalités
+  #### Fonctionnalités {#features}
 </div>
 
 * Les fonctionnalités Auth0 (comme Actions, Rules ou Email) utilisées pendant le test
@@ -112,20 +112,20 @@ Votre demande de test de charge doit inclure les renseignements suivants.
 * Si des courriels de vérification, de bienvenue ou autres seront envoyés
 
 <div id="apis">
-  #### API
+  #### API {#apis}
 </div>
 
 * Les méthodes et points de terminaison de l’Auth0 API à utiliser (par exemple `GET /api/v2/clients`)
 * Le nombre maximal de requêtes par seconde pour chaque type de requête ou de point de terminaison
 
 <div id="users">
-  #### Utilisateurs
+  #### Utilisateurs {#users}
 </div>
 
 * Nombre d’utilisateurs uniques participant au test de charge
 
 <div id="load-estimates">
-  #### Estimations de charge
+  #### Estimations de charge {#load-estimates}
 </div>
 
 * La charge de pointe, indiquée en requêtes par seconde, prévue pour chaque point de terminaison d’API ou fonctionnalité Auth0 visé par le test
@@ -134,7 +134,7 @@ Votre demande de test de charge doit inclure les renseignements suivants.
 * Le nombre d’utilisateurs uniques participant au test de charge
 
 <div id="test-requirements">
-  ## Exigences du test
+  ## Exigences du test {#test-requirements}
 </div>
 
 Les plages de test de charge sont offertes sous réserve de disponibilité; il est donc fortement recommandé de nous aviser à l’avance. Une fois approuvées, elles auront une heure de début et de fin prévues, pour une durée maximale de deux (2) heures. Tous les tests doivent commencer et se terminer pendant cette plage. Pendant le test de charge, configurez une rotation de vos adresses IP afin d’éviter que votre test ne se heurte aux [limites de débit basées sur l’IP](/docs/fr-ca/troubleshoot/customer-support/operational-policies/rate-limit-policy).
@@ -142,7 +142,7 @@ Les plages de test de charge sont offertes sous réserve de disponibilité; il e
 Auth0 recommande fortement d’inclure une brève période de « montée en charge » jusqu’aux valeurs cibles du test. Par exemple, un test de charge à 100 RPS pourrait être précédé de trois périodes de cinq minutes : 5 minutes à 25 RPS, 5 minutes à 50 RPS et 5 minutes à 75 RPS. Cette période de montée en charge permet à Auth0 et au client d’observer et de comparer les effets à des niveaux croissants de RPS avant d’atteindre le RPS maximal. Si une période de montée en charge n’est pas possible, veuillez indiquer pourquoi.
 
 <div id="configure-email-provider">
-  ### Configurer le fournisseur de courriel
+  ### Configurer le fournisseur de courriel {#configure-email-provider}
 </div>
 
 Avant d’effectuer tout test, vous devez :

@@ -6,7 +6,7 @@ title: 'Lock.Android: テーマのカスタマイズ'
 **Lock.Android** UI の見た目や使い勝手はカスタマイズできます。ヘッダーロゴやタイトルをはじめ、色やボタンなどを変更して、アプリケーションのテーマに合わせることができます。
 
 <div id="supported-attributes-list">
-  ## サポート対象の属性一覧
+  ## サポート対象の属性一覧 {#supported-attributes-list}
 </div>
 
 | 名前                     | 型                    | 説明                                                              |
@@ -19,7 +19,7 @@ title: 'Lock.Android: テーマのカスタマイズ'
 | Auth0.DarkPrimaryColor | color - reference    | Submit ボタンなどのウィジェットで、*押下* 状態として使用されます。                          |
 
 <div id="create-a-new-resource-file">
-  ## 新しいリソースファイルを作成する
+  ## 新しいリソースファイルを作成する {#create-a-new-resource-file}
 </div>
 
 まず、`Lock.Theme` を拡張した新しい `Theme` を作成し、カスタマイズしたい属性を上書きします。上書きしない属性には、`Lock.Theme` で定義されているものが既定で使用されます。
@@ -67,7 +67,7 @@ title: 'Lock.Android: テーマのカスタマイズ'
 </Warning>
 
 <div id="custom-oauth-connection-buttons">
-  ## カスタムOAuth接続ボタン
+  ## カスタムOAuth接続ボタン {#custom-oauth-connection-buttons}
 </div>
 
 サードパーティの<Tooltip tip="IDプロバイダー（IdP）: デジタルアイデンティティを保存および管理するサービス。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=identity+provider">アイデンティティプロバイダー</Tooltip>接続のスタイルをカスタマイズするには、`Custom Social Connections` [拡張機能](https://manage.auth0.com/#/extensions)を使用して新しい接続を作成し、変更を保存する前に必須項目をすべて入力する必要があります。

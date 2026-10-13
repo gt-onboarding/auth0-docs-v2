@@ -15,7 +15,7 @@ title: Bot Detection
 Auth0 は、大量のデータと統計モデルを使用して、ログイン、サインアップ、またはパスワードリセットのトラフィック急増がボットやスクリプトによるものである可能性が高いことを示すパターンを特定します。クレデンシャルスタッフィング攻撃の一部である可能性が高い IP アドレスからログイン、アカウント作成、またはパスワードリセットを試みるユーザーには、追加の検証ステップを完了することが求められます。これらのトリガーは、こうした攻撃に関連するトラフィックを検出しつつ、正当なユーザーに不要な負担をかけません。
 
 <div id="configure-bot-detection">
-  ## Bot Detection を設定する
+  ## Bot Detection を設定する {#configure-bot-detection}
 </div>
 
 有効にすると、検出モデルなどの Bot Detection の設定や応答アクションをカスタマイズできます。これらの設定は、テナント内のすべての接続に適用されます。
@@ -62,7 +62,7 @@ Bot Detection を有効にした状態で **Response** アクションを設定�
 7. **Save** を選択します。
 
 <div id="configure-bot-detection-level">
-  ## Bot Detection レベルを設定する
+  ## Bot Detection レベルを設定する {#configure-bot-detection-level}
 </div>
 
 **Bot Detection レベル**の設定を、許容できるリスクとビジネスニーズに合わせて調整します。
@@ -76,7 +76,7 @@ Bot Detection を有効にした状態で **Response** アクションを設定�
 <Frame>![このスライダーにアクセスするには、Auth0 Dashboard > Security > 攻撃対策 に移動します](/docs/images/cdy7uua7fh8z/6HSMEXmDHVks6aUH0FUTPo/e0ca6efd3de736113e5a53e9fc27ab7e/Bot_Detection_Levels_-_English.png)</Frame>
 
 <div id="allow-trusted-ip-addresses-to-bypass-bot-detection">
-  ## 信頼できる IP アドレスで Bot Detection を回避する
+  ## 信頼できる IP アドレスで Bot Detection を回避する {#allow-trusted-ip-addresses-to-bypass-bot-detection}
 </div>
 
 **IP AllowList** フィールドに追加すると、最大 100 件の個別の IP アドレスや CIDR 範囲 (IPv4 または IPv6) で Bot Detection を回避できるようになります。Auth0 は、このリストに含まれる IP アドレスまたは CIDR 範囲に対してブロックを適用せず、アラートも送信しません。
@@ -85,7 +85,7 @@ Bot Detection を有効にした状態で **Response** アクションを設定�
 2. **IP AllowList** フィールドに、Bot Detection を回避させる IP アドレスや CIDR 範囲を入力します。複数のアドレスまたは範囲を入力する場合は、カンマで区切ります。
 
 <div id="configure-signup-detection-model-for-custom-login-page-and-classic-login-experience">
-  ## Custom Login Page と Classic Login Experience 向けのサインアップ検知モデルを設定する
+  ## Custom Login Page と Classic Login Experience 向けのサインアップ検知モデルを設定する {#configure-signup-detection-model-for-custom-login-page-and-classic-login-experience}
 </div>
 
 Auth0 では、ログインモデルとは別に、固有のシグナルを分析して異なる種類の攻撃に対処する、サインアップ検知用の機械学習モデルを提供しています。
@@ -108,11 +108,11 @@ Auth0 では、ログインモデルとは別に、固有のシグナルを分�
 3. **Signup detection models for custom and classic login pages** のトグルを有効にします。
 
 <div id="restrictions-and-limitations">
-  ## 制限事項と制約
+  ## 制限事項と制約 {#restrictions-and-limitations}
 </div>
 
 <div id="flow-limitations">
-  ### フローの制限
+  ### フローの制限 {#flow-limitations}
 </div>
 
 Bot Detection は、[Auth0 Universal Login](/docs/ja-jp/authenticate/login/auth0-universal-login) を使用する Web アプリケーションおよびモバイルアプリケーションで機能します。<Tooltip tip="Universal Login: ユーザーの本人確認のために、アプリケーションは Auth0 の認可サーバーでホストされる Universal Login にリダイレクトされます。" cta="用語集を表示" href="/docs/ja-jp/glossary?term=Universal+Login">Universal Login</Tooltip> を使用しないアプリケーションでは、サポート範囲が限定されます。特に、CAPTCHA または reCAPTCHA のチャレンジに対応できないフローでは制限があります。
@@ -130,7 +130,7 @@ Bot Detection を有効にする前に、すべてのログイン体験がサポ
 | `lock.js` または `auth0.js` SDK を使用し、クロスオリジン認証 (`co/authenticate` エンドポイント) を実行する Auth0 でホストされていないフロー | サポートされません。                                                                                                                                                                                 |
 
 <div id="connection-type-limitations">
-  ### 接続タイプの制限
+  ### 接続タイプの制限 {#connection-type-limitations}
 </div>
 
 使用する接続タイプに応じて、Bot Detection には次の制限があります。
@@ -145,7 +145,7 @@ Bot Detection を有効にする前に、すべてのログイン体験がサポ
 | パスワードレス               | フローの制限の表に記載されている互換性のあるログインフローをログインで使用している場合にサポートされます。 |
 
 <div id="custom-login-page-support">
-  ### カスタムログインページへの対応
+  ### カスタムログインページへの対応 {#custom-login-page-support}
 </div>
 
 Auth0.js を使用してカスタムログインページを構築している場合は、Bot Detection を有効にすることで、Auth0 がログインリクエストを高リスクと判断した際に CAPTCHA ステップをレンダリングできます。
@@ -153,7 +153,7 @@ Auth0.js を使用してカスタムログインページを構築している�
 カスタムログインフォームのコードでは、ユーザーに CAPTCHA ステップの完了が求められるケースに対応する必要があります。詳しくは、[カスタムログインページに Bot Detection を追加する](/docs/ja-jp/secure/attack-protection/bot-detection/bot-detection-custom-login-pages)を参照してください。
 
 <div id="native-application-support">
-  ### ネイティブアプリケーションのサポート
+  ### ネイティブアプリケーションのサポート {#native-application-support}
 </div>
 
 ログインフローで Auth0 SDK を使用してネイティブアプリケーションを構築している場合は、Auth0 がログインリクエストを高リスクと判断した際に CAPTCHA ステップをレンダリングできるよう、Bot Detection を有効にできます。
@@ -161,7 +161,7 @@ Auth0.js を使用してカスタムログインページを構築している�
 カスタムログインフォームのコードでは、ユーザーに CAPTCHA ステップの完了が求められるケースに対応する必要があります。詳しくは、[Add Bot Detection to Native Applications](/docs/ja-jp/secure/attack-protection/bot-detection/bot-detection-native-apps) を参照してください。
 
 <div id="learn-more">
-  ## 詳しく見る
+  ## 詳しく見る {#learn-more}
 </div>
 
 * [サードパーティ CAPTCHA プロバイダー連携を設定する](/docs/ja-jp/secure/attack-protection/bot-detection/configure-captcha)

@@ -16,7 +16,7 @@ SDK に OIDC ディスカバリーを組み込むと、次の情報を利用で�
 アプリケーションは、次の場所にある [OpenID Connect (OIDC)](https://openid.net/specs/openid-connect-discovery-1_0.html) ディスカバリードキュメントを使用して設定できます: `https://{yourDomain}/.well-known/openid-configuration`。
 
 <div id="sample-response">
-  ### レスポンス例
+  ### レスポンス例 {#sample-response}
 </div>
 
 export const codeExample1 = `{
@@ -127,7 +127,7 @@ export const codeExample1 = `{
 </Note>
 
 <div id="sample-implementation">
-  ### 実装例
+  ### 実装例 {#sample-implementation}
 </div>
 
 たとえば、Katana v3 (OWIN) で OIDC ミドルウェアを設定するには、次のようにします。
@@ -166,7 +166,7 @@ app.UseOpenIdConnectAuthentication(new OpenIdConnectAuthenticationOptions
 <AuthCodeBlock children={codeExample2} language="text" />
 
 <div id="rsa-algorithm-for-jwts">
-  ## JWT 用の RSA アルゴリズム
+  ## JWT 用の RSA アルゴリズム {#rsa-algorithm-for-jwts}
 </div>
 
 OIDC ミドルウェアは、対称キーで署名された <Tooltip tip="JSON Web トークン（JWT）: 2 者間でクレームを安全に表現するために使用される標準的な ID トークン形式（多くの場合、アクセストークン形式でもあります）。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=JWTs">JWT</Tooltip> をサポートしていません。公開鍵と秘密鍵を使用する RSA アルゴリズムを使うように、アプリケーションを設定してください。
@@ -182,13 +182,13 @@ OIDC ミドルウェアは、対称キーで署名された <Tooltip tip="JSON W
 この設定により、Auth0 は秘密署名鍵で署名された JWT を発行します。アプリケーションは公開署名鍵を使ってそれらを検証します。
 
 <div id="configure-applications-with-oauth-20-authorization-server-metadata">
-  ## OAuth 2.0 Authorization Server Metadata を使用してアプリケーションを構成する
+  ## OAuth 2.0 Authorization Server Metadata を使用してアプリケーションを構成する {#configure-applications-with-oauth-20-authorization-server-metadata}
 </div>
 
 アプリケーションまたは SDK が [OAuth RFC-8414](https://www.rfc-editor.org/rfc/rfc8414) の <Tooltip tip="認可サーバー: ユーザーのアクセス範囲の境界を定義するのに役立つ中央集約型サーバー。たとえば、認可サーバーはユーザーが利用できるデータ、タスク、機能を制御できます。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Authorization+Server">認可サーバー</Tooltip> メタデータ仕様を参照している場合は、<Tooltip tip="OAuth 2.0: 認可プロトコルとワークフローを定義する認可フレームワーク。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=OAuth">OAuth</Tooltip> エイリアスを使用して、IdP に関するメタデータを取得できます: `/.well-known/oauth-authorization-server`。たとえば、[Auth0 Model Context Protocol Server](/docs/ja-jp/get-started/auth0-mcp-server) では、すべての OAuth application が OAuth Authorization Server Metadata 仕様を参照することを推奨しています。
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * [JSON Web Tokens](/docs/ja-jp/secure/tokens/json-web-tokens)

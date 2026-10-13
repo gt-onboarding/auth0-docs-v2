@@ -1,13 +1,13 @@
 {
   "pages": [
     {
-      "group": "認証要素",
+      "group": "Factors",
       "pages": [
         "docs/ja-jp/api/myaccount/factors/get-factors"
       ]
     },
     {
-      "group": "認証方法",
+      "group": "Authentication Methods",
       "pages": [
         "docs/ja-jp/api/myaccount/authentication-methods/get-authentication-methods",
         "docs/ja-jp/api/myaccount/authentication-methods/create-authentication-method",

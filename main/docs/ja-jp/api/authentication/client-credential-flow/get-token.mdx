@@ -7,7 +7,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `POST /oauth/token`
@@ -15,11 +15,11 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 これは、サーバープロセスが API にアクセスするために使用する OAuth 2.0 のグラントです。アプリケーションの認証情報 (クライアント ID とクライアントシークレット) を使ってアクセストークンを直接リクエストするには、このエンドポイントを使用します。
 
 <div id="responses">
-  ### レスポンス
+  ### レスポンス {#responses}
 </div>
 
 <div id="200">
-  #### 200
+  #### 200 {#200}
 </div>
 
 成功すると、アクセストークンが返されます。
@@ -33,7 +33,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 ```
 
 <div id="learn-more">
-  ### 詳細情報
+  ### 詳細情報 {#learn-more}
 </div>
 
 * [クライアント認証情報フロー](https://auth0.com/docs/get-started/authentication-and-authorization-flow/client-credentials-flow)
@@ -42,7 +42,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 * [Client Credentials Grant のアクセストークンをリクエストする](https://auth0.com/docs/get-started/authentication-and-authorization-flow/client-credentials-flow/call-your-api-using-the-client-credentials-flow)
 
 <div id="headers">
-  ## ヘッダー
+  ## ヘッダー {#headers}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -50,7 +50,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 </ParamField>
 
 <div id="body-parameters">
-  ## Body Parameters
+  ## Body Parameters {#body-parameters}
 </div>
 
 <div className="prose-sm prose-gray dark:prose-invert">
@@ -84,7 +84,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 </ParamField>
 
 <div id="response-schema">
-  ## レスポンススキーマ
+  ## レスポンススキーマ {#response-schema}
 </div>
 
 <ResponseSchema>
@@ -102,7 +102,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 </ResponseSchema>
 
 <div id="agent-access-tokens">
-  ## エージェントのアクセストークン
+  ## エージェントのアクセストークン {#agent-access-tokens}
 </div>
 
 <ReleaseStageNotice feature="Agents as Principal" stage="ea" contact="Auth0 Support" terms="true" />
@@ -115,7 +115,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 エージェントの subject クレームが有効な API を呼び出す、エージェントではない Machine-to-Machine (M2M) アプリケーションでは、`sub` クレームは `@clients` サフィックスを除いたアプリケーションの クライアント ID になります。レスポンスオブジェクトのスキーマ (`access_token`、`token_type`、`expires_in`) は変更されません。これらは発行された JWT 内のクレームです。詳細については、[Access Token Profiles](/docs/ja-jp/secure/tokens/access-tokens/access-token-profiles#claims)を参照してください。
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | Status | Description |

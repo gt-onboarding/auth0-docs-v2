@@ -10,18 +10,18 @@ Le trigger `event-stream` s’exécute lorsque des événements précis survienn
 Les Actions de ce flux ne sont pas bloquantes (asynchrones) : le pipeline Auth0 continue de s’exécuter sans attendre que l’Action se termine. Le résultat de l’Action n’affecte donc pas la transaction Auth0 et n’a aucune incidence sur la latence de l’expérience utilisateur.
 
 <div id="references">
-  ## Références
+  ## Références {#references}
 </div>
 
 * [Objet d’événement](/docs/fr-ca/customize/actions/reference/event-stream/event-stream-event-object) : fournit le contexte du message Event Stream et de l’exécution de l’Action.
 * [Objet API](/docs/fr-ca/customize/actions/reference/event-stream/event-stream-api-object) : fournit des méthodes permettant de modifier le comportement du flux.
 
 <div id="common-use-cases">
-  ## Cas d’utilisation courants
+  ## Cas d’utilisation courants {#common-use-cases}
 </div>
 
 <div id="synchronize-events-to-an-external-service">
-  ### Synchroniser des événements vers un service externe
+  ### Synchroniser des événements vers un service externe {#synchronize-events-to-an-external-service}
 </div>
 
 Une Action event-stream peut servir à transmettre un événement particulier à un service externe selon une logique personnalisée. L’Action suivante montre comment transmettre de manière sécurisée un message d’événement à un service externe à l’aide d’une clé API enregistrée :
@@ -51,7 +51,7 @@ exports.onExecuteEventStream = async (event, api) => {
 ```
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Rédiger votre première action](/docs/fr-ca/customize/actions/write-your-first-action)

@@ -25,7 +25,7 @@ Auth0 Dashboard では、登録されているすべてのリソースから一�
 </Callout>
 
 <div id="how-it-works">
-  ## 仕組み
+  ## 仕組み {#how-it-works}
 </div>
 
 Auth0 Dashboard の [アプリケーション](https://manage.auth0.com/#/applications)、[APIs](https://manage.auth0.com/#/apis)、[Roles](https://manage.auth0.com/#/roles)、[カスタムドメイン](https://manage.auth0.com/#/custom-domains-v2)、[組織](https://manage.auth0.com/#/organizations)、[組織 のメンバー](https://manage.auth0.com/#/organizations) セクションの検索バーでは、ガイド付きのフィルターインターフェースとブール検索を使用します。検索バーは、フィルタリング可能なフィールドを一覧表示するドロップダウンメニューとして機能します。フィールドを選択して値を入力すると、その値が結果の上部に削除可能なタグとして適用されます。組み合わせられるフィルターは一度に最大 5 つです。
@@ -39,7 +39,7 @@ Auth0 Dashboard の [アプリケーション](https://manage.auth0.com/#/applic
 </Callout>
 
 <div id="search-behavior-by-field-type">
-  ### フィールドタイプごとの検索動作
+  ### フィールドタイプごとの検索動作 {#search-behavior-by-field-type}
 </div>
 
 Auth0 Dashboard の検索では、フィールドタイプに応じて結果が照合されます。
@@ -70,11 +70,11 @@ ID の完全な値を入力する必要があります。ID の一部だけを�
 `true` または `false` を選択して、ファーストパーティのクライアントを検索します。これにより、ファーストパーティ アプリケーション (同意画面をスキップすることが許可されているもの) とサードパーティのものを区別できます。
 
 <div id="searchable-fields">
-  ### 検索対象のフィールド
+  ### 検索対象のフィールド {#searchable-fields}
 </div>
 
 <div id="applications">
-  #### アプリケーション
+  #### アプリケーション {#applications}
 </div>
 
 | **項目**                                        | **説明**                                            | **一致の種類**   |
@@ -87,7 +87,7 @@ ID の完全な値を入力する必要があります。ID の一部だけを�
 | **ファーストパーティ クライアント**                          | アプリケーションがファーストパーティかサードパーティか                       | ブール値        |
 
 <div id="apis">
-  #### API
+  #### API {#apis}
 </div>
 
 | **項目**  | **説明**                                           | **一致の種類** |
@@ -97,7 +97,7 @@ ID の完全な値を入力する必要があります。ID の一部だけを�
 | **Id**  | システム内部の ID                                       | 完全一致      |
 
 <div id="roles">
-  #### Roles
+  #### Roles {#roles}
 </div>
 
 | **項目** | **説明**   | **一致の種類** |
@@ -106,7 +106,7 @@ ID の完全な値を入力する必要があります。ID の一部だけを�
 | **ID** | 一意のロールID | 完全一致      |
 
 <div id="organizations">
-  #### Organizations
+  #### Organizations {#organizations}
 </div>
 
 | **項目**                  | **説明**                                                                            | **一致の種類**   |
@@ -119,7 +119,7 @@ ID の完全な値を入力する必要があります。ID の一部だけを�
 | **アプリケーションエンタイトルメントの有効状態** | アプリケーションエンタイトルメントが現在組織で有効かどうか                                           | ブール値     |
 
 <div id="organization-members">
-  #### 組織 のメンバー
+  #### 組織 のメンバー {#organization-members}
 </div>
 
 | **項目**      | **説明**                                                                                           | **一致の種類** |
@@ -130,7 +130,7 @@ ID の完全な値を入力する必要があります。ID の一部だけを�
 | **ブロック状態**  | ブロック済みまたはアクティブなメンバーのみを表示するフィルター                                                                  | ブール値フィルター |
 
 <div id="custom-domains">
-  #### カスタムドメイン
+  #### カスタムドメイン {#custom-domains}
 </div>
 
 | **項目**          | **説明**                                                                                                                                                    | **一致の種類**   |
@@ -147,7 +147,7 @@ ID の完全な値を入力する必要があります。ID の一部だけを�
 </Callout>
 
 <div id="limitations">
-  ### 制限事項
+  ### 制限事項 {#limitations}
 </div>
 
 * 1 回の検索につき適用できるフィルターは最大 5 つです。検索バーでは 6 つ目のフィルターは追加できません。
@@ -155,11 +155,11 @@ ID の完全な値を入力する必要があります。ID の一部だけを�
 * 通常は 2 秒以内に結果が返されます。クエリがタイムアウトする場合は、フィルターの数を減らすか、より具体的な検索タームを使用してください。
 
 <div id="example-queries">
-  ## クエリ例
+  ## クエリ例 {#example-queries}
 </div>
 
 <div id="find-an-application-by-client-id">
-  ### Client IDでアプリケーションを見つける
+  ### Client IDでアプリケーションを見つける {#find-an-application-by-client-id}
 </div>
 
 エラーログやサポートチケットにある `client_id` を使って、該当するアプリケーションをすばやく特定したい場合に使用します。
@@ -169,7 +169,7 @@ ID の完全な値を入力する必要があります。ID の一部だけを�
 3. `client_id` の値全体を貼り付けます。一致するアプリケーションがすぐに表示されます。
 
 <div id="find-applications-using-metadata">
-  ### メタデータを使ってアプリケーションを検索する
+  ### メタデータを使ってアプリケーションを検索する {#find-applications-using-metadata}
 </div>
 
 アプリケーションに環境ラベル、プランの種類、外部 ID などのカスタム メタデータが保存されている場合は、それらの値で検索できます。
@@ -180,7 +180,7 @@ ID の完全な値を入力する必要があります。ID の一部だけを�
 4. 値 (例: `production`) を入力します。`metadata.environment` が `production` と一致するアプリケーションが結果に表示されます。プレフィックスで一致させるには、`prod` のような値の一部を入力します。
 
 <div id="troubleshooting">
-  ## トラブルシューティング
+  ## トラブルシューティング {#troubleshooting}
 </div>
 
 **結果が見つかりません**

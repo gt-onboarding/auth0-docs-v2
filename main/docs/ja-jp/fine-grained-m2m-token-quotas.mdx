@@ -20,7 +20,7 @@ Auth0 のきめ細かな M2M トークンクォータを使用すると、アプ
 </Callout>
 
 <div id="use-cases">
-  ## ユースケース
+  ## ユースケース {#use-cases}
 </div>
 
 * **暴走するアプリケーションを抑制**: アプリケーション単位のクォータを適用することで、M2Mアプリケーションがトークンを過剰な頻度でリクエストすること (バグやキャッシュ未使用などが原因) を制限しつつ、テナント全体の M2M トークンクォータには影響を与えないようにします。
@@ -29,7 +29,7 @@ Auth0 のきめ細かな M2M トークンクォータを使用すると、アプ
 * **強制適用前に監視**: `enforce: false` でクォータを導入し、[消費量警告ログ](#consumption-warning-logs) と [Auth0 クォータヘッダー](#auth0-quota-headers) でトークン消費を観察します。その後、実際のブロックを有効にする前に、根拠に基づいた制限値を設定します。
 
 <div id="how-it-works">
-  ## 仕組み
+  ## 仕組み {#how-it-works}
 </div>
 
 次のエンティティに、きめ細かなM2Mトークンクォータを適用できます。
@@ -47,7 +47,7 @@ Auth0 では、2種類のきめ細かなM2Mトークンクォータをサポー�
 </Callout>
 
 <div id="quota-evaluation-and-enforcement-rules">
-  ### クォータの評価と適用ルール
+  ### クォータの評価と適用ルール {#quota-evaluation-and-enforcement-rules}
 </div>
 
 Auth0 は、テナントに関連付けられたアプリケーションと組織に対するきめ細かな M2M トークンクォータを判定し、適用します。
@@ -71,7 +71,7 @@ Auth0 は transaction に適用可能なすべてのクォータを同時に評�
 * **クォータが適用されない場合 (**`enforce: false`**):** 制限を超過していても、このクォータによってトークンリクエストが**拒否**されることはありません。Auth0 は引き続きトークン数をカウントし、しきい値に達すると [消費量警告ログ](#consumption-warning-logs) を生成するため、適用を有効にする前にモニタリングできます。
 
 <div id="observability">
-  ### 可観測性
+  ### 可観測性 {#observability}
 </div>
 
 クォータ消費の状況を把握できるようにするため、Auth0 は [消費量警告ログ](#consumption-warning-logs) を生成します。これらのログは、クォータが上限の 60%、80%、100% に達すると出力されます。これらのログを使うことで、トークン使用量を事前に監視し、潜在的な問題を特定できます。
@@ -79,13 +79,13 @@ Auth0 は transaction に適用可能なすべてのクォータを同時に評�
 また、アプリケーションは [Auth0 クォータヘッダー](#auth0-quota-headers) を使用して、残りのクォータをプログラムから確認することもできます。これらの HTTP ヘッダーは、クライアント認証情報フローの request に対する成功レスポンスとエラーレスポンスの両方に含まれており、クォータ使用量に関するリアルタイムの情報を提供します。
 
 <div id="configure-m2m-token-quotas">
-  ## M2M トークン のクォータを設定する
+  ## M2M トークン のクォータを設定する {#configure-m2m-token-quotas}
 </div>
 
 [Management API](https://auth0.com/docs/api/management/v2) を使用して、きめ細かな M2M トークン クォータを設定できます。
 
 <div id="tenant-level-default-quotas">
-  ### テナントレベルのデフォルトクォータ
+  ### テナントレベルのデフォルトクォータ {#tenant-level-default-quotas}
 </div>
 
 テナントレベルのクォータは、Auth0 テナント内のすべてのアプリケーションと組織に対するデフォルト設定として機能します。テナントレベルのクォータを使用すると、M2M トークン使用量の基準となる上限を設定できます。これらのクォータは、アプリケーション固有のクォータおよび組織固有のクォータによって上書きされます。
@@ -127,7 +127,7 @@ curl --request PATCH 'https://YOUR_DOMAIN/api/v2/tenants/settings' \
 この例では、テナント内のすべてのアプリケーションは、既定で 1 時間あたり 100 個、1 日あたり 1000 個の M2M トークンに制限されます。Organizations では、既定で 1 時間あたり 500 個、1 日あたり 5000 個のトークンですが、制限の適用は現在無効になっています (`enforce: false`) 。これにより、制限を適用する前に、組織のトークン使用状況を監視できます。
 
 <div id="application-specific-quotas">
-  ### アプリケーション固有のクォータ
+  ### アプリケーション固有のクォータ {#application-specific-quotas}
 </div>
 
 特定のアプリケーションに対してクォータを設定し、テナントレベルの既定値を上書きできます。これは、各アプリケーションの動作をより細かく制御するのに役立ちます。
@@ -181,7 +181,7 @@ curl --location --request PATCH 'https://YOUR_DOMAIN/api/v2/clients/a01FUMJHEtb0
 アプリケーションのトークンクォータ設定は、[Get a client by ID](https://auth0.com/docs/api/management/v2/clients/get-clients-by-id) エンドポイントを使用して取得できます。
 
 <div id="organization-specific-quotas">
-  ### 組織固有のクォータ
+  ### 組織固有のクォータ {#organization-specific-quotas}
 </div>
 
 特定の組織に対してクォータを設定し、テナントレベルのデフォルト設定を上書きすることもできます。これにより、個々の SaaS 顧客やパートナーの M2M トークン使用量を管理できます。
@@ -236,11 +236,11 @@ curl --request PATCH 'https://YOUR_DOMAIN/api/v2/organizations/YOUR_ORG_ID' \
 organization のトークンクォータ設定は、[Get an organization](https://auth0.com/docs/api/management/v2/organizations/get-organizations-by-id) エンドポイントを使用して取得できます。
 
 <div id="monitor-token-quota-consumption">
-  ## token クォータの消費状況を監視する
+  ## token クォータの消費状況を監視する {#monitor-token-quota-consumption}
 </div>
 
 <div id="auth0-quota-headers">
-  ### Auth0 のクォータヘッダー
+  ### Auth0 のクォータヘッダー {#auth0-quota-headers}
 </div>
 
 Auth0 は、クォータ消費量に関するリアルタイムの情報を提供するため、クライアント認証情報フローのレスポンス (成功時のレスポンスと 429 エラーレスポンスの両方) に HTTP ヘッダーを含めます。
@@ -313,7 +313,7 @@ getAccessToken();`;
 <AuthCodeBlock children={codeExample1} language="javascript" />
 
 <div id="error-responses-for-exceeded-quotas">
-  ### クォータ超過時のエラーレスポンス
+  ### クォータ超過時のエラーレスポンス {#error-responses-for-exceeded-quotas}
 </div>
 
 適用されているクォータを超過すると、Auth0 Authentication API は `HTTP 429 Too Many Requests` エラーを返します。レスポンス本文では、Auth0 はエラーコードと、より詳細な説明を返します。Auth0 は、`feccft` タイプのイベントログ (クライアントクレデンシャルグラントでのアクセストークン交換の失敗) も出力します。
@@ -389,7 +389,7 @@ getAccessToken();`;
 <AuthCodeBlock children={codeExample2} language="javascript" />
 
 <div id="consumption-warning-logs">
-  ## クォータ消費警告ログ
+  ## クォータ消費警告ログ {#consumption-warning-logs}
 </div>
 
 Auth0 は、クォータの消費量が 60%、80%、100% に達すると、`token_quota_consumption_warning` というログイベントを生成します。これらのログを分析することで、トークンの使用パターンを監視し、制限が適用される前に潜在的な問題を特定して、適切なクォータ値を判断するのに役立ちます。
@@ -445,7 +445,7 @@ Auth0 は、クォータの消費量が 60%、80%、100% に達すると、`toke
 `date`、`client_name`、`ip`、`log_id` などのその他のフィールドは、Auth0 の標準的な Log フィールドです。
 
 <div id="best-practices">
-  ## ベストプラクティス
+  ## ベストプラクティス {#best-practices}
 </div>
 
 * **トークンのキャッシュを優先する**: M2Mアプリケーションでは、access token を適切にキャッシュすることを重視してください。クォータは保護手段であり、効率的なトークン管理の代わりにはなりません。
@@ -456,7 +456,7 @@ Auth0 は、クォータの消費量が 60%、80%、100% に達すると、`toke
 * **ログを定期的に確認する**: `token_quota_consumption_warning` ログを監視し、クォータを事前に調整してください。
 
 <div id="limitations">
-  ## 制限事項
+  ## 制限事項 {#limitations}
 </div>
 
 * **API 呼び出し数の上限ではありません**: Fine-Grained M2M Token Quotas は、クライアント認証情報フローで取得するアクセストークンの数に適用されるものであり、それらのトークンを使った API 呼び出しには適用されません。
@@ -464,7 +464,7 @@ Auth0 は、クォータの消費量が 60%、80%、100% に達すると、`toke
 * `429` 応答となったリクエストは、テナントの Auth0 Authentication API のレート制限にカウントされます。詳しくは、[Rate Limit Policy](/docs/ja-jp/troubleshoot/customer-support/operational-policies/rate-limit-policy) を参照してください。
 
 <div id="troubleshoot">
-  ## トラブルシューティング
+  ## トラブルシューティング {#troubleshoot}
 </div>
 
 * **正当なトラフィックがブロックされる場合:**

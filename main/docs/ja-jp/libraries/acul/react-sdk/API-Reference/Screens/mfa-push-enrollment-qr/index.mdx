@@ -10,7 +10,7 @@ description: "Universal Login の `mfa-push-enrollment-qr` 画面をカスタマ
 </Frame>
 
 <div id="import">
-  ## インポート
+  ## インポート {#import}
 </div>
 
 各画面には、それぞれ対応するフックとメソッドがあります。SDK は、各画面で**部分インポート**と**ルートインポート**をサポートしています。
@@ -58,7 +58,7 @@ function MfaPushEnrollmentQrScreen() {
 ```
 
 <div id="context-hooks">
-  ## コンテキストフック
+  ## コンテキストフック {#context-hooks}
 </div>
 
 `mfa-push-enrollment-qr` 画面で Auth0 のコンテキストデータへの読み取り専用アクセスを提供する、画面スコープのフックです。`@auth0/auth0-acul-react/mfa-push-enrollment-qr` からインポートします。
@@ -170,7 +170,7 @@ function MfaPushEnrollmentQrScreen() {
 </ParamField>
 
 <div id="methods">
-  ## メソッド
+  ## メソッド {#methods}
 </div>
 
 <ParamField body="continueMethod" type="Promise<void>">
@@ -220,7 +220,7 @@ function MfaPushEnrollmentQrScreen() {
 </ParamField>
 
 <div id="commonutility-hooks">
-  ## 共通/ユーティリティフック
+  ## 共通/ユーティリティフック {#commonutility-hooks}
 </div>
 
 <ParamField body={<a href="/docs/ja-jp/libraries/acul/react-sdk/API-Reference/Hooks/useMfaPolling">useMfaPolling</a>} type="Hooks">

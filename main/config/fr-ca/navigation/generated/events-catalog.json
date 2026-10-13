@@ -2,7 +2,7 @@
   "pages": [
     "docs/fr-ca/events",
     {
-      "group": "Groupe",
+      "group": "Group",
       "pages": [
         "docs/fr-ca/events/group/group.created",
         "docs/fr-ca/events/group/group.deleted",
@@ -12,7 +12,7 @@
       ]
     },
     {
-      "group": "Organisation",
+      "group": "Organization",
       "pages": [
         "docs/fr-ca/events/organization/organization.connection.added",
         "docs/fr-ca/events/organization/organization.connection.removed",
@@ -27,7 +27,7 @@
       ]
     },
     {
-      "group": "Utilisateur",
+      "group": "User",
       "pages": [
         "docs/fr-ca/events/user/user.created",
         "docs/fr-ca/events/user/user.deleted",

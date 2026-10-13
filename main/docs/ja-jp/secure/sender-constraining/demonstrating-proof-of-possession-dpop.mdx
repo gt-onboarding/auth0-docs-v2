@@ -18,7 +18,7 @@ DPoP は公開鍵/秘密鍵を使用して、署名付き JSON Web トークン 
 クライアントアプリケーションは、アクセストークンrequestで DPoP Proof JWT を Auth0 の <Tooltip tip="Authorization Server: ユーザーアクセスの境界の定義に関与する集中管理サーバー。たとえば、認可サーバーはユーザーが利用できるデータ、タスク、機能を制御できます。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Authorization+Server">認可サーバー</Tooltip> に送信します。Auth0 Authorization Server が DPoP Proof JWT をvalidateした後、発行されたアクセストークンをクライアントの公開鍵に結び付けます。
 
 <div id="common-use-cases">
-  ## 一般的な利用例
+  ## 一般的な利用例 {#common-use-cases}
 </div>
 
 代表的な DPoP の利用例をいくつか紹介します。
@@ -27,7 +27,7 @@ DPoP は公開鍵/秘密鍵を使用して、署名付き JSON Web トークン 
 * **Third-party API integrations:** クライアントアプリケーションと連携した AI エージェントが、ユーザーに代わって DPoP Proof JWT を使用してサードパーティ API を呼び出す場合、<Tooltip tip="Resource Server: 保護されたリソースをホストするサーバーです。リソースサーバーは、保護されたリソースへのリクエストを受け入れ、それに応答します。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=resource+server">リソースサーバー</Tooltip> は、そのリクエストが権限のない第三者ではなく AI エージェントから送信されたものであることを、暗号学的に検証できます。
 
 <div id="supported-application-grant-types">
-  ## サポートされているアプリケーションのグラントタイプ
+  ## サポートされているアプリケーションのグラントタイプ {#supported-application-grant-types}
 </div>
 
 Auth0 は、DPoP を使用した送信者拘束向けに、次の[アプリケーションのグラントタイプ](/docs/ja-jp/get-started/applications/application-grant-types)をサポートしています。
@@ -48,7 +48,7 @@ Auth0 は、DPoP を使用した送信者拘束向けに、次の[アプリケ�
 | `urn:okta:params:oauth:grant-type:webauthn`           | WebAuthn グラントリクエスト                             |
 
 <div id="how-it-works">
-  ## 仕組み
+  ## 仕組み {#how-it-works}
 </div>
 
 次のシーケンス図は、Auth0 DPoP フローの概要を示しています。
@@ -62,7 +62,7 @@ Auth0 は、DPoP を使用した送信者拘束向けに、次の[アプリケ�
 5. リソースサーバーは DPoP Proof JWT を検証し、トークンの正当な所有者、つまり元のクライアントアプリケーションだけが、それを使って保護されたリソースに正常にアクセスできることを確認します。リフレッシュトークンからアクセストークンをリクエストする場合、クライアントアプリケーションは新しい DPoP Proof JWT を生成し、リフレッシュトークンがクライアントの公開キーに紐付けられるようにします。
 
 <div id="sender-constrain-tokens-using-dpop-in-auth0">
-  ## Auth0 で DPoP を使用してトークンに送信者拘束を適用する
+  ## Auth0 で DPoP を使用してトークンに送信者拘束を適用する {#sender-constrain-tokens-using-dpop-in-auth0}
 </div>
 
 次の図は、Auth0 で DPoP を使用してトークンに送信者拘束を適用するエンドツーエンドのフローを示しています。
@@ -80,7 +80,7 @@ Auth0 は、DPoP を使用した送信者拘束向けに、次の[アプリケ�
 * [ステップ 6: DPoP を使用したトークンのリフレッシュを処理する](#step-6-handle-token-refresh-with-dpop)
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 開始する前に、次の点を確認してください。
@@ -88,7 +88,7 @@ Auth0 は、DPoP を使用した送信者拘束向けに、次の[アプリケ�
 * クライアントアプリケーションとリソースサーバーに対して、[送信者拘束を設定](/docs/ja-jp/secure/sender-constraining/configure-sender-constraining)していること。
 
 <div id="step-1-client-application-generates-a-dpop-key-pair">
-  ## ステップ1: クライアントアプリケーションがDPoPキーペアを生成する
+  ## ステップ1: クライアントアプリケーションがDPoPキーペアを生成する {#step-1-client-application-generates-a-dpop-key-pair}
 </div>
 
 DPoPでは、クライアントアプリケーションは非対称暗号のキーペアを生成する必要があります。Auth0は、ES256キーなどの楕円曲線暗号の使用をサポートしています。このキーペアはクライアントアプリケーションごとに固有のもので、たとえばハードウェアで保護されたキーストアに安全に保管する必要があります。
@@ -96,7 +96,7 @@ DPoPでは、クライアントアプリケーションは非対称暗号のキ�
 クライアントアプリケーションは秘密鍵を厳重に保持しつつ、[ステップ2](#step-2-client-application-creates-a-dpop-proof-jwt)で「Proof of Possession」として機能するDPoP Proof JSON Web トークン (JWT) に公開鍵を含めます。
 
 <div id="step-2-client-application-creates-a-dpop-proof-jwt">
-  ## ステップ 2: クライアントアプリケーションが DPoP Proof JWT を作成する
+  ## ステップ 2: クライアントアプリケーションが DPoP Proof JWT を作成する {#step-2-client-application-creates-a-dpop-proof-jwt}
 </div>
 
 Auth0 Authorization Server の `/token` エンドポイントに DPoP にバインドされたアクセストークンをリクエストする前に、クライアントアプリケーションは DPoP Proof JWT を作成する必要があります。DPoP Proof JWT は、クライアントの秘密キーで署名された JSON Web トークン (JWT) で、「Proof of Possession (所持証明) 」として機能します。
@@ -104,7 +104,7 @@ Auth0 Authorization Server の `/token` エンドポイントに DPoP にバイ�
 DPoP Proof JWT は、JWT ヘッダーと、トークンリクエストに関連する[クレーム](/docs/ja-jp/secure/tokens/json-web-tokens/json-web-token-claims)を含むペイロードで構成されます。
 
 <div id="jwt-header-claims">
-  ### JWTヘッダーのクレーム
+  ### JWTヘッダーのクレーム {#jwt-header-claims}
 </div>
 
 | DPoP Proof JWT クレーム | 説明                                    |
@@ -114,7 +114,7 @@ DPoP Proof JWT は、JWT ヘッダーと、トークンリクエストに関連�
 | `jwk`               | クライアントの公開キーを表す JSON Web Key (JWK) です。 |
 
 <div id="jwt-payload-claims">
-  ### JWT ペイロードクレーム
+  ### JWT ペイロードクレーム {#jwt-payload-claims}
 </div>
 
 | DPoP Proof JWT クレーム | 説明                                                                                                                                                         |
@@ -159,7 +159,7 @@ const dpopHeader = jwt.sign({
 ```
 
 <div id="step-3-client-application-requests-a-dpop-bound-token">
-  ## ステップ 3: クライアントアプリケーションが DPoP-bound token をリクエストする
+  ## ステップ 3: クライアントアプリケーションが DPoP-bound token をリクエストする {#step-3-client-application-requests-a-dpop-bound-token}
 </div>
 
 クライアントアプリケーションが Auth0 Authorization Server の `/token` エンドポイントに access token をリクエストする際は、リクエストの HTTP ヘッダーに DPoP Proof JWT を含めます。
@@ -209,7 +209,7 @@ console.log('Initial token request result:', result);
 ```
 
 <div id="public-clients">
-  ### パブリッククライアント
+  ### パブリッククライアント {#public-clients}
 </div>
 
 シングルページアプリケーション (SPA) やモバイルアプリなどのパブリッククライアントが DPoP にバインドされたアクセストークンをリクエストする場合、`client secret` やその他のクライアント認証パラメーターは使用できません。この場合、[RFC 9449](https://datatracker.ietf.org/doc/html/rfc9449#section-8) に従い、Auth0 はクライアントアプリケーションが DPoP Proof JWT を直近で生成したことを確認するため、DPoP HTTP `header` に <Tooltip tip="Nonce: リプレイ攻撃を検出して防ぐために、認証プロトコルで一度だけ発行される任意の数値。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=nonce">nonce</Tooltip> 値が含まれていることを求めます。これは想定どおりの動作であり、認可サーバーが DPoP proof の新しさを確認し、その proof を使用できる時間を限定できるようにするためです。
@@ -300,7 +300,7 @@ if (response.status === 400 && result.error === 'use_dpop_nonce') {
 ```
 
 <div id="step-4-auth0-authorization-server-validates-the-dpop-proof-jwt">
-  ## ステップ 4: Auth0 Authorization Server が DPoP Proof JWT を検証する
+  ## ステップ 4: Auth0 Authorization Server が DPoP Proof JWT を検証する {#step-4-auth0-authorization-server-validates-the-dpop-proof-jwt}
 </div>
 
 Auth0 Authorization Server はトークンリクエストを受信すると、次の処理を行います。
@@ -313,7 +313,7 @@ Auth0 Authorization Server はトークンリクエストを受信すると、�
 * その後、Auth0 Authorization Server は DPoP sender-constrained アクセストークンをクライアントアプリケーションに発行します。
 
 <div id="step-5-client-application-calls-api-with-the-dpop-bound-token-and-dpop-proof-jwt">
-  ## ステップ 5: クライアントアプリケーションが DPoP-bound token と DPoP Proof JWT を使用して API を呼び出す
+  ## ステップ 5: クライアントアプリケーションが DPoP-bound token と DPoP Proof JWT を使用して API を呼び出す {#step-5-client-application-calls-api-with-the-dpop-bound-token-and-dpop-proof-jwt}
 </div>
 
 DPoP を強制するリソースサーバーに対する API 呼び出しごとに、クライアントアプリケーションは DPoP-bound access token と新しい DPoP Proof JWT の両方を提示する必要があります。
@@ -441,7 +441,7 @@ console.log('User info result:', await userInfoResponse.json());
 ```
 
 <div id="step-6-handle-token-refresh-with-dpop">
-  ## ステップ 6: DPoP を使用してトークンの更新を処理する
+  ## ステップ 6: DPoP を使用してトークンの更新を処理する {#step-6-handle-token-refresh-with-dpop}
 </div>
 
 DPoP にバインドされたアクセストークンの有効期限が切れた場合は、新しいアクセストークンを取得するために <Tooltip tip="リフレッシュトークン: ユーザーに再度ログインを求めることなく、新しいアクセストークンを取得するために使用されるトークン。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=refresh+token">リフレッシュトークン</Tooltip> を使用できます。リフレッシュトークンのリクエストには、元のトークンリクエストで使用したものと同じキーペアで生成した DPoP Proof JWT が必要です。
@@ -459,7 +459,7 @@ Auth0 認可サーバーは次を行います。
 * DPoP Proof JWT を検証し ([ステップ 4](#step-4-auth0-authorization-server-validates-the-dpop-proof-jwt) と同様) 、新しい DPoP バインドアクセストークンを発行します。
 
 <div id="important-considerations">
-  ## 重要な考慮事項
+  ## 重要な考慮事項 {#important-considerations}
 </div>
 
 クライアントアプリケーションに DPoP を実装する際は、次の点を考慮してください。
@@ -474,7 +474,7 @@ Auth0 認可サーバーは次を行います。
 * **永続化:** セッションを維持し、DPoP-bound access token を再利用する必要があるクライアントアプリケーション (長期間利用される SPA など) では、アプリケーションの再読み込み後も、最初に生成したキー ペアを安全に保存し、再取得できるようにしてください。新しいキー ペアが生成されたり、別のキー ペアが使用されたりすると、DPoP-bound access token は元のペアの公開キーに暗号学的に結び付けられているため無効になります。たとえば、ブラウザーの `IndexedDB` やモバイルアプリの安全なストレージにキー ペアを保存できます。
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * [送信者制約を設定する](/docs/ja-jp/secure/sender-constraining/configure-sender-constraining)

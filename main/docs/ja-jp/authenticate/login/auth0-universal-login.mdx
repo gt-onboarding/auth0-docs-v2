@@ -17,7 +17,7 @@ Universal Login の設定は動的に行えるため、アプリケーション�
 Universal Login と埋め込みログインの違いについて詳しくは、[Centralized Universal Login vs. Embedded Login](/docs/ja-jp/authenticate/login/universal-vs-embedded-login)を参照してください。
 
 <div id="configure-universal-login">
-  ## Universal Login を設定する
+  ## Universal Login を設定する {#configure-universal-login}
 </div>
 
 Auth0 Dashboard では、[Branding &gt; Universal Login &gt; Advanced Options](https://manage.auth0.com/#/universal-login/customizations-new) で、デフォルトのログインページに使用するエクスペリエンスを選択できます。
@@ -32,7 +32,7 @@ Auth0 では、ホスト型のログインエクスペリエンスを 2 つ提�
 この 2 つのエクスペリエンスの違いについて詳しくは、[Universal Login と Classic Login の比較](/docs/ja-jp/authenticate/login/auth0-universal-login/universal-login-vs-classic-login) を参照してください。
 
 <div id="accessibility">
-  ### アクセシビリティ
+  ### アクセシビリティ {#accessibility}
 </div>
 
 Auth0 は、支援技術を利用するユーザーが Universal Login フローを使いやすくなるよう、次の標準に準拠しています。
@@ -53,7 +53,7 @@ Auth0 Universal Login では、これらの標準への対応がデフォルト�
 * 必須フィールドのラベルには、視覚的なインジケーターが表示されます。
 
 <div id="customize-login-page">
-  ### ログインページをカスタマイズする
+  ### ログインページをカスタマイズする {#customize-login-page}
 </div>
 
 Universal Login を有効にすると、Auth0 Dashboard からログインページを直接カスタマイズできます。具体的には、ページテンプレートやテーマ、サインアップやログインのプロンプト、その他のテキスト要素をカスタマイズできます。詳しくは、Customize Universal Login を参照してください。
@@ -61,7 +61,7 @@ Universal Login を有効にすると、Auth0 Dashboard からログインペー
 Classic Login を実装する場合は、Auth0 Dashboard から基本的なブランディングオプションをカスタマイズできます。その後、ログインフローの構築に使用する SDK を使って、より高度なカスタマイズを設定できます。詳しくは、[Customize Classic Login](/docs/ja-jp/customize/login-pages/classic-login) を参照してください。
 
 <div id="implement-universal-login">
-  ## Universal Login を実装する
+  ## Universal Login を実装する {#implement-universal-login}
 </div>
 
 テナント内で Universal Login または Classic Login のいずれかを有効にしたら、以下の手順に従ってこのエクスペリエンスを実装します。
@@ -71,7 +71,7 @@ Classic Login を実装する場合は、Auth0 Dashboard から基本的なブ�
 3. [Database](/docs/ja-jp/get-started/applications/set-up-database-connections)、[Enterprise](/docs/ja-jp/authenticate/enterprise-connections)、または [Social](/docs/ja-jp/authenticate/identity-providers/social-identity-providers) 接続を作成し、アプリケーションで有効にします。
 
 <div id="navigate-to-the-login-page">
-  ### ログインページを開く
+  ### ログインページを開く {#navigate-to-the-login-page}
 </div>
 
 どのブラウザーからでも、[ログイン エンドポイント](https://auth0.com/docs/api/authentication#login) を直接呼び出すことができます。
@@ -97,7 +97,7 @@ export const codeExample = `https://{yourDomain}/authorize?
 必要に応じて、`connection` パラメーターを指定すると、ユーザーにそのコネクションでの認証を促すことができます。
 
 <div id="correlation-id">
-  ### Correlation ID
+  ### Correlation ID {#correlation-id}
 </div>
 
 <ReleaseStageNotice feature="Correlation ID" stage="ea" terms="true" contact="Auth0サポートまたは担当のテクニカルアカウントマネージャー" />
@@ -114,7 +114,7 @@ Universal Login は、すべての認証フローで Correlated Events をサポ
 詳細については、[Correlation ID](/docs/ja-jp/authenticate/login/configure-correlation-id) を参照してください。
 
 <div id="use-the-quickstart-guides">
-  ### Quickstart ガイドを活用する
+  ### Quickstart ガイドを活用する {#use-the-quickstart-guides}
 </div>
 
 アプリケーションに Universal Login を設定する方法について詳しくは、[Quickstart ガイド](/docs/ja-jp/quickstarts)をご覧ください。ご利用の技術に最も適した方法を選び、Quickstart に沿って実装手順を確認してください。

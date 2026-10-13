@@ -10,7 +10,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 リクエストにエージェントにリンクされたクライアントが含まれる場合、Actions ランタイムは `event.agent` オブジェクトを公開します。エージェントが関与していない場合、このオブジェクトは存在しないため、既存の Actions コードには影響しません。
 
 <div id="triggers">
-  ## トリガー
+  ## トリガー {#triggers}
 </div>
 
 `event.agent` は、次のトリガーで使用できます。
@@ -21,7 +21,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 | `post-login`           | クライアントに `agent_id` が設定されている認可コード、トークン交換、またはデバイスフロー。 |
 
 <div id="eventagent-object">
-  ## `event.agent` オブジェクト
+  ## `event.agent` オブジェクト {#eventagent-object}
 </div>
 
 `event.agent` オブジェクトのスキーマは次のとおりです。
@@ -38,7 +38,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 `event.client` は変更されず、リクエストを認証したリンク済みの OAuth クライアントを引き続き示します。
 
 <div id="example-custom-claims-on-agent-tokens">
-  ## 例: エージェントトークンのカスタムクレーム
+  ## 例: エージェントトークンのカスタムクレーム {#example-custom-claims-on-agent-tokens}
 </div>
 
 `credentials-exchange` Action で `event.agent` を使用して、アクセストークンにエージェントのコンテキストを追加します。

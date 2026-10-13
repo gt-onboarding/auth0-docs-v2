@@ -39,7 +39,7 @@ import {HowToSchema} from "/snippets/fr-ca/HowToSchema.jsx";
 </Note>
 
 <div id="get-started">
-  ## Pour commencer
+  ## Pour commencer {#get-started}
 </div>
 
 Ce guide de démarrage rapide montre comment protéger des points de terminaison d’API Fastify à l’aide de jetons d’accès JWT. Vous créerez une API sécurisée qui valide les jetons d’accès Auth0 et donne accès à des ressources protégées.
@@ -342,7 +342,7 @@ Ce guide de démarrage rapide montre comment protéger des points de terminaison
 ***
 
 <div id="advanced-usage">
-  ## Utilisation avancée
+  ## Utilisation avancée {#advanced-usage}
 </div>
 
 <Accordion title="Claims de jeton personnalisés avec TypeScript">
@@ -615,12 +615,12 @@ Ce guide de démarrage rapide montre comment protéger des points de terminaison
 ***
 
 <div id="troubleshooting">
-  ## Dépannage
+  ## Dépannage {#troubleshooting}
 </div>
 
 <AccordionGroup>
   <Accordion title="Problèmes courants et solutions">
-    ### &quot;Aucun jeton d’autorisation n’a été trouvé&quot;
+### &quot;Aucun jeton d’autorisation n’a été trouvé&quot; {#no-authorization-token-was-found}
 
     **Problème :** L’API ne trouve pas le jeton d’accès dans la requête.
 
@@ -630,7 +630,7 @@ Ce guide de démarrage rapide montre comment protéger des points de terminaison
     2. Vérifiez que &quot;Bearer&quot; figure bien avant le jeton
     3. Vérifiez que le jeton n’est pas expiré
 
-    ### &quot;Jeton invalide&quot; ou &quot;jwt malformed&quot;
+### &quot;Jeton invalide&quot; ou &quot;jwt malformed&quot; {#invalid-token-or-jwt-malformed}
 
     **Problème :** Le format du jeton n’est pas valide.
 
@@ -640,7 +640,7 @@ Ce guide de démarrage rapide montre comment protéger des points de terminaison
     2. Le jeton doit être obtenu avec le paramètre `audience` de votre API
     3. Vérifiez que le jeton est un JWT valide (il doit comporter trois parties séparées par des points)
 
-    ### &quot;Signature invalide&quot;
+### &quot;Signature invalide&quot; {#invalid-signature}
 
     **Problème :** La signature du jeton ne correspond pas.
 
@@ -650,7 +650,7 @@ Ce guide de démarrage rapide montre comment protéger des points de terminaison
     2. Assurez-vous d’utiliser l’algorithme de signature RS256 (par défaut)
     3. Vérifiez que le jeton n’a pas été modifié
 
-    ### &quot;Audience invalide&quot;
+### &quot;Audience invalide&quot; {#invalid-audience}
 
     **Problème :** L’audience du jeton ne correspond pas à votre API.
 
@@ -665,7 +665,7 @@ Ce guide de démarrage rapide montre comment protéger des points de terminaison
     });
     ```
 
-    ### Erreurs CORS dans le navigateur
+### Erreurs CORS dans le navigateur {#cors-errors-in-browser}
 
     **Problème :** Le navigateur bloque les requêtes API à cause de la politique CORS.
 
@@ -689,7 +689,7 @@ Ce guide de démarrage rapide montre comment protéger des points de terminaison
 ***
 
 <div id="next-steps">
-  ## Prochaines étapes
+  ## Prochaines étapes {#next-steps}
 </div>
 
 Maintenant que vous disposez d’une API protégée, vous pourriez explorer :
@@ -702,7 +702,7 @@ Maintenant que vous disposez d’une API protégée, vous pourriez explorer :
 ***
 
 <div id="resources">
-  ## Ressources
+  ## Ressources {#resources}
 </div>
 
 * **[auth0-fastify-api GitHub](https://github.com/auth0/auth0-fastify/tree/main/packages/auth0-fastify-api)** - Code source et exemples

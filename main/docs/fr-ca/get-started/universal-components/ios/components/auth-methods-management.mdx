@@ -19,7 +19,7 @@ Avec le composant `MyAccountAuthMethodsView`, vous n’avez pas à gérer la nav
 </Frame>
 
 <div id="setup-requirements">
-  ## Prérequis de configuration
+  ## Prérequis de configuration {#setup-requirements}
 </div>
 
 Avant d’afficher le composant `MyAccountAuthMethodsView`, suivez [Créer une interface de sécurité de compte en libre-service](/docs/fr-ca/get-started/universal-components/ios/components/my-account-overview) pour installer le SDK, configurer votre tenant Auth0 et initialiser le SDK avec un fournisseur de jetons.
@@ -29,7 +29,7 @@ Avant d’afficher le composant `MyAccountAuthMethodsView`, suivez [Créer une i
 </Callout>
 
 <div id="supported-factors">
-  ## Facteurs pris en charge
+  ## Facteurs pris en charge {#supported-factors}
 </div>
 
 Le composant prend en charge toutes les méthodes d’authentification configurées avec l’API My Account. L’écran de chaque facteur hérite du thème actif du composant. Pour en savoir plus, consultez [Personnaliser le style et les thèmes](/docs/fr-ca/get-started/universal-components/ios/ios-theming).
@@ -44,7 +44,7 @@ Le composant prend en charge toutes les méthodes d’authentification configur�
 | [Codes de récupération](/docs/fr-ca/secure/multi-factor-authentication/configure-recovery-codes-for-mfa)   | Liste de codes affichée une seule fois, avec une action de copie et une confirmation « J’ai enregistré mes codes »                   | Les codes sont affichés à l’utilisateur et ne sont jamais renvoyés à l’appelant. L’action de copie dans le presse-papiers utilise l’API de presse-papiers standard de la plateforme.                                                       |
 
 <div id="get-started">
-  ## Pour commencer
+  ## Pour commencer {#get-started}
 </div>
 
 Ajoutez le composant `MyAccountAuthMethodsView` n’importe où dans votre hiérarchie SwiftUI, généralement accessible par un lien de navigation dans les paramètres.
@@ -70,7 +70,7 @@ struct SettingsView: View {
 La vue Swift ne nécessite aucun paramètre d’initialisation. Pour personnaliser son comportement, utilisez les modificateurs de vue SwiftUI et les valeurs d’environnement.
 
 <div id="parameters">
-  ## Paramètres
+  ## Paramètres {#parameters}
 </div>
 
 Le composant `MyAccountAuthMethodsView` accepte les valeurs de modificateur et d’environnement suivantes :
@@ -82,7 +82,7 @@ Le composant `MyAccountAuthMethodsView` accepte les valeurs de modificateur et d
 | `\.hostNavigationPath`                        | `Binding<NavigationPath>` | Liaison d’environnement utilisée par le SDK pour ajouter des destinations à la pile de navigation hôte. Obligatoire lorsque vous appelez `.embeddedInNavigationStack()`.                                               |
 
 <div id="customize">
-  ## Personnaliser
+  ## Personnaliser {#customize}
 </div>
 
 La personnalisation du thème s’applique à l’ensemble du composant; les écrans de chaque facteur héritent du thème actif.
@@ -90,7 +90,7 @@ La personnalisation du thème s’applique à l’ensemble du composant; les éc
 Pour en savoir plus sur le catalogue complet de jetons et les modèles pour le mode sombre, consultez [Personnaliser le style et les thèmes](/docs/fr-ca/get-started/universal-components/ios/ios-theming).
 
 <div id="embed-in-a-host-navigationstack">
-  ## Intégrer à une NavigationStack hôte
+  ## Intégrer à une NavigationStack hôte {#embed-in-a-host-navigationstack}
 </div>
 
 Par défaut, le composant `MyAccountAuthMethodsView` gère sa propre `NavigationStack`.
@@ -127,7 +127,7 @@ L’utilisation du mode intégré exige deux éléments :
 </Callout>
 
 <div id="localization">
-  ## Localisation
+  ## Localisation {#localization}
 </div>
 
 Universal Components pour iOS ne proposent pas de chaînes de caractères localisées. Le texte destiné aux utilisateurs est en anglais.
@@ -135,14 +135,14 @@ Universal Components pour iOS ne proposent pas de chaînes de caractères locali
 Si la localisation constitue un obstacle à votre intégration, veuillez soumettre une demande de fonctionnalité dans le dépôt [ui-components-ios](https://github.com/auth0/ui-components-ios/issues).
 
 <div id="limitations">
-  ## Limites
+  ## Limites {#limitations}
 </div>
 
 * **Aucun composant de facteur autonome sur iOS**. Chaque facteur s’affiche dans le composant gestion des méthodes d’authentification. Aucune API publique ne permet d’inscrire, de vérifier ou de supprimer un seul facteur depuis une autre partie de votre application.
 * **Aucun composant autonome pour lister ou supprimer des facteurs**. Le SDK ne fournit pas de composants publics permettant de lister les facteurs inscrits ou de les supprimer en dehors de ce composant. Utilisez le composant gestion des méthodes d’authentification pour une expérience de gestion complète.
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 <CardGroup cols={2}>

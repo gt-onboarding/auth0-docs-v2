@@ -16,7 +16,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 organization は、<Tooltip tip="Auth0 Dashboard: サービスを設定するための Auth0 の主要製品。" cta="用語集を表示" href="/docs/ja-jp/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip> または <Tooltip tip="Auth0 Dashboard: サービスを設定するための Auth0 の主要製品。" cta="用語集を表示" href="/docs/ja-jp/glossary?term=Management+API">Management API</Tooltip> のいずれかを使用して削除できます。
 
 <div id="auth0-dashboard">
-  ## Auth0 Dashboard
+  ## Auth0 Dashboard {#auth0-dashboard}
 </div>
 
 Auth0 Dashboard から organization を削除するには、次の手順に従います。
@@ -25,7 +25,7 @@ Auth0 Dashboard から organization を削除するには、次の手順に従�
 2. **Danger Zone** セクションまでスクロールし、**Delete** を選択して確認します。
 
 <div id="management-api">
-  ## Management API
+  ## Management API {#management-api}
 </div>
 
 `Delete Organization` endpoint に `DELETE` リクエストを送信します。`ORG_ID` と `MGMT_API_ACCESS_TOKEN` のプレースホルダー値は、それぞれ organization ID と Management API の <Tooltip tip="Access Token: API へのアクセスに使用される、不透明な文字列または JWT 形式の認証情報。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Access+Token">Access Token</Tooltip> に必ず置き換えてください。
@@ -170,7 +170,7 @@ Auth0 Dashboard から organization を削除するには、次の手順に従�
 | `MGMT_API_ACCESS_TOKEN` | スコープ `delete:organizations` を持つ [Access Token for the Management API](/docs/ja-jp/secure/tokens/access-tokens/management-api-access-tokens)。 |
 
 <div id="response-status-codes">
-  #### レスポンスステータスコード
+  #### レスポンスステータスコード {#response-status-codes}
 </div>
 
 考えられるレスポンスステータスコードは次のとおりです。

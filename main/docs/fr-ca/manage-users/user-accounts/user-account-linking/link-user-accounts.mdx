@@ -17,7 +17,7 @@ Vous pouvez lier des comptes d’utilisateur de différentes façons :
 * bibliothèque auth0.js
 
 <div id="action-with-external-linking-application">
-  ## Action avec une application externe de liaison
+  ## Action avec une application externe de liaison {#action-with-external-linking-application}
 </div>
 
 Vous pouvez utiliser une Action avec une application externe de liaison pour lier des comptes d’utilisateur au moyen de la Management API.
@@ -83,7 +83,7 @@ Les étapes suivantes illustrent un exemple de mise en œuvre :
 7. L’Action passe à l’utilisateur principal s’il ne correspond pas à `event.user.user_id`.
 
 <div id="example-account-linking-action">
-  ### Exemple : Action de liaison de comptes
+  ### Exemple : Action de liaison de comptes {#example-account-linking-action}
 </div>
 
 ```javascript lines expandable
@@ -336,7 +336,7 @@ exports.onContinuePostLogin = async (event, api) => {
 ```
 
 <div id="management-api">
-  ## Management API
+  ## Management API {#management-api}
 </div>
 
 Vous pouvez utiliser le endpoint [Lier un compte d’utilisateur](https://auth0.com/docs/api/v2#!/Users/post_identities) de la Management API de deux façons :
@@ -345,7 +345,7 @@ Vous pouvez utiliser le endpoint [Lier un compte d’utilisateur](https://auth0.
 * Liaison de comptes côté serveur à l’aide de jetons d’accès avec la portée `update:users`.
 
 <div id="user-initiated-client-side-account-linking">
-  ### Liaison de comptes côté client initiée par l’utilisateur
+  ### Liaison de comptes côté client initiée par l’utilisateur {#user-initiated-client-side-account-linking}
 </div>
 
 Pour la liaison de comptes côté client initiée par l’utilisateur, il vous faut un jeton d’accès qui contient les éléments suivants dans la charge utile :
@@ -506,7 +506,7 @@ Un jeton d’accès qui contient la portée `update:current_user_identities` ne 
 </AuthCodeGroup>
 
 <div id="server-side-account-linking">
-  ### Liaison de comptes côté serveur
+  ### Liaison de comptes côté serveur {#server-side-account-linking}
 </div>
 
 Pour la liaison de comptes côté serveur, vous avez besoin d’un jeton d’accès qui contient les éléments suivants dans la charge utile :
@@ -824,13 +824,13 @@ Vous pouvez aussi envoyer le jeton d’identité du compte secondaire au lieu du
 </AuthCodeGroup>
 
 <div id="auth0js-library">
-  ## Bibliothèque Auth0.js
+  ## Bibliothèque Auth0.js {#auth0js-library}
 </div>
 
 Vous pouvez utiliser la bibliothèque Auth0.js pour effectuer la liaison de comptes côté client. Consultez [Référence Auth0.js &gt; Gestion des utilisateurs](/docs/fr-ca/libraries/auth0js#user-management) pour en savoir plus.
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Liaison de comptes d’utilisateur : mise en œuvre côté serveur](/docs/fr-ca/manage-users/user-accounts/user-account-linking/suggested-account-linking-server-side-implementation)

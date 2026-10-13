@@ -40,14 +40,14 @@
       ]
     },
     {
-      "group": "Anomalie",
+      "group": "Anomaly",
       "pages": [
         "docs/fr-ca/api/management/v2/anomaly/get-ips-by-id",
         "docs/fr-ca/api/management/v2/anomaly/delete-ips-by-id"
       ]
     },
     {
-      "group": "Protection contre les attaques",
+      "group": "Attack Protection",
       "pages": [
         "docs/fr-ca/api/management/v2/attack-protection/get-bot-detection",
         "docs/fr-ca/api/management/v2/attack-protection/patch-bot-detection",
@@ -64,7 +64,7 @@
       ]
     },
     {
-      "group": "Image de marque",
+      "group": "Branding",
       "pages": [
         "docs/fr-ca/api/management/v2/branding/get-branding",
         "docs/fr-ca/api/management/v2/branding/patch-branding",
@@ -92,7 +92,7 @@
       ]
     },
     {
-      "group": "Autorisations client",
+      "group": "Client Grants",
       "pages": [
         "docs/fr-ca/api/management/v2/client-grants/get-client-grants",
         "docs/fr-ca/api/management/v2/client-grants/post-client-grants",
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "group": "Connexions",
+      "group": "Connections",
       "pages": [
         "docs/fr-ca/api/management/v2/connections/get-connections",
         "docs/fr-ca/api/management/v2/connections/post-connections",
@@ -170,19 +170,19 @@
       ]
     },
     {
-      "group": "Provisionnement des répertoires de connexions",
+      "group": "Connections Directory Provisionings",
       "pages": [
         "docs/fr-ca/api/management/v2/connections-directory-provisionings/get-connections-directory-provisionings"
       ]
     },
     {
-      "group": "Configurations SCIM des connexions",
+      "group": "Connections Scim Configurations",
       "pages": [
         "docs/fr-ca/api/management/v2/connections-scim-configurations/get-connections-scim-configurations"
       ]
     },
     {
-      "group": "Domaines personnalisés",
+      "group": "Custom Domains",
       "pages": [
         "docs/fr-ca/api/management/v2/custom-domains/get-custom-domains",
         "docs/fr-ca/api/management/v2/custom-domains/post-custom-domains",
@@ -196,7 +196,7 @@
       ]
     },
     {
-      "group": "Identifiants d’appareil",
+      "group": "Device Credentials",
       "pages": [
         "docs/fr-ca/api/management/v2/device-credentials/get-device-credentials",
         "docs/fr-ca/api/management/v2/device-credentials/post-device-credentials",
@@ -204,7 +204,7 @@
       ]
     },
     {
-      "group": "Modèles de courriels",
+      "group": "Email Templates",
       "pages": [
         "docs/fr-ca/api/management/v2/email-templates/post-email-templates",
         "docs/fr-ca/api/management/v2/email-templates/get-email-templates-by-template-name",
@@ -213,7 +213,7 @@
       ]
     },
     {
-      "group": "Courriels",
+      "group": "Emails",
       "pages": [
         "docs/fr-ca/api/management/v2/emails/get-provider",
         "docs/fr-ca/api/management/v2/emails/delete-provider",
@@ -222,7 +222,7 @@
       ]
     },
     {
-      "group": "Flux d’événements",
+      "group": "Event Streams",
       "pages": [
         "docs/fr-ca/api/management/v2/event-streams/get-event-streams",
         "docs/fr-ca/api/management/v2/event-streams/post-event-streams",
@@ -237,13 +237,13 @@
       ]
     },
     {
-      "group": "Événements",
+      "group": "Events",
       "pages": [
         "docs/fr-ca/api/management/v2/events/subscribe-events"
       ]
     },
     {
-      "group": "Expérimentation",
+      "group": "Experimentation",
       "pages": [
         "docs/fr-ca/api/management/v2/experimentation/get-experiments",
         "docs/fr-ca/api/management/v2/experimentation/create-experiment",
@@ -271,7 +271,7 @@
       ]
     },
     {
-      "group": "Flux",
+      "group": "Flows",
       "pages": [
         "docs/fr-ca/api/management/v2/flows/get-flows",
         "docs/fr-ca/api/management/v2/flows/post-flows",
@@ -299,7 +299,7 @@
       ]
     },
     {
-      "group": "Autorisations",
+      "group": "Grants",
       "pages": [
         "docs/fr-ca/api/management/v2/grants/get-grants",
         "docs/fr-ca/api/management/v2/grants/delete-grants-by-user-id",
@@ -307,7 +307,7 @@
       ]
     },
     {
-      "group": "Groupes",
+      "group": "Groups",
       "pages": [
         "docs/fr-ca/api/management/v2/groups/get-groups",
         "docs/fr-ca/api/management/v2/groups/get-group",
@@ -374,7 +374,7 @@
       ]
     },
     {
-      "group": "Tâches",
+      "group": "Jobs",
       "pages": [
         "docs/fr-ca/api/management/v2/jobs/post-users-exports",
         "docs/fr-ca/api/management/v2/jobs/post-users-imports",
@@ -384,7 +384,7 @@
       ]
     },
     {
-      "group": "Clés",
+      "group": "Keys",
       "pages": [
         "docs/fr-ca/api/management/v2/keys/get-custom-signing-keys",
         "docs/fr-ca/api/management/v2/keys/delete-custom-signing-keys",
@@ -414,14 +414,14 @@
       ]
     },
     {
-      "group": "Journaux",
+      "group": "Logs",
       "pages": [
         "docs/fr-ca/api/management/v2/logs/get-logs",
         "docs/fr-ca/api/management/v2/logs/get-logs-by-id"
       ]
     },
     {
-      "group": "ACL réseau",
+      "group": "Network Acls",
       "pages": [
         "docs/fr-ca/api/management/v2/network-acls/get-network-acls",
         "docs/fr-ca/api/management/v2/network-acls/post-network-acls",
@@ -485,7 +485,7 @@
       ]
     },
     {
-      "group": "Invites",
+      "group": "Prompts",
       "pages": [
         "docs/fr-ca/api/management/v2/prompts/get-prompts",
         "docs/fr-ca/api/management/v2/prompts/patch-prompts",
@@ -500,7 +500,7 @@
       ]
     },
     {
-      "group": "Politiques de limitation du débit",
+      "group": "Rate Limit Policies",
       "pages": [
         "docs/fr-ca/api/management/v2/rate-limit-policies/get-rate-limit-policies",
         "docs/fr-ca/api/management/v2/rate-limit-policies/post-rate-limit-policies",
@@ -510,7 +510,7 @@
       ]
     },
     {
-      "group": "Jetons d’actualisation",
+      "group": "Refresh Tokens",
       "pages": [
         "docs/fr-ca/api/management/v2/refresh-tokens/get-refresh-tokens",
         "docs/fr-ca/api/management/v2/refresh-tokens/revoke-refresh-tokens",
@@ -520,7 +520,7 @@
       ]
     },
     {
-      "group": "Serveurs de ressources",
+      "group": "Resource Servers",
       "pages": [
         "docs/fr-ca/api/management/v2/resource-servers/get-resource-servers",
         "docs/fr-ca/api/management/v2/resource-servers/post-resource-servers",
@@ -539,7 +539,7 @@
       ]
     },
     {
-      "group": "Rôles",
+      "group": "Roles",
       "pages": [
         "docs/fr-ca/api/management/v2/roles/get-roles",
         "docs/fr-ca/api/management/v2/roles/post-roles",
@@ -567,7 +567,7 @@
       ]
     },
     {
-      "group": "Configurations des Rules",
+      "group": "Rules Configs",
       "pages": [
         "docs/fr-ca/api/management/v2/rules-configs/get-rules-configs",
         "docs/fr-ca/api/management/v2/rules-configs/delete-rules-configs-by-key",
@@ -575,7 +575,7 @@
       ]
     },
     {
-      "group": "Profils libre-service",
+      "group": "Self Service Profiles",
       "pages": [
         "docs/fr-ca/api/management/v2/self-service-profiles/get-self-service-profiles",
         "docs/fr-ca/api/management/v2/self-service-profiles/post-self-service-profiles",
@@ -598,7 +598,7 @@
       ]
     },
     {
-      "group": "Statistiques",
+      "group": "Stats",
       "pages": [
         "docs/fr-ca/api/management/v2/stats/get-active-users",
         "docs/fr-ca/api/management/v2/stats/get-daily"
@@ -612,7 +612,7 @@
       ]
     },
     {
-      "group": "Locataires",
+      "group": "Tenants",
       "pages": [
         "docs/fr-ca/api/management/v2/tenants/tenant-settings-route",
         "docs/fr-ca/api/management/v2/tenants/patch-settings"
@@ -626,7 +626,7 @@
       ]
     },
     {
-      "group": "Profils d’échange de jetons",
+      "group": "Token Exchange Profiles",
       "pages": [
         "docs/fr-ca/api/management/v2/token-exchange-profiles/get-token-exchange-profiles",
         "docs/fr-ca/api/management/v2/token-exchange-profiles/post-token-exchange-profiles",
@@ -648,7 +648,7 @@
       ]
     },
     {
-      "group": "Blocages d’utilisateurs",
+      "group": "User Blocks",
       "pages": [
         "docs/fr-ca/api/management/v2/user-blocks/get-user-blocks",
         "docs/fr-ca/api/management/v2/user-blocks/delete-user-blocks",
@@ -657,7 +657,7 @@
       ]
     },
     {
-      "group": "Utilisateurs",
+      "group": "Users",
       "pages": [
         "docs/fr-ca/api/management/v2/users/get-users",
         "docs/fr-ca/api/management/v2/users/post-users",
@@ -701,13 +701,13 @@
       ]
     },
     {
-      "group": "Utilisateurs par courriel",
+      "group": "Users By Email",
       "pages": [
         "docs/fr-ca/api/management/v2/users-by-email/get-users-by-email"
       ]
     },
     {
-      "group": "Justificatifs vérifiables",
+      "group": "Verifiable Credentials",
       "pages": [
         "docs/fr-ca/api/management/v2/verifiable-credentials/get-vc-templates",
         "docs/fr-ca/api/management/v2/verifiable-credentials/post-vc-templates",

@@ -25,7 +25,7 @@ import {HowToSchema} from "/snippets/ja-jp/HowToSchema.jsx";
 </Note>
 
 <div id="get-started">
-  ## はじめに
+  ## はじめに {#get-started}
 </div>
 
 この Quickstart では、`@auth0/auth0-hono` を使って Hono アプリケーションを保護するための、最小限かつ推奨される方法を紹介します。内容は、リポジトリで推奨されているパターン、つまり環境変数ベースの設定、`app.use(auth0(...))` ミドルウェア、そして必要なルートだけを保護するための `requiresAuth()` に沿っています。
@@ -200,7 +200,7 @@ import {HowToSchema} from "/snippets/ja-jp/HowToSchema.jsx";
 </Check>
 
 <div id="troubleshooting">
-  ## トラブルシューティング
+  ## トラブルシューティング {#troubleshooting}
 </div>
 
 <Accordion title="よくある問題">
@@ -244,7 +244,7 @@ import {HowToSchema} from "/snippets/ja-jp/HowToSchema.jsx";
 </Accordion>
 
 <div id="advanced-usage">
-  ## 高度な使い方
+  ## 高度な使い方 {#advanced-usage}
 </div>
 
 * 選択的な保護: `app.use(auth0({ authRequired: false }))` を使うとルートはデフォルトで公開され、`app.use('/private/*', requiresAuth())` を使うと特定のパスだけを保護できます。
@@ -253,7 +253,7 @@ import {HowToSchema} from "/snippets/ja-jp/HowToSchema.jsx";
 * トークン管理: ミドルウェアでは、セッション経由でアクセストークンと ID トークンを利用できます。スコープは最小権限の原則に従って設定し、リフレッシュトークンは安全にローテーションしてください。
 
 <div id="best-practices-security">
-  ## ベストプラクティスとセキュリティ
+  ## ベストプラクティスとセキュリティ {#best-practices-security}
 </div>
 
 * 機密情報をソース管理に含めず、環境変数を使用してください。

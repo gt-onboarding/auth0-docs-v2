@@ -9,7 +9,7 @@ import {AuthCodeGroup} from "/snippets/fr-ca/AuthCodeGroup.jsx";
 Ce guide vous aide à passer d’une configuration avec un seul domaine personnalisé à [plusieurs domaines personnalisés](/docs/fr-ca/customize/custom-domains/multiple-custom-domains). Que vous ajoutiez des domaines pour différentes images de marque, diverses régions ou plusieurs segments de clientèle, ce guide vous propose des instructions étape par étape pour assurer une transition en douceur.
 
 <div id="migration-scenarios">
-  ## Scénarios de migration
+  ## Scénarios de migration {#migration-scenarios}
 </div>
 
 Choisissez le scénario qui correspond le mieux à votre situation :
@@ -21,7 +21,7 @@ Choisissez le scénario qui correspond le mieux à votre situation :
 | **Migration depuis le domaine canonique**           | Vous utilisez actuellement votre domaine canonique Auth0 (par exemple, `tenant.auth0.com`) et souhaitez migrer vers des domaines personnalisés | Mise en œuvre initiale de plusieurs domaines personnalisés             | Moyenne à élevée | Aucun (fonctionnement en parallèle) |
 
 <div id="pre-migration-checklist">
-  ## Liste de contrôle pré-migration
+  ## Liste de contrôle pré-migration {#pre-migration-checklist}
 </div>
 
 Avant de commencer votre migration, assurez-vous d’avoir effectué ce qui suit :
@@ -37,11 +37,11 @@ Avant de commencer votre migration, assurez-vous d’avoir effectué ce qui suit
 * Informé les parties prenantes et les utilisateurs (au besoin)
 
 <div id="migration-steps">
-  ## Étapes de migration
+  ## Étapes de migration {#migration-steps}
 </div>
 
 <div id="add-your-new-custom-domains">
-  ### Ajoutez vos nouveaux domaines personnalisés
+  ### Ajoutez vos nouveaux domaines personnalisés {#add-your-new-custom-domains}
 </div>
 
 Ajoutez vos nouveaux domaines personnalisés à l’aide du [Auth0 Dashboard](/docs/fr-ca/customize/custom-domains/multiple-custom-domains#configure-multiple-custom-domains) ou de la [Management API](https://auth0.com/docs/api/management/v2).
@@ -75,13 +75,13 @@ Ajoutez vos nouveaux domaines personnalisés à l’aide du [Auth0 Dashboard](/d
 </AuthCodeGroup>
 
 <div id="verify-domain-ownership">
-  ### Vérifier la propriété du domaine
+  ### Vérifier la propriété du domaine {#verify-domain-ownership}
 </div>
 
 Effectuez le processus de vérification du domaine pour chaque nouveau domaine personnalisé :
 
 <div id="for-auth0-managed-certificates">
-  #### Pour les certificats gérés par Auth0
+  #### Pour les certificats gérés par Auth0 {#for-auth0-managed-certificates}
 </div>
 
 1. Prenez note de l’enregistrement CNAME fourni par Auth0
@@ -101,7 +101,7 @@ curl --request POST \
 ```
 
 <div id="for-self-managed-certificates">
-  #### Pour les certificats gérés par le client
+  #### Pour les certificats gérés par le client {#for-self-managed-certificates}
 </div>
 
 1. Ajoutez l’enregistrement TXT requis à votre configuration DNS
@@ -110,7 +110,7 @@ curl --request POST \
 4. Vérifiez le domaine
 
 <div id="configure-default-domain-optional">
-  ### Configurer le domaine par défaut (facultatif)
+  ### Configurer le domaine par défaut (facultatif) {#configure-default-domain-optional}
 </div>
 
 Si vous souhaitez utiliser un domaine par défaut pour les courriels et les appels d’API, [définissez-le comme domaine par défaut](/docs/fr-ca/customize/custom-domains/multiple-custom-domains/default-domain) :
@@ -126,13 +126,13 @@ curl --request PATCH \
 ```
 
 <div id="update-application-configurations">
-  ### Mettre à jour la configuration des applications
+  ### Mettre à jour la configuration des applications {#update-application-configurations}
 </div>
 
 Mettez à jour vos applications pour utiliser le domaine personnalisé approprié :
 
 <div id="sdk-configuration">
-  #### Configuration du SDK
+  #### Configuration du SDK {#sdk-configuration}
 </div>
 
 Mettez à jour l’initialisation de votre SDK Auth0 :
@@ -190,7 +190,7 @@ Mettez à jour l’initialisation de votre SDK Auth0 :
 </AuthCodeGroup>
 
 <div id="callback-urls">
-  #### URL de rappel
+  #### URL de rappel {#callback-urls}
 </div>
 
 Mettez à jour les URL de rappel de votre application dans le Auth0 Dashboard :
@@ -210,7 +210,7 @@ Mettez à jour les URL de rappel de votre application dans le Auth0 Dashboard :
    ```
 
 <div id="update-email-templates">
-  ### Mettre à jour les modèles de courriel
+  ### Mettre à jour les modèles de courriel {#update-email-templates}
 </div>
 
 Pour rendre les renseignements sur le domaine personnalisé accessibles dans vos modèles de courriel :
@@ -224,13 +224,13 @@ Pour rendre les renseignements sur le domaine personnalisé accessibles dans vos
 </Note>
 
 <div id="update-social-identity-providers-idp">
-  ### Mettre à jour les fournisseurs d’identité sociale (IdP)
+  ### Mettre à jour les fournisseurs d’identité sociale (IdP) {#update-social-identity-providers-idp}
 </div>
 
 Mettez à jour les URI de redirection de vos fournisseurs d’identité sociale :
 
 <div id="google">
-  #### Google
+  #### Google {#google}
 </div>
 
 1. Allez à [Google Cloud Console](https://console.cloud.google.com)
@@ -238,7 +238,7 @@ Mettez à jour les URI de redirection de vos fournisseurs d’identité sociale�
 3. Ajoutez `https://new-domain.example.com/login/callback` à **Authorized redirect URIs**
 
 <div id="facebook">
-  #### Facebook
+  #### Facebook {#facebook}
 </div>
 
 1. Rendez-vous sur [Facebook Developers](https://developers.facebook.com)
@@ -246,19 +246,19 @@ Mettez à jour les URI de redirection de vos fournisseurs d’identité sociale�
 3. Ajoutez `https://new-domain.example.com/login/callback` à **URI de redirection OAuth valides**
 
 <div id="other-providers">
-  #### Autres fournisseurs
+  #### Autres fournisseurs {#other-providers}
 </div>
 
 Mettez à jour les URI de redirection de tous les fournisseurs d’identité sociale configurés, en suivant la documentation propre à chacun.
 
 <div id="update-enterprise-connections-if-applicable">
-  ### Mettre à jour les connexions d’entreprise (le cas échéant)
+  ### Mettre à jour les connexions d’entreprise (le cas échéant) {#update-enterprise-connections-if-applicable}
 </div>
 
 Si vous utilisez SAML, WS-Fed, Azure AD ou d’autres connexions d’entreprise, mettez à jour leur configuration :
 
 <div id="saml-connections">
-  #### Connexions SAML
+  #### Connexions SAML {#saml-connections}
 </div>
 
 Mettez à jour l’URL de l’Assertion Consumer Service (ACS) :
@@ -272,7 +272,7 @@ https://new-domain.example.com/login/callback?connection={connectionName}
 </Callout>
 
 <div id="azure-ad-connections">
-  #### Connexions Azure AD
+  #### Connexions Azure AD {#azure-ad-connections}
 </div>
 
 1. Accédez à Azure Active Directory &gt; **App registrations**
@@ -280,13 +280,13 @@ https://new-domain.example.com/login/callback?connection={connectionName}
 3. Ajoutez `https://new-domain.example.com/login/callback` à **Redirect URIs**
 
 <div id="adfs-connections">
-  #### Connexions ADFS
+  #### Connexions ADFS {#adfs-connections}
 </div>
 
 Mettez à jour le point de terminaison dans vos paramètres ADFS afin d’utiliser le nouveau domaine personnalisé.
 
 <div id="test-authentication">
-  ### Tester l’authentification
+  ### Tester l’authentification {#test-authentication}
 </div>
 
 Avant de terminer la migration, testez minutieusement ce qui suit :
@@ -299,7 +299,7 @@ Avant de terminer la migration, testez minutieusement ce qui suit :
 6. **Validation du jeton** : assurez-vous que les JWTs contiennent le claim `iss` correct
 
 <div id="monitor-and-verify">
-  ### Surveiller et vérifier
+  ### Surveiller et vérifier {#monitor-and-verify}
 </div>
 
 Après la migration :
@@ -311,7 +311,7 @@ Après la migration :
 5. Confirmez que toutes les applications utilisent les domaines personnalisés prévus
 
 <div id="decommission-old-domain-if-applicable">
-  ### Mettre l’ancien domaine hors service (le cas échéant)
+  ### Mettre l’ancien domaine hors service (le cas échéant) {#decommission-old-domain-if-applicable}
 </div>
 
 Si vous remplacez un domaine personnalisé existant :
@@ -328,7 +328,7 @@ curl --request DELETE \
 ```
 
 <div id="migration-patterns">
-  ## Stratégies de migration
+  ## Stratégies de migration {#migration-patterns}
 </div>
 
 <AccordionGroup>
@@ -376,13 +376,13 @@ curl --request DELETE \
 </AccordionGroup>
 
 <div id="handling-existing-user-sessions">
-  ## Gestion des sessions utilisateur existantes
+  ## Gestion des sessions utilisateur existantes {#handling-existing-user-sessions}
 </div>
 
 Lors de la migration des domaines personnalisés, les sessions utilisateur existantes peuvent être affectées :
 
 <div id="session-considerations">
-  ### Considérations relatives aux sessions
+  ### Considérations relatives aux sessions {#session-considerations}
 </div>
 
 * Les sessions créées avec l’ancien domaine demeurent valides jusqu’à leur expiration
@@ -390,7 +390,7 @@ Lors de la migration des domaines personnalisés, les sessions utilisateur exist
 * Les sessions entre domaines exigent une planification minutieuse
 
 <div id="recommended-approach">
-  ### Approche recommandée
+  ### Approche recommandée {#recommended-approach}
 </div>
 
 1. **Aviser les utilisateurs** : Informez les utilisateurs qu’ils pourraient devoir se connecter à nouveau
@@ -399,13 +399,13 @@ Lors de la migration des domaines personnalisés, les sessions utilisateur exist
 4. **Directives claires** : Fournissez des instructions claires si les utilisateurs rencontrent des problèmes
 
 <div id="rollback-plan">
-  ## Plan de retour en arrière
+  ## Plan de retour en arrière {#rollback-plan}
 </div>
 
 Si vous rencontrez des problèmes lors de la migration :
 
 <div id="immediate-rollback">
-  ### Retour en arrière immédiat
+  ### Retour en arrière immédiat {#immediate-rollback}
 </div>
 
 1. Rétablir les configurations de l’application pour utiliser l’ancien domaine
@@ -413,7 +413,7 @@ Si vous rencontrez des problèmes lors de la migration :
 3. Documenter le problème pour le dépannage
 
 <div id="partial-rollback">
-  ### Retour en arrière partiel
+  ### Retour en arrière partiel {#partial-rollback}
 </div>
 
 1. Repérez les applications touchées
@@ -422,7 +422,7 @@ Si vous rencontrez des problèmes lors de la migration :
 4. Relancez la migration lorsque vous serez prêt
 
 <div id="complete-rollback">
-  ### Retour en arrière complète
+  ### Retour en arrière complète {#complete-rollback}
 </div>
 
 1. Mettez à jour toutes les configurations d’application pour utiliser l’ancien domaine
@@ -431,11 +431,11 @@ Si vous rencontrez des problèmes lors de la migration :
 4. Planifiez une nouvelle tentative de migration
 
 <div id="troubleshooting">
-  ## Dépannage
+  ## Dépannage {#troubleshooting}
 </div>
 
 <div id="common-issues-and-solutions">
-  ### Problèmes courants et solutions
+  ### Problèmes courants et solutions {#common-issues-and-solutions}
 </div>
 
 | Problème                                           | Cause                                                     | Solution                                                                                                             |
@@ -449,7 +449,7 @@ Si vous rencontrez des problèmes lors de la migration :
 | Erreurs de certificat                              | Le certificat n’a pas été provisionné ou a expiré         | Vérifiez le domaine, attendez le provisionnement du certificat ou mettez à jour le certificat                        |
 
 <div id="getting-help">
-  ### Obtenir de l’aide
+  ### Obtenir de l’aide {#getting-help}
 </div>
 
 Si vous rencontrez des problèmes pendant la migration :
@@ -464,7 +464,7 @@ Si vous rencontrez des problèmes pendant la migration :
    * Les messages d’erreur ou les journaux
 
 <div id="post-migration-best-practices">
-  ## Bonnes pratiques après la migration
+  ## Bonnes pratiques après la migration {#post-migration-best-practices}
 </div>
 
 Après avoir terminé votre migration :
@@ -477,7 +477,7 @@ Après avoir terminé votre migration :
 6. **Prévoyez l’évolution** : réfléchissez à la façon dont vous gérerez des domaines supplémentaires à l’avenir
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Plusieurs domaines personnalisés](/docs/fr-ca/customize/custom-domains/multiple-custom-domains)

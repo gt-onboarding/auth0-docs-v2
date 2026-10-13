@@ -14,14 +14,14 @@ Auth0 sélectionne des listes de blocage pour plusieurs catégories de renseigne
 Vous pouvez utiliser nos listes de blocage mises à jour dynamiquement au lieu de gérer manuellement des plages d’adresses IP ou des numéros de système autonome (ASN), ou les combiner à d’autres blocs CIDR, ASN ou critères de géolocalisation.
 
 <div id="key-capabilities">
-  ## Principales fonctionnalités
+  ## Principales fonctionnalités {#key-capabilities}
 </div>
 
 * **Mises à jour automatisées** : Auth0 Threat Intelligence met continuellement à jour tous les flux de listes de blocage `auth0.*`, sans que vous ayez à mettre les règles à jour manuellement.
 * **Correspondance unifiée** : le comparateur `auth0_managed` gère de façon transparente la complexité sous-jacente, notamment la combinaison d’empreintes IPv4, IPv6 et TLS dans un seul tableau.
 
 <div id="available-curated-blocklists">
-  ## Listes de blocage sélectionnées offertes
+  ## Listes de blocage sélectionnées offertes {#available-curated-blocklists}
 </div>
 
 Auth0 organise les listes de blocage sélectionnées en grandes catégories selon des conventions de nommage standard. Toutes les listes de blocage sélectionnées utilisent le préfixe `auth0.<category>` :
@@ -35,13 +35,13 @@ Auth0 organise les listes de blocage sélectionnées en grandes catégories selo
 | `auth0.vpn`                        | Réseaux VPN                     | Adresses IP provenant de fournisseurs commerciaux de réseaux privés virtuels (VPN).                                                                               |
 
 <div id="configure-rules-with-curated-blocklists">
-  ## Configurer des règles avec des listes de blocage sélectionnées
+  ## Configurer des règles avec des listes de blocage sélectionnées {#configure-rules-with-curated-blocklists}
 </div>
 
 Configurez des listes de blocage sélectionnées à l’aide du comparateur `auth0_managed` dans la [Management API des Network ACL](/docs/fr-ca/api/management/v2), au sein d’une définition de règle.
 
 <div id="block-traffic-from-curated-blocklists">
-  ### Bloquer le trafic à l’aide de listes de blocage sélectionnées
+  ### Bloquer le trafic à l’aide de listes de blocage sélectionnées {#block-traffic-from-curated-blocklists}
 </div>
 
 Pour bloquer le trafic provenant d’adresses IP à faible réputation au point de terminaison d’authentification, envoyez une requête `POST` à `/api/v2/network-acls` :
@@ -66,7 +66,7 @@ Pour bloquer le trafic provenant d’adresses IP à faible réputation au point 
 ```
 
 <div id="combine-with-other-matchers">
-  ### Combiner avec d’autres critères
+  ### Combiner avec d’autres critères {#combine-with-other-matchers}
 </div>
 
 Vous pouvez combiner des listes de blocage sélectionnées avec des blocs CIDR, des ASN ou des critères de géolocalisation dans la même règle ACL :
@@ -95,7 +95,7 @@ Vous pouvez combiner des listes de blocage sélectionnées avec des blocs CIDR, 
 ```
 
 <div id="exclude-curated-blocklist-traffic">
-  ### Exclure le trafic des listes de blocage sélectionnées
+  ### Exclure le trafic des listes de blocage sélectionnées {#exclude-curated-blocklist-traffic}
 </div>
 
 Utilisez `not_match` pour autoriser explicitement le trafic qui ne figure pas dans une liste de blocage sélectionnée. Par exemple, vous pouvez autoriser le trafic qui n’est pas signalé comme étant de faible réputation lorsqu’une règle de blocage plus générale est en vigueur :
@@ -118,7 +118,7 @@ Utilisez `not_match` pour autoriser explicitement le trafic qui ne figure pas da
 ```
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Configurer les règles de la liste de contrôle d’accès du tenant](/docs/fr-ca/secure/tenant-access-control-list/configure-rules)

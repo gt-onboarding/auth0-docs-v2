@@ -17,7 +17,7 @@ Pour mettre en œuvre le flux Authorization Code avec clé de preuve pour l’é
 Après une connexion réussie, votre application aura accès au <Tooltip tip="jeton d’identité : information d’identification destinée au client lui-même, plutôt qu’à l’accès à une ressource." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=ID+token">jeton d’identité</Tooltip> et au <Tooltip tip="jeton d’identité : information d’identification destinée au client lui-même, plutôt qu’à l’accès à une ressource." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=access+token">jeton d’accès</Tooltip> de l’utilisateur. Le jeton d’identité contiendra les renseignements de base du profil utilisateur, et le jeton d’accès peut être utilisé pour appeler le endpoint Auth0 `/userinfo` ou vos propres API protégées. Pour en savoir plus sur les jetons d’identité, consultez [ID Tokens](/docs/fr-ca/secure/tokens/id-tokens). Pour en savoir plus sur les jetons d’accès, consultez [Access Tokens](/docs/fr-ca/secure/tokens/access-tokens).
 
 <div id="prerequisites">
-  ## Prérequis
+  ## Prérequis {#prerequisites}
 </div>
 
 Enregistrez votre application dans Auth0. Pour en savoir plus, consultez [Enregistrer des applications natives](/docs/fr-ca/get-started/auth0-overview/create-applications/native-apps) ou [Enregistrer des applications Web monopage](/docs/fr-ca/get-started/auth0-overview/create-applications/single-page-web-apps).
@@ -27,7 +27,7 @@ Enregistrez votre application dans Auth0. Pour en savoir plus, consultez [Enregi
 * Assurez-vous que les **types d’octroi** de votre application comprennent **Code d’autorisation**. Pour en savoir plus, consultez [Mettre à jour les types d’octroi](/docs/fr-ca/get-started/applications/update-grant-types).
 
 <div id="create-code-verifier">
-  ## Créer le `code_verifier`
+  ## Créer le `code_verifier` {#create-code-verifier}
 </div>
 
 Créez un `code_verifier`, c’est-à-dire une clé aléatoire encodée en Base64 générée de façon cryptographiquement sûre, qui sera ensuite envoyée à Auth0 pour demander des jetons.
@@ -35,7 +35,7 @@ Créez un `code_verifier`, c’est-à-dire une clé aléatoire encodée en Base6
 Pour en savoir plus sur l’algorithme servant à créer le `code_verifier`, consultez la section [4.1 Client Creates a Code Verifier](https://datatracker.ietf.org/doc/html/rfc7636#section-4.1) de la spécification <Tooltip tip="OAuth 2.0 : cadre d’autorisation qui définit les protocoles et les flux d’autorisation." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=OAuth">OAuth</Tooltip> clé de preuve pour l’échange de code.
 
 <div id="javascript-sample">
-  ### Exemple en Javascript
+  ### Exemple en Javascript {#javascript-sample}
 </div>
 
 ```javascript lines
@@ -51,7 +51,7 @@ var verifier = base64URLEncode(crypto.randomBytes(32));
 ```
 
 <div id="java-sample">
-  ### Exemple en Java
+  ### Exemple en Java {#java-sample}
 </div>
 
 ```javascript lines
@@ -66,7 +66,7 @@ String verifier = Base64.getUrlEncoder().withoutPadding().encodeToString(code);
 ```
 
 <div id="android-sample">
-  ### Exemple pour Android
+  ### Exemple pour Android {#android-sample}
 </div>
 
 ```javascript lines
@@ -81,7 +81,7 @@ String verifier = Base64.encodeToString(code, Base64.URL_SAFE | Base64.NO_WRAP |
 ```
 
 <div id="swift-5-sample">
-  ### Exemple en Swift 5
+  ### Exemple en Swift 5 {#swift-5-sample}
 </div>
 
 ```javascript lines
@@ -94,7 +94,7 @@ let verifier = Data(buffer).base64EncodedString()
 ```
 
 <div id="objective-c-sample">
-  ### Exemple en Objective-C
+  ### Exemple en Objective-C {#objective-c-sample}
 </div>
 
 ```objc lines
@@ -107,7 +107,7 @@ NSString *verifier = [[[[data base64EncodedStringWithOptions:0]
 ```
 
 <div id="create-code-challenge">
-  ## Créer un code challenge
+  ## Créer un code challenge {#create-code-challenge}
 </div>
 
 Générez un `code_challenge` à partir du `code_verifier`, qui sera envoyé à Auth0 pour demander un `authorization_code`.
@@ -115,7 +115,7 @@ Générez un `code_challenge` à partir du `code_verifier`, qui sera envoyé à 
 Pour en savoir plus sur la façon dont le `code_challenge` est généré à partir du `code_verifier`, consultez la section [4.2 Le client crée le code challenge](https://datatracker.ietf.org/doc/html/rfc7636#section-4.) de la spécification OAuth sur la clé de preuve pour l’échange de code.
 
 <div id="javascript-sample">
-  ### Exemple en Javascript
+  ### Exemple en Javascript {#javascript-sample-2}
 </div>
 
 ```javascript lines
@@ -127,7 +127,7 @@ function sha256(buffer) {
 var challenge = base64URLEncode(sha256(verifier));
 ```
 
-### Exemple Java
+### Exemple Java {#java-sample-2}
 
 ```java lines
 // Dépendance : Apache Commons Codec
@@ -142,7 +142,7 @@ String challenge = Base64.encodeBase64URLSafeString(digest);
 ```
 
 <div id="swift-5-sample">
-  ### Exemple en Swift 5
+  ### Exemple en Swift 5 {#swift-5-sample-2}
 </div>
 
 ```swift lines
@@ -163,7 +163,7 @@ let challenge = hash.base64EncodedString()
 ```
 
 <div id="objective-c-sample">
-  ### Exemple en Objective-C
+  ### Exemple en Objective-C {#objective-c-sample-2}
 </div>
 
 ```objc lines
@@ -181,7 +181,7 @@ NSString *challenge = [[[[hash base64EncodedStringWithOptions:0]
 ```
 
 <div id="authorize-user">
-  ## Autoriser l’utilisateur
+  ## Autoriser l’utilisateur {#authorize-user}
 </div>
 
 Demandez l’autorisation de l’utilisateur et redirigez-le vers votre application avec un `authorization_code`.
@@ -196,7 +196,7 @@ Une fois que vous avez créé le `code_verifier` et le `code_challenge`, vous de
 Pour autoriser l’utilisateur, votre application doit l’envoyer vers l’[URL d’autorisation](https://auth0.com/docs/api/authentication#authorization-code-grant-pkce-), en incluant le `code_challenge` que vous avez généré à l’étape précédente ainsi que la méthode utilisée pour générer le `code_challenge`.
 
 <div id="authorization-url-example">
-  ### Exemple d’URL d’autorisation
+  ### Exemple d’URL d’autorisation {#authorization-url-example}
 </div>
 
 export const codeExample1 = `https://{yourDomain}/authorize?
@@ -211,7 +211,7 @@ export const codeExample1 = `https://{yourDomain}/authorize?
 <AuthCodeBlock children={codeExample1} language="http" />
 
 <div id="parameters">
-  ### Paramètres
+  ### Paramètres {#parameters}
 </div>
 
 | Nom du paramètre        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -243,7 +243,7 @@ export const codeExample2 = `<a href="https://{yourDomain}/authorize?
 <AuthCodeBlock children={codeExample2} language="html" />
 
 <div id="response">
-  ### Réponse
+  ### Réponse {#response}
 </div>
 
 Si tout se passe bien, vous recevrez une réponse `HTTP 302`. Le code d’autorisation est inclus à la fin de l’URL :
@@ -254,7 +254,7 @@ Location: {yourCallbackUrl}?code={authorizationCode}&state=xyzABC123
 ```
 
 <div id="request-tokens">
-  ## Demander des jetons
+  ## Demander des jetons {#request-tokens}
 </div>
 
 Échangez votre `authorization_code` et votre `code_verifier` contre des jetons.
@@ -262,7 +262,7 @@ Location: {yourCallbackUrl}?code={authorizationCode}&state=xyzABC123
 Maintenant que vous avez un code d’autorisation, vous devez l’échanger contre des jetons. À l’aide du code d’autorisation (`code`) extrait à l’étape précédente, vous devrez envoyer une requête `POST` à l’[URL de jeton](https://auth0.com/docs/api/authentication#authorization-code-pkce-) en y joignant le `code_verifier`.
 
 <div id="post-to-token-url-example">
-  ### Exemple de requête POST à l’URL du jeton
+  ### Exemple de requête POST à l’URL du jeton {#post-to-token-url-example}
 </div>
 
 <AuthCodeGroup>
@@ -413,7 +413,7 @@ Maintenant que vous avez un code d’autorisation, vous devez l’échanger cont
 </AuthCodeGroup>
 
 <div id="parameters">
-  ### Paramètres
+  ### Paramètres {#parameters-2}
 </div>
 
 | Nom du paramètre | Description                                                                                                                                                                                                                                            |
@@ -425,7 +425,7 @@ Maintenant que vous avez un code d’autorisation, vous devez l’échanger cont
 | `redirect_uri`   | L’URL de rappel valide définie dans les paramètres de votre application. Elle doit correspondre exactement au `redirect_uri` transmis à l’URL d’autorisation à l’étape précédente de ce tutoriel. Notez que cette valeur doit être encodée dans l’URL. |
 
 <div id="response">
-  ### Réponse
+  ### Réponse {#response-2}
 </div>
 
 Si tout se passe bien, vous recevrez une réponse HTTP 200 dont le corps contient les valeurs `access_token`, `refresh_token`, `id_token` et `token_type` :
@@ -455,11 +455,11 @@ Si tout se passe bien, vous recevrez une réponse HTTP 200 dont le corps contien
 </Warning>
 
 <div id="use-cases">
-  ## Cas d’utilisation
+  ## Cas d’utilisation {#use-cases}
 </div>
 
 <div id="basic-authentication-request">
-  ### Requête d’authentification de base
+  ### Requête d’authentification de base {#basic-authentication-request}
 </div>
 
 Cet exemple montre la requête la plus simple que vous pouvez envoyer lorsque vous autorisez l’utilisateur à l’étape 1. Il affiche l’écran de connexion Auth0 et permet à l’utilisateur d’ouvrir une session avec n’importe laquelle de vos connexions configurées :
@@ -487,7 +487,7 @@ Maintenant, lorsque vous demandez des jetons, votre jeton d’identité contiend
 ```
 
 <div id="request-users-name-and-profile-picture">
-  ### Demander le nom et la photo de profil de l’utilisateur
+  ### Demander le nom et la photo de profil de l’utilisateur {#request-users-name-and-profile-picture}
 </div>
 
 En plus du processus habituel d’authentification de l’utilisateur, cet exemple montre comment demander des informations supplémentaires sur l’utilisateur, comme son nom et sa photo de profil.
@@ -520,7 +520,7 @@ Maintenant, lorsque vous demandez des jetons, votre jeton d’identité contiend
 ```
 
 <div id="request-user-log-in-with-github">
-  ### Demander à l’utilisateur de se connecter avec GitHub
+  ### Demander à l’utilisateur de se connecter avec GitHub {#request-user-log-in-with-github}
 </div>
 
 En plus du processus habituel d’authentification des utilisateurs, cet exemple montre comment les diriger directement vers un fournisseur d’identité social, comme GitHub. Pour que cet exemple fonctionne, vous devez accéder à [Auth0 Dashboard &gt; Authentication &gt; Social](https://manage.auth0.com/#/connections/social) et configurer la connexion appropriée. Obtenez le nom de la connexion dans l’onglet **Settings**.
@@ -556,7 +556,7 @@ Maintenant, lorsque vous demandez des jetons, votre jeton d’identité contiend
 ```
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Cadre d’autorisation OAuth 2.0](/docs/fr-ca/authenticate/protocols/oauth)

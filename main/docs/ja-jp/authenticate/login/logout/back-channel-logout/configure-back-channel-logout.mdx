@@ -13,7 +13,7 @@ title: OIDC バックチャネルログアウトを設定する
 </Card>
 
 <div id="availability">
-  ## 提供状況
+  ## 提供状況 {#availability}
 </div>
 
 OIDC バックチャネルログアウトは、Enterprise planをご利用のすべてのお客様に提供されています。ご利用のアプリケーションが要件を満たしているかどうかを確認するには、OIDC標準のメタデータエンドポイント `/.well-known/*` をご確認ください。
@@ -27,7 +27,7 @@ HTTP 200
 ```
 
 <div id="back-channel-logout-restrictions">
-  ## バックチャネルログアウトの制限
+  ## バックチャネルログアウトの制限 {#back-channel-logout-restrictions}
 </div>
 
 バックチャネルログアウト URL は公開されているエンドポイントに対して呼び出されるため、以下の制限に従う必要があります。
@@ -42,14 +42,14 @@ HTTP 200
 3. ドメイン名のない IP アドレスの使用は推奨されません。バックチャネルログアウトで使用する IP アドレスは、パブリック IP である必要があります。内部、予約済み、またはループバックの範囲にある IP アドレスは使用できません。
 
 <div id="configure-auth0">
-  ## Auth0 を設定する
+  ## Auth0 を設定する {#configure-auth0}
 </div>
 
 <Tooltip tip="Auth0 Dashboard: サービスを設定するための Auth0 の主要プロダクト。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip> または <Tooltip tip="Auth0 Dashboard: サービスを設定するための Auth0 の主要プロダクト。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Management+API">Management API</Tooltip> で、ログアウトトークンを受け取るアプリケーションを登録します。
 
 <Tabs>
   <Tab title="Auth0 Dashboard">
-    #### アプリケーションを登録する
+#### アプリケーションを登録する {#subscribe-applications}
 
     1. [**Auth0 Dashboard &gt; Applications**](https://manage.auth0.com/#/applications) に移動します。
     2. 登録するアプリケーションを選択します。
@@ -59,7 +59,7 @@ HTTP 200
 
        <Frame>![Auth0 Dashboard > Applications > Settings](/docs/images/cdy7uua7fh8z/19uQRkVswdmaO8gHTVTXCc/0564bfeda05bc7df90af9e8ee852047f/Screenshot_2024-11-05_at_13.31.54.png)</Frame>
 
-    #### アプリケーションの登録を解除する
+#### アプリケーションの登録を解除する {#unsubscribe-applications}
 
     アプリケーションの登録を解除すると、サービスは新しいログインの追跡とログアウトイベントの送信を停止します。登録解除後、サービスは保留中のログアウトイベントを破棄します。
 
@@ -78,7 +78,7 @@ HTTP 200
   </Tab>
 
   <Tab title="Management API">
-    #### アプリケーションを登録する
+#### アプリケーションを登録する {#subscribe-application}
 
     Management API でクライアントに `PATCH` リクエストを送信する際に、`oidc_logout` プロパティを追加します。
 
@@ -93,7 +93,7 @@ HTTP 200
       このリクエストには、他のアプリケーションパラメーターを含めることもできます。
     </Callout>
 
-    #### アプリケーションの登録を解除する
+#### アプリケーションの登録を解除する {#unsubscribe-application}
 
     `oidc_logout` パラメーターを削除します。
 
@@ -109,7 +109,7 @@ HTTP 200
 </Tabs>
 
 <div id="configure-your-application">
-  ## アプリケーションを設定する
+  ## アプリケーションを設定する {#configure-your-application}
 </div>
 
 Auth0 Dashboard または Management API でバックチャネルログアウトを設定したら、使用している技術やフレームワークに応じて、このサービスを利用するようアプリケーションを設定します。
@@ -132,7 +132,7 @@ Auth0 Dashboard または Management API でバックチャネルログアウト
    6. トークンを検証したら、受信した `sid` および/または `sub` の値に対応するセッションを取得し、終了します。アプリケーションセッションを終了する具体的な方法は、実装の詳細によって異なります。たとえば、このイベントをフロントエンドに通知する必要がある場合があります。
 
 <div id="oidc-back-channel-logout-request-example">
-  ## OIDC バックチャネルログアウト リクエストの例
+  ## OIDC バックチャネルログアウト リクエストの例 {#oidc-back-channel-logout-request-example}
 </div>
 
 コード化されたトークンのペイロード:
@@ -168,18 +168,18 @@ logout_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImdwY3ZFT0FPREE2T3pXRmw
 ```
 
 <div id="expected-responses">
-  ## 想定されるレスポンス
+  ## 想定されるレスポンス {#expected-responses}
 </div>
 
 * **HTTP 200**:  ユーザーが特定のアプリケーションからログアウトしたことを示します。
 * **HTTP 400**: 不正なリクエストを示します。リクエストを解釈できなかったか、トークンがバリデーションに失敗しました。Auth0 は問題をテナントログに記録しますが、この特定のセッションに対して追加のリクエストは行いません。
 
 <div id="troubleshoot-issues">
-  ## トラブルシューティング
+  ## トラブルシューティング {#troubleshoot-issues}
 </div>
 
 <div id="application-did-not-receive-the-logout-events">
-  ### アプリケーションがログアウトイベントを受信しなかった
+  ### アプリケーションがログアウトイベントを受信しなかった {#application-did-not-receive-the-logout-events}
 </div>
 
 ログアウトイベントの発生後に、アプリケーションがログアウトリクエストを受信しなかった場合。
@@ -196,13 +196,13 @@ logout_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImdwY3ZFT0FPREE2T3pXRmw
 6. 可能であれば、Web サーバーやアプリケーションのファイアウォールログで、ブロックされたリクエストがないか確認します。
 
 <div id="i-cant-find-oidc-back-channel-logout-tenant-logs">
-  #### OIDC バックチャネルログアウトのテナントログが見つかりません
+  #### OIDC バックチャネルログアウトのテナントログが見つかりません {#i-cant-find-oidc-back-channel-logout-tenant-logs}
 </div>
 
 この機能は、2023 年 10 月 3 日からすべてのテナントに順次リリースされます。なお、[テナントログのイベントコード](/docs/ja-jp/deploy-monitor/logs/log-event-type-codes)には、`oidc_backchannel_logout_succeeded` の `sslo` または `oidc_backchannel_logout_failed` の `fslo` が引き続き表示される場合があります。
 
 <div id="client-app-cannot-verify-the-received-logout-token">
-  ### クライアントアプリで受信したログアウトトークンを検証できない
+  ### クライアントアプリで受信したログアウトトークンを検証できない {#client-app-cannot-verify-the-received-logout-token}
 </div>
 
 トランザクションが引き続き 400 エラーで失敗する場合:
@@ -216,13 +216,13 @@ logout_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImdwY3ZFT0FPREE2T3pXRmw
    </Callout>
 
 <div id="response-timeout-errors">
-  ### 応答タイムアウトエラー
+  ### 応答タイムアウトエラー {#response-timeout-errors}
 </div>
 
 Auth0 は、アプリケーションの OIDC バックチャネルログアウト URL からの応答を 5 秒間待機します。5 秒を過ぎると、レスポンスの説明が空の &quot;Failed OIDC バックチャネルログアウト request&quot; がテナントログに記録されます。
 
 <div id="learn-more">
-  ## 詳しくはこちら
+  ## 詳しくはこちら {#learn-more}
 </div>
 
 * [OIDC エンドポイントを使用して Auth0 からユーザーをログアウトする](/docs/ja-jp/authenticate/login/logout/log-users-out-of-auth0)

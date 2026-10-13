@@ -12,7 +12,7 @@ Auth0 には、アカウントリンクやユーザープロファイルの暗�
 </Callout>
 
 <div id="restrict-user-profile-information">
-  ## ユーザープロファイル情報を制限する
+  ## ユーザープロファイル情報を制限する {#restrict-user-profile-information}
 </div>
 
 Auth0のユーザープロファイルに含まれる個人情報を最小限に抑えるには、次の方法があります。
@@ -23,13 +23,13 @@ Auth0のユーザープロファイルに含まれる個人情報を最小限に
 * Auth0データベースに保持したくないユーザー属性をdenylistに追加する
 
 <div id="encrypt-user-profile-information">
-  ## ユーザープロファイル情報を暗号化する
+  ## ユーザープロファイル情報を暗号化する {#encrypt-user-profile-information}
 </div>
 
 ユーザー情報は、ユーザープロファイルに保存する前に暗号化できます。データをメタデータフィールドに保存する前であれば、任意の暗号化方式を使用できます。ユーザーが機密情報を設定する際は、ユーザーを更新 エンドポイントを呼び出します。
 
 <div id="use-account-linking">
-  ## アカウントリンクを使用する
+  ## アカウントリンクを使用する {#use-account-linking}
 </div>
 
 ユーザーが接続を使ってアプリケーションにログインするたびに、まだ存在しなければユーザープロファイルが作成されます。これは接続ごとに行われる点に注意してください。
@@ -50,19 +50,19 @@ Auth0のユーザープロファイルに含まれる個人情報を最小限に
 * **提案型の** アカウントリンク: この場合も、同じ確認済みメールアドレスを持つアカウントをリンクするルールを設定します。ただし、リンクを自動的に完了するのではなく、まずアプリがユーザーに自分のアカウントをリンクするよう促します。
 
 <div id="export-logs">
-  ## ログのエクスポート
+  ## ログのエクスポート {#export-logs}
 </div>
 
 Auth0のログをエクスポートして自分で保存することも、[Auth0 Marketplace](https://marketplace.auth0.com/features/log-streaming) にある外部ログサービスへ自動的に送信することもできます。この機能は、データ保持やログ分析の要件に対応するのに役立ちます。
 
 <div id="export-logs-with-the-api">
-  ### API を使用したログのエクスポート
+  ### API を使用したログのエクスポート {#export-logs-with-the-api}
 </div>
 
 <Tooltip tip="Management API: お客様が管理タスクを実行できるようにする製品です。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Management+API">Management API</Tooltip> を使用すると、ログをエクスポートして自身で保存できます。利用可能なエンドポイントは 2 つあり、それぞれ少し異なる情報を提供します。
 
 <div id="search-all-logs">
-  #### すべてのログを検索する
+  #### すべてのログを検索する {#search-all-logs}
 </div>
 
 Search Log Events エンドポイントは、指定した検索条件に一致するログエントリを取得します。検索条件を指定しない場合は、利用可能なすべてのログエントリの一覧が返されます。
@@ -74,7 +74,7 @@ API にアクセスするには、Management APIv2 トークンが必要です�
 このリクエスト例では、ログイン成功時のすべてのログを取得します (ログイン成功のイベント略語は `s` です) 。各ログエントリについて取得するフィールドは、**date**、**description**、**client&#95;id**、**log&#95;id** です。
 
 <div id="get-a-single-log-entry">
-  #### 1 件のログエントリを取得する
+  #### 1 件のログエントリを取得する {#get-a-single-log-entry}
 </div>
 
 `Get a Log Event by ID` エンドポイントは、指定した ID に対応するログエントリを取得します。
@@ -82,13 +82,13 @@ API にアクセスするには、Management APIv2 トークンが必要です�
 このサンプルリクエストは、ID `90020180129170850881585554625888895190928456277777449010` を持つ 1 件のログエントリを取得します。
 
 <div id="export-to-an-external-service">
-  ### 外部サービスにエクスポート
+  ### 外部サービスにエクスポート {#export-to-an-external-service}
 </div>
 
 Auth0 Marketplace で[ログストリーミング ソリューション](https://marketplace.auth0.com/features/log-streaming)のいずれかをインストールして設定すると、ログを Sumo Logic や Loggly などの別のプロバイダーに自動的にエクスポートできます。利用可能なプロバイダーの一覧と各プロバイダーの設定手順の詳細については、「Auth0 のログを外部サービスにエクスポートする」を参照してください。
 
 <div id="keep-sensitive-information-from-logs">
-  ## ログに機微な情報を残さない
+  ## ログに機微な情報を残さない {#keep-sensitive-information-from-logs}
 </div>
 
 Auth0 のログファイルに記録される可能性がある URL 内の機微な情報は、できるだけ減らすようにしてください。たとえば、ドメイン名には `cancer-treatments` ではなく、`health-site` などを使用することを検討してください。
@@ -100,7 +100,7 @@ Auth0 のログファイルに記録される可能性がある URL 内の機微
 * ソーシャルプロバイダーから収集したいデータを明確にし、ユーザーのログイン時に取得されるデータの利用について、必要に応じてソーシャルログインに関する条件をソーシャルプロバイダーと調整します。
 
 <div id="learn-more">
-  ## 詳しくはこちら
+  ## 詳しくはこちら {#learn-more}
 </div>
 
 * [GDPR: 同意の条件](/docs/ja-jp/secure/data-privacy-and-compliance/gdpr/gdpr-conditions-for-consent)

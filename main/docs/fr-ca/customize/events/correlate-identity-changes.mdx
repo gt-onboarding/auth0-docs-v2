@@ -6,7 +6,7 @@ title: Corréler les changements d’identité avec des systèmes externes
 Avec Event Streams, vous pouvez réagir aux changements d’identité dans Auth0 et transmettre ces changements à des systèmes externes, comme des plateformes CRM, des services de facturation ou des outils de gestion des licences SaaS. Au lieu d’interroger la Management API pour obtenir des mises à jour, votre intégration reçoit les événements en temps réel et les corrèle avec les enregistrements de vos systèmes en aval.
 
 <div id="why-correlate-identity-changes">
-  ## Pourquoi corréler les changements d’identité
+  ## Pourquoi corréler les changements d’identité {#why-correlate-identity-changes}
 </div>
 
 Corréler les événements d’identité d’Auth0 avec des systèmes externes est utile lorsque vous devez :
@@ -17,7 +17,7 @@ Corréler les événements d’identité d’Auth0 avec des systèmes externes e
 * Maintenir les segments d’utilisateurs dans les plateformes marketing en phase avec les données d’identité à jour.
 
 <div id="how-it-works">
-  ## Fonctionnement
+  ## Fonctionnement {#how-it-works}
 </div>
 
 1. Auth0 publie un événement lorsqu’un profil utilisateur est créé, mis à jour ou supprimé.
@@ -33,7 +33,7 @@ Les types d’événements suivants sont pertinents pour la corrélation des don
 | `user.deleted`   | Un profil utilisateur est supprimé d’Auth0.        |
 
 <div id="prerequisites">
-  ## Prérequis
+  ## Prérequis {#prerequisites}
 </div>
 
 Avant de commencer, assurez-vous d’avoir :
@@ -43,13 +43,13 @@ Avant de commencer, assurez-vous d’avoir :
 * Des identifiants d’API pour le système externe que vous prévoyez de mettre à jour (par exemple, une clé API de CRM ou un jeton OAuth).
 
 <div id="implement-identity-correlation">
-  ## Mettre en place la corrélation des identités
+  ## Mettre en place la corrélation des identités {#implement-identity-correlation}
 </div>
 
 Les sections ci-dessous montrent comment corréler des événements Auth0 avec une plateforme CRM. Les fonctions de traitement sont les mêmes, quelle que soit la destination de votre Event Stream. La section [Acheminer les événements par type](#route-events-by-type) montre comment acheminer les événements vers des destinations webhook et Auth0 Action.
 
 <div id="map-auth0-users-to-external-records">
-  ### Mapper les utilisateurs Auth0 à des enregistrements externes
+  ### Mapper les utilisateurs Auth0 à des enregistrements externes {#map-auth0-users-to-external-records}
 </div>
 
 La plupart des systèmes externes identifient les contacts à l’aide de leur adresse courriel ou d’un ID externe stocké dans le `app_metadata` d’Auth0. Définissez une fonction de recherche qui retrouve l’enregistrement externe correspondant à un utilisateur Auth0 donné.
@@ -74,7 +74,7 @@ async function findCrmContact(user) {
 ```
 
 <div id="handle-usercreated">
-  ### Gérer user.created
+  ### Gérer user.created {#handle-usercreated}
 </div>
 
 Lorsqu’un nouvel utilisateur est créé dans Auth0, créez le contact correspondant dans votre système externe.
@@ -102,7 +102,7 @@ async function handleUserCreated(user) {
 ```
 
 <div id="handle-userupdated">
-  ### Traiter user.updated
+  ### Traiter user.updated {#handle-userupdated}
 </div>
 
 Lorsqu’un profil utilisateur est modifié, mettez à jour le contact CRM correspondant avec les nouvelles données.
@@ -132,7 +132,7 @@ async function handleUserUpdated(user) {
 ```
 
 <div id="handle-userdeleted">
-  ### Traiter user.deleted
+  ### Traiter user.deleted {#handle-userdeleted}
 </div>
 
 Lorsqu’un utilisateur est supprimé d’Auth0, désactivez l’enregistrement correspondant dans votre système externe ou marquez-le à l’aide d’un indicateur.
@@ -157,7 +157,7 @@ async function handleUserDeleted(user) {
 ```
 
 <div id="route-events-by-type">
-  ### Acheminer les événements par type
+  ### Acheminer les événements par type {#route-events-by-type}
 </div>
 
 Utilisez un routeur principal pour acheminer chaque événement vers le gestionnaire approprié. Les exemples ci-dessous montrent comment acheminer des événements vers des destinations webhook et Auth0 Action.
@@ -222,7 +222,7 @@ Utilisez un routeur principal pour acheminer chaque événement vers le gestionn
 </Tabs>
 
 <div id="handle-edge-cases">
-  ## Gérer les cas particuliers
+  ## Gérer les cas particuliers {#handle-edge-cases}
 </div>
 
 Lors de la corrélation des données d&#39;identité entre les systèmes, tenez compte des éléments suivants :
@@ -232,7 +232,7 @@ Lors de la corrélation des données d&#39;identité entre les systèmes, tenez 
 * **Données partielles.** Tous les événements `user.updated` n&#39;incluent pas tous les champs du profil. N&#39;appliquez que les champs présents dans le payload de l&#39;événement afin d&#39;éviter d&#39;écraser des données par des valeurs vides.
 
 <div id="example-correlate-with-hubspot-crm">
-  ## Exemple : Corréler avec HubSpot CRM
+  ## Exemple : Corréler avec HubSpot CRM {#example-correlate-with-hubspot-crm}
 </div>
 
 L’Auth0 Action suivante illustre un gestionnaire complet de corrélation qui crée, met à jour et supprime des contacts dans HubSpot CRM. L’Action utilise l’API HubSpot Contacts pour rechercher des contacts existants par courriel et effectuer l’opération appropriée.
@@ -336,7 +336,7 @@ exports.onExecuteEventStream = async (event, api) => {
 Pour stocker la clé API HubSpot en toute sécurité, ajoutez un Secret nommé `HUBSPOT_TOKEN` dans l’éditeur d’actions. Pour en savoir plus, consultez [Secrets d’Actions](/docs/fr-ca/customize/actions/write-your-first-action#add-a-secret).
 
 <div id="verify-correlation">
-  ## Vérifier la corrélation
+  ## Vérifier la corrélation {#verify-correlation}
 </div>
 
 Après avoir déployé votre gestionnaire, créez ou mettez à jour un utilisateur de test dans Auth0, puis confirmez ce qui suit :
@@ -348,7 +348,7 @@ Après avoir déployé votre gestionnaire, créez ou mettez à jour un utilisate
 Pour en savoir plus sur les tests d’Event Streams, consultez [Event Testing, Observability, and Failure Recovery](/docs/fr-ca/customize/events/event-testing-observability-and-failure-recovery).
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Catalogue d’événements](/docs/fr-ca/events)

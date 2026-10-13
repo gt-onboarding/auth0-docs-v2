@@ -19,7 +19,7 @@ Change Email スクリプトは、<Tooltip tip="Auth0 Dashboard: サービスを
 </Warning>
 
 <div id="changeemail-function">
-  ## ChangeEmail 関数
+  ## ChangeEmail 関数 {#changeemail-function}
 </div>
 
 `changeEmail` 関数では、次の処理を行う必要があります。
@@ -28,7 +28,7 @@ Change Email スクリプトは、<Tooltip tip="Auth0 Dashboard: サービスを
 * 処理が失敗した場合、またはエラーが発生した場合は、エラーを返す。
 
 <div id="definition">
-  ### 定義
+  ### 定義 {#definition}
 </div>
 
 `changeEmail`関数は4つのパラメータを受け取り、`callback`コールバック関数を返します。
@@ -76,13 +76,13 @@ function (email, newEmail, verified, callback) {
 ```
 
 <div id="callback-function">
-  ## コールバック関数
+  ## コールバック関数 {#callback-function}
 </div>
 
 `callback` 関数は 2 つのパラメータを受け取り、関数を返します。
 
 <div id="definition">
-  ### 定義
+  ### 定義 {#definition-2}
 </div>
 
 ```js
@@ -95,7 +95,7 @@ callback(error, operationResult): function
 | `operationResult` | Boolean | 任意 | メールアドレスの変更処理の実行結果を示します。 |
 
 <div id="return-a-success">
-  ### 成功を返す
+  ### 成功を返す {#return-a-success}
 </div>
 
 メールアドレスの変更処理が成功した場合は、`callback` コールバック関数を返し、`error` パラメーターに `null`、`operationResult` パラメーターに `true` を渡します。
@@ -105,7 +105,7 @@ return callback(null, true);
 ```
 
 <div id="return-a-failure">
-  ### 失敗を返す
+  ### 失敗を返す {#return-a-failure}
 </div>
 
 メールアドレスの変更処理が失敗した場合は、`callback` コールバック関数を返し、`error` パラメーターには `null`、`operationResult` パラメーターには `false` を渡します。
@@ -115,7 +115,7 @@ return callback(null, false);
 ```
 
 <div id="return-an-error">
-  ### エラーを返す
+  ### エラーを返す {#return-an-error}
 </div>
 
 エラーが発生した場合は、`callback` コールバック関数を返し、関連するエラー情報を `error` パラメータに渡します。

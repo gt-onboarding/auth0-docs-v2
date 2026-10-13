@@ -6,7 +6,7 @@ title: ACUL 開発ワークフロー
 ACUL の画面開発には、主に 2 つの方法があります。ローカル開発と、ライブテナントでの連携テストです。 
 
 <div id="local-development">
-  ## ローカル開発
+  ## ローカル開発 {#local-development}
 </div>
 
 [Auth0 CLI](https://github.com/auth0/auth0-cli/) の `auth0 acul dev` コマンドを使って、ACUL の画面をローカルでカスタマイズできます。[Universal Login Context Inspector](https://github.com/auth0/ul-context-inspector) を使えば、遅延やバックエンドの依存関係なしに、ACUL の画面をすばやく繰り返し調整できます。
@@ -22,7 +22,7 @@ Universal Login Context Inspector は、テナント固有の設定に合わせ�
   * **Download JSON** アイコンを選択すると、選択した画面のコンテキストデータをダウンロードできます。 
 
 <div id="live-tenant-integration-testing">
-  ## ライブテナントでの連携テスト
+  ## ライブテナントでの連携テスト {#live-tenant-integration-testing}
 </div>
 
 Auth0 CLI コマンド `auth0 acul dev --connected` を使用してライブテナント連携を行うと、カスタム画面 UI のエンドツーエンドテストを実施し、Auth0 テナントとの連携を検証できます。

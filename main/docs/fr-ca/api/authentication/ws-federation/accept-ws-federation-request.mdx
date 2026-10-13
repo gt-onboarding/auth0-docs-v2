@@ -4,7 +4,7 @@ description: "Accepter une requête WS-Federation pour amorcer un processus de c
 ---
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `GET /wsfed/{clientId}`
@@ -12,7 +12,7 @@ description: "Accepter une requête WS-Federation pour amorcer un processus de c
 Ce point de terminaison accepte une requête WS-Federation pour amorcer une connexion.
 
 <div id="remarks">
-  ### Remarques
+  ### Remarques {#remarks}
 </div>
 
 * Le paramètre `wtrealm` doit être dans l’un de ces formats :
@@ -21,13 +21,13 @@ Ce point de terminaison accepte une requête WS-Federation pour amorcer une conn
 * Le paramètre `whr` est mappé à la connexion comme suit : `urn:CONNECTION_NAME`. Par exemple, `urn:google-oauth2` indique une connexion avec Google. Si aucun paramètre `whr` n’est inclus, l’utilisateur sera redirigé vers la [Auth0 Login Page](https://auth0.com/docs/login_page).
 
 <div id="learn-more">
-  ### En savoir plus
+  ### En savoir plus {#learn-more}
 </div>
 
 * [WS-Federation](https://auth0.com/docs/authenticate/protocols/ws-fed-protocol)
 
 <div id="path-parameters">
-  ## Paramètres du chemin
+  ## Paramètres du chemin {#path-parameters}
 </div>
 
 <ParamField path="client-id" type="string" required>
@@ -35,7 +35,7 @@ Ce point de terminaison accepte une requête WS-Federation pour amorcer une conn
 </ParamField>
 
 <div id="query-parameters">
-  ## Paramètres de requête
+  ## Paramètres de requête {#query-parameters}
 </div>
 
 <ParamField query="wtrealm" type="string">
@@ -55,7 +55,7 @@ Ce point de terminaison accepte une requête WS-Federation pour amorcer une conn
 </ParamField>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                                  |

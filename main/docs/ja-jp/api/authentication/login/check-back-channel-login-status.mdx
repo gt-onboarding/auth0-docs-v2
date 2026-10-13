@@ -4,7 +4,7 @@ description: "保留中の Back-Channel Login リクエストのステータス�
 ---
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `POST /oauth/token`
@@ -15,7 +15,7 @@ Back-Channel Login フローの状態を確認するには、次の情報を指�
 * `urn:openid:params:grant-type:ciba` グラントタイプ
 
 <div id="response-body">
-  ### レスポンスボディ
+  ### レスポンスボディ {#response-body}
 </div>
 
 認可対象のユーザーがまだリクエストを承認または拒否していない場合は、次のようなレスポンスが返されます。
@@ -61,7 +61,7 @@ Back-Channel Login フローの状態を確認するには、次の情報を指�
 `auth_req_id` を ID トークンまたはアクセストークンと交換すると、その `auth_req_id` は以後使用できなくなります。
 
 <div id="remarks">
-  ### 備考
+  ### 備考 {#remarks}
 </div>
 
 リクエストには、アプリケーション認証用の任意のパラメータを含めます。
@@ -72,7 +72,7 @@ Back-Channel Login フローの状態を確認するには、次の情報を指�
 * mTLS。`client_id` パラメータに加え、`client-certificate` ヘッダーと `client-certificate-ca-verified` ヘッダーが必要です。
 
 <div id="body-parameters">
-  ## Body Parameters
+  ## Body Parameters {#body-parameters}
 </div>
 
 <div className="prose-sm prose-gray dark:prose-invert">
@@ -92,7 +92,7 @@ Back-Channel Login フローの状態を確認するには、次の情報を指�
 </ParamField>
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | Status | Description         |

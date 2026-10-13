@@ -31,7 +31,7 @@ Vous pouvez lire, mettre à jour et supprimer des métadonnées à l’aide de [
 ```
 
 <div id="read-metadata">
-  ## Lire les métadonnées
+  ## Lire les métadonnées {#read-metadata}
 </div>
 
 Vous pouvez lire les métadonnées à l’aide de règles et de la <Tooltip tip="Management API : Un produit qui permet aux clients d’effectuer des tâches administratives." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Management+API">Management API</Tooltip>. Vous pouvez aussi rechercher des renseignements liés au profil dans `user_metadata`, comme :
@@ -72,7 +72,7 @@ Tout fragment JSON valide peut être utilisé comme métadonnées, mais notez qu
 Pour lire les métadonnées disponibles, vous devrez accéder à la propriété utilisateur appropriée.
 
 <div id="read-app-metadata">
-  ### Lire les métadonnées de l’application
+  ### Lire les métadonnées de l’application {#read-app-metadata}
 </div>
 
 Vous pouvez prendre une décision en fonction des rôles de l’utilisateur :
@@ -88,7 +88,7 @@ function(user, context, callback){
 ```
 
 <div id="read-user-metadata">
-  ### Lire les métadonnées utilisateur
+  ### Lire les métadonnées utilisateur {#read-user-metadata}
 </div>
 
 Vous pouvez prendre des décisions en fonction de préférences précises, comme une préférence de couleur :
@@ -104,7 +104,7 @@ function(user, context, callback){
 ```
 
 <div id="read-application-metadata-clientmetadata">
-  ### Lire les métadonnées de l’application (clientMetadata)
+  ### Lire les métadonnées de l’application (clientMetadata) {#read-application-metadata-clientmetadata}
 </div>
 
 Les métadonnées de l’application (`clientMetadata`) constituent une propriété facultative de premier niveau de l’objet `context`. Les applications existantes n’auront aucune valeur associée à cette propriété.
@@ -120,7 +120,7 @@ function(user, context, callback){
 ```
 
 <div id="update-metadata">
-  ## Mettre à jour les métadonnées
+  ## Mettre à jour les métadonnées {#update-metadata}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -128,7 +128,7 @@ function(user, context, callback){
 </Callout>
 
 <div id="update-app-metadata">
-  ### Mettre à jour les métadonnées de l’application
+  ### Mettre à jour les métadonnées de l’application {#update-app-metadata}
 </div>
 
 Pour ajouter un rôle administratif à l’utilisateur :
@@ -169,7 +169,7 @@ Voici la représentation JSON suivante du détail du profil utilisateur :
 ```
 
 <div id="update-user-metadata">
-  ### Mettre à jour les métadonnées de l’utilisateur
+  ### Mettre à jour les métadonnées de l’utilisateur {#update-user-metadata}
 </div>
 
 Pour ajouter la préférence `fontSize` de l’utilisateur à son profil :
@@ -211,7 +211,7 @@ On obtient la représentation JSON suivante du détail du profil utilisateur :
 ```
 
 <div id="update-app-and-user-metadata-simultaneously">
-  ### Mettre à jour simultanément les métadonnées de l’application et de l’utilisateur
+  ### Mettre à jour simultanément les métadonnées de l’application et de l’utilisateur {#update-app-and-user-metadata-simultaneously}
 </div>
 
 Pour réduire le temps de traitement de la règle, vous pouvez mettre à jour `app_metadata` et `user_metadata` dans la même règle :
@@ -267,17 +267,17 @@ On obtient la représentation JSON suivante des détails du profil utilisateur 
 ```
 
 <div id="delete-metadata">
-  ## Supprimer les métadonnées
+  ## Supprimer les métadonnées {#delete-metadata}
 </div>
 
 <div id="delete-app-metadata-properties-and-values">
-  ### Supprimer les propriétés et les valeurs des métadonnées d’application
+  ### Supprimer les propriétés et les valeurs des métadonnées d’application {#delete-app-metadata-properties-and-values}
 </div>
 
 Pour supprimer une propriété, définissez sa valeur sur `null`.
 
 <div id="delete-users-roles-example">
-  #### Exemple de suppression des rôles d’un utilisateur
+  #### Exemple de suppression des rôles d’un utilisateur {#delete-users-roles-example}
 </div>
 
 Pour supprimer les rôles d’un utilisateur, utilisez la règle suivante :
@@ -315,7 +315,7 @@ On obtient la représentation JSON suivante du profil de l’utilisateur :
 ```
 
 <div id="delete-single-property-value-example">
-  #### Exemple de suppression d’une seule valeur de propriété
+  #### Exemple de suppression d’une seule valeur de propriété {#delete-single-property-value-example}
 </div>
 
 Pour supprimer une seule valeur d’une propriété, retirez simplement cette valeur. Par exemple, pour retirer le rôle `writer` du profil de l’utilisateur :
@@ -363,7 +363,7 @@ Cela donne la représentation JSON suivante du profil utilisateur :
 Notez que la propriété `roles` existe toujours, mais ne contient aucune valeur.
 
 <div id="delete-user-metadata-properties-and-values">
-  ### Supprimer les propriétés et les valeurs des métadonnées utilisateur
+  ### Supprimer les propriétés et les valeurs des métadonnées utilisateur {#delete-user-metadata-properties-and-values}
 </div>
 
 Pour supprimer la préférence de couleur de l’utilisateur :
@@ -402,7 +402,7 @@ On obtient la représentation JSON suivante du détail du profil utilisateur :
 ```
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Utiliser la Management API à partir des Rules](/docs/fr-ca/customize/rules/use-management-api)

@@ -13,13 +13,13 @@ Les [Universal Components pour iOS](https://github.com/auth0/ui-components-ios) 
 Universal Components comprennent un thème Auth0 par défaut. Vous pouvez fournir votre propre thème afin qu’il corresponde à votre image de marque.
 
 <div id="how-theming-works">
-  ## Fonctionnement de la personnalisation visuelle
+  ## Fonctionnement de la personnalisation visuelle {#how-theming-works}
 </div>
 
 Universal Components pour iOS utilise un thème encapsulé dans une enveloppe de propriété `@Environment` de SwiftUI. Appliquez le modificateur `.auth0Theme(_:)` à n’importe quelle vue SwiftUI. Chaque composant enfant affiche automatiquement l’élément `Auth0Theme` injecté.
 
 <div id="zero-configuration">
-  ### Aucune configuration
+  ### Aucune configuration {#zero-configuration}
 </div>
 
 Si vous ne configurez pas de thème, Universal Components pour iOS affiche le thème par défaut d’Auth0. L’exemple suivant affiche le composant `MyAccountAuthMethodsView` sans aucune personnalisation :
@@ -40,7 +40,7 @@ struct ContentView: View {
 </Callout>
 
 <div id="override-a-subset-of-tokens">
-  ### Remplacer un sous-ensemble de jetons
+  ### Remplacer un sous-ensemble de jetons {#override-a-subset-of-tokens}
 </div>
 
 Vous pouvez remplacer certains jetons, tandis qu’Universal Components pour iOS affiche tous les autres à l’aide du thème Auth0 par défaut.
@@ -89,7 +89,7 @@ Auth0Theme(
 ```
 
 <div id="configure-a-full-brand-theme">
-  ### Configurer un thème d’image de marque complet
+  ### Configurer un thème d’image de marque complet {#configure-a-full-brand-theme}
 </div>
 
 Créez votre propre thème d’image de marque qui définit les propriétés des trois catégories de couleurs, puis intégrez-les dans un conteneur `Auth0ColorTokens` :
@@ -120,7 +120,7 @@ MyAccountAuthMethodsView()
 ```
 
 <div id="read-the-theme-in-your-own-views">
-  ### Utiliser le thème dans vos propres vues
+  ### Utiliser le thème dans vos propres vues {#read-the-theme-in-your-own-views}
 </div>
 
 Accédez à l’enveloppe de propriété `@Environment(\.auth0Theme)` pour appliquer les mêmes jetons dans n’importe quelle vue Swift :
@@ -146,7 +146,7 @@ struct MyCustomStep: View {
 ```
 
 <div id="token-reference">
-  ### Référence des jetons
+  ### Référence des jetons {#token-reference}
 </div>
 
 <Accordion title="Couleurs — Auth0ColorTokens">
@@ -266,7 +266,7 @@ struct MyCustomStep: View {
 </Accordion>
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 <CardGroup cols={2}>

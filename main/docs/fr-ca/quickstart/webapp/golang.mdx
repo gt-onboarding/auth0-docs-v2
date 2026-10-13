@@ -22,7 +22,7 @@ import {HowToSchema} from "/snippets/fr-ca/HowToSchema.jsx";
 </Note>
 
 <div id="get-started">
-  ## Pour commencer
+  ## Pour commencer {#get-started}
 </div>
 
 Ce guide de démarrage rapide montre comment ajouter l’authentification Auth0 à une application web en Go. Vous créerez une application côté serveur avec des fonctionnalités de connexion, de logout et de profil utilisateur à l’aide du SDK [go-auth0](https://github.com/auth0/go-auth0) et de la bibliothèque standard `net/http` de Go.
@@ -146,7 +146,7 @@ SESSION_SECRET=a-long-random-secret-key-for-cookie-encryption`;
         4. Passez à l’onglet **Settings** sur la page Application Details
         5. Prenez en note les valeurs **Domain**, **Client ID** et **Client Secret**
 
-        ### Configurer les callback URLs
+### Configurer les callback URLs {#configure-callback-urls}
 
         Une callback URL est l’URL de votre application vers laquelle Auth0 redirige l’utilisateur après son authentification. Si elle n’est pas définie, les utilisateurs ne seront pas redirigés vers votre application après la connexion.
 
@@ -156,7 +156,7 @@ SESSION_SECRET=a-long-random-secret-key-for-cookie-encryption`;
         http://localhost:3000/callback
         ```
 
-        ### Configurer les Logout URLs
+### Configurer les Logout URLs {#configure-logout-urls}
 
         Une logout URL est l’URL de votre application vers laquelle Auth0 peut rediriger l’utilisateur une fois sa session terminée. Si elle n’est pas définie, les utilisateurs ne pourront pas se déconnecter de votre application et recevront une erreur.
 
@@ -166,7 +166,7 @@ SESSION_SECRET=a-long-random-secret-key-for-cookie-encryption`;
         http://localhost:3000
         ```
 
-        ### Créez votre fichier d’environnement
+### Créez votre fichier d’environnement {#create-your-environment-file}
 
         Créez un fichier `.env` dans le répertoire racine de votre projet avec les valeurs du Dashboard :
 
@@ -743,7 +743,7 @@ SESSION_SECRET=a-long-random-secret-key-for-cookie-encryption`;
 ***
 
 <div id="advanced-usage">
-  ## Utilisation avancée
+  ## Utilisation avancée {#advanced-usage}
 </div>
 
 <Accordion title="Protéger des routes à l’aide d’un middleware">
@@ -833,12 +833,12 @@ SESSION_SECRET=a-long-random-secret-key-for-cookie-encryption`;
 ***
 
 <div id="troubleshooting">
-  ## Dépannage
+  ## Dépannage {#troubleshooting}
 </div>
 
 <AccordionGroup>
   <Accordion title="Problèmes courants et solutions">
-    ### &quot;Échec de l’échange du code d’autorisation contre un jeton&quot;
+### &quot;Échec de l’échange du code d’autorisation contre un jeton&quot; {#failed-to-exchange-authorization-code-for-token}
 
     **Problème :** Le handler de rappel ne peut pas échanger le code d’autorisation.
 
@@ -848,7 +848,7 @@ SESSION_SECRET=a-long-random-secret-key-for-cookie-encryption`;
     2. Assurez-vous que `AUTH0_CALLBACK_URL` correspond exactement aux **URL de rappel autorisées** dans les paramètres de votre application Auth0
     3. Vérifiez que le code d’autorisation n’a pas expiré (les codes sont à usage unique et de courte durée)
 
-    ### &quot;Échec de la récupération des informations utilisateur&quot;
+### &quot;Échec de la récupération des informations utilisateur&quot; {#failed-to-get-user-info}
 
     **Problème :** Le endpoint `/userinfo` renvoie une erreur.
 
@@ -858,7 +858,7 @@ SESSION_SECRET=a-long-random-secret-key-for-cookie-encryption`;
     2. Vérifiez que le jeton d’accès est valide et n’a pas expiré
     3. Vérifiez la connectivité réseau vers votre domaine Auth0
 
-    ### &quot;Paramètre state invalide&quot;
+### &quot;Paramètre state invalide&quot; {#invalid-state-parameter}
 
     **Problème :** Le paramètre state dans le rappel ne correspond pas à la session.
 
@@ -868,7 +868,7 @@ SESSION_SECRET=a-long-random-secret-key-for-cookie-encryption`;
     2. Vérifiez que le secret du magasin de sessions n’a pas changé entre les requêtes
     3. Vérifiez que vous n’utilisez pas plusieurs onglets de navigateur pendant le flux de connexion
 
-    ### Les utilisateurs ne peuvent pas se déconnecter
+### Les utilisateurs ne peuvent pas se déconnecter {#users-cant-log-out}
 
     **Problème :** Après avoir cliqué sur logout, les utilisateurs voient une page d’erreur Auth0.
 
@@ -878,7 +878,7 @@ SESSION_SECRET=a-long-random-secret-key-for-cookie-encryption`;
     2. Assurez-vous que le paramètre `client_id` correspond à l’ID client de votre application
     3. Vérifiez que l’URL `returnTo` correspond exactement à l’une des URL de déconnexion autorisées
 
-    ### Les données de session ne sont pas enregistrées
+### Les données de session ne sont pas enregistrées {#session-data-not-persisting}
 
     **Problème :** Les données du profil utilisateur disparaissent entre les requêtes.
 
@@ -893,7 +893,7 @@ SESSION_SECRET=a-long-random-secret-key-for-cookie-encryption`;
 ***
 
 <div id="next-steps">
-  ## Prochaines étapes
+  ## Prochaines étapes {#next-steps}
 </div>
 
 Maintenant que l’authentification fonctionne, pensez aussi à explorer :
@@ -907,7 +907,7 @@ Maintenant que l’authentification fonctionne, pensez aussi à explorer :
 ***
 
 <div id="resources">
-  ## Ressources
+  ## Ressources {#resources}
 </div>
 
 * **[go-auth0 GitHub](https://github.com/auth0/go-auth0)** — Code source et documentation

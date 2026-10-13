@@ -10,13 +10,13 @@ Login by Auth0 は、プラグインの Setup Wizard を使用して設定する
 </Callout>
 
 <div id="auth0-configuration">
-  ## Auth0 の設定
+  ## Auth0 の設定 {#auth0-configuration}
 </div>
 
 Auth0 テナントは、WordPress サイトからのログインリクエストを受け付け、少なくとも 1 つの接続 (Auth0 のデータベース、ソーシャル接続、または企業ディレクトリ) からユーザーのアイデンティティ情報を取得できるように設定する必要があります。テナントの詳細については、[テナントを作成する](/docs/ja-jp/get-started/auth0-overview/create-tenants) を参照してください。接続の詳細については、[IDプロバイダー](/docs/ja-jp/authenticate/identity-providers) を参照してください。
 
 <div id="application-setup">
-  ### アプリケーションの設定
+  ### アプリケーションの設定 {#application-setup}
 </div>
 
 1. WordPress サイト用のアプリケーションを作成します。
@@ -46,7 +46,7 @@ Auth0 テナントは、WordPress サイトからのログインリクエスト�
 4. **変更を保存** をクリックします。
 
 <div id="authorize-the-application-for-the-management-api">
-  ### Management API のためにアプリケーションを認可する
+  ### Management API のためにアプリケーションを認可する {#authorize-the-application-for-the-management-api}
 </div>
 
 WordPress サイトが Auth0 テナントに代わって特定の操作を実行するには、上で作成したアプリケーションに <Tooltip tip="Management API: 管理タスクを実行できるようにする製品。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Management+API">Management API</Tooltip> へのアクセスを認可する必要があります。必須ではありませんが、これを有効にすると、ログイン時に完全なユーザーデータ (`user_metadata` と `app_metadata` を含む) を取得できるほか、ユーザーのメールアドレスやパスワードの変更、確認済みメールアドレスが必要な場合のメール確認の再送も可能になります。
@@ -58,7 +58,7 @@ WordPress サイトが Auth0 テナントに代わって特定の操作を実行
 5. 表示されたパネルで、`read:users` と `update:users` のスコープだけを選択し、**Update** を選択します (**Filter scopes** フィールドを使って検索できます) 。
 
 <div id="database-connection-setup">
-  ### データベース接続の設定
+  ### データベース接続の設定 {#database-connection-setup}
 </div>
 
 Database 接続を使用すると、Auth0 に保存されたユーザーレコードを使って、ユーザー名とパスワードによるログインを有効にできます。この種類の接続は必須ではないため、<Tooltip tip="パスワードレス: 第1の認証要素としてパスワードに依存しない認証方式。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=passwordless">パスワードレス</Tooltip>、ソーシャルログイン、またはエンタープライズログインのみを使用する場合は省略できます。
@@ -67,19 +67,19 @@ Database 接続を使用すると、Auth0 に保存されたユーザーレコ�
 2. **アプリケーション** ビューを選択し、上で作成したアプリケーションを有効化します。
 
 <div id="social-connection-setup">
-  ### Social 接続 の設定
+  ### Social 接続 の設定 {#social-connection-setup}
 </div>
 
 このログイン方法の有効化と設定の方法については、[ソーシャル ID プロバイダー](/docs/ja-jp/authenticate/identity-providers/social-identity-providers)を参照してください。
 
 <div id="enterprise-connection-setup">
-  ### エンタープライズ接続の設定
+  ### エンタープライズ接続の設定 {#enterprise-connection-setup}
 </div>
 
 このログイン方法を有効化して設定する方法については、[エンタープライズアイデンティティプロバイダー](/docs/ja-jp/authenticate/identity-providers/enterprise-identity-providers)をご覧ください。
 
 <div id="wordpress-configuration">
-  ## WordPress の設定
+  ## WordPress の設定 {#wordpress-configuration}
 </div>
 
 1. [Auth0 Dashboard &gt; アプリケーション &gt; アプリケーション](https://manage.auth0.com/#/applications) に移動し、先ほど作成したアプリケーションを選択します。
@@ -88,7 +88,7 @@ Database 接続を使用すると、Auth0 に保存されたユーザーレコ�
 4. 下にスクロールして、**変更を保存** を選択します。
 
 <div id="php-constant-setting-storage">
-  ## PHP 定数による設定の保存
+  ## PHP 定数による設定の保存 {#php-constant-setting-storage}
 </div>
 
 プラグインの設定は、データベースに保存することも (デフォルト) 、特定の名前の PHP 定数を使って設定することもできます。これにより、<Tooltip tip="Client Secret: クライアント（アプリケーション）が認可サーバーに対して認証するために使用するシークレットです。クライアントと認可サーバーだけが知っているべきであり、推測されないよう十分にランダムである必要があります。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=client+secret">クライアントシークレット</Tooltip>、API トークン、移行トークンのような機密データを、より安全に保存できます (それらを定義しているファイル自体が安全に保管されていることが前提です。詳しくは [Hardening WordPress on wordpress.org](https://developer.wordpress.org/advanced-administration/security/hardening/) をご覧ください) 。
@@ -108,11 +108,11 @@ PHP 定数は次のように定義します。
 WordPress のマルチサイトネットワーク内のすべてのサイトで同じ定数値が使われるため、これは単一のアプリケーションとデータベース接続を使うネットワークを簡単に設定する方法です。
 
 <div id="plugin-settings">
-  ## プラグインの設定
+  ## プラグインの設定 {#plugin-settings}
 </div>
 
 <div id="basic">
-  ### 基本
+  ### 基本 {#basic}
 </div>
 
 * **Domain:** Auth0 Dashboard のアプリケーション設定からコピーした Domain です。オプション名は `domain` です。
@@ -130,7 +130,7 @@ WordPress のマルチサイトネットワーク内のすべてのサイトで�
 * **サインアップを許可:** ユーザーの Signup は、WordPress の「だれでもユーザー登録ができるようにする」オプションが有効な場合にのみ利用できます。この設定は **設定 &gt; 一般 &gt; メンバーシップ** にあります.
 
 <div id="features">
-  ### 機能
+  ### 機能 {#features}
 </div>
 
 * **<Tooltip tip="Universal Login: ユーザーのアイデンティティを確認するため、アプリケーションは Auth0 の認可サーバーでホストされている Universal Login にリダイレクトされます。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Universal+Login">Universal Login</Tooltip> ページ:** `wp-login.php` ページを Universal Login ページにリダイレクトし、このアプリケーションで有効なすべての接続を使用した <Tooltip tip="シングルサインオン (SSO): ユーザーが 1 つのアプリケーションにログインすると、他のアプリケーションにも自動的にログインできるようにするサービスです。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Single+Sign-on">シングルサインオン</Tooltip> (SSO) 認証を行います。オプション名は `auto_login` です。
@@ -139,7 +139,7 @@ WordPress のマルチサイトネットワーク内のすべてのサイトで�
 * **WordPress アバターを上書き:** WordPress で Auth0 のアバターを使用するよう強制します。オプション名は `override_wp_avatars` です。
 
 <div id="embedded">
-  ### 埋め込み
+  ### 埋め込み {#embedded}
 </div>
 
 ここでのオプションは Universal Login ページ には影響しません (カスタマイズオプションについては、[Auth0 Universal Login](/docs/ja-jp/authenticate/login/auth0-universal-login)をご覧ください) 。
@@ -160,7 +160,7 @@ WordPress のマルチサイトネットワーク内のすべてのサイトで�
   </Callout>
 
 <div id="advanced">
-  ### Advanced
+  ### Advanced {#advanced}
 </div>
 
 * **検証済みメールアドレスを必須にする:** これを設定すると、ユーザーは検証済みのメールアドレスがないとログインできなくなります。メールアドレスやユーザープロファイルデータ内の `email_verified` フラグを提供しない接続では、正しく動作しない場合があります。オプション名は `requires_verified_email` です。
@@ -183,7 +183,7 @@ WordPress のマルチサイトネットワーク内のすべてのサイトで�
 * **Auth0 サーバーの Domain:** Auth0 のドメインです。Setup Wizard がアカウント情報を取得するために使用します。オプション名は `auth0_server_domain` です。
 
 <div id="learn-more">
-  ## 詳しくはこちら
+  ## 詳しくはこちら {#learn-more}
 </div>
 
 * [WordPress と連携する](/docs/ja-jp/customize/integrations/cms/wordpress-plugin/integrate-with-wordpress)

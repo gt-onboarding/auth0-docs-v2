@@ -13,7 +13,7 @@ Pour accéder à la zone de configuration :
 La page **Configuration** vers laquelle vous êtes redirigé vous permet de gérer vos Hooks et vos requêtes.
 
 <div id="extension-hooks-context">
-  ## Contexte des Extension Hooks
+  ## Contexte des Extension Hooks {#extension-hooks-context}
 </div>
 
 L’objet context (**ctx**) expose quelques fonctions utilitaires ainsi que des renseignements sur la requête en cours. Les méthodes et propriétés suivantes sont disponibles dans chaque Extension Hook :
@@ -25,7 +25,7 @@ L’objet context (**ctx**) expose quelques fonctions utilitaires ainsi que des 
 * Appels à distance
 
 <div id="logging">
-  ### Journalisation
+  ### Journalisation {#logging}
 </div>
 
 Pour ajouter un message aux journaux en temps réel d’Actions (que vous pouvez consulter dans Actions Real-time Logs), appelez la méthode **log** :
@@ -38,7 +38,7 @@ function(ctx, callback) {
 ```
 
 <div id="caching">
-  ### Mise en cache
+  ### Mise en cache {#caching}
 </div>
 
 Pour mettre quelque chose en cache (comme une longue liste de départements), vous pouvez le stocker dans l’objet **global** du contexte. Cet objet sera accessible jusqu’au recyclage du conteneur d’Actions Real-Time Logs.
@@ -51,7 +51,7 @@ function(ctx, callback) {
 ```
 
 <div id="custom-data">
-  ### Données personnalisées
+  ### Données personnalisées {#custom-data}
 </div>
 
 Vous pouvez stocker des données personnalisées dans l’extension. Ce champ est limité à 400 ko de données.
@@ -83,7 +83,7 @@ ctx.read()
 ```
 
 <div id="payload-and-request">
-  ### Payload et requête
+  ### Payload et requête {#payload-and-request}
 </div>
 
 Chaque Extension Hook expose le payload ou la requête en cours avec des renseignements précis. La requête contiendra toujours des renseignements sur l’utilisateur connecté dans la section Users du Dashboard :
@@ -96,7 +96,7 @@ function(ctx, callback) {
 ```
 
 <div id="remote-calls">
-  ### Appels à distance
+  ### Appels à distance {#remote-calls}
 </div>
 
 Si vous voulez faire appel à un service externe (comme une API) pour valider des données ou charger des appartenances, vous pouvez le faire à l’aide du module `request`.
@@ -115,7 +115,7 @@ var request = require('request');
 ```
 
 <div id="hook-contract">
-  ### Contrat du Hook
+  ### Contrat du Hook {#hook-contract}
 </div>
 
 * `ctx` : l’objet de contexte
@@ -127,7 +127,7 @@ var request = require('request');
 * `callback(error)` : le callback auquel vous pouvez renvoyer une erreur si l’accès est refusé
 
 <div id="sample-use">
-  ### Exemple d’utilisation
+  ### Exemple d’utilisation {#sample-use}
 </div>
 
 Kelly gère le département des finances, et elle ne devrait avoir accès qu’aux utilisateurs de son département.
@@ -177,7 +177,7 @@ Noms d’action pris en charge :
 * `send:verification-email`
 
 <div id="available-extension-hooks">
-  ## Hooks d’extension disponibles
+  ## Hooks d’extension disponibles {#available-extension-hooks}
 </div>
 
 Les Hooks d’extension suivants sont disponibles pour l’application Delegated Administration :
@@ -190,7 +190,7 @@ Les Hooks d’extension suivants sont disponibles pour l’application Delegated
 * [Write Hook](/docs/fr-ca/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-write-hook)
 
 <div id="learn-more">
-  ## Pour en savoir plus
+  ## Pour en savoir plus {#learn-more}
 </div>
 
 * [Delegated Administration : Access Hook](/docs/fr-ca/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-access-hook)

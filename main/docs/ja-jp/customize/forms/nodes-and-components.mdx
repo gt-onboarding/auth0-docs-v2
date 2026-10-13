@@ -6,7 +6,7 @@ title: ノードとコンポーネント
 Forms では、フィールド、ブロック、ウィジェットなど、ユーザーがフォームを操作するためのノードやコンポーネントを追加できます。さらに、コンポーネントに入力されたデータは、フォームやフロー内で参照できます。
 
 <div id="form-nodes">
-  ## フォームノード
+  ## フォームノード {#form-nodes}
 </div>
 
 フォームノードには、Start、Step、Flow、Router、Ending screen の5種類があります。これらのノードは、フォームの構造においてそれぞれ特定の役割を担っています。
@@ -14,7 +14,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
 <Frame>![Dashboard >  Forms > Form Editor](/docs/images/cdy7uua7fh8z/5V4GsHxxC2cjxx1aODCxPd/309850c72bbce224e7a8d3f5af34114c/form-editor-preview.png)</Frame>
 
 <div id="step-node">
-  ## ステップノード
+  ## ステップノード {#step-node}
 </div>
 
 ステップノードは、フォームを視覚的に表したものです。ユーザーがデータを入力できるフィールド、ブロック、ウィジェットなど、任意の数のコンポーネントを含めることができます。
@@ -22,7 +22,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
 <Frame>![Dashboard > Foms > ステップノード](/docs/images/cdy7uua7fh8z/2tbkcXkVon0BawCvYgnvIz/e2ce566320af18a6b08702f04f763126/form-step-node.png)</Frame>
 
 <div id="field-components">
-  ### フィールドコンポーネント
+  ### フィールドコンポーネント {#field-components}
 </div>
 
 フィールドは、Forms でユーザーが情報を入力するための UI コンポーネントです。
@@ -30,7 +30,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
 <Frame>![Dashboard > Forms > Fields](/docs/images/cdy7uua7fh8z/6fuBdJcbDybzcVaiByUkoQ/2ad29c8dbbcc6ddf850f5efc004a75e0/forms-fields.png)</Frame>
 
 <div id="field-settings">
-  #### フィールド設定
+  #### フィールド設定 {#field-settings}
 </div>
 
 フィールドには、要件に合わせて設定できる既定の項目がいくつかあります。
@@ -48,7 +48,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
 | 一時的          | データマスクの有効/無効     |
 
 <div id="field-validation-rules">
-  #### フィールドの検証ルール
+  #### フィールドの検証ルール {#field-validation-rules}
 </div>
 
 | 設定        | 説明            |
@@ -57,7 +57,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
 | 最小値 / 最大値 | 数値の範囲を制限します。  |
 
 <div id="available-fields-in-forms">
-  #### Formsで利用できるフィールド
+  #### Formsで利用できるフィールド {#available-fields-in-forms}
 </div>
 
 利用可能なフィールドと、それぞれの固有の設定およびデータ出力型は次のとおりです。
@@ -66,7 +66,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
   <Accordion title="テキストフィールド">
     標準入力では、ユーザーは任意の文字列を入力できます。
 
-    ##### テキストフィールドの設定
+##### テキストフィールドの設定 {#text-field-settings}
 
     テキストフィールドの設定は次のとおりです。
 
@@ -74,7 +74,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
     | --- | ------------------ |
     | 複数行 | 複数行のテキスト入力を有効にします。 |
 
-    ##### テキストフィールドの出力値
+##### テキストフィールドの出力値 {#text-field-output-value}
 
     テキストフィールドの出力値のデータ型は `string` です。
 
@@ -88,7 +88,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
   <Accordion title="メールアドレス欄">
     標準入力では、ユーザーがメールアドレスを文字列として入力できます。
 
-    ##### メールフィールドの出力値
+##### メールフィールドの出力値 {#email-field-output-value}
 
     メールフィールドの出力値のデータ型は`string`です。
 
@@ -102,7 +102,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
   <Accordion title="電話番号フィールド">
     標準入力では、ユーザーは電話番号を入力できます。
 
-    ##### 電話フィールドの設定
+##### 電話フィールドの設定 {#phone-field-settings}
 
     電話フィールドの設定は次のとおりです。
 
@@ -111,7 +111,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
     | 国選択               | 国選択の有効 / 無効を切り替えます。既定では、ユーザーの IP アドレスに基づく所在地が表示されます。 |
     | フィルタのプレースホルダーテキスト | 国検索ウィンドウでユーザーに表示されるテキスト。                             |
 
-    ##### 電話フィールドの出力値
+##### 電話フィールドの出力値 {#phone-field-output-value}
 
     電話フィールドの出力値のデータ型は、`string`、または国選択が有効な場合は `object` です。
 
@@ -142,7 +142,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
   <Accordion title="選択肢フィールド">
     ユーザーが単一または複数の選択肢から値を選択できる標準入力です。
 
-    ##### Choice フィールドの設定
+##### Choice フィールドの設定 {#choice-field-settings}
 
     Choice フィールドの設定は次のとおりです。
 
@@ -153,7 +153,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
     | Advanced &gt; Internal values | 各選択肢に内部値を割り当てます。         |
     | Advanced &gt; Bulk edit       | ラベルと各選択肢の内部値を一括編集します。    |
 
-    ##### Choice フィールドの出力値
+##### Choice フィールドの出力値 {#choice-field-output-value}
 
     Choice フィールドの出力値のデータ型は、`string`、または複数選択が有効な場合は `array of strings` です。
 
@@ -177,7 +177,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
   <Accordion title="カードフィールド">
     ユーザーが画像の選択肢を単一または複数選択できる標準入力です。
 
-    ##### カードフィールドの設定
+##### カードフィールドの設定 {#cards-field-settings}
 
     カードフィールドの設定は次のとおりです。
 
@@ -187,7 +187,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
     | ラベルを非表示                       | カードのラベルを非表示にします。 |
     | Advanced &gt; Internal values | 各選択肢に内部値を割り当てます。 |
 
-    ##### カードフィールドの出力値
+##### カードフィールドの出力値 {#cards-field-output-value}
 
     カードフィールドの出力値のデータ型は、`string`、または複数選択が有効な場合は `array of strings` になります。
 
@@ -211,7 +211,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
   <Accordion title="URL フィールド">
     標準入力では、ユーザーはURLを入力できます。
 
-    ##### URL フィールドの出力値
+##### URL フィールドの出力値 {#url-field-output-value}
 
     URL フィールドの出力値のデータ型は文字列です:
 
@@ -225,7 +225,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
   <Accordion title="パスワード欄">
     ユーザーがパスワードや秘密の値を入力できる標準的な入力欄です。
 
-    ##### パスワードフィールドの設定
+##### パスワードフィールドの設定 {#password-field-settings}
 
     パスワードフィールドの設定は次のとおりです。
 
@@ -236,7 +236,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
     | 強度メーターを追加する      | パスワード入力の強度を示すため、赤・黄・緑のスケールを持つグラフィカルなメーターがパスワードフィールドの下に表示されます。                        |
     | ハッシュ化            | 入力値をブラウザー内で直接ハッシュ化するためのアルゴリズムを選択します。                                                 |
 
-    ##### パスワードフィールドの出力値
+##### パスワードフィールドの出力値 {#password-field-output-value}
 
     パスワードフィールドの出力値のデータ型は、マスクされた `string` です。
 
@@ -250,7 +250,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
   <Accordion title="支払いフィールド">
     決済プロバイダーを使用して、ユーザーが支払い情報を入力できる標準入力フィールドです。支払いは Ending ノードに到達する前に処理されます。
 
-    ##### 支払いフィールドの設定
+##### 支払いフィールドの設定 {#payment-field-settings}
 
     支払いフィールドの設定は次のとおりです。
 
@@ -263,7 +263,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
     | Customer action     | 顧客を新規作成するか、既存の顧客を更新するかを選択します。                          |
     | Display options     | カード番号、有効期限、セキュリティコードのラベルとトラストマークの表示・編集を行います。           |
 
-    ##### 支払いフィールドの出力値
+##### 支払いフィールドの出力値 {#payment-field-output-value}
 
     支払いフィールドの出力値のデータ型は、送信後フローでは `string` または `object` です。
 
@@ -308,7 +308,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
   <Accordion title="法的事項フィールド">
     法的な文言とチェック入力を追加する標準フィールド。
 
-    ##### Legal フィールドの出力値
+##### Legal フィールドの出力値 {#legal-field-output-value}
 
     Legal フィールドの出力値のデータ型は `boolean` です。
 
@@ -322,7 +322,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
   <Accordion title="ドロップダウンフィールド">
     ユーザーがドロップダウンから単一または複数の選択肢を選べる標準入力です。
 
-    ##### ドロップダウンフィールドの設定
+##### ドロップダウンフィールドの設定 {#dropdown-field-settings}
 
     ドロップダウンフィールドの設定は次のとおりです。
 
@@ -332,7 +332,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
     | Advanced &gt; 内部値  | 各オプションに内部値を割り当てます。 |
     | Advanced &gt; 一括編集 | ラベルと内部値を一括で編集します。  |
 
-    ##### ドロップダウンフィールドの出力値
+##### ドロップダウンフィールドの出力値 {#dropdown-field-output-value}
 
     ドロップダウンフィールドの出力値のデータ型は、`string`、または複数選択が有効になっている場合は`array of strings`です。
 
@@ -356,7 +356,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
   <Accordion title="数値フィールド">
     ユーザーが数値を入力できる標準的な入力フィールドです。
 
-    ##### 数値フィールドの出力値
+##### 数値フィールドの出力値 {#number-field-output-value}
 
     数値フィールドの出力値のデータ型は `number` です。
 
@@ -370,7 +370,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
   <Accordion title="日付 / 時刻フィールド">
     ユーザーが日付または時刻の値を入力できる標準入力フィールドです。
 
-    ##### 日付 / 時刻フィールドの設定
+##### 日付 / 時刻フィールドの設定 {#date-time-field-settings}
 
     日付 / 時刻フィールドの設定には、次の項目があります。
 
@@ -378,7 +378,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
     | ------ | ------------------ |
     | Format | 日付形式または時刻形式を選択します。 |
 
-    ##### 日付 / 時刻フィールドの出力値
+##### 日付 / 時刻フィールドの出力値 {#date-time-field-output-value}
 
     日付 / 時刻フィールドで日付を選択した場合、出力データ型の値は `string` です。
 
@@ -400,7 +400,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
   <Accordion title="真偽値フィールド">
     ユーザーが true または false の値を入力できる標準的な入力フィールドです。
 
-    ##### Boolean フィールドの出力値
+##### Boolean フィールドの出力値 {#boolean-field-output-value}
 
     Boolean フィールドの出力値のデータ型は boolean です。
 
@@ -414,7 +414,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
   <Accordion title="カスタムフィールド">
     独自のフィールドを作成できるようにカスタマイズ可能な標準フィールドです。
 
-    ##### カスタムフィールドの設定
+##### カスタムフィールドの設定 {#custom-field-settings}
 
     カスタムフィールドの設定は次のとおりです。
 
@@ -429,7 +429,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
 </AccordionGroup>
 
 <div id="blocks-components">
-  ### ブロックコンポーネント
+  ### ブロックコンポーネント {#blocks-components}
 </div>
 
 ブロックは、フォームに機能を追加するためのUIコンポーネントで、ユーザー情報は収集しません。
@@ -437,7 +437,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
 <Frame>![Dashboard > Forms > コンポーネント > ブロック](/docs/images/cdy7uua7fh8z/7IijftJnuwcevL4bdHiaKw/f0376ca75303bb58d0df87e6af75e347/forms-block.png)</Frame>
 
 <div id="available-blocks-in-forms">
-  #### Forms で使用できるブロック
+  #### Forms で使用できるブロック {#available-blocks-in-forms}
 </div>
 
 使用できるブロックは次のとおりです。
@@ -504,7 +504,7 @@ Forms では、フィールド、ブロック、ウィジェットなど、ユ�
 </AccordionGroup>
 
 <div id="widgets-components">
-  ### Widgets コンポーネント
+  ### Widgets コンポーネント {#widgets-components}
 </div>
 
 Widgets は、サードパーティ連携が組み込まれた事前構築済みのコンポーネントで、フォームにクライアントサイドとサーバーサイドのロジックを追加できます。
@@ -512,7 +512,7 @@ Widgets は、サードパーティ連携が組み込まれた事前構築済み
 <Frame>![Dashboard > Forms > Components > Widget](/docs/images/cdy7uua7fh8z/3J0IuWLP7utOPKSHc82IE9/a523afe0c240c63f714ef5fb102f8dab/forms-widget.png)</Frame>
 
 <div id="available-widgets-in-forms">
-  #### Forms で使用できるウィジェット
+  #### Forms で使用できるウィジェット {#available-widgets-in-forms}
 </div>
 
 使用できるウィジェットは次のとおりです。
@@ -521,7 +521,7 @@ Widgets は、サードパーティ連携が組み込まれた事前構築済み
   <Accordion title="Google Address ウィジェット">
     ユーザーが住所を入力して検証できるウィジェットです。
 
-    ##### Google Address ウィジェットの設定
+##### Google Address ウィジェットの設定 {#google-address-widget-settings}
 
     Google Address ウィジェットの設定は次のとおりです。
 
@@ -529,7 +529,7 @@ Widgets は、サードパーティ連携が組み込まれた事前構築済み
     | -------- | ----------------------------------- |
     | API key  | リクエストの認証には Google Maps API キーが必要です。 |
 
-    ##### Google Address ウィジェットの出力値
+##### Google Address ウィジェットの出力値 {#google-address-widget-output-value}
 
     Google Address ウィジェットの出力値のデータ型は `object` です。
 
@@ -576,7 +576,7 @@ Widgets は、サードパーティ連携が組み込まれた事前構築済み
     * `v2` では、チェックボックスをクリックしたりパズルを解いたりするなど、表示されるチャレンジに対するユーザー操作が必要です。
     * `v3` はバックグラウンドで実行され、ユーザー操作なしで、ユーザーの行動に基づくスコアを提供します。このバージョンを使用する場合は、スコアを処理し、追加の対応が必要かどうかを判断するためのビジネスロジックを必ず実装してください。
 
-    ##### Google reCAPTCHA ウィジェットの設定
+##### Google reCAPTCHA ウィジェットの設定 {#google-recaptcha-widget-settings}
 
     Google reCAPTCHA ウィジェットの設定は次のとおりです。
 
@@ -585,7 +585,7 @@ Widgets は、サードパーティ連携が組み込まれた事前構築済み
     | Site key   | Web サイトで reCAPTCHA を初期化するために使用する公開サイトキーです。[Google reCAPTCHA console](https://www.google.com/recaptcha/admin/create) または Google Cloud Platform プロジェクトで作成できます。      |
     | Secret key | サーバー側で reCAPTCHA サービスと安全に通信するために使用するシークレットキーです。[Google reCAPTCHA console](https://www.google.com/recaptcha/admin/create) または Google Cloud Platform プロジェクトで作成できます。 |
 
-    ##### Google reCAPTCHA の出力値
+##### Google reCAPTCHA の出力値 {#google-recaptcha-output-value}
 
     Google reCAPTCHA ウィジェットの出力値のデータ型は `object` です。
 
@@ -618,7 +618,7 @@ Widgets は、サードパーティ連携が組み込まれた事前構築済み
   <Accordion title="Verifiable Credentials">
     デジタルウォレットに保存された検証可能な資格情報を使用して、ユーザーが本人確認を行えるようにするウィジェットです。
 
-    ##### Verifiable Credentials ウィジェットの設定
+##### Verifiable Credentials ウィジェットの設定 {#verifiable-credentials-widget-settings}
 
     Verifiable Credentials ウィジェットの設定は次のとおりです。
 
@@ -631,7 +631,7 @@ Widgets は、サードパーティ連携が組み込まれた事前構築済み
     | Verification ID      | 検証リクエストの開始時に生成される検証 ID です。                                                                                             |
     | Maximum waiting time | 検証プロセスの完了を待機する最大時間です。設定した時間に達すると、検証ステータスに関係なくポーリングは停止し、エラーがスローされます。                                                    |
 
-    ##### Verifiable Credentials の出力値
+##### Verifiable Credentials の出力値 {#verifiable-credentials-output-value}
 
     Verifiable Credentials ウィジェットの出力値のデータ型は `object` です。
 
@@ -648,7 +648,7 @@ Widgets は、サードパーティ連携が組み込まれた事前構築済み
 </AccordionGroup>
 
 <div id="router-node">
-  ## ルーターノード
+  ## ルーターノード {#router-node}
 </div>
 
 ルーターノードでは、ルールを追加して、ノード間の条件分岐を作成できます。
@@ -658,7 +658,7 @@ Widgets は、サードパーティ連携が組み込まれた事前構築済み
 <Frame>![Dashboard > Forms > Routers ](/docs/images/cdy7uua7fh8z/2IKI9sU9UPCVkMkHQ3G8lX/07df765647a69a4cf1ab8c5c7aae3c22/2025-07-15_10-31-08.png)</Frame>
 
 <div id="flow-node">
-  ## フローノード
+  ## フローノード {#flow-node}
 </div>
 
 フローノードを使用すると、フォームにカスタムロジックや統合フローを追加し、作成できます。詳しくは、[Flows](/docs/ja-jp/customize/forms/flows)をご覧ください。
@@ -666,7 +666,7 @@ Widgets は、サードパーティ連携が組み込まれた事前構築済み
 <Frame>![Dashboard > Forms > Flow](/docs/images/cdy7uua7fh8z/4UGCrqzgyHTPryLoEuBwNt/e4a67be08a33b565ece89973028fa6ac/forms-flow-node.png)</Frame><Frame>![Dashboard > Forms > Flow > Editor](/docs/images/cdy7uua7fh8z/4L1ixTcIVCmslts6M4wn7u/dc07046cfd41494f40285de5c102ff52/flow-editor-example.png)</Frame>
 
 <div id="start-node">
-  ## 開始ノード
+  ## 開始ノード {#start-node}
 </div>
 
 開始ノードはユーザーには表示されません。ここでは、[Action を使用してフォームをレンダリングする](/docs/ja-jp/customize/forms/render)際のユーザー属性など、非表示フィールド変数を設定できます。
@@ -674,7 +674,7 @@ Widgets は、サードパーティ連携が組み込まれた事前構築済み
 <Frame>![Dashboard > Forms > 開始ノード](/docs/images/cdy7uua7fh8z/2GqFDPep4akUxucmMJyb5/2b50f07f50ee29501341dc54f686de07/form-start-node.png)</Frame>
 
 <div id="ending-screen-node">
-  ## 終了画面ノード
+  ## 終了画面ノード {#ending-screen-node}
 </div>
 
 すべてのフォームには終了画面ノードがあります。既定では、このノードで認証フローが再開され、ここで送信後フローを設定できます。

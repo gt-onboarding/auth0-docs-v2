@@ -19,7 +19,7 @@ Le script Change Email ne peut pas être configuré dans l’<Tooltip tip="Auth0
 </Warning>
 
 <div id="changeemail-function">
-  ## Fonction changeEmail
+  ## Fonction changeEmail {#changeemail-function}
 </div>
 
 La fonction `changeEmail` doit :
@@ -28,7 +28,7 @@ La fonction `changeEmail` doit :
 * Retourner une erreur si l’opération a échoué ou si une erreur s’est produite.
 
 <div id="definition">
-  ### Définition
+  ### Définition {#definition}
 </div>
 
 La fonction `changeEmail` accepte quatre paramètres et renvoie une fonction `callback` :
@@ -76,13 +76,13 @@ function (email, newEmail, verified, callback) {
 ```
 
 <div id="callback-function">
-  ## Fonction callback
+  ## Fonction callback {#callback-function}
 </div>
 
 La fonction `callback` accepte deux paramètres et retourne une fonction.
 
 <div id="definition">
-  ### Définition
+  ### Définition {#definition-2}
 </div>
 
 ```js
@@ -95,7 +95,7 @@ callback(error, operationResult): function
 | `operationResult` | Boolean | Facultatif | Indique le résultat de l’opération de changement d’adresse courriel. |
 
 <div id="return-a-success">
-  ### Retourner un succès
+  ### Retourner un succès {#return-a-success}
 </div>
 
 Si l’opération de changement d’adresse courriel a réussi, appelez la fonction `callback` en transmettant une valeur `null` comme paramètre `error` et une valeur `true` comme paramètre `operationResult` :
@@ -105,7 +105,7 @@ return callback(null, true);
 ```
 
 <div id="return-a-failure">
-  ### Retourner un échec
+  ### Retourner un échec {#return-a-failure}
 </div>
 
 Si l’opération de changement d’adresse courriel a échoué, retournez la fonction `callback` en passant une valeur `null` comme paramètre `error` et une valeur `false` comme paramètre `operationResult` :
@@ -115,7 +115,7 @@ return callback(null, false);
 ```
 
 <div id="return-an-error">
-  ### Retourner une erreur
+  ### Retourner une erreur {#return-an-error}
 </div>
 
 Si une erreur s&#39;est produite, retournez-la à l&#39;aide de la fonction `callback` et transmettez les renseignements pertinents dans le paramètre `error` :

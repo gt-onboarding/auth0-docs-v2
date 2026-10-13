@@ -8,7 +8,7 @@ title: Ajouter Sign In with Google aux applications Android natives
 Consultez les sections ci-dessous pour en savoir plus sur les étapes et les méthodes nécessaires pour configurer Sign in with Google.
 
 <div id="how-it-works">
-  ## Fonctionnement
+  ## Fonctionnement {#how-it-works}
 </div>
 
 Cette fonctionnalité utilise le Credential Manager d’Android pour faciliter Sign in with Google dans votre application Android protégée par Auth0. Les étapes ci-dessous illustrent le flux général suivi par l’utilisateur pour Sign in with Google.
@@ -25,7 +25,7 @@ Cette fonctionnalité utilise le Credential Manager d’Android pour faciliter S
 8. Le serveur Auth0 renvoie un `access_token` à votre application Android.
 
 <div id="before-you-begin">
-  ## Avant de commencer
+  ## Avant de commencer {#before-you-begin}
 </div>
 
 Avant de commencer à configurer Sign in with Google, assurez-vous que les conditions suivantes sont remplies :
@@ -35,7 +35,7 @@ Avant de commencer à configurer Sign in with Google, assurez-vous que les condi
 * Sign in with Google a été ajouté à votre application Android à l’aide du [Credential Manager d’Android](https://developer.android.com/identity/sign-in/credential-manager-siwg).
 
 <div id="configuring-sign-in-with-google-for-android-applications">
-  ## Configurer Sign in with Google pour les applications Android
+  ## Configurer Sign in with Google pour les applications Android {#configuring-sign-in-with-google-for-android-applications}
 </div>
 
 La configuration de Sign in with Google comprend trois grandes étapes :
@@ -47,7 +47,7 @@ La configuration de Sign in with Google comprend trois grandes étapes :
 Les sections ci-dessous fournissent des précisions techniques sur chacune de ces étapes.
 
 <div id="create-credentials-in-the-google-cloud-console">
-  ### Créer des identifiants dans la Google Cloud Console
+  ### Créer des identifiants dans la Google Cloud Console {#create-credentials-in-the-google-cloud-console}
 </div>
 
 Pour commencer, vous devez d’abord configurer les éléments suivants dans votre Google Cloud Console :
@@ -67,7 +67,7 @@ Pour commencer, vous devez d’abord configurer les éléments suivants dans vot
 </Callout>
 
 <div id="configure-auth0">
-  ### Configurer Auth0
+  ### Configurer Auth0 {#configure-auth0}
 </div>
 
 Le flux Sign in with Google repose sur le <Tooltip tip="OAuth 2.0: Framework d’autorisation qui définit les protocoles et les workflows d’autorisation." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=OAuth+2.0">OAuth 2.0</Tooltip> Token Exchange, qui s’effectue entre Auth0 et votre application Android.
@@ -109,7 +109,7 @@ Après avoir créé vos identifiants dans la Google Cloud Console, vous pouvez a
 </Tabs>
 
 <div id="update-code-in-the-android-application">
-  ### Mettre à jour le code dans l’application Android
+  ### Mettre à jour le code dans l’application Android {#update-code-in-the-android-application}
 </div>
 
 L’exemple suivant peut compléter le flux Web utilisé pour les authentifications qui ne passent pas par Google, comme Microsoft, le nom d’utilisateur et mot de passe, ou les fédérations d’entreprise.
@@ -173,13 +173,13 @@ when (creds) {
 ```
 
 <div id="additional-authentication-scenarios">
-  ## Scénarios d’authentification supplémentaires
+  ## Scénarios d’authentification supplémentaires {#additional-authentication-scenarios}
 </div>
 
 Bien que la mise en œuvre actuelle de Google ne fournisse pas de directives claires concernant la fédération d’entreprise et les demandes de vérification supplémentaires d’<Tooltip tip="Authentification multifacteur (MFA) : processus d’authentification de l’utilisateur qui utilise un facteur en plus du nom d’utilisateur et mot de passe, comme un code envoyé par SMS." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=multi-factor+authentication">authentification multifacteur</Tooltip> (MFA), vous pouvez prendre en charge ces fonctionnalités en passant à l’expérience Web.
 
 <div id="enterprise-federation">
-  ### Fédération d’entreprise
+  ### Fédération d’entreprise {#enterprise-federation}
 </div>
 
 Auth0 prend en charge la fédération d’entreprise, ce qui vous permet de connecter des [fournisseurs d’identité d’entreprise](/docs/fr-ca/authenticate/identity-providers/enterprise-identity-providers) externes (comme Okta Workforce, ADFS ou d’autres systèmes compatibles avec OIDC) à votre tenant Auth0 afin que les utilisateurs puissent ensuite s’authentifier avec leurs identifiants d’entreprise existants.
@@ -197,7 +197,7 @@ WebAuthProvider.login(account)
 ```
 
 <div id="mfa-considerations-during-token-exchange">
-  ### Considérations relatives à la MFA lors de l’échange de jetons
+  ### Considérations relatives à la MFA lors de l’échange de jetons {#mfa-considerations-during-token-exchange}
 </div>
 
 Auth0 renvoie une erreur à l’application lors de l’échange de jetons lorsque la politique de la connexion Google OAuth exige l’authentification multifacteur. Cette erreur est incluse dans la réponse envoyée à l’application.

@@ -20,13 +20,13 @@ Rich Authorization Requests では `authorization_details` パラメータを使
 4. [任意: リソースサーバーの同意ポリシーを設定](#optional-configure-consent-policy-for-the-resource-server) する。
 
 <div id="register-authorization_details-types">
-  ## `authorization_details` タイプを登録する
+  ## `authorization_details` タイプを登録する {#register-authorization_details-types}
 </div>
 
 JSON配列内の各オブジェクトには、オブジェクトの構造を示す `type` フィールドが必要です。`authorization_details` 配列には、同じ `type` のエントリを複数含めることができます。
 
 <div id="auth0-guardian-app">
-  ### Auth0 Guardian app
+  ### Auth0 Guardian app {#auth0-guardian-app}
 </div>
 
 Auth0 Guardian app を使用している場合、`authorization_details` パラメータの値には、配列内に 1 つのオブジェクトのみを含める必要があり、そのオブジェクトは次の Auth0 スキーマに準拠している必要があります。
@@ -72,7 +72,7 @@ Auth0 Guardian app を使用している場合、`authorization_details` パラ�
 ```
 
 <div id="other-notification-channels">
-  ### その他の通知チャネル
+  ### その他の通知チャネル {#other-notification-channels}
 </div>
 
 Auth0 Guardian app を使用していない場合、`authorization_details` の type で Auth0 スキーマ を使用する必要はありません。`authorization_details` をカスタマイズされた同意プロンプト、または Auth0 Guardian SDK を使用する独自のモバイルアプリに表示する場合は、次の要件が適用されます。
@@ -155,7 +155,7 @@ Auth0 Guardian app を使用していない場合、`authorization_details` の 
 </Tabs>
 
 <div id="configure-the-api-access-policies">
-  ## API Accessポリシーを設定する
+  ## API Accessポリシーを設定する {#configure-the-api-access-policies}
 </div>
 
 [API Access Policies for Applications](/docs/ja-jp/get-started/apis/api-access-policies-for-applications) では、どのアプリケーションが API にアクセスできるか、また、どのスコープまたは `authorization_details` タイプへのアクセスが許可されるかを制御できます。
@@ -177,7 +177,7 @@ curl --location --request GET 'https://$tenant/api/v2/resource-servers/$resource
 アプリケーションのクライアントグラントの管理方法について詳しくは、[API へのアプリケーションアクセス: クライアントグラント](/docs/ja-jp/get-started/applications/application-access-to-apis-client-grants) を参照してください。
 
 <div id="set-customized-consent-prompt">
-  ## カスタマイズされた同意プロンプトを設定する
+  ## カスタマイズされた同意プロンプトを設定する {#set-customized-consent-prompt}
 </div>
 
 同意プロンプトに、Rich Authorization Request の `authorization_details` をレンダリングできます。これを行うには、適切な template partials を使用して `customized-consent` prompt を設定します。
@@ -185,7 +185,7 @@ curl --location --request GET 'https://$tenant/api/v2/resource-servers/$resource
 Auth0 CLI または Management API を使用して、カスタマイズされた同意プロンプトを設定できます。
 
 <div id="auth0-cli">
-  ### Auth0 CLI
+  ### Auth0 CLI {#auth0-cli}
 </div>
 
 Customized Consent の partials を設定するには、ターミナルで適切なフラグを指定して `auth0 ul customize` コマンドを実行します。
@@ -197,7 +197,7 @@ auth0 ul customize
 詳しくは、[auth0 universal-login customize のドキュメント](https://auth0.github.io/auth0-cli/auth0_universal-login_customize.html)をお読みください。
 
 <div id="management-api">
-  ### Management API
+  ### Management API {#management-api}
 </div>
 
 Customized Consent の partials を設定するには、`/prompts/customized-consent/partials` エンドポイントに `PUT` リクエストを送信します:
@@ -234,7 +234,7 @@ Customized Consent テンプレートは、Auth0 がエンドユーザーに表�
 * [プロンプトに partials を設定する API ドキュメント](/docs/ja-jp/api/management/v2/prompts/put-partials)
 
 <div id="optional-configure-consent-policy-for-the-resource-server">
-  ## 任意: リソースサーバーの同意ポリシーを設定する
+  ## 任意: リソースサーバーの同意ポリシーを設定する {#optional-configure-consent-policy-for-the-resource-server}
 </div>
 
 リソースサーバーの同意ポリシーでは、Auth0 が `authorization_details` の値を保存し、プッシュ通知の送信時にそれらをモバイルアプリケーションで利用できるようにするかどうかを決定します。

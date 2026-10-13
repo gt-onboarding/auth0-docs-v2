@@ -12,7 +12,7 @@ import {AuthCodeBlock} from "/snippets/ja-jp/AuthCodeBlock.jsx";
 </Warning>
 
 <div id="example">
-  #### 例
+  #### 例 {#example}
 </div>
 
 これまで、Auth0 ではアクセストークンと ID トークンには名前空間付きクレームのみを設定できました。カスタムクレームへの移行により、名前空間なしのクレームを <Tooltip tip="Access Token: API へのアクセスに使用される認可資格情報。opaque string または JWT の形式を取ります。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=access+tokens">アクセストークン</Tooltip>、ID トークン、そして Auth0 の Authentication API の `/userinfo` エンドポイントで使用できるようになりました。
@@ -32,7 +32,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="affected-flows">
-  ## 影響を受けるフロー
+  ## 影響を受けるフロー {#affected-flows}
 </div>
 
 Auth0 がサポートするすべての <Tooltip tip="OpenID: アプリケーションがログイン情報を収集・保存することなく、ユーザーの本人確認を行えるようにする認証のオープン標準です。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=OpenID">OpenID</Tooltip> Connect (OIDC) フローは、この移行の影響を受けます。フローの一覧については、[認証および認可フロー](/docs/ja-jp/get-started/authentication-and-authorization-flow)をご覧ください。
@@ -48,11 +48,11 @@ Auth0 がサポートするすべての <Tooltip tip="OpenID: アプリケーシ
 * [SAML2 Web app add-on](/docs/ja-jp/authenticate/protocols/saml/saml-sso-integrations/enable-saml2-web-app-addon)
 
 <div id="restrictions">
-  ## 制限事項
+  ## 制限事項 {#restrictions}
 </div>
 
 <div id="maximum-token-size">
-  ### 最大トークンサイズ
+  ### 最大トークンサイズ {#maximum-token-size}
 </div>
 
 Auth0 では、カスタムクレームのペイロードは最大 100KB に制限されます。ペイロードがこの上限を超えないようにすることが重要です。上限を超えると、認証トランザクションはエラーとなって失敗します。拡張コード (たとえば、[Rules](/docs/ja-jp/customize/rules)、[Hooks](/docs/ja-jp/customize/hooks)、または [Actions](/docs/ja-jp/customize/actions)) の使用状況を見直すことをお勧めします。特に、外部 API からの大きなペイロードを確認してください。
@@ -66,7 +66,7 @@ Auth0 では、カスタムクレームのペイロードは最大 100KB に制�
 100KB の制限は、アクセストークンと ID トークンにそれぞれ個別に適用されます。たとえば、100KB のアクセストークンと 100KB の ID トークンを同じトランザクションで返すことができます。
 
 <div id="example">
-  #### 例
+  #### 例 {#examples}
 </div>
 
 ```javascript lines
@@ -117,7 +117,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="restricted-claims">
-  ### 制限対象のクレーム
+  ### 制限対象のクレーム {#restricted-claims}
 </div>
 
 Auth0 では、OIDC または OAuth2 標準で使用されるクレームや、内部利用向けのクレームのカスタマイズは制限されています。これらのクレームを変更しようとしても、その変更は無視されます。transaction は失敗しませんが、そのクレームは token に追加されません。Auth0 では、公開された名前空間付きクレームを使用することを推奨しています。
@@ -184,7 +184,7 @@ Auth0 では、OIDC または OAuth2 標準で使用されるクレームや、�
 * `x5t#S256`
 
 <div id="example">
-  #### 例
+  #### 例 {#example-2}
 </div>
 
 ```javascript lines
@@ -201,7 +201,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="restricted-token-audience">
-  ### 制限対象のトークン audience
+  ### 制限対象のトークン audience {#restricted-token-audience}
 </div>
 
 <Tooltip tip="Audience: 発行されたトークンの audience を一意に識別する値です。トークン内では aud という名前で表され、その値には ID トークンの場合はアプリケーション（Client ID）の ID、アクセストークンの場合は API（API Identifier）の ID が含まれます。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=audience">audience</Tooltip> が Auth0 API であるアクセストークンでは、非公開かつ名前空間なしのカスタムクレームの作成が Auth0 によって制限されます。audience が Auth0 API のアクセストークンに非公開かつ名前空間なしのカスタムクレームを設定しようとしても、その試みは無視されます。トランザクションは失敗しませんが、そのクレームはトークンに追加されません。Auth0 は、Auth0 の API で使用されるトークンにはカスタムクレームを設定しないことを推奨しています。
@@ -223,7 +223,7 @@ exports.onExecutePostLogin = async (event, api) => {
 * `https://YOUR_TENANT.auth0app.com/userinfo`
 
 <div id="example">
-  #### 例
+  #### 例 {#examples-2}
 </div>
 
 ```javascript lines
@@ -314,7 +314,7 @@ scope:openid profile
 ```
 
 <div id="restriction-on-auth0-and-webtask-namespaces">
-  ## Auth0 および Webtask の名前空間に関する制限
+  ## Auth0 および Webtask の名前空間に関する制限 {#restriction-on-auth0-and-webtask-namespaces}
 </div>
 
 Auth0 では、名前空間の identifier として Auth0 ドメインを使った、名前空間付きカスタムクレームは作成できません。Auth0 ドメインは次のとおりです。
@@ -342,7 +342,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="oidc-user-profile-claims">
-  ### OIDC ユーザープロファイルのクレーム
+  ### OIDC ユーザープロファイルのクレーム {#oidc-user-profile-claims}
 </div>
 
 Auth0 で、OIDC ユーザープロファイルのクレームをアクセストークンに追加できるようになりました。
@@ -376,7 +376,7 @@ Auth0 で、OIDC ユーザープロファイルのクレームをアクセスト
 * `zoneinfo`
 
 <div id="example">
-  #### 例
+  #### 例 {#example-3}
 </div>
 
 ```javascript lines
@@ -393,7 +393,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="saml2-add-on-and-web-service-federation-protocol-ws-fed-attribute-mapping-with-auth0-rules">
-  ### Auth0 ルールを使用した SAML2 add-on および Web Service Federation Protocol (WS-Fed) の属性マッピング
+  ### Auth0 ルールを使用した SAML2 add-on および Web Service Federation Protocol (WS-Fed) の属性マッピング {#saml2-add-on-and-web-service-federation-protocol-ws-fed-attribute-mapping-with-auth0-rules}
 </div>
 
 Auth0 ルールを使用してユーザーオブジェクトに変更を加える場合と同様に、`app_metadata` または `user_metadata` の移行前クレームでも、クレームが `context.idToken` オブジェクトに設定されていて名前が競合する場合は、内容がマージされます。オブジェクトのプロパティについて詳しくは、[Rules 内のユーザーオブジェクトのプロパティ](/docs/ja-jp/customize/rules/user-object-in-rules) を参照してください。
@@ -531,7 +531,7 @@ function (user, context, callback) {
 ```
 
 <div id="add-private-non-namespace-claims-to-tokens">
-  ### トークンに非公開かつ名前空間なしのカスタムクレームを追加する
+  ### トークンに非公開かつ名前空間なしのカスタムクレームを追加する {#add-private-non-namespace-claims-to-tokens}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -541,7 +541,7 @@ function (user, context, callback) {
 アクセス トークンと ID トークンのペイロードに、非公開かつ名前空間なしのカスタムクレームを追加できるようになりました。
 
 <div id="example">
-  #### 例
+  #### 例 {#example-4}
 </div>
 
 ```javascript lines
@@ -560,13 +560,13 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="private-non-namespace-claims-to-userinfo">
-  ### /userinfo に返される非公開かつ名前空間なしのカスタムクレーム
+  ### /userinfo に返される非公開かつ名前空間なしのカスタムクレーム {#private-non-namespace-claims-to-userinfo}
 </div>
 
 Auth0 では、ID トークンに設定された非公開かつ名前空間なしのカスタムクレームが /userinfo のレスポンスでも返されるようになりました。
 
 <div id="example">
-  #### 例
+  #### 例 {#example-5}
 </div>
 
 ```javascript lines
@@ -596,11 +596,11 @@ Authorization: Bearer {yourAccessToken}
 ```
 
 <div id="actions">
-  ## Actions
+  ## Actions {#actions}
 </div>
 
 <div id="review-tenant-logs">
-  ### テナントのログを確認する
+  ### テナントのログを確認する {#review-tenant-logs}
 </div>
 
 まず、テナントがこの移行の影響を受けるかどうかを確認するため、テナントのログで非推奨化の通知を確認します。
@@ -608,7 +608,7 @@ Authorization: Bearer {yourAccessToken}
 1. Auth0 [Dashboard &gt; Monitoring &gt; Logs](https://manage.auth0.com/#/logs) に移動します。
 2. ログで `type: depnote AND description: *Custom*claims*` を検索します。
 
-### 例
+### 例 {#example-6}
 
 以下に、拡張コードが実行されるたびに生成される非推奨化ログの例を示します。
 
@@ -648,7 +648,7 @@ Authorization: Bearer {yourAccessToken}
 ```
 
 <div id="fix-auth0-rules-for-saml2-add-on-and-web-service-federation-protocol-ws-fed">
-  ### SAML2 アドオンおよび Web Service Federation Protocol (Ws-Fed) 用のルールを修正する
+  ### SAML2 アドオンおよび Web Service Federation Protocol (Ws-Fed) 用のルールを修正する {#fix-auth0-rules-for-saml2-add-on-and-web-service-federation-protocol-ws-fed}
 </div>
 
 SAML2 アドオンまたは Web Service Federation Protocol (Ws-Fed) で属性マッピングとあわせて ルールを使用し、`context.idToken` オブジェクトに `app_metadata` または `user_metadata` のクレームを設定している場合は、これらのオブジェクト間でクレーム名が競合した際の Auth0 の評価方法に合わせて、設定を更新する必要があります。対処方法としては、次のようなものがあります。
@@ -687,7 +687,7 @@ SAML2 アドオンまたは Web Service Federation Protocol (Ws-Fed) で属性�
   ```
 
 <div id="disable-legacy-behavior">
-  ### 従来の動作を無効にする
+  ### 従来の動作を無効にする {#disable-legacy-behavior}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">

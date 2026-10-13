@@ -12,7 +12,7 @@ title: ログアウト リダイレクト移行ガイド
 Auth0にこれらのAPIのいずれかへの事前の呼び出し記録がない場合、ログアウトは完了しますが、リダイレクトは行われず、エンドユーザーにはエラーページが表示されます。
 
 <div id="affected-endpoints">
-  ### 影響を受けるエンドポイント
+  ### 影響を受けるエンドポイント {#affected-endpoints}
 </div>
 
 この変更の影響を受けるエンドポイントは次のとおりです。
@@ -29,7 +29,7 @@ Auth0にこれらのAPIのいずれかへの事前の呼び出し記録がない
 4. `/v2/logout` または `/wsfed/{yourClientId}?wa=wsignout1.0` への事前の呼び出しの有無にかかわらず、`/authorize` API への呼び出しを、影響を受ける API のいずれかへの呼び出しと同時または交互に行うアプリケーションまたはユーザー。
 
 <div id="actions">
-  ### 対応
+  ### 対応 {#actions}
 </div>
 
 1. [Auth0 Dashboard &gt; Monitoring &gt; Logs](https://manage.auth0.com/#/logs) に移動し、`type:depnote AND description:*unvalidated*redirects*` を検索して、非推奨の動作に依存しているアプリケーションを特定します。
@@ -44,7 +44,7 @@ Auth0にこれらのAPIのいずれかへの事前の呼び出し記録がない
 移行対応が完了し、テストも終わったら、移行を確認してください。
 
 <div id="verify-migration">
-  ### 移行の確認
+  ### 移行の確認 {#verify-migration}
 </div>
 
 アプリケーションの移行が完了し、非推奨の使用パターンに依存しなくなったことを確認したら、**2021年12月1日**より前の任意のタイミングで非推奨の動作を無効にし、変更内容を確認してください。

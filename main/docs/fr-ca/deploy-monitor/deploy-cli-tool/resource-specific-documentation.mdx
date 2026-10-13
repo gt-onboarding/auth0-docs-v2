@@ -6,19 +6,19 @@ title: Documentation spécifique aux ressources
 En général, les fichiers de configuration des ressources de l’Auth0 Deploy CLI correspondent de près aux schémas de payload de l’[Auth0 Management API](https://auth0.com/docs/api/management/v2), mais il y a quelques nuances importantes à connaître.
 
 <div id="client-grants">
-  ## Autorisations client
+  ## Autorisations client {#client-grants}
 </div>
 
 L’autorisation client propre au Deploy CLI n’est volontairement ni exportée ni configurable de façon autonome. Cette mesure vise à éviter des changements incompatibles; autrement, l’outil pourrait révoquer l’accès ou même planter en pleine importation. Dans un contexte multitenant et multi-environnement, on s’attend à ce que les nouveaux tenants disposent déjà d’un client désigné pour le Deploy CLI, comme mentionné dans [Getting Started](/docs/fr-ca/deploy-monitor/deploy-cli-tool).
 
 <div id="prompts">
-  ## Prompts
+  ## Prompts {#prompts}
 </div>
 
 Les prompts de texte personnalisé multilingue suivent une hiérarchie particulière. Sous la propriété de ressource `prompts` de niveau supérieur se trouve une propriété `customText` exclusive, qui sert à regrouper les traductions de texte personnalisé avec d’autres paramètres de prompts. Sous `customText` se trouve le code de langue à deux caractères. Viennent ensuite l’ID de prompt, suivi de l’ID d’écran, puis de l’ID de texte.
 
 <div id="hierarchy">
-  ### Hiérarchie
+  ### Hiérarchie {#hierarchy}
 </div>
 
 ```yaml lines
@@ -31,7 +31,7 @@ prompts:
 ```
 
 <div id="example">
-  ### Exemple
+  ### Exemple {#example}
 </div>
 
 ```yaml lines
@@ -55,12 +55,12 @@ prompts:
 ```
 
 <div id="databases">
-  ## Bases de données
+  ## Bases de données {#databases}
 </div>
 
 Lors de la gestion des connexions de base de données, les valeurs de `options.customScripts` renvoient à des fichiers Javascript précis dont le chemin est relatif au dossier de sortie. Sinon, le payload correspond de près à celui de l’[Auth0 Management API](https://auth0.com/docs/api/management/v2#!/Connections/post_connections).
 
-### Exemple en YAML
+### Exemple en YAML {#yaml-example}
 
 Structure des dossiers en mode YAML :
 
@@ -93,7 +93,7 @@ databases:
         verify: ./databases/Username-Password-Authentication/verify.js
 ```
 
-### Exemple de répertoire
+### Exemple de répertoire {#directory-example}
 
 Structure des dossiers en mode répertoire :
 
@@ -127,17 +127,17 @@ Contenu de `database.json` :
 ```
 
 <div id="universal-login">
-  ## Universal Login
+  ## Universal Login {#universal-login}
 </div>
 
 <div id="pages">
-  ### Pages
+  ### Pages {#pages}
 </div>
 
 Lorsque vous remplacez le <Tooltip tip="Universal Login : votre application redirige vers Universal Login, hébergé sur l'Authorization Server d'Auth0, pour vérifier l'identité d'un utilisateur." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Universal+Login">Universal Login</Tooltip> par du HTML personnalisé, le contenu des pages d’erreur, de connexion, d&#39;<Tooltip tip="Universal Login : votre application redirige vers Universal Login, hébergé sur l'Authorization Server d'Auth0, pour vérifier l'identité d'un utilisateur." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=multi-factor+authentication">authentification multifacteur</Tooltip> et de réinitialisation du mot de passe est réparti dans des pages HTML distinctes.
 
 <div id="yaml-example">
-  #### Exemple en YAML
+  #### Exemple en YAML {#yaml-example-2}
 </div>
 
 Structure du dossier en mode YAML :
@@ -171,7 +171,7 @@ pages:
 ```
 
 <div id="directory-example">
-  #### Exemple de répertoire
+  #### Exemple de répertoire {#directory-example-2}
 </div>
 
 Arborescence des dossiers en mode répertoire :

@@ -8,7 +8,7 @@ Event Streams と Auth0 Actions を使うと、ID ライフサイクルの変化
 このガイドでは、エンドツーエンドの例を使って説明します。企業の ID プロバイダー (IdP) から Auth0 Inbound SCIM 経由でユーザーをプロビジョニングし、その変更内容を単一の Event Stream Action で CRM プラットフォームとチーム通知チャネルに振り分けます。
 
 <div id="why-automate-identity-workflows">
-  ## ID ワークフローを自動化する理由
+  ## ID ワークフローを自動化する理由 {#why-automate-identity-workflows}
 </div>
 
 ID を起点とするワークフローの自動化は、次のような場合に役立ちます。
@@ -19,7 +19,7 @@ ID を起点とするワークフローの自動化は、次のような場合�
 * ID ライフサイクル イベントに依存するプロセスから手作業の手順を排除する。
 
 <div id="architecture-overview">
-  ## アーキテクチャの概要
+  ## アーキテクチャの概要 {#architecture-overview}
 </div>
 
 このガイドのパイプラインは、次の 4 つのコンポーネントで構成されます。
@@ -41,7 +41,7 @@ ID を起点とするワークフローの自動化は、次のような場合�
 </Callout>
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 開始する前に、次の項目を用意してください。
@@ -54,7 +54,7 @@ ID を起点とするワークフローの自動化は、次のような場合�
   * 対象チャンネル用の Slack Incoming Webhook URL。
 
 <div id="set-up-scim-provisioning">
-  ## SCIM プロビジョニングを設定する
+  ## SCIM プロビジョニングを設定する {#set-up-scim-provisioning}
 </div>
 
 まだ Inbound SCIM を設定していない場合は、以下の手順で IdP を Auth0 に接続します。
@@ -81,13 +81,13 @@ ID を起点とするワークフローの自動化は、次のような場合�
 設定を保存したら、IdP のアプリケーションにテストユーザーを割り当てます。そのユーザーが Auth0 の **User Management &gt; Users** に表示されることを確認してください。
 
 <div id="create-the-event-stream-action">
-  ## Event Stream Action を作成する
+  ## Event Stream Action を作成する {#create-the-event-stream-action}
 </div>
 
 SCIM プロビジョニングを有効にすると、Auth0 は `user.created`、`user.updated`、`user.deleted` の各イベントを発行します。次に、これらのイベントを複数の下流システムに振り分ける Auth0 Action を使用して、Event Stream を作成します。
 
 <div id="create-the-event-stream">
-  ### Event Stream を作成する
+  ### Event Stream を作成する {#create-the-event-stream}
 </div>
 
 1. **Auth0 Dashboard &gt; Event Streams** に移動します。
@@ -97,7 +97,7 @@ SCIM プロビジョニングを有効にすると、Auth0 は `user.created`、
 5. `user.created`、`user.updated`、`user.deleted` を購読します。
 
 <div id="write-the-action-handler">
-  ### Action ハンドラーを作成する
+  ### Action ハンドラーを作成する {#write-the-action-handler}
 </div>
 
 Action エディタで、各イベントタイプを外部システムへの API 呼び出しにマッピングするハンドラーを記述します。以下の例では、新しいユーザーがプロビジョニングされると、HubSpot CRM の連絡先を作成し、Slack に通知を投稿します。
@@ -249,7 +249,7 @@ async function notifySlack(webhookUrl, payload) {
 ```
 
 <div id="handle-partial-failures">
-  ### 部分的な失敗に対処する
+  ### 部分的な失敗に対処する {#handle-partial-failures}
 </div>
 
 Action が複数の外部システムを呼び出す場合、ある呼び出しは成功しても、別の呼び出しは失敗することがあります。次のような戦略を検討してください。
@@ -259,7 +259,7 @@ Action が複数の外部システムを呼び出す場合、ある呼び出し�
 * **サーキットブレーカーを使用する。** 外部システムで障害が継続的に発生している場合は、遅延の連鎖を避けるため、そのシステムへの呼び出しを打ち切ることを検討してください。
 
 <div id="store-api-keys-as-secrets">
-  ### API キーをシークレットとして保存する
+  ### API キーをシークレットとして保存する {#store-api-keys-as-secrets}
 </div>
 
 1. Action エディタで、**Secrets** (鍵アイコン) を選択します。
@@ -269,13 +269,13 @@ Action が複数の外部システムを呼び出す場合、ある呼び出し�
 シークレットを使うと、認証情報を Action のソースコードに含めずに済みます。詳しくは、[Action Secrets](/docs/ja-jp/customize/actions/write-your-first-action#add-a-secret) をご覧ください。
 
 <div id="save-and-deploy">
-  ### 保存してデプロイ
+  ### 保存してデプロイ {#save-and-deploy}
 </div>
 
 **Save Draft** を選択し、続けて **Deploy** を選択します。これで Action が Event Stream に関連付けられ、サブスクライブしているイベントがトリガーされるたびに実行されます。
 
 <div id="verify-the-pipeline">
-  ## パイプラインを確認する
+  ## パイプラインを確認する {#verify-the-pipeline}
 </div>
 
 1. 企業向け IdPで、Auth0 に接続されているアプリケーションにテストユーザーを割り当てます。
@@ -287,7 +287,7 @@ Action が複数の外部システムを呼び出す場合、ある呼び出し�
 イベントが届かない場合は、Auth0 Dashboard で Event Stream の配信ログを確認してください。詳しくは、[Event Testing, Observability, and Failure Recovery](/docs/ja-jp/customize/events/event-testing-observability-and-failure-recovery) を参照してください。
 
 <div id="extend-the-pattern">
-  ## パターンを拡張する
+  ## パターンを拡張する {#extend-the-pattern}
 </div>
 
 このガイドで紹介しているアーキテクチャは、HubSpot や Slack に限定されるものではありません。REST API を備えた任意のシステムの組み合わせに、同じファンアウトパターンを適用できます。
@@ -299,7 +299,7 @@ Action が複数の外部システムを呼び出す場合、ある呼び出し�
 別のシステムを対象にする場合は、適切な API エンドポイントと認証方式に合わせて Action ハンドラーを更新します。
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * [ID の変更を外部システムと関連付ける](/docs/ja-jp/customize/events/correlate-identity-changes)

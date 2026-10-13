@@ -7,17 +7,17 @@
       ]
     },
     {
-      "group": "Composants Web",
+      "group": "Web Components",
       "icon": "globe",
       "pages": [
         "docs/fr-ca/get-started/universal-components/web/web-overview",
         "docs/fr-ca/get-started/universal-components/web/auth0-component-provider",
         "docs/fr-ca/get-started/universal-components/web/universal-components-style",
         {
-          "group": "Composants",
+          "group": "Components",
           "pages": [
             {
-              "group": "Mon organisation",
+              "group": "My Organization",
               "pages": [
                 "docs/fr-ca/get-started/universal-components/web/components/build-delegated-admin",
                 "docs/fr-ca/get-started/universal-components/web/components/edit-organization-details",
@@ -28,7 +28,7 @@
               ]
             },
             {
-              "group": "Mon compte",
+              "group": "My Account",
               "pages": [
                 "docs/fr-ca/get-started/universal-components/web/components/my-account-overview",
                 "docs/fr-ca/get-started/universal-components/web/components/user-mfa-management",
@@ -40,16 +40,16 @@
       ]
     },
     {
-      "group": "Composants iOS",
+      "group": "iOS Components",
       "icon": "apple",
       "pages": [
         "docs/fr-ca/get-started/universal-components/ios/ios-overview",
         "docs/fr-ca/get-started/universal-components/ios/ios-theming",
         {
-          "group": "Composants",
+          "group": "Components",
           "pages": [
             {
-              "group": "Mon compte",
+              "group": "My Account",
               "pages": [
                 "docs/fr-ca/get-started/universal-components/ios/components/my-account-overview",
                 "docs/fr-ca/get-started/universal-components/ios/components/auth-methods-management",
@@ -61,16 +61,16 @@
       ]
     },
     {
-      "group": "Composants Android",
+      "group": "Android Components",
       "icon": "android",
       "pages": [
         "docs/fr-ca/get-started/universal-components/android/android-overview",
         "docs/fr-ca/get-started/universal-components/android/android-theming",
         {
-          "group": "Composants",
+          "group": "Components",
           "pages": [
             {
-              "group": "Mon compte",
+              "group": "My Account",
               "pages": [
                 "docs/fr-ca/get-started/universal-components/android/components/my-account-overview",
                 "docs/fr-ca/get-started/universal-components/android/components/auth-methods-management",

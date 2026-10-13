@@ -7,7 +7,7 @@ validatedOn: 2026-02-06
 Vous pouvez ajouter cette fonctionnalité à votre application iOS native afin de permettre à vos utilisateurs de s’authentifier avec Sign In with Apple. Pour en savoir plus sur la mise en œuvre, consultez le [iOS Swift - Sign In with Apple Quickstart](/docs/fr-ca/quickstart/native/ios-swift) d’Auth0.
 
 <div id="how-it-works">
-  ## Fonctionnement
+  ## Fonctionnement {#how-it-works}
 </div>
 
 Pour une application native, le flux de connexion Sign In with Apple fonctionne comme suit :
@@ -24,7 +24,7 @@ Pour une application native, le flux de connexion Sign In with Apple fonctionne 
 * **Étape 6** : Auth0 enregistre le profil de l’utilisateur, exécute les Rules et l’autorisation, puis émet des <Tooltip tip="Jeton d’accès : justificatif d’autorisation, sous la forme d’une chaîne opaque ou d’un JWT, utilisé pour accéder à une API." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=access+tokens">jetons d’accès</Tooltip> Auth0 (<Tooltip tip="Jeton d’actualisation : jeton utilisé pour obtenir un nouveau jeton d’accès sans obliger les utilisateurs à se connecter de nouveau." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=refresh+tokens">jetons d’actualisation</Tooltip> et <Tooltip tip="jeton d’identité : jeton utilisé pour transmettre des renseignements sur l’identité de l’utilisateur authentifié." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=ID+tokens">jetons d’identité</Tooltip>) selon ce qui est demandé. Ces jetons servent à protéger vos API et vos utilisateurs gérés par Auth0.
 
 <div id="prerequisites">
-  ## Prérequis
+  ## Prérequis {#prerequisites}
 </div>
 
 Avant de configurer Sign In with Apple pour votre application native dans Auth0, vous devez :
@@ -39,7 +39,7 @@ Avant de configurer Sign In with Apple pour votre application native dans Auth0,
 * Si vous utilisez le flux de connexion Classic Login ou intégrez `Lock.js` à votre application, assurez-vous d’utiliser `Lock.js` version 11.16 ou ultérieure.
 
 <div id="configure-and-enable-the-connection-in-auth0">
-  ## Configurer et activer la connexion dans Auth0
+  ## Configurer et activer la connexion dans Auth0 {#configure-and-enable-the-connection-in-auth0}
 </div>
 
 Une fois que vous avez obtenu les identifiants nécessaires à partir de votre compte Apple Developer, vous devez configurer le client d’application et les paramètres de la connexion dans Auth0.
@@ -66,7 +66,7 @@ Une fois que vous avez obtenu les identifiants nécessaires à partir de votre c
 </Callout>
 
 <div id="logout">
-  ## Déconnexion
+  ## Déconnexion {#logout}
 </div>
 
 Comme la mise en œuvre de la connexion Native iOS n’utilise pas les flows standard basés sur le navigateur, les responsables de l’application doivent aussi veiller à effectuer la déconnexion correctement. Lorsqu’une application doit effectuer une déconnexion, elle doit prendre les mesures suivantes :
@@ -81,7 +81,7 @@ Comme la mise en œuvre de la connexion Native iOS n’utilise pas les flows sta
 </Callout>
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Politique de limitation du débit](/docs/fr-ca/troubleshoot/customer-support/operational-policies/rate-limit-policy)

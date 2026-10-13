@@ -9,7 +9,7 @@ import {AuthCodeBlock} from "/snippets/ja-jp/AuthCodeBlock.jsx";
 import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 * [Auth0 にアプリケーションを登録する](/docs/ja-jp/get-started/auth0-overview/create-applications).
@@ -19,7 +19,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
   * アプリケーションの [グラントタイプ](/docs/ja-jp/get-started/applications/update-grant-types) に適切なフローが含まれていることを確認します。
 
 <div id="steps">
-  ## 手順
+  ## 手順 {#steps}
 </div>
 
 アプリケーションを OIDC <Tooltip tip="IDプロバイダー（IdP）: デジタルアイデンティティを保存・管理するサービス。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Identity+Provider">IDプロバイダー</Tooltip> に接続するには、次の手順を実行します。
@@ -30,7 +30,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 4. [接続をテストする](#test-the-connection)
 
 <div id="set-up-your-app-in-the-openid-connect-identity-provider">
-  ## OpenID Connect IDプロバイダーでアプリを設定する
+  ## OpenID Connect IDプロバイダーでアプリを設定する {#set-up-your-app-in-the-openid-connect-identity-provider}
 </div>
 
 ユーザーが OIDC IDプロバイダーを使ってログインできるようにするには、その IdP にアプリケーションを登録する必要があります。この手順は OIDC IDプロバイダーによって異なるため、作業を完了するには利用している IdP のドキュメントに従ってください。
@@ -50,13 +50,13 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 このプロセスの中で、OIDC IDプロバイダーは登録された API に一意の識別子を発行します。通常、これは **<Tooltip tip="Client ID: Auth0 から登録済みリソースに付与される識別値。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Client+ID">Client ID</Tooltip>** または **Application ID** と呼ばれます。後で必要になるので、この値は控えておいてください。
 
 <div id="create-an-enterprise-connection-in-auth0">
-  ## Auth0 でエンタープライズ接続を作成する
+  ## Auth0 でエンタープライズ接続を作成する {#create-an-enterprise-connection-in-auth0}
 </div>
 
 Auth0 で OIDC エンタープライズ接続を設定する前に、OIDC プロバイダーでアプリを設定した際に生成された **Application (Client) ID** と **<Tooltip tip="Client Secret: クライアント（アプリケーション）が認可サーバーに対して認証するために使用するシークレットです。クライアントと認可サーバーのみが知っている必要があり、推測されないよう十分なランダム性を備えていなければなりません。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Client+secret">Client Secret</Tooltip>** を用意しておいてください。
 
 <div id="create-an-enterprise-connection-using-the-auth0-dashboard">
-  ### Auth0 Dashboard を使用してエンタープライズ接続を作成する
+  ### Auth0 Dashboard を使用してエンタープライズ接続を作成する {#create-an-enterprise-connection-using-the-auth0-dashboard}
 </div>
 
 <Warning>
@@ -123,7 +123,7 @@ Auth0 で OIDC エンタープライズ接続を設定する前に、OIDC プロ
 6. **変更を保存** を選択します。
 
 <div id="create-an-enterprise-connection-using-the-management-api">
-  ### Management API を使用してエンタープライズ接続を作成する
+  ### Management API を使用してエンタープライズ接続を作成する {#create-an-enterprise-connection-using-the-management-api}
 </div>
 
 以下の例では、Auth0 の <Tooltip tip="Management API: 顧客が管理タスクを実行できるようにする製品です。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Management+API">Management API</Tooltip> を使用して接続を作成するさまざまな方法を紹介します。メタデータ URI を指定する方法と、OIDC URL を明示的に設定する方法があります。
@@ -133,7 +133,7 @@ OIDC 接続では、Auth0 はメタデータディスカバリードキュメン
 詳しくは、[IDプロバイダー](/docs/ja-jp/authenticate/identity-providers) を参照してください。
 
 <div id="use-front-channel-with-discovery-endpoint">
-  #### ディスカバリーエンドポイントでフロントチャネルを使用する
+  #### ディスカバリーエンドポイントでフロントチャネルを使用する {#use-front-channel-with-discovery-endpoint}
 </div>
 
 <AuthCodeGroup>
@@ -283,7 +283,7 @@ OIDC 接続では、Auth0 はメタデータディスカバリードキュメン
 </AuthCodeGroup>
 
 <div id="use-back-channel-with-discovery-endpoint">
-  #### ディスカバリーエンドポイントでバックチャネルを利用する
+  #### ディスカバリーエンドポイントでバックチャネルを利用する {#use-back-channel-with-discovery-endpoint}
 </div>
 
 <AuthCodeGroup>
@@ -434,7 +434,7 @@ OIDC 接続では、Auth0 はメタデータディスカバリードキュメン
 </AuthCodeGroup>
 
 <div id="use-back-channel-specifying-issuer-settings">
-  #### 発行者設定を指定してバックチャネルを使用する
+  #### 発行者設定を指定してバックチャネルを使用する {#use-back-channel-specifying-issuer-settings}
 </div>
 
 <AuthCodeGroup>
@@ -586,7 +586,7 @@ OIDC 接続では、Auth0 はメタデータディスカバリードキュメン
 </AuthCodeGroup>
 
 <div id="use-front-channel-specifying-issuer-settings">
-  #### 発行者設定を指定してフロントチャネル方式を使用する
+  #### 発行者設定を指定してフロントチャネル方式を使用する {#use-front-channel-specifying-issuer-settings}
 </div>
 
 <AuthCodeGroup>
@@ -738,31 +738,31 @@ OIDC 接続では、Auth0 はメタデータディスカバリードキュメン
 </AuthCodeGroup>
 
 <div id="configure-pkce-and-claims-mapping">
-  ## PKCE とクレームマッピングを設定する
+  ## PKCE とクレームマッピングを設定する {#configure-pkce-and-claims-mapping}
 </div>
 
 このエンタープライズ接続では、Proof Key for Code Exchange (PKCE) に加え、属性とトークンのマッピングもサポートできます。詳しくは、[OIDC 接続向けの PKCE とクレームマッピングを設定する](/docs/ja-jp/authenticate/identity-providers/enterprise-identity-providers/configure-pkce-claim-mapping-for-oidc)を参照してください。
 
 <div id="enable-the-enterprise-connection-for-your-auth0-application">
-  ## Auth0アプリケーションのエンタープライズ接続を有効にする
+  ## Auth0アプリケーションのエンタープライズ接続を有効にする {#enable-the-enterprise-connection-for-your-auth0-application}
 </div>
 
 新しいエンタープライズ接続を使用するには、まず Auth0アプリケーションで[この接続を有効にする](/docs/ja-jp/authenticate/identity-providers/enterprise-identity-providers/enable-enterprise-connections)必要があります。
 
 <div id="test-the-connection">
-  ## 接続をテストする
+  ## 接続をテストする {#test-the-connection}
 </div>
 
 これで、[接続をテストする](/docs/ja-jp/authenticate/identity-providers/enterprise-identity-providers/test-enterprise-connections)準備が整いました。
 
 <div id="manually-configure-issuer-metadata">
-  ## 発行者メタデータを手動で設定する
+  ## 発行者メタデータを手動で設定する {#manually-configure-issuer-metadata}
 </div>
 
 Issuer URL エンドポイントの **発行者の詳細を表示** をクリックすると、データを確認し、必要に応じて調整できます。
 
 <div id="federate-with-auth0">
-  ## Auth0 とフェデレーションを行う
+  ## Auth0 とフェデレーションを行う {#federate-with-auth0}
 </div>
 
 <Tooltip tip="OpenID: アプリケーションがログイン情報を収集・保存することなくユーザーの本人確認を行えるようにする、認証のためのオープン標準です。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=OpenID">OpenID</Tooltip> Connect エンタープライズ接続は、別の Auth0 テナントにフェデレーションする場合に便利です。**発行者** フィールドに Auth0 テナントの URL (例: `https://<tenant>.us.auth0.com`) を入力し、**Client ID** フィールドに、フェデレーション先のテナント内にある任意のアプリケーションの Client ID を入力します。
@@ -772,7 +772,7 @@ Issuer URL エンドポイントの **発行者の詳細を表示** をクリッ
 </Callout>
 
 <div id="configure-global-token-revocation">
-  ## グローバルトークン失効を設定する
+  ## グローバルトークン失効を設定する {#configure-global-token-revocation}
 </div>
 
 この接続タイプはグローバルトークン失効エンドポイントをサポートしており、これにより、準拠したアイデンティティプロバイダーは Auth0 のユーザーセッションを失効させ、<Tooltip tip="リフレッシュトークン: ユーザーに再度ログインさせることなく、新しいアクセストークンを取得するために使用されるトークンです。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=refresh+tokens">リフレッシュトークン</Tooltip>を取り消し、安全なバックチャネルを使用するアプリケーションに対してバックチャネルログアウトを開始できます。

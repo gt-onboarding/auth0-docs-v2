@@ -10,7 +10,7 @@ description: "Universal Login の `logout` 画面をカスタマイズするた�
 </Frame>
 
 <div id="import">
-  ## インポート
+  ## インポート {#import}
 </div>
 
 各画面には、それぞれ固有のフックとメソッドがあります。SDK は、各画面で **部分インポート** と **ルートインポート** をサポートしています。
@@ -56,7 +56,7 @@ function LogoutScreen() {
 ```
 
 <div id="context-hooks">
-  ## コンテキストHooks
+  ## コンテキストHooks {#context-hooks}
 </div>
 
 `logout` 画面で Auth0 のコンテキストデータに読み取り専用でアクセスするための、画面スコープのフックです。`@auth0/auth0-acul-react/logout` からインポートします。
@@ -168,7 +168,7 @@ function LogoutScreen() {
 </ParamField>
 
 <div id="methods">
-  ## メソッド
+  ## メソッド {#methods}
 </div>
 
 <ParamField body="confirmLogout" type="Promise<void>">
@@ -206,7 +206,7 @@ function LogoutScreen() {
 </ParamField>
 
 <div id="commonutility-hooks">
-  ## 共通/ユーティリティ Hooks
+  ## 共通/ユーティリティ Hooks {#commonutility-hooks}
 </div>
 
 <ParamField body={<a href="/docs/ja-jp/libraries/acul/react-sdk/API-Reference/Hooks/useAuth0Themes">useAuth0Themes</a>} type="Hooks">

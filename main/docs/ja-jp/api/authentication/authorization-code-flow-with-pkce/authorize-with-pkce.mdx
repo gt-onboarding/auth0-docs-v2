@@ -6,7 +6,7 @@ description: "モバイルおよびシングルページアプリケーション
 import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `GET /authorize`
@@ -14,7 +14,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 これは、モバイルアプリがAPIにアクセスするために使用するOAuth 2.0のグラントです。このフローを開始する前に、`code_verifier` を生成して保存し、それを使って認可リクエストで送信する `code_challenge` を生成する必要があります。
 
 <div id="query-parameters">
-  ## クエリパラメーター
+  ## クエリパラメーター {#query-parameters}
 </div>
 
 <ParamField query="audience" type="string" required>
@@ -78,7 +78,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 </ParamField>
 
 <div id="response-schema">
-  ## レスポンススキーマ
+  ## レスポンススキーマ {#response-schema}
 </div>
 
 <ResponseSchema statusCode="default error">
@@ -92,7 +92,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 </ResponseSchema>
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | Status  | Description                           |

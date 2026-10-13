@@ -15,7 +15,7 @@ AWS EventBridge または webhook のいずれかを使用してイベントス�
 </Callout>
 
 <div id="access-management-api-optional">
-  ## Management API でアクセスする (任意)
+  ## Management API でアクセスする (任意) {#access-management-api-optional}
 </div>
 
 イベントストリームは、<Tooltip tip="Auth0 Dashboard: サービスを設定するための Auth0 の主要製品です。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Auth0+dashboard">Auth0 Dashboard</Tooltip> または [Auth0 Management API](https://auth0.com/docs/api/management/v2) を使用してプロビジョニングできます。<Tooltip tip="Management API: お客様が管理タスクを実行できるようにする製品です。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Management+API">Management API</Tooltip> を使用する場合は、イベントストリームを設定する前に、マシンツーマシン (M2M) アプリケーションを作成し、Management API のトークンで認証する必要があります。詳しくは、[Management API Access Tokens](/docs/ja-jp/secure/tokens/access-tokens/management-api-access-tokens) を参照してください。
@@ -36,13 +36,13 @@ AWS EventBridge または webhook のいずれかを使用してイベントス�
 6. [Get Management API Access Tokens](/docs/ja-jp/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production) を参照して、アクセストークンを取得し保存します。
 
 <div id="aws-eventbridge">
-  ## AWS EventBridge
+  ## AWS EventBridge {#aws-eventbridge}
 </div>
 
 以下では、AWS EventBridge を使用してイベントストリームを作成し、有効化する方法について説明します。
 
 <div id="eventbridge-prerequisites">
-  ### EventBridge の前提条件
+  ### EventBridge の前提条件 {#eventbridge-prerequisites}
 </div>
 
 イベントストリームで AWS EventBridge を使用するには、次のものが必要です。
@@ -55,7 +55,7 @@ AWS EventBridge または webhook のいずれかを使用してイベントス�
 * AWS アカウント ID とリージョン
 
 <div id="create-an-event-stream-eventbridge">
-  ### イベントストリームを作成 (EventBridge)
+  ### イベントストリームを作成 (EventBridge) {#create-an-event-stream-eventbridge}
 </div>
 
 <Tabs>
@@ -128,7 +128,7 @@ AWS EventBridge または webhook のいずれかを使用してイベントス�
       * EventBridge ストリームの設定に必要な AWS アカウント ID と AWS リージョンを用意する
     </Note>
 
-    ### ファイル構成
+### ファイル構成 {#file-configuration}
 
     Terraform を使用してイベントストリームをプロビジョニングするには、適切に構成されたプロジェクトディレクトリが必要です。初めて設定する場合の構成例を以下に示します。
 
@@ -141,7 +141,7 @@ AWS EventBridge または webhook のいずれかを使用してイベントス�
 
     ```
 
-    ### 変数を定義する
+### 変数を定義する {#define-variables}
 
     `variables.tf` ファイルで、ストリーム設定に必要な入力変数を宣言します。
 
@@ -157,7 +157,7 @@ AWS EventBridge または webhook のいずれかを使用してイベントス�
     }
     ```
 
-    ### 変数の値を設定する
+### 変数の値を設定する {#set-variable-values}
 
     `terraform.tfvars` ファイルに、ご利用の環境に合わせた実際の値を指定します。
 
@@ -166,7 +166,7 @@ AWS EventBridge または webhook のいずれかを使用してイベントス�
     aws_region     = "<your-aws-region>"     # 例: "us-east-1"
     ```
 
-    ### 環境変数を設定する
+### 環境変数を設定する {#set-environment-variables}
 
     ターミナルで、前述の「Access Management API (任意) 」でコピーした認証情報を使って、必要な 3 つの環境変数を設定します。
 
@@ -176,7 +176,7 @@ AWS EventBridge または webhook のいずれかを使用してイベントス�
     export AUTH0_CLIENT_SECRET="your_m2m_client_secret"
     ```
 
-    ## イベントストリームを作成する
+## イベントストリームを作成する {#create-an-event-stream}
 
     この例では、`auth0_event_stream` リソースを使用して、`user.created` イベントを購読するイベントストリームを作成します。`user.created` イベントは、テナントに新しいユーザーが登録されるたびに発生します。以下のサンプルを `main.tf` ファイルで使用してください。
 
@@ -229,7 +229,7 @@ AWS EventBridge または webhook のいずれかを使用してイベントス�
 </Tabs>
 
 <div id="webhooks">
-  ## Webhooks
+  ## Webhooks {#webhooks}
 </div>
 
 AWS EventBridge の代わりに、Webhook を使ってイベントストリームを利用できます。
@@ -244,7 +244,7 @@ AWS EventBridge の代わりに、Webhook を使ってイベントストリー�
 既存のサービスを利用する場合は、[イベントストリームを作成する (Webhook) ](#create-an-event-stream-webhooks-) に進んでください。そうでない場合は、以下の手順に沿って独自の基本的な Webhook ハンドラーを作成してください。
 
 <div id="webhook-prerequisites">
-  ### Webhookの前提条件
+  ### Webhookの前提条件 {#webhook-prerequisites}
 </div>
 
 Webhookハンドラーを正しく作成するには、以下がインストールされていることを確認してください。
@@ -255,7 +255,7 @@ Webhookハンドラーを正しく作成するには、以下がインストー�
 * `ngrok`
 
 <div id="write-the-webhook-handler">
-  ### webhook ハンドラーを作成する
+  ### webhook ハンドラーを作成する {#write-the-webhook-handler}
 </div>
 
 1. `express` を `node_modules` フォルダーにインストールし、`package.json` の依存関係にも追加します。
@@ -367,7 +367,7 @@ Webhookハンドラーを正しく作成するには、以下がインストー�
    ```
 
 <div id="create-an-event-stream-webhooks">
-  ### イベントストリームを作成する (webhooks)
+  ### イベントストリームを作成する (webhooks) {#create-an-event-stream-webhooks}
 </div>
 
 イベントストリームを使用すると、Auth0テナント内のリアルタイムな変更を取得し、処理のために外部システムに送信できます。
@@ -411,7 +411,7 @@ Webhookハンドラーを正しく作成するには、以下がインストー�
     }
     ```
 
-    #### イベントストリームを確認する
+#### イベントストリームを確認する {#verify-the-event-stream}
 
     イベントストリームを作成したら、次のコマンドを使用して、イベントストリームが存在することを確認できます。
 
@@ -438,7 +438,7 @@ Webhookハンドラーを正しく作成するには、以下がインストー�
   </Tab>
 
   <Tab title="Terraform">
-    ### ファイル構成
+### ファイル構成 {#file-configuration-2}
 
     Terraform を使用してイベントストリームをプロビジョニングするには、整理されたプロジェクトディレクトリ構成が必要です。初めて設定する際の構成例を以下に示します。
 
@@ -449,7 +449,7 @@ Webhookハンドラーを正しく作成するには、以下がインストー�
     └── terraform.tfvars    # 変数の値: 実際の設定値（例: "123456789012"）を保持します。
     ```
 
-    ### 変数を定義する
+### 変数を定義する {#define-variables-2}
 
     `variables.tf` ファイルで、ストリーム設定に必要な入力変数を宣言します。
 
@@ -466,7 +466,7 @@ Webhookハンドラーを正しく作成するには、以下がインストー�
     }
     ```
 
-    ### 環境設定
+### 環境設定 {#environment-configuration}
 
     上で生成した API トークンを使用して、`TF_VAR_` プレフィックスを付けた環境変数をターミナルで安全に設定します。
 
@@ -486,7 +486,7 @@ Webhookハンドラーを正しく作成するには、以下がインストー�
     export AUTH0_CLIENT_SECRET="your_m2m_client_secret"
     ```
 
-    ## イベントストリームを作成する
+## イベントストリームを作成する {#create-an-event-stream-2}
 
     この例では、`auth0_event_stream` リソースを使用して、`user.created` イベントをサブスクライブするイベントストリームを作成します。このイベントは、テナントで新しいユーザーが登録されるたびに発生します。次のサンプルを `main.tf` ファイルで使用してください。
 
@@ -546,13 +546,13 @@ Webhookハンドラーを正しく作成するには、以下がインストー�
 ストリームがアクティブになったら、イベントストリームをテストできます。詳しくは、[**イベントのテスト、可観測性、障害からの復旧**](/docs/ja-jp/customize/events/event-testing-observability-and-failure-recovery)を参照してください。
 
 <div id="auth0-actions">
-  ## Auth0 Actions
+  ## Auth0 Actions {#auth0-actions}
 </div>
 
 以下では、Auth0 Actions を使用してイベントストリームを作成し、有効化する方法を説明します。
 
 <div id="create-an-event-stream-actions">
-  ### イベントストリームを作成する (Actions)
+  ### イベントストリームを作成する (Actions) {#create-an-event-stream-actions}
 </div>
 
 <Tabs>
@@ -634,7 +634,7 @@ Webhookハンドラーを正しく作成するには、以下がインストー�
 </Tabs>
 
 <div id="learn-more">
-  ## 詳しく見る
+  ## 詳しく見る {#learn-more}
 </div>
 
 * [イベントカタログ](/docs/ja-jp/events)

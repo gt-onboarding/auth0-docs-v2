@@ -6,7 +6,7 @@ title: 'Lock.Android: 新規登録時のカスタムフィールド'
 **Lock.Android** では、新しいアカウントを作成する前にユーザーが入力する必要のある追加フィールドを指定できます。これらの追加フィールドは、ユーザーが基本フィールド (メールアドレス、ユーザー名、パスワード) を入力した後、2 つ目の画面に表示されます。
 
 <div id="create-the-custom-fields">
-  ## Custom Fields を作成する
+  ## Custom Fields を作成する {#create-the-custom-fields}
 </div>
 
 4 つの必須パラメータをすべて指定して、新しい `CustomField` オブジェクトを作成します。
@@ -33,7 +33,7 @@ val customFields = listOf(nameField, androidField)
 必要なフィールドの数だけ、上記の手順を繰り返します。
 
 <div id="use-the-custom-fields">
-  ## カスタムフィールドを使用する
+  ## カスタムフィールドを使用する {#use-the-custom-fields}
 </div>
 
 Lock の構築時に、`withSignUpFields()` メソッドを使用してカスタムフィールドの一覧を Lock インスタンスに渡します。
@@ -50,7 +50,7 @@ val lock = Lock.newBuilder(auth0, callback)
 サインアップ時には、追加フィールドは、選択した Storage オプションに応じて `user_metadata` 属性に追加されるか、root ユーザープロファイルに直接設定されます。これらのプロパティには、ユーザープロファイルを照会することでいつでもアクセスでき、Auth0 Dashboard の Users セクションからも確認できます。
 
 <div id="field-types">
-  ## フィールドの種類
+  ## フィールドの種類 {#field-types}
 </div>
 
 各カスタムフィールドには、関連付けられる `FieldType` を 1 つだけ設定できます。
@@ -61,7 +61,7 @@ val lock = Lock.newBuilder(auth0, callback)
 * TYPE&#95;EMAIL
 
 <div id="storage">
-  ## 保存先
+  ## 保存先 {#storage}
 </div>
 
 各カスタムフィールドに指定できる `Storage` は 1 つだけです。保存先として、プロファイルのルートレベルにある属性、または `user_metadata` 属性内を選択できます。保存場所を指定するには、5 つのパラメータを取るコンストラクタを使用し、任意の `Storage` パラメータを渡します。デフォルトでは、フィールドは `user_metadata` 属性内に保存されます。

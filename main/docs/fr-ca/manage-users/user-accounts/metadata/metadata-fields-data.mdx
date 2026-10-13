@@ -16,11 +16,11 @@ Auth0 distingue trois types de métadonnées servant à stocker des types préci
 | **Informations sur l’application** | `client_metadata` dans l’objet `Client`, `context.clientMetadata` dans Rules et `event.client.metadata` dans les Actions post-login. | Stocke des renseignements sur une application (ou *client* dans la terminologie OIDC OAuth2). Par exemple, l’URL de la page d’accueil de l’application (toute valeur qu’Auth0 ne définit pas dans les paramètres de l’application).                                                                                                           |
 
 <div id="metadata-field-names">
-  ## Noms de champ des métadonnées
+  ## Noms de champ des métadonnées {#metadata-field-names}
 </div>
 
 <div id="accepted-characters">
-  ### Caractères acceptés
+  ### Caractères acceptés {#accepted-characters}
 </div>
 
 Les noms de champ ne doivent pas contenir les caractères `.` (point) ni `$` (signe dollar).
@@ -44,7 +44,7 @@ Mais vous pouvez l’étendre ainsi :
 ```
 
 <div id="dynamic-field-names">
-  ### Noms de champ dynamiques
+  ### Noms de champ dynamiques {#dynamic-field-names}
 </div>
 
 Les noms de champ doivent être statiques. Les noms de champ dynamiques réduisent l’efficacité de l’indexation et nuisent aux performances des requêtes de recherche. Un schéma statique est plus facile à interroger, à manipuler et à utiliser.
@@ -82,7 +82,7 @@ Faites ceci :
 ```
 
 <div id="name-collision">
-  ### Collision de noms
+  ### Collision de noms {#name-collision}
 </div>
 
 Évitez d’utiliser le même nom pour les champs `app_metadata` et les champs du profil racine. Le champ `app_metadata` est fusionné au profil racine, dans Rules comme dans Actions, ce qui peut remplacer des champs du profil racine.
@@ -108,7 +108,7 @@ Par exemple, si un utilisateur a un champ `groups` dans son profil racine (renvo
 Lorsque vous lisez le champ `groups` dans l’[objet `user`](/docs/fr-ca/customize/rules/user-object-in-rules) depuis une [Rule](/docs/fr-ca/manage-users/user-accounts/metadata/manage-metadata-rules), il renvoie : `["internal-group-1", "internal-group-2"]`.
 
 <div id="metadata-data-types">
-  ## Types de données des métadonnées
+  ## Types de données des métadonnées {#metadata-data-types}
 </div>
 
 Les champs de métadonnées prennent en charge tous les [types de données compatibles avec JSON](https://datatracker.ietf.org/doc/html/rfc7159) :
@@ -121,11 +121,11 @@ Les champs de métadonnées prennent en charge tous les [types de données compa
 Assurez-vous d’utiliser des types de données cohérents d’un utilisateur à l’autre. Par exemple, si vous stockez une valeur sous forme de chaîne pour un utilisateur (`user.user_metadata.age = "23"`) et sous forme de nombre pour un autre (`user.user_metadata.age = 23`), vous pourriez rencontrer des problèmes lors de la récupération des données.
 
 <div id="limitations-and-restrictions">
-  ## Limites et restrictions
+  ## Limites et restrictions {#limitations-and-restrictions}
 </div>
 
 <div id="rate-limits">
-  ### Limites de débit
+  ### Limites de débit {#rate-limits}
 </div>
 
 Lorsque vous mettez à jour des métadonnées pendant la connexion à l’aide de [Rules](/docs/fr-ca/manage-users/user-accounts/metadata/manage-metadata-rules) ou [Actions](/docs/fr-ca/manage-users/user-accounts/metadata/manage-user-metadata), vous êtes soumis aux limites de débit de votre tenant. Pour en savoir plus, consultez [les limites de débit des points de terminaison de la Management API](/docs/fr-ca/troubleshoot/customer-support/operational-policies/rate-limit-policy/management-api-endpoint-rate-limits).
@@ -137,7 +137,7 @@ Lorsque vous mettez à jour des métadonnées pendant la connexion à l’aide d
 </Warning>
 
 <div id="size-limits-and-storage">
-  ### Limites de taille et stockage
+  ### Limites de taille et stockage {#size-limits-and-storage}
 </div>
 
 * Il existe une limite de 1 Mo par utilisateur pour les données utilisateur pouvant être indexées, interrogées et renvoyées par le [point de terminaison de recherche d’utilisateurs](https://auth0.com/docs/api/management/v2/users/get-users). Si un profil utilisateur dépasse 1 Mo, les valeurs d’attribut de plus de 256 caractères dans `app_metadata` et `user_metadata` ne seront pas interrogeables ni renvoyées dans les résultats de recherche. Si le profil utilisateur dépasse encore 1 Mo après l’omission de ces valeurs volumineuses, aucun des attributs `app_metadata` et `user_metadata` ne pourra être interrogé ni renvoyé pour cet utilisateur. Auth0 capture et consigne les cas où un profil utilisateur dépasse toujours 1 Mo après ces omissions sous le `wum` [code d’événement](/docs/fr-ca/deploy-monitor/logs/log-event-type-codes). Le [point de terminaison Get User](https://auth0.com/docs/api/management/v2/users/get-users-by-id) doit être utilisé pour récupérer tous les attributs de métadonnées des profils utilisateur de trop grande taille.
@@ -145,7 +145,7 @@ Lorsque vous mettez à jour des métadonnées pendant la connexion à l’aide d
 * Le champ `client_metadata` peut contenir un maximum de 10 clés. Ses clés et ses valeurs ont chacune une longueur maximale de 255 caractères et ne peuvent pas contenir de caractères spéciaux UTF-8.
 
 <div id="restrictions">
-  ### Restrictions
+  ### Restrictions {#restrictions}
 </div>
 
 Le champ `app_metadata` ne doit contenir aucune des propriétés suivantes :
@@ -170,7 +170,7 @@ Le champ `app_metadata` ne doit contenir aucune des propriétés suivantes :
 * `user_id`
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Gérer les métadonnées à l’aide de Rules](/docs/fr-ca/manage-users/user-accounts/metadata/manage-metadata-rules)

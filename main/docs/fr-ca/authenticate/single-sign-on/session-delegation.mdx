@@ -14,7 +14,7 @@ La délégation de session permet à un acteur autorisé, par exemple un agent d
 </Callout>
 
 <div id="how-it-works">
-  ## Fonctionnement
+  ## Fonctionnement {#how-it-works}
 </div>
 
 La délégation de session se fait en deux étapes : votre application Admin obtient d’abord un jeton de transfert de session, puis l’échange pour établir la session déléguée dans l’application Web cible.
@@ -48,7 +48,7 @@ sequenceDiagram
 ```
 
 <div id="part-1-get-a-session-transfer-token">
-  ### Partie 1 : Obtenir un jeton de transfert de session
+  ### Partie 1 : Obtenir un jeton de transfert de session {#part-1-get-a-session-transfer-token}
 </div>
 
 1. L’acteur (un agent de soutien) s’authentifie auprès d’Auth0 à l’aide d’un outil d’administration et obtient une preuve de sa propre identité, comme un jeton ID Auth0, à utiliser comme `actor_token`.
@@ -57,7 +57,7 @@ sequenceDiagram
 4. Auth0 émet un jeton de transfert de session qui identifie l’utilisateur sujet et consigne l’acteur pour la transaction.
 
 <div id="part-2-redeem-the-session-transfer-token-browser-redirect">
-  ### Partie 2 : Échanger le jeton de transfert de session (redirection dans le navigateur)
+  ### Partie 2 : Échanger le jeton de transfert de session (redirection dans le navigateur) {#part-2-redeem-the-session-transfer-token-browser-redirect}
 </div>
 
 La manière dont votre application transmet le jeton de transfert de session à l’application Web cible dépend de votre mise en œuvre, mais il est recommandé de l’ajouter comme paramètre de requête à l’`initiate_login_uri` de l’application cible :
@@ -69,7 +69,7 @@ La manière dont votre application transmet le jeton de transfert de session à 
 Consultez [Implement délégation de session](/docs/fr-ca/authenticate/single-sign-on/session-delegation/implement-session-delegation) pour obtenir tous les détails sur la requête et la response, savoir comment créer la redirection et gérer les jetons obtenus. Découvrez comment [Configure délégation de session](/docs/fr-ca/authenticate/single-sign-on/session-delegation/configure-session-delegation) pour votre application, et consultez [Delegated Session Behavior and Monitoring](/docs/fr-ca/authenticate/single-sign-on/session-delegation/session-delegation-behavior-and-monitoring) pour comprendre le comportement des sessions et la journalisation d’audit.
 
 <div id="limitations">
-  ## Limites
+  ## Limites {#limitations}
 </div>
 
 * Seul le flux avec code d’autorisation est pris en charge pour établir une session déléguée. SAML, WS-Federation et le flux implicite ne sont pas pris en charge.

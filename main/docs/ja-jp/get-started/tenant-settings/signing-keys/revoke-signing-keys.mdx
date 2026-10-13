@@ -10,7 +10,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 <Tooltip tip="Auth0 Dashboard: サービスを設定するための Auth0 の主要製品。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip> または <Tooltip tip="Auth0 Dashboard: サービスを設定するための Auth0 の主要製品。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Management+API">Management API</Tooltip> を使用して、テナントのアプリケーションまたは API の署名鍵を取り消すことができます。この署名鍵は、アプリケーションまたは API に送信される <Tooltip tip="Management API: 顧客が管理タスクを実行できるようにする製品。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=ID+tokens">ID トークン</Tooltip>、<Tooltip tip="ID Token: リソースへのアクセスではなく、クライアント自体を対象としたクレデンシャル。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=access+tokens">アクセストークン</Tooltip>、<Tooltip tip="Access Token: API へのアクセスに使用される、不透明な文字列または JWT 形式の認可クレデンシャル。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=SAML">SAML</Tooltip> アサーション、および <Tooltip tip="Security Assertion Markup Language (SAML): パスワードなしで 2 者間で認証情報を交換できるようにする標準化プロトコル。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=WS-Fed">WS-Fed</Tooltip> アサーションの署名に使用されます。詳しくは、[署名鍵](/docs/ja-jp/get-started/tenant-settings/signing-keys) を参照してください。
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 * これまで使用していた署名鍵を取り消すには、先にそのキーをローテーションしておく必要があります。詳しくは、[署名鍵のローテーション](/docs/ja-jp/get-started/tenant-settings/signing-keys/rotate-signing-keys)を読むか、以下の**署名鍵をローテーションして取り消す**セクションを参照してください。
@@ -21,11 +21,11 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 </Warning>
 
 <div id="use-the-dashboard">
-  ## Auth0 Dashboard を使う
+  ## Auth0 Dashboard を使う {#use-the-dashboard}
 </div>
 
 <div id="revoke-previously-used-signing-key">
-  ### 以前使用した署名鍵を取り消す
+  ### 以前使用した署名鍵を取り消す {#revoke-previously-used-signing-key}
 </div>
 
 1. [Auth0 Dashboard &gt; 設定 &gt; 署名鍵](https://manage.auth0.com/#/tenant/signing_keys) に移動します。
@@ -35,7 +35,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 3. 確認のため、**取り消す** を選択します。
 
 <div id="rotate-and-revoke-signing-key">
-  ### 署名鍵をローテーションして取り消す
+  ### 署名鍵をローテーションして取り消す {#rotate-and-revoke-signing-key}
 </div>
 
 1. [Auth0 Dashboard &gt; 設定 &gt; 署名鍵](https://manage.auth0.com/#/tenant/signing_keys) に移動します。
@@ -43,7 +43,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 3. 確認のため、**ローテーションして取り消す**を選択します。
 
 <div id="use-the-management-api">
-  ## Management API を使用する
+  ## Management API を使用する {#use-the-management-api}
 </div>
 
 <Warning>
@@ -193,7 +193,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 | `MGMT_API_ACCESS_TOKEN` | スコープ `update:signing_keys` を持つ [Management API 用のアクセストークン](https://auth0.com/docs/api/management/v2/tokens)。                      |
 
 <div id="learn-more">
-  ## 詳しくはこちら
+  ## 詳しくはこちら {#learn-more}
 </div>
 
 * [署名鍵のローテーション](/docs/ja-jp/get-started/tenant-settings/signing-keys/rotate-signing-keys)

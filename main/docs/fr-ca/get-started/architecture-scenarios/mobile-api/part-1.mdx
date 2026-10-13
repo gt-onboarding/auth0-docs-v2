@@ -6,7 +6,7 @@ title: Aperçu de la solution (applications mobiles + API)
 Afin de s’assurer que seuls les utilisateurs et les applications autorisés puissent accéder à l’API Timesheets, ExampleCo a décidé d’utiliser le [framework d’autorisation OAuth 2.0](https://tools.ietf.org/html/rfc6749). Ce framework offre à l’entreprise la souplesse recherchée, puisque les différents grants lui permettent d’autoriser facilement les divers types d’applications qui doivent communiquer avec l’API Timesheets.
 
 <div id="api-authentication-and-authorization">
-  ## Authentification et autorisation de l’API
+  ## Authentification et autorisation de l’API {#api-authentication-and-authorization}
 </div>
 
 Une API permet d’exposer les fonctionnalités de votre application à d’autres applications. Une application peut faire une requête en envoyant un message à un point de terminaison d’une API et recevoir des informations en réponse.
@@ -53,7 +53,7 @@ En utilisant le framework d’autorisation <Tooltip tip="OAuth 2.0 : framework 
 </Card>
 
 <div id="proof-key-for-code-exchange-pkce">
-  ## Clé de preuve pour l’échange de code (PKCE)
+  ## Clé de preuve pour l’échange de code (PKCE) {#proof-key-for-code-exchange-pkce}
 </div>
 
 OAuth 2 offre plusieurs types d’octroi pour différents cas d’utilisation. Dans ce cas précis, nous voulons accéder à l’API depuis une application mobile, qui utilisera le [flux d’autorisation avec code et clé de preuve pour l’échange de code (PKCE)](/docs/fr-ca/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce) pour le faire.
@@ -77,7 +77,7 @@ Avec PKCE, l’application crée, pour chaque requête d’autorisation, une cl�
 </Callout>
 
 <div id="authorization-extension">
-  ## Authorization Extension
+  ## Authorization Extension {#authorization-extension}
 </div>
 
 L’[Auth0 Authorization Extension](/docs/fr-ca/customize/extensions/authorization-extension) vous permet de gérer l’autorisation dans votre application en attribuant des Roles, des Groupes et des Permissions aux utilisateurs.

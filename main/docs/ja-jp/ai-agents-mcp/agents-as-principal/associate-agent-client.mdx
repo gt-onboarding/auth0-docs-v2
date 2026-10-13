@@ -18,7 +18,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 </Callout>
 
 <div id="associate-a-client-at-creation">
-  ## クライアント作成時に関連付ける
+  ## クライアント作成時に関連付ける {#associate-a-client-at-creation}
 </div>
 
 `POST /api/v2/clients` でクライアントを作成する際に、`agent_id` を設定します。
@@ -37,7 +37,7 @@ curl --request POST \
 成功すると、Auth0 は設定した `agent_id` を含むクライアントオブジェクトを返します。
 
 <div id="retrieve-the-agent-associated-client">
-  ## エージェントに関連付けられたクライアントを取得する
+  ## エージェントに関連付けられたクライアントを取得する {#retrieve-the-agent-associated-client}
 </div>
 
 `agent_id` をクライアントに関連付けた後、`/api/v2/clients/{id}` に `GET` リクエストを送信してクライアントオブジェクトを取得します。
@@ -51,7 +51,7 @@ curl --request GET \
 成功すると、Auth0 は設定した `agent_id` を含むクライアントオブジェクトを返します。
 
 <div id="associate-an-existing-client">
-  ## 既存のクライアントを関連付ける
+  ## 既存のクライアントを関連付ける {#associate-an-existing-client}
 </div>
 
 既存のクライアントは、Auth0 Dashboard または Management API を使用して関連付けることができます。
@@ -83,7 +83,7 @@ curl --request GET \
 </Tabs>
 
 <div id="remove-the-agent-association">
-  ## エージェントとの関連付けを解除する
+  ## エージェントとの関連付けを解除する {#remove-the-agent-association}
 </div>
 
 クライアントとエージェントの関連付けを解除するには、`PATCH /api/v2/clients/{id}` を使用して `agent_id` を `null` に設定します。
@@ -101,7 +101,7 @@ curl --request PATCH \
 関連付けを解除すると、以降クライアントに発行されるトークンにはagentのアイデンティティが含まれなくなります。既存のトークンは、有効期限が切れるまで有効です。
 
 <div id="next-steps">
-  ## 次のステップ
+  ## 次のステップ {#next-steps}
 </div>
 
 * Auth0 が[トークンにエージェントのアイデンティティを埋め込む方法](/docs/ja-jp/ai-agents-mcp/agents-as-principal/agent-identity-in-tokens)について学ぶ

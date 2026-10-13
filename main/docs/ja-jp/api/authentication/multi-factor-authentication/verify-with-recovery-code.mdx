@@ -6,7 +6,7 @@ description: "ユーザーが登録済みデバイスを利用できない場合
 import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `POST /oauth/token`
@@ -16,7 +16,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 リカバリーコードを使用して MFA を検証するには、アプリでユーザーにリカバリーコードの入力を求めたうえで、`grant_type=http://auth0.com/oauth/grant-type/mfa-recovery-code` を指定して `/oauth/token` にリクエストを送信する必要があります。入力されたリカバリーコードと、`mfa_required` エラーに含まれる `mfa_token` を含めてください。リカバリーコードが受け付けられると、レスポンスは `password` または `http://auth0.com/oauth/grant-type/password-realm` の grant type の場合と同じになります。また、`recovery_code` フィールドが含まれることもあり、その場合、アプリケーションは今後使用できるようエンドユーザーに表示し、安全に保管してもらう必要があります。
 
 <div id="headers">
-  ## ヘッダー
+  ## ヘッダー {#headers}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -24,7 +24,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 </ParamField>
 
 <div id="body-parameters">
-  ## Body Parameters
+  ## Body Parameters {#body-parameters}
 </div>
 
 <div className="prose-sm prose-gray dark:prose-invert">
@@ -64,7 +64,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 </ParamField>
 
 <div id="response-schema">
-  ## レスポンススキーマ
+  ## レスポンススキーマ {#response-schema}
 </div>
 
 <ResponseSchema>
@@ -86,7 +86,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 </ResponseSchema>
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | Status | Description                                  |

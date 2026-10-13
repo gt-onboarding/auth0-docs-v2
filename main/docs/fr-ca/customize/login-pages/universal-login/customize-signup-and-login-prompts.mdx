@@ -13,7 +13,7 @@ title: Personnaliser les prompts d'inscription et de connexion
 **Personnaliser les prompts d&#39;inscription et de connexion** est une fonctionnalité qui permet aux clients ayant activé <Tooltip tip="Custom Domain : domaine tiers avec un nom spécialisé ou personnalisé." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Custom+Domain">Custom Domain</Tooltip> et un modèle de page personnalisé d’ajouter des champs personnalisés et du contenu aux prompts d’inscription et de connexion de leur application.
 
 <div id="use-cases">
-  ## Cas d’utilisation
+  ## Cas d’utilisation {#use-cases}
 </div>
 
 Personnaliser les prompts d&#39;inscription et de connexion prend en charge deux cas d’utilisation : **le contenu personnalisé** et **la saisie de données**.
@@ -27,7 +27,7 @@ La **saisie de données** utilise des éléments de formulaire ajoutés dynamiqu
 </Callout>
 
 <div id="terminology">
-  ## Terminologie
+  ## Terminologie {#terminology}
 </div>
 
 Un **prompt** est une étape précise d’un flux d’**authentification** donné. Chaque prompt comporte au moins un **écran** et, selon la configuration du tenant, chaque écran pris en charge comporte soit quatre, soit six **points d’entrée**, c’est-à-dire des emplacements dans l’écran où il est possible d’insérer du code personnalisé (**partials**).
@@ -69,7 +69,7 @@ Les points d’entrée suivants sont offerts lorsqu’au moins une connexion soc
 <Frame>![Captures d’écran de chaque option de prompt personnalisé et de leurs partials](/docs/images/cdy7uua7fh8z/7sQVWVbaTp4VMW4nJjsn2G/74d0b30da7b034bd695274dbd146964b/Custom_Prompts.png)</Frame>
 
 <div id="use-the-auth0-dashboard-to-manage-partials">
-  ## Utilisez Auth0 Dashboard pour gérer les Partials
+  ## Utilisez Auth0 Dashboard pour gérer les Partials {#use-the-auth0-dashboard-to-manage-partials}
 </div>
 
 Utilisez le Dashboard pour insérer des champs personnalisés et du contenu dans les écrans Login et Signup à l’aide de partials.
@@ -98,7 +98,7 @@ Utilisez le Dashboard pour insérer des champs personnalisés et du contenu dans
 <Frame>![\[partials\]](/docs/images/universal-login/partials-editor.png)</Frame>
 
 <div id="manage-partials-programmatically">
-  ## Gérer les Partials par programmation
+  ## Gérer les Partials par programmation {#manage-partials-programmatically}
 </div>
 
 Vous pouvez gérer les Partials à l’aide de l’[Auth0 Management API](https://auth0.com/docs/api/management/v2/prompts/put-partials) (`GET /prompts/{prompts_name}/partials`). Chaque prompt doit préciser le `screen` lors de l’ajout, de la mise à jour ou de la suppression d’un partial. Les Partials peuvent contenir un maximum de 10 000 caractères.
@@ -108,7 +108,7 @@ Les Partials peuvent aussi être gérés à l’aide de l’interface de personn
 <Frame>![Une image montrant l’interface de ligne de commande pour les Partials. ](/docs/images/cdy7uua7fh8z/KxWfVAMkumyI2jrUqkEp8/b9315709899864a2f8758ad7f5a4f5b2/Partials_CLI_Image.jpg)</Frame>
 
 <div id="style-and-validate-form-inputs">
-  ## Styliser et valider les champs de formulaire
+  ## Styliser et valider les champs de formulaire {#style-and-validate-form-inputs}
 </div>
 
 Personnaliser les prompts d&#39;inscription et de connexion offre des styles prédéfinis ainsi que la validation côté client pour certains éléments de formulaire HTML. Les éléments suivants sont pris en charge :
@@ -128,7 +128,7 @@ Pour utiliser les styles de champ prédéfinis, placez l&#39;élément de formul
 Vous pouvez trouver des extraits de code prédéfinis dans l&#39;éditeur de [partials](#use-the-auth0-dashboard-to-manage-partials).
 
 <div id="client-side-validation">
-  ### Validation côté client
+  ### Validation côté client {#client-side-validation}
 </div>
 
 Le framework de validation côté client de la fonctionnalité permet aux clients de valider les données saisies par l’utilisateur au moyen d’attributs HTML afin d’exécuter une ou plusieurs fonctions de validation personnalisées. Les fonctions de validation peuvent être incluses directement dans le Partial ou dans le `<head>` du modèle de page.
@@ -146,13 +146,13 @@ Pour ajouter une validation côté client à un élément de formulaire :
 </Callout>
 
 <div id="localize-content">
-  ## Localiser le contenu
+  ## Localiser le contenu {#localize-content}
 </div>
 
 On peut localiser une partie du contenu en définissant de nouvelles variables de texte personnalisées à l’aide de la [Custom Text API](/docs/fr-ca/api/management/v2/prompts/put-custom-text-by-language). Il est possible de définir jusqu’à trente variables de texte personnalisées pour chaque combinaison écran-langue.
 
 <div id="create-or-update-a-custom-text-variable">
-  ### Créer ou mettre à jour une variable de texte personnalisée
+  ### Créer ou mettre à jour une variable de texte personnalisée {#create-or-update-a-custom-text-variable}
 </div>
 
 Gérez les variables de texte personnalisées avec la [Custom Text API](/docs/fr-ca/api/management/v2/prompts/get-custom-text-by-language). Les requêtes doivent préciser le `screen` lors de l’ajout, de la mise à jour ou de la suppression d’une variable de texte personnalisée. Les variables de texte personnalisées suivent la convention d’appellation `var-<name>`. Les liens Markdown sont pris en charge et convertis en éléments HTML `<a>` avant d’être affichés aux utilisateurs.
@@ -176,7 +176,7 @@ Vous trouverez ci-dessous un exemple de requête pour ajouter une variable au li
 ```
 
 <div id="use-a-custom-text-variable-in-a-partial">
-  ### Utiliser une variable de texte personnalisée dans un Partial
+  ### Utiliser une variable de texte personnalisée dans un Partial {#use-a-custom-text-variable-in-a-partial}
 </div>
 
 Les variables de texte personnalisées sont référencées dans les partials à l’aide de l’objet `prompts.screen.text`; la référence pour l’exemple `var-tos` de la section précédente est `prompt.screen.text.varTos`. Consultez l’exemple ci-dessous pour voir comment utiliser, dans un partial du prompt Signup ID, une variable créée précédemment, en notant que la variable `var-tos` de la Management API y est référencée sous la forme `varTos`.
@@ -190,7 +190,7 @@ Les variables de texte personnalisées sont référencées dans les partials à 
 ```
 
 <div id="validate-and-save-captured-data">
-  ## Valider et enregistrer les données capturées
+  ## Valider et enregistrer les données capturées {#validate-and-save-captured-data}
 </div>
 
 Les données capturées par des éléments de formulaire personnalisés sont accessibles dans Actions, et Auth0 recommande de valider les données recueillies avant de les enregistrer ou de les soumettre.
@@ -243,7 +243,7 @@ Lorsque vous utilisez les prompts [passkey](/docs/fr-ca/authenticate/database-co
 </Callout>
 
 <div id="save-to-user-metadata">
-  ### Enregistrer dans les métadonnées utilisateur
+  ### Enregistrer dans les métadonnées utilisateur {#save-to-user-metadata}
 </div>
 
 À partir de l’Action, les données recueillies peuvent être envoyées à une API externe pour validation et stockage, ou enregistrées dans le `user_metadata` de l’utilisateur au moyen de `api.user.setUserMetadata`.
@@ -267,7 +267,7 @@ exports.onExecutePreUserRegistration = async (event, api) => {
 ```
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Utiliser des variables dynamiques pour internationaliser des éléments de formulaire personnalisés](/docs/fr-ca/customize/login-pages/universal-login/customize-signup-and-login-prompts/use-dynamic-variables-to-internationalize-custom-form-elements)

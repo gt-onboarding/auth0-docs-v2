@@ -6,7 +6,7 @@ title: Déconnexion (B2C)
 Le [déconnexion](/docs/fr-ca/authenticate/login/logout) consiste à mettre fin à une session authentifiée lorsqu’elle n’est plus nécessaire, afin de réduire le risque que des personnes non autorisées puissent « prendre le contrôle » de la session. Cela se fait généralement en offrant une option de déconnexion dans l’interface utilisateur que vous mettez à la disposition de vos utilisateurs. Plusieurs types de sessions peuvent être créés lorsqu’un utilisateur se connecte (p. ex., des sessions d’application locales, la session Auth0, des sessions de <Tooltip tip="Fournisseur d’identité (IdP) : service qui stocke et gère les identités numériques." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Identity+Provider">fournisseur d’identité</Tooltip> tiers), et vous devrez déterminer lesquelles de ces sessions doivent être terminées lorsque l’utilisateur clique sur une option de **déconnexion**.
 
 <Info>
-  ### Pratique exemplaire
+  ### Pratique exemplaire {#best-practice}
 
   Le comportement de déconnexion devrait indiquer clairement à l’utilisateur quelle(s) session(s) sont terminées et, idéalement, afficher ensuite une confirmation visuelle de la déconnexion.
 </Info>
@@ -27,7 +27,7 @@ Les fonctionnalités offertes par votre application, ainsi que votre utilisation
 </Warning>
 
 <div id="where-to-send-users-after-logout">
-  ## Où rediriger les utilisateurs après la déconnexion
+  ## Où rediriger les utilisateurs après la déconnexion {#where-to-send-users-after-logout}
 </div>
 
 Une fois l’utilisateur déconnecté, il sera redirigé vers l’emplacement de votre choix. Cet emplacement correspond à l’**URL de redirection de déconnexion**, que vous pouvez [définir comme paramètre](/docs/fr-ca/authenticate/login/logout/redirect-users-after-logout) dans le <Tooltip tip="Auth0 Dashboard : le produit principal d’Auth0 pour configurer vos services." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip>.
@@ -39,13 +39,13 @@ Les URL utilisées pour rediriger les utilisateurs après la déconnexion doiven
 </Callout>
 
 <div id="automatic-termination-of-sessions">
-  ## Expiration automatique des sessions
+  ## Expiration automatique des sessions {#automatic-termination-of-sessions}
 </div>
 
 Les utilisateurs ne lancent pas tous manuellement le processus de déconnexion; Auth0 propose donc aussi un **délai d’expiration de session** pour éviter que les sessions ne restent actives trop longtemps. Ce paramètre est [offert et configurable dans l’Auth0 Dashboard](/docs/fr-ca/get-started/tenant-settings#login-session-management).
 
 <div id="project-planning-guide">
-  ## Guide de planification de projet
+  ## Guide de planification de projet {#project-planning-guide}
 </div>
 
 Nous mettons à votre disposition un guide de planification au format PDF que vous pouvez télécharger et consulter pour obtenir plus de détails sur les stratégies que nous recommandons.

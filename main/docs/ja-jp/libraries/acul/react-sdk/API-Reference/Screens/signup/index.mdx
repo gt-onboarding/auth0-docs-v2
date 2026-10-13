@@ -10,7 +10,7 @@ description: "Universal Login の `signup` 画面をカスタマイズするた�
 </Frame>
 
 <div id="import">
-  ## インポート
+  ## インポート {#import}
 </div>
 
 各画面には、それぞれ専用のフックとメソッドがあります。SDK では、各画面について **部分インポート** と **ルートインポート** をサポートしています。
@@ -62,7 +62,7 @@ function SignupForm() {
 ```
 
 <div id="context-hooks">
-  ## コンテキストHooks
+  ## コンテキストHooks {#context-hooks}
 </div>
 
 `signup` 画面で Auth0 のコンテキストデータへの読み取り専用アクセスを提供する、画面スコープのフックです。`@auth0/auth0-acul-react/signup` からインポートします。
@@ -174,7 +174,7 @@ function SignupForm() {
 </ParamField>
 
 <div id="methods">
-  ## メソッド
+  ## メソッド {#methods}
 </div>
 
 <ParamField body="googleOneTap" type="Promise<void>">
@@ -294,7 +294,7 @@ function SignupForm() {
 </ParamField>
 
 <div id="commonutility-hooks">
-  ## 共通/ユーティリティ Hooks
+  ## 共通/ユーティリティ Hooks {#commonutility-hooks}
 </div>
 
 <ParamField body={<a href="/docs/ja-jp/libraries/acul/react-sdk/API-Reference/Hooks/useAuth0Themes">useAuth0Themes</a>} type="Hooks">

@@ -18,7 +18,7 @@ Une fois un agent associé à un client, les jetons émis pour ce client contien
 </Callout>
 
 <div id="associate-a-client-at-creation">
-  ## Associer un client à sa création
+  ## Associer un client à sa création {#associate-a-client-at-creation}
 </div>
 
 Définissez `agent_id` lors de la création d’un client au moyen de `POST /api/v2/clients` :
@@ -37,7 +37,7 @@ curl --request POST \
 En cas de réussite, Auth0 renvoie l’objet client avec l’`agent_id` que vous avez défini.
 
 <div id="retrieve-the-agent-associated-client">
-  ## Récupérer le client associé à l’agent
+  ## Récupérer le client associé à l’agent {#retrieve-the-agent-associated-client}
 </div>
 
 Après avoir associé un `agent_id` à un client, envoyez une requête `GET` à `/api/v2/clients/{id}` pour obtenir l’objet client :
@@ -51,7 +51,7 @@ curl --request GET \
 En cas de réussite, Auth0 renvoie l’objet client avec l’`agent_id` que vous avez défini.
 
 <div id="associate-an-existing-client">
-  ## Associer un client existant
+  ## Associer un client existant {#associate-an-existing-client}
 </div>
 
 Vous pouvez associer un client existant à l’aide du Dashboard Auth0 ou de la Management API.
@@ -83,7 +83,7 @@ Vous pouvez associer un client existant à l’aide du Dashboard Auth0 ou de la 
 </Tabs>
 
 <div id="remove-the-agent-association">
-  ## Supprimer l’association avec l’agent
+  ## Supprimer l’association avec l’agent {#remove-the-agent-association}
 </div>
 
 Pour dissocier un client de son agent, définissez `agent_id` sur `null` à l’aide de `PATCH /api/v2/clients/{id}` :
@@ -101,7 +101,7 @@ curl --request PATCH \
 Après la dissociation, les nouveaux jetons émis au client ne contiennent plus l’identité de l’agent. Les jetons existants demeurent valides jusqu’à leur expiration.
 
 <div id="next-steps">
-  ## Prochaines étapes
+  ## Prochaines étapes {#next-steps}
 </div>
 
 * Découvrez comment Auth0 intègre [l’identité de l’agent aux jetons](/docs/fr-ca/ai-agents-mcp/agents-as-principal/agent-identity-in-tokens)

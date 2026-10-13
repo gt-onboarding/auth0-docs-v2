@@ -7,7 +7,7 @@ validatedOn: 2026-02-02
 [Auth0 Actions](/docs/ja-jp/customize/actions) を使用すると、さまざまなシナリオに合わせて <Tooltip tip="Adaptive Multi-factor Authentication: ログイン試行の信頼度が低いと判断された場合にのみユーザーに要求される多要素認証 (MFA)。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Adaptive+MFA">Adaptive MFA</Tooltip> をカスタマイズできます。
 
 <div id="when-to-customize-adaptive-mfa">
-  ## Adaptive MFA をカスタマイズするタイミング
+  ## Adaptive MFA をカスタマイズするタイミング {#when-to-customize-adaptive-mfa}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -24,7 +24,7 @@ Adaptive MFA のカスタマイズを始める前に、いくつか自問して�
 * MFA に登録されていないユーザーにどう対応しますか？
 
 <div id="confidence-scores">
-  ## 信頼度スコア
+  ## 信頼度スコア {#confidence-scores}
 </div>
 
 Adaptive MFA は、`NewDevice`、`ImpossibleTravel`、`UntrustedIP` の 3 つの評価の分析に基づいて、総合的な信頼度スコアを算出します。詳しくは、[Adaptive MFA: 仕組み](/docs/ja-jp/secure/multi-factor-authentication/adaptive-mfa)を参照してください。
@@ -61,7 +61,7 @@ Adaptive MFA は、`NewDevice`、`ImpossibleTravel`、`UntrustedIP` の 3 つの
 `riskAssessment` オブジェクトの完全な説明、プロパティ、値については、[post-login Actions トリガー `riskAssessment` リファレンス](/docs/ja-jp/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object#param-risk-assessment)を参照してください。
 
 <div id="action-result-outcomes">
-  ## Action の結果パターン
+  ## Action の結果パターン {#action-result-outcomes}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -82,13 +82,13 @@ Adaptive MFA は、`NewDevice`、`ImpossibleTravel`、`UntrustedIP` の 3 つの
 | MFA は不要    | MFA は不要          | MFA は不要   |
 
 <div id="action-templates">
-  ## Action テンプレート
+  ## Action テンプレート {#action-templates}
 </div>
 
 Auth0 では、カスタマイズ可能な Adaptive MFA ベースの Action テンプレートとして、[Adaptive MFA](#adaptive-mfa-template) と [MFA 登録を必須にする](#require-mfa-enrollment-template) の 2 つを提供しています。
 
 <div id="adaptive-mfa-template">
-  ### Adaptive MFA テンプレート
+  ### Adaptive MFA テンプレート {#adaptive-mfa-template}
 </div>
 
 このテンプレートは、個々のリスク評価を使用してカスタムのビジネスフローを構築する方法の例と、その出発点を示します。この例では、次を使用します。
@@ -143,7 +143,7 @@ if (shouldPromptMfa && canPromptMfa) {
 ```
 
 <div id="require-mfa-enrollment-template">
-  ### MFA登録を必須にするテンプレート
+  ### MFA登録を必須にするテンプレート {#require-mfa-enrollment-template}
 </div>
 
 このテンプレートでは、標準のポリシーまたはAdaptive MFAポリシーを使用する際に、MFA登録を必須にする方法を示します。`event.user.multifactor`を使ってユーザーがMFAに登録済みかどうかを確認し、未登録の場合は登録を求めるプロンプトを表示します。
@@ -163,7 +163,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="action-use-cases">
-  ## Action のユースケース
+  ## Action のユースケース {#action-use-cases}
 </div>
 
 ユースケースに応じてカスタム Actions を構築する際の例をいくつか紹介します。
@@ -266,7 +266,7 @@ exports.onExecutePostLogin = async (event, api) => {
 </AccordionGroup>
 
 <div id="learn-more">
-  ## 詳細情報
+  ## 詳細情報 {#learn-more}
 </div>
 
 * [Adaptive MFA を有効にする](/docs/ja-jp/secure/multi-factor-authentication/adaptive-mfa/enable-adaptive-mfa)

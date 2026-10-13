@@ -6,14 +6,14 @@ title: Configurer l’authentification d’AD/LDAP Connector avec Kerberos
 Vous pouvez fédérer avec Active Directory au moyen d’AD/LDAP Connector si vous utilisez Classic Login. AD/LDAP Connector permet à vos utilisateurs de s’authentifier lorsqu’ils se trouvent sur une machine jointe à un domaine, au sein du réseau d’entreprise.
 
 <div id="configure-active-directory">
-  ## Configurer Active Directory
+  ## Configurer Active Directory {#configure-active-directory}
 </div>
 
 1. Accédez à [Auth0 Dashboard &gt; Authentification &gt; Enterprise &gt; Active Directory/LDAP](https://manage.auth0.com/#/connections/enterprise/ad), puis sélectionnez la connexion que vous souhaitez configurer.
 2. Activez le commutateur **Use Windows Integrated Auth (Kerberos)**.
 
 <div id="auto-detected-range-for-kerberos">
-  ### Plage automatiquement détectée pour Kerberos
+  ### Plage automatiquement détectée pour Kerberos {#auto-detected-range-for-kerberos}
 </div>
 
 Lorsque l’authentification Kerberos est activée, l’adresse IP visible du serveur sur lequel AD Connector s’exécute est ajoutée implicitement à la plage d’adresses IP du réseau. Cela signifie que si les requêtes d’un utilisateur proviennent de la même adresse IP visible que celle d’AD Connector, une authentification Kerberos sera tentée.
@@ -22,7 +22,7 @@ Lorsque l’authentification Kerberos est activée, l’adresse IP visible du se
 2. Nous vous recommandons de redémarrer le service Windows qui héberge AD Connector chaque fois que ce paramètre est modifié. Ainsi, les changements prendront effet immédiatement.
 
 <div id="authentication-flow">
-  ## Flux d’authentification
+  ## Flux d’authentification {#authentication-flow}
 </div>
 
 Selon l’emplacement des utilisateurs, le flux d’authentification sera différent lorsque des plages d’adresses IP sont définies. Prenons Fabrikam comme exemple : puisque l’entreprise utilise la version SaaS d’Auth0, elle a configuré son adresse IP publique (`24.12.34.56/32`) dans la connexion. Les utilisateurs qui se connectent depuis l’intérieur de l’immeuble proviendront tous de `24.12.34.56` (comme configuré dans la connexion). Lorsqu’ils s’authentifient, ils peuvent suivre le flux natif AD/LDAP et profiter d’une expérience <Tooltip tip="Single Sign-On (SSO) : service qui, après qu’un utilisateur s’est connecté à une application, le connecte automatiquement à d’autres applications." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=SSO">SSO</Tooltip> fluide.
@@ -42,7 +42,7 @@ Pour en savoir plus, consultez [Déployer des connecteurs AD/LDAP pour des envir
 </Frame>
 
 <div id="auto-login-with-lock">
-  ## Connexion automatique avec Lock
+  ## Connexion automatique avec Lock {#auto-login-with-lock}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -110,7 +110,7 @@ Dans certains cas, il peut être nécessaire de connecter automatiquement l’ut
 ```
 
 <div id="bypass-kerberos-at-runtime">
-  ## Contourner Kerberos à l’exécution
+  ## Contourner Kerberos à l’exécution {#bypass-kerberos-at-runtime}
 </div>
 
 Vous pouvez empêcher l’utilisation de Kerberos, même si l’utilisateur se connecte depuis une adresse IP comprise dans la plage configurée dans les paramètres de la connexion, en passant `rememberLastLogin: false` à `lock.show()`.
@@ -124,7 +124,7 @@ function useKerberos() {
 ```
 
 <div id="enable-kerberos-request-logging">
-  ## Activer la journalisation des requêtes Kerberos
+  ## Activer la journalisation des requêtes Kerberos {#enable-kerberos-request-logging}
 </div>
 
 1. Pour activer la journalisation détaillée des requêtes Kerberos, ajoutez la variable d’environnement système `DEBUG=kerberos-server`.
@@ -132,7 +132,7 @@ function useKerberos() {
 3. Connectez-vous de nouveau et consultez les journaux pour en savoir plus.
 
 <div id="firefox-support-for-kerberos">
-  ## Prise en charge de Kerberos dans Firefox
+  ## Prise en charge de Kerberos dans Firefox {#firefox-support-for-kerberos}
 </div>
 
 Par défaut, [Firefox](https://www.mozilla.org/firefox) [rejette toutes les requêtes « negotiate » nécessaires pour authentifier les utilisateurs avec Kerberos](https://developer.mozilla.org/en-US/docs/Mozilla/Integrated_authentication). Si vous souhaitez utiliser Firefox avec Kerberos, vous devez ajouter à l’AllowList le serveur sur lequel le Connector est installé.
@@ -145,7 +145,7 @@ Par défaut, [Firefox](https://www.mozilla.org/firefox) [rejette toutes les requ
 5. Cliquez sur **Ok**. Vous n’avez pas besoin de redémarrer le serveur pour que les modifications prennent effet.
 
 <div id="https-support-for-kerberos">
-  ## Prise en charge de HTTPS pour Kerberos
+  ## Prise en charge de HTTPS pour Kerberos {#https-support-for-kerberos}
 </div>
 
 L’authentification Kerberos fonctionne sur HTTP (et non sur HTTPS). Microsoft Office 365 et d’autres produits modernes pourraient ne pas fonctionner avec HTTP.

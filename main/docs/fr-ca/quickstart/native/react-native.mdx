@@ -32,7 +32,7 @@ import {HowToSchema} from "/snippets/fr-ca/HowToSchema.jsx";
 </Accordion>
 
 <div id="get-started">
-  ## Pour commencer
+  ## Pour commencer {#get-started}
 </div>
 
 <Steps>
@@ -629,11 +629,11 @@ import {HowToSchema} from "/snippets/fr-ca/HowToSchema.jsx";
 ***
 
 <div id="troubleshooting-advanced">
-  ## Résolution des problèmes et options avancées
+  ## Résolution des problèmes et options avancées {#troubleshooting-advanced}
 </div>
 
 <Accordion title="Problèmes courants et solutions">
-  ### Erreur « URL de rappel non valide »
+  ### Erreur « URL de rappel non valide » {#callback-url-mismatch-error}
 
   **Solution :**
 
@@ -641,7 +641,7 @@ import {HowToSchema} from "/snippets/fr-ca/HowToSchema.jsx";
   2. Assurez-vous que les URL iOS et Android ont toutes deux été ajoutées
   3. Vérifiez que `{yourDomain}` est remplacé par votre véritable domaine Auth0
 
-  ### L’application ne revient pas après la connexion (iOS)
+  ### L’application ne revient pas après la connexion (iOS) {#app-doesnt-return-after-login-ios}
 
   **Correctif :**
 
@@ -649,7 +649,7 @@ import {HowToSchema} from "/snippets/fr-ca/HowToSchema.jsx";
   2. Vérifiez que `AppDelegate.mm` inclut la méthode de gestion des URL
   3. Assurez-vous que le schéma d’URL correspond à votre identifiant de bundle
 
-  ### La compilation Android échoue
+  ### La compilation Android échoue {#android-build-fails}
 
   **Correctif :**
 
@@ -657,7 +657,7 @@ import {HowToSchema} from "/snippets/fr-ca/HowToSchema.jsx";
   2. Synchronisez le projet avec les fichiers Gradle
   3. Nettoyez la compilation : `./gradlew clean`
 
-  ### Erreur « PKCE non autorisé »
+  ### Erreur « PKCE non autorisé » {#pkce-not-allowed-error}
 
   **Correctif :**
 
@@ -665,7 +665,7 @@ import {HowToSchema} from "/snippets/fr-ca/HowToSchema.jsx";
   2. Remplacez le type d’application par **Native**
   3. Enregistrez les modifications et réessayez
 
-  ### L’installation de Pod échoue (iOS)
+  ### L’installation de Pod échoue (iOS) {#pod-install-fails-ios}
 
   **Correctif :**
 
@@ -673,7 +673,7 @@ import {HowToSchema} from "/snippets/fr-ca/HowToSchema.jsx";
   2. Mettez à jour le dépôt Pod : `pod install --repo-update`
   3. Si le problème persiste, supprimez `Podfile.lock` et le dossier `ios/Pods`, puis exécutez de nouveau `pod install`
 
-  ### Erreur d’annulation par l’utilisateur
+  ### Erreur d’annulation par l’utilisateur {#user-cancelled-error}
 
   Gérez-la correctement dans votre fonction de login :
 
@@ -692,7 +692,7 @@ import {HowToSchema} from "/snippets/fr-ca/HowToSchema.jsx";
   };
   ```
 
-  ### Boîte de dialogue d’alerte iOS
+  ### Boîte de dialogue d’alerte iOS {#ios-alert-dialog}
 
   Sur iOS, les utilisateurs voient une boîte de dialogue d’autorisation : *&quot;App Name&quot; Wants to Use &quot;auth0.com&quot; to Sign In*. Il s’agit du comportement attendu de `ASWebAuthenticationSession`. Les utilisateurs doivent appuyer sur **Continue** pour poursuivre.
 
@@ -758,7 +758,7 @@ import {HowToSchema} from "/snippets/fr-ca/HowToSchema.jsx";
 </Accordion>
 
 <Accordion title="Déploiement en production">
-  ### Avant de déployer en production
+  ### Avant de déployer en production {#before-deploying-to-production}
 
   **Utilisez des URL de rappel HTTPS** pour une sécurité accrue :
 

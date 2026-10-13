@@ -13,7 +13,7 @@ Auth0 Universal Components pour iOS vous permettent de créer une interface libr
 Grâce au composant `MyAccountAuthMethodsView`, les utilisateurs peuvent gérer leurs propres méthodes d’authentification — facteurs d’authentification multifacteur (AMF), clés d’accès et codes de récupération — directement dans votre application native, sans avoir à ouvrir un navigateur Web ni à communiquer avec le soutien.
 
 <div id="how-it-works">
-  ## Fonctionnement
+  ## Fonctionnement {#how-it-works}
 </div>
 
 Le composant `MyAccountAuthMethodsView` utilise les [méthodes d’authentification de l’API My Account](/docs/fr-ca/manage-users/my-account-api#manage-authentication-methods) d’Auth0 pour afficher une interface permettant de gérer les méthodes d’authentification dans votre application.
@@ -33,18 +33,18 @@ Le composant `MyAccountAuthMethodsView` utilise le jeton d’accès pour envoyer
 </Callout>
 
 <div id="prerequisites">
-  ## Prérequis
+  ## Prérequis {#prerequisites}
 </div>
 
 <div id="enable-auth0-my-account-api">
-  ### Activer l’API My Account d’Auth0
+  ### Activer l’API My Account d’Auth0 {#enable-auth0-my-account-api}
 </div>
 
 1. Accédez à [Dashboard &gt; Applications &gt; APIs](https://manage.auth0.com/#/apis).
 2. Sélectionnez **Activate My Account API** pour l’activer dans votre tenant.
 
 <div id="create-the-application-and-configure-my-account-api-permissions">
-  ### Créer l’application et configurer les permissions de l’API My Account
+  ### Créer l’application et configurer les permissions de l’API My Account {#create-the-application-and-configure-my-account-api-permissions}
 </div>
 
 1. Accédez à [Dashboard &gt; Applications](https://manage.auth0.com/#/applications).
@@ -82,7 +82,7 @@ Le composant `MyAccountAuthMethodsView` utilise le jeton d’accès pour envoyer
 </Callout>
 
 <div id="install-the-sdk">
-  ### Installer le SDK
+  ### Installer le SDK {#install-the-sdk}
 </div>
 
 Utilisez Swift Package Manager ou Carthage pour installer le package `Auth0UniversalComponents`.
@@ -90,7 +90,7 @@ Utilisez Swift Package Manager ou Carthage pour installer le package `Auth0Unive
 Pour en savoir plus sur les exigences et les détails d’installation, consultez [Auth0 Universal Components for iOS](/docs/fr-ca/get-started/universal-components/ios/ios-overview).
 
 <div id="initialize-the-sdk">
-  ### Initialiser le SDK
+  ### Initialiser le SDK {#initialize-the-sdk}
 </div>
 
 Pour initialiser le SDK, appelez une seule fois la méthode `Auth0UniversalComponentsSDKInitializer.initialize(...)` au démarrage de l’application, généralement dans l’`init` de la structure de votre application.
@@ -128,7 +128,7 @@ Auth0UniversalComponentsSDKInitializer.initialize(
 ```
 
 <div id="configure-the-token-provider">
-  ### Configurer le fournisseur de jetons
+  ### Configurer le fournisseur de jetons {#configure-the-token-provider}
 </div>
 
 Utilisez le `TokenProvider`, qui encapsule le `CredentialsManager` de [`Auth0.swift`](https://github.com/auth0/Auth0.swift), pour demander des informations d’identification à votre application.
@@ -161,7 +161,7 @@ struct AppTokenProvider: TokenProvider {
 </Check>
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 <CardGroup cols={2}>

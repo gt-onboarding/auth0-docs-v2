@@ -44,7 +44,7 @@ Auth0 では、ユーザーのプロファイルに metadata を保存できま�
 または、<Tooltip tip="Auth0 Dashboard: サービスを構成するための Auth0 の主要製品です。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip> を使用して、[ユーザーのプロフィールの管理](/docs/ja-jp/manage-users/user-accounts/manage-users-using-the-dashboard)を行うこともできます。Auth0 Dashboard を介したユーザーのプロフィール管理は、どちらかといえば管理者向けの機能であり、本番環境でセルフサービスのプロフィール管理に**使用すべきではありません**。ただし、Dashboard が提供するインターフェースは、ユーザーのプロフィール情報をすばやく簡単に操作できるため、開発中には非常に便利です。
 
 <div id="metadata">
-  ## メタデータ
+  ## メタデータ {#metadata}
 </div>
 
 Auth0 のユーザープロファイルには、Normalized User Profile の情報に加えてメタデータを保存できます。メタデータを使うと、アイデンティティプロバイダーに由来しない情報を保存したり、アイデンティティプロバイダーから提供される情報を上書きする値を保持したりできます。
@@ -60,7 +60,7 @@ Auth0 のユーザープロファイルには、Normalized User Profile の情�
 </Warning>
 
 <div id="user-metadata">
-  ### ユーザーメタデータ
+  ### ユーザーメタデータ {#user-metadata}
 </div>
 
 ユーザーメタデータ (`user_metadata` とも呼ばれます) は、ユーザープロファイルに保存できる情報で、ユーザーはセルフサービスのプロファイル管理の一環として、その内容の確認や更新を行えます。この種のメタデータには、ユーザーの敬称や、Auth0 から送信される[メールをカスタマイズ](/docs/ja-jp/customize/email/email-templates)する際に使用できる優先言語などが含まれます。
@@ -70,13 +70,13 @@ Auth0 のユーザープロファイルには、Normalized User Profile の情�
 </Callout>
 
 <div id="app-metadata">
-  ### アプリのメタデータ
+  ### アプリのメタデータ {#app-metadata}
 </div>
 
 一方、アプリのメタデータ (`app_metadata`とも呼ばれます) は、ユーザープロフィールに紐づけて保存できる情報ですが、**適切な認可がある場合にのみ読み取りや更新が可能**で、ユーザーが `app_metadata` に直接アクセスすることはできません。この種のメタデータの例としては、ユーザーが最新の有効な利用規約に同意したことを示すフラグや、その同意日時を示す日付などがあります。
 
 <div id="password-reset">
-  ## パスワードのリセット
+  ## パスワードのリセット {#password-reset}
 </div>
 
 Auth0 では、パスワードを忘れたユーザーや、既存のセルフサービスの仕組みを通じてパスワードを変更できるユーザー向けに、[Password Reset](/docs/ja-jp/authenticate/database-connections/password-change) 機能を提供しています。これは既存の実装に統合できるほか、[Universal Login](/docs/ja-jp/authenticate/login/auth0-universal-login) の一部として含まれる、すぐに使える Auth0 の UI ウィジェットにもあらかじめ組み込まれています。
@@ -90,7 +90,7 @@ Auth0 <Tooltip tip="Universal Login: アプリケーションは、ユーザー�
 一方、Auth0 Management API を使用すると、Database Connection タイプで定義されたユーザー ID の [パスワードを直接変更](/docs/ja-jp/authenticate/database-connections/password-change#directly-set-the-new-password) できます。Auth0 Management API は、セルフサービスのプロフィール管理機能の実装の一部として使用できるほか、[Change Password ページのカスタマイズ](/docs/ja-jp/get-started/architecture-scenarios/business-to-consumer/branding) の一部として使用することもできます。
 
 <div id="account-verification">
-  ## アカウントの検証
+  ## アカウントの検証 {#account-verification}
 </div>
 
 また、常に検証済みのユーザーアカウントを扱い、Auth0 が提供する仕組みを活用する必要があります。さらに、[GDPR](https://eugdpr.org/) のような規制遵守についても考慮する必要があります。GDPR には、EU 市民をプライバシー侵害やデータ漏えいから保護するための非常に具体的な要件が定められています。
@@ -98,7 +98,7 @@ Auth0 <Tooltip tip="Universal Login: アプリケーションは、ユーザー�
 Auth0 には、ユーザーのメールアドレスに [確認メール](/docs/ja-jp/customize/email/manage-email-flow) を送信してアカウントを検証するための、すぐに使える機能が用意されています。デフォルトでは、Auth0 は [self sign-up](/docs/ja-jp/get-started/architecture-scenarios/business-to-consumer/provisioning#self-sign-up) の一環として作成された [Database Connection](/docs/ja-jp/authenticate/database-connections/password-change) の ID に対して、自動的に確認メールを送信します。また Auth0 では、ユーザー登録時に Social Provider によるメールアドレスの検証が行われない場合に確認メールを送信できる [Management API endpoint](https://auth0.com/docs/api/v2#!/Tickets/post_email_verification) も提供しています。
 
 <div id="blocking-users">
-  ## ユーザーのブロック
+  ## ユーザーのブロック {#blocking-users}
 </div>
 
 Auth0 の[ユーザーアクセスのブロック](/docs/ja-jp/manage-users/user-accounts/block-and-unblock-users)では、特定の条件下でユーザーがアプリケーションにログインできないようにできます。デフォルトでは、Auth0 Dashboard に、管理者がすべてのアプリケーションに対するユーザーアクセスをブロックおよびブロック解除できる標準の仕組みが用意されており、この機能は [Auth0 Management API](https://auth0.com/docs/api/management/v2#!/Users/patch_users_by_id) を使用して実装することもできます。また、Auth0 の拡張機能を利用して、[特定のアプリケーションへのユーザーアクセスを無効化](/docs/ja-jp/manage-users/user-accounts/manage-user-access-to-applications)したり、よりきめ細かな[アクセス制御](/docs/ja-jp/get-started/architecture-scenarios/business-to-consumer/authorization)を実現したりすることもできます。
@@ -106,7 +106,7 @@ Auth0 の[ユーザーアクセスのブロック](/docs/ja-jp/manage-users/user
 さらに、Auth0 Management API では、誤った認証情報の入力が多すぎたために無効化されたユーザーの[ブロックを解除](https://auth0.com/docs/api/management/v2#!/User_Blocks/delete_user_blocks_by_id)することもできます。
 
 <div id="linking-user-accounts">
-  ## ユーザーアカウントのリンク
+  ## ユーザーアカウントのリンク {#linking-user-accounts}
 </div>
 
 既定では、各ユーザーIDに対して 1 つのユーザープロファイル (ユーザーアカウント) が存在します。Facebook や Google による[ソーシャル認証](/docs/ja-jp/get-started/architecture-scenarios/business-to-consumer/authentication#social-authentication)と、Auth0 による[ユーザー名とパスワードによる認証](/docs/ja-jp/get-started/architecture-scenarios/business-to-consumer/authentication#username-and-password-authentication)など、複数のIDプロバイダーからのログインを有効にすると、それぞれに個別のユーザープロファイルが作成されます。Auth0 の[ユーザーアカウントのリンク](/docs/ja-jp/manage-users/user-accounts/user-account-linking)機能を使用すると、関連付けられたすべてのIDをまとめて、1 人のユーザーに対して 1 つのプロファイルを作成できます。
@@ -120,7 +120,7 @@ Auth0 の[ユーザーアクセスのブロック](/docs/ja-jp/manage-users/user
 * アプリケーションでは、接続ごとのユーザープロファイルデータを取得できます。
 
 <div id="de-provisioning">
-  ## アカウントの削除
+  ## アカウントの削除 {#de-provisioning}
 </div>
 
 アプリケーションでは、ユーザーからアカウント削除の依頼を受けた際に対応できるようにする必要がある場合があります (たとえば、[GDPR](https://eugdpr.org/)の要件を満たす必要がある場合などです) 。こうした機能は、プロフィール関連のさまざまな機能とあわせて、[Management API](https://auth0.com/docs/api/management/v2#!/Users)を使って実装できます。Management APIを使用すると、ユーザーに関して保存されている情報を取得し、必要に応じて更新できます。
@@ -132,7 +132,7 @@ Auth0は、登録時に同意通知へのリンクを表示することや、ユ
 </Callout>
 
 <div id="project-planning-guide">
-  ## プロジェクト計画ガイド
+  ## プロジェクト計画ガイド {#project-planning-guide}
 </div>
 
 推奨する戦略の詳細をご確認いただけるよう、ダウンロードして参照できるPDF形式の計画ガイドを提供しています。

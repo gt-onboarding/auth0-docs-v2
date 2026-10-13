@@ -7,7 +7,7 @@ sidebarTitle: Référence des outils
 Consultez ce guide de référence pour découvrir des exemples en langage naturel vous permettant d’interagir avec votre tenant Auth0 à l’aide d’Auth0 MCP Server et de n’importe quel [client MCP](https://modelcontextprotocol.io/clients).
 
 <div id="application-management">
-  ## Gestion des applications
+  ## Gestion des applications {#application-management}
 </div>
 
 | Outil                       | Description                                                               | Exemples en langage naturel                                                                                                                                                                                                                                                                                                                  |
@@ -18,7 +18,7 @@ Consultez ce guide de référence pour découvrir des exemples en langage nature
 | `auth0_update_application`  | Mettre à jour une application Auth0 existante.                            | &quot;Mets à jour les URL de rappel de mon &#39;Web App&#39; pour inclure `https://staging.example.com/callback`.&quot;<br /><br />&quot;Change l&#39;URL de déconnexion de &#39;Customer Portal&#39;.&quot;<br /><br />&quot;Ajoute des métadonnées d&#39;environnement de développement à mon application &#39;Admin Dashboard&#39;.&quot; |
 
 <div id="resource-server-api-management">
-  ## Gestion des serveurs de ressources (API)
+  ## Gestion des serveurs de ressources (API) {#resource-server-api-management}
 </div>
 
 | Outil                          | Description                                                             | Exemples en langage naturel                                                                                                                                                                                                                                                                      |
@@ -29,7 +29,7 @@ Consultez ce guide de référence pour découvrir des exemples en langage nature
 | `auth0_update_resource_server` | Mettre à jour un serveur de ressources Auth0 existant.                  | &quot;Ajoute une portée &#39;admin&#39; à la &#39;User API&#39;.&quot;<br /><br />&quot;Mets à jour la durée de vie du jeton de ma &#39;Payment API&#39; à 1 heure.&quot;<br /><br />&quot;Change l’algorithme de signature de mon API pour RS256.&quot;                                         |
 
 <div id="actions-management">
-  ## Gestion des Actions
+  ## Gestion des Actions {#actions-management}
 </div>
 
 | Outil                 | Description                                            | Exemples en langage naturel                                                                                                                                                                                                                                                               |
@@ -41,7 +41,7 @@ Consultez ce guide de référence pour découvrir des exemples en langage nature
 | `auth0_deploy_action` | Déployer une Action Auth0.                             | &quot;Déploie mon Action &#39;Add Custom Claims&#39; en production.&quot;<br /><br />&quot;Mets en ligne ma nouvelle Action de sécurité.&quot;<br /><br />&quot;Déploie l’Action d’enrichissement utilisateur mise à jour.&quot;                                                          |
 
 <div id="logs-management">
-  ## Gestion des logs
+  ## Gestion des logs {#logs-management}
 </div>
 
 | Outil             | Description                               | Exemples en langage naturel                                                                                                                                                                                                                                                                                  |
@@ -50,7 +50,7 @@ Consultez ce guide de référence pour découvrir des exemples en langage nature
 | `auth0_get_log`   | Obtenir une entrée de log précise par ID. | &quot;Montre-moi les détails de l’entrée de log {entryID}.&quot;<br /><br />&quot;Récupère plus d’information sur cette tentative de connexion échouée.&quot;<br /><br />&quot;Quelle est la cause de cette erreur d’authentification ?&quot;                                                                |
 
 <div id="forms-management">
-  ## Gestion des Forms
+  ## Gestion des Forms {#forms-management}
 </div>
 
 | Outil                | Description                                     | Exemples en langage naturel                                                                                                                                                                                                                                                                                                               |
@@ -62,13 +62,13 @@ Consultez ce guide de référence pour découvrir des exemples en langage nature
 | `auth0_publish_form` | Publier un Form Auth0.                          | &quot;Publie mon Form de connexion mis à jour.&quot;<br /><br />&quot;Mets en ligne le nouveau Form d’inscription.&quot;<br /><br />&quot;Déploie le Form de réinitialisation du mot de passe en production.&quot;                                                                                                                        |
 
 <div id="combining-operations">
-  ## Enchaîner plusieurs opérations
+  ## Enchaîner plusieurs opérations {#combining-operations}
 </div>
 
 Vous pouvez aussi demander à [Claude](https://claude.ai/) d’effectuer plusieurs opérations connexes à la suite :
 
 <div id="set-up-a-new-api-with-client-access">
-  #### Configurer une nouvelle API avec Client Access
+  #### Configurer une nouvelle API avec Client Access {#set-up-a-new-api-with-client-access}
 </div>
 
 ```bash wrap lines
@@ -76,7 +76,7 @@ Create a new API called "Inventory API" with read and write scopes, then update 
 ```
 
 <div id="create-and-deploy-a-security-action">
-  #### Créer et déployer une Action de sécurité
+  #### Créer et déployer une Action de sécurité {#create-and-deploy-a-security-action}
 </div>
 
 ```bash wrap lines
@@ -84,7 +84,7 @@ Créez une Action qui exige le MFA pour les utilisateurs qui se connectent depui
 ```
 
 <div id="analyze-security-events">
-  #### Analyser les événements de sécurité
+  #### Analyser les événements de sécurité {#analyze-security-events}
 </div>
 
 ```bash wrap lines
@@ -92,7 +92,7 @@ Show me all failed login attempts from the past week, and identify any patterns 
 ```
 
 <div id="updating-branding-across-forms">
-  #### Mettre à jour l’image de marque dans l’ensemble de Form
+  #### Mettre à jour l’image de marque dans l’ensemble de Form {#updating-branding-across-forms}
 </div>
 
 ```bash wrap lines
@@ -100,7 +100,7 @@ Update all our Auth0 forms to use our new logo at <https://example.com/new-logo.
 ```
 
 <div id="best-practices">
-  ## Pratiques exemplaires
+  ## Pratiques exemplaires {#best-practices}
 </div>
 
 1. Soyez précis dans vos requêtes : incluez des noms, des IDs ou d’autres renseignements permettant d’identifier les ressources précises dont vous parlez.
@@ -109,7 +109,7 @@ Update all our Auth0 forms to use our new logo at <https://example.com/new-logo.
 4. Commencez simplement : commencez par des requêtes simples pour vous familiariser avec la façon dont Claude interprète vos requêtes.
 
 <div id="troubleshooting">
-  ## Dépannage
+  ## Dépannage {#troubleshooting}
 </div>
 
 Si Claude n’est pas en mesure d’effectuer une opération, tenez compte des points suivants :

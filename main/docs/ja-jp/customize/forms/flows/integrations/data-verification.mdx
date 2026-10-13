@@ -6,7 +6,7 @@ title: データ検証
 このデータ検証用Actionsの一覧では、メールアドレスの検証とワンタイムパスワードの生成・検証を行えます。
 
 <div id="generate-one-time-password">
-  ## ワンタイムパスワードを生成
+  ## ワンタイムパスワードを生成 {#generate-one-time-password}
 </div>
 
 メールやSMS、その他のメッセージアプリで送信できる、有効期限5分の数字コードを生成します。
@@ -14,7 +14,7 @@ title: データ検証
 <Frame>![](/docs/images/cdy7uua7fh8z/1h69FWzZwk9beKKjB4Cq38/16aa515e61cc6e9ebdfd0849201e3141/generate-one-time-password.png)</Frame>
 
 <div id="input-settings">
-  ### 入力設定
+  ### 入力設定 {#input-settings}
 </div>
 
 | パラメータ        | 説明                                        |
@@ -23,7 +23,7 @@ title: データ検証
 | コードの長さ (必須)  | 生成されるコードの桁数です。                            |
 
 <div id="output-object">
-  ### 出力オブジェクト
+  ### 出力オブジェクト {#output-object}
 </div>
 
 | プロパティ  | 型      | 説明       |
@@ -31,7 +31,7 @@ title: データ検証
 | `code` | String | 生成されたコード |
 
 <div id="output-object-example">
-  ### 出力オブジェクトの例
+  ### 出力オブジェクトの例 {#output-object-example}
 </div>
 
 ```json lines
@@ -41,7 +41,7 @@ title: データ検証
 ```
 
 <div id="verify-one-time-password">
-  ## ワンタイムパスワードを検証する
+  ## ワンタイムパスワードを検証する {#verify-one-time-password}
 </div>
 
 指定されたワンタイムパスワードが有効かどうかを検証します。
@@ -49,7 +49,7 @@ title: データ検証
 <Frame>![](/docs/images/cdy7uua7fh8z/3bkT8QDN4dcl0YHTrSOIGj/9698a07f55353a11ca98164377cd4217/verify-otp.png)</Frame>
 
 <div id="input-settings">
-  ### 入力設定
+  ### 入力設定 {#input-settings-2}
 </div>
 
 | パラメータ       | 説明                                                     |
@@ -58,7 +58,7 @@ title: データ検証
 | コードの長さ (必須)  | 生成されるコードの桁数です。                                         |
 
 <div id="output-object">
-  ### 出力オブジェクト
+  ### 出力オブジェクト {#output-object-2}
 </div>
 
 | プロパティ    | 型       | 説明                                                                                                                                                                                               |
@@ -67,7 +67,7 @@ title: データ検証
 | `result` | String  | 指定されたコードに応じて、異なる結果コードを返します：<ul> <li> `MISSING:` 指定されたコードは存在しません。 </li> <li> `EXPIRED:` 指定されたコードの有効期限が切れています。 </li> <li> `VALID:` 指定されたコードは有効です。 </li> <li> `UNEQUAL:` 指定されたコードは無効です。 </li> </ul> |
 
 <div id="output-object-example">
-  ### 出力オブジェクトの例
+  ### 出力オブジェクトの例 {#output-object-examples}
 </div>
 
 ```json lines
@@ -84,7 +84,7 @@ title: データ検証
 ```
 
 <div id="verify-email-address">
-  ## メールアドレスを検証
+  ## メールアドレスを検証 {#verify-email-address}
 </div>
 
 指定したメールアドレスに対して、選択した複数の検証ルールを実行します。
@@ -92,7 +92,7 @@ title: データ検証
 <Frame>![](/docs/images/cdy7uua7fh8z/6qkqny1hhObFalHwdEG342/1a2e18195b29102c3f68744f42277917/verify-email.png)</Frame>
 
 <div id="input-settings">
-  ### 入力設定
+  ### 入力設定 {#input-settings-3}
 </div>
 
 | Parameter                        | Description                                                           |
@@ -106,7 +106,7 @@ title: データ検証
 | Blocklist domains                | 特定のメールドメインをブロックします。                                                   |
 
 <div id="output-object">
-  ### 出力オブジェクト
+  ### 出力オブジェクト {#output-object-3}
 </div>
 
 | Property | Type    | Description                                                                                                                                                                                                                                                                                                                                                               |
@@ -115,7 +115,7 @@ title: データ検証
 | `cause`  | String  | `valid` プロパティが `<br/>false<br/>` の場合、メールが最初に満たさなかったルールを示す値を返します: <ul> <li> `MISSING_MX_RECORD:` メールのドメインに MX レコードがありません。 </li> <li> `FREE_EMAIL:` メールのドメインは無料のメールプロバイダーです。</li> <li> `DISPOSABLE_EMAIL:` メールが使い捨てメールアドレスです。</li> <li> `BLOCKLISTED:` メールのドメインが Blocklist domains 設定に含まれています。</li> <li> `NOT_ALLOWED:` メールのドメインが Allowlist domains 設定に含まれていません。</li> </ul> |
 
 <div id="output-object-example">
-  ### 出力オブジェクトの例
+  ### 出力オブジェクトの例 {#output-object-example-2}
 </div>
 
 ```json lines

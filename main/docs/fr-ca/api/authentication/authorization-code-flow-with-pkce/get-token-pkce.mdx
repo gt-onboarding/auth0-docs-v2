@@ -6,7 +6,7 @@ description: "Échanger un code d’autorisation contre un jeton constitue la de
 import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `POST /oauth/token`
@@ -14,7 +14,7 @@ import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 C’est le flux utilisé par les applications mobiles pour accéder à une API. Utilisez ce point de terminaison pour échanger un code d’autorisation contre un jeton.
 
 <div id="remarks">
-  ### Remarques
+  ### Remarques {#remarks}
 </div>
 
 * Afin d’améliorer la compatibilité des applications, Auth0 renverra désormais les informations de profil sous la forme de claims structurées, telle que définie par la spécification OIDC. Cela signifie que, pour ajouter des claims personnalisées aux jetons ID ou aux jetons d’accès, elles doivent respecter un format avec espace de noms afin d’éviter d’éventuelles collisions avec les claims OIDC standard.
@@ -23,7 +23,7 @@ C’est le flux utilisé par les applications mobiles pour accéder à une API. 
 * L’authentification silencieuse vous permet d’exécuter un flux d’authentification dans lequel Auth0 répond uniquement par des redirections, jamais par une page de connexion. Lorsqu’un jeton d’accès a expiré, l’authentification silencieuse peut servir à en obtenir un nouveau sans interaction de l’utilisateur, à condition que la session de Single Sign-On (SSO) de l’utilisateur n’ait pas expiré.
 
 <div id="learn-more">
-  ### En savoir plus
+  ### En savoir plus {#learn-more}
 </div>
 
 * [Flux de code d’autorisation avec clé de preuve pour l’échange de code (PKCE)](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce)
@@ -31,7 +31,7 @@ C’est le flux utilisé par les applications mobiles pour accéder à une API. 
 * [Authentification silencieuse](https://auth0.com/docs/authenticate/login/configure-silent-authentication)
 
 <div id="headers">
-  ## En-têtes
+  ## En-têtes {#headers}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -39,7 +39,7 @@ C’est le flux utilisé par les applications mobiles pour accéder à une API. 
 </ParamField>
 
 <div id="body-parameters">
-  ## Paramètres du corps
+  ## Paramètres du corps {#body-parameters}
 </div>
 
 <div className="prose-sm prose-gray dark:prose-invert">
@@ -73,7 +73,7 @@ C’est le flux utilisé par les applications mobiles pour accéder à une API. 
 </ParamField>
 
 <div id="response-schema">
-  ## Schéma de réponse
+  ## Schéma de réponse {#response-schema}
 </div>
 
 <ResponseSchema statusCode="200">
@@ -109,7 +109,7 @@ C’est le flux utilisé par les applications mobiles pour accéder à une API. 
 </ResponseSchema>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut  | Description              |

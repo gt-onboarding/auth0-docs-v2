@@ -34,7 +34,7 @@ URL リストを指定する際は、次のことができます:
 </Callout>
 
 <div id="federated-logouts">
-  ## フェデレーテッドログアウト
+  ## フェデレーテッドログアウト {#federated-logouts}
 </div>
 
 [いくつかのプロバイダー](/docs/ja-jp/authenticate/login/logout/log-users-out-of-idps#federated-logout-support) はフェデレーテッドログアウトをサポートしています。
@@ -48,7 +48,7 @@ URL リストを指定する際は、次のことができます:
 ユーザーが `/logout` エンドポイントにアクセスすると、Auth0 は Auth0 のセッションを終了し、ユーザーを<Tooltip tip="IDプロバイダー（IdP）: デジタルアイデンティティを保存および管理するサービス。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Identity+Providers">IDプロバイダー</Tooltip>の logout エンドポイントにリダイレクトしたうえで、IDプロバイダーとのセッションも終了します。
 
 <div id="limitations">
-  ## 制限事項
+  ## 制限事項 {#limitations}
 </div>
 
 * `returnTo` パラメーターの値として指定された URL の検証、query string、および URL の一部として含まれるハッシュ情報は考慮されません。
@@ -58,7 +58,7 @@ URL リストを指定する際は、次のことができます:
 Google や Facebook などのソーシャルアイデンティティプロバイダーを使用している場合は、ログアウトが正しく機能するよう、[Auth0 Dashboard](https://manage.auth0.com/#) でそれらのプロバイダーの `Client ID` と `Secret` を設定する必要があります。
 
 <div id="additional-requirements-for-facebook">
-  ## Facebook の追加要件
+  ## Facebook の追加要件 {#additional-requirements-for-facebook}
 </div>
 
 ログアウト後のリダイレクト先を指定するには、`returnTo` パラメーターを使用します。
@@ -74,7 +74,7 @@ export const codeExample = `https://{yourDomain}/v2/logout?federated&
 <AuthCodeBlock children={codeExample} language="http" />
 
 <div id="learn-more">
-  ## 詳細情報
+  ## 詳細情報 {#learn-more}
 </div>
 
 * [アプリケーションからユーザーをログアウトさせる](/docs/ja-jp/authenticate/login/logout/log-users-out-of-applications)

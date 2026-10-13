@@ -4,7 +4,7 @@ description: "Obtenez une URL d’usurpation d’identité pour vous connecter e
 ---
 
 <div id="endpoint">
-  ## Endpoint
+  ## Endpoint {#endpoint}
 </div>
 
 `POST /users/{user_id}/impersonate`
@@ -12,7 +12,7 @@ description: "Obtenez une URL d’usurpation d’identité pour vous connecter e
 Utilisez cet endpoint pour obtenir une URL d’usurpation d’identité afin de vous connecter en tant qu’un autre utilisateur. Utile pour le dépannage.
 
 <div id="remarks">
-  ### Remarques
+  ### Remarques {#remarks}
 </div>
 
 * Ce point de terminaison ne peut être utilisé qu’avec les informations d’authentification **Global Client**.
@@ -20,7 +20,7 @@ Utilisez cet endpoint pour obtenir une URL d’usurpation d’identité afin de 
 * Pour une application Web traditionnelle, vous devez définir les `additionalParameters` : attribuez à `response_type` la valeur `code`, à `callback_url` l’URL de rappel vers laquelle Auth0 redirigera avec le code d’autorisation, et à `scope` les claims JWT que vous voulez inclure dans le JWT.
 
 <div id="body-parameters">
-  ## Paramètres du corps de la requête
+  ## Paramètres du corps de la requête {#body-parameters}
 </div>
 
 <ParamField body="protocol" type="string" required />
@@ -32,7 +32,7 @@ Utilisez cet endpoint pour obtenir une URL d’usurpation d’identité afin de 
 <ParamField body="additionalParameters" type="object" />
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                                           |

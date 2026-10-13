@@ -15,11 +15,11 @@ Avec la [Management API](/docs/fr-ca/api/management/v2) d’Auth0, vous pouvez d
 </Warning>
 
 <div id="experiment">
-  ## Expérience
+  ## Expérience {#experiment}
 </div>
 
 <div id="experiment-lifecycle">
-  ### Cycle de vie des expériences
+  ### Cycle de vie des expériences {#experiment-lifecycle}
 </div>
 
 Les expériences ont cinq états :
@@ -39,7 +39,7 @@ Pour faire passer le cycle de vie d’un état à l’autre, utilisez le point d
 </Callout>
 
 <div id="the-is_valid-gate">
-  ### Le contrôle `is_valid`
+  ### Le contrôle `is_valid` {#the-is_valid-gate}
 </div>
 
 Avant qu’une expérience puisse être activée, elle doit passer une vérification de l’état de préparation.
@@ -61,7 +61,7 @@ Cela renvoie `is_valid: true/false` et un tableau `errors` qui répertorie tous 
 * Aucune autre expérience n’est actuellement active pour le tenant (Beta seulement)
 
 <div id="assignment">
-  ### Attribution
+  ### Attribution {#assignment}
 </div>
 
 **Remplacements par paramètres de requête**
@@ -77,11 +77,11 @@ Vous pouvez forcer une attribution précise pour toute requête `/authorize` en 
 Cela fonctionne pour les expériences, peu importe leur état, y compris `draft`. Utilisez cette option pendant le développement pour vérifier que les deux variations s’affichent correctement avant l’activation.
 
 <div id="feature-flag">
-  ## Drapeau de fonctionnalité
+  ## Drapeau de fonctionnalité {#feature-flag}
 </div>
 
 <div id="feature-flag-lifecycle">
-  ### Cycle de vie du Feature flag
+  ### Cycle de vie du Feature flag {#feature-flag-lifecycle}
 </div>
 
 Les Feature flags ont un cycle de vie enregistré comportant trois états :
@@ -107,7 +107,7 @@ active → archived (terminal; no way back)
 </Callout>
 
 <div id="variation">
-  ### Variation
+  ### Variation {#variation}
 </div>
 
 **Paramètres et remplacements**
@@ -125,11 +125,11 @@ Les `overrides` d’une variation indiquent uniquement les paramètres qui diff�
 </Callout>
 
 <div id="segment">
-  ## Segment
+  ## Segment {#segment}
 </div>
 
 <div id="segment-rules">
-  ### Règles de segment
+  ### Règles de segment {#segment-rules}
 </div>
 
 Le `rules` d’un segment est un array d’objets rule. Une requête correspond au segment si **au moins une** rule du array correspond.
@@ -140,7 +140,7 @@ Le `rules` d’un segment est un array d’objets rule. Une requête correspond 
 Chaque condition compare un attribut à une valeur à l’aide d’un opérateur : `contains`, `starts_with`, `ends_with`, `exists`.
 
 <div id="available-condition-attributes">
-  ### Attributs de condition disponibles
+  ### Attributs de condition disponibles {#available-condition-attributes}
 </div>
 
 Les segments peuvent uniquement utiliser les attributs disponibles au début de la transaction `/authorize` :
@@ -155,7 +155,7 @@ Les segments peuvent uniquement utiliser les attributs disponibles au début de 
 | Géographique (tiré de l’adresse IP) | `country`, `region`                                |
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 <CardGroup cols={2}>

@@ -12,7 +12,7 @@ Cross App Access (XAA) は、信頼できるEnterprise IdP (Oktaなど) が発�
 </Note>
 
 <div id="remarks">
-  ## 注意事項
+  ## 注意事項 {#remarks}
 </div>
 
 * Requesting App は、Resource App の Auth0 テナントに登録され、Cross App Access のトグルが有効になっている必要があります。
@@ -20,7 +20,7 @@ Cross App Access (XAA) は、信頼できるEnterprise IdP (Oktaなど) が発�
 * このエンドポイントでの ID-JAG の交換には、テナント全体の Authentication API のレート制限の最大 50% というレート制限が適用されます。詳細については、[レート制限の構成](/docs/ja-jp/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations)を参照してください。
 
 <div id="request-body">
-  ## リクエストボディ
+  ## リクエストボディ {#request-body}
 </div>
 
 <ParamField body="grant_type" type="string" required>
@@ -44,7 +44,7 @@ Cross App Access (XAA) は、信頼できるEnterprise IdP (Oktaなど) が発�
 </ParamField>
 
 <div id="response">
-  ## レスポンス
+  ## レスポンス {#response}
 </div>
 
 | ステータス | 説明                                                                                |
@@ -73,7 +73,7 @@ Cross App Access (XAA) は、信頼できるEnterprise IdP (Oktaなど) が発�
 </ResponseExample>
 
 <div id="response-fields">
-  ## レスポンスフィールド
+  ## レスポンスフィールド {#response-fields}
 </div>
 
 <ResponseField name="access_token" type="string">

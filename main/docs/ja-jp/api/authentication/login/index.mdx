@@ -5,13 +5,13 @@ description: "Facebook、Google、Apple などのソーシャル ID プロバイ
 ---
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `GET /authorize`
 
 <div id="social">
-  ## ソーシャル
+  ## ソーシャル {#social}
 </div>
 
 Auth0 サービスをソーシャル ID プロバイダーに接続すると、Facebook、Google、Apple、その他の対応プロバイダーを通じて、ユーザーがアプリケーションにログインできるようになります。対応プロバイダーの詳細については、[Marketplace](https://marketplace.auth0.com/features/social-connections) をご覧ください。
@@ -23,7 +23,7 @@ Auth0 サービスをソーシャル ID プロバイダーに接続すると、F
 </Note>
 
 <div id="remarks">
-  ### 注記
+  ### 注記 {#remarks}
 </div>
 
 * `response_type=token` の場合、ユーザーがプロバイダーで認証すると、アドレスの `location.hash` にアクセストークンと ID トークンを含めた状態で、アプリケーションの `callback URL` にリダイレクトされます。これはシングルページアプリやネイティブモバイル SDK で使用されます。
@@ -31,7 +31,7 @@ Auth0 サービスをソーシャル ID プロバイダーに接続すると、F
 * auth0.js のサンプルスクリプトでは、ライブラリのバージョン 8 を使用しています。auth0.js バージョン 7 を使用している場合は、この[リファレンスガイド](https://auth0.com/docs/libraries/auth0js)を参照してください。
 
 <div id="learn-more">
-  ### 詳細情報
+  ### 詳細情報 {#learn-more}
 </div>
 
 * [サポートされているソーシャル ID プロバイダー](https://marketplace.auth0.com/features/social-connections)
@@ -40,7 +40,7 @@ Auth0 サービスをソーシャル ID プロバイダーに接続すると、F
 * [Auth0.js の /authorize メソッド リファレンス](https://auth0.com/docs/libraries/auth0js#webauth-authorize)
 
 <div id="query-parameters">
-  ## クエリパラメータ
+  ## クエリパラメータ {#query-parameters}
 </div>
 
 <ParamField query="response_type" type="string" required>
@@ -66,7 +66,7 @@ Auth0 サービスをソーシャル ID プロバイダーに接続すると、F
 </ParamField>
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | ステータス | 説明                   |

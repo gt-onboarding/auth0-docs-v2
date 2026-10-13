@@ -25,7 +25,7 @@ Le processus à suivre diffère selon que votre code s’exécute dans le backen
 * Si votre code s’exécute dans le frontend (par exemple, il s’agit d’une SPA, d’une application de bureau native ou d’une application mobile), votre application ne peut pas stocker des informations d’authentification de façon sécurisée et doit suivre une autre approche. Dans ce cas, passez à la [section frontend](#from-the-frontend) de cet article.
 
 <div id="from-the-backend">
-  ## Depuis le backend
+  ## Depuis le backend {#from-the-backend}
 </div>
 
 Une fois que vous avez authentifié un utilisateur, l’IdP inclut souvent un jeton d’accès dans le profil utilisateur qu’il renvoie à Auth0.
@@ -37,13 +37,13 @@ Pour des raisons de sécurité et de conformité, Auth0 n’envoie pas ce jeton 
 3. Extrayez le jeton d’accès de l’IdP de la réponse et utilisez-le pour effectuer une requête à l’API de l’IdP.
 
 <div id="step-1-get-a-token">
-  ### Étape 1 : Obtenir un jeton
+  ### Étape 1 : Obtenir un jeton {#step-1-get-a-token}
 </div>
 
 Vous aurez besoin d’un jeton d’accès pour effectuer une requête à la [Management API](https://auth0.com/docs/api/management/v2).
 
 <div id="create-a-test-application-for-the-management-api">
-  #### Créer une application de test pour la Management API
+  #### Créer une application de test pour la Management API {#create-a-test-application-for-the-management-api}
 </div>
 
 Si c’est la première fois que vous demandez un [Management APIv2 Token](https://auth0.com/docs/api/management/v2/tokens), vous devrez créer et configurer une application qui pourra être utilisée pour appeler la Management API :
@@ -72,7 +72,7 @@ Pour accorder ou supprimer des scopes de l’[Auth0 Management API](https://mana
 <Frame>![Modifier les scopes accordés à l’application](/docs/images/cdy7uua7fh8z/6nuMjQMrTWhoVqtRwJBQz7/28a0f7c89c696426e273f43bd849b5e5/2025-02-25_11-11-36.png)</Frame>
 
 <div id="get-the-management-api-token">
-  #### Obtenir le jeton de la Management API
+  #### Obtenir le jeton de la Management API {#get-the-management-api-token}
 </div>
 
 Vous avez maintenant terminé la configuration et êtes prêt à obtenir votre jeton de la Management API :
@@ -87,7 +87,7 @@ Vous avez maintenant terminé la configuration et êtes prêt à obtenir votre j
 </Card>
 
 <div id="token-expiration">
-  #### Expiration du jeton
+  #### Expiration du jeton {#token-expiration}
 </div>
 
 Par défaut, le jeton que vous avez reçu expire après 24 heures (86 400 secondes). Pour modifier ce paramètre :
@@ -102,7 +102,7 @@ Le prochain jeton que vous générerez utilisera le nouveau délai d’expiratio
 </Warning>
 
 <div id="step-2-get-the-full-user-profile">
-  ### Étape 2 : Obtenir le profil utilisateur complet
+  ### Étape 2 : Obtenir le profil utilisateur complet {#step-2-get-the-full-user-profile}
 </div>
 
 Pour obtenir le profil d’un utilisateur, effectuez une requête au [point de terminaison Get a User](https://auth0.com/docs/api/management/v2#!/Users/get_users_by_id) de la Management API à l’aide du jeton d’accès que vous avez extrait dans la section précédente :
@@ -245,7 +245,7 @@ Remplacez les valeurs suivantes :
 </Card>
 
 <div id="step-3-extract-the-idp-access-token">
-  ### Étape 3 : Extraire le jeton d’accès de l’IdP
+  ### Étape 3 : Extraire le jeton d’accès de l’IdP {#step-3-extract-the-idp-access-token}
 </div>
 
 Vous trouverez le jeton d’accès utilisé pour envoyer une requête à l’API de l’IdP dans le tableau `identities` de l’utilisateur : `user.identities[0].access_token`.
@@ -299,7 +299,7 @@ Vous êtes maintenant prêt à appeler l’API de l’IdP. Veuillez consulter la
 </Callout>
 
 <div id="from-the-frontend">
-  ## Côté frontend
+  ## Côté frontend {#from-the-frontend}
 </div>
 
 Si vous travaillez avec une application publique (SPA, application native de bureau ou application mobile), vous êtes au bon endroit.
@@ -311,7 +311,7 @@ Plus précisément, elles ne peuvent pas stocker de façon sécuritaire le **<To
 Vous devez plutôt créer un proxy pour votre backend et l’exposer à votre application sous forme d’API.
 
 <div id="build-a-proxy">
-  ### Créer un proxy
+  ### Créer un proxy {#build-a-proxy}
 </div>
 
 D’abord, vous allez créer un processus dans votre backend qui mettra en œuvre les étapes décrites dans [la section backend](#from-the-backend) de cet article, puis l’exposer à votre application sous forme d’API.

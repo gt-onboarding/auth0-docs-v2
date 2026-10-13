@@ -6,7 +6,7 @@ description: "Point de terminaison obsolète pour authentifier les utilisateurs 
 import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `POST /oauth/access_token`
@@ -20,7 +20,7 @@ import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 À partir du jeton d’accès du fournisseur social et de la `connection`, ce point de terminaison authentifie l’utilisateur auprès du fournisseur et renvoie une réponse JSON contenant le jeton d’accès et, au besoin, un jeton d’identité. Ce point de terminaison fonctionne uniquement avec Facebook, Google, Twitter et Weibo.
 
 <div id="remarks">
-  ### Remarques
+  ### Remarques {#remarks}
 </div>
 
 * La valeur de scope `profile` permet de demander l’accès aux claims de profil par défaut de l’utilisateur final, soit : `name`, `family_name`, `given_name`, `middle_name`, `nickname`, `preferred_username`, `profile`, `picture`, `website`, `gender`, `birthdate`, `zoneinfo`, `locale` et `updated_at`.
@@ -28,7 +28,7 @@ import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 * La valeur de scope `email` permet de demander l’accès aux claims `email` et `email_verified`.
 
 <div id="learn-more">
-  ### En savoir plus
+  ### En savoir plus {#learn-more}
 </div>
 
 * [Appeler l’API d’un fournisseur d’identité](https://auth0.com/docs/authenticate/identity-providers/calling-an-external-idp-api)
@@ -36,7 +36,7 @@ import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 * [Ajouter des portées/autorisations pour appeler les API du fournisseur d’identité](https://auth0.com/docs/authenticate/identity-providers/adding-scopes-for-an-external-idp)
 
 <div id="body-parameters">
-  ## Paramètres du corps
+  ## Paramètres du corps {#body-parameters}
 </div>
 
 <ParamField body="client_id" type="string" required>
@@ -56,7 +56,7 @@ import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 </ParamField>
 
 <div id="response-schema">
-  ## Schéma de réponse
+  ## Schéma de réponse {#response-schema}
 </div>
 
 <ResponseSchema statusCode="200">
@@ -84,7 +84,7 @@ import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 </ResponseSchema>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut  | Description                        |

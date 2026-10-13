@@ -36,7 +36,7 @@ title: Log Extensions からの移行
 記載された EOL 日以降、Auth0 は上記一覧のインストール済み log extensions をサポートしなくなります。このページでは、特定の log extensions から移行する手順を案内します。
 
 <div id="auth0-authentication-api-webhooks">
-  ## Auth0 Authentication API Webhooks
+  ## Auth0 Authentication API Webhooks {#auth0-authentication-api-webhooks}
 </div>
 
 送信先でログオブジェクトの配列を処理できることを確認してください。
@@ -55,7 +55,7 @@ title: Log Extensions からの移行
 8. **Extensions &gt; Installed Extensions** に戻り、**Auth0 Authentication API webhooks** 拡張機能 を無効にします。
 
 <div id="auth0-management-api-webhooks">
-  ## Auth0 Management API Webhooks
+  ## Auth0 Management API Webhooks {#auth0-management-api-webhooks}
 </div>
 
 送信先でログオブジェクトの配列を処理できることを確認してください。
@@ -74,7 +74,7 @@ title: Log Extensions からの移行
 8. **Extensions &gt; Installed Extensions** に戻り、**Auth0 Management API webhooks** 拡張機能を無効にします。
 
 <div id="cloudwatch">
-  ## CloudWatch
+  ## CloudWatch {#cloudwatch}
 </div>
 
 Auth0 Marketplace で提供されている [Amazon EventBridge 連携](https://marketplace.auth0.com/integrations/amazon-log-streaming) を設定します。イベントバスでイベントを利用できるようになったら、[ルールを作成](https://docs.aws.amazon.com/eventbridge/latest/userguide/create-event-bus.html)して、それらのイベントを AWS CloudWatch にマッピングします。**Auth0 Logs to CloudWatch** 拡張機能は必ず無効にしてください。
@@ -84,7 +84,7 @@ Auth0 Marketplace で提供されている [Amazon EventBridge 連携](https://m
 3. **Auth0 Logs to CloudWatch** 拡張機能を無効にします。
 
 <div id="loggly">
-  ## Loggly
+  ## Loggly {#loggly}
 </div>
 
 1. [Loggly アカウントにログインします](https://www.loggly.com/login/)。
@@ -104,7 +104,7 @@ Auth0 Marketplace で提供されている [Amazon EventBridge 連携](https://m
 10. **Extensions &gt; Installed Extensions** に移動し、**Auth0 Logs to Loggly** 拡張機能を無効にします。
 
 <div id="logstash">
-  ## Logstash
+  ## Logstash {#logstash}
 </div>
 
 1. [Auth0 Dashboard にログインします](https://manage.auth0.com/)。
@@ -118,7 +118,7 @@ Auth0 Marketplace で提供されている [Amazon EventBridge 連携](https://m
 6. **Extensions &gt; Installed Extensions** に移動し、**Auth0 Logs to Logstash** 拡張機能 を無効にします。
 
 <div id="papertrail">
-  ## Papertrail
+  ## Papertrail {#papertrail}
 </div>
 
 1. Papertrail にログインします。
@@ -138,7 +138,7 @@ Auth0 Marketplace で提供されている [Amazon EventBridge 連携](https://m
 11. **Extensions &gt; Installed Extensions** に移動し、**Auth0 Logs to Papertrail** 拡張機能 を無効にします。
 
 <div id="splunk">
-  ## Splunk
+  ## Splunk {#splunk}
 </div>
 
 Auth0 Marketplace で提供されている [Splunk 連携](https://marketplace.auth0.com/integrations/splunk-log-streaming) を使用してください。**Auth0 Logs to Splunk** 拡張機能は必ず無効にしてください。
@@ -148,7 +148,7 @@ Auth0 Marketplace で提供されている [Splunk 連携](https://marketplace.a
 3. **Auth0 Logs to Splunk** 拡張機能を無効にします。
 
 <div id="sumo-logic">
-  ## Sumo Logic
+  ## Sumo Logic {#sumo-logic}
 </div>
 
 Auth0 Marketplace で利用可能な [Sumo Logic 連携](https://marketplace.auth0.com/integrations/sumo-logic-log-streaming) を使用します。**Auth0 Logs to Sumo Logic** 拡張機能は必ず無効にしてください。
@@ -158,13 +158,13 @@ Auth0 Marketplace で利用可能な [Sumo Logic 連携](https://marketplace.aut
 3. **Auth0 Logs to Sumo Logic** 拡張機能を無効にします。
 
 <div id="logentries">
-  ## Logentries
+  ## Logentries {#logentries}
 </div>
 
 現時点では、Logs to Logentries 拡張機能 からログストリームへ移行するための手順はありません。
 
 <div id="segment">
-  ## セグメント
+  ## セグメント {#segment}
 </div>
 
 1. Auth0 Dashboard にログインします。
@@ -176,7 +176,7 @@ Auth0 Marketplace で利用可能な [Sumo Logic 連携](https://marketplace.aut
 7. ストリームを作成します
 
 <div id="mixpanel">
-  ## Mixpanel
+  ## Mixpanel {#mixpanel}
 </div>
 
 1. Mixpanel アカウントにログインし、**Project Settings** を開きます。**Project ID** と **Data Residency** (データレジデンシー / リージョン) を控えておきます。
@@ -186,7 +186,7 @@ Auth0 Marketplace で利用可能な [Sumo Logic 連携](https://marketplace.aut
 5. 古い 拡張機能 の無効化も忘れないでください。**Extensions &gt; Installed Extensions** に移動し、**Auth0 Logs to Mixpanel 拡張機能** を無効にします。
 
 <div id="appinsights">
-  ## AppInsights
+  ## AppInsights {#appinsights}
 </div>
 
 1. [Azure EventGrid Log Stream](https://marketplace.auth0.com/integrations/azure-log-streaming) を設定するか、既存の EventGrid ストリームを利用します。
@@ -215,7 +215,7 @@ Auth0 Marketplace で利用可能な [Sumo Logic 連携](https://marketplace.aut
 * record の details プロパティは、8185 文字に切り詰められます
 
 <div id="azure-blob-storage">
-  ## Azure Blob Storage
+  ## Azure Blob Storage {#azure-blob-storage}
 </div>
 
 1. [Azure EventGrid Log Stream](https://marketplace.auth0.com/integrations/azure-log-streaming)を設定するか、既存のEventGridストリームを利用します。

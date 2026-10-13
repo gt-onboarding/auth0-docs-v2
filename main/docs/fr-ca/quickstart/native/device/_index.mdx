@@ -387,11 +387,11 @@ export const sections = [
       Les logs du tenant sont créés pour toute interaction qui a
       lieu et peuvent servir à résoudre les problèmes.
 
-      ### Réponses du token
+### Réponses du token {#token-responses}
 
       Pendant que vous attendez que l’utilisateur autorise l’appareil, vous pourriez recevoir différentes réponses HTTP 4xx.
 
-      #### Autorisation en attente
+#### Autorisation en attente {#authorization-pending}
 
       Vous verrez cette erreur pendant que vous attendez que l’utilisateur effectue l’action requise. Continuez le polling en utilisant l’`interval` suggéré
       récupéré à l’étape précédente de ce tutoriel.
@@ -404,7 +404,7 @@ export const sections = [
       }
       ```
 
-      #### Ralentissez
+#### Ralentissez {#slow-down}
 
       Vous effectuez une interrogation périodique trop rapidement. Ralentissez et utilisez l’intervalle suggéré récupéré à l’étape précédente de ce
       tutoriel. Pour éviter de recevoir cette erreur en raison de la latence du réseau, vous devriez commencer à compter chaque intervalle après
@@ -418,7 +418,7 @@ export const sections = [
       }
       ```
 
-      #### Jeton expiré
+#### Jeton expiré {#expired-token}
 
       L’utilisateur n’a pas autorisé l’appareil assez rapidement, donc le `device_code` a expiré. Votre
       application doit informer l’utilisateur que le flux a expiré et l’inviter à le relancer.
@@ -436,7 +436,7 @@ export const sections = [
       }
       ```
 
-      #### Accès refusé
+#### Accès refusé {#access-denied}
 
       Si l’accès est refusé, vous obtenez :
 
@@ -488,7 +488,7 @@ export const sections = [
       <LoggedInForm />
     </Section>
 
-    ## Prochaines étapes
+## Prochaines étapes {#next-steps}
 
     Excellent travail ! Si vous avez suivi toutes les étapes jusqu&#39;ici, vous devriez maintenant avoir le login, le logout et les renseignements du profil utilisateur fonctionnels dans votre application.
 

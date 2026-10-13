@@ -13,13 +13,13 @@ sidebarTitle: 'Objet API'
 L’objet API du déclencheur d’Actions pre-user-registration comprend :
 
 <div id="apiaccess">
-  ## `api.access`
+  ## `api.access` {#apiaccess}
 </div>
 
 Modifiez l’accès de l’utilisateur qui tente de se connecter, par exemple en rejetant sa tentative de connexion.
 
 <div id="apiaccessdenyreason-usermessage">
-  ### `api.access.deny(reason, userMessage)`
+  ### `api.access.deny(reason, userMessage)` {#apiaccessdenyreason-usermessage}
 </div>
 
 Empêche l’utilisateur de s’inscrire. Le flux d’inscription s’arrête immédiatement après
@@ -40,13 +40,13 @@ l’exécution de cette action, et aucune autre Action n’est exécutée.
 </Expandable>
 
 <div id="apiuser">
-  ## `api.user`
+  ## `api.user` {#apiuser}
 </div>
 
 Modifiez les métadonnées de l’utilisateur qui se connecte.
 
 <div id="apiusersetappmetadatakey-value">
-  ### `api.user.setAppMetadata(key, value)`
+  ### `api.user.setAppMetadata(key, value)` {#apiusersetappmetadatakey-value}
 </div>
 
 Définissez des métadonnées propres à l’application pour l’utilisateur qui ouvre une session.
@@ -69,7 +69,7 @@ modifications et mettra les métadonnées à jour en une seule fois avant la fin
 </Expandable>
 
 <div id="apiusersetusermetadatakey-value">
-  ### `api.user.setUserMetadata(key, value)`
+  ### `api.user.setUserMetadata(key, value)` {#apiusersetusermetadatakey-value}
 </div>
 
 Définit les métadonnées générales de l’utilisateur qui se connecte.
@@ -92,13 +92,13 @@ modifications pour mettre à jour les métadonnées en une seule fois avant la f
 </Expandable>
 
 <div id="apicache">
-  ## `api.cache`
+  ## `api.cache` {#apicache}
 </div>
 
 Enregistrez et récupérez des données qui persistent d’une exécution à l’autre.
 
 <div id="apicachedeletekey">
-  ### `api.cache.delete(key)`
+  ### `api.cache.delete(key)` {#apicachedeletekey}
 </div>
 
 Supprime, s’il existe, l’enregistrement associé à une valeur mise en cache à la
@@ -113,7 +113,7 @@ clé fournie.
 </Expandable>
 
 <div id="apicachegetkey">
-  ### `api.cache.get(key)`
+  ### `api.cache.get(key)` {#apicachegetkey}
 </div>
 
 Récupère l’enregistrement associé à une valeur mise en cache à la clé fournie,
@@ -129,7 +129,7 @@ dans la propriété `value` de l’objet retourné.
 </Expandable>
 
 <div id="apicachesetkey-value-options">
-  ### `api.cache.set(key, value, options)`
+  ### `api.cache.set(key, value, options)` {#apicachesetkey-value-options}
 </div>
 
 Stocke ou met à jour une valeur de type chaîne dans le cache à la clé indiquée.
@@ -187,13 +187,13 @@ disponibles lors de transactions ultérieures, même si leur durée de vie n’e
 </Expandable>
 
 <div id="apivalidation">
-  ## `api.validation`
+  ## `api.validation` {#apivalidation}
 </div>
 
 Modifiez l’accès de l’utilisateur qui se connecte, par exemple en rejetant sa tentative de connexion en raison d’erreurs de validation.
 
 <div id="apivalidationerrorerrorcode-errormessage">
-  ### `api.validation.error(errorCode, errorMessage)`
+  ### `api.validation.error(errorCode, errorMessage)` {#apivalidationerrorerrorcode-errormessage}
 </div>
 
 Empêche l’utilisateur de s’inscrire. Le flux d’inscription s’arrête immédiatement après l’exécution de cette action, et aucune autre action n’est exécutée.

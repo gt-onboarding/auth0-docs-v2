@@ -10,7 +10,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 Auth0 には、[Universal Login](/docs/ja-jp/authenticate/login/auth0-universal-login) を使用した、組み込みの <Tooltip tip="多要素認証（MFA）: SMS によるコードなど、ユーザー名とパスワードに加えて認証要素を使用するユーザー認証プロセス。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=MFA">MFA</Tooltip> の登録および認証フローが用意されています。ですが、独自のユーザーインターフェースを作成したい場合は、[MFA API](/docs/ja-jp/secure/multi-factor-authentication/multi-factor-authentication-developer-resources/mfa-api) を使って実現することもできます。
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 MFA API を使用する前に、アプリケーションで MFA グラントタイプを有効にする必要があります。[Auth0 Dashboard &gt; アプリケーション &gt; 詳細設定 &gt; グラントタイプ](https://manage.auth0.com/#/applications) に移動し、**MFA** を選択します。
@@ -18,11 +18,11 @@ MFA API を使用する前に、アプリケーションで MFA グラントタ�
 * Auth0 Dashboard または [Management API](https://auth0.com/docs/api/management/v2#!/Guardian/put_factors_by_name) を使用して、[電話を認証要素として設定する](/docs/ja-jp/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-sms-voice-notifications-mfa)。
 
 <div id="enroll-with-sms-or-voice">
-  ## SMS または音声で登録する
+  ## SMS または音声で登録する {#enroll-with-sms-or-voice}
 </div>
 
 <div id="get-mfa-token">
-  ### MFAトークンを取得する
+  ### MFAトークンを取得する {#get-mfa-token}
 </div>
 
 登録を開始するタイミングに応じて、MFA API の利用に必要な <Tooltip tip="アクセストークン: API へのアクセスに使用する、opaque な文字列または JWT 形式の認可資格情報。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=access+token">アクセストークン</Tooltip> は、いくつかの方法で取得できます。
@@ -31,7 +31,7 @@ MFA API を使用する前に、アプリケーションで MFA グラントタ�
 * ユーザーが任意のタイミングで認証要素を登録できるようにする場合は、[Manage MFA Factor Enrollments](/docs/ja-jp/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authenticator-factors-mfa-api) を参照してください。
 
 <div id="enroll-authenticator">
-  ### 認証器を登録する
+  ### 認証器を登録する {#enroll-authenticator}
 </div>
 
 ユーザーの認証器を登録するには、MFA Associate endpoint に `POST` リクエストを送信します。この endpoint で必要なベアラートークンは、前の手順で取得した MFA トークンです。
@@ -208,7 +208,7 @@ SMS or 音声 で登録するには、SMS または 音声 のいずれかでチ
 これがユーザーにとって認証器を関連付ける初めてのケースであれば、レスポンスに `recovery_codes` が含まれていることがわかります。リカバリーコードは、ユーザーがアカウント、または第 2 認証要素の認証に使用しているデバイスにアクセスできなくなった場合に、アカウントへアクセスするために使用されます。これらのコードは 1 回限り有効で、必要に応じて新しいものが生成されます。
 
 <div id="confirm-sms-or-voice-enrollment">
-  ### SMS または音声による登録を確認する
+  ### SMS または音声による登録を確認する {#confirm-sms-or-voice-enrollment}
 </div>
 
 ユーザーには、アプリケーションに入力する必要がある 6 桁のコードを含むメッセージが届きます。
@@ -389,17 +389,17 @@ SMS or 音声 で登録するには、SMS または 音声 のいずれかでチ
 ```
 
 <div id="challenge-with-sms-or-voice">
-  ## SMS または音声による認証チャレンジ
+  ## SMS または音声による認証チャレンジ {#challenge-with-sms-or-voice}
 </div>
 
 <div id="get-mfa-token">
-  ### MFAトークンを取得する
+  ### MFAトークンを取得する {#get-mfa-token-2}
 </div>
 
 [MFA を使用して Resource Owner Password グラントで認証する](/docs/ja-jp/secure/multi-factor-authentication/authenticate-using-ropg-flow-with-mfa) の手順に従って、MFAトークンを取得します。
 
 <div id="retrieve-enrolled-authenticators">
-  ### 登録済みの認証器を取得する
+  ### 登録済みの認証器を取得する {#retrieve-enrolled-authenticators}
 </div>
 
 ユーザーにチャレンジを送信するには、チャレンジする認証要素の `authenticator_id` が必要です。MFA Authenticators エンドポイント を使用して、登録済みの認証器をすべて一覧表示できます。
@@ -566,7 +566,7 @@ SMS or 音声 で登録するには、SMS または 音声 のいずれかでチ
 ```
 
 <div id="challenge-user-with-otp">
-  ### OTP を使ってユーザーにチャレンジする
+  ### OTP を使ってユーザーにチャレンジする {#challenge-user-with-otp}
 </div>
 
 チャレンジを実行するには、対応する `authenticator_id` と `mfa_token` を使用して、MFA Challenge エンドポイントに `POST` します。
@@ -715,7 +715,7 @@ SMS or 音声 で登録するには、SMS または 音声 のいずれかでチ
 </AuthCodeGroup>
 
 <div id="complete-authentication-using-received-code">
-  ### 受信したコードで認証を完了する
+  ### 受信したコードで認証を完了する {#complete-authentication-using-received-code}
 </div>
 
 成功すると、次のレスポンスが返されます。
@@ -894,7 +894,7 @@ SMS or 音声 で登録するには、SMS または 音声 のいずれかでチ
 **注:** SMS送信と「無効なコード」エラーの返却は、レート制限の対象です。SMSコードは10回送信でき、1時間ごとに1回分回復します。一方、「無効なコード」エラーは10回まで返され、6分ごとに1回分回復します。
 
 <div id="customize-mfa">
-  ## MFA をカスタマイズする
+  ## MFA をカスタマイズする {#customize-mfa}
 </div>
 
 <Warning>
@@ -946,7 +946,7 @@ SMS or 音声 で登録するには、SMS または 音声 のいずれかでチ
 Auth0 Actions を使用すると、MFAフローをさらに柔軟にカスタマイズできます。詳しくは、[Actions トリガー: post-challenge - API Object](/docs/ja-jp/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-api-object) をご覧ください。
 
 <div id="learn-more">
-  ## 詳しくはこちら
+  ## 詳しくはこちら {#learn-more}
 </div>
 
 * [Authentication API を使用して認証要素を管理する](/docs/ja-jp/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authenticator-factors-mfa-api)

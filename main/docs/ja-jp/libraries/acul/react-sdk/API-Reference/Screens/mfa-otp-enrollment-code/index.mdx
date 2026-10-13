@@ -10,7 +10,7 @@ description: "Universal Login の `mfa-otp-enrollment-code` 画面をカスタ�
 </Frame>
 
 <div id="import">
-  ## インポート
+  ## インポート {#import}
 </div>
 
 各画面には、それぞれ固有のフックとメソッドがあります。SDK は、各画面で **部分インポート** と **ルートインポート** をサポートしています。
@@ -58,7 +58,7 @@ function MfaOtpEnrollmentCodeScreen() {
 ```
 
 <div id="context-hooks">
-  ## コンテキストフック
+  ## コンテキストフック {#context-hooks}
 </div>
 
 `mfa-otp-enrollment-code` 画面で Auth0 のコンテキストデータへの読み取り専用アクセスを提供する、画面スコープのフックです。`@auth0/auth0-acul-react/mfa-otp-enrollment-code` からインポートします。
@@ -170,7 +170,7 @@ function MfaOtpEnrollmentCodeScreen() {
 </ParamField>
 
 <div id="methods">
-  ## メソッド
+  ## メソッド {#methods}
 </div>
 
 <ParamField body="continueMethod" type="Promise<void>">
@@ -237,7 +237,7 @@ function MfaOtpEnrollmentCodeScreen() {
 </ParamField>
 
 <div id="commonutility-hooks">
-  ## 共通/Utility Hooks
+  ## 共通/Utility Hooks {#commonutility-hooks}
 </div>
 
 <ParamField body={<a href="/docs/ja-jp/libraries/acul/react-sdk/API-Reference/Hooks/useAuth0Themes">useAuth0Themes</a>} type="Hooks">

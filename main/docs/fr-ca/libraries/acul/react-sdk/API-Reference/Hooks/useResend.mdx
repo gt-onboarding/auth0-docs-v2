@@ -11,13 +11,13 @@ title: "useResend"
   * Indique si le bouton de renvoi doit être désactivé.
   * Fournit une fonction `startResend` pour déclencher un renvoi immédiatement.
 
-  ## Paramètres
+  ## Paramètres {#parameters}
 
   <ParamField body="options" type={<span><a href='/docs/fr-ca/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseResendOptions'>UseResendOptions</a></span>}>
     Configuration facultative, comme `timeoutSeconds` et `onTimeout`.
   </ParamField>
 
-  ## Valeur de retour
+  ## Valeur de retour {#returns}
 
   [`UseResendReturn`](/docs/fr-ca/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseResendReturn)
 
@@ -27,7 +27,7 @@ title: "useResend"
   * `disabled` — `true` si le renvoi est actuellement bloqué.
   * `startResend` — fonction pour lancer un renvoi immédiatement (si autorisé).
 
-  ## Écrans pris en charge
+  ## Écrans pris en charge {#supported-screens}
 
   * `email-identifier-challenge`
   * `email-otp-challenge`
@@ -59,7 +59,7 @@ title: "useResend"
   }
   ```
 
-  ## Remarques
+  ## Remarques {#remarks}
 
   * Le `ResendControl` sous-jacent n’a pas de méthode de nettoyage explicite; le hook ne nécessite aucun nettoyage manuel.
   * Le hook réinitialise le gestionnaire de renvoi si `timeoutSeconds` ou `onTimeout` changent.

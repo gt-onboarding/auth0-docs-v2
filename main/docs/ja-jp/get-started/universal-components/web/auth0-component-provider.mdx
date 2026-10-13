@@ -11,7 +11,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 `Auth0ComponentProvider` は、[Auth0 Universal Components](/docs/ja-jp/get-started/universal-components/universal-components-overview) のオーケストレーション層です。Auth0 SDK はセッションとトークンを管理し、`Auth0ComponentProvider` はそのアイデンティティの状態を、機能的でブランドに沿った UI コンテキストへと変換します。`Auth0ComponentProvider` は、MFA 登録などのコンポーネントで必要となる権限、キャッシュされたデータ、スタイリングを確実に利用できるようにします。
 
 <div id="benefits">
-  ## 利点
+  ## 利点 {#benefits}
 </div>
 
 `Auth0ComponentProvider` は、すべての Auth0 Universal Components に必要なルートラッパーです。このラッパーを使用する利点は次のとおりです。
@@ -22,13 +22,13 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 * **グローバルフィードバック**: セキュリティアラートやワークフローのステータスを知らせる統合トースト通知システムを管理します。
 
 <div id="integration-architecture">
-  ## 連携アーキテクチャ
+  ## 連携アーキテクチャ {#integration-architecture}
 </div>
 
 認証プロバイダー (`Auth0Provider`) 内に `Auth0ComponentProvider` をネストします。この構成により、Auth0 API の呼び出しに必要な認証 state と token 取得メソッドにアクセスできます。
 
 <div id="configure-auth0componentprovider">
-  ## `Auth0ComponentProvider` を設定する
+  ## `Auth0ComponentProvider` を設定する {#configure-auth0componentprovider}
 </div>
 
 <Tabs>
@@ -59,7 +59,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     ***
 
-    ## プロパティ
+## プロパティ {#properties}
 
     <table class="table">
       <thead>
@@ -125,7 +125,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     ***
 
-    ## ユーザー体験
+## ユーザー体験 {#user-experience}
 
     ***
 
@@ -382,7 +382,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     ***
 
-    ## 状態とパフォーマンス
+## 状態とパフォーマンス {#state-and-performance}
 
     すべてのAuth0コンポーネントにおけるTanStack Queryのキャッシュ動作を細かく調整します。デフォルトでは、データを2分間最新の状態に保ち、5分後にガベージコレクションし、ウィンドウがフォーカスされた際の再フェッチは行いません。
 
@@ -532,7 +532,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     ***
 
-    ## プロパティ
+## プロパティ {#properties-2}
 
     <table class="table">
       <thead>
@@ -612,7 +612,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     ***
 
-    ## プロキシモードを設定する
+## プロキシモードを設定する {#configure-proxy-mode}
 
     Next.jsアプリケーションでは、サーバーサイド認証でプロキシモードを使用します。
 
@@ -638,7 +638,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     ***
 
-    ### proxy モードのプロパティ
+### proxy モードのプロパティ {#proxy-mode-properties}
 
     プロキシモードでの認証に関する設定です。Next.js を使用する場合に必要です。
 
@@ -674,7 +674,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     ***
 
-    ## ユーザーエクスペリエンス
+## ユーザーエクスペリエンス {#user-experience-2}
 
     ***
 
@@ -925,7 +925,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     ***
 
-    ## 状態とパフォーマンス
+## 状態とパフォーマンス {#state-and-performance-2}
 
     すべての Auth0 コンポーネントに対して、TanStack Query のキャッシュを細かく調整できます。デフォルトでは、データは 2 分間有効な状態を維持し、5 分後にガベージコレクションされ、ウィンドウのフォーカス時の再取得は行われません。
 
@@ -1081,7 +1081,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     ***
 
-    ## プロパティ
+## プロパティ {#properties-3}
 
     <table class="table">
       <thead>
@@ -1154,7 +1154,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     ***
 
-    ## ユーザーエクスペリエンス
+## ユーザーエクスペリエンス {#user-experience-3}
 
     ***
 
@@ -1408,7 +1408,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     ***
 
-    ## 状態とパフォーマンス
+## 状態とパフォーマンス {#state-and-performance-3}
 
     すべてのAuth0コンポーネントでTanStack Queryのキャッシュを細かく調整できます。デフォルトでは、データは2分間最新の状態に保たれ、5分後にガベージコレクションされ、ウィンドウへのフォーカス時に再フェッチは行われません。
 

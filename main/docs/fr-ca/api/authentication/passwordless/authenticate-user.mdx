@@ -4,7 +4,7 @@ description: "Authentifiez un utilisateur à l’aide de son numéro de téléph
 ---
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `POST /oauth/token`
@@ -12,7 +12,7 @@ description: "Authentifiez un utilisateur à l’aide de son numéro de téléph
 Une fois que vous avez un code de vérification, utilisez ce point de terminaison pour connecter l’utilisateur à l’aide de son numéro de téléphone ou de son adresse courriel et de son code de vérification.
 
 <div id="remarks">
-  ### Remarques
+  ### Remarques {#remarks}
 </div>
 
 * Le `grant_type` doit être `http://auth0.com/oauth/grant-type/passwordless/otp`.
@@ -23,13 +23,13 @@ Une fois que vous avez un code de vérification, utilisez ce point de terminaiso
 * Le `redirect_uri` est une URL de rappel requise qui doit être enregistrée dans le champ **Allowed Callback URLs** de votre application.
 
 <div id="learn-more">
-  ### En savoir plus
+  ### En savoir plus {#learn-more}
 </div>
 
 * [Authentification sans mot de passe](https://auth0.com/docs/authenticate/passwordless)
 
 <div id="headers">
-  ## En-têtes
+  ## En-têtes {#headers}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -37,7 +37,7 @@ Une fois que vous avez un code de vérification, utilisez ce point de terminaiso
 </ParamField>
 
 <div id="body-parameters">
-  ## Paramètres du corps
+  ## Paramètres du corps {#body-parameters}
 </div>
 
 <div className="prose-sm prose-gray dark:prose-invert">
@@ -87,7 +87,7 @@ Une fois que vous avez un code de vérification, utilisez ce point de terminaiso
 </ParamField>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                                  |

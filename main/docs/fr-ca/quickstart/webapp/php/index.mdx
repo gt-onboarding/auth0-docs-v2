@@ -5,7 +5,7 @@ title: "PHP"
 import {AuthCodeBlock} from "/snippets/fr-ca/AuthCodeBlock.jsx";
 
 <div id="by-evan-sims">
-  ##### Par Evan Sims
+  ##### Par Evan Sims {#by-evan-sims}
 </div>
 
 Ce guide explique comment intégrer Auth0 à une application PHP à l’aide de l’Auth0 PHP SDK. Nous vous recommandons de vous connecter pour suivre ce Quickstart avec des exemples configurés pour votre compte.
@@ -19,11 +19,11 @@ Ce guide explique comment intégrer Auth0 à une application PHP à l’aide de 
 </Info>
 
 <div id="configure-auth0">
-  ## Configurer Auth0
+  ## Configurer Auth0 {#configure-auth0}
 </div>
 
 <div id="get-your-application-keys">
-  ### Obtenez les clés de votre application
+  ### Obtenez les clés de votre application {#get-your-application-keys}
 </div>
 
 Lorsque vous vous êtes inscrit à Auth0, une nouvelle application a été créée pour vous, à moins que vous n’en ayez créé une vous-même. Vous aurez besoin de certaines informations sur cette application pour communiquer avec Auth0. Vous pouvez les trouver dans la section [Application Settings](https://manage.auth0.com/#/applications) du Dashboard Auth0.
@@ -41,7 +41,7 @@ Vous avez besoin des renseignements suivants :
 </Info>
 
 <div id="configure-callback-urls">
-  ### Configurer les URL de rappel
+  ### Configurer les URL de rappel {#configure-callback-urls}
 </div>
 
 Une URL de rappel est une URL de votre application vers laquelle Auth0 redirige l’utilisateur après son authentification. L’URL de rappel de votre application doit être ajoutée au champ **Allowed Callback URLs** dans les [Application Settings](https://manage.auth0.com/#/applications). Si ce champ n’est pas configuré, les utilisateurs ne pourront pas se connecter à l’application et verront s’afficher une erreur.
@@ -51,7 +51,7 @@ Une URL de rappel est une URL de votre application vers laquelle Auth0 redirige 
 </Info>
 
 <div id="configure-logout-urls">
-  ### Configurer les URL de déconnexion
+  ### Configurer les URL de déconnexion {#configure-logout-urls}
 </div>
 
 Une URL de déconnexion est une URL de votre application vers laquelle Auth0 peut rediriger l’utilisateur une fois qu’il est déconnecté du serveur d’autorisation. Cette URL est précisée dans le paramètre de requête `returnTo`. L’URL de déconnexion de votre application doit être ajoutée au champ **Allowed Logout URLs** dans les [Application Settings](https://manage.auth0.com/#/applications). Si ce champ n’est pas défini, les utilisateurs ne pourront pas se déconnecter de l’application et une erreur s’affichera.
@@ -61,13 +61,13 @@ Une URL de déconnexion est une URL de votre application vers laquelle Auth0 peu
 </Info>
 
 <div id="integrate-your-php-application">
-  ## Intégrez votre application PHP
+  ## Intégrez votre application PHP {#integrate-your-php-application}
 </div>
 
 Créons un exemple d’application qui permet d’authentifier un utilisateur dans une application PHP. Nous adopterons ici une approche simple, adaptée au format écrit. Cela dit, consultez l’[application Quickstart sur GitHub](https://github.com/auth0-samples/auth0-php-web-app/) pour voir un exemple plus complet.
 
 <div id="installing-http-client-and-messaging-factories">
-  ### Installation du client HTTP et des fabriques de messages
+  ### Installation du client HTTP et des fabriques de messages {#installing-http-client-and-messaging-factories}
 </div>
 
 Le SDK Auth0 PHP prend en charge plusieurs normes [PHP-FIG](https://www.php-fig.org), offrant des options d’interopérabilité avec votre architecture. Deux d’entre elles sont particulièrement importantes : [PSR-17](https://www.php-fig.org/psr/psr-17/) et [PSR-18](https://www.php-fig.org/psr/psr-18/). Ces normes vous permettent d’intégrer les composants réseau de votre choix pour gérer les messages et les requêtes. Vous devrez installer des bibliothèques compatibles dans votre projet pour que le SDK puisse les utiliser.
@@ -79,7 +79,7 @@ composer require guzzlehttp/guzzle guzzlehttp/psr7 http-interop/http-factory-guz
 ```
 
 <div id="installing-the-php-sdk">
-  ### Installation du SDK PHP
+  ### Installation du SDK PHP {#installing-the-php-sdk}
 </div>
 
 L’Auth0 PHP SDK nécessite [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos), un outil de gestion des dépendances pour PHP. Composer vous permet de déclarer les bibliothèques dont votre projet a besoin et les installe pour vous. Assurez-vous que Composer est installé et accessible depuis votre terminal avant de continuer.
@@ -93,7 +93,7 @@ composer require auth0/auth0-php
 Cela créera un dossier `vendor` dans votre projet et téléchargera toutes les dépendances nécessaires pour utiliser l’Auth0 PHP SDK. Cela créera également un fichier `vendor/autoload.php`, utilisé dans l’exemple pour charger toutes les classes nécessaires au fonctionnement de votre application. Il est important d’inclure ce fichier d’autoload dans votre projet pour que le SDK fonctionne.
 
 <div id="configuring-the-sdk">
-  ### Configuration du SDK
+  ### Configuration du SDK {#configuring-the-sdk}
 </div>
 
 Pour commencer, créons un fichier `.env` à la racine du répertoire de votre projet pour y stocker la configuration de notre application exemple et renseigner les variables d’environnement :
@@ -143,7 +143,7 @@ $auth0 = new \Auth0\SDK\Auth0([
 ```
 
 <div id="setting-up-your-application-routes">
-  ### Configurer les routes de votre application
+  ### Configurer les routes de votre application {#setting-up-your-application-routes}
 </div>
 
 Les applications PHP modernes utilisent un modèle de routage pour acheminer les requêtes HTTP entrantes vers le code chargé de les traiter, ce qui permet de déterminer ce qui doit se produire lorsque des utilisateurs visitent une &quot;page&quot; précise de notre application. Il n&#39;y a pas une seule bonne façon d&#39;implémenter le routage dans votre application, et il existe de nombreuses bibliothèques pour le faire. Pour les besoins de notre exemple d&#39;application, nous utiliserons une bibliothèque en particulier, mais dans une application réelle, n&#39;hésitez pas à choisir celle qui vous convient.
@@ -172,7 +172,7 @@ define('ROUTE_URL_LOGOUT', ROUTE_URL_INDEX . '/logout');
 Nous pouvons maintenant passer à l’ajout de la logique de routage de notre application, ainsi que des intégrations du SDK :
 
 <div id="checking-for-a-session">
-  ## Vérifier s’il existe une session
+  ## Vérifier s’il existe une session {#checking-for-a-session}
 </div>
 
 L’Auth0 PHP SDK offre une méthode pratique pour vérifier si notre utilisateur est authentifié et récupérer son profil, `getCredentials()`. Ajoutons-la à notre route d’index pour afficher le profil de l’utilisateur s’il est connecté ou indiquer qu’il doit se connecter.
@@ -208,7 +208,7 @@ $name = $session->user['name'] ?? $session->user['nickname'] ?? $session->user['
 ```
 
 <div id="logging-in">
-  ## Connexion
+  ## Connexion {#logging-in}
 </div>
 
 Créons maintenant notre route /login, qui utilisera la méthode `login()` de l’Auth0 PHP SDK pour établir la session de l’utilisateur et renvoyer une URL personnalisée vers la Universal Login Page d’Auth0 afin de permettre à cet utilisateur de se connecter.
@@ -227,7 +227,7 @@ Route::add('/login', function() use ($auth0) {
 ```
 
 <div id="handling-authentication-callback">
-  ## Traitement du rappel d’authentification
+  ## Traitement du rappel d’authentification {#handling-authentication-callback}
 </div>
 
 Une fois que nos utilisateurs reviennent après s’être authentifiés au moyen de la Universal Login Page d’Auth0, ils sont redirigés vers la route de rappel de notre application d’exemple, `/callback`, que nous allons traiter à cette étape.
@@ -248,7 +248,7 @@ Route::add('/callback', function() use ($auth0) {
 ```
 
 <div id="logging-out">
-  ## Déconnexion
+  ## Déconnexion {#logging-out}
 </div>
 
 Enfin, gérons correctement la déconnexion de nos utilisateurs. La méthode `logout()` de l’Auth0 PHP SDK s’occupe d’effacer les cookies de session de notre application exemple, de rediriger l’utilisateur vers le [point de terminaison /logout](https://auth0.com/docs/logout) d’Auth0 (ce qui met fin à la couche de session Auth0 ainsi qu’à toute couche de session du fournisseur d’identité), puis de ramener l’utilisateur vers notre route d’index /.
@@ -264,7 +264,7 @@ Route::add('/logout', function() use ($auth0) {
 ```
 
 <div id="run-your-app">
-  ## Lancez votre application !
+  ## Lancez votre application ! {#run-your-app}
 </div>
 
 Enfin, nous devons configurer notre middleware de routage pour qu’il achemine réellement les requêtes :
@@ -285,7 +285,7 @@ php -S 127.0.0.1:3000 index.php
 Ouvrez [http://127.0.0.1:3000](https://127.0.0.1:3000) dans votre navigateur et essayez-le.
 
 <Note>
-  ##### Que pouvez-vous faire ensuite ?
+  ##### Que pouvez-vous faire ensuite ? {#what-can-you-do-next}
 
   | [Configurer d’autres fournisseurs d’identité](/docs/fr-ca/authenticate/identity-providers)                            | [Activer l’authentification multifacteur](/docs/fr-ca/secure/multi-factor-authentication) |
   | --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |

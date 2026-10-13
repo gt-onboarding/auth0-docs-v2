@@ -47,13 +47,13 @@ Auth0 は現在、集中型のプロファイル管理ポータルを標準機�
 顧客の認証情報を自社システムに保存している場合に、顧客側の管理者が自分たちのユーザーを管理できるようにする必要があるなら、自分で構築するか、Auth0 Extension を使用できます。詳細については、[Admin Portal](#admin-portal) を参照してください。
 
 <div id="metadata">
-  ## メタデータ
+  ## メタデータ {#metadata}
 </div>
 
 Auth0 のユーザープロファイルには、Normalized User Profile の情報に加えて、[メタデータ](/docs/ja-jp/manage-users/user-accounts/metadata) を保存できます。メタデータ を使うと、アイデンティティプロバイダーに由来しない情報や、アイデンティティプロバイダーから提供された情報を上書きするための情報を保存できます。
 
 <Info>
-  ### ベストプラクティス
+  ### ベストプラクティス {#best-practice}
 
   メタデータ を使用する際は、Auth0 の[ユーザーデータ保存のベストプラクティス](/docs/ja-jp/secure/security-guidance/data-security/user-data-storage#metadata)に従ってください。メタデータ ストレージは汎用的なデータストアとして設計されていないため、可能であれば引き続き独自の外部ストレージを使用してください。また、メタデータ のサイズや複雑さも最小限に抑える必要があります。さらに、Auth0 Management API では、ユーザーに関連付けられたメタデータの更新や削除について厳格なガイドラインが定められています。
 </Info>
@@ -65,25 +65,25 @@ Auth0 のユーザープロファイルには、Normalized User Profile の情�
 </Warning>
 
 <div id="user-metadata">
-  ### ユーザーメタデータ
+  ### ユーザーメタデータ {#user-metadata}
 </div>
 
 ユーザーメタデータ (`user_metadata` とも呼ばれます) とは、ユーザープロファイルに保存できる情報のことで、ユーザーはセルフサービスのプロファイル管理の一環としてこれを参照・更新できます。この種のメタデータには、ユーザーの敬称や、Auth0 から送信される[メールのカスタマイズ](/docs/ja-jp/customize/email/email-templates)に利用できる優先言語などが含まれます。
 
 <Info>
-  ### ベストプラクティス
+  ### ベストプラクティス {#best-practice-2}
 
   Auth0 のメールのカスタマイズに使いたい情報は、メタデータに保存してください。ユーザーによる変更を許可する情報 (メールの言語を判定するための情報など) は、できるだけ `user_metadata` に保存することをおすすめします。
 </Info>
 
 <div id="app-metadata">
-  ### アプリのメタデータ
+  ### アプリのメタデータ {#app-metadata}
 </div>
 
 一方、アプリのメタデータ (`app_metadata`とも呼ばれます) は、ユーザープロフィールに保存できる情報ですが、**適切な認可がある場合にのみ読み取りまたは更新が可能**で、ユーザーが`app_metadata`に直接アクセスすることはできません。この種のメタデータとしては、たとえばユーザーが最新の有効な利用規約に同意したことを示すフラグや、その同意日時などが挙げられます。
 
 <div id="password-reset">
-  ## パスワードのリセット
+  ## パスワードのリセット {#password-reset}
 </div>
 
 パスワードを忘れたユーザーや、既存のセルフサービスの仕組みでパスワード変更が許可されているユーザー向けに、Auth0 は [Password Reset](/docs/ja-jp/authenticate/database-connections/password-change) 機能を提供しています。これは既存の実装に統合できるほか、[Universal Login](/docs/ja-jp/authenticate/login/auth0-universal-login) の一部として含まれる Auth0 の標準 UI ウィジェットにもあらかじめ組み込まれています。
@@ -97,7 +97,7 @@ Auth0 <Tooltip tip="Universal Login: アプリケーションは、ユーザー�
 一方、Auth0 Management API を使用すると、Database Connection タイプで定義されたユーザー ID の[パスワードを直接変更](/docs/ja-jp/authenticate/database-connections/password-change#directly-set-the-new-password)できます。Auth0 Management API は、任意のセルフサービスによるプロファイル管理の実装の一部として使用できるほか、[Change Password ページのカスタマイズ](/docs/ja-jp/get-started/architecture-scenarios/business-to-business/branding)の一部として使用することもできます。
 
 <div id="account-verification">
-  ## アカウントの検証
+  ## アカウントの検証 {#account-verification}
 </div>
 
 また、常に検証済みのユーザーアカウントを使用し、Auth0 が提供する仕組みを活用する必要があります。あわせて、[GDPR](https://gdpr-info.eu/) のような規制への準拠も考慮すべきです。GDPR では、EU 市民をプライバシー侵害やデータ漏えいから保護するための非常に具体的な要件が定められています。
@@ -105,7 +105,7 @@ Auth0 <Tooltip tip="Universal Login: アプリケーションは、ユーザー�
 Auth0 には、ユーザーのアカウントを検証するために、そのユーザーのメールアドレスに [確認メール](/docs/ja-jp/customize/email/manage-email-flow) を送信する機能が標準で用意されています。デフォルトでは、[self sign-up](/docs/ja-jp/get-started/architecture-scenarios/business-to-business/provisioning#self-sign-up) の一環として作成された [Database Connection](/docs/ja-jp/authenticate/database-connections/password-change) の ID に対して、Auth0 が自動的に確認メールを送信します。また、ユーザー登録時に Social Provider によるメールアドレスの検証が行われない場合に確認メールを送信できる [Management API エンドポイント](https://auth0.com/docs/api/v2#!/Tickets/post_email_verification) も用意されています。
 
 <div id="blocking-users">
-  ## ユーザーのブロック
+  ## ユーザーのブロック {#blocking-users}
 </div>
 
 Auth0 における[ユーザーアクセスのブロック](/docs/ja-jp/manage-users/user-accounts/block-and-unblock-users)は、特定の条件下でユーザーがアプリケーションにログインできないようにするための機能です。デフォルトでは、Auth0 Dashboard に、管理者がすべてのアプリケーションに対するユーザーアクセスをブロックおよびブロック解除できる標準の仕組みが用意されており、この機能は [Auth0 Management API](https://auth0.com/docs/api/management/v2#!/Users/patch_users_by_id) を使って実装することもできます。さらに、Auth0 の拡張機能を使用して、[特定のアプリケーションに対するユーザーアクセスを無効にする](/docs/ja-jp/manage-users/user-accounts/manage-user-access-to-applications)ことや、よりきめ細かな[アクセス制御](/docs/ja-jp/get-started/architecture-scenarios/business-to-business/authorization)を実現することもできます。
@@ -113,7 +113,7 @@ Auth0 における[ユーザーアクセスのブロック](/docs/ja-jp/manage-u
 さらに、Auth0 Management API では、誤った認証情報の入力が多すぎたために無効化されたユーザーの[ブロックを解除](https://auth0.com/docs/api/management/v2#!/User_Blocks/delete_user_blocks_by_id)することもできます。
 
 <div id="admin-portal">
-  ## 管理ポータル
+  ## 管理ポータル {#admin-portal}
 </div>
 
 管理ポータルは、新しいユーザーの作成、ユーザープロフィールの編集、ユーザーに関するアクティビティの確認などを行うためのアプリケーションです。このアプリケーションには、管理者のみがアクセスできるようにする必要があります。Auth0 には管理ダッシュボードが用意されていますが、意図せず Auth0 テナントを壊してしまうおそれのある操作が数多くあるため、多くの人に管理ダッシュボードへのアクセス権を与えることは推奨されません。代わりに、Auth0 では次の 2 つの選択肢を提供しています。
@@ -122,13 +122,13 @@ Auth0 における[ユーザーアクセスのブロック](/docs/ja-jp/manage-u
 * [**Auth0 Delegated Administration Extension**](/docs/ja-jp/customize/extensions/delegated-administration-extension): この強力で柔軟な拡張機能を使うと、ユーザー管理のエクスペリエンスをカスタマイズできます。この拡張機能を調整することで、顧客側の管理者がログインし、自分の組織内のユーザーのみを表示および管理できるようにできます。
 
 <Info>
-  ### ベストプラクティス
+  ### ベストプラクティス {#best-practice-3}
 
   管理者がユーザーを管理する独自の方法を提供する場合は、管理者がパスワードを直接設定できるようにするのではなく、メールでパスワード変更リンクをユーザーに送信できるようにするだけにすべきです。どうしてもこの推奨に従えず、管理者が他者のパスワードを設定できるようにする必要がある場合は、パスワードを知っているのが管理者ではなくユーザー本人だけになるよう、次回ログイン時にパスワードの変更を必須にすべきです。
 </Info>
 
 <div id="project-planning-guide">
-  ## プロジェクト計画ガイド
+  ## プロジェクト計画ガイド {#project-planning-guide}
 </div>
 
 推奨戦略の詳細を確認できるよう、ダウンロードして参照できるPDF形式の計画ガイドを提供しています。
@@ -136,7 +136,7 @@ Auth0 における[ユーザーアクセスのブロック](/docs/ja-jp/manage-u
 [B2B IAM プロジェクト計画ガイド](https://assets.ctfassets.net/cdy7uua7fh8z/63F0WOPJdVzsPMxV1Xvp8x/7a329487c5e890d8e820f6a48983b46a/B2B_Project_Planning.pdf)
 
 <div id="multiple-organization-architecture-multitenancy">
-  ## 複数組織アーキテクチャ (マルチテナンシー)
+  ## 複数組織アーキテクチャ (マルチテナンシー) {#multiple-organization-architecture-multitenancy}
 </div>
 
 多くのB2Bプラットフォームでは、顧客組織ごとに何らかの分離やブランディングを実装しており、そのためIdentity and Access Management (IAM) システムが複雑になることがあります。これに当てはまる場合は、この種の環境に関するガイダンスやベストプラクティスをまとめた資料をぜひご一読ください。

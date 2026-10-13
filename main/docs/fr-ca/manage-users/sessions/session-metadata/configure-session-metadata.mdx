@@ -10,7 +10,7 @@ Pour configurer les métadonnées de session, vous pouvez utiliser une [Action P
   Les métadonnées de session Auth0 ne constituent pas un stockage de données sécurisé et ne doivent pas être utilisées pour stocker des renseignements sensibles. Cela comprend les secrets et les PII à haut risque, comme les numéros d’assurance sociale ou de carte de crédit. Les clients Auth0 sont fortement encouragés à évaluer les données stockées dans les métadonnées et à ne conserver que celles qui sont nécessaires à des fins de gestion des identités et des accès. Pour en savoir plus, consultez [la conformité d’Auth0 au Règlement général sur la protection des données](/docs/fr-ca/secure/data-privacy-and-compliance/gdpr).
 </Warning>
 
-## Auth0 Management API
+## Auth0 Management API {#auth0-management-api}
 
 Vous pouvez gérer les requêtes CRUD (création, remplacement, mise à jour et suppression) des métadonnées de session à l’aide de la Management API :
 
@@ -19,7 +19,7 @@ Vous pouvez gérer les requêtes CRUD (création, remplacement, mise à jour et 
 </Callout>
 
 <div id="retrieve-existing-session-metadata">
-  ### Récupérer les métadonnées de session existantes
+  ### Récupérer les métadonnées de session existantes {#retrieve-existing-session-metadata}
 </div>
 
 Effectuez une requête `GET` vers le point de terminaison [`/api/v2/sessions/{id}`](https://auth0.com/docs/api/management/v2/sessions/get-session) :
@@ -29,7 +29,7 @@ GET /api/v2/sessions/{id}
 ```
 
 <div id="add-or-update-existing-session-metadata">
-  ### Ajouter ou mettre à jour les métadonnées de session existantes
+  ### Ajouter ou mettre à jour les métadonnées de session existantes {#add-or-update-existing-session-metadata}
 </div>
 
 Envoyez une requête `PATCH` au point de terminaison [`/api/v2/sessions/{id}`](https://auth0.com/docs/api/management/v2/sessions/patch-sessions-by-id) :
@@ -46,7 +46,7 @@ Content-Type: application/json
 ```
 
 <div id="delete-session-metadata">
-  ### Supprimer les métadonnées de session
+  ### Supprimer les métadonnées de session {#delete-session-metadata}
 </div>
 
 Effectuez une requête `PATCH` vers l’endpoint [`/api/v2/sessions/{id}`](https://auth0.com/docs/api/management/v2/sessions/patch-sessions-by-id) :
@@ -61,13 +61,13 @@ Content-Type: application/json
 ```
 
 <div id="auth0-post-login-actions">
-  ## Actions post-login d’Auth0
+  ## Actions post-login d’Auth0 {#auth0-post-login-actions}
 </div>
 
 Vous pouvez effectuer des opérations CRUD sur les métadonnées de session à l’aide des objets `api.session` avec une [Action post-login](/docs/fr-ca/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger). Cela vous permet de gérer les métadonnées de session selon une logique propre à l’utilisateur ou au contexte.
 
 <div id="retrieve-existing-session-metadata">
-  ### Récupérer les métadonnées de session existantes
+  ### Récupérer les métadonnées de session existantes {#retrieve-existing-session-metadata-2}
 </div>
 
 Utilisez l’objet `event.session.metadata?.deviceName` pour consulter la métadonnée `deviceName` :
@@ -83,7 +83,7 @@ const device = event.session.metadata?.deviceName;
 </Callout>
 
 <div id="add-or-update-existing-metadata">
-  ### Ajouter ou mettre à jour des métadonnées existantes
+  ### Ajouter ou mettre à jour des métadonnées existantes {#add-or-update-existing-metadata}
 </div>
 
 Utilisez la méthode `api.session.setMetadata()` pour mettre à jour les métadonnées de session :
@@ -95,7 +95,7 @@ api.session.setMetadata("deviceName", "Auth0's iPhone");
 Les modifications sont immédiatement disponibles au sein de l’objet `event.session` dans les Actions suivantes.
 
 <div id="delete-session-metadata">
-  ### Supprimer les métadonnées de session
+  ### Supprimer les métadonnées de session {#delete-session-metadata-2}
 </div>
 
 Utilisez les objets `api.session` suivants pour supprimer les métadonnées de session :
@@ -110,13 +110,13 @@ Pour en savoir plus sur ces objets, consultez :
 * [Objet API](/docs/fr-ca/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-api-object) : Découvrez l’objet API du Refresh Token et ses méthodes.
 
 <div id="oidc-back-channel-logout">
-  ## OIDC Back-Channel Logout
+  ## OIDC Back-Channel Logout {#oidc-back-channel-logout}
 </div>
 
 Vous pouvez configurer le `logout_token` pour y inclure des métadonnées de session à l’aide du [Dashboard](/docs/fr-ca/get-started/auth0-overview/dashboard) d’Auth0 ou de la [Management API](https://auth0.com/docs/api/management/v2).
 
 <div id="auth0-dashboard">
-  ### Auth0 Dashboard
+  ### Auth0 Dashboard {#auth0-dashboard}
 </div>
 
 Pour configurer le jeton OIDC Back-Channel Logout avec des métadonnées de session :
@@ -140,7 +140,7 @@ Pour configurer le jeton OIDC Back-Channel Logout avec des métadonnées de sess
 Une fois la configuration terminée, le `logout_token` inclura toutes les métadonnées de session stockées.
 
 <div id="auth0-management-api">
-  ### Auth0 Management API
+  ### Auth0 Management API {#auth0-management-api-2}
 </div>
 
 Vous pouvez utiliser le point de terminaison [`/api/v2/clients/{id}`](https://auth0.com/docs/api/management/v2/sessions/patch-sessions-by-id) pour mettre à jour votre application afin d’inclure des métadonnées de session dans le `logout_token`.
@@ -162,7 +162,7 @@ Envoyez une requête `PATCH` au point de terminaison [`/api/v2/sessions/{id}`](h
 ```
 
 <div id="error-handling">
-  ## Gestion des erreurs
+  ## Gestion des erreurs {#error-handling}
 </div>
 
 Vous pouvez consulter les événements de journal des métadonnées de session en accédant à [Dashboard &gt; Monitoring &gt; Logs](https://manage.auth0.com/#/logs) ou récupérer les journaux à l’aide du point de terminaison [Management API logs](/docs/fr-ca/api/management/v2/logs/get-logs).

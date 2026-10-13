@@ -6,7 +6,7 @@ title: Configurer les intégrations de fournisseurs CAPTCHA tiers
 Auth0 prend en charge plusieurs intégrations de fournisseurs CAPTCHA tiers pour [Bot Detection](/docs/fr-ca/secure/attack-protection/bot-detection).
 
 <div id="google-recaptcha-enterprise-on-google-cloud-platform-gcp">
-  ## Google reCAPTCHA Enterprise sur Google Cloud Platform (GCP)
+  ## Google reCAPTCHA Enterprise sur Google Cloud Platform (GCP) {#google-recaptcha-enterprise-on-google-cloud-platform-gcp}
 </div>
 
 Vous pouvez utiliser Google reCAPTCHA Enterprise comme service de <Tooltip tip="Bot Detection : forme de protection contre les attaques dans laquelle Auth0 bloque le trafic de bots suspect en activant un CAPTCHA pendant le processus de connexion." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Bot+Detection">Bot Detection</Tooltip> pour un trafic dépassant 1 million d’évaluations par mois.
@@ -14,7 +14,7 @@ Vous pouvez utiliser Google reCAPTCHA Enterprise comme service de <Tooltip tip="
 Pour savoir comment configurer reCAPTCHA Enterprise sur GCP, consultez [Set up reCAPTCHA Enterprise ... dans la documentation Google](https://cloud.google.com/recaptcha-enterprise/docs/authenticate-apis).
 
 <div id="locate-your-gcp-project-id">
-  ### Trouvez l’ID de votre projet GCP
+  ### Trouvez l’ID de votre projet GCP {#locate-your-gcp-project-id}
 </div>
 
 1. Accédez à votre [Google Cloud Dashboard](https://console.cloud.google.com/).
@@ -22,14 +22,14 @@ Pour savoir comment configurer reCAPTCHA Enterprise sur GCP, consultez [Set up r
 3. Notez l’**ID du projet**, car vous en aurez besoin plus tard.
 
 <div id="enable-recaptcha-enterprise">
-  ### Activer reCAPTCHA Enterprise
+  ### Activer reCAPTCHA Enterprise {#enable-recaptcha-enterprise}
 </div>
 
 1. Dans le [Google Cloud Dashboard](https://console.cloud.google.com/), saisissez reCAPTCHA Enterprise API dans la barre de recherche, puis sélectionnez-le dans les résultats de Marketplace.
 2. Sélectionnez **Enable** pour activer l’API.
 
 <div id="create-a-site-key">
-  ### Créer une clé de site
+  ### Créer une clé de site {#create-a-site-key}
 </div>
 
 1. Dans le [Google Cloud Dashboard](https://console.cloud.google.com/), saisissez reCAPTCHA Enterprise dans la barre de recherche, puis sélectionnez-le dans les résultats du Marketplace.
@@ -42,7 +42,7 @@ Pour savoir comment configurer reCAPTCHA Enterprise sur GCP, consultez [Set up r
 8. Prenez en note la **clé de site**, car vous en aurez besoin plus tard.
 
 <div id="create-an-api-key">
-  ### Créer une clé API
+  ### Créer une clé API {#create-an-api-key}
 </div>
 
 1. Dans le [Google Cloud Dashboard](https://console.cloud.google.com/), saisissez Credentials dans la barre de recherche, puis sélectionnez cette option dans les résultats.
@@ -53,7 +53,7 @@ Pour savoir comment configurer reCAPTCHA Enterprise sur GCP, consultez [Set up r
 6. Sélectionnez **Save**.
 
 <div id="hcaptcha">
-  ## hCaptcha
+  ## hCaptcha {#hcaptcha}
 </div>
 
 Le widget hCaptcha peut protéger vos applications contre les bots, le pourriel et d’autres formes d’abus automatisés.
@@ -61,7 +61,7 @@ Le widget hCaptcha peut protéger vos applications contre les bots, le pourriel 
 Pour en savoir plus sur hCaptcha et sur la façon d’obtenir des détails de configuration, consultez [Switch from reCAPTCHA to hCaptcha on hCaptcha Docs](https://docs.hcaptcha.com/switch).
 
 <div id="friendly-captcha">
-  ## Friendly Captcha
+  ## Friendly Captcha {#friendly-captcha}
 </div>
 
 Friendly Captcha est un système qui aide à prévenir le pourriel sur votre site Web. Vous pouvez ajouter le widget Friendly Captcha à votre application Web pour lutter contre le pourriel, tout en ayant peu d’incidence sur l’expérience utilisateur.
@@ -69,7 +69,7 @@ Friendly Captcha est un système qui aide à prévenir le pourriel sur votre sit
 Pour en savoir plus sur Friendly Captcha et savoir comment obtenir les détails de configuration, consultez [Installation dans la documentation de Friendly Captcha](https://docs.friendlycaptcha.com/#/installation?id=installation).
 
 <div id="arkose">
-  ## Arkose
+  ## Arkose {#arkose}
 </div>
 
 Arkose Labs offre une solution de détection de bots pour atténuer les attaques d’origine humaine et celles menées par des bots. Pour en savoir plus sur l’intégration transparente d’Arkose comme fournisseur de CAPTCHA, consultez [Arkose Bot Manager](https://www.arkoselabs.com/arkose-bot-manager/).
@@ -79,7 +79,7 @@ Arkose Labs offre une solution de détection de bots pour atténuer les attaques
 </Warning>
 
 <div id="configure-callback-action-with-auth0js">
-  ### Configurer la fonction de rappel avec Auth0.js
+  ### Configurer la fonction de rappel avec Auth0.js {#configure-callback-action-with-auth0js}
 </div>
 
 Lorsque vous utilisez Arkose comme fournisseur de CAPTCHA, la méthode `renderCaptcha` du client WebAuth d’Auth0.js vous permet de passer une fonction de rappel. Le deuxième paramètre de la fonction de rappel est un objet payload contenant la fonction `triggerCaptcha`. La fonction `triggerCaptcha` peut servir à configurer la façon dont votre application gère et affiche l’invite CAPTCHA.

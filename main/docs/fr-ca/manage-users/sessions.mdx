@@ -11,7 +11,7 @@ Dans une mise en œuvre standard de l’en-tête Set-Cookie, une session prend f
 Pour en savoir plus, consultez la [Politique de confidentialité et sur les cookies d’Auth0](https://auth0.com/privacy).
 
 <div id="session-use-cases">
-  ## Cas d’utilisation des sessions
+  ## Cas d’utilisation des sessions {#session-use-cases}
 </div>
 
 Auth0 maintient une session de connexion pour tout utilisateur qui s’authentifie au moyen d’une application. Lorsqu’un utilisateur effectue une nouvelle connexion standard, Auth0 réinitialise cette session de connexion. La mise à jour d’un mot de passe, d’une adresse courriel, d’un numéro de téléphone ou d’un nom d’utilisateur entraîne aussi l’expiration de la session Auth0 de l’utilisateur.
@@ -27,7 +27,7 @@ Storezero.io n’exige pas que ses utilisateurs se connectent pour effectuer des
 Pour les cas d’utilisation présentés ci-dessous, prenons le scénario où un utilisateur souhaite consulter ses commandes précédentes avant de passer à la caisse. Pour ce faire, il accède à la page Toutes les commandes de la section Mon compte et est invité à se connecter.
 
 <div id="login-flows">
-  ### Flux de connexion
+  ### Flux de connexion {#login-flows}
 </div>
 
 La plupart des types d’applications (comme les applications Web, les applications monopage et les applications natives) devraient utiliser le [flux de code d’autorisation avec PKCE](/docs/fr-ca/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce) pour l’authentification à la connexion. Ce flux consiste à échanger un code d’autorisation contre des jetons.
@@ -37,7 +37,7 @@ La plupart des types d’applications (comme les applications Web, les applicati
 </Callout>
 
 <div id="user-logs-in-with-username-and-password">
-  #### L’utilisateur se connecte avec son nom d’utilisateur et son mot de passe
+  #### L’utilisateur se connecte avec son nom d’utilisateur et son mot de passe {#user-logs-in-with-username-and-password}
 </div>
 
 Dans cet exemple, un utilisateur se connecte manuellement à l’aide de son nom d’utilisateur et de son mot de passe :
@@ -57,7 +57,7 @@ Avec ce flux, deux sessions sont créées :
   * Par exemple, le serveur d’autorisation peut suivre si un utilisateur a eu recours à l’[authentification multifacteur (MFA)](/docs/fr-ca/secure/multi-factor-authentication). Cette information peut ensuite servir à déterminer si l’utilisateur devra se connecter ou utiliser l’authentification multifacteur la prochaine fois qu’il arrivera au serveur d’autorisation.
 
 <div id="user-logs-in-with-identity-provider">
-  #### L’utilisateur se connecte avec un fournisseur d’identité
+  #### L’utilisateur se connecte avec un fournisseur d’identité {#user-logs-in-with-identity-provider}
 </div>
 
 Dans cet exemple, l’utilisateur choisit de se connecter avec Facebook plutôt qu’avec son nom d’utilisateur et son mot de passe :
@@ -75,7 +75,7 @@ Dans ce scénario, trois sessions sont créées : la **session locale** (storez
 La session IdP sur le serveur de Facebook authentifie l’utilisateur et offre une expérience <Tooltip tip="Single Sign-On (SSO) : Service qui, après qu’un utilisateur s’est connecté à une application, connecte automatiquement cet utilisateur à d’autres applications." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=SSO">SSO</Tooltip> fluide. Comme il est très probable que les utilisateurs soient déjà connectés à Facebook, ils sont souvent authentifiés sans avoir à saisir manuellement leurs informations d’authentification Facebook.
 
 <div id="session-management-for-spas">
-  ### Gestion des sessions pour les SPA
+  ### Gestion des sessions pour les SPA {#session-management-for-spas}
 </div>
 
 Dans les exemples précédents, une session locale est créée lorsque l’utilisateur lance l’un ou l’autre des processus de connexion. Cette session locale peut garder les utilisateurs connectés et déterminer à quel moment ils doivent s’authentifier de nouveau.
@@ -88,7 +88,7 @@ L’authentification silencieuse utilise la session sur le serveur d’autorisat
 * Si la session sur le serveur d’autorisation a expiré ou si l’utilisateur se déconnecte, la redirection dans l’iframe renvoie une erreur. L’application doit alors rediriger l’utilisateur vers le serveur d’autorisation pour qu’il s’authentifie de nouveau.
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Niveaux de session](/docs/fr-ca/manage-users/sessions/session-layers)

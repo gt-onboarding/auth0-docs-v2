@@ -6,7 +6,7 @@ title: Configurer les Customer Managed Keys avec le Dashboard
 Auth0 protège les secrets et les données de votre tenant à l’aide d’une Auth0 Environment Root Key, au sommet de la hiérarchie de clés du chiffrement par enveloppe. L’Auth0 Environment Root Key et la Customer Provided Root Key sont stockées dans le module matériel de sécurité (HSM) du fournisseur de services infonuagiques Auth0 correspondant, AWS ou Azure.
 
 <div id="bring-your-own-key">
-  ## Bring Your Own Key
+  ## Bring Your Own Key {#bring-your-own-key}
 </div>
 
 Avec Bring Your Own Key, les utilisateurs ayant le [Key Management Editor role](/docs/fr-ca/get-started/manage-dashboard-access/add-dashboard-users) peuvent utiliser le <Tooltip tip="Auth0 Dashboard : principal produit d’Auth0 pour configurer vos services." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip> pour remplacer l’Auth0 Environment Root Key par défaut par leur propre Customer Provided Root Key.
@@ -39,13 +39,13 @@ Lorsque vous sélectionnez **Upload Key**, puis **Download**, le processus Bring
 </Callout>
 
 <div id="cryptographic-material-requirements">
-  ## Exigences relatives au matériel cryptographique
+  ## Exigences relatives au matériel cryptographique {#cryptographic-material-requirements}
 </div>
 
 Utilisez votre système de gestion de clés pour envelopper votre propre matériel cryptographique à l’aide de la clé d’enveloppement publique et créer la clé de chiffrement enveloppée. Utilisez les paramètres suivants pour l’algorithme [CKM&#95;RSA&#95;AES&#95;KEY&#95;WRAP](https://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/cos01/pkcs11-curr-v2.40-cos01.html#_Toc408226894), selon votre fournisseur de services infonuagiques Auth0 (AWS ou Azure) :
 
 <div id="auth0-on-aws-cloud">
-  ### Auth0 on AWS cloud
+  ### Auth0 on AWS cloud {#auth0-on-aws-cloud}
 </div>
 
 * Longueur de la clé d’enveloppement publique : 3072 bits
@@ -54,7 +54,7 @@ Utilisez votre système de gestion de clés pour envelopper votre propre matéri
 * Type de la clé racine fournie par le client : clé symétrique AES de 256 bits
 
 <div id="auth0-on-azure-cloud">
-  ### Auth0 on Azure
+  ### Auth0 on Azure {#auth0-on-azure-cloud}
 </div>
 
 * Longueur de la clé d’enveloppement publique : 2048 bits

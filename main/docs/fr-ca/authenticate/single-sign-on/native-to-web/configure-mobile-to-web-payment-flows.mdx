@@ -35,7 +35,7 @@ Les sections ci-dessous expliquent comment ajouter :
 </Callout>
 
 <div id="configure-auth0-cli">
-  ## Configurer l’Auth0 CLI
+  ## Configurer l’Auth0 CLI {#configure-auth0-cli}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -61,11 +61,11 @@ How would you like to authenticate?
 3. Sélectionnez le tenant Auth0 où vous souhaitez activer Native to Web SSO.
 
 <div id="configure-auth0">
-  ## Configurer Auth0
+  ## Configurer Auth0 {#configure-auth0}
 </div>
 
 <div id="enable-native-to-web-sso-in-your-native-application">
-  ### Activez Native to Web SSO dans votre application native
+  ### Activez Native to Web SSO dans votre application native {#enable-native-to-web-sso-in-your-native-application}
 </div>
 
 Native to Web SSO utilise un `session_transfer_token` pour établir une session SSO entre une application native et une application Web. Le `session_transfer_token` permet à Auth0 d’identifier de façon sécuritaire l’utilisateur, l’application native d’origine et du contexte supplémentaire. Pour en savoir plus, consultez [Native to Web SSO](/docs/fr-ca/authenticate/single-sign-on/native-to-web/configure-implement-native-to-web).
@@ -77,7 +77,7 @@ export const codeExample1 = `auth0 apps session-transfer update {yourClientId} -
 <AuthCodeBlock children={codeExample1} language="bash" />
 
 <div id="enable-native-to-web-sso-in-your-web-application">
-  ### Activez Native to Web SSO dans votre application web
+  ### Activez Native to Web SSO dans votre application web {#enable-native-to-web-sso-in-your-web-application}
 </div>
 
 Configurez l’application web pour qu’elle accepte le `session_transfer_token` pour l’authentification au moyen d’un cookie ou d’un paramètre d’URL à l’aide d’Auth0 CLI :
@@ -93,13 +93,13 @@ Si le `session_transfer_token` est injecté dans le navigateur au moyen d’un c
 </Callout>
 
 <div id="create-a-subscription-page-in-the-web-application">
-  ## Créer une page d’abonnement dans l’application Web
+  ## Créer une page d’abonnement dans l’application Web {#create-a-subscription-page-in-the-web-application}
 </div>
 
 Ajoutez un nouveau fichier dans `/src/views/` pour créer une page d’abonnement :
 
 <div id="step-1-add-a-new-view-file">
-  ### Étape 1 : Ajouter un nouveau fichier de vue
+  ### Étape 1 : Ajouter un nouveau fichier de vue {#step-1-add-a-new-view-file}
 </div>
 
 Créez un fichier dans `src/views/JoinMembership.js`. Ce fichier invitera les utilisateurs à souscrire à un abonnement payant.
@@ -161,7 +161,7 @@ export default JoinMembership;
 ```
 
 <div id="step-2-add-a-new-route">
-  ### Étape 2 : Ajouter une nouvelle route
+  ### Étape 2 : Ajouter une nouvelle route {#step-2-add-a-new-route}
 </div>
 
 Modifiez le fichier `src/App.js` et ajoutez une route `/join-membership` à la nouvelle page d’abonnement :
@@ -192,19 +192,19 @@ La nouvelle route `/join-membership` :
 </Warning>
 
 <div id="configure-the-native-application">
-  ## Configurer l’application native
+  ## Configurer l’application native {#configure-the-native-application}
 </div>
 
 Votre application native doit échanger le `refresh_token` contre un `session_transfer_token` immédiatement avant de lancer l’application web. Pour ce faire, ajoutez l’échange de transfert de session et la logique de lancement de l’application web dans le même gestionnaire d’événement, par exemple la méthode `onClick` du bouton.
 
 <div id="ios">
-  ### iOS
+  ### iOS {#ios}
 </div>
 
 Les étapes suivantes décrivent comment ajouter le paiement mobile-to-web aux applications natives iOS :
 
 <div id="step-1-add-a-subscribe-to-membership-button">
-  #### Étape 1 : ajouter un bouton `Subscribe to Membership`
+  #### Étape 1 : ajouter un bouton `Subscribe to Membership` {#step-1-add-a-subscribe-to-membership-button}
 </div>
 
 Pour lancer le flux d’abonnement Web à partir de votre application native iOS, ajoutez un bouton `Subscribe to Membership` au fichier `ProfileView.swift`.
@@ -239,7 +239,7 @@ struct ProfileView: View {
 Le fichier `ProfileView.swift` ajoute un bouton `S’abonner à l’adhésion` et utilise une closure `onSubscribe` pour définir le comportement lorsqu’on appuie sur ce bouton.
 
 <div id="step-2-implement-the-subscription-flow-using-native-to-web-sso">
-  #### Étape 2 : Mettez en place le flux d’abonnement à l’aide de Native to Web SSO
+  #### Étape 2 : Mettez en place le flux d’abonnement à l’aide de Native to Web SSO {#step-2-implement-the-subscription-flow-using-native-to-web-sso}
 </div>
 
 Modifiez le fichier `MainView.swift` pour définir le comportement du bouton `S’abonner à l’adhésion` :
@@ -358,13 +358,13 @@ struct MainView: View {
 Cela permet à l’utilisateur de sélectionner `S’abonner à l’adhésion` dans l’application native et de lancer immédiatement le processus d’abonnement dans l’application web sans avoir à se reconnecter.
 
 <div id="android">
-  ### Android
+  ### Android {#android}
 </div>
 
 Les étapes suivantes indiquent comment ajouter le paiement mobile vers le Web aux applications natives Android :
 
 <div id="step-1-add-a-subscribe-button-to-the-main-page">
-  #### Étape 1 : Ajouter un bouton S’abonner à la page principale
+  #### Étape 1 : Ajouter un bouton S’abonner à la page principale {#step-1-add-a-subscribe-button-to-the-main-page}
 </div>
 
 Pour lancer le flux d’abonnement Web à partir de votre application native Android, ajoutez un bouton `Adhérer` à l’interface utilisateur.
@@ -386,7 +386,7 @@ Modifiez le fichier `activity_main.xml` pour y inclure le code ci-dessous après
 ```
 
 <div id="step-2-implement-subscription-flow-using-native-to-web-sso">
-  #### Étape 2 : Implémenter le flux d’abonnement avec Native to Web SSO
+  #### Étape 2 : Implémenter le flux d’abonnement avec Native to Web SSO {#step-2-implement-subscription-flow-using-native-to-web-sso}
 </div>
 
 Modifiez le fichier `MainActivity.kt` pour définir le comportement du bouton `S’abonner à l’adhésion` :
@@ -497,7 +497,7 @@ private fun launchSubscriptionFlow() {
 Cela permet à l’utilisateur de sélectionner `S’abonner à l’adhésion` dans l’application native et de lancer immédiatement le processus d’abonnement à l’application Web sans avoir à se reconnecter.
 
 <div id="test-your-native-to-web-sso-implementation">
-  ## Testez votre mise en œuvre de Native to Web SSO
+  ## Testez votre mise en œuvre de Native to Web SSO {#test-your-native-to-web-sso-implementation}
 </div>
 
 Une fois que tout est configuré, lancez votre application native iOS ou Android pour vous connecter, accédez à l’écran Profile ou Mainscreen et sélectionnez le bouton **Souscrire à l’adhésion**.
@@ -513,7 +513,7 @@ Voici ce qui se produit :
 Vous avez créé une expérience fluide où l’utilisateur d’une application native mobile peut lancer un parcours sécurisé et authentifié dans une application web sans devoir se reconnecter.
 
 <div id="next-steps">
-  ## Prochaines étapes
+  ## Prochaines étapes {#next-steps}
 </div>
 
 * Découvrez plus d’options de configuration pour Native to Web SSO :Approfondissez la durée de vie de la session, la rotation du <Tooltip tip="Jeton d’actualisation : jeton utilisé pour obtenir un nouveau jeton d’accès sans obliger les utilisateurs à se connecter de nouveau." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=refresh+token">jeton d’actualisation</Tooltip>, la liaison de l’appareil et la révocation en cascade dans la [documentation sur Native to Web SSO](/docs/fr-ca/authenticate/single-sign-on/native-to-web).

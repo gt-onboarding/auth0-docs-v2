@@ -9,7 +9,7 @@ Le script Login implémente la fonction exécutée chaque fois qu&#39;un utilisa
 Ce script est requis à la fois pour l&#39;authentification héritée et pour la [migration automatique](/docs/fr-ca/manage-users/user-migration/configure-automatic-migration-from-your-database). Si la migration automatique est configurée pour la connexion, le processus de migration se déclenche après la première fois que l&#39;utilisateur se connecte avec succès. Auth0 recommande de définir un `user_id` permanent dans le profil utilisateur renvoyé afin d&#39;éviter la création d&#39;utilisateurs en double.
 
 <div id="login-function">
-  ## Fonction Login
+  ## Fonction Login {#login-function}
 </div>
 
 La fonction `login` doit :
@@ -19,7 +19,7 @@ La fonction `login` doit :
 * Retourner une erreur si l’authentification échoue.
 
 <div id="definition">
-  ### Définition
+  ### Définition {#definition}
 </div>
 
 La fonction `login` accepte trois paramètres et renvoie une fonction `callback` :
@@ -68,7 +68,7 @@ function login(userNameOrEmail, password, callback) {
 ```
 
 <div id="encryption">
-  ### Chiffrement
+  ### Chiffrement {#encryption}
 </div>
 
 Hachez la valeur `password` à l’aide d’une bibliothèque de hachage cryptographique telle que `bcrypt` afin d’éviter toute fuite de données. Évitez de consigner, de stocker ou de transmettre le mot de passe sous sa forme non chiffrée. Par exemple :
@@ -84,13 +84,13 @@ bcrypt.hash(password, 10, function (err, hash) {
 ```
 
 <div id="callback-function">
-  ## Fonction de rappel
+  ## Fonction de rappel {#callback-function}
 </div>
 
 La fonction `callback` sert à transmettre les données du profil utilisateur ou les données d’erreur dans le pipeline.
 
 <div id="definition">
-  ### Définition
+  ### Définition {#definition-2}
 </div>
 
 La fonction `callback` accepte jusqu’à deux paramètres et renvoie une fonction :
@@ -105,7 +105,7 @@ callback(error[, profile]): function
 | `profile` | Objet | Facultatif  | Contient les données de profil de l’utilisateur. |
 
 <div id="return-the-user-profile">
-  ### Renvoyer le profil de l’utilisateur
+  ### Renvoyer le profil de l’utilisateur {#return-the-user-profile}
 </div>
 
 <Warning>
@@ -137,7 +137,7 @@ return callback(null, {
 ```
 
 <div id="wrongusernameorpassworderror-type-object">
-  ### Objet de type d’erreur personnalisé WrongUsernameOrPasswordError
+  ### Objet de type d’erreur personnalisé WrongUsernameOrPasswordError {#wrongusernameorpassworderror-type-object}
 </div>
 
 L’objet de type d’erreur personnalisé `WrongUsernameOrPasswordError` vous permet de transmettre des données qui seront affichées dans vos [journaux du tenant](/docs/fr-ca/deploy-monitor/logs).
@@ -156,7 +156,7 @@ new WrongUsernameOrPasswordError(userNameOrEmail[, message]): WrongUsernameOrPas
 En plus des champs standards, vous pouvez inclure les champs `user_metadata`, `app_metadata` et `mfa_factors`.
 
 <div id="return-an-error">
-  ### Renvoyer une erreur
+  ### Renvoyer une erreur {#return-an-error}
 </div>
 
 En cas d’erreur, le paramètre `error` doit contenir des renseignements pertinents sur ce qui s’est mal passé.
@@ -190,7 +190,7 @@ Dans ce cas, Auth0 enregistre un événement `fu` dans le journal du tenant.
 | **Description**                           | `Mon message d’erreur personnalisé`                                 |
 
 <div id="sync-user-profile-attributes-at-each-login">
-  ## Synchroniser les attributs du profil utilisateur à chaque connexion
+  ## Synchroniser les attributs du profil utilisateur à chaque connexion {#sync-user-profile-attributes-at-each-login}
 </div>
 
 Activez le paramètre **Synchroniser les attributs du profil utilisateur à chaque connexion** si vous voulez qu’Auth0 mette à jour les champs `name`, `nickname`, `given_name`, `family_name` et/ou `picture` avec les valeurs renvoyées par la base de données externe à chaque connexion.
@@ -198,7 +198,7 @@ Activez le paramètre **Synchroniser les attributs du profil utilisateur à chaq
 Si vous n’activez pas ce paramètre, les valeurs renvoyées par la base de données externe lors de la première connexion de l’utilisateur resteront enregistrées pour les connexions suivantes, même si elles ont changé dans la base de données externe.
 
 <div id="language-specific-script-examples">
-  ## Exemples de scripts par langage
+  ## Exemples de scripts par langage {#language-specific-script-examples}
 </div>
 
 Auth0 fournit des exemples de scripts pour les langages et technologies suivants :

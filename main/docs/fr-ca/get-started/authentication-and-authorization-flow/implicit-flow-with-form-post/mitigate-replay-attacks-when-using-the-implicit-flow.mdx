@@ -14,7 +14,7 @@ Pour en savoir plus sur l’endroit où inclure le nonce, consultez [ajouter la 
 </Callout>
 
 <div id="generate-a-cryptographically-random-nonce">
-  ## Générer un nonce cryptographiquement aléatoire
+  ## Générer un nonce cryptographiquement aléatoire {#generate-a-cryptographically-random-nonce}
 </div>
 
 Une façon de générer un nonce cryptographiquement aléatoire consiste à utiliser un outil comme [Nano ID](https://github.com/ai/nanoid) ou un équivalent. Cela dit, vous devez alors inclure cet outil dans votre code JavaScript. Si ce n’est pas possible, vous pouvez profiter du fait que les [navigateurs modernes](http://caniuse.com/#feat=cryptography) peuvent utiliser la [Web Crypto API](https://www.w3.org/TR/WebCryptoAPI/) pour générer des chaînes aléatoires cryptographiquement sûres à utiliser comme nonces.
@@ -43,7 +43,7 @@ function randomString(length) {
 ```
 
 <div id="persist-nonces-across-requests">
-  ## Enregistrer les nonces d’une requête à l’autre
+  ## Enregistrer les nonces d’une requête à l’autre {#persist-nonces-across-requests}
 </div>
 
 Le nonce généré doit être enregistré dans votre application Web à l’aide de l’une des méthodes suivantes :
@@ -58,7 +58,7 @@ window.localStorage.setItem('nonce', randomString(16));
 ```
 
 <div id="validate-id-token">
-  ## Valider l’ID token
+  ## Valider l’ID token {#validate-id-token}
 </div>
 
 Une fois qu’Auth0 renvoie un [ID Token](/docs/fr-ca/secure/tokens/id-tokens), ce token doit être [validé et décodé](/docs/fr-ca/secure/tokens/id-tokens/validate-id-tokens) comme d’habitude.
@@ -75,7 +75,7 @@ if (jwt.nonce === window.localStorage.getItem('nonce')) {
 ```
 
 <div id="learn-more">
-  ## Pour en savoir plus
+  ## Pour en savoir plus {#learn-more}
 </div>
 
 * [Flux implicite avec Form Post](/docs/fr-ca/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post)

@@ -16,7 +16,7 @@ Role Management でロールベースのアクセス制御を使用する場合�
 </Callout>
 
 <div id="benefits-of-rbac">
-  ## ロールベースのアクセス制御の利点
+  ## ロールベースのアクセス制御の利点 {#benefits-of-rbac}
 </div>
 
 ロールベースのアクセス制御では、ロールの要件を厳密に守ることで、アクセス管理が容易になります。ロールベースのアクセス制御には、次のようなメリットがあります。
@@ -29,11 +29,11 @@ Role Management でロールベースのアクセス制御を使用する場合�
 * 機密性やプライバシーに関する規制および法令上の要件に、より効果的に準拠できる
 
 <div id="rbac-model">
-  ## ロールベースのアクセス制御モデル
+  ## ロールベースのアクセス制御モデル {#rbac-model}
 </div>
 
 <div id="roles">
-  ### ロール
+  ### ロール {#roles}
 </div>
 
 ロールとは、ユーザーに適用できる権限をまとめたものです。ロールを使用すると、権限をユーザーごとに個別に割り当てるよりも、権限の追加、削除、調整を簡単に行えます。ユーザーベースの規模が大きくなり、複雑さが増すほど、ロールは特に役立ちます。
@@ -43,7 +43,7 @@ Role Management でロールベースのアクセス制御を使用する場合�
 さらに、組織固有のロールは [Organization のメンバーに追加](/docs/ja-jp/manage-users/organizations/configure-organizations/add-member-roles) でき、エンドユーザーがどの組織を通じてログインしているかに基づいて、アプリケーション内でのアクセスを許可するために利用できます。これは、特定のユーザーがある組織では特権ロールを持っていても、別の組織では持っていないことがある、マルチテナントや SaaS 製品をサポートする場合に特に役立ちます。
 
 <div id="overlapping-role-assignments">
-  ## 重複するロールの割り当て
+  ## 重複するロールの割り当て {#overlapping-role-assignments}
 </div>
 
 ロールベースのアクセス制御は加算型モデルであるため、重複するロールの割り当てがある場合、有効な権限はそれらのロール割り当ての和集合になります。
@@ -51,7 +51,7 @@ Role Management でロールベースのアクセス制御を使用する場合�
 たとえば、イベントアプリケーションにデータを提供する API があるとします。`Organizer` というロールを作成し、イベントの表示、作成、編集を許可する権限を割り当てます。また、`Registrant` というロールを作成し、イベントの表示と登録を許可する権限を割り当てます。`Organizer` と `Registrant` の両方のロールを持つユーザーは、イベントの表示、作成、編集、登録を行えるようになります。
 
 <div id="role-based-access-control-in-auth0">
-  ## Auth0 におけるロールベースのアクセス制御
+  ## Auth0 におけるロールベースのアクセス制御 {#role-based-access-control-in-auth0}
 </div>
 
 現在、ロールベースのアクセス制御 (ロールベースのアクセス制御) を実装する方法として 2 つの方法を提供しており、API 独自の内部アクセス制御システムの代わりに、または組み合わせて利用できます。
@@ -72,7 +72,7 @@ Role Management でロールベースのアクセス制御を使用する場合�
 </Callout>
 
 <div id="extending-rbac">
-  ### ロールベースのアクセス制御の拡張
+  ### ロールベースのアクセス制御の拡張 {#extending-rbac}
 </div>
 
 [Actions](/docs/ja-jp/customize/actions) を使用すると、ユーザーの部署、時間帯、アクセス元の場所、その他のユーザー属性や API 属性 (たとえば、ユーザー名、セキュリティ クリアランス、API 名) を組み合わせてアクセスを制限し、よりきめ細かな制御を行えます。
@@ -80,7 +80,7 @@ Role Management でロールベースのアクセス制御を使用する場合�
 認可ポリシーで Actions を使用する方法の詳細については、[Sample Use Cases: Actions with Authorization](/docs/ja-jp/manage-users/access-control/sample-use-cases-actions-with-authorization) を参照してください。
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * [API のロールベースのアクセス制御を有効にする](/docs/ja-jp/get-started/apis/enable-role-based-access-control-for-apis)

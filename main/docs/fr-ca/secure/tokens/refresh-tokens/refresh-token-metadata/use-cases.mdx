@@ -19,7 +19,7 @@ Pour en savoir plus, consultez [A guide to Auth0 Session and Refresh Token Metad
 </Warning>
 
 <div id="create-persistent-custom-claims">
-  ## Créer des revendications personnalisées persistantes
+  ## Créer des revendications personnalisées persistantes {#create-persistent-custom-claims}
 </div>
 
 Les métadonnées du jeton d’actualisation et les métadonnées de session vous permettent de créer des revendications personnalisées persistantes afin d’enrichir les informations contenues dans les jetons [ID](/docs/fr-ca/secure/tokens#id-tokens) et d’[accès](/docs/fr-ca/secure/tokens/access-tokens).
@@ -91,7 +91,7 @@ Lors d’un [échange de jeton d’actualisation](/docs/fr-ca/secure/tokens/refr
 </Callout>
 
 <div id="create-a-unique-session-id">
-  ## Créer un ID de session unique
+  ## Créer un ID de session unique {#create-a-unique-session-id}
 </div>
 
 Les métadonnées du jeton d’actualisation et les métadonnées de session vous permettent de créer un ID de session unique afin de mettre en place un identifiant de session persistant qui est conservé pendant toute la durée de la session d’un utilisateur, y compris lors de la [rotation des jetons d’actualisation](docs/secure/tokens/refresh-tokens/refresh-token-rotation).
@@ -158,7 +158,7 @@ exports.onExecutePostLogin = async (event, api) => {
 Pendant un échange de jeton d’actualisation, un déclencheur d’Action post-login ultérieur peut accéder à ces revendications personnalisées au moyen de l’objet `event.refresh_token.metadata` et les appliquer aux jetons d’actualisation nouvellement émis à l’aide des objets `api.idToken.setCustomClaim()` et `api.accessToken.setCustomClaim()`.
 
 <div id="create-a-tenant-identifier">
-  ## Créer un identifiant de tenant
+  ## Créer un identifiant de tenant {#create-a-tenant-identifier}
 </div>
 
 Les métadonnées du jeton d’actualisation et les métadonnées de session vous permettent de créer un identifiant de tenant persistant pour gérer des applications multitenant, où une seule instance d’une application dessert plusieurs organisations clientes, et qui est conservé pendant toute la durée de la session de l’utilisateur.
@@ -232,7 +232,7 @@ exports.onExecutePostLogin = async (event, api) => {
 Lors d’un échange de jeton d’actualisation, une Action `post-login` subséquente peut accéder à ces revendications personnalisées au moyen de l’objet `event.refresh_token.metadata`, puis les appliquer aux jetons d’actualisation nouvellement émis à l’aide des objets `api.idToken.setCustomClaim()` et `api.accessToken.setCustomClaim()`.
 
 <div id="manage-transient-data-from-upstream-identity-providers-idps">
-  ## Gérer les données transitoires provenant des fournisseurs d’identité en amont (IDPs)
+  ## Gérer les données transitoires provenant des fournisseurs d’identité en amont (IDPs) {#manage-transient-data-from-upstream-identity-providers-idps}
 </div>
 
 Les métadonnées du jeton d’actualisation et les métadonnées de session vous permettent de gérer les données transitoires et contextuelles provenant des IDPs en amont tout au long de la session d’un utilisateur, sans les stocker de façon permanente dans son profil Auth0.
@@ -303,7 +303,7 @@ exports.onExecutePostLogin = async (event, api) => {
 Lors d’un échange de jeton d’actualisation, un déclencheur d’Action `post-login` ultérieur peut accéder à ces revendications personnalisées au moyen de l’objet `event.refresh_token.metadata` et les appliquer aux nouveaux jetons d’actualisation émis au moyen de l’objet `api.accessToken.setCustomClaim()`.
 
 <div id="enhance-security-and-fraud-detection">
-  ## Renforcer la sécurité et la détection de fraude
+  ## Renforcer la sécurité et la détection de fraude {#enhance-security-and-fraud-detection}
 </div>
 
 Les métadonnées du jeton d’actualisation et les métadonnées de session vous permettent de mettre en place une sécurité adaptative en suivant et en comparant les données contextuelles tout au long de la session d’un utilisateur, y compris les rotations de jetons d’actualisation et les requêtes d’[authentification silencieuse](/docs/fr-ca/authenticate/login/configure-silent-authentication).
@@ -347,7 +347,7 @@ exports.onExecutePostLogin = async (event, api) => {
 Lors d’un échange de jeton d’actualisation ou d’une authentification silencieuse, un déclencheur `post-login Action` ultérieur peut appliquer une évaluation du risque et des réponses adaptatives.
 
 <div id="access-metadata-with-the-management-api">
-  ## Accéder aux métadonnées avec la Management API
+  ## Accéder aux métadonnées avec la Management API {#access-metadata-with-the-management-api}
 </div>
 
 Vous pouvez utiliser les endpoints `GET` de l’Auth0 Management API [/api/v2/refresh-tokens/&#123;id&#125;](/docs/fr-ca/api/management/v2/refresh-tokens/get-refresh-token) et [/api/v2/sessions/&#123;id&#125;](/docs/fr-ca/api/management/v2/sessions/get-session) pour récupérer les données stockées dans les métadonnées d’un jeton d’actualisation ou d’une session.
@@ -364,7 +364,7 @@ La réponse comprend le champ `metadata`, qui contient les données stockées :
 ```
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Jetons d’actualisation](/docs/fr-ca/secure/tokens/refresh-tokens) : En savoir plus sur les jetons d’actualisation.

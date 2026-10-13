@@ -4,7 +4,7 @@ description: "Acceptez une SAMLResponse dans un flux initié par l’IdP afin d�
 ---
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `POST /login/callback`
@@ -12,13 +12,13 @@ description: "Acceptez une SAMLResponse dans un flux initié par l’IdP afin d�
 Ce point de terminaison accepte un SAMLResponse IdP-Initiated Sign On provenant d’un fournisseur d’identité SAML. La connexion correspondant au fournisseur d’identité est spécifiée dans la chaîne de requête. L’utilisateur sera redirigé vers l’application spécifiée dans la section IdP-Initiated Sign On du fournisseur SAML.
 
 <div id="learn-more">
-  ### En savoir plus
+  ### En savoir plus {#learn-more}
 </div>
 
 * [SAML](https://auth0.com/docs/authenticate/protocols/saml/saml-configuration)
 
 <div id="body-parameters">
-  ## Paramètres du corps
+  ## Paramètres du corps {#body-parameters}
 </div>
 
 <ParamField body="connection" type="string" required>

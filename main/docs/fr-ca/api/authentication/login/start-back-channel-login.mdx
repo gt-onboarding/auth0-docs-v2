@@ -4,7 +4,7 @@ description: "Envoyez une requête d’authentification directement à l’appar
 ---
 
 <div id="endpoint">
-  ## Endpoint
+  ## Endpoint {#endpoint}
 </div>
 
 `POST /bc-authorize`
@@ -18,7 +18,7 @@ Utilisez le endpoint connexion par canal arrière pour authentifier les utilisat
 * L’appareil utilisé pour accéder au service a des capacités d’interaction limitées (p. ex., des vélos électriques ou des trottinettes électriques).
 
 <div id="response-body">
-  ### Corps de la réponse
+  ### Corps de la réponse {#response-body}
 </div>
 
 Si la requête aboutit, vous devriez recevoir une réponse semblable à celle-ci :
@@ -40,7 +40,7 @@ La valeur `interval` vous indique combien de secondes vous devez attendre entre 
 La requête doit être approuvée ou rejetée sur l’appareil d’authentification de l’utilisateur au moyen du SDK Guardian.
 
 <div id="remarks">
-  ### Remarques
+  ### Remarques {#remarks}
 </div>
 
 * La valeur `login_hint` respecte le format `iss_sub`. Par exemple :
@@ -52,7 +52,7 @@ La requête doit être approuvée ou rejetée sur l’appareil d’authentificat
 * L’authentification peut se faire à l’aide du Client Secret (par authentification Basic HTTP ou Post), de Private Key JWT ou de mTLS. Veuillez consulter les exemples détaillés ci-dessus.
 
 <div id="body-parameters">
-  ## Paramètres du corps de la requête
+  ## Paramètres du corps de la requête {#body-parameters}
 </div>
 
 <ParamField body="client_id" type="string" required>
@@ -88,7 +88,7 @@ La requête doit être approuvée ou rejetée sur l’appareil d’authentificat
 </ParamField>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                                             |

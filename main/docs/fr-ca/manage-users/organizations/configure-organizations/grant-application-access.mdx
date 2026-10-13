@@ -27,7 +27,7 @@ Vous configurez l’accès par application pour chaque organisation. Lorsque vou
 </Card>
 
 <div id="enable-per-application-access">
-  ## Activer l’accès par application
+  ## Activer l’accès par application {#enable-per-application-access}
 </div>
 
 Lorsque vous activez l’accès par application pour une organisation, vous faites passer l’organisation d’un contrôle d’accès implicite à un contrôle d’accès explicite. Les membres ne peuvent se connecter qu’aux applications auxquelles vous avez explicitement accordé l’accès.
@@ -64,7 +64,7 @@ Lorsque l’accès par application est activé, Auth0 bloque les applications pr
 </Tabs>
 
 <div id="grant-access-to-an-application">
-  ## Accorder l’accès à une application
+  ## Accorder l’accès à une application {#grant-access-to-an-application}
 </div>
 
 Lorsque vous ajoutez une application à une organisation, le paramètre Accès des membres vous permet de contrôler si les membres peuvent se connecter au moyen de cette application.
@@ -115,7 +115,7 @@ Lorsque vous ajoutez une application à une organisation, le paramètre Accès d
 </Tabs>
 
 <div id="revoke-access-to-an-application">
-  ## Révoquer l’accès à une application
+  ## Révoquer l’accès à une application {#revoke-access-to-an-application}
 </div>
 
 <Tabs>
@@ -143,7 +143,7 @@ Lorsque vous ajoutez une application à une organisation, le paramètre Accès d
 </Tabs>
 
 <div id="list-an-organizations-applications">
-  ## Répertorier les applications d’une organisation
+  ## Répertorier les applications d’une organisation {#list-an-organizations-applications}
 </div>
 
 Utilisez l’API Management pour récupérer toutes les applications associées à une organisation, y compris le statut d’accès des membres pour chacune d’elles.
@@ -157,14 +157,14 @@ Utilisez l’API Management pour récupérer toutes les applications associées 
 La réponse inclut chaque application associée et sa valeur `use_for_member_access`. Elle utilise la pagination par curseur.
 
 <div id="limitations">
-  ## Limites
+  ## Limites {#limitations}
 </div>
 
 * Chaque organisation prend en charge jusqu’à 100 associations d’applications destinées aux utilisateurs en accès anticipé. Cette limite s’applique aux applications dont le type est admissible à `use_for_member_access` (SPA, application Web régulière, native). Les limites d’association machine à machine sont susceptibles de changer pendant l’accès anticipé.
 * Les paramètres au niveau de la connexion et du client ne peuvent pas contourner l’application des contrôles d’accès par application. Les applications tierces qui ne sont pas explicitement répertoriées dans l’onglet Applications d’une organisation ne sont pas assujetties aux contrôles d’accès par application — elles continuent de suivre la politique d’accès aux applications tierces de l’organisation.
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Aperçu des organisations](/docs/fr-ca/manage-users/organizations/organizations-overview)

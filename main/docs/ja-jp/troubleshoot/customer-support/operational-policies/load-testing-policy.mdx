@@ -18,7 +18,7 @@ Auth0 は、お客様が必要に応じて本番クラウドサービスに対�
 </Callout>
 
 <div id="acceptable-testing-windows">
-  ## 許容されるテスト時間帯
+  ## 許容されるテスト時間帯 {#acceptable-testing-windows}
 </div>
 
 パブリッククラウドをご利用のお客様は、負荷テストを実施する場合、以下のオフピーク時間帯に日程を調整する必要があります。
@@ -35,7 +35,7 @@ Auth0 は、お客様が必要に応じて本番クラウドサービスに対�
 ごくまれな例外的状況に限り、Auth0 がこの取り決めの例外を認める場合があります。
 
 <div id="change-freeze-policy">
-  ## 変更凍結ポリシー
+  ## 変更凍結ポリシー {#change-freeze-policy}
 </div>
 
 <Warning>
@@ -45,7 +45,7 @@ Auth0 は、お客様が必要に応じて本番クラウドサービスに対�
 現在予定されている変更凍結期間を確認するには、[Change Freeze Policy](/docs/ja-jp/troubleshoot/customer-support/operational-policies/change-freeze-policy)を参照してください。
 
 <div id="holiday-load-testing-policy">
-  ## 休暇シーズンの負荷テストポリシー
+  ## 休暇シーズンの負荷テストポリシー {#holiday-load-testing-policy}
 </div>
 
 **更新日:** 2022年11月1日
@@ -62,7 +62,7 @@ Auth0 は、お客様が必要に応じて本番クラウドサービスに対�
   * 同時に複数のテストを実施する必要がある場合は、申請をエスカレーションし、Platform DirectorまたはVice Presidentの承認を得る必要があります。
 
 <div id="submit-load-testing-request">
-  ## 負荷テストのリクエストを送信する
+  ## 負荷テストのリクエストを送信する {#submit-load-testing-request}
 </div>
 
 [Auth0 Support Center](https://support.auth0.com) から負荷テストのリクエストを送信できます。
@@ -78,13 +78,13 @@ Auth0 は、お客様が必要に応じて本番クラウドサービスに対�
 </Warning>
 
 <div id="required-load-testing-information">
-  ### 必要な負荷テスト情報
+  ### 必要な負荷テスト情報 {#required-load-testing-information}
 </div>
 
 負荷テストのリクエストには、以下の情報を含めてください。
 
 <div id="general">
-  #### 一般
+  #### 一般 {#general}
 </div>
 
 * 実施予定のテストの概要
@@ -94,13 +94,13 @@ Auth0 は、お客様が必要に応じて本番クラウドサービスに対�
 * テストに使用するプラットフォーム (デスクトップ／ノートパソコン、iOS、Android、その他)
 
 <div id="tenant">
-  #### テナント
+  #### テナント {#tenant}
 </div>
 
 * テストで使用する Auth0 テナントの名前とリージョン
 
 <div id="features">
-  #### 機能
+  #### 機能 {#features}
 </div>
 
 * テスト中に使用する Auth0 の機能 (Actions、ルール、Email など)
@@ -112,20 +112,20 @@ Auth0 は、お客様が必要に応じて本番クラウドサービスに対�
 * 確認メール、ウェルカムメール、またはその他のメールが送信されるかどうか
 
 <div id="apis">
-  #### API
+  #### API {#apis}
 </div>
 
 * 使用予定の Auth0 API のメソッドとエンドポイント (例: `GET /api/v2/clients`)
 * リクエストの種類またはエンドポイントごとの、1 秒あたりの最大リクエスト数
 
 <div id="users">
-  #### ユーザー数
+  #### ユーザー数 {#users}
 </div>
 
 * 負荷テストに参加するユニークユーザー数
 
 <div id="load-estimates">
-  #### 負荷の見積もり
+  #### 負荷の見積もり {#load-estimates}
 </div>
 
 * テストに含まれる各APIエンドポイントまたはAuth0機能について、1秒あたりのリクエスト数 (RPS) で示した想定ピーク負荷
@@ -134,7 +134,7 @@ Auth0 は、お客様が必要に応じて本番クラウドサービスに対�
 * 負荷テストに参加するユニークユーザー数
 
 <div id="test-requirements">
-  ## テスト要件
+  ## テスト要件 {#test-requirements}
 </div>
 
 負荷テストの実施枠は空き状況に左右されるため、事前にご連絡いただくことを強く推奨します。承認されると、負荷テストの実施枠には開始時刻と終了時刻が設定され、実施時間は最長 2 時間です。すべてのテストは、この枠内で開始し、終了する必要があります。負荷テスト中は、テストが [IP ベースのレート制限](/docs/ja-jp/troubleshoot/customer-support/operational-policies/rate-limit-policy) にかからないよう、IP をローテーションするよう設定してください。
@@ -142,7 +142,7 @@ Auth0 は、お客様が必要に応じて本番クラウドサービスに対�
 Auth0 では、目標の負荷テスト値まで短い「ランプアップ」期間を設けることを強く推奨しています。たとえば、100 RPS の負荷テストリクエストの前に、5 分間ずつ 3 段階に分けて、25 RPS で 5 分、50 RPS で 5 分、75 RPS で 5 分といった形です。このランプアップ期間により、Auth0 とお客様は、ピーク RPS に達する前に、RPS の増加に応じた影響を観察して比較できます。ランプアップ期間を設けられない場合は、その理由をお知らせください。
 
 <div id="configure-email-provider">
-  ### メールプロバイダーを設定する
+  ### メールプロバイダーを設定する {#configure-email-provider}
 </div>
 
 テストを行う前に、必ず次の準備をしてください。

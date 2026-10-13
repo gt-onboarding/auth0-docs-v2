@@ -16,7 +16,7 @@ Lock には多数のメソッド、機能、設定可能なオプションがあ
 * [logout()](#logout-) - ユーザーをログアウトする
 
 <div id="auth0lock">
-  ## Auth0Lock
+  ## Auth0Lock {#auth0lock}
 </div>
 
 `new Auth0Lock(clientID, domain, options)`
@@ -67,7 +67,7 @@ export const codeExample1 = `var Auth = (function() {
 <AuthCodeBlock children={codeExample1} language="js" />
 
 <div id="getuserinfo">
-  ## getUserInfo()
+  ## getUserInfo() {#getuserinfo}
 </div>
 
 `getUserInfo(accessToken, callback)`
@@ -86,7 +86,7 @@ lock.getUserInfo(accessToken, function(error, profile) {
 ```
 
 <div id="show">
-  ## show()
+  ## show() {#show}
 </div>
 
 `show(options)`
@@ -123,7 +123,7 @@ lock.show({
 `show` メソッドでは、`flashMessage` という追加オプションも設定できます。
 
 <div id="flashmessage">
-  ### flashMessage
+  ### flashMessage {#flashmessage}
 </div>
 
 このオブジェクトは、Lock をインスタンス化する際の通常の `options` オブジェクトでは使用できず、`show` メソッドのオプションとしてのみ利用できます。`flashMessage` オブジェクトは、Lock の表示時にエラーまたは成功のフラッシュメッセージを表示します。使用できるパラメータは次のとおりです。
@@ -156,7 +156,7 @@ lock.on('authorization_error', function(error) {
 したがって、`tester@example.com` が今サインインを試みると、ブロックされているユーザーであるため、単にログインに失敗して Lock が閉じるのではなく、上部バーにエラーメッセージが表示された状態で、再び Lock が表示されます。
 
 <div id="hide">
-  ## hide()
+  ## hide() {#hide}
 </div>
 
 `hide()`
@@ -176,7 +176,7 @@ lock.on("authenticated", function() {
 ```
 
 <div id="on">
-  ## on()
+  ## on() {#on}
 </div>
 
 Lock はライフサイクルの中でイベントを発行します。`on` メソッドを使うと、特定のイベントを監視して、それに応じた処理を実行できます。
@@ -241,7 +241,7 @@ export const codeExample2 = `var Auth = (function() {
 <AuthCodeBlock children={codeExample2} language="js" />
 
 <div id="resumeauth">
-  ## resumeAuth()
+  ## resumeAuth() {#resumeauth}
 </div>
 
 このメソッドは、[auth.autoParseHash](/docs/ja-jp/libraries/lock/lock-configuration) オプションを `false` に設定した場合にのみ使用できます。認証フローを完了するには、`resumeAuth` を呼び出す必要があります。このメソッドは、`#` を使って URL を処理するクライアントサイドの router (`useHash` を使用する angular2、または `hashHistory` を使用する react-router) を使っている場合に便利です。
@@ -260,7 +260,7 @@ lock.resumeAuth(hash, function(error, authResult) {
 ```
 
 <div id="checksession">
-  ## checkSession()
+  ## checkSession() {#checksession}
 </div>
 
 `checkSession` メソッドを使うと、あなたのドメインの Auth0 ですでに認証されているユーザー向けに、Auth0 から新しいトークンを取得できます。指定できるパラメータは次のとおりです。
@@ -275,7 +275,7 @@ lock.checkSession({}, function(err, authResult) {
 ```
 
 <div id="logout">
-  ## logout()
+  ## logout() {#logout}
 </div>
 
 ユーザーをログアウトします。

@@ -10,7 +10,7 @@ Filter フック の詳細については、[Delegated Administration: Filter Ho
 **Access フック** を使用すると、現在のユーザーに特定のユーザーの読み取り、削除、ブロック、ブロック解除、更新を許可するかどうかを判断できます。
 
 <div id="hook-contract">
-  ## フック の仕様
+  ## フック の仕様 {#hook-contract}
 </div>
 
 * **ctx**: コンテキストオブジェクト。
@@ -22,7 +22,7 @@ Filter フック の詳細については、[Delegated Administration: Filter Ho
 * **callback(error)**: アクセスが拒否された場合にエラーを返せるコールバック。
 
 <div id="sample-use">
-  ## 使用例
+  ## 使用例 {#sample-use}
 </div>
 
 Kelly は財務部門を管理しており、自分の部門内のユーザーのみを閲覧できるようにする必要があります。
@@ -55,7 +55,7 @@ function(ctx, callback) {
 ```
 
 <div id="notes">
-  ## 注記
+  ## 注記 {#notes}
 </div>
 
 このフックが設定されていない場合、現在のユーザーはすべてのユーザーにアクセスできます。
@@ -76,7 +76,7 @@ function(ctx, callback) {
 * send:verification-email
 
 <div id="learn-more">
-  ## 詳しくはこちら
+  ## 詳しくはこちら {#learn-more}
 </div>
 
 * [Delegated Administration: Filter Hook](/docs/ja-jp/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-filter-hook)

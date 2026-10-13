@@ -15,7 +15,7 @@ title: "Okta comme IdP OIDC"
 Configurez Okta comme fournisseur d’identité d’entreprise OIDC pour Cross App Access (XAA). Vous configurerez un tenant Okta, enregistrerez l’application de ressources et l’application demandeuse dans Okta, puis configurerez une connexion Workforce Enterprise qui fédère votre tenant Auth0 avec Okta.
 
 <div id="create-and-configure-your-okta-tenant">
-  ## Créez et configurez votre tenant Okta
+  ## Créez et configurez votre tenant Okta {#create-and-configure-your-okta-tenant}
 </div>
 
 Pour créer et configurer votre tenant Okta pour Cross App Access :
@@ -28,11 +28,11 @@ Après avoir activé Cross App Access, assurez-vous que les fonctionnalités sui
 <Frame>![](/docs/images/xaa/xaa_okta_flags_ea.png)</Frame>
 
 <div id="register-the-requesting-app-in-okta">
-  ## Enregistrez l’application demandeuse dans Okta
+  ## Enregistrez l’application demandeuse dans Okta {#register-the-requesting-app-in-okta}
 </div>
 
 <div id="create-requesting-app-in-okta">
-  ### Créer une application demandeuse dans Okta
+  ### Créer une application demandeuse dans Okta {#create-requesting-app-in-okta}
 </div>
 
 Votre application demandeuse est une application OIDC standard. Pour créer une application demandeuse dans Okta :
@@ -50,7 +50,7 @@ Une fois l’application demandeuse créée, Okta lui attribue un ID client OIDC
 <Frame>![](/docs/images/xaa/xaa_okta_req_app_general.png)</Frame>
 
 <div id="assign-requesting-app-to-test-users">
-  ### Attribuer l’application demandeuse aux utilisateurs de test
+  ### Attribuer l’application demandeuse aux utilisateurs de test {#assign-requesting-app-to-test-users}
 </div>
 
 Autorisez votre utilisateur de test à se connecter à l’application demandeuse dans Okta.
@@ -64,11 +64,11 @@ Dans la console d’administration Okta :
 <Frame>![](/docs/images/xaa/xaa_okta_req_app_user_assignment.png)</Frame>
 
 <div id="register-the-resource-app-in-okta">
-  ## Enregistrer l’application de ressources dans Okta
+  ## Enregistrer l’application de ressources dans Okta {#register-the-resource-app-in-okta}
 </div>
 
 <div id="create-resource-app-in-okta">
-  ### Créer une application de ressources dans Okta
+  ### Créer une application de ressources dans Okta {#create-resource-app-in-okta}
 </div>
 
 Comme l’application demandeuse, votre application de ressources est une application Web OIDC.
@@ -84,7 +84,7 @@ Pour vérifier que les URI de redirection de connexion de l’application de res
 <Frame>![](/docs/images/xaa/xaa_okta_resource_app_details2.png)</Frame>
 
 <div id="assign-resource-app-to-test-users">
-  ### Attribuer l’application de ressources aux utilisateurs de test
+  ### Attribuer l’application de ressources aux utilisateurs de test {#assign-resource-app-to-test-users}
 </div>
 
 Autorisez votre utilisateur de test à se connecter à l’application de ressources dans Okta.
@@ -98,7 +98,7 @@ Dans la console d’administration Okta :
 <Frame>![](/docs/images/xaa/xaa_okta_resource_app_user_assignment.png)</Frame>
 
 <div id="enable-cross-app-access-xaa-in-resource-app">
-  ### Activer l’accès interapplications (XAA) dans l’application de ressources
+  ### Activer l’accès interapplications (XAA) dans l’application de ressources {#enable-cross-app-access-xaa-in-resource-app}
 </div>
 
 Accédez à l’onglet **Resource Server** et activez l’accès interapplications (XAA) pour l’application de ressources. Saisissez l’**URL de l’émetteur** du serveur d’autorisation de l’application de ressources : `https://YOUR_AUTH0_DOMAIN/`.
@@ -110,11 +110,11 @@ Accédez à l’onglet **Resource Server** et activez l’accès interapplicatio
 </Callout>
 
 <div id="register-ai-agent-in-okta">
-  ## Enregistrer l’agent IA dans Okta
+  ## Enregistrer l’agent IA dans Okta {#register-ai-agent-in-okta}
 </div>
 
 <div id="create-ai-agent">
-  ### Créer un agent d’IA
+  ### Créer un agent d’IA {#create-ai-agent}
 </div>
 
 Accédez à **Directory &gt; AI Agents &gt; Register AI Agent**, puis sélectionnez **Register manually**. Saisissez un nom pour votre agent et attribuez-lui un propriétaire.
@@ -126,7 +126,7 @@ Accédez à **Directory &gt; AI Agents &gt; Register AI Agent**, puis sélection
 <Frame>![](/docs/images/xaa/xaa_okta_ai_agent_staged.png)</Frame>
 
 <div id="add-agent-credentials">
-  ### Ajouter les identifiants de l’agent
+  ### Ajouter les identifiants de l’agent {#add-agent-credentials}
 </div>
 
 Les agents IA s’authentifient au nom de vos applications à l’aide de [JWT à clé privée](/docs/fr-ca/get-started/authentication-and-authorization-flow/authenticate-with-private-key-jwt). Dans l’onglet **Identifiants**, sélectionnez **Ajouter une clé publique**.
@@ -142,7 +142,7 @@ Une fois vos identifiants configurés, une coche s’affiche à côté de l’on
 <Frame>![](/docs/images/xaa/xaa_okta_ai_agent_credentials_set.png)</Frame>
 
 <div id="add-agent-delegations">
-  ### Ajouter des délégations d’agent
+  ### Ajouter des délégations d’agent {#add-agent-delegations}
 </div>
 
 Dans l’onglet **Delegations**, sélectionnez **Add Caller** dans la section **User sign-on**.
@@ -158,7 +158,7 @@ Une fois les délégations de votre agent configurées, une coche s’affiche à
 <Frame>![](/docs/images/xaa/xaa_okta_ai_agent_delegations_set.png)</Frame>
 
 <div id="add-agent-resource-connections">
-  ### Ajouter des connexions de ressources d’agent
+  ### Ajouter des connexions de ressources d’agent {#add-agent-resource-connections}
 </div>
 
 Dans l’onglet **Connexions de ressources**, sélectionnez **Ajouter des connexions de ressources**, puis **Application** comme **Type de ressource**.
@@ -172,13 +172,13 @@ Une fois vos connexions de ressources configurées, une coche s’affiche à cô
 <Frame>![](/docs/images/xaa/xaa_okta_ai_agent_resource_connections_set.png)</Frame>
 
 <div id="activate-the-agent">
-  ### Activer l’agent
+  ### Activer l’agent {#activate-the-agent}
 </div>
 
 Dans le menu déroulant **Actions de l’agent**, sélectionnez **Activer**, puis vérifiez que le **STATUT GÉRÉ** est **Actif**.
 
 <div id="configure-an-okta-workforce-enterprise-connection-in-auth0">
-  ## Configurer une connexion Okta Workforce Enterprise dans Auth0
+  ## Configurer une connexion Okta Workforce Enterprise dans Auth0 {#configure-an-okta-workforce-enterprise-connection-in-auth0}
 </div>
 
 Utilisez le `client_id` et le `client_secret` de votre application de ressources pour [créer une connexion Okta Workforce Enterprise](/docs/fr-ca/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration) dans votre tenant Auth0.
@@ -197,7 +197,7 @@ Après avoir créé la connexion Okta Workforce Enterprise, vérifiez que l’**
 </Callout>
 
 <div id="test-connection-in-auth0">
-  ### Tester la connexion dans Auth0
+  ### Tester la connexion dans Auth0 {#test-connection-in-auth0}
 </div>
 
 Dans le tableau de bord Auth0 :
@@ -226,7 +226,7 @@ Une fois que l’utilisateur s’est connecté avec succès à l’aide de la co
 </Callout>
 
 <div id="publish-your-resource-app-in-oin">
-  ## Publier votre application de ressources sur l’OIN
+  ## Publier votre application de ressources sur l’OIN {#publish-your-resource-app-in-oin}
 </div>
 
 Après avoir configuré et [testé le flux de bout en bout](/docs/fr-ca/ai-agents-mcp/cross-app-access/end-to-end-testing), les fournisseurs B2B et SaaS peuvent accroître leur portée auprès des clients d’entreprise en publiant leur application de ressources sur l’[Okta Integration Network (OIN)](https://www.okta.com/integrations/). Pour savoir comment procéder, suivez les instructions dans [How to Build and List Secure Cross App Access Connections on OIN](https://developer.okta.com/blog/2026/07/06/submit-oin-xaa).

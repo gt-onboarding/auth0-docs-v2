@@ -9,7 +9,7 @@ Auth0 peut être personnalisé afin d’adopter une apparence conforme aux exige
 Auth0 offre la prise en charge de [l’internationalisation (I18N)](/docs/fr-ca/customize/internationalization-and-localization) et de la localisation (L10N), deux aspects importants si vous travaillez l’image de marque pour une clientèle internationale. Les éléments prêts à l’emploi, comme le widget d’interface utilisateur Auth0 Lock et <Tooltip tip="Universal Login : votre application redirige vers Universal Login, hébergé sur l’Authorization Server d’Auth0, afin de vérifier l’identité d’un utilisateur." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Universal+Login">Universal Login</Tooltip>, prennent déjà en charge plusieurs langues, avec une extensibilité intégrée qui permet d’en ajouter d’autres si ce dont vous avez besoin [n’existe pas déjà](/docs/fr-ca/customize/internationalization-and-localization/lock-internationalization).
 
 <Info>
-  ### Pratique exemplaire
+  ### Pratique exemplaire {#best-practice}
 
   Presque toutes les applications ont besoin d’internationalisation ou de localisation, d’une façon ou d’une autre. Auth0 facilite leur ajout, mais vous devez en tenir compte dès le départ : ajouter la localisation après coup, par exemple, peut s’avérer fastidieux si vous attendez trop longtemps.
 </Info>
@@ -31,19 +31,19 @@ Si vous partagez un Auth0 tenant entre plusieurs organisations clientes, en four
 Bien qu’Auth0 fournisse des renseignements par défaut dans les situations d’erreur, les renseignements prêts à l’emploi peuvent être quelque peu cryptiques, puisqu’il manque le contexte que vous seul pouvez fournir. Les conseils d’Auth0 sur la [personnalisation de la page d’erreur](#error-page-customization) peuvent toutefois aider à atténuer ce problème en vous permettant de fournir des renseignements davantage adaptés au contexte par l’intermédiaire de votre propre organisation de soutien.
 
 <Info>
-  ### Pratique exemplaire
+  ### Pratique exemplaire {#best-practice-2}
 
   Pour offrir des ressources utiles aux utilisateurs qui éprouvent des problèmes, vous devriez également configurer un nom convivial et un logo, ainsi que fournir l’adresse courriel et l’URL de soutien de votre organisation. Pour savoir comment faire, consultez [Dashboard Tenant Settings](/docs/fr-ca/get-started/tenant-settings#settings).
 </Info>
 
 <div id="universal-login-and-login-pages">
-  ## Universal Login et les pages de connexion
+  ## Universal Login et les pages de connexion {#universal-login-and-login-pages}
 </div>
 
 [Universal Login](/docs/fr-ca/authenticate/login/auth0-universal-login) est la méthode recommandée pour authentifier les utilisateurs, et elle repose sur l’utilisation de la page de connexion. Vous pouvez personnaliser la page de connexion pour qu’elle respecte les exigences relatives à l’image de marque de votre organisation.
 
 <Info>
-  ### Pratique exemplaire
+  ### Pratique exemplaire {#best-practice-3}
 
   Pour personnaliser les pages Universal Login, vous pouvez modifier vos [thèmes de page](/docs/fr-ca/customize/login-pages/universal-login/customize-themes) et créer des [modèles de page](/docs/fr-ca/customize/login-pages/universal-login/customize-templates) dynamiques.
 
@@ -51,7 +51,7 @@ Bien qu’Auth0 fournisse des renseignements par défaut dans les situations d�
 </Info>
 
 <div id="branding-login-by-organization">
-  ## Image de marque de la connexion selon l’organisation
+  ## Image de marque de la connexion selon l’organisation {#branding-login-by-organization}
 </div>
 
 Le besoin ou non d’effectuer une personnalisation particulière sur la page Universal Login dépend de la façon dont vous prévoyez gérer l’organisation de vos clients. Avant de lire cette section, assurez-vous d’avoir lu la [section Universal Login](#universal-login-and-login-pages) et de savoir quelle approche vous adoptez pour les organisations en consultant [Multiple Organization Architecture](/docs/fr-ca/get-started/architecture-scenarios/multiple-organization-architecture).
@@ -59,7 +59,7 @@ Le besoin ou non d’effectuer une personnalisation particulière sur la page Un
 Si les utilisateurs de votre organisation sont tous isolés les uns des autres, il est important d’indiquer clairement sur la page Universal Login pour quelle organisation la page de connexion est affichée. La façon la plus simple de le faire est d’utiliser la [Organizations Feature](/docs/fr-ca/manage-users/organizations/create-first-organization), qui vous permet d’enregistrer un logo, une couleur principale et une couleur d’arrière-plan qui serviront à personnaliser l’image de marque de la Universal Login Page une fois l’organisation identifiée, soit en transmettant `org_id` depuis l’application, soit lorsque l’utilisateur saisit son organisation dans le prompt organisation.
 
 <div id="custom-domain-naming">
-  ## Noms de domaines personnalisés
+  ## Noms de domaines personnalisés {#custom-domain-naming}
 </div>
 
 Par défaut, l’URL associée à votre tenant inclut son nom et, dans certains cas, un identifiant propre à la région. Par exemple, les tenants situés aux États-Unis ont une URL semblable à `https://example.us.auth0.com`, tandis que ceux situés en Europe ont une URL du type `https://example.eu.auth0.com`. Un [Domaine personnalisé](/docs/fr-ca/customize/custom-domains) vous permet d’offrir à vos utilisateurs une expérience cohérente en utilisant un nom qui correspond à l’image de marque de votre organisation.
@@ -77,7 +77,7 @@ En règle générale, nous constatons que les clients obtiennent les meilleurs r
 </Warning>
 
 <div id="email-template-customization">
-  ## Personnalisation des modèles de courriel
+  ## Personnalisation des modèles de courriel {#email-template-customization}
 </div>
 
 Auth0 utilise largement le courriel, à la fois pour envoyer des notifications aux utilisateurs et pour prendre en charge les fonctionnalités nécessaires à une gestion sécurisée des identités (par exemple, la vérification des courriels, la récupération de compte et la protection contre les attaques par force brute). Auth0 fournit plusieurs modèles à cette fin.
@@ -91,7 +91,7 @@ Par défaut, les modèles de courriel fournis contiennent un texte standard et l
 Les modèles de courriel se personnalisent à l’aide de la [syntaxe Liquid](/docs/fr-ca/customize/email/email-templates/use-liquid-syntax-in-email-templates). Si vous souhaitez personnaliser vos modèles en fonction des préférences des utilisateurs, vous aurez également accès aux [métadonnées](/docs/fr-ca/manage-users/user-accounts/metadata) stockées dans les profils des utilisateurs, ainsi qu’aux métadonnées propres à l’application.
 
 <div id="password-reset-page-customization">
-  ## Personnalisation de la page de réinitialisation du mot de passe
+  ## Personnalisation de la page de réinitialisation du mot de passe {#password-reset-page-customization}
 </div>
 
 La page [Réinitialisation du mot de passe](/docs/fr-ca/customize/login-pages/classic-login/customize-password-reset-page) est utilisée chaque fois qu’un utilisateur utilise la fonction de changement de mot de passe et, comme pour la page de connexion, vous pouvez la personnaliser pour qu’elle respecte les exigences particulières de votre organisation en matière d’image de marque.
@@ -102,19 +102,19 @@ Si les utilisateurs de votre organisation sont tous isolés les uns des autres (
 * Créez un tenant distinct pour une organisation et utilisez Universal Login pour personnaliser ce qui est nécessaire pour cette organisation.
 
 <div id="error-page-customization">
-  ## Personnalisation de la page d’erreur
+  ## Personnalisation de la page d’erreur {#error-page-customization}
 </div>
 
 S’il survient des problèmes pendant un workflow interactif de l’utilisateur (p. ex. l’inscription ou la connexion), Auth0 fournit des messages d’erreur qui indiquent ce qui se passe en coulisses. Les messages par défaut sont plutôt cryptiques, surtout pour l’utilisateur final, puisqu’il lui manque souvent le contexte que vous seul pouvez fournir. Par conséquent, nous vous recommandons de [personnaliser vos pages d’erreur](/docs/fr-ca/customize/login-pages/custom-error-pages) afin de fournir directement à vos utilisateurs l’information contextuelle manquante. De plus, la personnalisation de vos pages d’erreur vous permet d’afficher votre image de marque plutôt que celle d’Auth0, tout en donnant à vos utilisateurs des indications utiles sur les prochaines étapes. Cette information peut comprendre un lien vers une FAQ ou la manière de communiquer avec l’équipe de soutien ou le service d’assistance de votre entreprise.
 
 <Info>
-  ### Pratique exemplaire
+  ### Pratique exemplaire {#best-practice-4}
 
   Par défaut, il n’existe aucune interface utilisateur pour personnaliser les pages d’erreur fournies par Auth0, mais vous pouvez utiliser le [endpoint Tenant Settings de la Management API](https://auth0.com/docs/api/management/v2#!/Tenants/patch_settings) pour les configurer. Sinon, si vous pouvez créer et héberger votre propre page d’erreur, vous pouvez faire en sorte qu’Auth0 redirige les utilisateurs vers cette page au lieu d’utiliser l’option hébergée par Auth0.
 </Info>
 
 <div id="guardian-multi-factor-page-customization">
-  ## Personnalisation de la page multifacteur Guardian
+  ## Personnalisation de la page multifacteur Guardian {#guardian-multi-factor-page-customization}
 </div>
 
 Les pages de <Tooltip tip="Authentification multifacteur (MFA) : processus d’authentification de l’utilisateur qui utilise un facteur en plus du nom d’utilisateur et du mot de passe, comme un code envoyé par SMS." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Multi-factor+Authentication">Authentification multifacteur</Tooltip> peuvent être personnalisées en modifiant les options d’image de marque d’Universal Login dans la section [Paramètres d’Universal Login](https://manage.auth0.com/#/login_settings).
@@ -122,7 +122,7 @@ Les pages de <Tooltip tip="Authentification multifacteur (MFA) : processus d’
 Si vous avez besoin d’une personnalisation plus poussée, vous pouvez aussi personnaliser [l’intégralité du contenu HTML](/docs/fr-ca/secure/multi-factor-authentication/customize-mfa/customize-mfa-classic-login) afin de répondre aux exigences UX propres à votre organisation.
 
 <div id="project-planning-guide">
-  ## Guide de planification de projet
+  ## Guide de planification de projet {#project-planning-guide}
 </div>
 
 Nous mettons à votre disposition un guide de planification au format PDF que vous pouvez télécharger et consulter pour en savoir plus sur les stratégies que nous recommandons.

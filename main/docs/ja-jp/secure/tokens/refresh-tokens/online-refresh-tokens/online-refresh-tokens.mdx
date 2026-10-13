@@ -15,7 +15,7 @@ ORTは、Intelligent Tracking Prevention (ITP) などのブラウザのプライ
 ORTはユーザーのAuth0 [セッション](/docs/ja-jp/manage-users/sessions)に紐付けられており、そのセッションが有効な間だけ使用できます。これにより、ユーザーがログアウトすると、そのセッションを使用しているすべてのアプリケーションもまとめてログアウトされます。
 
 <div id="how-it-works">
-  ## 仕組み
+  ## 仕組み {#how-it-works}
 </div>
 
 ORT をリクエストすると、次のように動作します。
@@ -26,7 +26,7 @@ ORT をリクエストすると、次のように動作します。
 4. 基盤となる Auth0 セッションがアクティブである限り、そのトークンは有効なままです。
 
 <div id="comparison-of-orts-versus-refresh-tokens">
-  ## ORT とリフレッシュトークンの比較
+  ## ORT とリフレッシュトークンの比較 {#comparison-of-orts-versus-refresh-tokens}
 </div>
 
 | **機能**                                                                                                                          | **ORTs**                                                                                          | **リフレッシュトークン**                                                                          |
@@ -41,7 +41,7 @@ ORT をリクエストすると、次のように動作します。
 | **セッションのアイドルタイムアウト**                                                                                                            | 交換のたびに延長される                                                                                       | セッションに影響しない                                                                             |
 
 <div id="key-behavioral-differences">
-  ### 主な挙動の違い
+  ### 主な挙動の違い {#key-behavioral-differences}
 </div>
 
 **セッションの延長:** ORT を交換すると、Auth0 はセッションのアイドルタイムアウトをリセットし、ユーザーセッションを維持します。一方で、セッションの[絶対有効期間](/docs/ja-jp/manage-users/sessions/session-lifecycle#absolute-timeout-maximum)は延長されません。
@@ -51,7 +51,7 @@ ORT をリクエストすると、次のように動作します。
 **ステートレス:** ORT はセッションに紐づいているため、個別に表示したり管理したりすることはできません。Management API で確認することも、個別に失効させることもできません。
 
 <div id="best-practices">
-  ## ベストプラクティス
+  ## ベストプラクティス {#best-practices}
 </div>
 
 1. **トークンはメモリに保存する:** ORT は `localStorage` や `sessionStorage` に保存しないでください。セキュリティを高めるため、JavaScript のメモリ内に保持してください。ORT は Auth0 セッションに紐づいているため、ユーザーが次回アクセスした際にはセッションクッキーによってコンテキストが再確立され、アプリで新しい ORT をリクエストできます。
@@ -61,11 +61,11 @@ ORT をリクエストすると、次のように動作します。
 5. **セッションの有効期間を監視する:** アイドルタイムアウトと絶対セッションタイムアウトの両方を把握しておいてください。絶対タイムアウトは、リフレッシュトークン交換で延長することはできません。
 
 <div id="limitations">
-  ## 制限事項
+  ## 制限事項 {#limitations}
 </div>
 
 <div id="unsupported-flows">
-  ### サポートされていないフロー
+  ### サポートされていないフロー {#unsupported-flows}
 </div>
 
 ORT は、対話型のブラウザーセッションを作成するフローでのみ利用できます。次のフローでは ORT を**発行できません**。
@@ -81,7 +81,7 @@ ORT は、対話型のブラウザーセッションを作成するフローで�
 これらのフローのいずれかで `online_access` スコープをリクエストした場合、そのスコープは暗黙的に無視され、リフレッシュトークンは発行されません。
 
 <div id="scope-conflicts">
-  ### スコープの競合
+  ### スコープの競合 {#scope-conflicts}
 </div>
 
 同じ認可リクエストで `online_access` と `offline_access` の両方を同時に要求することはできません。両方のスコープが含まれている場合、Auth0 はエラーを返します。
@@ -99,7 +99,7 @@ ORT は、対話型のブラウザーセッションを作成するフローで�
 * ブラウザのセッションとは独立して token を利用する必要があるアプリケーションには、`offline_access` を使用します。
 
 <div id="learn-more">
-  ## 詳しくはこちら
+  ## 詳しくはこちら {#learn-more}
 </div>
 
 * [オンラインリフレッシュトークンを設定する](/docs/ja-jp/secure/tokens/refresh-tokens/online-refresh-tokens/configure-online-refresh-tokens)

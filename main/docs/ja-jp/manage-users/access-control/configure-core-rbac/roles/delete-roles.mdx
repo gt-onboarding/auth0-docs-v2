@@ -12,14 +12,14 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 ロールベースのアクセス制御 (RBAC) を正しく機能させるには、Auth0 Dashboard または Management API のいずれかを使用して、API で RBAC を有効にする必要があります。Authorization Core の機能は Authorization Extension とは異なります。比較については、[Authorization Core と Authorization Extension の比較](/docs/ja-jp/manage-users/access-control/authorization-core-vs-authorization-extension)をご覧ください。
 
 <div id="dashboard">
-  ## Auth0 Dashboard
+  ## Auth0 Dashboard {#dashboard}
 </div>
 
 1. [Auth0 Dashboard &gt; User Management &gt; ロール](https://manage.auth0.com/#/roles) に移動し、確認するロールの名前をクリックします。
 2. **Remove this Role** をクリックし、確認します。
 
 <div id="management-api">
-  ## Management API
+  ## Management API {#management-api}
 </div>
 
 [Delete Role endpoint](https://auth0.com/docs/api/management/v2#!/Roles/delete_roles_by_id) に `DELETE` リクエストを送信します。プレースホルダー値 `ROLE_ID` と `MGMT_API_ACCESS_TOKEN` は、それぞれロール ID と Management API の <Tooltip tip="アクセストークン: API へのアクセスに使用される、非透過文字列または JWT 形式の認可資格情報。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=access+token">アクセストークン</Tooltip> に必ず置き換えてください。
@@ -156,7 +156,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 | `MGMT_API_ACCESS_TOKEN` | スコープ `delete:roles` を持つ [Management API 用アクセストークン](https://auth0.com/docs/api/management/v2/tokens)。 |
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * [ロール の作成](/docs/ja-jp/manage-users/access-control/configure-core-rbac/roles/create-roles)

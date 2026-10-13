@@ -13,7 +13,7 @@ title: Private Key JWT で認証する
 2. そのアサーションを使用して Auth0 で認証します。
 
 <div id="build-the-assertion">
-  ## アサーションを構築する
+  ## アサーションを構築する {#build-the-assertion}
 </div>
 
 Auth0 の SDK のいずれかを使用すれば、アサーションを自動的に構築できます。SDK を使用しない場合は、アサーションを自分で作成する必要があります。
@@ -49,7 +49,7 @@ Auth0 の SDK のいずれかを使用すれば、アサーションを自動的
 トークンを一から自分で実装するのではなく、この機能を標準でサポートしている標準ツールやサードパーティライブラリを使って構築することをお勧めします。  サポートライブラリの詳細については、[JWT.io](https://jwt.io/libraries) の一覧を参照してください。
 
 <div id="example">
-  ### 例
+  ### 例 {#example}
 </div>
 
 以下の例では、Node.js スクリプトで [jose パッケージ](https://github.com/panva/jose) を使用してアサーションを生成します。
@@ -106,7 +106,7 @@ main();
 必要な情報を含むJWTを生成したら、Auth0に対するアプリケーションの認証を行う準備は完了です。
 
 <div id="exchange-assertion-for-access-tokens">
-  ## アサーションをアクセストークンに交換する
+  ## アサーションをアクセストークンに交換する {#exchange-assertion-for-access-tokens}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -128,7 +128,7 @@ curl --location --request POST 'https://$tenant/oauth/token' \
 ```
 
 <div id="supported-endpoints">
-  ## サポート対象エンドポイント
+  ## サポート対象エンドポイント {#supported-endpoints}
 </div>
 
 [https://$tenant/oauth/token](https://auth0.com/docs/api/authentication#get-token) エンドポイントに加えて、以下の Auth0 Authentication API エンドポイントでも、設定済みのアプリケーションで `private_key_jwt` 認証をサポートしています。
@@ -138,7 +138,7 @@ curl --location --request POST 'https://$tenant/oauth/token' \
 * [POST /passwordless/start](https://auth0.com/docs/api/authentication#get-code-or-link)
 
 <div id="assertion-limits">
-  ## アサーションの上限
+  ## アサーションの上限 {#assertion-limits}
 </div>
 
 JWT アサーションの最大長は 2048 バイトです。
@@ -151,7 +151,7 @@ JWT アサーションの最大長は 2048 バイトです。
 * `alg`: 16 文字
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * [Private Key JWT 認証を設定する](/docs/ja-jp/get-started/applications/configure-private-key-jwt)

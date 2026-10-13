@@ -6,7 +6,7 @@ title: Logique
 Cette liste d’actions de logique vous permet d’ajouter une logique conditionnelle à un formulaire, de stocker des variables partagées, de mapper des valeurs et d’afficher des messages d’erreur personnalisés.
 
 <div id="ifthen-condition">
-  ## Condition si/alors
+  ## Condition si/alors {#ifthen-condition}
 </div>
 
 Ajoute une action conditionnelle avec des branches vrai / faux pour personnaliser le comportement du Flow selon les données d’entrée ou les propriétés.
@@ -14,7 +14,7 @@ Ajoute une action conditionnelle avec des branches vrai / faux pour personnalise
 <Frame>![](/docs/images/cdy7uua7fh8z/4ehTUSu8W1LibUd1uj3x5s/00d76b15c68746ed74e44127804c9557/if-then-condition-action.png)</Frame>
 
 <div id="input-settings">
-  ### Paramètres d’entrée
+  ### Paramètres d’entrée {#input-settings}
 </div>
 
 | Paramètre | Description                                                                                                                                                                                 |
@@ -22,7 +22,7 @@ Ajoute une action conditionnelle avec des branches vrai / faux pour personnalise
 | Condition | Action conditionnelle personnalisable qui déclenche les branches `Vrai` / `Faux` selon le résultat. Vous pouvez utiliser les opérateurs `AND` / `OR` pour imbriquer différentes conditions. |
 
 <div id="output-object">
-  ### Objet de sortie
+  ### Objet de sortie {#output-object}
 </div>
 
 | Propriété | Type    | Description                                                             |
@@ -30,7 +30,7 @@ Ajoute une action conditionnelle avec des branches vrai / faux pour personnalise
 | `result`  | booléen | Renvoie une valeur `true` ou `false` selon le résultat de la condition. |
 
 <div id="output-object-example">
-  ### Exemple d’objet de sortie
+  ### Exemple d’objet de sortie {#output-object-example}
 </div>
 
 ```json lines
@@ -40,7 +40,7 @@ Ajoute une action conditionnelle avec des branches vrai / faux pour personnalise
 ```
 
 <div id="store-shared-variable">
-  ## Stocker une variable partagée
+  ## Stocker une variable partagée {#store-shared-variable}
 </div>
 
 Enregistre des variables dans un état privé accessible dans votre formulaire et dans tous ses Flows.
@@ -50,7 +50,7 @@ Vous pouvez référencer ces variables partagées à l’aide de `{{vars.*}}`**.
 <Frame>![](/docs/images/cdy7uua7fh8z/4MO9wvChhnCJOg9OAdWuEf/98182a2bd8b6cf4c4baebefb96bce121/stored-shared-variable.png)</Frame>
 
 <div id="input-settings">
-  ### Paramètres d’entrée
+  ### Paramètres d’entrée {#input-settings-2}
 </div>
 
 | Paramètre         | Description                                                                                                                                                                               |
@@ -58,7 +58,7 @@ Vous pouvez référencer ces variables partagées à l’aide de `{{vars.*}}`**.
 | Champs de données | Les variables à stocker dans un état privé afin de pouvoir les utiliser dans votre formulaire et tout au long du Flow associé. Utilisez des paires clé-valeur pour ajouter des variables. |
 
 <div id="show-error-message">
-  ## Afficher un message d’erreur
+  ## Afficher un message d’erreur {#show-error-message}
 </div>
 
 Affiche un message d’erreur personnalisé à l’utilisateur.
@@ -70,7 +70,7 @@ Affiche un message d’erreur personnalisé à l’utilisateur.
 <Frame>![](/docs/images/cdy7uua7fh8z/1Kd4SyaBtAC9S8nfWFeGfh/6e42b16c0ab69dc6d026fb3601133fbe/show-error-message-flow-action.png)</Frame>
 
 <div id="input-settings">
-  ### Paramètres d’entrée
+  ### Paramètres d’entrée {#input-settings-3}
 </div>
 
 | Paramètre        | Description                                     |
@@ -78,7 +78,7 @@ Affiche un message d’erreur personnalisé à l’utilisateur.
 | Message d’erreur | Le message d’erreur à afficher à l’utilisateur. |
 
 <div id="input-value-mapping">
-  ## Association des valeurs d’entrée
+  ## Association des valeurs d’entrée {#input-value-mapping}
 </div>
 
 Associe une variable d’entrée à une sortie selon ses valeurs.
@@ -86,7 +86,7 @@ Associe une variable d’entrée à une sortie selon ses valeurs.
 <Frame>![](/docs/images/cdy7uua7fh8z/4VtAr4vCSXtKlSaxtiXQhV/bcb07221f688483aa2010d80394ae630/input-value-mapping.png)</Frame>
 
 <div id="input-settings">
-  ### Paramètres d’entrée
+  ### Paramètres d’entrée {#input-settings-4}
 </div>
 
 | Paramètre                     | Description                                                                                                                      |
@@ -96,7 +96,7 @@ Associe une variable d’entrée à une sortie selon ses valeurs.
 | Valeur de sortie par défaut   | Définit une valeur de sortie par défaut à utiliser lorsqu’aucune valeur de sortie n’est définie dans la table de correspondance. |
 
 <div id="output-object">
-  ### Objet de sortie
+  ### Objet de sortie {#output-object-2}
 </div>
 
 | Propriété | Type   | Description                                      |
@@ -104,7 +104,7 @@ Associe une variable d’entrée à une sortie selon ses valeurs.
 | `result`  | String | Retourne la valeur mappée à une valeur d’entrée. |
 
 <div id="output-object-example">
-  ### Exemple d’objet de sortie
+  ### Exemple d’objet de sortie {#output-object-example-2}
 </div>
 
 ```json lines

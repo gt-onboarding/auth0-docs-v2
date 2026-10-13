@@ -8,7 +8,7 @@ Auth0を<Tooltip tip="Security Assertion Markup Language (SAML): パスワード
 Auth0は、SAML 1.1またはSAML 2.0プロトコルに準拠した構成で、Auth0をSPとして使用することをサポートしています。
 
 <div id="get-metadata-and-certificate-from-the-idp">
-  ## IdPからメタデータと証明書を取得する
+  ## IdPからメタデータと証明書を取得する {#get-metadata-and-certificate-from-the-idp}
 </div>
 
 Auth0 で接続を作成するには、IdP からいくつかの構成用メタデータを取得する必要があります。
@@ -20,7 +20,7 @@ Auth0 で接続を作成するには、IdP からいくつかの構成用メタ�
 | X509 Signing Certificate | SP が、IdP によって電子署名された認証アサーションの署名を検証するために必要な公開鍵証明書です。Auth0 では .pem 形式と .cer 形式を使用できます。 |
 
 <div id="create-saml-enterprise-connection-in-auth0">
-  ## Auth0 で SAML エンタープライズ接続を作成する
+  ## Auth0 で SAML エンタープライズ接続を作成する {#create-saml-enterprise-connection-in-auth0}
 </div>
 
 <Tooltip tip="Auth0 Dashboard: サービスを設定するための Auth0 のメイン製品です。" cta="用語集を表示" href="/docs/ja-jp/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip> または Auth0 <Tooltip tip="Management API: お客様が管理タスクを実行するための製品です。" cta="用語集を表示" href="/docs/ja-jp/glossary?term=Management+API">Management API</Tooltip> を使用して、SAML エンタープライズ接続を作成できます:
@@ -68,7 +68,7 @@ Auth0 で接続を作成するには、IdP からいくつかの構成用メタ�
     | `signSAMLRequest`    | Boolean | 任意  | Auth0 から送信される認証リクエストに署名するかどうかを設定します。                                                                                                                                                                                                                                                                                                           |
     | `user_id_attribute`  | String  | 任意  | 認証レスポンスでユーザー ID プロパティにマッピングする属性名です。このフィールドを指定すると、`fieldsMap` オブジェクト内の `user_id` プロパティに対するマッピングよりも優先されます。                                                                                                                                                                                                                                       |
 
-    #### リクエストの例
+#### リクエストの例 {#example-request}
 
     ```json lines expandable
     {
@@ -109,7 +109,7 @@ Auth0 で接続を作成するには、IdP からいくつかの構成用メタ�
 </Tabs>
 
 <div id="configure-saml-connection-for-proxy-gateways">
-  ### プロキシゲートウェイ向けに SAML 接続を設定する
+  ### プロキシゲートウェイ向けに SAML 接続を設定する {#configure-saml-connection-for-proxy-gateways}
 </div>
 
 Auth0 がプロキシゲートウェイの背後にある場合は、SAML 接続の `destinationUrl` フィールドと `recipientUrl` フィールドをそれに合わせて設定する必要があります。
@@ -126,7 +126,7 @@ Auth0 がプロキシゲートウェイの背後にある場合は、SAML 接続
 4. 更新した `options` オブジェクト全体をリクエストボディに含めて、Management API の [Update a connection](https://auth0.com/docs/api/management/v2/connections/patch-connections-by-id) エンドポイントを呼び出します。
 
 <div id="customize-the-request-template">
-  ### リクエストテンプレートをカスタマイズする
+  ### リクエストテンプレートをカスタマイズする {#customize-the-request-template}
 </div>
 
 Auth0 が IdP に認証リクエストを送信すると、リクエストボディには `AuthnRequest` オブジェクトが含まれます。このオブジェクトで使用するテンプレートはカスタマイズできます。
@@ -137,7 +137,7 @@ Auth0 が IdP に認証リクエストを送信すると、リクエストボデ
 4. **変更を保存** を選択します。
 
 <div id="template-variables">
-  #### テンプレート変数
+  #### テンプレート変数 {#template-variables}
 </div>
 
 変数は、`@@VariableName@@` 構文を使って `AuthnRequest` テンプレートに埋め込めます。使用可能な変数は次のとおりです。
@@ -156,7 +156,7 @@ Auth0 が IdP に認証リクエストを送信すると、リクエストボデ
 | `AssertServiceURLAndDestination` | 非推奨。新しい設定では、代わりに `AssertionConsumerServiceURL` と `Destination` を使用してください。                                                                                                                                                                                                                      |
 
 <div id="configure-the-idp">
-  ## IdP を設定する
+  ## IdP を設定する {#configure-the-idp}
 </div>
 
 IdP に提供する必要があるメタデータは、[SAML IDプロバイダーの設定](/docs/ja-jp/authenticate/protocols/saml/saml-identity-provider-configuration-settings)で確認できます。
@@ -164,7 +164,7 @@ IdP に提供する必要があるメタデータは、[SAML IDプロバイダ�
 Auth0 は、SAML 1.1 または SAML 2.0 プロトコルに準拠したすべての SAML IdP をサポートしています。以下に、特定のプロバイダー向けの詳細な設定手順を記載しています。
 
 <div id="test-connection">
-  ## 接続をテストする
+  ## 接続をテストする {#test-connection}
 </div>
 
 Auth0 Dashboard で接続をテストするには、次の手順に従います。
@@ -177,7 +177,7 @@ Auth0 Dashboard で接続をテストするには、次の手順に従います�
 6. Auth0 のページにリダイレクトされ、IdP から Auth0 に送信された認証アサーションの内容が表示されます。
 
 <div id="troubleshoot-connection">
-  ## 接続のトラブルシューティング
+  ## 接続のトラブルシューティング {#troubleshoot-connection}
 </div>
 
 接続が想定どおりに機能しない場合は、次の手順をお試しください。

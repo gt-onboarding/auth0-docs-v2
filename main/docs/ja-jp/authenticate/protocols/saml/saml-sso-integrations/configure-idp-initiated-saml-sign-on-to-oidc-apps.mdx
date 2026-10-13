@@ -20,7 +20,7 @@ OIDCプロトコルはIdP開始の認証フローをサポートしていませ�
   2. サービスプロバイダー開始の認証リクエストを送信するデフォルトのアプリケーションにリダイレクトする。
 
 <div id="how-it-works">
-  ## 仕組み
+  ## 仕組み {#how-it-works}
 </div>
 
 <Frame>![Identity Provider 開始の SAML サインインから OIDC アプリケーションへのフロー図](/docs/images/cdy7uua7fh8z/5vinAB4pSSwaKDgliTkAhh/0c5822149426b986bbcc851d07666187/idp-provider-init-saml-sign-in0.png)</Frame>
@@ -43,7 +43,7 @@ OIDCプロトコルはIdP開始の認証フローをサポートしていませ�
 16. OIDC アプリケーションは `state` パラメーターを検証し、ID トークンを解析して、ユーザーのアプリケーションセッションを作成します。
 
 <div id="create-the-custom-login-route-handler">
-  ## カスタムログインルートハンドラーを作成する
+  ## カスタムログインルートハンドラーを作成する {#create-the-custom-login-route-handler}
 </div>
 
 カスタムログインルートハンドラーは、アプリケーションのログインメソッドを呼び出します。このハンドラーは `connection` パラメーターを受け取り、それを Auth0 テナントに送信する認証リクエストに含める必要があります。
@@ -55,7 +55,7 @@ OIDCプロトコルはIdP開始の認証フローをサポートしていませ�
 </Warning>
 
 <div id="example">
-  ### 例
+  ### 例 {#example}
 </div>
 
 [Auth0 Single Page App SDK](/docs/ja-jp/libraries/auth0-single-page-app-sdk) を使用している場合は、カスタムログインルートハンドラーを追加し、次のように `login` メソッドを更新して `connection` パラメーターに対応させることができます。
@@ -104,7 +104,7 @@ const login = async (targetUrl, connection) => {
 ```
 
 <div id="create-the-query-string">
-  ## クエリ文字列を作成する
+  ## クエリ文字列を作成する {#create-the-query-string}
 </div>
 
 クエリ文字列には `redirect_uri` パラメーターが含まれます。このパラメーターの値は URL エンコードする必要があり、次の要素で構成されます。
@@ -113,13 +113,13 @@ const login = async (targetUrl, connection) => {
 2. SAML 接続名を値として指定した `connection` パラメーター。
 
 <div id="example">
-  ### 例
+  ### 例 {#example-2}
 </div>
 
 アプリケーションのエンドポイントが `https://exampleco.com/startlogin` で、SAML接続の名前が `my-saml-connection` の場合、クエリ文字列は `redirect_uri=https%3A%2F%2Fexampleco.com%2Fstartlogin%3Fconnection%3Dmy-saml-connection` になります。
 
 <div id="configure-the-application">
-  ## アプリケーションを設定する
+  ## アプリケーションを設定する {#configure-the-application}
 </div>
 
 1. [Auth0 Dashboard &gt; アプリケーション &gt; アプリケーション](https://manage.auth0.com/#/applications) に移動します。
@@ -127,7 +127,7 @@ const login = async (targetUrl, connection) => {
 3. **Allowed Callback URLs** を更新し、カスタムログインルートハンドラーに関連付けられたアプリケーションのエンドポイントを追加します。
 
 <div id="configure-the-connection">
-  ## 接続を設定する
+  ## 接続を設定する {#configure-the-connection}
 </div>
 
 1. [Auth0 Dashboard &gt; Authentication &gt; Enterprise &gt; SAML](https://manage.auth0.com/#/connections/enterprise/samlp) に移動します。
@@ -139,7 +139,7 @@ const login = async (targetUrl, connection) => {
 7. **クエリ文字列** に、先ほど作成したクエリ文字列を入力します。
 
 <div id="learn-more">
-  ## 詳しく見る
+  ## 詳しく見る {#learn-more}
 </div>
 
 * [アプリを SAML IDプロバイダーに接続する](/docs/ja-jp/authenticate/identity-providers/enterprise-identity-providers/saml)

@@ -6,7 +6,7 @@ description: "Vérifiez l’authentification multifacteur à l’aide d’un mot
 import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `POST /oauth/token`
@@ -14,13 +14,13 @@ import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 Vérifie l’authentification multifacteur (authentification multifacteur) à l’aide d’un mot de passe à usage unique (OTP). Pour vérifier l’authentification multifacteur avec un OTP, demandez à l’utilisateur d’obtenir le code OTP, puis envoyez une requête au point de terminaison /oauth/token. La requête doit contenir le code OTP, le mfa&#95;token que vous avez reçu (dans l’erreur mfa&#95;required) et le grant&#95;type défini sur [http://auth0.com/oauth/grant-type/mfa-otp](http://auth0.com/oauth/grant-type/mfa-otp). La réponse est la même que pour les types d’octroi password ou [http://auth0.com/oauth/grant-type/password-realm](http://auth0.com/oauth/grant-type/password-realm). Pour en savoir plus, consultez [Associer des authentificateurs OTP](/mfa/guides/mfa-api/otp).
 
 <div id="learn-more">
-  ### En savoir plus
+  ### En savoir plus {#learn-more}
 </div>
 
 * [Associer des authentificateurs OTP](https://auth0.com/docs/mfa/guides/mfa-api/otp)
 
 <div id="headers">
-  ## En-têtes
+  ## En-têtes {#headers}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -28,7 +28,7 @@ Vérifie l’authentification multifacteur (authentification multifacteur) à l�
 </ParamField>
 
 <div id="body-parameters">
-  ## Paramètres du corps
+  ## Paramètres du corps {#body-parameters}
 </div>
 
 <div className="prose-sm prose-gray dark:prose-invert">
@@ -64,7 +64,7 @@ Vérifie l’authentification multifacteur (authentification multifacteur) à l�
 </ParamField>
 
 <div id="response-schema">
-  ## Schéma de réponse
+  ## Schéma de réponse {#response-schema}
 </div>
 
 <ResponseSchema>
@@ -82,7 +82,7 @@ Vérifie l’authentification multifacteur (authentification multifacteur) à l�
 </ResponseSchema>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                                                                           |

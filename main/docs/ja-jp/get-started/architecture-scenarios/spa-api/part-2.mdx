@@ -6,7 +6,7 @@ title: Auth0 の設定 (SPAs + API)
 このセクションでは、[Auth0 Dashboard](https://manage.auth0.com/#) で必要な設定を一通り確認します。
 
 <div id="create-the-api">
-  ## API を作成する
+  ## API を作成する {#create-the-api}
 </div>
 
 ダッシュボードの[APIs セクション](https://manage.auth0.com/#/apis)に移動し、**Create API**ボタンをクリックします。
@@ -22,7 +22,7 @@ API の作成時に、次の情報の入力を求められます。
 必要な情報を入力し、**Create**ボタンをクリックします。
 
 <div id="configure-the-scopes">
-  ## スコープを設定する
+  ## スコープを設定する {#configure-the-scopes}
 </div>
 
 アプリケーションを作成したら、認可時にアプリケーションが要求できるスコープを設定する必要があります。
@@ -32,7 +32,7 @@ API の設定で、`Permissions` タブに移動します。このセクショ�
 <Frame>![ダッシュボード - Applications - APIs - Permissions](/docs/images/cdy7uua7fh8z/xxMOKezob6gNHJ0CcKhcg/ccbb9bbab29576a96ed8425329ecffb4/dashboard-apis-edit_view-permissions.png)</Frame>
 
 <div id="create-the-application">
-  ## アプリケーションを作成する
+  ## アプリケーションを作成する {#create-the-application}
 </div>
 
 Auth0 には、4 種類のアプリケーションがあります。
@@ -53,13 +53,13 @@ Application の名前を設定し (ここでは `Timesheets SPA` を使用しま
 これでひとまず完了です。SPA の実装が終わったら、ダッシュボードに戻ってこの Application の設定を開き、構成にいくつか変更を加えます。
 
 <div id="configure-the-authorization-extension">
-  ## Authorization Extension を設定する
+  ## Authorization Extension を設定する {#configure-the-authorization-extension}
 </div>
 
 お使いのテナントに Authorization Extension がインストールされていることを確認してください。手順の詳細については、[Authorization Extension のドキュメント](/docs/ja-jp/customize/extensions/authorization-extension)を参照してください。
 
 <div id="define-permissions">
-  ### 権限を定義する
+  ### 権限を定義する {#define-permissions}
 </div>
 
 ここでは、すでに定義したスコープ (`read:timesheets`、`create:timesheets`、`delete:timesheets`、`approve:timesheets`) に基づいて、必要な権限を定義します。
@@ -75,7 +75,7 @@ Authorization Extension で **Permissions** タブをクリックし、次に **
 続けて、残りのすべてのスコープについても権限を作成します。
 
 <div id="define-roles">
-  ### ロールを定義する
+  ### ロールを定義する {#define-roles}
 </div>
 
 次に、2 つのロール `employee` と `manager` を設定します。
@@ -87,7 +87,7 @@ Authorization Extension で **Permissions** タブをクリックし、次に **
 続いて、同じ手順で `Manager` ロールを作成し、すべての権限が選択されていることを確認します。
 
 <div id="assign-users-to-roles">
-  ### ユーザーをロールに割り当てる
+  ### ユーザーをロールに割り当てる {#assign-users-to-roles}
 </div>
 
 すべてのユーザーを、`Manager` または `Employee` のいずれかのロールに割り当てる必要があります。
@@ -97,7 +97,7 @@ Authorization Extension で **Permissions** タブをクリックし、次に **
 ユーザー情報画面で **Roles** タブに移動します。**Add Role to User** をクリックし、適切なロールを選択します。
 
 <div id="configuring-the-authorization-extension">
-  ### Authorization Extension の設定
+  ### Authorization Extension の設定 {#configuring-the-authorization-extension}
 </div>
 
 Authorization Extension のルールが公開されていることも確認してください。
@@ -107,7 +107,7 @@ Authorization Extension のルールが公開されていることも確認し�
 **Permissions** が有効になっていることを確認してから、**Publish Rule** をクリックします。
 
 <div id="create-a-rule-to-validate-token-scopes">
-  ### トークンのスコープを検証する Rule を作成する
+  ### トークンのスコープを検証する Rule を作成する {#create-a-rule-to-validate-token-scopes}
 </div>
 
 このプロセスの最後の手順は、<Tooltip tip="アクセストークン: API へのアクセスに使用される、不透明文字列または JWT 形式の認可資格情報。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Access+Token">アクセストークン</Tooltip>に含まれるスコープが、ユーザーに割り当てられた権限に基づいて有効かどうかを確認する Rule を作成することです。ユーザーに対して有効でないスコープは、アクセストークンから削除する必要があります。

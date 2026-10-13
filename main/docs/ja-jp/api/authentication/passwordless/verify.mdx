@@ -4,7 +4,7 @@ description: "電話番号またはメールアドレスに送信されたパス
 ---
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `POST /passwordless/verify`
@@ -16,7 +16,7 @@ description: "電話番号またはメールアドレスに送信されたパス
 検証コードを取得したら、このエンドポイントを使用して、ユーザーを電話番号またはメールアドレスと検証コードでログインさせます。これはアクティブ認証のため、ユーザーはアプリでコードを入力する必要があります。
 
 <div id="remarks">
-  ### 備考
+  ### 備考 {#remarks}
 </div>
 
 * `profile` スコープ値は、エンドユーザーの標準のプロフィールクレーム (`name`、`family_name`、`given_name`、`middle_name`、`nickname`、`preferred_username`、`profile`、`picture`、`website`、`gender`、`birthdate`、`zoneinfo`、`locale`、`updated_at`) へのアクセスを要求します。
@@ -24,13 +24,13 @@ description: "電話番号またはメールアドレスに送信されたパス
 * auth0.js スクリプトのサンプルでは、ライブラリのバージョン 8 を使用しています。auth0.js バージョン 7 を使用している場合は、この[リファレンスガイド](https://auth0.com/docs/libraries/auth0js)を参照してください。
 
 <div id="learn-more">
-  ### 詳しくはこちら
+  ### 詳しくはこちら {#learn-more}
 </div>
 
 * [パスワードレスのベストプラクティス](/connections/passwordless/best-practices)
 
 <div id="body-parameters">
-  ## ボディパラメーター
+  ## ボディパラメーター {#body-parameters}
 </div>
 
 <ParamField body="grant_type" type="string" required>
@@ -64,7 +64,7 @@ description: "電話番号またはメールアドレスに送信されたパス
 </ParamField>
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | Status | Description                  |

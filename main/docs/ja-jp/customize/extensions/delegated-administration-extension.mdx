@@ -10,7 +10,7 @@ title: Delegated Administration Extension v3
 Delegated Administration Extension (DAE) を使用すると、他の領域へのアクセスを許可することなく、限られたユーザーグループに管理権限を付与できます。
 
 <div id="configure-the-dae">
-  ## DAE を設定する
+  ## DAE を設定する {#configure-the-dae}
 </div>
 
 DAE を設定するには、以下の手順を実行する必要があります。
@@ -24,7 +24,7 @@ DAE を設定するには、以下の手順を実行する必要があります�
 7. [拡張機能を使用する](#use-the-extension)
 
 <div id="register-the-application-with-auth0">
-  ### Auth0 にアプリケーションを登録する
+  ### Auth0 にアプリケーションを登録する {#register-the-application-with-auth0}
 </div>
 
 Users ページの管理者権限を付与するユーザー向けに Delegated Administration Extension が公開する Application を作成します。これを行うには、Auth0 で[delegated admin application を作成](/docs/ja-jp/customize/extensions/delegated-administration-extension/create-delegated-admin-applications)します。
@@ -32,7 +32,7 @@ Users ページの管理者権限を付与するユーザー向けに Delegated 
 完了したら、そのアプリケーションの **<Tooltip tip="Client ID: Auth0 から登録済みリソースに付与される識別値。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Client+ID">Client ID</Tooltip>** を控えておきます。
 
 <div id="create-a-database-connection">
-  ### データベース接続を作成する
+  ### データベース接続を作成する {#create-a-database-connection}
 </div>
 
 この例では、Users エリアへのアクセスを許可するユーザー ソースとしてデータベース接続を使用します。設定するには、[データベース接続を作成](/docs/ja-jp/get-started/applications/set-up-database-connections)します。
@@ -43,7 +43,7 @@ Users ページの管理者権限を付与するユーザー向けに Delegated 
 * **Disable Sign Ups** トグルを有効にします。これにより、セキュリティ上、データベース接続へのリンクを知っているユーザーであっても、自分でサインアップできないようにできます。
 
 <div id="disable-all-other-connections-for-the-auth0-application">
-  ### Auth0アプリケーションの他のすべての接続を無効にする
+  ### Auth0アプリケーションの他のすべての接続を無効にする {#disable-all-other-connections-for-the-auth0-application}
 </div>
 
 デフォルトでは、新しいアプリケーションを作成すると、Auth0 はテナントに関連付けられているすべての接続を有効にします。この例では、新しく作成したデータベース接続以外の接続をすべて無効にしてください。こうすることで、既存の接続のいずれかを使って第三者が自分を追加するのを防ぎ、アプリケーションの安全性を保つことができます。
@@ -51,13 +51,13 @@ Users ページの管理者権限を付与するユーザー向けに Delegated 
 設定方法については、[アプリケーション接続の更新](/docs/ja-jp/get-started/applications/update-application-connections)を参照してください。
 
 <div id="create-users-for-the-database-connection">
-  ### データベース接続用のユーザーを作成する
+  ### データベース接続用のユーザーを作成する {#create-users-for-the-database-connection}
 </div>
 
 続行するには、[少なくとも1人のユーザーを作成し](/docs/ja-jp/manage-users/user-accounts/create-users)、そのユーザーを接続に割り当てる必要があります。
 
 <div id="assign-roles-to-users">
-  ### ユーザーにロールを割り当てる
+  ### ユーザーにロールを割り当てる {#assign-roles-to-users}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -110,13 +110,13 @@ Actions の作成について詳しくは、[最初の Action を作成する](/
 </Callout>
 
 <div id="install-and-configure-the-extension">
-  ## 拡張機能をインストールして設定する
+  ## 拡張機能をインストールして設定する {#install-and-configure-the-extension}
 </div>
 
 アプリケーション、接続、ユーザーの作成と設定が完了したので、次は[Delegated Admin Extension をインストールして設定します](/docs/ja-jp/customize/extensions/delegated-administration-extension/install-delegated-admin-extension)。
 
 <div id="use-the-extension">
-  ## 拡張機能を使う
+  ## 拡張機能を使う {#use-the-extension}
 </div>
 
 インストールが完了したら、Delegated Admin Extension を使用できます。
@@ -143,7 +143,7 @@ Actions の作成について詳しくは、[最初の Action を作成する](/
 </Card>
 
 <div id="learn-more">
-  ## 詳しく見る
+  ## 詳しく見る {#learn-more}
 </div>
 
 * [Delegated Administration: 拡張フック](/docs/ja-jp/customize/extensions/delegated-administration-extension/delegated-administration-hooks)

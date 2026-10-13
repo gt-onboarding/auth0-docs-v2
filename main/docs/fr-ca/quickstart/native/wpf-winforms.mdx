@@ -37,7 +37,7 @@ import {HowToSchema} from "/snippets/fr-ca/HowToSchema.jsx";
 </Note>
 
 <div id="get-started">
-  ## Pour commencer
+  ## Pour commencer {#get-started}
 </div>
 
 Ce Quickstart montre comment ajouter l’authentification Auth0 à une application de bureau WPF ou WinForms. Vous configurerez Auth0, installerez le SDK et ajouterez le login, le logout, ainsi que l’affichage du profil utilisateur à l’aide d’Auth0 OIDC Client pour [WPF](https://www.nuget.org/packages/Auth0.OidcClient.WPF/) et [WinForms](https://www.nuget.org/packages/Auth0.OidcClient.WinForms/).
@@ -80,7 +80,7 @@ Ce Quickstart montre comment ajouter l’authentification Auth0 à une applicati
   <Step title="Configurer Auth0" stepNumber={2}>
     Pour utiliser les services Auth0, vous devez avoir une application configurée dans l’Auth0 Dashboard. L’application Auth0 est l’endroit où vous configurez le fonctionnement de l’authentification pour votre projet.
 
-    ### Configurer une application
+### Configurer une application {#configure-an-application}
 
     Accédez à [Auth0 Dashboard](https://manage.auth0.com) → **Applications** → **Applications** et créez une nouvelle application :
 
@@ -91,7 +91,7 @@ Ce Quickstart montre comment ajouter l’authentification Auth0 à une applicati
 
     Dans l’onglet **Settings**, notez votre **Domain** et votre **Client ID** — vous en aurez besoin pour initialiser le SDK.
 
-    ### Configurer les URL de rappel
+### Configurer les URL de rappel {#configure-callback-urls}
 
     Une URL de rappel est une URL de votre application vers laquelle Auth0 redirige les utilisateurs après leur authentification. Si elle n’est pas définie, les utilisateurs ne seront pas redirigés vers votre application après s’être connectés.
 
@@ -101,7 +101,7 @@ Ce Quickstart montre comment ajouter l’authentification Auth0 à une applicati
     https://{yourDomain}/mobile
     ```
 
-    ### Configurer les URL de déconnexion
+### Configurer les URL de déconnexion {#configure-logout-urls}
 
     Une URL de déconnexion est une URL de votre application vers laquelle Auth0 redirige les utilisateurs une fois déconnectés. Si elle n’est pas définie, les utilisateurs ne pourront pas se déconnecter de votre application et verront un message d’erreur.
 
@@ -395,7 +395,7 @@ Ce Quickstart montre comment ajouter l’authentification Auth0 à une applicati
 ***
 
 <div id="advanced-usage">
-  ## Utilisation avancée
+  ## Utilisation avancée {#advanced-usage}
 </div>
 
 <Accordion title="Gérer les erreurs de connexion">
@@ -451,7 +451,7 @@ Ce Quickstart montre comment ajouter l’authentification Auth0 à une applicati
 ***
 
 <div id="additional-resources">
-  ## Ressources supplémentaires
+  ## Ressources supplémentaires {#additional-resources}
 </div>
 
 <CardGroup cols={3}>
@@ -471,7 +471,7 @@ Ce Quickstart montre comment ajouter l’authentification Auth0 à une applicati
 ***
 
 <div id="common-issues">
-  ## Problèmes courants
+  ## Problèmes courants {#common-issues}
 </div>
 
 <AccordionGroup>

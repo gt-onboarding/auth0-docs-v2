@@ -12,7 +12,7 @@ AI エージェントや LLM を Auth0 ナレッジベースに直接接続し�
 * Auth0 Docs MCP Server: AI エージェントがナレッジベースを動的に照会するためのホスト型 MCP Server
 
 <div id="llm-context-files">
-  ## LLM コンテキストファイル
+  ## LLM コンテキストファイル {#llm-context-files}
 </div>
 
 LLM コンテキストファイルを使用すると、LLM が Auth0 サイトディレクトリ全体を理解し、効率的に取り込めるようになります。
@@ -23,7 +23,7 @@ LLM コンテキストファイルを使用すると、LLM が Auth0 サイト�
 | `llms-full.txt` | `https://auth0.com/docs/llms-full.txt` | すべての記事の全文。詳細なインデックス作成に最適です。         |
 
 <div id="auth0-docs-mcp-server">
-  ## Auth0 Docs MCP Server
+  ## Auth0 Docs MCP Server {#auth0-docs-mcp-server}
 </div>
 
 AI ツールを Auth0 Docs Model Context Protocol (MCP) Server に接続すると、Auth0 の最新ドキュメントにリアルタイムでアクセスできます。Auth0 Docs MCP Server では `SearchAuth0Docs` ツールが提供されており、AI エージェントは Auth0 のナレッジベースを検索し、関連する製品ドキュメントへのリンクとともに、文脈に沿ったコンテンツを返せます。
@@ -157,7 +157,7 @@ Transport Type: HTTP
 </Tabs>
 
 <div id="sample-prompts">
-  ## サンプルプロンプト
+  ## サンプルプロンプト {#sample-prompts}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -167,7 +167,7 @@ Transport Type: HTTP
 Auth0を活用してIDワークフローを安全に保護するために、以下のサンプルプロンプトをAIツールで使用してください。
 
 <div id="setup">
-  ### セットアップ
+  ### セットアップ {#setup}
 </div>
 
 * Web ブラウザーでリッチ認可リクエストを表示できるように、同意プロンプトをカスタマイズするにはどうすればよいですか？
@@ -175,7 +175,7 @@ Auth0を活用してIDワークフローを安全に保護するために、以�
 * Next.js アプリでリフレッシュ トークン ローテーションを実装するにはどうすればよいですか？設定手順とコード例を示してください。
 
 <div id="connections-and-integrations">
-  ### 接続と統合
+  ### 接続と統合 {#connections-and-integrations}
 </div>
 
 * このアプリへのアクセスを、特定の GitHub Organization に所属するユーザーのみに制限したいです。Auth0 Docs MCP Server を使って GitHub Enterprise Connection の設定方法を調べ、ログイン時にユーザーがその GitHub Organization のメンバーかどうかを確認し、メンバーでない場合はアクセスを拒否する Auth0 Action を作成してください。
@@ -183,7 +183,7 @@ Auth0を活用してIDワークフローを安全に保護するために、以�
 * 既存の Vercel プロジェクトに Auth0 を統合するにはどうすればよいですか？
 
 <div id="ai-agents-and-mcp-servers">
-  ### AIエージェントとMCPサーバー
+  ### AIエージェントとMCPサーバー {#ai-agents-and-mcp-servers}
 </div>
 
 * ユーザーのGoogleカレンダーにアクセスして、予定や会議に関する質問に答えられるツール呼び出しをAIエージェントに追加してください。Auth0を使ったログイン保護と、ユーザーのGoogleカレンダーに対するツール呼び出しの実装手順については、Auth0 Docs MCP Serverを使用してください。
@@ -191,7 +191,7 @@ Auth0を活用してIDワークフローを安全に保護するために、以�
 * `server.py` にある現在のツール定義を確認してください。Auth0 Docs MCP Serverを使用して、Custom Token Exchangeの実装がRFC 8693に準拠しているか検証してください。ユーザーコンテキストが漏えいするおそれのある不一致が見つかった場合は、修正案を示したうえで、更新後のコードを提示してください。
 
 <div id="troubleshooting">
-  ### トラブルシューティング
+  ### トラブルシューティング {#troubleshooting}
 </div>
 
 * リフレッシュトークン交換の使用時に発生する `refresh token doesn’t exist` エラーの原因調査を手伝ってください。Token Vault のセットアップ手順を前提にしてください。

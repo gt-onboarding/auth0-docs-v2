@@ -6,7 +6,7 @@ description: "Échanger un jeton d’identité existant contre un jeton Auth0 à
 import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `POST /oauth/token`
@@ -18,7 +18,7 @@ L’Échange de jeton personnalisé (CTE) offre aux applications un mécanisme l
 </Note>
 
 <div id="remarks">
-  ### Remarques
+  ### Remarques {#remarks}
 </div>
 
 Consultez [Échange de jeton personnalisé](/docs/fr-ca/authenticate/custom-token-exchange) pour comprendre les profils d’échange de jetons personnalisés, la façon dont un profil est mappé à une Action et comment activer ce flux pour votre application.
@@ -36,7 +36,7 @@ Consultez [Échange de jeton personnalisé](/docs/fr-ca/authenticate/custom-toke
 * L’échange de jeton personnalisé n’ajoute pas d’acteur agent. Même lorsque Agents as Principal est activé, la revendication `act` est entièrement contrôlée par l’Action à l’aide de `setActor()` ; Auth0 n’ajoute pas automatiquement de revendication `act` d’agent pour cette autorisation.
 
 <div id="headers">
-  ## En-têtes
+  ## En-têtes {#headers}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -48,7 +48,7 @@ Consultez [Échange de jeton personnalisé](/docs/fr-ca/authenticate/custom-toke
 </ParamField>
 
 <div id="body-parameters">
-  ## Paramètres du corps
+  ## Paramètres du corps {#body-parameters}
 </div>
 
 <div className="prose-sm prose-gray dark:prose-invert">
@@ -102,7 +102,7 @@ Consultez [Échange de jeton personnalisé](/docs/fr-ca/authenticate/custom-toke
 </ParamField>
 
 <div id="response-schema">
-  ## Schéma de réponse
+  ## Schéma de réponse {#response-schema}
 </div>
 
 <ResponseSchema>
@@ -132,7 +132,7 @@ Consultez [Échange de jeton personnalisé](/docs/fr-ca/authenticate/custom-toke
 </ResponseSchema>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                                                                                                                                                                                                                                                                       |

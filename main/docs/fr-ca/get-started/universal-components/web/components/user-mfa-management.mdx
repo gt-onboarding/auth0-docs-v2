@@ -21,7 +21,7 @@ Avec le composant `UserMFAManagement`, vous n’avez pas à gérer la navigation
 </Frame>
 
 <div id="supported-factors">
-  ## Facteurs pris en charge
+  ## Facteurs pris en charge {#supported-factors}
 </div>
 
 Le composant prend en charge tous les facteurs de méthode d’authentification configurés avec la My Account API.
@@ -36,18 +36,18 @@ Le composant prend en charge tous les facteurs de méthode d’authentification 
 | [Codes de récupération](/docs/fr-ca/secure/multi-factor-authentication/configure-recovery-codes-for-mfa) | Liste de codes affichée une seule fois, avec une action de copie et une confirmation « J’ai enregistré mes codes »                   |
 
 <div id="configure-your-application">
-  ## Configurez votre application
+  ## Configurez votre application {#configure-your-application}
 </div>
 
 Sélectionnez votre framework pour configurer les variables d’environnement et Universal Components.
 
 <Tabs>
   <Tab title="React (SPA)">
-    ## Exigences de configuration
+## Exigences de configuration {#setup-requirements}
 
     Avant d’afficher le composant `UserMFAManagement`, suivez les instructions de [Build Account Security UI](/docs/fr-ca/get-started/universal-components/web/components/my-account-overview) pour configurer votre tenant Auth0 et vos applications.
 
-    ### Activer les méthodes et les portées MFA
+### Activer les méthodes et les portées MFA {#enable-mfa-methods-and-scopes}
 
     **Activer les méthodes MFA**
 
@@ -58,7 +58,7 @@ Sélectionnez votre framework pour configurer les variables d’environnement et
 
     Configurez les permissions d’accès délégué par l’utilisateur de My Account API en suivant les instructions de [Build Account Security UI](/docs/fr-ca/get-started/universal-components/web/components/my-account-overview#create-the-application-and-configure-my-account-api-permissions). Les cinq permissions sont requises pour le flux complet de gestion des méthodes d’authentification.
 
-    ## Installer le composant
+## Installer le composant {#install-the-component}
 
     <CodeGroup>
       ```bash pnpm wrap lines
@@ -74,7 +74,7 @@ Sélectionnez votre framework pour configurer les variables d’environnement et
       `react-hook-form` et `@tanstack/react-query` sont des dépendances pairs. La commande installe également la dépendance `@auth0/universal-components-core`, qui fournit des utilitaires partagés et l’intégration à Auth0.
     </Callout>
 
-    ## Pour commencer
+## Pour commencer {#get-started}
 
     ```tsx wrap lines
     import { UserMFAManagement } from "@auth0/universal-components-react";
@@ -160,11 +160,11 @@ Sélectionnez votre framework pour configurer les variables d’environnement et
   </Tab>
 
   <Tab title="Next.js (RWA)">
-    ## Exigences de configuration
+## Exigences de configuration {#setup-requirements-2}
 
     Avant d’afficher le composant `UserMFAManagement`, suivez les instructions de [Création d’une interface de sécurité du compte](/docs/fr-ca/get-started/universal-components/web/components/my-account-overview) pour configurer votre tenant Auth0 et vos applications.
 
-    ### Activer les méthodes MFA et les scopes
+### Activer les méthodes MFA et les scopes {#enable-mfa-methods-and-scopes-2}
 
     **Activer les méthodes MFA**
 
@@ -175,7 +175,7 @@ Sélectionnez votre framework pour configurer les variables d’environnement et
 
     Configurez les permissions d’accès délégué par l’utilisateur de My Account API dans [Création d’une interface de sécurité du compte](/docs/fr-ca/get-started/universal-components/web/components/my-account-overview#create-the-application-and-configure-my-account-api-permissions). Les cinq permissions sont nécessaires au flux complet de gestion des méthodes d’authentification.
 
-    ## Installer le composant
+## Installer le composant {#install-the-component-2}
 
     <CodeGroup>
       ```bash pnpm wrap lines
@@ -191,7 +191,7 @@ Sélectionnez votre framework pour configurer les variables d’environnement et
       `react-hook-form` et `@tanstack/react-query` sont des dépendances pairs. La commande installe également la dépendance `@auth0/universal-components-core`, qui fournit des utilitaires partagés et l’intégration à Auth0.
     </Callout>
 
-    ## Premiers pas
+## Premiers pas {#get-started-2}
 
     ```tsx app/security/page.tsx wrap lines
     "use client";
@@ -251,11 +251,11 @@ Sélectionnez votre framework pour configurer les variables d’environnement et
   </Tab>
 
   <Tab title="shadcn">
-    ## Prérequis de configuration
+## Prérequis de configuration {#setup-requirements-3}
 
     Avant d’afficher le composant `UserMFAManagement`, suivez les instructions de [Build Account Security UI](/docs/fr-ca/get-started/universal-components/web/components/my-account-overview) pour configurer votre tenant Auth0 et vos applications.
 
-    ### Activer les méthodes MFA et les scopes
+### Activer les méthodes MFA et les scopes {#enable-mfa-methods-and-scopes-3}
 
     **Activer les méthodes MFA**
 
@@ -266,7 +266,7 @@ Sélectionnez votre framework pour configurer les variables d’environnement et
 
     Configurez les permissions d’accès délégué par l’utilisateur de My Account API en suivant les instructions de [Build Account Security UI](/docs/fr-ca/get-started/universal-components/web/components/my-account-overview#create-the-application-and-configure-my-account-api-permissions). Les cinq permissions sont requises pour le flux complet de gestion des méthodes d’authentification.
 
-    ## Installer le composant
+## Installer le composant {#install-the-component-3}
 
     ```bash wrap lines
     npx shadcn@latest add https://auth0-universal-components.vercel.app/r/my-account/user-mfa-management.json
@@ -276,7 +276,7 @@ Sélectionnez votre framework pour configurer les variables d’environnement et
       La commande d’installation ajoute le code source du composant dans `src/components/auth0/my-account/`, ainsi que toutes les dépendances d’interface utilisateur et la dépendance `@auth0/universal-components-core`, qui fournit des utilitaires partagés et l’intégration à Auth0.
     </Callout>
 
-    ## Pour commencer
+## Pour commencer {#get-started-3}
 
     ```tsx wrap lines
     import { UserMFAManagement } from "@/components/auth0/my-account/user-mfa-management";
@@ -355,11 +355,11 @@ Sélectionnez votre framework pour configurer les variables d’environnement et
 </Tabs>
 
 <div id="props">
-  ## Propriété
+  ## Propriété {#props}
 </div>
 
 <div id="display-props">
-  ### Propriétés d’affichage
+  ### Propriétés d’affichage {#display-props}
 </div>
 
 Les propriétés d’affichage contrôlent la façon dont le composant s’affiche, sans modifier son comportement.
@@ -441,7 +441,7 @@ Clés de types de facteurs prises en charge : `phone`, `totp`, `email`, `push-n
 ```
 
 <div id="action-props">
-  ### Propriétés d’Action
+  ### Propriétés d’Action {#action-props}
 </div>
 
 Les propriétés d’Action permettent de s’intégrer aux événements du cycle de vie d’inscription et de suppression du composant, ainsi que de déclencher ou d’annuler des opérations.
@@ -502,7 +502,7 @@ Utilisez `onBefore` pour annuler la suppression avant que la boîte de dialogue 
 ```
 
 <div id="customize-props">
-  ### Personnaliser les propriétés
+  ### Personnaliser les propriétés {#customize-props}
 </div>
 
 Les propriétés de personnalisation vous permettent d’adapter le texte, les règles de validation et le style sans modifier le code source.
@@ -630,7 +630,7 @@ Remplacez les motifs d’expression régulière intégrés utilisés pour valide
 ```
 
 <div id="typescript-definitions">
-  ## Définitions TypeScript
+  ## Définitions TypeScript {#typescript-definitions}
 </div>
 
 ```typescript wrap lines
@@ -676,7 +676,7 @@ interface UserMFAManagementProps {
 ```
 
 <div id="advanced-customization">
-  ## Personnalisation avancée
+  ## Personnalisation avancée {#advanced-customization}
 </div>
 
 En plus de la configuration du composant décrite ci-dessus, utilisez le hook `useUserMFA` pour créer une interface personnalisée de gestion de l’AMF.
@@ -733,7 +733,7 @@ Utilisez `UserMFAManagement` si vous souhaitez utiliser l’interface intégrée
 </Note>
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 <CardGroup cols={2}>

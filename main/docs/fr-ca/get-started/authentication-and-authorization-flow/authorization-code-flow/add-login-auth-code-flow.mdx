@@ -19,7 +19,7 @@ Après une connexion réussie, votre application aura accès au <Tooltip tip="je
 Vous demanderez l’autorisation de l’utilisateur, puis vous serez redirigé vers votre application avec un `authorization_code`. Vous échangerez ensuite le code contre des jetons.
 
 <div id="prerequisites">
-  ## Prérequis
+  ## Prérequis {#prerequisites}
 </div>
 
 Enregistrez votre application dans Auth0. Pour en savoir plus, consultez [Enregistrer des applications Web classiques](/docs/fr-ca/get-started/auth0-overview/create-applications/regular-web-apps).
@@ -29,7 +29,7 @@ Enregistrez votre application dans Auth0. Pour en savoir plus, consultez [Enregi
 * Assurez-vous que les **Types d’octroi** de votre application incluent le **code d’autorisation**. Pour en savoir plus, consultez [Mettre à jour les type d’octroi](/docs/fr-ca/get-started/applications/update-grant-types).
 
 <div id="authorize-user">
-  ## Autoriser l’utilisateur
+  ## Autoriser l’utilisateur {#authorize-user}
 </div>
 
 Pour lancer le flux, vous devrez obtenir l’autorisation de l’utilisateur. Cette étape peut inclure un ou plusieurs des processus suivants :
@@ -41,7 +41,7 @@ Pour lancer le flux, vous devrez obtenir l’autorisation de l’utilisateur. Ce
 Pour autoriser l’utilisateur, votre application doit rediriger l’utilisateur vers l’[URL d’autorisation](https://auth0.com/docs/api/authentication#authorization-code-flow).
 
 <div id="authorization-url-example">
-  ### Exemple d’URL d’autorisation
+  ### Exemple d’URL d’autorisation {#authorization-url-example}
 </div>
 
 export const codeExample1 = `https://{yourDomain}/authorize?
@@ -54,7 +54,7 @@ export const codeExample1 = `https://{yourDomain}/authorize?
 <AuthCodeBlock children={codeExample1} language="http" />
 
 <div id="parameters">
-  ### Paramètres
+  ### Paramètres {#parameters}
 </div>
 
 | Nom du paramètre | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -83,7 +83,7 @@ export const codeExample2 = `<a href="https://{yourDomain}/authorize?
 <AuthCodeBlock children={codeExample2} language="html" />
 
 <div id="response">
-  ### Réponse
+  ### Réponse {#response}
 </div>
 
 Si tout se passe bien, vous recevrez une réponse `HTTP 302`. Le code d’autorisation figure à la fin de l’URL :
@@ -94,13 +94,13 @@ Location: {https://yourApp/callback}?code={authorizationCode}&state=xyzABC123
 ```
 
 <div id="request-tokens">
-  ## Obtenir des jetons
+  ## Obtenir des jetons {#request-tokens}
 </div>
 
 Maintenant que vous avez un code d’autorisation, vous devez l’échanger contre des jetons. À l’aide du code d’autorisation extrait (`code`) à l’étape précédente, vous devrez envoyer une requête `POST` à l’[URL du jeton](https://auth0.com/docs/api/authentication#authorization-code).
 
 <div id="post-to-token-url-example">
-  ### Exemple de requête POST à l’URL du jeton
+  ### Exemple de requête POST à l’URL du jeton {#post-to-token-url-example}
 </div>
 
 <AuthCodeGroup>
@@ -251,7 +251,7 @@ Maintenant que vous avez un code d’autorisation, vous devez l’échanger cont
 </AuthCodeGroup>
 
 <div id="parameters">
-  ### Paramètres
+  ### Paramètres {#parameters-2}
 </div>
 
 | Nom du paramètre | Description                                                                                                                                                                                                                                                                                                                                      |
@@ -263,7 +263,7 @@ Maintenant que vous avez un code d’autorisation, vous devez l’échanger cont
 | `redirect_uri`   | L’URL de rappel valide définie dans les paramètres de votre application. Elle doit correspondre exactement au `redirect_uri` transmis à l’URL d’autorisation à l’étape précédente de ce tutoriel. Notez qu’elle doit être encodée dans l’URL.                                                                                                    |
 
 <div id="response">
-  ### Réponse
+  ### Réponse {#response-2}
 </div>
 
 Si tout se passe bien, vous recevrez une réponse HTTP 200 dont le corps contient les valeurs `access_token`, `refresh_token`, `id_token` et `token_type` :
@@ -292,11 +292,11 @@ Si tout se passe bien, vous recevrez une réponse HTTP 200 dont le corps contien
 </Warning>
 
 <div id="use-cases">
-  ## Cas d’utilisation
+  ## Cas d’utilisation {#use-cases}
 </div>
 
 <div id="basic-authentication-request">
-  ### Requête d’authentification de base
+  ### Requête d’authentification de base {#basic-authentication-request}
 </div>
 
 Cet exemple montre la requête la plus simple que vous pouvez effectuer pour autoriser l’utilisateur à l’étape 1. Il affiche l’écran de connexion Auth0 et permet à l’utilisateur de se connecter avec n’importe laquelle de vos connexions configurées :
@@ -322,7 +322,7 @@ Maintenant, lorsque vous demandez des jetons, votre jeton d’identité contiend
 ```
 
 <div id="request-users-name-and-profile-picture">
-  ### Demander le nom de l’utilisateur et sa photo de profil
+  ### Demander le nom de l’utilisateur et sa photo de profil {#request-users-name-and-profile-picture}
 </div>
 
 En plus de l’authentification habituelle de l’utilisateur, cet exemple montre comment demander des renseignements supplémentaires sur l’utilisateur, comme son nom et sa photo de profil.
@@ -353,7 +353,7 @@ Maintenant, lorsque vous demandez des jetons, votre jeton d’identité contiend
 ```
 
 <div id="request-user-log-in-with-github">
-  ### Demander à l’utilisateur de se connecter avec GitHub
+  ### Demander à l’utilisateur de se connecter avec GitHub {#request-user-log-in-with-github}
 </div>
 
 En plus du processus habituel d’authentification des utilisateurs, cet exemple montre comment rediriger les utilisateurs directement vers un fournisseur d’identité social, comme GitHub. Vous devez d’abord configurer la connexion appropriée dans [Auth0 Dashboard &gt; Authentication &gt; Social](https://manage.auth0.com/#/connections/social) et récupérer le nom de la connexion dans l’onglet **Settings**.
@@ -386,7 +386,7 @@ Maintenant, lorsque vous demandez des jetons, votre jeton d’identité contiend
 ```
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Cadre d’autorisation OAuth 2.0](/docs/fr-ca/authenticate/protocols/oauth)

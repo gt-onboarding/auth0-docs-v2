@@ -8,7 +8,7 @@ import {AuthCodeBlock} from "/snippets/ja-jp/AuthCodeBlock.jsx";
 import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 
 <div id="common-settings">
-  ## 共通設定
+  ## 共通設定 {#common-settings}
 </div>
 
 これらは、<Tooltip tip="Security Assertion Markup Language (SAML): パスワードを使わずに 2 者間で認証情報を交換できる標準化されたプロトコル。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=SAML">SAML</Tooltip> <Tooltip tip="Security Assertion Markup Language (SAML): パスワードを使わずに 2 者間で認証情報を交換できる標準化されたプロトコル。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=identity+provider">IDプロバイダー</Tooltip> (IdP) を設定するための設定です。
@@ -18,7 +18,7 @@ import {AuthCodeGroup} from "/snippets/ja-jp/AuthCodeGroup.jsx";
 </Callout>
 
 <div id="post-back-url">
-  ### ポストバックURL
+  ### ポストバックURL {#post-back-url}
 </div>
 
 IdP-Initiated <Tooltip tip="シングルサインオン（SSO）: ユーザーが1つのアプリケーションにログインすると、他のアプリケーションにも自動的にログインできるようにする仕組みです。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=SSO">SSO</Tooltip> を使用する場合は、ポストバックURLに接続パラメーターを必ず含めてください。
@@ -38,7 +38,7 @@ export const codeExample2 = `https://{yourDomain}/login/callback?connection={you
 </Callout>
 
 <div id="entity-id">
-  ### エンティティ ID
+  ### エンティティ ID {#entity-id}
 </div>
 
 サービスプロバイダーのエンティティ IDは次のとおりです。
@@ -180,7 +180,7 @@ urn:auth0:{yourTenant}:{yourConnectionName}
 `ACCESS_TOKEN` ヘッダーの値は、Management API v2 の <Tooltip tip="Access Token: API へのアクセスに使用される認可資格情報で、オペーク文字列または JWT の形式を取ります。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=access+token">アクセストークン</Tooltip> に置き換えてください。
 
 <div id="saml-request-binding">
-  ### SAML Request Binding
+  ### SAML Request Binding {#saml-request-binding}
 </div>
 
 **Protocol Binding** とも呼ばれ、Auth0 から IdP に送信されます。可能であれば、`connection.options.protocolBinding` に応じて値を動的に設定してください。
@@ -194,25 +194,25 @@ urn:auth0:{yourTenant}:{yourConnectionName}
 値を動的に設定できない場合は、`HTTP-Redirect` (デフォルト) を設定するか、**Protocol Binding** でこのオプションを選択している場合は `HTTP-Post` を設定してください。
 
 <div id="saml-response-binding">
-  ### SAML レスポンスのバインディング
+  ### SAML レスポンスのバインディング {#saml-response-binding}
 </div>
 
 IdP から Auth0 が SAML トークンを受け取る方法で、`HTTP-Post` に設定します。
 
 <div id="nameid-format">
-  ### NameID 形式
+  ### NameID 形式 {#nameid-format}
 </div>
 
 未指定。
 
 <div id="saml-assertion-and-response">
-  ### SAML アサーションとレスポンス
+  ### SAML アサーションとレスポンス {#saml-assertion-and-response}
 </div>
 
 SAML アサーションと SAML レスポンスは、それぞれ個別に、または同時に署名できます。
 
 <div id="singlelogout-service-url">
-  ### SingleLogout サービス URL
+  ### SingleLogout サービス URL {#singlelogout-service-url}
 </div>
 
 ここは、SAMLIDプロバイダーがログアウトリクエストとレスポンスを送信する先です:
@@ -224,7 +224,7 @@ export const codeExample13 = `https://{yourDomain}/logout`;
 SAML のログアウトリクエストは、IDプロバイダーが署名する必要があります。
 
 <div id="signed-assertions">
-  ## 署名付きアサーション
+  ## 署名付きアサーション {#signed-assertions}
 </div>
 
 以下のリンクから、さまざまな形式の公開キーを取得できます。
@@ -238,13 +238,13 @@ SAML のログアウトリクエストは、IDプロバイダーが署名する�
 IdP で指定された形式で証明書をダウンロードします。
 
 <div id="idp-initiated-single-sign-on">
-  ### IdP 起点のシングルサインオン
+  ### IdP 起点のシングルサインオン {#idp-initiated-single-sign-on}
 </div>
 
 IdP 起点の SSO については、[SAML の IdP 起点のシングルサインオンを設定する](/docs/ja-jp/authenticate/protocols/saml/saml-sso-integrations/identity-provider-initiated-single-sign-on)を参照してください。
 
 <div id="metadata">
-  ## メタデータ
+  ## メタデータ {#metadata}
 </div>
 
 一部のSAMLIDプロバイダーでは、必要な情報をすべて含むメタデータを直接インポートできます。接続のメタデータは、Auth0でこちらから確認できます。
@@ -254,7 +254,7 @@ export const codeExample14 = `https://{yourDomain}/samlp/metadata?connection={yo
 <AuthCodeBlock children={codeExample14} language="http" />
 
 <div id="organizations">
-  ## Organizations
+  ## Organizations {#organizations}
 </div>
 
 Organizations のログインフローを開始するには、フェデレーション IdP で organization の ACS URL を使用します。
@@ -264,7 +264,7 @@ export const codeExample15 = `https://{yourDomain}/samlp?connection={yourConnect
 <AuthCodeBlock children={codeExample15} language="http" />
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * [接続 ID または名前を確認する](/docs/ja-jp/authenticate/identity-providers/locate-the-connection-id)

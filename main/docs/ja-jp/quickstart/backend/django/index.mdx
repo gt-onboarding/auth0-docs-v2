@@ -5,7 +5,7 @@ title: "Django API: Authorization"
 import {AuthCodeBlock} from "/snippets/ja-jp/AuthCodeBlock.jsx";
 
 <div id="by-luciano-balmaceda">
-  ##### Luciano Balmaceda による
+  ##### Luciano Balmaceda による {#by-luciano-balmaceda}
 </div>
 
 このチュートリアルでは、Django REST Framework API に認可を実装する方法を説明します。アカウント用に設定された例を使ってこの Quickstart を進められるよう、あらかじめログインしておくことをおすすめします。
@@ -19,11 +19,11 @@ import {AuthCodeBlock} from "/snippets/ja-jp/AuthCodeBlock.jsx";
 </Info>
 
 <div id="configure-auth0-apis">
-  ## Auth0 API を設定する
+  ## Auth0 API を設定する {#configure-auth0-apis}
 </div>
 
 <div id="create-an-api">
-  ### API を作成する
+  ### API を作成する {#create-an-api}
 </div>
 
 Auth0 Dashboard の [APIs](https://manage.auth0.com/#/apis) セクションで、**Create API** をクリックします。API の名前と識別子を入力します。たとえば `https://quickstarts/api` です。後でアクセストークンの検証を設定するときに、この識別子を `audience` として使用します。**Signing Algorithm** は **RS256** のままにしておきます。
@@ -33,7 +33,7 @@ Auth0 Dashboard の [APIs](https://manage.auth0.com/#/apis) セクションで�
 デフォルトでは、API はトークンの署名アルゴリズムとして RS256 を使用します。RS256 は秘密鍵と公開鍵のキーペアを使用するため、Auth0 アカウントの公開鍵でトークンを検証します。公開鍵は [JSON Web Key Set (JWKS)](/docs/ja-jp/secure/tokens/json-web-tokens/json-web-key-sets) 形式で、[こちら](https://\{yourDomain}/.well-known/jwks.json) からアクセスできます。
 
 <div id="define-permissions">
-  ### 権限を定義する
+  ### 権限を定義する {#define-permissions}
 </div>
 
 権限を使うと、特定のアクセストークンを持つユーザーに代わって、リソースにどのようにアクセスできるかを定義できます。たとえば、ユーザーが manager のアクセスレベルを持つ場合は `messages` リソースへの読み取りアクセスを付与し、administrator のアクセスレベルを持つ場合はそのリソースへの書き込みアクセスを付与するよう設定できます。
@@ -52,11 +52,11 @@ Auth0 Dashboard の [APIs](https://manage.auth0.com/#/apis) セクションで�
 * Auth0 アカウントの [JSON Web Key Set (JWKS)](/docs/ja-jp/secure/tokens/json-web-tokens/json-web-key-sets) を使用して、トークンが有効かどうかを確認する方法。アクセストークンの検証について詳しくは、[Validate Access Tokens](/docs/ja-jp/secure/tokens/access-tokens/validate-access-tokens) を参照してください。
 
 <div id="setup-the-django-application">
-  ## Django アプリケーションを設定する
+  ## Django アプリケーションを設定する {#setup-the-django-application}
 </div>
 
 <div id="install-dependencies">
-  ### 依存関係をインストール
+  ### 依存関係をインストール {#install-dependencies}
 </div>
 
 以下の依存関係を `requirements.txt` に追加し、`pip install -r requirements.txt` を実行してください。
@@ -72,7 +72,7 @@ requests~=2.22.0
 ```
 
 <div id="create-a-django-project">
-  ### Djangoプロジェクトを作成する
+  ### Djangoプロジェクトを作成する {#create-a-django-project}
 </div>
 
 このガイドでは、Djangoアプリケーションがすでにセットアップされていることを前提としています。まだセットアップしていない場合は、[Django Tutorial](https://docs.djangoproject.com/en/2.2/intro/tutorial01/) の手順に従ってください。
@@ -86,7 +86,7 @@ python manage.py startapp auth0authorization
 ```
 
 <div id="add-a-django-remote-user">
-  ### Django のリモートユーザーを追加する
+  ### Django のリモートユーザーを追加する {#add-a-django-remote-user}
 </div>
 
 アクセストークンのペイロードに含まれるユーザー名を、Django の認証システムのユーザーにどのように対応付けるかを定義する必要があります。
@@ -128,7 +128,7 @@ def jwt_get_username_from_payload_handler(payload):
 ```
 
 <div id="validate-access-tokens">
-  ## アクセストークンの検証
+  ## アクセストークンの検証 {#validate-access-tokens}
 </div>
 
 `settings.py` ファイルには、Django プロジェクトの設定が記述されています。
@@ -206,7 +206,7 @@ def jwt_decode_token(token):
 <AuthCodeBlock children={codeExample2} language="py" />
 
 <div id="validate-scopes">
-  ### スコープを検証する
+  ### スコープを検証する {#validate-scopes}
 </div>
 
 以下のメソッドを `views.py` ファイルに追加し、`access_token` に付与されたスコープを検証するデコレータを作成します。
@@ -251,7 +251,7 @@ def requires_scope(required_scope):
 ```
 
 <div id="protect-api-endpoints">
-  ## APIエンドポイントを保護する
+  ## APIエンドポイントを保護する {#protect-api-endpoints}
 </div>
 
 以下に示すルートは、次のリクエストで利用できます。
@@ -292,7 +292,7 @@ def private_scoped(request):
 ```
 
 <div id="add-url-mappings">
-  ### URL マッピングを追加する
+  ### URL マッピングを追加する {#add-url-mappings}
 </div>
 
 前の手順では、`views.py` ファイルにメソッドを追加しました。次に、それらのメソッドを URL にマッピングする必要があります。
@@ -330,7 +330,7 @@ urlpatterns = [
 ```
 
 <Info>
-  ##### 次にできることは？
+  ##### 次にできることは？ {#what-can-you-do-next}
 
   | [他のアイデンティティプロバイダーを設定する](/docs/ja-jp/authenticate/identity-providers)                                                              | [多要素認証を有効にする](/docs/ja-jp/secure/multi-factor-authentication) |
   | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |

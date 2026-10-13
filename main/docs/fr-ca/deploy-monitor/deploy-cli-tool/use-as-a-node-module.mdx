@@ -8,59 +8,59 @@ Le [Auth0 Deploy CLI](https://github.com/auth0/auth0-deploy-cli) peut être util
 Pour obtenir une liste complète des options de configuration, veuillez consulter [Configurer le Deploy CLI](/docs/fr-ca/deploy-monitor/deploy-cli-tool/configure-the-deploy-cli).
 
 <div id="dump-function">
-  ## fonction dump
+  ## fonction dump {#dump-function}
 </div>
 
 Récupère les configurations du tenant Auth0 sur la machine locale.
 
 <div id="argument-parameters">
-  ### Paramètres
+  ### Paramètres {#argument-parameters}
 </div>
 
 <div id="format">
-  #### format
+  #### format {#format}
 </div>
 
 Options : `yaml` ou `directory`. Détermine le format des fichiers de configuration des ressources exportés. Pour en savoir plus, consultez [Formats de configuration des ressources disponibles](/docs/fr-ca/deploy-monitor/deploy-cli-tool/available-resource-configuration-formats).
 
 <div id="output_folder">
-  #### output_folder
+  #### output_folder {#output_folder}
 </div>
 
 Chemin. Spécifie le répertoire cible dans lequel les fichiers de configuration seront écrits.
 
 <div id="config">
-  #### config
+  #### config {#config}
 </div>
 
 Objet. Configure le comportement de l’utilitaire. Pour en savoir plus, consultez [Configurer le Deploy CLI](/docs/fr-ca/deploy-monitor/deploy-cli-tool/configure-the-deploy-cli).
 
 <div id="config_file">
-  #### config_file
+  #### config_file {#config_file}
 </div>
 
 Chemin. Spécifie le fichier de configuration personnalisé (`config.json`). Pour en savoir plus, consultez [Configurer le Deploy CLI](/docs/fr-ca/deploy-monitor/deploy-cli-tool/configure-the-deploy-cli).
 
 <div id="export_ids">
-  #### export_ids
+  #### export_ids {#export_ids}
 </div>
 
 Booléen. Si cette option est activée, les champs d’identifiant de chaque ressource seront exportés. Par défaut : `false`.
 
 <div id="env">
-  #### env
+  #### env {#env}
 </div>
 
 Booléen. Indique si l’outil doit charger les variables d’environnement. Par défaut : `false`.
 
 <div id="proxy_url">
-  #### proxy_url
+  #### proxy_url {#proxy_url}
 </div>
 
 Une URL pour faire passer les requêtes par un serveur proxy. À définir uniquement si vous êtes derrière un proxy.
 
 <div id="example">
-  ### Exemple
+  ### Exemple {#example}
 </div>
 
 ```jsx lines
@@ -84,53 +84,53 @@ dump({
 ```
 
 <div id="deploy-function">
-  ## fonction de déploiement
+  ## fonction de déploiement {#deploy-function}
 </div>
 
 Applique les configurations de la machine locale au tenant Auth0.
 
 <div id="argument-parameters">
-  ### Paramètres
+  ### Paramètres {#argument-parameters-2}
 </div>
 
 <div id="input_file">
-  #### input_file
+  #### input_file {#input_file}
 </div>
 
 Chemin. Indique l’emplacement des fichiers de configuration des ressources. Pour les formats YAML, il pointera vers le fichier `tenant.yaml`. Pour les formats de répertoire, il pointera vers le répertoire de configuration des ressources.
 
 <div id="config">
-  #### config
+  #### config {#config-2}
 </div>
 
 Objet. Configure le comportement de l’utilitaire. Pour en savoir plus, consultez [Configurer le Deploy CLI](/docs/fr-ca/deploy-monitor/deploy-cli-tool/configure-the-deploy-cli).
 
 <div id="config_file">
-  #### config_file
+  #### config_file {#config_file-2}
 </div>
 
 Chemin. Spécifie le fichier de configuration personnalisé (`config.json`). Pour en savoir plus, consultez [Configurer le Deploy CLI](/docs/fr-ca/deploy-monitor/deploy-cli-tool/configure-the-deploy-cli).
 
 <div id="export_ids">
-  #### export_ids
+  #### export_ids {#export_ids-2}
 </div>
 
 Booléen. Si cette option est activée, les champs d’identifiant de chaque ressource seront exportés. Par défaut : `false`.
 
 <div id="env">
-  #### env
+  #### env {#env-2}
 </div>
 
 Booléen. Indique si l’outil doit charger les variables d’environnement. Par défaut : `false`.
 
 <div id="proxy_url">
-  #### proxy_url
+  #### proxy_url {#proxy_url-2}
 </div>
 
 Une URL pour faire passer les requêtes par un serveur proxy. À définir uniquement si vous êtes derrière un proxy.
 
 <div id="example">
-  ### Exemple
+  ### Exemple {#example-2}
 </div>
 
 ```jsx lines

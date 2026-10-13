@@ -24,7 +24,7 @@ Auth0 traite la revendication `session_expiry` et synchronise la session Auth0 l
 </Card>
 
 <div id="how-it-works">
-  ## Fonctionnement
+  ## Fonctionnement {#how-it-works}
 </div>
 
 Lorsqu’un utilisateur s’authentifie au moyen d’une connexion Enterprise pour laquelle `session_expiry` est activé, Auth0 :
@@ -63,7 +63,7 @@ La revendication `session_expiry` ne remplace pas `exp`. La valeur `exp` du jeto
 </Callout>
 
 <div id="enable-session-expiry-enforcement">
-  ## Activer l’application de l’expiration des sessions
+  ## Activer l’application de l’expiration des sessions {#enable-session-expiry-enforcement}
 </div>
 
 Configurez l’application de l’expiration des sessions pour votre connexion Enterprise à l’aide du Auth0 Dashboard ou de la Management API.
@@ -107,7 +107,7 @@ Configurez l’application de l’expiration des sessions pour votre connexion E
 </Tabs>
 
 <div id="send-session-expiration-to-your-application">
-  ## Transmettre l’expiration de session à votre application
+  ## Transmettre l’expiration de session à votre application {#send-session-expiration-to-your-application}
 </div>
 
 Auth0 utilise l’expiration de session calculée pour gérer sa propre couche de session, mais vos applications en aval peuvent aussi avoir besoin de connaître cette heure d’expiration absolue afin d’appliquer des limites de session locales. Configurez une Action Post Login pour ajouter l’expiration de session finale calculée à un jeton d’ID émis par Auth0 et transmettre ce jeton à votre application.
@@ -139,7 +139,7 @@ Auth0 utilise l’expiration de session calculée pour gérer sa propre couche d
   <Tab title="Management API">
     La configuration de l’Action au moyen de la Management API nécessite trois étapes : créer l’Action, la déployer, puis l’associer au déclencheur Login. Vous avez besoin d’un [jeton d’accès à la Management API](/docs/fr-ca/secure/tokens/access-tokens/management-api-access-tokens) avec les scopes `create:actions`, `read:actions` et `update:actions`.
 
-    ### Créer l’Action
+### Créer l’Action {#create-the-action}
 
     1. Effectuez une requête `POST` vers le endpoint [Create an action](https://auth0.com/docs/api/management/v2/actions/post-action) :
 
@@ -159,7 +159,7 @@ Auth0 utilise l’expiration de session calculée pour gérer sa propre couche d
 
     Prenez note de la valeur `id` dans la réponse, car vous en aurez besoin aux étapes suivantes.
 
-    ### Déployer l’Action
+### Déployer l’Action {#deploy-the-action}
 
     1. Effectuez une requête `POST` vers le endpoint [Deploy an action](https://auth0.com/docs/api/management/v2/actions/post-deploy-action) :
 
@@ -168,7 +168,7 @@ Auth0 utilise l’expiration de session calculée pour gérer sa propre couche d
     Authorization: Bearer YOUR_MANAGEMENT_API_TOKEN
     ```
 
-    ### Associer l’Action au déclencheur Login
+### Associer l’Action au déclencheur Login {#bind-the-action-to-the-login-trigger}
 
     1. Effectuez une requête `PATCH` vers le endpoint [Update trigger bindings](https://auth0.com/docs/api/management/v2/actions/patch-bindings) :
 
@@ -203,7 +203,7 @@ Auth0 utilise l’expiration de session calculée pour gérer sa propre couche d
 </Tabs>
 
 <div id="use-session-expiry-with-auth0-sdks">
-  ## Utiliser l’expiration de session avec les SDK Auth0
+  ## Utiliser l’expiration de session avec les SDK Auth0 {#use-session-expiry-with-auth0-sdks}
 </div>
 
 Si vous utilisez les [SDK Auth0](/docs/fr-ca/libraries) et avez configuré l’Action Post Login décrite ci-dessus, l’expiration de session est appliquée automatiquement. Le SDK lit `session_expiry` dans le jeton d’ID au moment de la connexion, l’enregistre avec la session et considère celle-ci comme expirée dès que l’heure actuelle atteint ou dépasse `session_expiry` :
@@ -217,7 +217,7 @@ Si vous utilisez les [SDK Auth0](/docs/fr-ca/libraries) et avez configuré l’A
 L’Action Post Login est nécessaire pour injecter le claim `session_expiry` dans le jeton d’ID. Une fois défini, lorsque la session expire, le SDK se comporte comme pour toute autre expiration de session : l’utilisateur est redirigé vers la connexion. Aucune gestion d’erreur supplémentaire n’est requise.
 
 <div id="add-session-expiry-values-to-your-application">
-  ## Ajoutez des valeurs d’expiration de session à votre application
+  ## Ajoutez des valeurs d’expiration de session à votre application {#add-session-expiry-values-to-your-application}
 </div>
 
 Vous pouvez éventuellement ajouter des valeurs d’expiration de session à votre application. Par exemple, votre application peut lire `session_expiry` pour avertir les utilisateurs que leur session arrive à expiration, ou vous pouvez associer la durée de vie de la session de votre application à celle de l’IdP en amont.
@@ -256,7 +256,7 @@ Vous pouvez éventuellement ajouter des valeurs d’expiration de session à vot
 N’enregistrez pas la valeur `session_expiry` dans un espace de stockage à long terme, comme un cookie ou `localStorage`, sans la valider de nouveau à chaque lecture. Cette valeur n’a de sens que par rapport à l’heure actuelle.
 
 <div id="verify-in-tenant-logs">
-  ## Vérifier dans les journaux du tenant
+  ## Vérifier dans les journaux du tenant {#verify-in-tenant-logs}
 </div>
 
 Après avoir activé l’application de l’expiration des sessions, vérifiez qu’elle fonctionne en consultant les [journaux du tenant](/docs/fr-ca/deploy-monitor/logs).
@@ -276,7 +276,7 @@ Accédez à [**Auth0 Dashboard &gt; Monitoring &gt; Logs**](https://manage.auth0
 Si l’IdP n’a pas envoyé de claim `session_expiry` et que vous activez cette fonctionnalité, la connexion échoue et affiche le message d’erreur suivant : `The upstream Identity Provider did not return a session_expiry claim`.
 
 <div id="disable-session-expiry-enforcement">
-  ## Désactiver l’application de l’expiration de la session
+  ## Désactiver l’application de l’expiration de la session {#disable-session-expiry-enforcement}
 </div>
 
 <Tabs>
@@ -306,7 +306,7 @@ Si l’IdP n’a pas envoyé de claim `session_expiry` et que vous activez cette
 </Tabs>
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Cycle de vie des sessions](/docs/fr-ca/manage-users/sessions/session-lifecycle)

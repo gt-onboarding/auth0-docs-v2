@@ -15,11 +15,11 @@ Auth0の[Management API](/docs/ja-jp/api/management/v2)を使用すると、プ�
 </Warning>
 
 <div id="experiment">
-  ## 実験
+  ## 実験 {#experiment}
 </div>
 
 <div id="experiment-lifecycle">
-  ### 実験のライフサイクル
+  ### 実験のライフサイクル {#experiment-lifecycle}
 </div>
 
 実験には 5 つの状態があります。
@@ -39,7 +39,7 @@ Auth0の[Management API](/docs/ja-jp/api/management/v2)を使用すると、プ�
 </Callout>
 
 <div id="the-is_valid-gate">
-  ### `is_valid` ゲート
+  ### `is_valid` ゲート {#the-is_valid-gate}
 </div>
 
 実験を有効化する前に、準備完了チェックに合格する必要があります。
@@ -61,7 +61,7 @@ Experiment Center では、すべての実験に `is_valid` というブール�
 * テナント内で現在有効な他の実験が存在しない (Beta のみ)
 
 <div id="assignment">
-  ### 割り当て
+  ### 割り当て {#assignment}
 </div>
 
 **クエリパラメータによるオーバーライド**
@@ -77,11 +77,11 @@ Experiment Center では、すべての実験に `is_valid` というブール�
 これは、`draft` を含むあらゆるステータスの実験で機能します。開発中はこれを使って、有効化する前に両方の バリエーション が正しく表示されることを確認してください。
 
 <div id="feature-flag">
-  ## フィーチャーフラグ
+  ## フィーチャーフラグ {#feature-flag}
 </div>
 
 <div id="feature-flag-lifecycle">
-  ### フィーチャーフラグのライフサイクル
+  ### フィーチャーフラグのライフサイクル {#feature-flag-lifecycle}
 </div>
 
 フィーチャーフラグのライフサイクルは、次の 3 つの状態で管理されます。
@@ -107,7 +107,7 @@ active → archived (terminal; no way back)
 </Callout>
 
 <div id="variation">
-  ### バリエーション
+  ### バリエーション {#variation}
 </div>
 
 **パラメータとオーバーライド**
@@ -125,11 +125,11 @@ active → archived (terminal; no way back)
 </Callout>
 
 <div id="segment">
-  ## セグメント
+  ## セグメント {#segment}
 </div>
 
 <div id="segment-rules">
-  ### セグメントのルール
+  ### セグメントのルール {#segment-rules}
 </div>
 
 セグメントの `rules` は、ルールオブジェクトの配列です。配列内の **いずれか** のルールに一致すると、そのリクエストはそのセグメントに一致します。
@@ -140,7 +140,7 @@ active → archived (terminal; no way back)
 各条件では、演算子 `contains`、`starts_with`、`ends_with`、`exists` を使って、属性と値を比較します。
 
 <div id="available-condition-attributes">
-  ### 使用可能な条件属性
+  ### 使用可能な条件属性 {#available-condition-attributes}
 </div>
 
 セグメントで使用できる属性は、`/authorize` トランザクションの開始時に利用可能なものに限られます。
@@ -155,7 +155,7 @@ active → archived (terminal; no way back)
 | 地理情報 (IP 由来)  | `country`, `region`                                |
 
 <div id="learn-more">
-  ## 詳細情報
+  ## 詳細情報 {#learn-more}
 </div>
 
 <CardGroup cols={2}>

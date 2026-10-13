@@ -12,7 +12,7 @@ import {AuthCodeBlock} from "/snippets/ja-jp/AuthCodeBlock.jsx";
 次のいずれかのエンドポイントの呼び出しに ID トークンを使用している場合は、この移行の対象となります。これらのエンドポイントでは現在、通常のアクセストークンを受け付けます。エンドポイントの動作にそれ以外の変更はありません。リクエストとレスポンスのスキーマはこれまでと同じで、認可に使用するトークンを更新するだけで済みます。
 
 <div id="endpoints-affected">
-  ## 影響を受けるエンドポイント
+  ## 影響を受けるエンドポイント {#endpoints-affected}
 </div>
 
 | エンドポイント                                                   | ユースケース                            |
@@ -27,11 +27,11 @@ import {AuthCodeBlock} from "/snippets/ja-jp/AuthCodeBlock.jsx";
 | DELETE /api/v2/users/{id}/identities/{provider}/{user_id} | ユーザーアカウントのリンク解除                   |
 
 <div id="actions">
-  ## Actions
+  ## Actions {#actions}
 </div>
 
 <div id="scope-changes">
-  ### スコープの変更
+  ### スコープの変更 {#scope-changes}
 </div>
 
 Management API で実行できる操作は、アクセストークンに含まれるスコープによって異なります。この移行により、現在ログイン中のユーザーのデータのみを更新できる制限付きのアクセストークン、または任意のユーザーのデータを更新できるアクセストークンのいずれかを取得できます。次の表では、ケースごと、エンドポイントごとに、トークンに必要なスコープを確認できます。
@@ -51,7 +51,7 @@ Management API で実行できる操作は、アクセストークンに含ま�
 | DELETE /api/v2/device-credentials/{id}                    | `delete:current_user_device_credentials` | `delete:device_credentials` |
 
 <div id="get-access-tokens">
-  ### アクセストークンを取得する
+  ### アクセストークンを取得する {#get-access-tokens}
 </div>
 
 Auth0では、前述のエンドポイント向けにトークンを取得する方法が変更されました。ユーザーを認証してトークンを取得する方法は、使用する技術や、認証に用いる<Tooltip tip="OAuth 2.0: 認可プロトコルとワークフローを定義する認可フレームワーク。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=OAuth+2.0">OAuth 2.0</Tooltip>のフローによって、いくつかのバリエーションがあります。
@@ -61,7 +61,7 @@ Auth0では、前述のエンドポイント向けにトークンを取得する
 * **クロス認証**: リクエストが異なるドメインから送信される場合は、embedded Lock または auth0.js を使用してユーザーを認証します。
 
 <div id="authorization-endpoint">
-  #### 認可エンドポイント
+  #### 認可エンドポイント {#authorization-endpoint}
 </div>
 
 このセクションでは、認可エンドポイントでトークンを取得する方法の違いを、例を使って説明します。移行するエンドポイントがどれであっても変更内容は同じで、異なるのはリクエストで指定するスコープだけであることに注意してください。
@@ -116,7 +116,7 @@ export const codeExample3 = `{
 アクセストークン を取得したら、それを使ってエンドポイント を呼び出せます。この部分は変わらず、request で変わるのは `Bearer` token として使用する値だけです。response も同じです。
 
 <div id="token-endpoint">
-  #### トークンエンドポイント
+  #### トークンエンドポイント {#token-endpoint}
 </div>
 
 このセクションでは、トークンエンドポイントを使ってトークンを取得する際の違いを、例を用いて説明します。ただし、どのエンドポイントを移行する場合でも変更内容は同じで、異なるのはリクエストで指定するスコープだけであることに注意してください。
@@ -160,7 +160,7 @@ Management API にアクセスできるアクセストークンを取得する�
 アクセストークンを取得したら、それを使ってエンドポイントを呼び出せます。ここは変わらず、リクエストで変わるのは `Bearer` トークンとして使う値だけです。レスポンスも同じです。
 
 <div id="embedded-lock-or-auth0js">
-  #### 埋め込み Lock または auth0.js
+  #### 埋め込み Lock または auth0.js {#embedded-lock-or-auth0js}
 </div>
 
 アプリケーションに Lock または auth0.js v9 のいずれかを埋め込んでいる場合は、クロスオリジン認証を使用しています。これは、異なるドメインからリクエストが送信される際にユーザーを認証するために使用されます。
@@ -216,7 +216,7 @@ export const codeExample7 = `// アクセストークンを取得
 * アクセストークンを使用して Management API で認証します
 
 <div id="account-linking-changes">
-  ### アカウントリンクの変更点
+  ### アカウントリンクの変更点 {#account-linking-changes}
 </div>
 
 この機能に関する変更点は次のとおりです。
@@ -229,13 +229,13 @@ export const codeExample7 = `// アクセストークンを取得
   * ID トークンの `aud` クレームはアプリケーションを識別するものであり、アクセストークンの `azp` クレームと同じ値である必要があります
 
 <div id="restrictions">
-  ## 制限
+  ## 制限 {#restrictions}
 </div>
 
 Management API へのアクセスに使用するアクセストークンでは、`aud` クレームに設定できる値は 1 つのみです。トークンに複数の値が含まれている場合、Management API へのリクエストはエラーになります。
 
 <div id="learn-more">
-  ## 詳しくはこちら
+  ## 詳しくはこちら {#learn-more}
 </div>
 
 * [アカウントリンク 用アクセストークンへの移行](/docs/ja-jp/troubleshoot/product-lifecycle/past-migrations/link-user-accounts-with-access-tokens-migration)

@@ -14,18 +14,18 @@ description: ユーザーが Database または Passwordless 接続に追加さ�
 </Note>
 
 <div id="references">
-  ## 参照
+  ## 参照 {#references}
 </div>
 
 * [イベントオブジェクト](/docs/ja-jp/customize/actions/reference/pre-user-registration/pre-user-registration-event-object): 新規ユーザー登録リクエストに関するコンテキスト情報を提供します。
 * [APIオブジェクト](/docs/ja-jp/customize/actions/reference/pre-user-registration/pre-user-registration-api-object): フローの動作を変更するためのメソッドを提供します。
 
 <div id="common-use-cases">
-  ## 一般的なユースケース
+  ## 一般的なユースケース {#common-use-cases}
 </div>
 
 <div id="deny-registration-by-location">
-  ### 場所に基づいて登録を拒否する
+  ### 場所に基づいて登録を拒否する {#deny-registration-by-location}
 </div>
 
 pre-user-registration Action を使用すると、ユーザーのサインアップを防止できます。
@@ -51,7 +51,7 @@ exports.onExecutePreUserRegistration = async (event, api) => {
 ```
 
 <div id="set-metadata-in-the-user-profile">
-  ### ユーザープロファイルにメタデータを設定する
+  ### ユーザープロファイルにメタデータを設定する {#set-metadata-in-the-user-profile}
 </div>
 
 pre-user-registration Action を使用すると、ユーザープロファイルの作成前にメタデータを追加できます。
@@ -67,7 +67,7 @@ exports.onExecutePreUserRegistration = async (event, api) => {
 ```
 
 <div id="store-a-user-id-from-another-system-in-the-user-profile">
-  ### 別のシステムのユーザー ID をユーザープロファイルに保存する
+  ### 別のシステムのユーザー ID をユーザープロファイルに保存する {#store-a-user-id-from-another-system-in-the-user-profile}
 </div>
 
 pre-user-registration Action を使用すると、別のシステムのユーザー ID をユーザープロファイルに保存できます。
@@ -105,7 +105,7 @@ exports.onExecutePreUserRegistration = async (event, api) => {
 </Callout>
 
 <div id="deny-access-to-specific-ja3ja4-fingerprints">
-  ### 特定のJA3/JA4フィンガープリントからのアクセスを拒否する
+  ### 特定のJA3/JA4フィンガープリントからのアクセスを拒否する {#deny-access-to-specific-ja3ja4-fingerprints}
 </div>
 
 `event.security_context` オブジェクトには、現在のトランザクションのJA3/JA4フィンガープリント値が含まれています：

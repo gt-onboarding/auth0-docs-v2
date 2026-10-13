@@ -25,13 +25,13 @@ title: カスタムフィールドコンポーネント
 </Warning>
 
 <div id="custom-field-settings">
-  ## カスタムフィールドの設定
+  ## カスタムフィールドの設定 {#custom-field-settings}
 </div>
 
 カスタムフィールドの設定は以下のとおりです。
 
 <div id="params">
-  ### パラメータ
+  ### パラメータ {#params}
 </div>
 
 カスタムフィールドのソースコード内で参照するキーと値のペアを追加します。キーと値のペアには、フォームフィールドの[変数](/docs/ja-jp/customize/forms/variables)を含めることができます。
@@ -80,7 +80,7 @@ function CustomComponent(context) {
 ```
 
 <div id="source-code">
-  ### ソースコード
+  ### ソースコード {#source-code}
 </div>
 
 JavaScript のコードをカスタムフィールドに追加します。
@@ -115,7 +115,7 @@ function customInput() {
 ```
 
 <div id="json-schema">
-  ### JSON Schema
+  ### JSON Schema {#json-schema}
 </div>
 
 デフォルトでは、カスタムフィールドは任意の形式の値を受け付けます。ただし、[JSON Schema](https://json-schema.org/) を使って、サーバー側で値を検証することもできます。
@@ -137,7 +137,7 @@ function customInput() {
 複雑なバリデーション要件に対応するには、[flow](/docs/ja-jp/customize/forms/flows) を使用できます。
 
 <div id="css">
-  ### CSS
+  ### CSS {#css}
 </div>
 
 カスタムフィールドに CSS スタイルを追加します。
@@ -145,13 +145,13 @@ function customInput() {
 <Frame>![](/docs/images/cdy7uua7fh8z/lC4w1THpVDD32Ke6IsXrl/e1371beeed09d5f12b6656d397c3b692/css.png)</Frame>
 
 <div id="custom-field-handlers">
-  ## カスタムフィールドハンドラー
+  ## カスタムフィールドハンドラー {#custom-field-handlers}
 </div>
 
 これらのハンドラーを使うと、フィールドに独自の動作を追加できます。
 
 <div id="init">
-  ### init()
+  ### init() {#init}
 </div>
 
 フィールドの作成時に一度だけ呼び出され、パラメータ 設定で構成した `params` の値が渡されます。
@@ -170,7 +170,7 @@ init() {
 ```
 
 <div id="update">
-  ### update()
+  ### update() {#update}
 </div>
 
 ユーザーが同じフォームステップを再度開いたときに呼び出されます。
@@ -178,19 +178,19 @@ init() {
 このオプションは、UI ロジックを再レンダリングしたり、変更されている可能性がある params の値を更新したりする必要がある場合に便利です。
 
 <div id="onfocus">
-  ### onFocus()
+  ### onFocus() {#onfocus}
 </div>
 
 フォーカスがカスタムフィールドのHTML要素に入ったときに呼び出されます。
 
 <div id="onblur">
-  ### onBlur()
+  ### onBlur() {#onblur}
 </div>
 
 フォーカスがカスタムフィールドの HTML 要素から外れたときに呼び出されます。
 
 <div id="getvalue">
-  ### getValue()
+  ### getValue() {#getvalue}
 </div>
 
 フォームがカスタムフィールドの値を1回以上取得する必要がある場合に呼び出されます。通常は、ユーザーがフォームのステップを送信したときに実行されます。クライアント側でバリデーションを行う必要がある場合は、エラーをスローして、ユーザーにカスタムエラーメッセージを表示できます。
@@ -219,19 +219,19 @@ function customTextInput() {
 ```
 
 <div id="block">
-  ### block()
+  ### block() {#block}
 </div>
 
 カスタムフィールドをブロックする必要がある場合に呼び出されます。通常は、ユーザーがフォームのステップを送信し、そのデータがバックエンドで処理される際に実行されます。
 
 <div id="unblock">
-  ### unblock()
+  ### unblock() {#unblock}
 </div>
 
 カスタムフィールドのブロックを解除する必要がある場合に呼び出されます。通常は、ユーザーがフォームのステップを送信した後、または検証エラーによりデータのバックエンドでの処理が停止した後に実行されます。
 
 <div id="getscripts">
-  ### getScripts()
+  ### getScripts() {#getscripts}
 </div>
 
 フォームが `init()` メソッドを呼び出す前に、読み込みが完了していることが保証される URL の一覧を返します。
@@ -245,23 +245,23 @@ getScripts() {
 ```
 
 <div id="context-object">
-  ## コンテキストオブジェクト
+  ## コンテキストオブジェクト {#context-object}
 </div>
 
 コンテキストオブジェクトを渡すと、これらのメソッドを使ってフォームやコンポーネントのロジックを処理できます。
 
 <div id="custom-methods">
-  ### カスタムメソッド
+  ### カスタムメソッド {#custom-methods}
 </div>
 
 <div id="contextcustomgetvalue">
-  #### context.custom.getValue()
+  #### context.custom.getValue() {#contextcustomgetvalue}
 </div>
 
 現在のカスタムフィールドの値を返します。
 
 <div id="contextcustomsetvalue">
-  #### context.custom.setValue()
+  #### context.custom.setValue() {#contextcustomsetvalue}
 </div>
 
 現在のカスタムフィールドに値を設定します。
@@ -286,7 +286,7 @@ function customInput(context) {
 ```
 
 <div id="contextcustomcreateuid">
-  #### context.custom.createUid()
+  #### context.custom.createUid() {#contextcustomcreateuid}
 </div>
 
 現在のカスタムフィールドに対する一意の識別子を返します。
@@ -312,7 +312,7 @@ function customInput(context) {
 ```
 
 <div id="contextcustomgetparams">
-  #### context.custom.getParams()
+  #### context.custom.getParams() {#contextcustomgetparams}
 </div>
 
 現在のカスタムフィールド設定のパラメータを取得します。
@@ -351,55 +351,55 @@ function customInput(context) {
 ```
 
 <div id="form-methods">
-  ### フォームメソッド
+  ### フォームメソッド {#form-methods}
 </div>
 
 他のフィールドの値を取得したり、フォームの別のステップに移動したりするためにフォームを操作する必要がある場合は、次のフォームメソッドを使用できます。
 
 <div id="contextformgetid">
-  #### context.form.getId()
+  #### context.form.getId() {#contextformgetid}
 </div>
 
 現在のフォームの一意のIDを返します。
 
 <div id="contextformgetroot">
-  #### context.form.getRoot()
+  #### context.form.getRoot() {#contextformgetroot}
 </div>
 
 現在のフォームのルートHTML要素を返します。
 
 <div id="contextformgoforward">
-  #### context.form.goForward()
+  #### context.form.goForward() {#contextformgoforward}
 </div>
 
 フォームの次のステップに進みます。
 
 <div id="contextformgoprevious">
-  #### context.form.goPrevious()
+  #### context.form.goPrevious() {#contextformgoprevious}
 </div>
 
 前のフォームのステップに戻ります。
 
 <div id="contextformisvalid">
-  #### context.form.isValid()
+  #### context.form.isValid() {#contextformisvalid}
 </div>
 
 フォームがクライアント側のすべてのバリデーションを通過しているかどうかを示す真偽値を返します。
 
 <div id="contextformvalidate">
-  #### context.form.validate()
+  #### context.form.validate() {#contextformvalidate}
 </div>
 
 続行する前に、既存のフィールド値に対してクライアント側の検証を実行します。フィールドが検証を通過しない場合は、エラーメッセージが表示されます。
 
 <div id="contextformgetallhiddenfields">
-  #### context.form.getAllHiddenFields()
+  #### context.form.getAllHiddenFields() {#contextformgetallhiddenfields}
 </div>
 
 すべての隠しフィールドの値を含むオブジェクトを返します。
 
 <div id="contextformsethiddenfieldid-value">
-  #### context.form.setHiddenField(id, value)
+  #### context.form.setHiddenField(id, value) {#contextformsethiddenfieldid-value}
 </div>
 
 隠しフィールドの値を設定します。
@@ -410,13 +410,13 @@ function customInput(context) {
 | `value` | *String*。隠しフィールドの値。   |
 
 <div id="contextformgetvalues">
-  #### context.form.getValues()
+  #### context.form.getValues() {#contextformgetvalues}
 </div>
 
 すべてのフィールドと隠しフィールドの値を含むオブジェクトを返します。
 
 <div id="contextformgetfieldid">
-  #### context.form.getField(id)
+  #### context.form.getField(id) {#contextformgetfieldid}
 </div>
 
 指定したフィールドのインスタンスを返します。
@@ -442,13 +442,13 @@ console.log(fullNameValue); // John Doe
 </Callout>
 
 <div id="custom-field-examples">
-  ## カスタムフィールドの例
+  ## カスタムフィールドの例 {#custom-field-examples}
 </div>
 
 以下のセクションでは、フォームに追加できるカスタムフィールドの例を紹介しています。
 
 <div id="range-input-custom-field">
-  ### 範囲入力カスタムフィールド
+  ### 範囲入力カスタムフィールド {#range-input-custom-field}
 </div>
 
 あらかじめ定義された範囲内の値を返すカスタムフィールドです。
@@ -478,7 +478,7 @@ function rangeInput() {
 ```
 
 <div id="color-input-custom-field">
-  ### カラー入力のカスタムフィールド
+  ### カラー入力のカスタムフィールド {#color-input-custom-field}
 </div>
 
 カラーの16進数値を返すカスタムフィールドです。
@@ -506,7 +506,7 @@ function colorInput() {
 ```
 
 <div id="autocomplete-input-custom-field-using-values-from-api">
-  ### API の値を使ったオートコンプリート入力のカスタムフィールド
+  ### API の値を使ったオートコンプリート入力のカスタムフィールド {#autocomplete-input-custom-field-using-values-from-api}
 </div>
 
 サードパーティ API を使用してオートコンプリート値を返すカスタムフィールドです。
@@ -547,7 +547,7 @@ function textInputWithAutocomplete(context) {
 ```
 
 <div id="dynamic-dropdown-custom-field-using-values-from-api">
-  ### APIの値を使用する動的なドロップダウンのカスタムフィールド
+  ### APIの値を使用する動的なドロップダウンのカスタムフィールド {#dynamic-dropdown-custom-field-using-values-from-api}
 </div>
 
 サードパーティのAPIを使用した動的なドロップダウンリストから値を返すカスタムフィールドです。
@@ -601,7 +601,7 @@ function dynamicDropdown() {
 ```
 
 <div id="dynamic-input-custom-field-with-a-button-to-add-more-fields">
-  ### &#x20;(+) ボタンで項目を追加できる動的入力カスタムフィールド
+  ### &#x20;(+) ボタンで項目を追加できる動的入力カスタムフィールド {#dynamic-input-custom-field-with-a-button-to-add-more-fields}
 </div>
 
 ユーザーが項目を追加できるカスタムフィールドです。

@@ -10,7 +10,7 @@ description: "Universal Login の `reset-password-mfa-email-challenge` 画面を
 </Frame>
 
 <div id="import">
-  ## インポート
+  ## インポート {#import}
 </div>
 
 各画面には、それぞれ専用のフックとメソッドがあります。SDK は各画面ごとに、**部分インポート** と **ルートインポート** をサポートしています。
@@ -59,7 +59,7 @@ function ResetPasswordMfaEmailChallengeScreen() {
 ```
 
 <div id="context-hooks">
-  ## コンテキストフック
+  ## コンテキストフック {#context-hooks}
 </div>
 
 `reset-password-mfa-email-challenge` 画面で、Auth0 コンテキストデータへの読み取り専用アクセスを提供する画面スコープのフックです。`@auth0/auth0-acul-react/reset-password-mfa-email-challenge` からインポートします。
@@ -171,7 +171,7 @@ function ResetPasswordMfaEmailChallengeScreen() {
 </ParamField>
 
 <div id="methods">
-  ## メソッド
+  ## メソッド {#methods}
 </div>
 
 <ParamField body="continueMethod" type="Promise<void>">
@@ -242,7 +242,7 @@ function ResetPasswordMfaEmailChallengeScreen() {
 </ParamField>
 
 <div id="commonutility-hooks">
-  ## 共通/ユーティリティ フック
+  ## 共通/ユーティリティ フック {#commonutility-hooks}
 </div>
 
 <ParamField body={<a href="/docs/ja-jp/libraries/acul/react-sdk/API-Reference/Hooks/useResend">useResend</a>} type="Hooks">

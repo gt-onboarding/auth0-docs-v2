@@ -10,7 +10,7 @@ La bibliothèque Auth0.js est une bibliothèque Javascript côté client pour Au
 Consultez la [documentation API complète de la bibliothèque](https://auth0.github.io/auth0.js/index.html).
 
 <div id="migrate-from-v9-to-v10">
-  ## Migrer de v9 à v10
+  ## Migrer de v9 à v10 {#migrate-from-v9-to-v10}
 </div>
 
 Auth0.js v10 contient un correctif de sécurité pour CVE-2026-42280 et un changement incompatible :
@@ -27,7 +27,7 @@ Si vous avez besoin de la référence de l’API v9, consultez le [package auth0
 </Callout>
 
 <div id="ready-to-go-example">
-  ## Exemple prêt à l’emploi
+  ## Exemple prêt à l’emploi {#ready-to-go-example}
 </div>
 
 Le [répertoire d’exemple](https://github.com/auth0/auth0.js/tree/master/example) de la bibliothèque Auth0.js est une application prête à l’emploi qui vous permet d’essayer Auth0.js rapidement et facilement. Pour l’exécuter :
@@ -37,13 +37,13 @@ Le [répertoire d’exemple](https://github.com/auth0/auth0.js/tree/master/examp
 3. Enfin, exécutez `npm start` à partir de la racine de ce projet, puis ouvrez dans votre navigateur l’application qui s’exécute sur le serveur node, probablement à l’adresse `http://localhost:3000/example`.
 
 <div id="setup-and-initialization">
-  ## Configuration et initialisation
+  ## Configuration et initialisation {#setup-and-initialization}
 </div>
 
 Les sections suivantes portent sur les [méthodes d’installation](#installation-options), [comment initialiser Auth0.js](#initialization), [l’inscription](#signup), [la connexion](#login), [la déconnexion](#logout) et plus encore.
 
 <div id="configure-your-auth0-application-for-embedded-login">
-  ### Configurez votre application Auth0 pour la connexion intégrée
+  ### Configurez votre application Auth0 pour la connexion intégrée {#configure-your-auth0-application-for-embedded-login}
 </div>
 
 Lors de la mise en œuvre de la connexion intégrée, la bibliothèque utilise des appels entre origines dans des iframes masquées pour effectuer l’authentification. Pour que cela puisse se faire de façon sécuritaire, Auth0 doit connaître les domaines où vous hébergez vos applications.
@@ -51,7 +51,7 @@ Lors de la mise en œuvre de la connexion intégrée, la bibliothèque utilise d
 Ajoutez le domaine au champ **Allowed Web Origins**. Vous trouverez ce champ dans la section [Paramètres de l’application](https://manage.auth0.com/#/applications) de votre Dashboard.
 
 <div id="installation-options">
-  ### Options d’installation
+  ### Options d’installation {#installation-options}
 </div>
 
 Vous avez plusieurs façons d’utiliser Auth0.js dans votre projet. Choisissez celle qui convient le mieux à vos besoins :
@@ -77,7 +77,7 @@ Vous pouvez aussi inclure le script via le CDN :
 ```
 
 <div id="initialization">
-  ### Initialisation
+  ### Initialisation {#initialization}
 </div>
 
 Initialisez une nouvelle instance de l’application Auth0 comme suit :
@@ -92,7 +92,7 @@ export const codeExample1 = `<script type="text/javascript">
 <AuthCodeBlock children={codeExample1} language="html" />
 
 <div id="available-parameters">
-  #### Paramètres disponibles
+  #### Paramètres disponibles {#available-parameters}
 </div>
 
 Il y a deux paramètres obligatoires à transmettre dans l’objet `options` lors de l’instanciation de `webAuth`, ainsi que d’autres paramètres facultatifs.
@@ -112,7 +112,7 @@ Il y a deux paramètres obligatoires à transmettre dans l’objet `options` lor
 En raison de décalages d’horloge, vous pourriez parfois rencontrer l’erreur `The token was issued in the future`. Le paramètre `leeway` peut être utilisé pour accorder quelques secondes de tolérance aux délais d’expiration du ID Token, afin d’éviter cette situation.
 
 <div id="scope">
-  ##### Scope
+  ##### Scope {#scope}
 </div>
 
 La valeur `scope` par défaut dans Auth0.js v10 est `openid profile email`.
@@ -128,13 +128,13 @@ La valeur `scope` par défaut dans Auth0.js v10 est `openid profile email`.
 </Callout>
 
 <div id="login">
-  ## Connexion
+  ## Connexion {#login}
 </div>
 
 Vous pouvez choisir une méthode de connexion selon le type d’authentification requis dans votre application.
 
 <div id="webauthauthorize">
-  ### webAuth.authorize()
+  ### webAuth.authorize() {#webauthauthorize}
 </div>
 
 La méthode `authorize()` peut être utilisée pour connecter des utilisateurs au moyen de <Tooltip tip="Universal Login : votre application redirige vers Universal Login, hébergé sur l’Authorization Server d’Auth0, pour vérifier l’identité d’un utilisateur." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Universal+Login">Universal Login</Tooltip> ou de connexions sociales, comme le montrent les exemples ci-dessous. Cette méthode appelle le point de terminaison `/authorize` de l’Authentication API et peut accepter divers paramètres par l’intermédiaire de l’objet `options`.
@@ -159,7 +159,7 @@ Pour les connexions sociales, le paramètre `connection` devra être précisé 
 `webAuth.authorize({connection: 'twitter'});`
 
 <div id="webauthpopupauthorize">
-  ### webAuth.popup.authorize()
+  ### webAuth.popup.authorize() {#webauthpopupauthorize}
 </div>
 
 Pour l’authentification dans une fenêtre contextuelle, vous pouvez utiliser la méthode `popup.authorize`. L’authentification dans une fenêtre contextuelle ne peut pas être utilisée dans les pages de connexion hébergées. En général, l’authentification dans une fenêtre contextuelle est utilisée par les applications monopage afin d’éviter de perdre l’état courant lors d’une redirection qui recharge entièrement la page.
@@ -189,7 +189,7 @@ webAuth.popup.authorize({
 ```
 
 <div id="handle-popup-authentication-results">
-  #### Gérer les résultats de l’authentification dans une fenêtre contextuelle
+  #### Gérer les résultats de l’authentification dans une fenêtre contextuelle {#handle-popup-authentication-results}
 </div>
 
 Lorsque vous utilisez l’authentification dans une fenêtre contextuelle, vous devez fournir un `redirectUri` où la page de destination transmet les résultats de l’autorisation au callback à l’aide de la méthode `webAuth.popup.callback`. Une mise en œuvre simple pourrait ressembler à ceci :
@@ -215,7 +215,7 @@ Un handler idéal ne devrait contenir que le strict minimum (c’est-à-dire san
 Vous devrez ajouter le `redirectUri` à la liste **Allowed Callback URLs** de l’application, sur la page de configuration de l’application dans le Dashboard.
 
 <div id="webauthlogin">
-  ### webAuth.login()
+  ### webAuth.login() {#webauthlogin}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -240,13 +240,13 @@ webAuth.login({
 ```
 
 <div id="webauthcrossoriginverification">
-  ### webAuth.crossOriginVerification()
+  ### webAuth.crossOriginVerification() {#webauthcrossoriginverification}
 </div>
 
 La méthode `crossOriginVerification()` peut servir à offrir une authentification inter-origines aux clients qui ont désactivé les cookies tiers dans leur navigateur. Pour en savoir plus sur son utilisation, consultez [Authentification inter-origines](/docs/fr-ca/authenticate/login/cross-origin-authentication).
 
 <div id="buildauthorizeurloptions">
-  ### buildAuthorizeUrl(options)
+  ### buildAuthorizeUrl(options) {#buildauthorizeurloptions}
 </div>
 
 La méthode `buildAuthorizeUrl` peut être utilisée pour générer l’URL `/authorize` afin d’initialiser une nouvelle transaction. Utilisez cette méthode si vous souhaitez mettre en place une authentification passive dans le navigateur.
@@ -268,7 +268,7 @@ var url = webAuth.client.buildAuthorizeUrl({
 Le paramètre `state` est une valeur opaque qu’Auth0 vous renverra. Cette méthode aide à prévenir les attaques CSRF et doit être spécifiée si vous effectuez vous-même la redirection vers l’URL au lieu d’appeler `webAuth.authorize()`. Pour en savoir plus, consultez [State Parameter](/docs/fr-ca/secure/attack-protection/state-parameters).
 
 <div id="single-sign-on-with-embedded-authentication">
-  ### Authentification unique avec authentification intégrée
+  ### Authentification unique avec authentification intégrée {#single-sign-on-with-embedded-authentication}
 </div>
 
 La connexion intégrée permet l’<Tooltip tip="Authentification unique (SSO) : service qui, après qu’un utilisateur ouvre une session dans une application, l’ouvre automatiquement dans d’autres applications." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Single+Sign-on">authentification unique</Tooltip> (SSO) lorsque vos applications partagent l’architecture suivante :
@@ -279,7 +279,7 @@ La connexion intégrée permet l’<Tooltip tip="Authentification unique (SSO) 
 Lorsque votre architecture répond à ces critères, le SSO intégré avec Auth0.js convient bien. Universal Login gère automatiquement le SSO entre plusieurs domaines ou avec des [applications tierces](/docs/fr-ca/get-started/applications/third-party-applications/configure-third-party-applications) grâce à sa couche de session, et les deux peuvent coexister dans la même application — par exemple, Universal Login pour la connexion principale et Auth0.js pour l’inscription intégrée d’un facteur ou les flux de step-up. Pour comparer les avantages et les inconvénients, consultez [Hosted Login vs. Embedded Login](/docs/fr-ca/authenticate/login/universal-vs-embedded-login).
 
 <div id="passwordless-login">
-  ## Connexion sans mot de passe
+  ## Connexion sans mot de passe {#passwordless-login}
 </div>
 
 <Tooltip tip="Sans mot de passe : Forme d’authentification qui ne repose pas sur un mot de passe comme premier facteur." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Passwordless">sans mot de passe</Tooltip> permet aux utilisateurs de se connecter en recevant un mot de passe à usage unique par courriel ou par message texte. Le processus exige d’amorcer le flux sans mot de passe, de générer et d’acheminer un code à l’utilisateur (ou un code dans un lien), puis de recueillir ses identifiants au moyen de la méthode de vérification. Cela peut prendre la forme d’un écran de connexion qui demande son adresse courriel (ou son numéro de téléphone) ainsi que le code que vous venez de lui envoyer. Cela peut aussi être mis en œuvre sous la forme d’un lien sans mot de passe plutôt que d’un code envoyé à l’utilisateur. Il lui suffit alors de cliquer sur le lien dans son courriel ou son message texte pour atteindre votre point de terminaison et faire vérifier automatiquement ces données à l’aide de la même méthode de vérification (sans que l’utilisateur ait à saisir manuellement un code).
@@ -296,7 +296,7 @@ export const codeExample3 = `var webAuth = new auth0.WebAuth({
 <AuthCodeBlock children={codeExample3} language="js" />
 
 <div id="start-passwordless-authentication">
-  ### Démarrer l’authentification sans mot de passe
+  ### Démarrer l’authentification sans mot de passe {#start-passwordless-authentication}
 </div>
 
 La première étape de l’authentification sans mot de passe avec Auth0.js est la méthode `passwordlessStart`, qui comporte plusieurs paramètres pouvant être transmis dans son objet `options` :
@@ -322,7 +322,7 @@ webAuth.passwordlessStart({
 ```
 
 <div id="complete-passwordless-authentication">
-  ### Finaliser l’authentification sans mot de passe
+  ### Finaliser l’authentification sans mot de passe {#complete-passwordless-authentication}
 </div>
 
 Si vous envoyez un code, vous devrez ensuite demander à l’utilisateur de le saisir. Vous traiterez ce code et authentifierez l’utilisateur à l’aide de la méthode `passwordlessLogin`, qui comporte plusieurs paramètres pouvant être transmis dans son objet `options` :
@@ -350,7 +350,7 @@ webAuth.passwordlessLogin({
 ```
 
 <div id="extract-the-authresult-and-get-user-info">
-  ## Extraire le authResult et obtenir des renseignements sur l’utilisateur
+  ## Extraire le authResult et obtenir des renseignements sur l’utilisateur {#extract-the-authresult-and-get-user-info}
 </div>
 
 Après l’authentication, vous pouvez utiliser la méthode `parseHash` pour analyser le fragment de hachage d’une URL lorsque l’utilisateur est redirigé vers votre application afin d’extraire le résultat d’une Authentication response Auth0. Vous pouvez choisir de gérer cela dans une page de callback, qui redirigera ensuite vers votre application principale, ou directement dans la page, selon la situation.
@@ -400,7 +400,7 @@ Comme indiqué ci-dessus, la méthode `client.userInfo` peut être appelée en l
 Vous pouvez maintenant utiliser ces renseignements autrement, selon les besoins de votre application, par exemple pour obtenir l’ensemble des données du profil de l’utilisateur au moyen de la <Tooltip tip="Management API : un produit qui permet aux clients d’effectuer des tâches administratives." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Management+API">Management API</Tooltip>, comme décrit ci-dessous.
 
 <div id="using-nonces">
-  ## Utilisation des nonces
+  ## Utilisation des nonces {#using-nonces}
 </div>
 
 Par défaut (et si `responseType` contient `id_token`), Auth0.js génère un `nonce` aléatoire lorsque vous appelez `webAuth.authorize`, le stocke dans le stockage local, puis le récupère dans `webAuth.parseHash`. Ce comportement par défaut devrait convenir dans la plupart des cas, mais certains cas d’utilisation peuvent exiger qu’un développeur gère le `nonce`.
@@ -424,7 +424,7 @@ webAuth.checkSession({
 La méthode `webAuth.checkSession` vérifiera automatiquement que le claim `nonce` du <Tooltip tip="ID Token : informations d’authentification destinées au client lui-même, plutôt qu’à l’accès à une ressource." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=ID+Token">ID Token</Tooltip> renvoyé est le même que celui de l’option.
 
 <div id="error-codes-and-descriptions">
-  ## Codes d’erreur et descriptions
+  ## Codes d’erreur et descriptions {#error-codes-and-descriptions}
 </div>
 
 Lorsque Auth0.js est utilisé pour la connexion intégrée, il utilise le point de terminaison `/co/authenticate`, qui peut produire les erreurs suivantes :
@@ -450,7 +450,7 @@ De plus, il est aussi possible d’obtenir une erreur 403 générique sans propr
 `Origin https://test.app is not allowed.`
 
 <div id="logout">
-  ## Logout
+  ## Logout {#logout}
 </div>
 
 Pour déconnecter un utilisateur, utilisez la méthode `logout()`. Cette méthode accepte un objet `options`, qui peut inclure les paramètres suivants.
@@ -465,7 +465,7 @@ webAuth.logout({
 ```
 
 <div id="signup">
-  ## Inscription
+  ## Inscription {#signup}
 </div>
 
 Pour inscrire un utilisateur, utilisez la méthode `signup`. Cette méthode accepte un objet `options`, qui peut inclure les paramètres suivants.
@@ -502,7 +502,7 @@ Les inscriptions doivent se faire au moyen de connexions de base de données. Vo
 ```
 
 <div id="using-checksession-to-acquire-new-tokens">
-  ## Utilisation de `checkSession` pour obtenir de nouveaux jetons
+  ## Utilisation de `checkSession` pour obtenir de nouveaux jetons {#using-checksession-to-acquire-new-tokens}
 </div>
 
 La méthode `checkSession` vous permet d’obtenir un nouveau jeton d’Auth0 pour un utilisateur déjà authentifié auprès d’Auth0 pour votre domaine. Cette méthode accepte tous les paramètres OAuth2 valides qui seraient normalement envoyés à `authorize`. Si vous les omettez, elle utilisera ceux fournis lors de l’initialisation d’Auth0.
@@ -544,7 +544,7 @@ N’oubliez pas d’ajouter l’URL d’origine de la requête d’autorisation 
 </Warning>
 
 <div id="polling-with-checksession">
-  ### Vérification périodique avec checkSession()
+  ### Vérification périodique avec checkSession() {#polling-with-checksession}
 </div>
 
 Dans certains scénarios comportant plusieurs applications, où la déconnexion unique est souhaitée (lorsqu’un utilisateur se déconnecte d’une application, il doit aussi être déconnecté des autres applications), une application peut être configurée pour interroger périodiquement Auth0 à l’aide de `checkSession()` afin de vérifier si une session existe. Si aucune session n’existe, vous pouvez alors déconnecter l’utilisateur de l’application. La même méthode de vérification périodique peut être utilisée pour mettre en œuvre l’authentification silencieuse dans un scénario d’authentification unique (SSO).
@@ -552,7 +552,7 @@ Dans certains scénarios comportant plusieurs applications, où la déconnexion 
 L’intervalle entre les vérifications effectuées avec `checkSession()` devrait être d’au moins 15 minutes entre les appels, afin d’éviter tout problème futur lié à la limitation du débit de cet appel.
 
 <div id="password-reset-requests">
-  ## Requêtes de réinitialisation du mot de passe
+  ## Requêtes de réinitialisation du mot de passe {#password-reset-requests}
 </div>
 
 Si vous souhaitez mettre en place une fonctionnalité de réinitialisation du mot de passe, vous utiliserez la méthode `changePassword` et lui passerez un objet `options` comprenant un paramètre `connection` et un paramètre `email`.
@@ -575,7 +575,7 @@ $('.change_password').click(function () {
 L’utilisateur reçoit un courriel contenant un lien pour réinitialiser son mot de passe.
 
 <div id="user-management">
-  ## Gestion des utilisateurs
+  ## Gestion des utilisateurs {#user-management}
 </div>
 
 La Management API fournit des fonctionnalités qui vous permettent de lier et de dissocier des comptes d’utilisateur distincts provenant de différents fournisseurs, ainsi que de mettre à jour les métadonnées de l’utilisateur. Pour en savoir plus, consultez [Liaison de comptes d’utilisateur](/docs/fr-ca/manage-users/user-accounts/user-account-linking).
@@ -628,21 +628,21 @@ export const codeExample6 = `var auth0Manage = new auth0.Management({
 <AuthCodeBlock children={codeExample6} language="js" />
 
 <div id="get-the-user-profile">
-  ### Obtenir le profil de l’utilisateur
+  ### Obtenir le profil de l’utilisateur {#get-the-user-profile}
 </div>
 
 Pour obtenir les données du profil de l’utilisateur, utilisez la méthode `getUser()` avec `userId` et un callback comme paramètres. La méthode renvoie le profil de l’utilisateur. Notez que le `userID` requis ici est le même que celui récupéré à partir de la méthode `client.userInfo`.
 `auth0Manage.getUser(userId, cb);`
 
 <div id="update-the-user-profile">
-  ### Mettre à jour le profil d’utilisateur
+  ### Mettre à jour le profil d’utilisateur {#update-the-user-profile}
 </div>
 
 Pour mettre à jour les métadonnées de l’utilisateur, vous devez d’abord créer un objet `userMetadata`, puis appeler la méthode `patchUserMetadata` en lui transmettant l’ID utilisateur et l’objet `userMetadata` que vous avez créé. Les valeurs de cet objet remplaceront les valeurs existantes associées à la même clé, ou en ajouteront de nouvelles si elles n’existent pas encore dans les métadonnées de l’utilisateur. Pour en savoir plus, consultez [Métadonnées](/docs/fr-ca/manage-users/user-accounts/metadata).
 `auth0Manage.patchUserMetadata(userId, userMetadata, cb);`
 
 <div id="link-users">
-  ### Lier des utilisateurs
+  ### Lier des utilisateurs {#link-users}
 </div>
 
 La liaison de comptes d’utilisateur permet à un utilisateur de s’authentifier avec n’importe lequel de ses comptes et, peu importe celui utilisé, d’accéder au même profil à la connexion. Par défaut, Auth0 traite tous ces comptes comme des profils distincts. Donc, si vous voulez que les comptes d’un utilisateur soient liés, c’est la façon de procéder.

@@ -9,7 +9,7 @@ import {HowToSchema} from "/snippets/fr-ca/HowToSchema.jsx";
 <HowToSchema />
 
 <div id="before-you-start">
-  ## Avant de commencer
+  ## Avant de commencer {#before-you-start}
 </div>
 
 Effectuez les prérequis suivants avant de suivre ce Quickstart :
@@ -18,7 +18,7 @@ Effectuez les prérequis suivants avant de suivre ce Quickstart :
 2. **Configurer Auth0 pour Facebook Native** - Configurez votre application Auth0 pour utiliser Facebook Native Sign In. Consultez [Ajouter Facebook Login aux applications natives](/docs/fr-ca/authenticate/identity-providers/social-identity-providers/facebook-native).
 
 <div id="get-started">
-  ## Commencer
+  ## Commencer {#get-started}
 </div>
 
 <Steps>
@@ -265,11 +265,11 @@ Effectuez les prérequis suivants avant de suivre ce Quickstart :
 ***
 
 <div id="troubleshooting-advanced">
-  ## Dépannage et options avancées
+  ## Dépannage et options avancées {#troubleshooting-advanced}
 </div>
 
 <Accordion title="Problèmes courants et solutions">
-  ### L&#39;échange de jetons échoue avec une erreur d&#39;authentication
+  ### L&#39;échange de jetons échoue avec une erreur d&#39;authentication {#token-exchange-fails-with-authentication-error}
 
   **Solutions :**
 
@@ -278,7 +278,7 @@ Effectuez les prérequis suivants avant de suivre ce Quickstart :
   3. Confirmez que la chaîne du type de subject token correspond exactement à : `http://auth0.com/oauth/token-type/facebook-info-session-access-token`
   4. Assurez-vous que le jeton d’accès Facebook n&#39;a pas expiré avant d&#39;appeler `performLogin`
 
-  ### La requête de jeton de session renvoie une erreur
+  ### La requête de jeton de session renvoie une erreur {#session-token-request-returns-an-error}
 
   **Correctif :**
 
@@ -286,7 +286,7 @@ Effectuez les prérequis suivants avant de suivre ce Quickstart :
   * Assurez-vous que `fb_exchange_token` correspond à la chaîne de jeton brute de l&#39;objet Facebook `AccessToken`
   * Vérifiez que votre application Facebook n&#39;est pas en mode développement si vous faites des tests avec des utilisateurs non administrateurs
 
-  ### `AuthenticationException` : &quot;Connection not found&quot;
+  ### `AuthenticationException` : &quot;Connection not found&quot; {#authenticationexception-connection-not-found}
 
   **Correctif :**
 
@@ -295,7 +295,7 @@ Effectuez les prérequis suivants avant de suivre ce Quickstart :
   3. Confirmez que **Facebook Native Social Login** est activé dans les paramètres de la connexion
   4. Vérifiez que l&#39;application Auth0 est associée à la connexion Facebook
 
-  ### Certains champs du profil utilisateur sont manquants
+  ### Certains champs du profil utilisateur sont manquants {#user-profile-fields-are-missing}
 
   * Confirmez que `public_profile` et `email` figurent dans l&#39;appel `setPermissions`
   * Il se peut que l&#39;utilisateur ait refusé la permission `email` — gérez les adresses courriel nulles correctement
@@ -303,19 +303,19 @@ Effectuez les prérequis suivants avant de suivre ce Quickstart :
 </Accordion>
 
 <Accordion title="Considérations pour la production">
-  ### Meilleures pratiques de sécurité
+  ### Meilleures pratiques de sécurité {#security-best-practices}
 
   * **Désactivez la journalisation en production** : supprimez `enableLogging = true` du `DefaultClient` ou limitez-le selon l&#39;environnement — cela consigne le trafic réseau
   * **Stockage sécurisé des jetons** : utilisez `SecureCredentialsManager` pour stocker les jetons Auth0 dans l&#39;Android Keystore
   * **Refresh tokens** : demandez la portée `offline_access` et implémentez l&#39;actualisation des jetons pour maintenir les sessions
 
-  ### Configuration de l&#39;application Facebook
+  ### Configuration de l&#39;application Facebook {#facebook-app-configuration}
 
   * Faites passer votre application Facebook de **Development Mode** à **Live** avant son lancement
   * Ajoutez l&#39;empreinte de clé SHA-1 de votre application dans la console de développement Facebook
   * Consultez les exigences de la [Data Policy](https://developers.facebook.com/policy/) de Facebook pour les applications qui utilisent le SDK Login
 
-  ### Google Play Store
+  ### Google Play Store {#google-play-store}
 
   * Respectez les politiques de Google Play pour les applications qui utilisent une authentification tierce
   * Incluez Facebook Login dans la politique de confidentialité de votre application
@@ -324,7 +324,7 @@ Effectuez les prérequis suivants avant de suivre ce Quickstart :
 ***
 
 <div id="next-steps">
-  ## Prochaines étapes
+  ## Prochaines étapes {#next-steps}
 </div>
 
 <CardGroup cols={2}>

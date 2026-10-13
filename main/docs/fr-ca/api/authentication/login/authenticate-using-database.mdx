@@ -4,7 +4,7 @@ description: "Initier l’authentification passive par navigateur à l’aide d�
 ---
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `GET /authorize`
@@ -16,7 +16,7 @@ Utilisez le répertoire d’utilisateurs d’Auth0 ou votre propre base de donn�
 </Note>
 
 <div id="remarks">
-  ### Remarques
+  ### Remarques {#remarks}
 </div>
 
 * Si `response_type=token`, après l’authentification de l’utilisateur, celui-ci est redirigé vers l’`URL de rappel` de votre application, avec le jeton d’accès et le jeton d’identification transmis dans l’adresse `location.hash`. Ce mécanisme est utilisé pour les applications monopages ainsi que pour les SDK mobiles natifs.
@@ -24,7 +24,7 @@ Utilisez le répertoire d’utilisateurs d’Auth0 ou votre propre base de donn�
 * L’exemple de script auth0.js utilise la version 8 de la bibliothèque. Si vous utilisez la version 7 d’auth0.js, veuillez consulter ce [guide de référence](https://auth0.com/docs/libraries/auth0js/v7).
 
 <div id="learn-more">
-  ### En savoir plus
+  ### En savoir plus {#learn-more}
 </div>
 
 * [Fournisseurs d’identité de base de données](https://auth0.com/docs/authenticate/database-connections)
@@ -34,7 +34,7 @@ Utilisez le répertoire d’utilisateurs d’Auth0 ou votre propre base de donn�
 * [Référence de la méthode /authorize d’auth0.js](https://auth0.com/docs/libraries/auth0js#webauth-authorize)
 
 <div id="query-parameters">
-  ## Paramètres de requête
+  ## Paramètres de requête {#query-parameters}
 </div>
 
 <ParamField query="response_type" type="string" required>
@@ -64,7 +64,7 @@ Utilisez le répertoire d’utilisateurs d’Auth0 ou votre propre base de donn�
 </ParamField>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                               |

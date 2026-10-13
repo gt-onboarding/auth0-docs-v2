@@ -48,7 +48,7 @@ Auth0 vous permet d’autoriser l’accès machine à machine (M2M) à vos appli
 2. Si l’application doit seulement accéder à certaines organisations, c’est-à-dire pas à toutes, [Configurer l’accès machine à machine](/docs/fr-ca/manage-users/organizations/organizations-for-m2m-applications/manage-m2m-access#authorize-m2m-access) pour chaque API auquel vous devez accéder pour ces organisations précises.
 
 <div id="define-organization-behavior">
-  ## Définir le comportement de l’organisation
+  ## Définir le comportement de l’organisation {#define-organization-behavior}
 </div>
 
 Vous pouvez configurer la manière dont votre application utilise Organizations pendant le Client Credentials Flow pour chaque API, par exemple si l’application doit utiliser une organisation ou si elle peut accéder à n’importe quelle organisation, ou uniquement à celles auxquelles elle est explicitement associée.
@@ -56,7 +56,7 @@ Vous pouvez configurer la manière dont votre application utilise Organizations 
 Le tableau suivant explique les champs servant à définir le comportement de l’organisation pour l’accès M2M :
 
 <div id="define-organization-behavior-table">
-  ### Tableau du comportement de l’organisation
+  ### Tableau du comportement de l’organisation {#define-organization-behavior-table}
 </div>
 
 | Champ                                                               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Mappage API                                                                                                                                                                                                                                |
@@ -69,7 +69,7 @@ Le tableau suivant explique les champs servant à définir le comportement de l�
 </Callout>
 
 <div id="define-organization-behavior-for-an-application">
-  ### Définir le comportement de l’organisation pour une application
+  ### Définir le comportement de l’organisation pour une application {#define-organization-behavior-for-an-application}
 </div>
 
 Pour définir le comportement de l’organisation pour une application, utilisez l’[Auth0 Dashboard](https://manage.auth0.com/) ou la [Management API](https://auth0.com/docs/api/management/v2).
@@ -106,7 +106,7 @@ Pour définir le comportement de l’organisation pour une application, utilisez
 </Tabs>
 
 <div id="set-default-organization">
-  ## Définir l’organisation par défaut
+  ## Définir l’organisation par défaut {#set-default-organization}
 </div>
 
 Certains clients ne prennent pas en charge les champs non standards dans le [Client Credentials Flow](/docs/fr-ca/get-started/authentication-and-authorization-flow/client-credentials-flow). Ils ne peuvent donc pas envoyer le paramètre `organization` requis au point de terminaison `/oauth/token`. Pour ces clients, vous pouvez définir une organisation par défaut qui s’applique automatiquement à toute requête Client Credentials provenant de l’application lorsque `none` est spécifié et que la prise en charge des organisations est `required` par l’API.
@@ -118,7 +118,7 @@ Certains clients ne prennent pas en charge les champs non standards dans le [Cli
 Le tableau suivant décrit les champs permettant de définir une organisation par défaut pour l’accès machine-to-machine :
 
 <div id="set-default-organization-table">
-  ### Tableau de définition de l’organisation par défaut
+  ### Tableau de définition de l’organisation par défaut {#set-default-organization-table}
 </div>
 
 | Champ                                                  | Description                                                                                              | mappage API                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -126,7 +126,7 @@ Le tableau suivant décrit les champs permettant de définir une organisation pa
 | Organisation par défaut pour l’accès machine à machine | Définit l’organisation à appliquer aux requêtes Client Credentials qui ne contiennent pas d’organisation | Organisation par défaut pour l’accès machine à machine correspond à l’objet default&#95;organization avec les propriétés suivantes : <ul> <li>`organization_id` : l’ID de l’organisation à utiliser</li> <li> `flows` : le flux d’authentification à utiliser pour l’organisation par défaut.<br /><br />Ce paramètre est masqué dans l’UI et prend par défaut la valeur `["client_credentials"]` </li> </ul> |
 
 <div id="set-default-organization-for-an-application">
-  ### Définir l’organisation par défaut pour une application
+  ### Définir l’organisation par défaut pour une application {#set-default-organization-for-an-application}
 </div>
 
 Pour définir l’organisation par défaut pour une application, utilisez l’[Auth0 Dashboard](https://manage.auth0.com/) ou la [Management API](https://auth0.com/docs/api/management/v2).

@@ -14,7 +14,7 @@ Le déclencheur `custom-token-exchange` constitue la première étape du pipelin
 Les Actions de ce flux sont bloquantes (synchrones) : elles s’exécutent dans le cadre du processus du déclencheur et empêchent le reste du pipeline Auth0 de s’exécuter tant que l’Action n’est pas terminée.
 
 <div id="custom-token-exchange-vs-post-login-actions">
-  ## Échange de jetons personnalisé et Actions post-connexion
+  ## Échange de jetons personnalisé et Actions post-connexion {#custom-token-exchange-vs-post-login-actions}
 </div>
 
 Le déclencheur des Actions post-connexion s’exécute après l’Action d’échange de jetons personnalisé pour l’utilisateur défini dans la transaction. Pour d’autres cas d’utilisation, par exemple pour ajouter des revendications personnalisées aux jetons d’accès, utilisez le [déclencheur d’Action post-connexion](/docs/fr-ca/customize/actions/explore-triggers/post-login).
@@ -26,7 +26,7 @@ L’Échange de jetons personnalisé utilise le type d’autorisation d’échan
 </Callout>
 
 <div id="actor-support-for-delegation">
-  ## Prise en charge de l’acteur pour la délégation
+  ## Prise en charge de l’acteur pour la délégation {#actor-support-for-delegation}
 </div>
 
 Le déclencheur `custom-token-exchange` prend en charge les scénarios d’autorisation déléguée. L’Action peut appeler [`api.authentication.setActor()`](/docs/fr-ca/customize/actions/reference/custom-token-exchange/custom-token-exchange-api-object#api-authentication-setactor-actor) pour inclure une revendication `act` dans les jetons émis, afin d’identifier le principal agissant au nom de l’utilisateur concerné.
@@ -40,14 +40,14 @@ La revendication `act` définie au moyen de `setActor()` est également disponib
 Auth0 prend en charge l’émission d’un Session Transfer Token contenant l’acteur dans son contexte, afin d’établir une session Web déléguée pour un autre utilisateur. Pour en savoir plus, consultez [Délégation de session](/docs/fr-ca/authenticate/single-sign-on/session-delegation).
 
 <div id="references">
-  ## Références
+  ## Références {#references}
 </div>
 
 * [Objet Event](/docs/fr-ca/customize/actions/reference/custom-token-exchange/custom-token-exchange-event-object) : fournit des renseignements contextuels sur la requête d’échange de jetons, notamment le `subject_token`, l’adresse IP, le client et plus encore.
 * [Objet API](/docs/fr-ca/customize/actions/reference/custom-token-exchange/custom-token-exchange-api-object) : fournit des méthodes à utiliser avec votre Action d’échange de jetons pour définir l’utilisateur, définir l’acteur pour la délégation, rejeter la transaction, définir les métadonnées utilisateur, accéder au cache Actions et plus encore.
 
 <div id="common-use-cases">
-  ## Cas d’utilisation courants
+  ## Cas d’utilisation courants {#common-use-cases}
 </div>
 
 Pour découvrir des cas d’utilisation courants de l’échange de jetons personnalisé, consultez [Exemples de cas d’utilisation](/docs/fr-ca/authenticate/custom-token-exchange/cte-example-use-cases).

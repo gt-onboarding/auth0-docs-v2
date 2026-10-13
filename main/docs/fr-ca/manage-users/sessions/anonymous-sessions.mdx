@@ -29,11 +29,11 @@ Utilisez les sessions anonymes dans les cas d’utilisation suivants :
 </Warning>
 
 <div id="how-it-works">
-  ## Comment ça fonctionne
+  ## Comment ça fonctionne {#how-it-works}
 </div>
 
 <div id="gather-anonymous-sessions-data">
-  ### Recueillir des données sur les sessions anonymes
+  ### Recueillir des données sur les sessions anonymes {#gather-anonymous-sessions-data}
 </div>
 
 Lorsque vous commencez à recueillir des renseignements sur un utilisateur, même s’il ne s’est pas encore authentifié, votre application envoie une requête `POST` au point de terminaison `/anonymous/token`.
@@ -76,7 +76,7 @@ sequenceDiagram
 ```
 
 <div id="transfer-anonymous-sessions-data-to-users-metadata">
-  ### Transférer les données de session anonymes vers les métadonnées de l’utilisateur
+  ### Transférer les données de session anonymes vers les métadonnées de l’utilisateur {#transfer-anonymous-sessions-data-to-users-metadata}
 </div>
 
 Lorsqu’un utilisateur disposant d’une session anonyme décide de se connecter ou de s’inscrire, votre application transmet le `anonymous_session_token` au point de terminaison `/authorize` au moyen d’un cookie ou d’un en-tête HTTP.
@@ -130,7 +130,7 @@ Auth0 met les données de session anonyme à votre disposition dans les déclenc
 Pour en savoir plus sur les sessions anonymes avec Actions, consultez les [cas d’utilisation des sessions anonymes](/docs/fr-ca/manage-users/sessions/anonymous-sessions/anonymous-sessions-use-cases).
 
 <div id="end-the-anonymous-session-after-transfer">
-  ### Mettre fin à la session anonyme après le transfert
+  ### Mettre fin à la session anonyme après le transfert {#end-the-anonymous-session-after-transfer}
 </div>
 
 Les sessions anonymes ne sont pas automatiquement invalidées lorsqu’un utilisateur s’authentifie. Pour mettre fin à la session, utilisez le point de terminaison `/anonymous/logout` :
@@ -148,7 +148,7 @@ if (wasAnonymousSession) {
 ```
 
 <div id="best-practices">
-  ## Bonnes pratiques
+  ## Bonnes pratiques {#best-practices}
 </div>
 
 Voici quelques bonnes pratiques pour les sessions anonymes :
@@ -166,7 +166,7 @@ Voici quelques bonnes pratiques pour les sessions anonymes :
 * Regroupez les [mises à jour des métadonnées](/docs/fr-ca/manage-users/sessions/anonymous-sessions/configure-anonymous-sessions#update-the-session-with-metadata) et limitez-en le nombre. Évitez les mises à jour fréquentes des métadonnées.
 
 <div id="limitations">
-  ## Limites
+  ## Limites {#limitations}
 </div>
 
 * Les flux de [réinitialisation du mot de passe](/docs/fr-ca/customize/actions/explore-triggers/password-reset-triggers#password-reset-triggers) ne sont pas pris en charge pour les sessions anonymes.
@@ -176,7 +176,7 @@ Voici quelques bonnes pratiques pour les sessions anonymes :
 * L’[échange de jeton d’actualisation](/docs/fr-ca/secure/call-apis-on-users-behalf/token-vault/configure-token-vault#configure-token-exchange) n’est pas pris en charge pour les sessions anonymes, car l’utilisateur est déjà connecté s’il possède un jeton d’actualisation.
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Configurer les sessions anonymes](/docs/fr-ca/manage-users/sessions/anonymous-sessions/configure-anonymous-sessions) Découvrez comment configurer les sessions anonymes.

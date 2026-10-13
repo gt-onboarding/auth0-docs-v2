@@ -6,7 +6,7 @@ title: Auth0 Configuration (Applications Web + SSO)
 Dans cette section, nous passerons en revue toutes les configurations à appliquer dans l’[Auth0 Dashboard](https://manage.auth0.com/#).
 
 <div id="application">
-  ## Application
+  ## Application {#application}
 </div>
 
 La partie de la configuration Auth0 commence par l’enregistrement de l’application de feuilles de temps dans le <Tooltip tip="Auth0 Dashboard : le principal produit d’Auth0 pour configurer vos services." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Auth0+dashboard">Auth0 Dashboard</Tooltip> en tant qu’**application**. Une application effectue des requêtes vers des ressources protégées au nom du <Tooltip tip="Resource Owner : entité (comme un utilisateur ou une application) capable d’accorder l’accès à une ressource protégée." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=resource+owner">propriétaire de la ressource</Tooltip> (utilisateur final).
@@ -24,7 +24,7 @@ Les principales caractéristiques d’une application dans Auth0 sont :
 * **URL de rappel** : l’URL vers laquelle l’utilisateur est redirigé après s’être authentifié.
 
 <div id="create-an-application">
-  ### Créer une application
+  ### Créer une application {#create-an-application}
 </div>
 
 Le scénario d&#39;ExampleCo ne comporte qu&#39;une seule application : l’application Web de feuilles de temps. Nous devons donc configurer une application du côté d’Auth0.
@@ -42,7 +42,7 @@ Les autres vues disponibles sont :
 * [Connections](https://manage.auth0.com/#/applications/\{yourClientId}/connections)
 
 <div id="configure-callback-urls">
-  ### Configurer les URL de rappel
+  ### Configurer les URL de rappel {#configure-callback-urls}
 </div>
 
 Le champ **Allowed Callback URLs** contient la ou les URL vers lesquelles Auth0 redirigera l’utilisateur après son authentification afin de permettre à <Tooltip tip="OpenID : norme ouverte d’authentification qui permet aux applications de vérifier l’identité des utilisateurs sans recueillir ni stocker d’informations de connexion." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=OpenID">OpenID</Tooltip> Connect (OIDC) de terminer le processus d’authentification. Vous pouvez préciser plusieurs URL valides en les séparant par des virgules. Vous pouvez utiliser le symbole étoile comme caractère générique pour les sous-domaines, par exemple `*.google.com`. Assurez-vous d’indiquer le protocole, `http://` ou `https://`, sinon le rappel pourrait échouer dans certains cas.
@@ -50,7 +50,7 @@ Le champ **Allowed Callback URLs** contient la ou les URL vers lesquelles Auth
 L’URL de rappel de notre projet d’exemple est `http://localhost:5000/signin-auth0`. Définissez cette valeur dans le champ **Allowed Callback URLs** si vous prévoyez utiliser notre exemple; sinon, ajoutez l’URL que vous avez choisie pour déployer votre application.
 
 <div id="connections">
-  ## Connexions
+  ## Connexions {#connections}
 </div>
 
 La prochaine étape consiste à configurer les <Tooltip tip="Fournisseur d’identité (IdP) : service qui stocke et gère les identités numériques." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=identity+providers">fournisseurs d’identité</Tooltip> qui seront utilisés pour l’authentification de l’application web. Chaque fournisseur d’identité correspond à une **connexion** dans Auth0. Chaque application a besoin d’au moins une connexion, et chaque connexion peut être utilisée par plus d’une application.
@@ -58,7 +58,7 @@ La prochaine étape consiste à configurer les <Tooltip tip="Fournisseur d’ide
 ExampleCo doit configurer deux connexions : une connexion Active Directory pour les employés internes et une connexion de base de données pour les utilisateurs externes.
 
 <Info>
-  ### Fournisseurs d’identité pris en charge
+  ### Fournisseurs d’identité pris en charge {#supported-identity-providers}
 
   Auth0 prend en charge un très grand nombre de protocoles et de fournisseurs d’identité :
 
@@ -69,7 +69,7 @@ ExampleCo doit configurer deux connexions : une connexion Active Directory pour
 </Info>
 
 <div id="create-a-database-connection">
-  ### Créer une connexion de base de données
+  ### Créer une connexion de base de données {#create-a-database-connection}
 </div>
 
 Pour enregistrer une connexion de base de données, suivez les étapes ci-dessous :
@@ -83,7 +83,7 @@ Après avoir créé la connexion de base de données, vous devez l’activer pou
 Pour en savoir plus sur les connexions de base de données, consultez [Fournisseurs d’identité de base de données](/docs/fr-ca/authenticate/database-connections).
 
 <div id="create-an-active-directory-ldap-connection">
-  ### Créer une connexion Active Directory / LDAP
+  ### Créer une connexion Active Directory / LDAP {#create-an-active-directory-ldap-connection}
 </div>
 
 Ensuite, configurez votre connexion Active Directory / LDAP. Dans l’[Auth0 Dashboard](https://manage.auth0.com/#), accédez à **Authentication &gt; Enterprise**.
@@ -100,7 +100,7 @@ Vous devez ensuite créer la connexion AD / LDAP et installer le connecteur AD. 
 Une fois la connexion et le connecteur configurés, assurez-vous d’activer votre application pour qu’elle utilise cette connexion AD / LDAP :
 
 <Info>
-  ### Prise en charge de Kerberos
+  ### Prise en charge de Kerberos {#kerberos-support}
 
   Le connecteur AD/LDAP prend en charge Kerberos afin de permettre à vos utilisateurs de s’authentifier plus facilement lorsqu’ils utilisent un appareil joint au domaine au sein du réseau d’entreprise. Pour activer Kerberos dans Active Directory, il vous suffit d’activer l’option dans le dashboard. Après avoir activé Kerberos, vous pourrez aussi configurer les **Plages d’adresses IP**. Lorsque les utilisateurs proviennent de ces plages d’adresses IP, cette information sera exposée dans l’endpoint SSO, ce qui signifie que les SDKs côté client comme auth0.js et Lock pourront détecter la prise en charge de Kerberos et permettre l’authentification Windows intégrée.
   [Plus d’informations](/docs/fr-ca/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/configure-ad-ldap-connector-with-kerberos)

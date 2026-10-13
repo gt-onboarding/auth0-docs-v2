@@ -5,13 +5,13 @@
       "pages": [
         "docs/fr-ca/tenant-logs",
         {
-          "group": "Événements Actions",
+          "group": "Actions events",
           "pages": [
             "docs/fr-ca/tenant-logs/actions/actions-execution-failed"
           ]
         },
         {
-          "group": "Connexion - Échec",
+          "group": "Login - Failure",
           "pages": [
             "docs/fr-ca/tenant-logs/auth-login-fail/f",
             "docs/fr-ca/tenant-logs/auth-login-fail/fcoa",
@@ -21,14 +21,14 @@
           ]
         },
         {
-          "group": "Connexion - Notification",
+          "group": "Login - Notification",
           "pages": [
             "docs/fr-ca/tenant-logs/auth-login-notification/scv",
             "docs/fr-ca/tenant-logs/auth-login-notification/w"
           ]
         },
         {
-          "group": "Connexion - Réussite",
+          "group": "Login - Success",
           "pages": [
             "docs/fr-ca/tenant-logs/auth-login-success/s",
             "docs/fr-ca/tenant-logs/auth-login-success/scoa",
@@ -37,7 +37,7 @@
           ]
         },
         {
-          "group": "Déconnexion - Échec",
+          "group": "Logout - Failure",
           "pages": [
             "docs/fr-ca/tenant-logs/auth-logout-fail/federated-logout-failed",
             "docs/fr-ca/tenant-logs/auth-logout-fail/flo",
@@ -46,7 +46,7 @@
           ]
         },
         {
-          "group": "Déconnexion - Réussite",
+          "group": "Logout - Success",
           "pages": [
             "docs/fr-ca/tenant-logs/auth-logout-success/oidc-backchannel-logout-succeeded",
             "docs/fr-ca/tenant-logs/auth-logout-success/slo",
@@ -54,33 +54,33 @@
           ]
         },
         {
-          "group": "Inscription - Échec",
+          "group": "Signup - Failure",
           "pages": [
             "docs/fr-ca/tenant-logs/auth-signup-fail/fs"
           ]
         },
         {
-          "group": "Inscription - Réussite",
+          "group": "Signup - Success",
           "pages": [
             "docs/fr-ca/tenant-logs/auth-signup-success/ss"
           ]
         },
         {
-          "group": "Authentification silencieuse - Échec",
+          "group": "Silent Authentication - Failure",
           "pages": [
             "docs/fr-ca/tenant-logs/auth-silent-auth-fail/fdelsa",
             "docs/fr-ca/tenant-logs/auth-silent-auth-fail/fsa"
           ]
         },
         {
-          "group": "Authentification silencieuse - Réussite",
+          "group": "Silent Authentication - Success",
           "pages": [
             "docs/fr-ca/tenant-logs/auth-silent-auth-success/sdelsa",
             "docs/fr-ca/tenant-logs/auth-silent-auth-success/ssa"
           ]
         },
         {
-          "group": "Échange de jetons - Échec",
+          "group": "Token Exchange - Failure",
           "pages": [
             "docs/fr-ca/tenant-logs/auth-token-exchange-fail/ciba-exchange-failed",
             "docs/fr-ca/tenant-logs/auth-token-exchange-fail/failed-on-behalf-of-token-exchange",
@@ -101,7 +101,7 @@
           ]
         },
         {
-          "group": "Échange de jetons - Réussite",
+          "group": "Token Exchange - Success",
           "pages": [
             "docs/fr-ca/tenant-logs/auth-token-exchange-success/ciba-exchange-succeeded",
             "docs/fr-ca/tenant-logs/auth-token-exchange-success/feta",
@@ -124,14 +124,14 @@
           ]
         },
         {
-          "group": "Management API - Réussite",
+          "group": "Management API - Success",
           "pages": [
             "docs/fr-ca/tenant-logs/management-success/mgmt-api-read",
             "docs/fr-ca/tenant-logs/management-success/sapi"
           ]
         },
         {
-          "group": "Autres événements",
+          "group": "Other Events",
           "pages": [
             "docs/fr-ca/tenant-logs/other/acls-summary",
             "docs/fr-ca/tenant-logs/other/ciba-start-failed",
@@ -185,13 +185,13 @@
           ]
         },
         {
-          "group": "Événements SCIM",
+          "group": "SCIM Events",
           "pages": [
             "docs/fr-ca/tenant-logs/scim-event/sscim"
           ]
         },
         {
-          "group": "Système - Notification",
+          "group": "System - Notification",
           "pages": [
             "docs/fr-ca/tenant-logs/system-notification/acul-sdk-notice",
             "docs/fr-ca/tenant-logs/system-notification/api-limit",
@@ -211,7 +211,7 @@
           ]
         },
         {
-          "group": "Utilisateur/comportement - Échec",
+          "group": "User/Behavioral - Failure",
           "pages": [
             "docs/fr-ca/tenant-logs/user-fail/connected-accounts-connection-failed",
             "docs/fr-ca/tenant-logs/user-fail/connected-accounts-delete-failed",
@@ -233,7 +233,7 @@
           ]
         },
         {
-          "group": "Utilisateur/comportement - Notification",
+          "group": "User/Behavioral - Notification",
           "pages": [
             "docs/fr-ca/tenant-logs/user-notification/cs",
             "docs/fr-ca/tenant-logs/user-notification/gd-enrollment-complete",
@@ -245,7 +245,7 @@
           ]
         },
         {
-          "group": "Utilisateur/comportement - Réussite",
+          "group": "User/Behavioral - Success",
           "pages": [
             "docs/fr-ca/tenant-logs/user-success/connected-accounts-connection-succeeded",
             "docs/fr-ca/tenant-logs/user-success/connected-accounts-delete-succeeded",

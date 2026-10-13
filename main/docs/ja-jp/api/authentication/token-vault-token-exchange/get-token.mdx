@@ -15,7 +15,7 @@ Token Vault を使用すると、アプリケーションは Auth0 トークン�
 詳細については、[Token Vault のドキュメント](/docs/ja-jp/secure/call-apis-on-users-behalf/token-vault)を参照してください。
 
 <div id="remarks">
-  ## 注記
+  ## 注記 {#remarks}
 </div>
 
 * 交換を実行する前に、[Token Vault の接続を設定](/docs/ja-jp/secure/call-apis-on-users-behalf/token-vault/configure-token-vault)し、[My Account API](/docs/ja-jp/manage-users/my-account-api)を使用する [Connected Accounts フロー](/docs/ja-jp/secure/call-apis-on-users-behalf/token-vault/connected-accounts-for-token-vault)を通じて、ユーザーの外部アカウントを接続する必要があります。
@@ -29,7 +29,7 @@ Token Vault を使用すると、アプリケーションは Auth0 トークン�
 * Auth0 は、`connection` (および指定されている場合は `login_hint`) に一致するユーザーアイデンティティが見つからない場合、`401` ステータスコードを返します。
 
 <div id="headers">
-  ## ヘッダー
+  ## ヘッダー {#headers}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -41,7 +41,7 @@ Token Vault を使用すると、アプリケーションは Auth0 トークン�
 </ParamField>
 
 <div id="request-body">
-  ## リクエストボディ
+  ## リクエストボディ {#request-body}
 </div>
 
 <ParamField body="grant_type" type="string" required>
@@ -77,7 +77,7 @@ Token Vault を使用すると、アプリケーションは Auth0 トークン�
 </ParamField>
 
 <div id="response">
-  ## レスポンス
+  ## レスポンス {#response}
 </div>
 
 | ステータス | 説明                                                                                              |
@@ -99,7 +99,7 @@ Token Vault を使用すると、アプリケーションは Auth0 トークン�
 </ResponseExample>
 
 <div id="response-fields">
-  ## レスポンスフィールド
+  ## レスポンスフィールド {#response-fields}
 </div>
 
 <ResponseField name="access_token" type="string">

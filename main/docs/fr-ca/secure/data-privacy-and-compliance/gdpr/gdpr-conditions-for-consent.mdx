@@ -16,7 +16,7 @@ Cet article explique comment utiliser les fonctionnalités d’Auth0 pour mettre
 </Callout>
 
 <div id="ask-for-consent">
-  ## Demander le consentement
+  ## Demander le consentement {#ask-for-consent}
 </div>
 
 Lors de l’inscription, vous devez obtenir le consentement de vos utilisateurs. Avec Auth0, vous pouvez enregistrer cette information dans les métadonnées de l’utilisateur. Plusieurs options sont offertes selon la façon dont vous utilisez Auth0 pour authentifier vos utilisateurs. Avant de concevoir votre solution à l’aide des métadonnées, assurez-vous de connaître les restrictions. Auth0 limite la taille totale de `user_metadata` à **16 MB**. Pour en savoir plus, consultez [Noms de champs et types de données des métadonnées](/docs/fr-ca/manage-users/user-accounts/metadata/metadata-fields-data).
@@ -26,7 +26,7 @@ Lors de l’inscription, vous devez obtenir le consentement de vos utilisateurs.
 </Warning>
 
 <div id="use-lock">
-  ### Utiliser Lock
+  ### Utiliser Lock {#use-lock}
 </div>
 
 Vous pouvez personnaliser l’interface Lock UI pour afficher des liens vers vos pages de conditions générales et/ou d’énoncé de confidentialité, ainsi qu’une case de consentement que l’utilisateur doit cocher pour pouvoir s’inscrire. Pour ce faire, utilisez l’option Lock `mustAcceptTerm`s. Lorsque cette propriété est définie sur `true`, une case à cocher s’affiche à côté des conditions générales et doit être cochée avant l’inscription. Les conditions générales peuvent être précisées à l’aide de l’option `languageDictionary`. Pour en savoir plus, consultez [Options de configuration de Lock](/docs/fr-ca/libraries/lock/lock-configuration).
@@ -40,7 +40,7 @@ Si vous utilisez des connexions sociales, il n’est pas possible d’ajouter de
 Pour savoir comment mettre en œuvre l’un de ces scénarios, consultez [GDPR : consigner le consentement avec Lock](/docs/fr-ca/secure/data-privacy-and-compliance/gdpr/gdpr-track-consent-with-lock).
 
 <div id="use-custom-ui">
-  ### Utiliser une interface utilisateur personnalisée
+  ### Utiliser une interface utilisateur personnalisée {#use-custom-ui}
 </div>
 
 Si vous utilisez un formulaire d’inscription personnalisé avec une connexion de base de données, vous devez ajouter un champ supplémentaire à l’écran d’inscription afin de recueillir le consentement de l’utilisateur. Ensuite, appelez le [**point de terminaison Signup**](https://auth0.com/docs/api/authentication#signup) de l’Authentication API afin de créer l’utilisateur dans Auth0. À cette étape, vous pouvez enregistrer les renseignements sur le consentement dans le `user_metadata`.
@@ -52,7 +52,7 @@ Si vous utilisez un formulaire d’inscription personnalisé avec des fournisseu
 Pour savoir comment mettre en œuvre l’un ou l’autre de ces scénarios, consultez [GDPR : Suivre le consentement avec une interface utilisateur personnalisée](/docs/fr-ca/secure/data-privacy-and-compliance/gdpr/gdpr-track-consent-with-custom-ui).
 
 <div id="re-consent-and-user-migration">
-  ### Renouvellement du consentement et migration des utilisateurs
+  ### Renouvellement du consentement et migration des utilisateurs {#re-consent-and-user-migration}
 </div>
 
 Si vous devez demander le consentement d’utilisateurs existants et que vous décidez de migrer vos utilisateurs d’une base de données existante vers Auth0, vous pouvez [utiliser notre fonctionnalité de migration automatique des utilisateurs](/docs/fr-ca/manage-users/user-migration/configure-automatic-migration-from-your-database). En l’activant, chaque fois qu’un utilisateur ouvrira une session pour la première fois (depuis son activation), son compte sera créé dans Auth0 sans qu’il ait à réinitialiser son mot de passe. Pour ce faire, vous devez :
@@ -63,7 +63,7 @@ Si vous devez demander le consentement d’utilisateurs existants et que vous d�
 Notez que chaque fois que vos conditions générales changent, vous **devez** redemander le consentement des utilisateurs.
 
 <div id="track-consent">
-  ## Suivi du consentement
+  ## Suivi du consentement {#track-consent}
 </div>
 
 Selon le RGPD, vous devriez être en mesure de démontrer que l’utilisateur a consenti au traitement de ses données personnelles.
@@ -75,7 +75,7 @@ La Management API offre également plusieurs options pour la recherche d’utili
 Pour accéder à la Management API, vous aurez besoin d’un <Tooltip tip="Jeton d’accès : justificatif d’autorisation, sous la forme d’une chaîne opaque ou d’un JWT, utilisé pour accéder à une API." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=access+token">jeton d’accès</Tooltip>. Pour savoir comment obtenir un jeton d’accès pour la Management API, consultez [Jetons d’accès pour la Management API](/docs/fr-ca/secure/tokens/access-tokens/management-api-access-tokens).
 
 <div id="search-for-users-by-email-address">
-  ### Rechercher des utilisateurs par adresse courriel
+  ### Rechercher des utilisateurs par adresse courriel {#search-for-users-by-email-address}
 </div>
 
 Pour rechercher un utilisateur à partir de son adresse courriel, utilisez l’[**point de terminaison Search User by Email**](/docs/fr-ca/manage-users/user-search/user-search-best-practices).
@@ -229,7 +229,7 @@ Exemple de réponse :
 ```
 
 <div id="search-for-users-by-id">
-  ### Rechercher des utilisateurs par ID
+  ### Rechercher des utilisateurs par ID {#search-for-users-by-id}
 </div>
 
 Pour rechercher un utilisateur par son ID, utilisez l’[point de terminaison **Get a User**](/docs/fr-ca/manage-users/user-search/user-search-best-practices).
@@ -380,7 +380,7 @@ Exemple de réponse :
 ```
 
 <div id="update-consent-information">
-  ### Mettre à jour les informations sur le consentement
+  ### Mettre à jour les informations sur le consentement {#update-consent-information}
 </div>
 
 Pour mettre à jour le `user_metadata` d’un utilisateur, utilisez le [point de terminaison **Update a User**](https://auth0.com/docs/api/management/v2#!/Users/patch_users_by_id).
@@ -408,7 +408,7 @@ Si vos métadonnées sont stockées sous forme de propriétés internes :
 ```
 
 <div id="update-root-property">
-  #### Mettre à jour la propriété racine
+  #### Mettre à jour la propriété racine {#update-root-property}
 </div>
 
 Les mises à jour des propriétés de niveau racine sont fusionnées; vous n’avez donc qu’à envoyer la valeur du champ que vous souhaitez mettre à jour. Par exemple, supposons que nous voulions ajouter une date de consentement et la définir à `01/23/2018`.
@@ -573,7 +573,7 @@ Cela ajoutera une nouvelle propriété au profil de l’utilisateur, **user&#95;
 ```
 
 <div id="update-inner-property">
-  #### Mettre à jour une propriété imbriquée
+  #### Mettre à jour une propriété imbriquée {#update-inner-property}
 </div>
 
 Pour mettre à jour une propriété imbriquée, vous devez envoyer l’objet metadata au complet, même si vous ne mettez à jour qu’une seule propriété. Si vous n’incluez pas l’objet en entier, Auth0 supprimera vos propriétés existantes.
@@ -744,7 +744,7 @@ Cela ajoutera une nouvelle propriété au profil utilisateur, **user&#95;metadat
 ```
 
 <div id="export-consent-information">
-  ### Exporter les renseignements sur le consentement
+  ### Exporter les renseignements sur le consentement {#export-consent-information}
 </div>
 
 Pour exporter une liste de vos utilisateurs à l’aide de la Management API, utilisez le [point de terminaison **User Export**](/docs/fr-ca/manage-users/user-search/user-search-best-practices).
@@ -759,7 +759,7 @@ Vous devez aussi :
 * Choisir où vous voulez stocker le consentement : dans la base de données d’Auth0 ou ailleurs.
 
 <div id="withdraw-consent">
-  ## Retirer le consentement
+  ## Retirer le consentement {#withdraw-consent}
 </div>
 
 L&#39;utilisateur devrait avoir la possibilité de retirer son consentement dans votre application. Cette option devrait être facilement accessible et clairement identifiable. Une fois que l&#39;utilisateur décide de retirer son consentement, vous devriez prendre les mesures nécessaires.
@@ -767,7 +767,7 @@ L&#39;utilisateur devrait avoir la possibilité de retirer son consentement dans
 Vous devez d&#39;abord décider comment vous gérerez le retrait du consentement : supprimerez-vous les utilisateurs ou les marquerez-vous comme supprimés ?
 
 <div id="delete-user">
-  ### Supprimer un utilisateur
+  ### Supprimer un utilisateur {#delete-user}
 </div>
 
 Pour supprimer un utilisateur, utilisez le point de terminaison [**Supprimer un utilisateur**](https://auth0.com/docs/api/management/v2#!/Users/delete_users_by_id).
@@ -901,7 +901,7 @@ Pour supprimer un utilisateur, utilisez le point de terminaison [**Supprimer un 
 Le corps de la réponse de ce point de terminaison est vide. Donc, si vous voulez confirmer que l’utilisateur a bien été supprimé, essayez de le récupérer à l’aide de son courriel. Si le point de terminaison renvoie une erreur, cela signifie que votre requête de suppression de l’utilisateur a réussi.
 
 <div id="flag-user-as-deleted">
-  ### Marquer l’utilisateur comme supprimé
+  ### Marquer l’utilisateur comme supprimé {#flag-user-as-deleted}
 </div>
 
 Si vous ne voulez pas supprimer l’utilisateur, marquez son profil comme supprimé à l’aide du point de terminaison [**app&#95;metadata**](https://auth0.com/docs/api/management/v2#!/Users/patch_users_by_id). Ensuite, ajoutez du code pour faire échouer le processus d’authentification pour tout utilisateur dont le profil est marqué comme tel.
@@ -909,7 +909,7 @@ Si vous ne voulez pas supprimer l’utilisateur, marquez son profil comme suppri
 Cela vous permet de conserver une trace des utilisateurs supprimés pour usage ultérieur.
 
 <div id="flag-the-profile">
-  #### Marquer le profil
+  #### Marquer le profil {#flag-the-profile}
 </div>
 
 Pour marquer un utilisateur comme supprimé, utilisez `app_metadata`. Dans l’exemple suivant, nous vous montrons comment ajouter une propriété appelée **deleted** au champ **app&#95;metadata**. Cela vous permet de configurer le processus d’authentification pour traiter comme supprimés tous les utilisateurs dont cette propriété est définie à true.
@@ -1066,7 +1066,7 @@ Pour mettre à jour les métadonnées d’un utilisateur, utilisez le point de t
 </AuthCodeGroup>
 
 <div id="disable-login-for-flagged-users">
-  #### Désactiver la connexion pour les utilisateurs marqués
+  #### Désactiver la connexion pour les utilisateurs marqués {#disable-login-for-flagged-users}
 </div>
 
 Ensuite, vous devez désactiver la connexion pour les utilisateurs marqués comme supprimés. Pour ce faire, vous allez ajouter une Rule (un extrait Javascript qui s’exécute dans le pipeline d’authentification).
@@ -1096,7 +1096,7 @@ Vous devez aussi :
 * Configurer dans l’application la section où les clients retireront leur consentement.
 
 <div id="learn-more">
-  ## Pour en savoir plus
+  ## Pour en savoir plus {#learn-more}
 </div>
 
 * [RGPD : minimisation des données](/docs/fr-ca/secure/data-privacy-and-compliance/gdpr/gdpr-data-minimization)

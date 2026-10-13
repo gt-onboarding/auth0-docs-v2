@@ -6,7 +6,7 @@ description: "Échangez un code d’autorisation contre un jeton d’accès apr�
 import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `POST /oauth/token`
@@ -14,7 +14,7 @@ import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 Lorsque les utilisateurs sont redirigés vers votre URL de rappel, vous devez effectuer une requête `POST` au point de terminaison `oauth/token` pour échanger un code d’autorisation contre un jeton d’accès ou un jeton d’identité, ou les deux.
 
 <div id="remarks">
-  ### Remarques
+  ### Remarques {#remarks}
 </div>
 
 Pour envoyer une requête au point de terminaison `/oauth/token`, vous devez :
@@ -24,7 +24,7 @@ Pour envoyer une requête au point de terminaison `/oauth/token`, vous devez :
 * Inclure un paramètre supplémentaire d’authentification de l’application dans la requête (p. ex. `client_secret`, ou `client_assertion` et `client_assertion_type` pour l’authentification du client par JSON Web Token, ou transmettre les en-têtes `client-certificate` et `client-certificate-ca-verified` lorsque vous utilisez Mutual TLS).
 
 <div id="headers">
-  ## En-têtes
+  ## En-têtes {#headers}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -32,7 +32,7 @@ Pour envoyer une requête au point de terminaison `/oauth/token`, vous devez :
 </ParamField>
 
 <div id="body-parameters">
-  ## Paramètres du corps
+  ## Paramètres du corps {#body-parameters}
 </div>
 
 <div className="prose-sm prose-gray dark:prose-invert">
@@ -60,7 +60,7 @@ Pour envoyer une requête au point de terminaison `/oauth/token`, vous devez :
 </ParamField>
 
 <div id="response-schema">
-  ## Schéma de réponse
+  ## Schéma de réponse {#response-schema}
 </div>
 
 <ResponseSchema>
@@ -86,7 +86,7 @@ Pour envoyer une requête au point de terminaison `/oauth/token`, vous devez :
 </ResponseSchema>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                           |

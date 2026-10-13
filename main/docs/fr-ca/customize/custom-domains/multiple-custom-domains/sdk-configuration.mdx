@@ -9,11 +9,11 @@ import {AuthCodeGroup} from "/snippets/fr-ca/AuthCodeGroup.jsx";
 Lorsque vous utilisez [plusieurs domaines personnalisés](/docs/fr-ca/customize/custom-domains/multiple-custom-domains), vous devez configurer vos SDK Auth0 pour qu’ils utilisent le domaine personnalisé approprié pour l’authentification. Ce guide présente la configuration des SDK pour différentes plateformes et divers scénarios.
 
 <div id="key-concepts">
-  ## Concepts clés
+  ## Concepts clés {#key-concepts}
 </div>
 
 <div id="domain-parameter">
-  ### Paramètre de domaine
+  ### Paramètre de domaine {#domain-parameter}
 </div>
 
 Tous les SDK Auth0 nécessitent un paramètre `domain` qui indique quel domaine Auth0 utiliser pour l’authentification. Si vous utilisez des domaines personnalisés, définissez ce paramètre sur votre domaine personnalisé plutôt que sur votre domaine Auth0 canonique.
@@ -31,7 +31,7 @@ domain: 'login.example.com'
 ```
 
 <div id="token-issuer">
-  ### Émetteur du jeton
+  ### Émetteur du jeton {#token-issuer}
 </div>
 
 Lorsque vous utilisez un domaine personnalisé, les jetons auront le champ `iss` (issuer) défini sur votre domaine personnalisé :
@@ -47,7 +47,7 @@ Lorsque vous utilisez un domaine personnalisé, les jetons auront le champ `iss`
 Vous devez configurer la validation du jeton pour qu’elle reconnaisse votre domaine personnalisé comme un émetteur valide.
 
 <div id="authentication-sdks">
-  ## SDK d’authentification
+  ## SDK d’authentification {#authentication-sdks}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -55,7 +55,7 @@ Vous devez configurer la validation du jeton pour qu’elle reconnaisse votre do
 </Callout>
 
 <div id="auth0-spa-sdk-javascript">
-  ### Auth0 SPA SDK (Javascript)
+  ### Auth0 SPA SDK (Javascript) {#auth0-spa-sdk-javascript}
 </div>
 
 Pour les applications monopage utilisant le [Auth0 SPA SDK](https://github.com/auth0/auth0-spa-js) :
@@ -114,7 +114,7 @@ Pour les applications monopage utilisant le [Auth0 SPA SDK](https://github.com/a
 </AuthCodeGroup>
 
 <div id="nextjs">
-  ### Next.js
+  ### Next.js {#nextjs}
 </div>
 
 Pour les applications Next.js qui utilisent le [Auth0 Next.js SDK](https://github.com/auth0/nextjs-auth0) (v4+) :
@@ -212,7 +212,7 @@ Pour les applications Next.js qui utilisent le [Auth0 Next.js SDK](https://githu
   ```
 
 <div id="auth0-react-sdk">
-  ### Auth0 React SDK
+  ### Auth0 React SDK {#auth0-react-sdk}
 </div>
 
 Pour les applications React qui utilisent le [Auth0 React SDK](https://github.com/auth0/auth0-react) :
@@ -259,7 +259,7 @@ function App() {
 ```
 
 <div id="auth0js">
-  ### Auth0.js
+  ### Auth0.js {#auth0js}
 </div>
 
 Pour les applications qui utilisent [Auth0.js](https://github.com/auth0/auth0.js) :
@@ -278,7 +278,7 @@ webAuth.authorize();
 ```
 
 <div id="nodejs-express">
-  ### Node.js (Express)
+  ### Node.js (Express) {#nodejs-express}
 </div>
 
 Pour les applications Node.js qui utilisent [express-openid-connect](https://github.com/auth0/express-openid-connect) :
@@ -333,11 +333,11 @@ app.use((req, res, next) => {
 ```
 
 <div id="mobile-sdks">
-  ### SDK mobiles
+  ### SDK mobiles {#mobile-sdks}
 </div>
 
 <div id="ios-swift">
-  #### iOS (Swift)
+  #### iOS (Swift) {#ios-swift}
 </div>
 
 Avec [Auth0.swift](https://github.com/auth0/Auth0.swift) :
@@ -388,7 +388,7 @@ class AuthService {
 ```
 
 <div id="android-kotlin">
-  #### Android (Kotlin)
+  #### Android (Kotlin) {#android-kotlin}
 </div>
 
 Avec [Auth0.Android](https://github.com/auth0/Auth0.Android) :
@@ -442,7 +442,7 @@ class AuthManager(private val context: Context) {
 ```
 
 <div id="react-native">
-  #### React Native
+  #### React Native {#react-native}
 </div>
 
 Avec [react-native-auth0](https://github.com/auth0/react-native-auth0) :
@@ -469,7 +469,7 @@ auth0.webAuth
 ```
 
 <div id="flutter">
-  ### Flutter
+  ### Flutter {#flutter}
 </div>
 
 Avec [flutter&#95;auth0](https://github.com/auth0/auth0-flutter) :
@@ -492,13 +492,13 @@ try {
 ```
 
 <div id="management-sdks">
-  ## SDK de gestion
+  ## SDK de gestion {#management-sdks}
 </div>
 
 Les SDK de gestion permettent d’interagir avec Auth0 Management API. Lorsque vous utilisez des domaines personnalisés, vous devrez peut-être inclure l’en-tête `auth0-custom-domain` ou utiliser le [domaine par défaut](/docs/fr-ca/customize/custom-domains/multiple-custom-domains/default-domain).
 
 <div id="nodejs-management-sdk">
-  ### SDK de gestion pour Node.js
+  ### SDK de gestion pour Node.js {#nodejs-management-sdk}
 </div>
 
 ```javascript
@@ -523,7 +523,7 @@ const response = await management.users.getAll({}, reqOptions);
 ```
 
 <div id="python-management-sdk">
-  ### SDK de gestion pour Python
+  ### SDK de gestion pour Python {#python-management-sdk}
 </div>
 
 ```python
@@ -550,7 +550,7 @@ client.users.create(
 ```
 
 <div id="go-management-sdk">
-  ### SDK de gestion pour Go
+  ### SDK de gestion pour Go {#go-management-sdk}
 </div>
 
 ```go
@@ -582,13 +582,13 @@ userList, err := mgmt.Users.List(
 ```
 
 <div id="token-validation">
-  ## Validation des jetons
+  ## Validation des jetons {#token-validation}
 </div>
 
 Lorsque vous utilisez des domaines personnalisés, mettez à jour la validation de vos jetons pour accepter le domaine personnalisé comme émetteur.
 
 <div id="nodejs-express">
-  ### Node.js (Express)
+  ### Node.js (Express) {#nodejs-express-2}
 </div>
 
 Avec [express-jwt](https://github.com/auth0/express-jwt) ou [jose](https://github.com/panva/jose) :
@@ -644,7 +644,7 @@ app.use(
 ```
 
 <div id="python-flask">
-  ### Python (Flask)
+  ### Python (Flask) {#python-flask}
 </div>
 
 Avec [python-jose](https://github.com/mpdavis/python-jose) :
@@ -708,7 +708,7 @@ def requires_auth(f):
 ```
 
 <div id="java-spring-boot">
-  ### Java (Spring Boot)
+  ### Java (Spring Boot) {#java-spring-boot}
 </div>
 
 Avec Spring Security :
@@ -755,13 +755,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 ```
 
 <div id="environment-specific-configuration">
-  ## Configuration propre à chaque environnement
+  ## Configuration propre à chaque environnement {#environment-specific-configuration}
 </div>
 
 Utilisez des variables d’environnement pour gérer les domaines personnalisés d’un environnement à l’autre :
 
 <div id="env-file-structure">
-  ### Structure du fichier .env
+  ### Structure du fichier .env {#env-file-structure}
 </div>
 
 ```bash
@@ -782,7 +782,7 @@ AUTH0_CLIENT_SECRET=dev_client_secret
 ```
 
 <div id="loading-configuration">
-  ### Chargement de la configuration
+  ### Chargement de la configuration {#loading-configuration}
 </div>
 
 ```javascript
@@ -796,11 +796,11 @@ const auth0Config = {
 ```
 
 <div id="troubleshooting">
-  ## Dépannage
+  ## Dépannage {#troubleshooting}
 </div>
 
 <div id="common-issues">
-  ### Problèmes courants
+  ### Problèmes courants {#common-issues}
 </div>
 
 <table class="table">
@@ -846,7 +846,7 @@ const auth0Config = {
 </table>
 
 <div id="best-practices">
-  ## Bonnes pratiques
+  ## Bonnes pratiques {#best-practices}
 </div>
 
 1. **Utilisez des variables d&#39;environnement** : stockez les domaines personnalisés dans des fichiers de configuration propres à chaque environnement
@@ -859,7 +859,7 @@ const auth0Config = {
 8. **Mettez JWKS en cache** : mettez en cache les données JWKS pour améliorer les performances et réduire les requêtes
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Plusieurs domaines personnalisés](/docs/fr-ca/customize/custom-domains/multiple-custom-domains)

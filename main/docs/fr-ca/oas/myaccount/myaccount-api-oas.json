@@ -2,14 +2,14 @@
   "components": {
     "headers": {
       "LocationHeader": {
-        "description": "URL de la ressource de méthode d’authentification.",
+        "description": "URL of the authentication method resource.",
         "examples": {
           "create": {
-            "summary": "URL d’emplacement d’une nouvelle méthode d’authentification par clé d’accès créée, mais non vérifiée",
+            "summary": "Location URL for a newly created but not verified passkey authentication method",
             "value": "https://auth0.auth0.com/me/v1/authentication-methods/passkey%7Cnew"
           },
           "verify": {
-            "summary": "URL d’emplacement d’une nouvelle méthode d’authentification par clé d’accès vérifiée",
+            "summary": "Location URL for a newly verified passkey authentication method",
             "value": "https://auth0.auth0.com/me/v1/authentication-methods/passkey%7Cdev_XXXXXXXXXXXXXXXX"
           }
         },
@@ -20,35 +20,35 @@
         }
       },
       "RetryAfterHeader": {
-        "description": "Le nombre de secondes que le client doit attendre avant d’effectuer une nouvelle requête",
+        "description": "The number of seconds the client should wait before making a new request",
         "required": true,
         "schema": {
           "type": "number"
         }
       },
       "XAuth0ErrorKindHeader": {
-        "description": "Indique si la limite de débit dépassée est une limite globale (par tenant).",
+        "description": "An indicator that the rate limit exceeded a is global (per tenant) limit.",
         "schema": {
           "const": "global-rate-limit",
           "type": "string"
         }
       },
       "XRateLimitLimitHeader": {
-        "description": "Le nombre maximal de requêtes autorisées pendant la fenêtre de la limite",
+        "description": "The maximum number of requests permissible during the limit’s window window",
         "required": true,
         "schema": {
           "type": "number"
         }
       },
       "XRateLimitRemainingHeader": {
-        "description": "Le nombre de requêtes restantes dans la fenêtre en cours avant le rejet des requêtes",
+        "description": "The number of remaining requests remaining in the current window until requests are rejected",
         "required": true,
         "schema": {
           "type": "number"
         }
       },
       "XRateLimitResetHeader": {
-        "description": "Le moment prévu (sous forme d’horodatage UNIX, en secondes) auquel le bucket sera réapprovisionné",
+        "description": "The anticipated time (as a UNIX timestamp, in seconds) when the bucket will be replenished",
         "required": true,
         "schema": {
           "type": "number"
@@ -57,7 +57,7 @@
     },
     "parameters": {
       "AuthenticationMethodTypeQueryParameter": {
-        "description": "Filtrer les méthodes d’authentification par type",
+        "description": "Filter authentication methods by type",
         "in": "query",
         "name": "type",
         "required": false,
@@ -66,7 +66,7 @@
         }
       },
       "ConnectedAccountIdParameter": {
-        "description": "L’identifiant unique du compte connecté",
+        "description": "The unique identifier of the connected account",
         "in": "path",
         "name": "id",
         "required": true,
@@ -75,7 +75,7 @@
         }
       },
       "ConnectionQueryParameter": {
-        "description": "Filtrer les comptes connectés selon le nom de la connexion",
+        "description": "Filter connected accounts by connection names",
         "explode": true,
         "in": "query",
         "name": "connection",
@@ -86,7 +86,7 @@
         "style": "form"
       },
       "FromQueryParameter": {
-        "description": "Curseur de pagination - commencer à récupérer les résultats à partir de ce point",
+        "description": "Cursor for pagination - start retrieving results from this point",
         "in": "query",
         "name": "from",
         "required": false,
@@ -95,7 +95,7 @@
         }
       },
       "OrganizationsTakeQueryParameter": {
-        "description": "Nombre de résultats à renvoyer (1-100)",
+        "description": "Number of results to return (1-100)",
         "in": "query",
         "name": "take",
         "required": false,
@@ -106,7 +106,7 @@
         }
       },
       "PathAuthenticationMethodId": {
-        "description": "ID de la méthode d’authentification. Cette valeur fait partie de l’en-tête Location renvoyé lors de la création d’une méthode d’authentification. Elle doit être utilisée telle quelle, sans aucune modification.",
+        "description": "Authentication Method ID. This value is part of the Location header returned when creating an authentication method. It should be used as it is, without any modifications.",
         "in": "path",
         "name": "authentication_method_id",
         "required": true,
@@ -115,7 +115,7 @@
         }
       },
       "PathConsentId": {
-        "description": "L’ID du consentement à récupérer",
+        "description": "The ID of the consent to retrieve",
         "in": "path",
         "name": "consent_id",
         "required": true,
@@ -124,7 +124,7 @@
         }
       },
       "TakeQueryParameter": {
-        "description": "Nombre de résultats à renvoyer (1-20)",
+        "description": "Number of results to return (1-20)",
         "in": "query",
         "name": "take",
         "required": false,
@@ -144,7 +144,7 @@
             }
           }
         },
-        "description": "Entrée invalide selon le schéma."
+        "description": "Invalid input based on schema."
       },
       "CompleteConnectedAccountsResponse": {
         "content": {
@@ -154,7 +154,7 @@
             }
           }
         },
-        "description": "Requête de compte connecté terminée avec succès",
+        "description": "Connected account request completed successfully",
         "headers": {
           "x-ratelimit-limit": {
             "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -175,7 +175,7 @@
             }
           }
         },
-        "description": "La requête est en conflit avec l’état actuel de la ressource."
+        "description": "Request conflicts with the current state of the resource."
       },
       "CreateConnectedAccountsResponse": {
         "content": {
@@ -185,7 +185,7 @@
             }
           }
         },
-        "description": "Requête de liaison de compte créée avec succès",
+        "description": "Account connection request created successfully",
         "headers": {
           "x-ratelimit-limit": {
             "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -206,7 +206,7 @@
             }
           }
         },
-        "description": "Interdit."
+        "description": "Forbidden."
       },
       "NotFound": {
         "content": {
@@ -216,7 +216,7 @@
             }
           }
         },
-        "description": "Introuvable."
+        "description": "Not Found."
       },
       "TooManyRequests": {
         "content": {
@@ -226,7 +226,7 @@
             }
           }
         },
-        "description": "Trop de requêtes.",
+        "description": "Too Many Requests.",
         "headers": {
           "retry-after": {
             "$ref": "#/components/headers/RetryAfterHeader"
@@ -253,7 +253,7 @@
             }
           }
         },
-        "description": "Non autorisé."
+        "description": "Unauthorized."
       },
       "UnsupportedMediaType": {
         "content": {
@@ -263,12 +263,12 @@
             }
           }
         },
-        "description": "Type de média non pris en charge."
+        "description": "Unsupported Media Type."
       }
     },
     "schemas": {
       "AccessTypeEnum": {
-        "description": "Le type d’accès, toujours « offline »",
+        "description": "The access type, always 'offline'",
         "enum": [
           "offline"
         ],
@@ -333,12 +333,12 @@
       "AuthenticationMethodBase": {
         "properties": {
           "created_at": {
-            "description": "La date et l’heure de création de la méthode d’authentification",
+            "description": "The date and time when the authentication method was created",
             "format": "date-time",
             "type": "string"
           },
           "id": {
-            "description": "L’identifiant unique de la méthode d’authentification",
+            "description": "The unique identifier of the authentication method",
             "type": "string"
           },
           "usage": {
@@ -360,17 +360,17 @@
           {
             "properties": {
               "email": {
-                "description": "L’adresse courriel utilisée pour envoyer des messages de vérification.",
+                "description": "The email address used to send verification messages.",
                 "type": "string"
               },
               "name": {
-                "description": "Le nom descriptif de la méthode d’authentification",
+                "description": "The friendly name of the authentication method",
                 "type": "string"
               },
               "type": {
                 "const": "email",
                 "default": "email",
-                "description": "Type de méthode d’authentification (facteur)",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               }
             },
@@ -391,11 +391,11 @@
           {
             "properties": {
               "confirmed": {
-                "description": "Le statut de la méthode d’authentification",
+                "description": "The authentication method status",
                 "type": "boolean"
               },
               "last_auth_at": {
-                "description": "La date et l’heure de la dernière utilisation de la méthode d’authentification",
+                "description": "The date and time when the authentication method was last used",
                 "format": "date-time",
                 "type": "string"
               }
@@ -415,13 +415,13 @@
           {
             "properties": {
               "name": {
-                "description": "Le nom descriptif de la méthode d’authentification",
+                "description": "The friendly name of the authentication method",
                 "type": "string"
               },
               "type": {
                 "const": "push-notification",
                 "default": "push-notification",
-                "description": "Type de méthode d’authentification (facteur)",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               }
             },
@@ -443,7 +443,7 @@
               "type": {
                 "const": "recovery-code",
                 "default": "recovery-code",
-                "description": "Type de méthode d’authentification (facteur)",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               }
             },
@@ -463,13 +463,13 @@
           {
             "properties": {
               "name": {
-                "description": "Le nom descriptif de la méthode d’authentification",
+                "description": "The friendly name of the authentication method",
                 "type": "string"
               },
               "type": {
                 "const": "totp",
                 "default": "totp",
-                "description": "Type de méthode d’authentification (facteur)",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               }
             },
@@ -489,39 +489,39 @@
           {
             "properties": {
               "aaguid": {
-                "description": "Identifiant global unique d’attestation de l’authentificateur",
+                "description": "Authenticator Attestation Globally Unique Identifier",
                 "type": "string"
               },
               "credential_backed_up": {
-                "description": "Indique si l’information d’identification a été sauvegardée",
+                "description": "Whether the credential was backed up",
                 "type": "boolean"
               },
               "credential_device_type": {
                 "$ref": "#/components/schemas/CredentialDeviceTypeEnum"
               },
               "identity_user_id": {
-                "description": "L’ID de l’identité de l’utilisateur liée à la méthode d’authentification",
+                "description": "The ID of the user identity linked with the authentication method",
                 "type": "string"
               },
               "key_id": {
-                "description": "L’ID de l’information d’identification",
+                "description": "The ID of the credential",
                 "type": "string"
               },
               "last_auth_at": {
-                "description": "La date et l’heure de la dernière utilisation de la méthode d’authentification",
+                "description": "The date and time when the authentication method was last used",
                 "format": "date-time",
                 "type": "string"
               },
               "public_key": {
-                "description": "La clé publique",
+                "description": "The public key",
                 "type": "string"
               },
               "relying_party_id": {
-                "description": "Identifiant de la partie de confiance",
+                "description": "Relying Party Identifier",
                 "type": "string"
               },
               "transports": {
-                "description": "Les transports utilisés par les clients pour communiquer avec l’authentificateur",
+                "description": "The transports used by clients to communicate with the authenticator",
                 "example": [
                   "internal"
                 ],
@@ -533,16 +533,16 @@
               "type": {
                 "const": "passkey",
                 "default": "passkey",
-                "description": "Type de méthode d’authentification (facteur)",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               },
               "user_agent": {
-                "description": "La chaîne user-agent du navigateur utilisé pour créer la clé d’accès",
+                "description": "The user-agent of the browser used to create the passkey",
                 "example": "Chrome 131.0.0 / Mac OS X 10.15.7",
                 "type": "string"
               },
               "user_handle": {
-                "description": "Le user handle de l’identité de l’utilisateur",
+                "description": "The user handle of the user identity",
                 "type": "string"
               }
             },
@@ -568,18 +568,18 @@
           {
             "properties": {
               "identity_user_id": {
-                "description": "L’ID de l’identité de l’utilisateur liée à la méthode d’authentification",
+                "description": "The ID of the user identity linked with the authentication method",
                 "type": "string"
               },
               "last_password_reset": {
-                "description": "La date de la dernière réinitialisation du mot de passe",
+                "description": "The date of the last password reset",
                 "format": "date-time",
                 "type": "string"
               },
               "type": {
                 "const": "password",
                 "default": "password",
-                "description": "Type de méthode d’authentification (facteur)",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               }
             },
@@ -600,11 +600,11 @@
           {
             "properties": {
               "name": {
-                "description": "Le nom descriptif de la méthode d’authentification",
+                "description": "The friendly name of the authentication method",
                 "type": "string"
               },
               "phone_number": {
-                "description": "Le numéro de téléphone de destination utilisé pour envoyer des codes de vérification par texto ou par appel vocal.",
+                "description": "The destination phone number used to send verification codes via text and voice.",
                 "type": "string"
               },
               "preferred_authentication_method": {
@@ -613,7 +613,7 @@
               "type": {
                 "const": "phone",
                 "default": "phone",
-                "description": "Type de méthode d’authentification (facteur)",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               }
             },
@@ -635,15 +635,15 @@
           {
             "properties": {
               "key_id": {
-                "description": "L’ID de l’information d’identification",
+                "description": "The ID of the credential",
                 "type": "string"
               },
               "name": {
-                "description": "Le nom descriptif de la méthode d’authentification",
+                "description": "The friendly name of the authentication method",
                 "type": "string"
               },
               "public_key": {
-                "description": "La clé publique",
+                "description": "The public key",
                 "type": "string"
               }
             },
@@ -662,7 +662,7 @@
               "type": {
                 "const": "webauthn-platform",
                 "default": "webauthn-platform",
-                "description": "Type de méthode d’authentification (facteur)",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               }
             },
@@ -684,7 +684,7 @@
               "type": {
                 "const": "webauthn-roaming",
                 "default": "webauthn-roaming",
-                "description": "Type de méthode d’authentification (facteur)",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               }
             },
@@ -697,7 +697,7 @@
         "title": "WebAuthn Roaming MFA Authenticator"
       },
       "AuthenticatorAttachmentEnum": {
-        "description": "La méthode de rattachement de l’authenticator",
+        "description": "The authenticator attachment method",
         "enum": [
           "platform",
           "cross-platform"
@@ -774,16 +774,16 @@
       },
       "AuthorizationParams": {
         "additionalProperties": false,
-        "description": "Paramètres d’autorisation à envoyer au fournisseur d’identité (IdP) sous-jacent durant la requête d’autorisation. Ces paramètres influencent la façon dont l’IdP traite le flux d’autorisation et les permissions demandées.",
+        "description": "Authorization parameters to be sent to the underlying Identity Provider (IdP) during the authorization request. These parameters influence how the IdP processes the authorization flow and what permissions are requested.",
         "properties": {
           "acr_values": {
-            "description": "Précise les valeurs de référence de classe du contexte d’authentification souhaitées, qui indiquent le niveau d’authentification requis (p. ex., multifacteur, sans mot de passe). Le fournisseur d’identité (IdP) peut appliquer un niveau d’assurance précis en fonction de ces valeurs.",
+            "description": "Specifies the desired Authentication Context Class Reference values, which indicate the required level of authentication (e.g., multi-factor, passwordless). The Identity Provider (IdP) may enforce a specific assurance level based on these values.",
             "maxLength": 1024,
             "minLength": 1,
             "type": "string"
           },
           "audience": {
-            "description": "Définit le destinataire visé du jeton d’accès, en indiquant généralement à qui le jeton est destiné (p. ex., un identifiant d’API).",
+            "description": "Defines the intended recipient of the access token, typically indicating who the token is meant for (e.g., an API identifier).",
             "maxLength": 512,
             "minLength": 1,
             "type": "string"
@@ -792,19 +792,19 @@
             "$ref": "#/components/schemas/DisplayEnum"
           },
           "id_token_hint": {
-            "description": "Fournit un id_token déjà émis à l’IdP. Il peut être utilisé pour indiquer quel utilisateur est en cours d’authentification ou pour faciliter les requêtes de déconnexion.",
+            "description": "Provides a previously issued id_token to the IdP. It can be used to suggest which user is being authenticated or to facilitate logout requests.",
             "maxLength": 4096,
             "minLength": 1,
             "type": "string"
           },
           "login_hint": {
-            "description": "Fournit une indication sur l’identifiant de l’utilisateur (comme une adresse courriel ou un nom d’utilisateur) afin de préremplir le formulaire de connexion.",
+            "description": "Supplies a hint about the user's identifier (like an email address or username) to pre-populate the login form.",
             "maxLength": 255,
             "minLength": 1,
             "type": "string"
           },
           "max_age": {
-            "description": "Indique le temps maximal (en secondes) écoulé depuis la dernière authentification de l’utilisateur. Si ce délai est dépassé, l’IdP oblige l’utilisateur à s’authentifier de nouveau.",
+            "description": "Indicates the maximum time (in seconds) since the user's last authentication. If exceeded, the IdP forces the user to re-authenticate.",
             "maximum": 2147483647,
             "minimum": 0,
             "type": "integer"
@@ -813,13 +813,13 @@
             "$ref": "#/components/schemas/PromptEnum"
           },
           "resource": {
-            "description": "Précise à quel serveur de ressources le client demande l’accès (utilisé dans les indicateurs de ressource OAuth 2.0).",
+            "description": "Specifies which resource server the client is requesting access to (used in OAuth 2.0 Resource Indicators).",
             "maxLength": 512,
             "minLength": 1,
             "type": "string"
           },
           "ui_locales": {
-            "description": "Indique les langues préférées pour l’interface utilisateur, transmises sous forme de liste de balises de langue BCP47 séparées par des espaces (p. ex., 'en', 'es', 'fr').",
+            "description": "Suggests the preferred languages for the user interface, passed as a space-separated list of BCP47 language tags (e.g., 'en', 'es', 'fr').",
             "maxLength": 100,
             "minLength": 2,
             "pattern": "^[a-zA-Z]{2}(-[a-zA-Z]{2})?(\\s[a-zA-Z]{2}(-[a-zA-Z]{2})?)*$",
@@ -836,24 +836,24 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "L’identifiant de session d’authentification",
+            "description": "The authentication session identifier",
             "maxLength": 64,
             "type": "string"
           },
           "code_verifier": {
-            "description": "Le code verifier PKCE",
+            "description": "The PKCE code verifier",
             "maxLength": 128,
             "minLength": 43,
             "type": "string"
           },
           "connect_code": {
-            "description": "Le code d’autorisation renvoyé par le flux de connexion",
+            "description": "The authorization code returned from the connect flow",
             "maxLength": 46,
             "minLength": 1,
             "type": "string"
           },
           "redirect_uri": {
-            "description": "Le Redirect URI utilisé dans la requête d’origine",
+            "description": "The redirect URI used in the original request",
             "format": "uri",
             "maxLength": 2048,
             "type": "string"
@@ -873,25 +873,25 @@
             "$ref": "#/components/schemas/AccessTypeEnum"
           },
           "connection": {
-            "description": "Le nom de la connexion",
+            "description": "The connection name",
             "type": "string"
           },
           "created_at": {
-            "description": "Chaîne de date ISO indiquant la date de création du compte connecté",
+            "description": "ISO date string of when the connected account was created",
             "format": "date-time",
             "type": "string"
           },
           "expires_at": {
-            "description": "Chaîne de date ISO indiquant la date d’expiration du refresh token (facultatif)",
+            "description": "ISO date string of when the refresh token expires (optional)",
             "format": "date-time",
             "type": "string"
           },
           "id": {
-            "description": "L’identifiant unique du compte connecté",
+            "description": "The unique identifier of the connected account",
             "type": "string"
           },
           "scopes": {
-            "description": "Tableau des scopes accordés",
+            "description": "Array of scopes granted",
             "items": {
               "type": "string"
             },
@@ -908,10 +908,10 @@
       },
       "ConnectParams": {
         "additionalProperties": false,
-        "description": "Paramètres à utiliser avec l’URI de connexion.",
+        "description": "Parameters to be used with the connect URI.",
         "properties": {
           "ticket": {
-            "description": "L’identifiant du ticket à utiliser avec l’URI de connexion.",
+            "description": "The ticket identifier to be used with the connection URI.",
             "type": "string"
           }
         },
@@ -926,29 +926,29 @@
             "$ref": "#/components/schemas/ConnectedAccountAccessTypeEnum"
           },
           "connection": {
-            "description": "Le nom de la connexion associée au compte.",
+            "description": "The name of the connection associated with the account.",
             "type": "string"
           },
           "created_at": {
-            "description": "Horodatage ISO 8601 indiquant la date de création du compte connecté.",
+            "description": "ISO 8601 timestamp when the connected account was created.",
             "format": "date-time",
             "type": "string"
           },
           "expires_at": {
-            "description": "Horodatage ISO 8601 indiquant la date d’expiration du compte connecté.",
+            "description": "ISO 8601 timestamp when the connected account expires.",
             "format": "date-time",
             "type": "string"
           },
           "id": {
-            "description": "L’identifiant unique du compte connecté.",
+            "description": "The unique identifier for the connected account.",
             "type": "string"
           },
           "org_id": {
-            "description": "L’Organization ID auquel ce compte connecté est limité. Présent uniquement pour les comptes liés à une organization.",
+            "description": "The organization ID this connected account is scoped to. Only present for accounts bound to an organization.",
             "type": "string"
           },
           "scopes": {
-            "description": "Les scopes accordés pour ce compte connecté.",
+            "description": "The scopes granted for this connected account.",
             "items": {
               "type": "string"
             },
@@ -965,7 +965,7 @@
         "type": "object"
       },
       "ConnectedAccountAccessTypeEnum": {
-        "description": "Le type d’accès du compte connecté.",
+        "description": "The access type for to the connected account.",
         "enum": [
           "offline"
         ],
@@ -975,18 +975,18 @@
         "additionalProperties": false,
         "properties": {
           "name": {
-            "description": "Le nom de la connexion.",
+            "description": "The name of the connection.",
             "type": "string"
           },
           "scopes": {
-            "description": "Les scopes disponibles pour cette connexion.",
+            "description": "The available scopes for this connection.",
             "items": {
               "type": "string"
             },
             "type": "array"
           },
           "strategy": {
-            "description": "La stratégie utilisée par la connexion (p. ex., « oauth2 », « oidc »).",
+            "description": "The strategy used by the connection (e.g., 'oauth2', 'oidc').",
             "type": "string"
           }
         },
@@ -997,12 +997,12 @@
         "type": "object"
       },
       "ConnectedAccountId": {
-        "description": "L’identifiant unique d’un compte connecté",
+        "description": "The unique identifier for a connected account",
         "pattern": "^cac_[A-Za-z0-9]+$",
         "type": "string"
       },
       "Connection": {
-        "description": "Nom de la connexion à la base de données",
+        "description": "Name of the database connection",
         "maxLength": 128,
         "minLength": 1,
         "pattern": "^[a-zA-Z0-9-]+$",
@@ -1027,24 +1027,24 @@
       },
       "Consent": {
         "additionalProperties": false,
-        "description": "Un enregistrement de consentement représentant l’autorisation de l’utilisateur pour un client et un scope précis.",
+        "description": "A consent record representing user authorization for a specific client and scope.",
         "properties": {
           "client_id": {
-            "description": "Le Client ID auquel le consentement a été accordé.",
+            "description": "The client ID that the consent was granted to.",
             "type": "string"
           },
           "created_at": {
-            "description": "La date et l’heure de création du consentement.",
+            "description": "The date and time when the consent was created.",
             "format": "date-time",
             "type": "string"
           },
           "expires_at": {
-            "description": "La date et l’heure d’expiration du consentement.",
+            "description": "The date and time when the consent expires.",
             "format": "date-time",
             "type": "string"
           },
           "id": {
-            "description": "L’identifiant unique du consentement.",
+            "description": "The unique identifier of the consent.",
             "example": "cns_abc123def456",
             "type": "string"
           },
@@ -1062,18 +1062,18 @@
       },
       "ConsentDetails": {
         "additionalProperties": false,
-        "description": "Détails de la demande de consentement",
+        "description": "Details of the consent request",
         "properties": {
           "audience": {
-            "description": "L’audience (identifiant d’API) pour laquelle le consentement a été accordé.",
+            "description": "The audience (API identifier) that the consent was granted for.",
             "type": "string"
           },
           "binding_message": {
-            "description": "Un identifiant ou message lisible par un humain, destiné à être affiché à la fois sur l’appareil de consommation et sur l’appareil d’authentification afin de les associer dans la transaction au moyen d’un repère visuel pour l’utilisateur final.",
+            "description": "A human-readable identifier or message intended to be displayed on both the consumption device and the authentication device to interlock them together for the transaction by way of a visual cue for the end-user.",
             "type": "string"
           },
           "scope": {
-            "description": "Les scopes demandés pour ce consentement.",
+            "description": "The scopes that were requested for this consent.",
             "items": {
               "type": "string"
             },
@@ -1083,7 +1083,7 @@
         "type": "object"
       },
       "CreateAuthenticationMethodRequestContent": {
-        "description": "Contenu de la requête pour créer une méthode d’authentification",
+        "description": "Request content for creating an authentication method",
         "discriminator": {
           "mapping": {
             "email": "#/components/schemas/CreateEmailAuthenticationMethod",
@@ -1159,36 +1159,36 @@
             "code_challenge_method"
           ]
         },
-        "description": "Corps de la requête pour créer une requête de liaison de compte.",
+        "description": "Request body for creating an account connection request.",
         "properties": {
           "authorization_params": {
             "$ref": "#/components/schemas/AuthorizationParams"
           },
           "code_challenge": {
-            "description": "Le code challenge PKCE dérivé du code verifier.",
+            "description": "The PKCE code challenge derived from the code verifier.",
             "maxLength": 128,
             "minLength": 43,
             "type": "string"
           },
           "code_challenge_method": {
             "const": "S256",
-            "description": "La méthode utilisée pour dériver le code challenge. Obligatoire lorsque code_challenge est fourni.",
+            "description": "The method used to derive the code challenge. Required when code_challenge is provided.",
             "type": "string"
           },
           "connection": {
-            "description": "Le nom de la connexion à lier au compte (p. ex., 'google-oauth2', 'facebook').",
+            "description": "The name of the connection to link the account with (e.g., 'google-oauth2', 'facebook').",
             "maxLength": 128,
             "minLength": 1,
             "type": "string"
           },
           "redirect_uri": {
-            "description": "L’URI de redirection à utiliser une fois le processus de connexion terminé.",
+            "description": "The URI to redirect to after the connection process completes.",
             "format": "uri",
             "maxLength": 2048,
             "type": "string"
           },
           "scopes": {
-            "description": "Définit les permissions que le client demande au fournisseur d’identité. Doit inclure les scopes standard utilisés pour identifier l’utilisateur (p. ex. 'openid', 'email', 'profile'), le scope requis pour obtenir des refresh tokens au besoin (p. ex. 'offline_access'), ainsi que tout scope personnalisé dont le client a besoin pour accéder à des ressources protégées.",
+            "description": "Defines the permissions that the client requests from the Identity Provider. Must include the standard scopes used to identify the user (e.g. 'openid', 'email', 'profile'), the scope required to obtain refresh tokens if needed (e.g. 'offline_access'), and any custom scopes the client needs to access protected resources.",
             "example": [
               "openid",
               "offline_access",
@@ -1206,7 +1206,7 @@
             "uniqueItems": true
           },
           "state": {
-            "description": "Une valeur opaque utilisée pour maintenir l’état entre la requête et le callback.",
+            "description": "An opaque value used to maintain state between the request and callback.",
             "maxLength": 4096,
             "minLength": 1,
             "type": "string"
@@ -1222,7 +1222,7 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "L’identifiant de session d’authentification.",
+            "description": "The authentication session identifier.",
             "maxLength": 64,
             "type": "string"
           },
@@ -1230,12 +1230,12 @@
             "$ref": "#/components/schemas/ConnectParams"
           },
           "connect_uri": {
-            "description": "L’URI de base pour lancer le flux de liaison de compte.",
+            "description": "The base URI to initiate the account connection flow.",
             "format": "uri",
             "type": "string"
           },
           "expires_in": {
-            "description": "Le nombre de secondes avant l’expiration du ticket.",
+            "description": "The number of seconds until the ticket expires.",
             "minimum": 1,
             "type": "integer"
           }
@@ -1252,13 +1252,13 @@
         "additionalProperties": false,
         "properties": {
           "email": {
-            "description": "L’adresse courriel à utiliser pour envoyer des codes à usage unique.",
+            "description": "The email address to use for sending one-time codes.",
             "type": "string"
           },
           "type": {
             "const": "email",
             "default": "email",
-            "description": "Type de méthode d’authentification (facteur)",
+            "description": "Authentication method type (factor)",
             "type": "string"
           }
         },
@@ -1279,11 +1279,11 @@
               "type": {
                 "const": "passkey",
                 "default": "passkey",
-                "description": "Type de méthode d’authentification (facteur)",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               },
               "use_exclude_credentials": {
-                "description": "Lorsqu’elle est activée, Auth0 inclut les identifiants existants de l’utilisateur dans le champ excludeCredentials lors de l’enregistrement d’une clé d’accès. Cela empêche les utilisateurs d’enregistrer accidentellement plusieurs clés d’accès à partir du même authentificateur, ce qui réduit l’encombrement des identifiants et évite toute confusion lors de la connexion.",
+                "description": "When enabled, Auth0 includes the user's existing credentials in the excludeCredentials field during passkey enrollment. This prevents users from accidentally registering multiple passkeys from the same authenticator, reducing credential clutter and avoiding confusion at sign-in.",
                 "type": "boolean",
                 "x-internal": true
               }
@@ -1309,7 +1309,7 @@
               "type": {
                 "const": "password",
                 "default": "password",
-                "description": "Type de méthode d’authentification (facteur)",
+                "description": "Authentication method type (factor)",
                 "type": "string"
               }
             },
@@ -1325,17 +1325,17 @@
         "additionalProperties": false,
         "properties": {
           "phone_number": {
-            "description": "Le numéro de téléphone de destination utilisé pour envoyer des codes de vérification par texto ou par appel vocal.",
+            "description": "The destination phone number used to send verification codes via text and voice.",
             "type": "string"
           },
           "preferred_authentication_method": {
             "$ref": "#/components/schemas/PhoneAuthenticationMethodEnum",
-            "description": "Le mode de communication privilégié."
+            "description": "The preferred communication method."
           },
           "type": {
             "const": "phone",
             "default": "phone",
-            "description": "Type de méthode d’authentification (facteur)",
+            "description": "Authentication method type (factor)",
             "type": "string"
           }
         },
@@ -1352,7 +1352,7 @@
           "type": {
             "const": "push-notification",
             "default": "push-notification",
-            "description": "Type de méthode d’authentification (facteur)",
+            "description": "Authentication method type (factor)",
             "type": "string"
           }
         },
@@ -1368,7 +1368,7 @@
           "type": {
             "const": "recovery-code",
             "default": "recovery-code",
-            "description": "Type de méthode d’authentification (facteur)",
+            "description": "Authentication method type (factor)",
             "type": "string"
           }
         },
@@ -1384,7 +1384,7 @@
           "type": {
             "const": "totp",
             "default": "totp",
-            "description": "Type de méthode d’authentification (facteur)",
+            "description": "Authentication method type (factor)",
             "type": "string"
           }
         },
@@ -1395,7 +1395,7 @@
         "type": "object"
       },
       "CredentialDeviceTypeEnum": {
-        "description": "Type d’appareil de l’information d’identification pour les méthodes d’authentification par clé d’accès",
+        "description": "Credential device type for passkey authentication methods",
         "enum": [
           "multi_device",
           "single_device"
@@ -1403,7 +1403,7 @@
         "type": "string"
       },
       "DisplayEnum": {
-        "description": "Indique comment l’IdP doit présenter l’interface d’authentification à l’utilisateur.",
+        "description": "Suggests how the IdP should display the authentication interface to the user.",
         "enum": [
           "page",
           "popup",
@@ -1456,7 +1456,7 @@
         "type": "object"
       },
       "FactorTypeEnum": {
-        "description": "Type de méthode d’authentification (facteur)",
+        "description": "Authentication method type (factor)",
         "enum": [
           "password",
           "passkey",
@@ -1545,7 +1545,7 @@
         "type": "object"
       },
       "IdentityUserId": {
-        "description": "ID utilisateur du fournisseur d’identité",
+        "description": "Identity provider user ID",
         "maxLength": 255,
         "minLength": 1,
         "pattern": "^\\S+$",
@@ -1578,7 +1578,7 @@
             "type": "array"
           },
           "next": {
-            "description": "Le token permettant de récupérer la page suivante de connexions (s’il y en a une)",
+            "description": "The token to retrieve the next page of connections (if there is one)",
             "type": "string"
           }
         },
@@ -1598,7 +1598,7 @@
             "type": "array"
           },
           "next": {
-            "description": "Le token permettant de récupérer la page suivante de comptes connectés (s’il y en a une)",
+            "description": "The token to retrieve the next page of connected accounts (if there is one)",
             "type": "string"
           }
         },
@@ -1611,7 +1611,7 @@
         "additionalProperties": false,
         "properties": {
           "consents": {
-            "description": "Liste des consentements de l’utilisateur authentifié.",
+            "description": "List of consents for the authenticated user.",
             "items": {
               "$ref": "#/components/schemas/Consent"
             },
@@ -1642,7 +1642,7 @@
         "additionalProperties": false,
         "properties": {
           "next": {
-            "description": "Le jeton permettant de récupérer la page suivante d’organisations (s’il y en a une)",
+            "description": "The token to retrieve the next page of organizations (if there is one)",
             "type": "string"
           },
           "organizations": {
@@ -1661,11 +1661,11 @@
       "MfaBaseCreationResponse": {
         "properties": {
           "auth_session": {
-            "description": "L’identifiant de session unique pour l’inscription.",
+            "description": "The unique session identifier for the enrollment.",
             "type": "string"
           },
           "id": {
-            "description": "L’identifiant unique de la méthode d’authentification.",
+            "description": "The unique identifier for the authentication method.",
             "type": "string"
           }
         },
@@ -1679,15 +1679,15 @@
         "additionalProperties": false,
         "properties": {
           "display_name": {
-            "description": "Le nom d’affichage de l’organisation lisible par une personne.",
+            "description": "The human-readable display name of the organization.",
             "type": "string"
           },
           "id": {
-            "description": "L’identifiant unique de l’organisation.",
+            "description": "The unique identifier of the organization.",
             "type": "string"
           },
           "name": {
-            "description": "Le nom (slug) de l’organisation.",
+            "description": "The name (slug) of the organization.",
             "type": "string"
           }
         },
@@ -1700,7 +1700,7 @@
       "PasskeyCreationResponse": {
         "properties": {
           "auth_session": {
-            "description": "L’identifiant de session unique pour l’inscription.",
+            "description": "The unique session identifier for the enrollment.",
             "type": "string"
           },
           "authn_params_public_key": {
@@ -1716,7 +1716,7 @@
       },
       "PasswordAuthenticationMethodPolicy": {
         "additionalProperties": false,
-        "description": "La configuration de la politique de mot de passe pour la connexion au format flexible.",
+        "description": "The password policy configuration for the connection in flexible format.",
         "properties": {
           "complexity": {
             "$ref": "#/components/schemas/PasswordComplexityPolicy"
@@ -1740,7 +1740,7 @@
         "type": "object"
       },
       "PasswordCharacterTypeEnum": {
-        "description": "Type de caractères exigé pour la complexité du mot de passe",
+        "description": "Character type for password complexity requirements",
         "enum": [
           "uppercase",
           "lowercase",
@@ -1750,7 +1750,7 @@
         "type": "string"
       },
       "PasswordCharacterTypeRuleEnum": {
-        "description": "Mode d’application des types de caractères dans la complexité du mot de passe",
+        "description": "How character types are enforced in password complexity",
         "enum": [
           "all",
           "three_of_four"
@@ -1759,13 +1759,13 @@
       },
       "PasswordComplexityPolicy": {
         "additionalProperties": false,
-        "description": "Exigences de complexité du mot de passe",
+        "description": "Password complexity requirements",
         "properties": {
           "character_type_rule": {
             "$ref": "#/components/schemas/PasswordCharacterTypeRuleEnum"
           },
           "character_types": {
-            "description": "Types de caractères requis",
+            "description": "Required character types",
             "items": {
               "$ref": "#/components/schemas/PasswordCharacterTypeEnum"
             },
@@ -1778,7 +1778,7 @@
             "$ref": "#/components/schemas/PasswordMaxLengthExceededEnum"
           },
           "min_length": {
-            "description": "Longueur minimale du mot de passe",
+            "description": "Minimum password length",
             "type": "integer"
           },
           "sequential_characters": {
@@ -1798,11 +1798,11 @@
       "PasswordCreationResponse": {
         "properties": {
           "auth_session": {
-            "description": "L’identifiant de session unique de l’opération de changement de mot de passe.",
+            "description": "The unique session identifier for the password change operation.",
             "type": "string"
           },
           "id": {
-            "description": "L’identifiant unique de la méthode d’authentification par mot de passe.",
+            "description": "The unique identifier for the password authentication method.",
             "type": "string"
           },
           "policy": {
@@ -1818,7 +1818,7 @@
         "type": "object"
       },
       "PasswordDictionaryDefaultEnum": {
-        "description": "Dictionnaire par défaut à utiliser pour vérifier les mots de passe faibles",
+        "description": "Default dictionary to use for checking weak passwords",
         "enum": [
           "en_10k",
           "en_100k"
@@ -1827,10 +1827,10 @@
       },
       "PasswordDictionaryPolicy": {
         "additionalProperties": false,
-        "description": "Paramètres de vérification par dictionnaire pour bloquer les mots de passe faibles ou interdits",
+        "description": "Dictionary checking settings to block weak or banned passwords",
         "properties": {
           "active": {
-            "description": "Indique si la vérification par dictionnaire est activée",
+            "description": "Whether dictionary checking is enabled",
             "type": "boolean"
           },
           "default": {
@@ -1845,14 +1845,14 @@
       },
       "PasswordHistoryPolicy": {
         "additionalProperties": false,
-        "description": "Paramètres d’application de l’historique des mots de passe",
+        "description": "Password history enforcement settings",
         "properties": {
           "active": {
-            "description": "Indique si l’historique des mots de passe est appliqué",
+            "description": "Whether password history is enforced",
             "type": "boolean"
           },
           "size": {
-            "description": "Nombre de mots de passe précédents à mémoriser pour en empêcher la réutilisation",
+            "description": "Number of previous passwords to remember and prevent reuse",
             "type": "integer"
           }
         },
@@ -1863,7 +1863,7 @@
         "type": "object"
       },
       "PasswordIdenticalCharactersEnum": {
-        "description": "Indique s’il faut autoriser 3 caractères identiques consécutifs ou plus",
+        "description": "Whether to allow 3 or more consecutive identical characters",
         "enum": [
           "allow",
           "block"
@@ -1871,7 +1871,7 @@
         "type": "string"
       },
       "PasswordMaxLengthExceededEnum": {
-        "description": "Comportement lorsque le mot de passe dépasse la longueur maximale",
+        "description": "Behavior when password exceeds maximum length",
         "enum": [
           "truncate",
           "error"
@@ -1880,14 +1880,14 @@
       },
       "PasswordProfileDataPolicy": {
         "additionalProperties": false,
-        "description": "Paramètres de blocage des renseignements personnels dans les mots de passe",
+        "description": "Settings for blocking personal information in passwords",
         "properties": {
           "active": {
-            "description": "Indique s’il faut bloquer les renseignements personnels (nom, courriel, etc.) dans les mots de passe",
+            "description": "Whether to block personal information (name, email, etc.) in passwords",
             "type": "boolean"
           },
           "blocked_fields": {
-            "description": "Champs du profil utilisateur à exclure des mots de passe (p. ex., 'name', 'email', 'user_metadata.first')",
+            "description": "User profile fields to block from passwords (e.g., 'name', 'email', 'user_metadata.first')",
             "items": {
               "type": "string"
             },
@@ -1901,7 +1901,7 @@
         "type": "object"
       },
       "PasswordSequentialCharactersEnum": {
-        "description": "Indique s’il faut autoriser les suites de caractères",
+        "description": "Whether to allow sequential characters",
         "enum": [
           "allow",
           "block"
@@ -1912,7 +1912,7 @@
         "type": "string"
       },
       "PhoneAuthenticationMethodEnum": {
-        "description": "Méthode d’authentification privilégiée pour l’authentification par téléphone",
+        "description": "Preferred authentication method for phone-based authentication",
         "enum": [
           "sms",
           "voice"
@@ -1920,7 +1920,7 @@
         "type": "string"
       },
       "PromptEnum": {
-        "description": "Détermine si l’IdP doit demander à l’utilisateur de s’authentifier ou de donner son consentement.",
+        "description": "Controls whether the IdP should prompt the user for authentication or consent.",
         "enum": [
           "none",
           "login",
@@ -1937,7 +1937,7 @@
             "type": "string"
           },
           "excludeCredentials": {
-            "description": "Identifiants existants à exclure lors d’un nouvel enregistrement.",
+            "description": "Existing credentials to exclude from re-registration.",
             "items": {
               "$ref": "#/components/schemas/PublicKeyCredentialDescriptor"
             },
@@ -1987,11 +1987,11 @@
         "additionalProperties": false,
         "properties": {
           "id": {
-            "description": "L’ID de l’identifiant.",
+            "description": "The credential ID.",
             "type": "string"
           },
           "transports": {
-            "description": "Indications sur les transports que l’authentificateur peut utiliser.",
+            "description": "Hints about the transports the authenticator may use.",
             "items": {
               "type": "string"
             },
@@ -2025,7 +2025,7 @@
         "type": "object"
       },
       "PublicKeyTypeEnum": {
-        "description": "Le type d’information d’identification à clé publique",
+        "description": "The public key credential type",
         "enum": [
           "public-key"
         ],
@@ -2039,11 +2039,11 @@
           {
             "properties": {
               "barcode_uri": {
-                "description": "L’URI du code QR à numériser avec l’authenticator.",
+                "description": "The URI for the QR code to be scanned by the authenticator.",
                 "type": "string"
               },
               "manual_input_code": {
-                "description": "Le code de saisie manuelle de l’authenticator si les codes QR ne peuvent pas être utilisés.",
+                "description": "The manual input code for the authenticator in case QR codes cannot be used.",
                 "type": "string"
               }
             },
@@ -2063,7 +2063,7 @@
           {
             "properties": {
               "recovery_code": {
-                "description": "La valeur du code de récupération.",
+                "description": "The recovery code value.",
                 "type": "string"
               }
             },
@@ -2091,7 +2091,7 @@
         "type": "object"
       },
       "ResidentKeyEnum": {
-        "description": "L’exigence relative à la clé résidente",
+        "description": "The resident key requirement",
         "enum": [
           "required"
         ],
@@ -2099,15 +2099,15 @@
       },
       "UpdateAuthenticationMethodRequestContent": {
         "additionalProperties": false,
-        "description": "Contenu de la requête pour mettre à jour une méthode d’authentification",
+        "description": "Request content for updating an authentication method",
         "properties": {
           "name": {
-            "description": "Le nom convivial de la méthode d’authentification",
+            "description": "The friendly name of the authentication method",
             "type": "string"
           },
           "preferred_authentication_method": {
             "$ref": "#/components/schemas/PhoneAuthenticationMethodEnum",
-            "description": "La méthode d’authentification privilégiée (pour les authenticators de téléphone)"
+            "description": "The preferred authentication method (for phone authenticators)"
           }
         },
         "type": "object"
@@ -2169,14 +2169,14 @@
         "type": "object"
       },
       "Usage": {
-        "description": "Facteur principal et/ou secondaire",
+        "description": "Primary and/or secondary factor",
         "items": {
           "$ref": "#/components/schemas/UsageEnum"
         },
         "type": "array"
       },
       "UsageEnum": {
-        "description": "Type d’utilisation des facteurs d’authentification",
+        "description": "Usage type for authentication factors",
         "enum": [
           "primary",
           "secondary"
@@ -2204,7 +2204,7 @@
         "type": "object"
       },
       "UserVerificationEnum": {
-        "description": "L’exigence relative à la vérification de l’utilisateur",
+        "description": "The user verification requirement",
         "enum": [
           "required",
           "preferred",
@@ -2272,7 +2272,7 @@
             "x-type": "totp"
           }
         ],
-        "description": "Contenu de la requête pour vérifier une méthode d’authentification"
+        "description": "Request content for verifying an authentication method"
       },
       "VerifyAuthenticationMethodResponseContent": {
         "discriminator": {
@@ -2334,11 +2334,11 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "L’identifiant de session unique pour l’inscription, tel que renvoyé par POST /authentication-methods",
+            "description": "The unique session identifier for the enrollment as returned by POST /authentication-methods",
             "type": "string"
           },
           "otp_code": {
-            "description": "Le code à usage unique envoyé à l’adresse courriel.",
+            "description": "The one-time password code sent to the email address.",
             "type": "string"
           }
         },
@@ -2353,7 +2353,7 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "L’identifiant de session unique pour l’inscription, tel que renvoyé par POST /authentication-methods",
+            "description": "The unique session identifier for the enrollment as returned by POST /authentication-methods",
             "type": "string"
           },
           "authn_response": {
@@ -2371,11 +2371,11 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "L’identifiant de session unique de l’opération de changement de mot de passe, tel que renvoyé par POST /authentication-methods",
+            "description": "The unique session identifier for the password change operation as returned by POST /authentication-methods",
             "type": "string"
           },
           "new_password": {
-            "description": "Le nouveau mot de passe à définir pour l’utilisateur",
+            "description": "The new password to set for the user",
             "maxLength": 256,
             "minLength": 1,
             "pattern": "^[^\\u0000-\\u001f\\u007f-\\u009f]*$",
@@ -2393,11 +2393,11 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "L’identifiant de session unique pour l’inscription, tel que renvoyé par POST /authentication-methods",
+            "description": "The unique session identifier for the enrollment as returned by POST /authentication-methods",
             "type": "string"
           },
           "otp_code": {
-            "description": "Le code à usage unique envoyé au numéro de téléphone.",
+            "description": "The one-time password code sent to the phone number.",
             "type": "string"
           }
         },
@@ -2412,7 +2412,7 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "L’identifiant de session unique pour l’inscription, tel que renvoyé par POST /authentication-methods",
+            "description": "The unique session identifier for the enrollment as returned by POST /authentication-methods",
             "type": "string"
           }
         },
@@ -2426,7 +2426,7 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "L’identifiant de session unique pour l’inscription, tel que renvoyé par POST /authentication-methods",
+            "description": "The unique session identifier for the enrollment as returned by POST /authentication-methods",
             "type": "string"
           }
         },
@@ -2440,11 +2440,11 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "L’identifiant de session unique pour l’inscription, tel que renvoyé par POST /authentication-methods",
+            "description": "The unique session identifier for the enrollment as returned by POST /authentication-methods",
             "type": "string"
           },
           "otp_code": {
-            "description": "Le code à usage unique récupéré depuis l’application TOTP.",
+            "description": "The one-time password code retrieved from the TOTP application.",
             "type": "string"
           }
         },
@@ -2459,7 +2459,7 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "L’identifiant de session unique pour l’inscription, tel que renvoyé par POST /authentication-methods",
+            "description": "The unique session identifier for the enrollment as returned by POST /authentication-methods",
             "type": "string"
           },
           "authn_response": {
@@ -2477,7 +2477,7 @@
         "additionalProperties": false,
         "properties": {
           "auth_session": {
-            "description": "L’identifiant de session unique pour l’inscription, tel que renvoyé par POST /authentication-methods",
+            "description": "The unique session identifier for the enrollment as returned by POST /authentication-methods",
             "type": "string"
           },
           "authn_response": {
@@ -2513,14 +2513,14 @@
     },
     "securitySchemes": {
       "Bearer-DPoP": {
-        "description": "Les jetons Bearer et DPoP sont pris en charge selon la configuration de l’API",
+        "description": "Bearer and DPoP tokens are supported depending on the API configuration",
         "scheme": "bearer",
         "type": "http"
       }
     }
   },
   "info": {
-    "description": "L’API My Account d’Auth0 fournit un ensemble dédié de points de terminaison permettant aux utilisateurs de gérer les renseignements de leur propre compte. Les clients peuvent utiliser ces API pour créer des expériences libre-service dans leurs applications ou enrichir progressivement le compte d’un utilisateur.\n\nL’API My Account fonctionne dans le contexte de l’utilisateur actuellement connecté et peut être utilisée directement dans des applications destinées aux utilisateurs.\n\n:::tip Utiliser le domaine Auth0 ou un domaine personnalisé\n\nL’API My Account prend en charge l’utilisation de votre domaine Auth0 canonique ou de votre domaine personnalisé, mais vous devez utiliser le même domaine tout au long du processus, notamment pour :\n\n- Obtenir un jeton d’accès\n- Définir la valeur d’audience\n- Appeler le point de terminaison de l’API My Account\n\nPour en savoir plus, consultez [Custom Domains](https://auth0.com/docs/customize/custom-domains).\n\n:::\n\n## Activer l’API My Account\n\nVous pouvez activer l’API My Account pour votre tenant dans le tableau de bord Auth0 :\n\n1. Accédez à Authentication > APIs.\n2. Repérez la bannière MyAccount API.\n3. Sélectionnez Activate.\n\n![](https://images.ctfassets.net/cdy7uua7fh8z/DGkDQNIHcegN8vtQyEvF3/a2e98b06867701a66fa1f1b3df1c996b/My_Account_API_-_Activate.png)\n\nPar défaut, l’API My Account est créée avec les application API access policies suivantes :\n\n`require_client_grant` pour les flux utilisateur\n\n`deny_all` pour les flux client (machine à machine)\n\nPour qu’une application puisse accéder à l’API My Account au nom de l’utilisateur, vous devez créer explicitement un client grant pour cette application, ce qui vous permet de définir les scopes maximaux que l’application peut demander. Vous pouvez aussi remplacer la policy des flux d’accès utilisateur par allow_all, ce qui permet à toute application de votre tenant de demander n’importe quel scope de l’API My Account.\n\nComme l’API My Account expose des renseignements et des opérations sensibles, Auth0 ne recommande pas d’utiliser allow_all pour les flux d’accès utilisateur. Vous devriez appliquer le principe du moindre privilège avec l’API My Account afin de veiller à ce que les applications n’obtiennent que l’accès dont elles ont réellement besoin, ce qui réduit les risques de sécurité potentiels.\n\nLes permissions finales accordées à l’application seront déterminées par l’intersection des scopes autorisés par l’application API access policy, des permissions Role-Based Access Control (RBAC) attribuées à l’utilisateur final et du consentement donné par l’utilisateur, s’il y a lieu.\n\n:::info Flux pris en charge\n\nVous ne pouvez pas mettre à jour l’application API access policy pour l’accès client à l’API My Account, ce qui signifie que vous ne pouvez pas accéder à l’API My Account à l’aide du Client Credentials Flow.\n\n:::\n\nPour en savoir plus sur la gestion des application API access policies et des client grants qui y sont associés, consultez [Application Access to APIs: Client Grants](https://auth0.com/docs/get-started/applications/application-access-to-apis-client-grants).\n\n## Obtenir un jeton d’accès\n\nVous pouvez obtenir un jeton d’accès pour l’API My Account de la même façon que pour l’une de vos propres API.\n\n:::info &nbsp\nSi vous comptez permettre à l’API My Account d’effectuer des opérations sensibles (comme l’inscription d’une méthode d’authentification), nous vous recommandons fortement d’utiliser l’[authentification renforcée (step-up authentication)](https://auth0.com/docs/secure/multi-factor-authentication/step-up-authentication) pour appliquer des politiques de sécurité supplémentaires au moyen de l’[authentification multifacteur (MFA)](https://auth0.com/docs/secure/multi-factor-authentication).\n:::\n\nSi vous utilisez Universal Login, consultez les articles suivants :\n\n- [Call Your API Using the Authorization Code Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/call-your-api-using-the-authorization-code-flow)\n- [Call Your API Using the Authorization Code Flow with PKCE](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce/call-your-api-using-the-authorization-code-flow-with-pkce)\n\nSi vous utilisez l’embedded login, consultez les articles suivants :\n\n- [Call Your API Using Resource Owner Password Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow/call-your-api-using-resource-owner-password-flow)\n- [Login Flow with Native Passkeys API](https://auth0.com/docs/native-passkeys-api#login-flow)\n\n## Exemples\n\n### Universal Login avec le flux de code d’autorisation\n\n**Étape 1 : Demander un code d’autorisation**\n\n```\ncurl --request GET \\\n  --url 'https://{yourDomain}/authorize?response_type=code&client_id={yourClientId}&redirect_uri=%7ByourRedirectUri%7D&scope=create%3Ame%3Aauthentication_methods&offline_access=&audience=https%3A%2F%2F{yourDomain}%2Fme%2F'\n```\n\n**Étape 2 : Échanger le code contre un jeton d’accès**\n\n```\ncurl --request POST \\\n  --url 'https://{yourDomain}/oauth/token' \\\n  --header 'content-type: application/json' \\\n  --data '{\"grant_type\": \"authorization_code\",\"client_id\": \"{yourClientId}\",\"client_secret\": \"{yourClientSecret}\",\"code\": \"{yourAuthorizationCode}\",\"redirect_uri\": \"{yourRedirectUri}\",\"audience\": \"{yourAudience}\",\"scope\": \"create:me:authentication_methods\",\"offline_access\": \"\"}'\n```\n\n### Embedded login avec des passkeys natives\n\n**Étape 1 : Demander un challenge de connexion**\n\n```\ncurl --request POST \\\n  --url 'https://{yourDomain}/passkey/challenge' \\\n  --header 'content-type: application/json' \\\n  --data '{\"client_id\": \"{yourClientId}\"}'\n```\n\n**Étape 2 : Authentifier un utilisateur existant**\n\n```\ncurl --request POST \\\n  --url 'https://{yourDomain}/oauth/token' \\\n  --header 'content-type: application/json' \\\n  --data '{  \"grant_type\": \"urn:okta:params:oauth:grant-type:webauthn\",  \"client_id\": \"{yourClientId}\",  \"scope\": \"create:me:authentication_methods offline_access\",  \"audience\": \"https://{yourDomain}/me/\",  \"auth_session\": \"{sessionIdFromTheFirstRequest}\",  \"authn_response\": \"{authenticatorResponse}\"}'\n```",
+    "description": "The Auth0 My Account API provides a dedicated set of endpoints for users to manage their own account information. Customers can use these APIs to build self-service experiences in their applications or progressively add details to a user account.\n\nThe My Account API operates within the context of the currently logged-in user and can be used directly within user-facing applications.\n\n:::tip Using Auth0 domain vs. custom domain\n\nThe My Account API supports using your canonical Auth0 domain or your custom domain, but you must use the same one throughout the entire process, including:\n\n- Getting an access token\n- Setting the audience value\n- Calling the My Account API endpoint\n\nFor more information, read [Custom Domains](https://auth0.com/docs/customize/custom-domains).\n\n:::\n\n## Activate the My Account API\n\nYou can activate the My Account API for your tenant in the Auth0 Dashboard:\n\n1. Navigate to Authentication > APIs.\n2. Locate the MyAccount API banner.\n3. Select Activate.\n\n![](https://images.ctfassets.net/cdy7uua7fh8z/DGkDQNIHcegN8vtQyEvF3/a2e98b06867701a66fa1f1b3df1c996b/My_Account_API_-_Activate.png)\n\nBy default, the My Account API is created with the following application API access policies:\n\n`require_client_grant` for user flows\n\n`deny_all` for client (machine-to-machine) flows\n\nFor an application to access the My Account API on the user's behalf, you must explicitly create a client grant for that application, which allows you to define the maximum scopes the application can request. Alternatively, you can change the policy for user access flows to allow_all, which allows any application in your tenant to request any scope from the My Account API.\n\nBecause the My Account API exposes sensitive information and operations, Auth0 does not recommend using allow_all for user access flows. You should follow a least privilege principle with the My Account API to ensure applications only get access to what they truly need, minimizing potential security risks.\n\nThe final permissions granted to the application will be determined by the intersection of the scopes allowed by the application API access policy, the Role-Based Access Control (RBAC) permissions assigned to the end user, and any user consent given (if applicable).\n\n:::info Supported flows\n\nYou cannot update the application API policy for client access to the My Account API, which means you cannot access the My Account API using the Client Credentials Flow.\n\n:::\n\nTo learn more about how to manage application API access policies and their associated client grants, read [Application Access to APIs: Client Grants](https://auth0.com/docs/get-started/applications/application-access-to-apis-client-grants).\n\n## Get an access token\n\nYou can get an access token for the My Account API in the same way you'd get an access token for one of your own APIs.\n\n:::info &nbsp\nIf you're going to allow the My Account API to perform sensitive operations (such as enrolling an authentication method), we strongly recommend that you use [step-up authentication](https://auth0.com/docs/secure/multi-factor-authentication/step-up-authentication) to enforce additional security policies through [multi-factor authentication (MFA)](https://auth0.com/docs/secure/multi-factor-authentication).\n:::\n\nIf you're using Universal Login, read the following articles:\n\n- [Call Your API Using the Authorization Code Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/call-your-api-using-the-authorization-code-flow)\n- [Call Your API Using the Authorization Code Flow with PKCE](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce/call-your-api-using-the-authorization-code-flow-with-pkce)\n\nIf you're using embedded login, read the following articles:\n\n- [Call Your API Using Resource Owner Password Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow/call-your-api-using-resource-owner-password-flow)\n- [Login Flow with Native Passkeys API](https://auth0.com/docs/native-passkeys-api#login-flow)\n\n## Examples\n\n### Universal Login with authorization code flow\n\n**Step 1: Request authorization code**\n\n```\ncurl --request GET \\\n  --url 'https://{yourDomain}/authorize?response_type=code&client_id={yourClientId}&redirect_uri=%7ByourRedirectUri%7D&scope=create%3Ame%3Aauthentication_methods&offline_access=&audience=https%3A%2F%2F{yourDomain}%2Fme%2F'\n```\n\n**Step 2: Exchange code for access token**\n\n```\ncurl --request POST \\\n  --url 'https://{yourDomain}/oauth/token' \\\n  --header 'content-type: application/json' \\\n  --data '{\"grant_type\": \"authorization_code\",\"client_id\": \"{yourClientId}\",\"client_secret\": \"{yourClientSecret}\",\"code\": \"{yourAuthorizationCode}\",\"redirect_uri\": \"{yourRedirectUri}\",\"audience\": \"{yourAudience}\",\"scope\": \"create:me:authentication_methods\",\"offline_access\": \"\"}'\n```\n\n### Embedded login with native passkeys\n\n**Step 1: Request login challenge**\n\n```\ncurl --request POST \\\n  --url 'https://{yourDomain}/passkey/challenge' \\\n  --header 'content-type: application/json' \\\n  --data '{\"client_id\": \"{yourClientId}\"}'\n```\n\n**Step 2: Authenticate existing user**\n\n```\ncurl --request POST \\\n  --url 'https://{yourDomain}/oauth/token' \\\n  --header 'content-type: application/json' \\\n  --data '{  \"grant_type\": \"urn:okta:params:oauth:grant-type:webauthn\",  \"client_id\": \"{yourClientId}\",  \"scope\": \"create:me:authentication_methods offline_access\",  \"audience\": \"https://{yourDomain}/me/\",  \"auth_session\": \"{sessionIdFromTheFirstRequest}\",  \"authn_response\": \"{authenticatorResponse}\"}'\n```",
     "title": "My Account",
     "version": "1.0"
   },
@@ -2528,7 +2528,7 @@
   "paths": {
     "/authentication-methods": {
       "get": {
-        "description": "Récupérer la liste détaillée des méthodes d’authentification de l’utilisateur authentifié.",
+        "description": "Retrieve detailed list of authentication methods belonging to the authenticated user.",
         "operationId": "getAuthenticationMethods",
         "parameters": [
           {
@@ -2541,7 +2541,7 @@
               "application/json": {
                 "examples": {
                   "multiple-methods": {
-                    "summary": "Utilisateur ayant inscrit plusieurs méthodes d’authentification",
+                    "summary": "User with multiple authentication methods enrolled",
                     "value": {
                       "authentication_methods": [
                         {
@@ -2633,7 +2633,7 @@
                 }
               }
             },
-            "description": "Méthodes d’authentification récupérées avec succès",
+            "description": "Successfully retrieved authentication methods",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -2666,7 +2666,7 @@
             ]
           }
         ],
-        "summary": "Obtenir la liste des méthodes d’authentification",
+        "summary": "Get a list of authentication methods",
         "tags": [
           "authentication-methods"
         ],
@@ -2677,33 +2677,33 @@
         "x-release-lifecycle": "GA"
       },
       "post": {
-        "description": "Démarrer l’inscription d’une méthode d’authentification prise en charge.",
+        "description": "Start the enrollment of a supported authentication method.",
         "operationId": "createAuthenticationMethod",
         "requestBody": {
           "content": {
             "application/json": {
               "examples": {
                 "email": {
-                  "summary": "Inscrire une adresse courriel pour l’OTP",
+                  "summary": "Enroll an email address for OTP",
                   "value": {
                     "email": "user@example.com",
                     "type": "email"
                   }
                 },
                 "passkey": {
-                  "summary": "Inscrire une clé d’accès",
+                  "summary": "Enroll a passkey",
                   "value": {
                     "type": "passkey"
                   }
                 },
                 "password": {
-                  "summary": "Inscrire un mot de passe",
+                  "summary": "Enroll a password credential",
                   "value": {
                     "type": "password"
                   }
                 },
                 "phone": {
-                  "summary": "Inscrire un numéro de téléphone pour l’OTP par SMS ou appel vocal",
+                  "summary": "Enroll a phone number for SMS/voice OTP",
                   "value": {
                     "phone_number": "+15551234567",
                     "preferred_authentication_method": "sms",
@@ -2711,19 +2711,19 @@
                   }
                 },
                 "push-notification": {
-                  "summary": "Inscrire un authentificateur par notification push",
+                  "summary": "Enroll a push notification authenticator",
                   "value": {
                     "type": "push-notification"
                   }
                 },
                 "recovery-code": {
-                  "summary": "Générer un code de récupération",
+                  "summary": "Generate a recovery code",
                   "value": {
                     "type": "recovery-code"
                   }
                 },
                 "totp": {
-                  "summary": "Inscrire une application d’authentification TOTP",
+                  "summary": "Enroll a TOTP authenticator app",
                   "value": {
                     "type": "totp"
                   }
@@ -2741,14 +2741,14 @@
               "application/json": {
                 "examples": {
                   "email": {
-                    "summary": "Inscription par courriel commencée",
+                    "summary": "Email enrollment started",
                     "value": {
                       "auth_session": "Fe26.2**05c400ed...",
                       "id": "email|dev_XXXXXXXXXXXXXXXX"
                     }
                   },
                   "passkey": {
-                    "summary": "Inscription de la clé d’accès commencée — comprend les options de création WebAuthn",
+                    "summary": "Passkey enrollment started — includes WebAuthn creation options",
                     "value": {
                       "auth_session": "Fe26.2**05c400ed...",
                       "authn_params_public_key": {
@@ -2781,7 +2781,7 @@
                     }
                   },
                   "password": {
-                    "summary": "Inscription du mot de passe commencée — comprend la politique de mot de passe",
+                    "summary": "Password enrollment started — includes password policy",
                     "value": {
                       "auth_session": "Fe26.2**05c400ed...",
                       "id": "password|new",
@@ -2818,14 +2818,14 @@
                     }
                   },
                   "phone": {
-                    "summary": "Inscription du téléphone commencée",
+                    "summary": "Phone enrollment started",
                     "value": {
                       "auth_session": "Fe26.2**05c400ed...",
                       "id": "phone|dev_XXXXXXXXXXXXXXXX"
                     }
                   },
                   "push-notification": {
-                    "summary": "Inscription par notification push commencée — comprend les données du code QR",
+                    "summary": "Push notification enrollment started — includes QR code data",
                     "value": {
                       "auth_session": "Fe26.2**05c400ed...",
                       "barcode_uri": "otpauth://totp/my-tenant:auth0%7C507f1f77bcf86cd799439011?secret=JBSWY3DPEHPK3PXP&issuer=my-tenant&algorithm=SHA1&digits=6&period=30",
@@ -2833,7 +2833,7 @@
                     }
                   },
                   "recovery-code": {
-                    "summary": "Code de récupération généré",
+                    "summary": "Recovery code generated",
                     "value": {
                       "auth_session": "Fe26.2**05c400ed...",
                       "id": "recovery-code|dev_XXXXXXXXXXXXXXXX",
@@ -2841,7 +2841,7 @@
                     }
                   },
                   "totp": {
-                    "summary": "Inscription TOTP commencée — comprend les données du code QR",
+                    "summary": "TOTP enrollment started — includes QR code data",
                     "value": {
                       "auth_session": "Fe26.2**05c400ed...",
                       "barcode_uri": "otpauth://totp/my-tenant:auth0%7C507f1f77bcf86cd799439011?secret=JBSWY3DPEHPK3PXP&issuer=my-tenant&algorithm=SHA1&digits=6&period=30",
@@ -2855,7 +2855,7 @@
                 }
               }
             },
-            "description": "Inscription démarrée",
+            "description": "Enrollment started",
             "headers": {
               "Location": {
                 "$ref": "#/components/headers/LocationHeader"
@@ -2894,7 +2894,7 @@
             ]
           }
         ],
-        "summary": "Commencer l’inscription d’une méthode d’authentification prise en charge.",
+        "summary": "Start the enrollment of a supported authentication method.",
         "tags": [
           "authentication-methods"
         ],
@@ -2906,7 +2906,7 @@
     },
     "/authentication-methods/{authentication_method_id}": {
       "delete": {
-        "description": "Supprime une méthode d’authentification de l’utilisateur authentifié.",
+        "description": "Deletes a single authentication method belonging to the authenticated user.",
         "operationId": "deleteAuthenticationMethod",
         "parameters": [
           {
@@ -2915,7 +2915,7 @@
         ],
         "responses": {
           "204": {
-            "description": "Méthode d’authentification supprimée avec succès",
+            "description": "Authentication method successfully deleted",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -2951,7 +2951,7 @@
             ]
           }
         ],
-        "summary": "Supprimer une méthode d’authentification par ID",
+        "summary": "Delete an authentication method by ID",
         "tags": [
           "authentication-methods"
         ],
@@ -2961,7 +2961,7 @@
         "x-release-lifecycle": "GA"
       },
       "get": {
-        "description": "Récupère une méthode d’authentification de l’utilisateur authentifié.",
+        "description": "Retrieves a single authentication method belonging to the authenticated user.",
         "operationId": "getAuthenticationMethod",
         "parameters": [
           {
@@ -2974,7 +2974,7 @@
               "application/json": {
                 "examples": {
                   "email": {
-                    "summary": "Méthode d’authentification par courriel",
+                    "summary": "Email authentication method",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-01-15T10:30:00.000Z",
@@ -2987,7 +2987,7 @@
                     }
                   },
                   "passkey": {
-                    "summary": "Méthode d’authentification par clé d’accès",
+                    "summary": "Passkey authentication method",
                     "value": {
                       "created_at": "2025-03-10T08:00:00.000Z",
                       "credential_backed_up": true,
@@ -3009,7 +3009,7 @@
                     }
                   },
                   "password": {
-                    "summary": "Méthode d’authentification par mot de passe",
+                    "summary": "Password authentication method",
                     "value": {
                       "created_at": "2024-06-01T12:00:00.000Z",
                       "id": "password|dXNlci0xMjM",
@@ -3021,7 +3021,7 @@
                     }
                   },
                   "phone": {
-                    "summary": "Méthode d’authentification par téléphone",
+                    "summary": "Phone authentication method",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-01-15T10:30:00.000Z",
@@ -3035,7 +3035,7 @@
                     }
                   },
                   "push-notification": {
-                    "summary": "Méthode d’authentification par notification push",
+                    "summary": "Push notification authentication method",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-01-15T10:30:00.000Z",
@@ -3047,7 +3047,7 @@
                     }
                   },
                   "recovery-code": {
-                    "summary": "Méthode d’authentification par code de récupération",
+                    "summary": "Recovery code authentication method",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-01-15T10:30:00.000Z",
@@ -3059,7 +3059,7 @@
                     }
                   },
                   "totp": {
-                    "summary": "Méthode d’authentification TOTP",
+                    "summary": "TOTP authentication method",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-01-15T10:30:00.000Z",
@@ -3071,7 +3071,7 @@
                     }
                   },
                   "webauthn-platform": {
-                    "summary": "Authentificateur de plateforme WebAuthn (p. ex. Touch ID, Windows Hello)",
+                    "summary": "WebAuthn platform authenticator (e.g. Touch ID, Windows Hello)",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-02-20T11:00:00.000Z",
@@ -3085,7 +3085,7 @@
                     }
                   },
                   "webauthn-roaming": {
-                    "summary": "Authentificateur itinérant WebAuthn (p. ex. clé de sécurité)",
+                    "summary": "WebAuthn roaming authenticator (e.g. security key)",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-02-25T16:45:00.000Z",
@@ -3104,7 +3104,7 @@
                 }
               }
             },
-            "description": "Méthode d’authentification récupérée avec succès",
+            "description": "Successfully retrieved authentication method",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -3140,7 +3140,7 @@
             ]
           }
         ],
-        "summary": "Obtenir une méthode d’authentification par ID",
+        "summary": "Get an authentication method by ID",
         "tags": [
           "authentication-methods"
         ],
@@ -3150,7 +3150,7 @@
         "x-release-lifecycle": "GA"
       },
       "patch": {
-        "description": "Met à jour une méthode d’authentification",
+        "description": "Updates a single authentication method",
         "operationId": "updateAuthenticationMethod",
         "parameters": [
           {
@@ -3175,7 +3175,7 @@
                 }
               }
             },
-            "description": "Méthode d’authentification mise à jour avec succès",
+            "description": "Successfully updated authentication method",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -3211,7 +3211,7 @@
             ]
           }
         ],
-        "summary": "Mettre à jour les renseignements d’une méthode d’authentification par ID",
+        "summary": "Update details of an authentication method by ID",
         "tags": [
           "authentication-methods"
         ],
@@ -3223,7 +3223,7 @@
     },
     "/authentication-methods/{authentication_method_id}/verify": {
       "post": {
-        "description": "Confirmer l’inscription d’une méthode d’authentification prise en charge.",
+        "description": "Confirm the enrollment of a supported authentication method.",
         "operationId": "confirmAuthenticationMethod",
         "parameters": [
           {
@@ -3235,14 +3235,14 @@
             "application/json": {
               "examples": {
                 "email": {
-                  "summary": "Vérifier l’inscription par courriel avec un code OTP",
+                  "summary": "Verify email enrollment with OTP code",
                   "value": {
                     "auth_session": "Fe26.2**05c400ed...",
                     "otp_code": "123456"
                   }
                 },
                 "passkey": {
-                  "summary": "Vérifier l’inscription par clé d’accès avec la réponse d’attestation de l’application d’authentification",
+                  "summary": "Verify passkey enrollment with authenticator attestation response",
                   "value": {
                     "auth_session": "Fe26.2**05c400ed...",
                     "authn_response": {
@@ -3258,33 +3258,33 @@
                   }
                 },
                 "password": {
-                  "summary": "Vérifier l’inscription au mot de passe en définissant le nouveau mot de passe",
+                  "summary": "Verify password enrollment by setting the new password",
                   "value": {
                     "auth_session": "Fe26.2**05c400ed...",
                     "new_password": "MySecureP@ssw0rd!"
                   }
                 },
                 "phone": {
-                  "summary": "Vérifier l’inscription du téléphone à l’aide d’un code OTP",
+                  "summary": "Verify phone enrollment with OTP code",
                   "value": {
                     "auth_session": "Fe26.2**05c400ed...",
                     "otp_code": "123456"
                   }
                 },
                 "push-notification": {
-                  "summary": "Vérifier l’inscription à la notification push",
+                  "summary": "Verify push notification enrollment",
                   "value": {
                     "auth_session": "Fe26.2**05c400ed..."
                   }
                 },
                 "recovery-code": {
-                  "summary": "Vérifier l’inscription au code de récupération",
+                  "summary": "Verify recovery code enrollment",
                   "value": {
                     "auth_session": "Fe26.2**05c400ed..."
                   }
                 },
                 "totp": {
-                  "summary": "Vérifier l’inscription TOTP avec le code de l’application d’authentification",
+                  "summary": "Verify TOTP enrollment with code from authenticator app",
                   "value": {
                     "auth_session": "Fe26.2**05c400ed...",
                     "otp_code": "123456"
@@ -3303,7 +3303,7 @@
               "application/json": {
                 "examples": {
                   "email": {
-                    "summary": "Méthode d’authentification par courriel confirmée",
+                    "summary": "Email authentication method confirmed",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-01-15T10:30:00.000Z",
@@ -3316,7 +3316,7 @@
                     }
                   },
                   "passkey": {
-                    "summary": "Méthode d’authentification par clé d’accès confirmée",
+                    "summary": "Passkey authentication method confirmed",
                     "value": {
                       "created_at": "2025-01-15T10:30:00.000Z",
                       "credential_backed_up": true,
@@ -3338,7 +3338,7 @@
                     }
                   },
                   "password": {
-                    "summary": "Méthode d’authentification par mot de passe confirmée",
+                    "summary": "Password authentication method confirmed",
                     "value": {
                       "created_at": "2025-01-15T10:30:00.000Z",
                       "id": "password|dXNlci0xMjM",
@@ -3350,7 +3350,7 @@
                     }
                   },
                   "phone": {
-                    "summary": "Méthode d’authentification par téléphone confirmée",
+                    "summary": "Phone authentication method confirmed",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-01-15T10:30:00.000Z",
@@ -3364,7 +3364,7 @@
                     }
                   },
                   "push-notification": {
-                    "summary": "Méthode d’authentification par notification push confirmée",
+                    "summary": "Push notification authentication method confirmed",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-01-15T10:30:00.000Z",
@@ -3376,7 +3376,7 @@
                     }
                   },
                   "recovery-code": {
-                    "summary": "Méthode d’authentification par code de récupération confirmée",
+                    "summary": "Recovery code authentication method confirmed",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-01-15T10:30:00.000Z",
@@ -3388,7 +3388,7 @@
                     }
                   },
                   "totp": {
-                    "summary": "Méthode d’authentification TOTP confirmée",
+                    "summary": "TOTP authentication method confirmed",
                     "value": {
                       "confirmed": true,
                       "created_at": "2025-01-15T10:30:00.000Z",
@@ -3405,7 +3405,7 @@
                 }
               }
             },
-            "description": "Méthode d’authentification vérifiée",
+            "description": "Authentication method verified",
             "headers": {
               "Location": {
                 "$ref": "#/components/headers/LocationHeader"
@@ -3444,7 +3444,7 @@
             ]
           }
         ],
-        "summary": "Confirmer l’inscription d’une méthode d’authentification prise en charge.",
+        "summary": "Confirm the enrollment of a supported authentication method.",
         "tags": [
           "authentication-methods"
         ],
@@ -3456,7 +3456,7 @@
     },
     "/connected-accounts/accounts": {
       "get": {
-        "description": "Récupérer les comptes connectés de l’utilisateur authentifié.",
+        "description": "Retrieve connected accounts belonging to the authenticated user.",
         "operationId": "getConnectedAccounts",
         "parameters": [
           {
@@ -3478,7 +3478,7 @@
                 }
               }
             },
-            "description": "Comptes connectés récupérés avec succès",
+            "description": "Successfully retrieved connected accounts",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -3511,7 +3511,7 @@
             ]
           }
         ],
-        "summary": "Obtenir la liste des comptes connectés",
+        "summary": "Get a list of connected accounts",
         "tags": [
           "connected-accounts"
         ],
@@ -3524,7 +3524,7 @@
     },
     "/connected-accounts/accounts/{id}": {
       "delete": {
-        "description": "Supprimer un compte connecté de l’utilisateur authentifié.",
+        "description": "Delete a connected account belonging to the authenticated user.",
         "operationId": "deleteConnectedAccount",
         "parameters": [
           {
@@ -3533,7 +3533,7 @@
         ],
         "responses": {
           "204": {
-            "description": "Compte connecté supprimé avec succès",
+            "description": "Connected account successfully deleted",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -3566,7 +3566,7 @@
             ]
           }
         ],
-        "summary": "Supprimer un compte connecté par ID",
+        "summary": "Delete a connected account by ID",
         "tags": [
           "connected-accounts"
         ],
@@ -3578,7 +3578,7 @@
     },
     "/connected-accounts/complete": {
       "post": {
-        "description": "Terminer un flux d’autorisation démarré précédemment pour lier le compte de l’utilisateur authentifié à un fournisseur d’identité externe.",
+        "description": "Complete a previously started authorization flow to link the authenticated user's account with an external identity provider.",
         "operationId": "completeConnectedAccountRequest",
         "requestBody": {
           "content": {
@@ -3620,7 +3620,7 @@
             ]
           }
         ],
-        "summary": "Finaliser une requête de compte connecté",
+        "summary": "Complete a connected account request",
         "tags": [
           "connected-accounts"
         ],
@@ -3632,7 +3632,7 @@
     },
     "/connected-accounts/connect": {
       "post": {
-        "description": "Démarrer un flux d’autorisation pour lier le compte de l’utilisateur authentifié à un fournisseur d’identité externe.",
+        "description": "Start an authorization flow to link the authenticated user's account with an external identity provider.",
         "operationId": "createConnectedAccountRequest",
         "requestBody": {
           "content": {
@@ -3671,7 +3671,7 @@
             ]
           }
         ],
-        "summary": "Créer une requête de compte connecté",
+        "summary": "Create a connected account request",
         "tags": [
           "connected-accounts"
         ],
@@ -3683,7 +3683,7 @@
     },
     "/connected-accounts/connections": {
       "get": {
-        "description": "Récupérer les connexions disponibles que l’utilisateur authentifié peut utiliser pour la liaison de comptes.",
+        "description": "Retrieve available connections that can be used for account linking by the authenticated user.",
         "operationId": "getConnectedAccountsConnections",
         "parameters": [
           {
@@ -3702,7 +3702,7 @@
                 }
               }
             },
-            "description": "Connexions disponibles récupérées avec succès",
+            "description": "Successfully retrieved available connections",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -3735,7 +3735,7 @@
             ]
           }
         ],
-        "summary": "Obtenir la liste des connexions disponibles pour les comptes connectés",
+        "summary": "Get a list of available connections for connected accounts",
         "tags": [
           "connected-accounts"
         ],
@@ -3751,7 +3751,7 @@
     },
     "/consents": {
       "get": {
-        "description": "Récupérer la liste des consentements de l’utilisateur authentifié.",
+        "description": "Retrieve the list of consents for the authenticated user.",
         "operationId": "getConsents",
         "responses": {
           "200": {
@@ -3762,7 +3762,7 @@
                 }
               }
             },
-            "description": "Consentements récupérés avec succès",
+            "description": "Successfully retrieved consents",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -3792,7 +3792,7 @@
             ]
           }
         ],
-        "summary": "Lister les consentements de l’utilisateur",
+        "summary": "List user consents",
         "tags": [
           "consents"
         ],
@@ -3805,7 +3805,7 @@
     },
     "/consents/{consent_id}": {
       "get": {
-        "description": "Récupérer un consentement précis de l’utilisateur authentifié par ID.",
+        "description": "Retrieve a specific consent for the authenticated user by ID.",
         "operationId": "getConsent",
         "parameters": [
           {
@@ -3821,7 +3821,7 @@
                 }
               }
             },
-            "description": "Consentement récupéré avec succès",
+            "description": "Successfully retrieved consent",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -3854,7 +3854,7 @@
             ]
           }
         ],
-        "summary": "Obtenir un consentement par ID",
+        "summary": "Get a consent by ID",
         "tags": [
           "consents"
         ],
@@ -3867,7 +3867,7 @@
     },
     "/factors": {
       "get": {
-        "description": "Liste des facteurs activés pour le tenant Auth0 et disponibles pour l’inscription de cet utilisateur.",
+        "description": "List of factors enabled for the Auth0 tenant and available for enrollment by this user.",
         "operationId": "getFactors",
         "parameters": [],
         "responses": {
@@ -3879,7 +3879,7 @@
                 }
               }
             },
-            "description": "Facteurs activés récupérés avec succès",
+            "description": "Successfully retrieved enabled factors",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -3912,7 +3912,7 @@
             ]
           }
         ],
-        "summary": "Obtenir l’état de tous les facteurs",
+        "summary": "Get the status of all factors",
         "tags": [
           "factors"
         ],
@@ -3924,7 +3924,7 @@
     },
     "/organizations": {
       "get": {
-        "description": "Récupérer la liste des organisations auxquelles appartient l’utilisateur authentifié.",
+        "description": "Retrieve the list of organizations the authenticated user belongs to.",
         "operationId": "getOrganizations",
         "parameters": [
           {
@@ -3943,7 +3943,7 @@
                 }
               }
             },
-            "description": "Organisations récupérées avec succès",
+            "description": "Successfully retrieved organizations",
             "headers": {
               "x-ratelimit-limit": {
                 "$ref": "#/components/headers/XRateLimitLimitHeader"
@@ -3976,7 +3976,7 @@
             ]
           }
         ],
-        "summary": "Lister les organisations de l’utilisateur",
+        "summary": "List user organizations",
         "tags": [
           "organizations"
         ],
@@ -3995,34 +3995,34 @@
       "variables": {
         "host": {
           "default": "auth0.auth0.com",
-          "description": "Nom d’hôte personnalisé ou canonique"
+          "description": "Custom or canonical host name"
         }
       }
     }
   ],
   "tags": [
     {
-      "description": "Facteurs",
+      "description": "Factors",
       "name": "factors",
       "x-displayName": "Factors"
     },
     {
-      "description": "Comptes connectés",
+      "description": "Connected Accounts",
       "name": "connected-accounts",
       "x-displayName": "Connected Accounts"
     },
     {
-      "description": "Méthodes d’authentification",
+      "description": "Authentication Methods",
       "name": "authentication-methods",
       "x-displayName": "Authentication Methods"
     },
     {
-      "description": "Consentements",
+      "description": "Consents",
       "name": "consents",
       "x-displayName": "Consents"
     },
     {
-      "description": "Organisations",
+      "description": "Organizations",
       "name": "organizations",
       "x-displayName": "Organizations"
     }

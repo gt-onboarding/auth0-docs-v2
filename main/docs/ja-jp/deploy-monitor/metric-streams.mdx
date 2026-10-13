@@ -4,7 +4,7 @@ title: Metric Streams
 ---
 
 <div id="metric-streams-beta">
-  # Metric Streams (ベータ)
+  # Metric Streams (ベータ) {#metric-streams-beta}
 </div>
 
 <Warning>
@@ -14,7 +14,7 @@ title: Metric Streams
 Auth0のリアルタイムメトリクスを監視プラットフォームにストリーミングして、APIのパフォーマンスを追跡し、レート制限の問題を特定し、エラーのトラブルシューティングを迅速化できます。Metric Streamsは、DatadogとのNativeな連携と、New RelicやSplunkなどのプラットフォーム向けのOpenTelemetry Protocol (OTLP) の両方をサポートしています。
 
 <div id="what-you-can-monitor">
-  ## 監視できる内容
+  ## 監視できる内容 {#what-you-can-monitor}
 </div>
 
 Auth0 API の利用状況に関する主要なメトリクスを追跡できます。
@@ -26,28 +26,28 @@ Auth0 API の利用状況に関する主要なメトリクスを追跡できま�
 * **認証フロー**: グラントタイプや接続の利用状況を追跡します。
 
 <div id="use-cases">
-  ## 活用例
+  ## 活用例 {#use-cases}
 </div>
 
 <div id="identify-rate-limit-issues">
-  ### レート制限の問題を特定する
+  ### レート制限の問題を特定する {#identify-rate-limit-issues}
 </div>
 
 レート制限に達しているAPIやエンドポイントを監視することで、連携を調整したり、レート制限ティアにアップグレードしたりできます。
 
 <div id="troubleshoot-api-failures">
-  ### API 障害のトラブルシューティング
+  ### API 障害のトラブルシューティング {#troubleshoot-api-failures}
 </div>
 
 メトリクスを API、オペレーション、失敗の種類 (レート制限、異常検知、または一般的なエラー) で絞り込むことで、エラーの根本原因をすばやく特定できます。
 
 <div id="plan-capacity">
-  ### プランのキャパシティ
+  ### プランのキャパシティ {#plan-capacity}
 </div>
 
 ピーク時の利用量、平均RPS、パーセンタイル指標を分析して、ワークロードに適したレート制限ティアを見極めます。
 
-## 前提条件
+## 前提条件 {#prerequisites}
 
 メトリックストリームを設定する前に、以下が必要です。
 
@@ -67,17 +67,17 @@ Auth0 API の利用状況に関する主要なメトリクスを追跡できま�
 * **監視プラットフォームのアカウント**: [サポート対象の送信先](#supported-destinations)のいずれかで有効なアカウント。
 
 <div id="metric-reference">
-  ## メトリクス リファレンス
+  ## メトリクス リファレンス {#metric-reference}
 </div>
 
 <div id="auth0api_requestcount">
-  ### auth0.api_request.count
+  ### auth0.api_request.count {#auth0api_requestcount}
 </div>
 
 詳細なフィルタリングと集計タグを使用して、Auth0 テナントへの API リクエスト数をカウントします。新しいメトリクスは 10 秒ごとに生成され、1 秒単位の粒度で提供されます。
 
 <div id="available-tags">
-  #### 利用可能なタグ
+  #### 利用可能なタグ {#available-tags}
 </div>
 
 | タグ名                | 必須  | 説明                                                               |
@@ -102,7 +102,7 @@ Auth0 API の利用状況に関する主要なメトリクスを追跡できま�
 </Note>
 
 <div id="enum-values">
-  #### 列挙値
+  #### 列挙値 {#enum-values}
 </div>
 
 **api**
@@ -122,7 +122,7 @@ Auth0 API の利用状況に関する主要なメトリクスを追跡できま�
 * `CLIENT_SERVER_ERROR` - HTTP 4xx または 5xx エラー
 
 <div id="supported-destinations">
-  ## サポート対象の送信先
+  ## サポート対象の送信先 {#supported-destinations}
 </div>
 
 Metric Streams は、以下の監視プラットフォームに対応しています。
@@ -142,20 +142,20 @@ Metric Streams は、以下の監視プラットフォームに対応してい�
 </CardGroup>
 
 <div id="set-up-datadog">
-  ## Datadog を設定する
+  ## Datadog を設定する {#set-up-datadog}
 </div>
 
 Datadog 独自のメトリクス API を使用して、Auth0 のメトリクスを Datadog に直接送信します。
 
 <div id="prerequisites">
-  ### 前提条件
+  ### 前提条件 {#prerequisites-2}
 </div>
 
 * 有効な[Datadogアカウント](https://www.datadoghq.com/)
 * Datadog の API キー (Datadog の **Organization Settings &gt; API Keys** で生成) 
 * ご利用の Datadog サイト (`app.datadoghq.com` の場合は `US1`、`app.datadoghq.eu` の場合は `EU`、`us3.datadoghq.com` の場合は `US3` などのリージョン識別子)
 
-### メトリックストリームを作成
+### メトリックストリームを作成 {#create-metric-stream}
 
 <Tabs>
   <Tab title="Auth0 Dashboard">
@@ -222,13 +222,13 @@ Datadog 独自のメトリクス API を使用して、Auth0 のメトリクス�
 </Tabs>
 
 <div id="verify-in-datadog">
-  ### DatadogでVerify
+  ### DatadogでVerify {#verify-in-datadog}
 </div>
 
 数分で、Auth0のメトリクスがDatadogに表示されます。**Metrics &gt; Explorer** に移動し、`auth0.api_request.count` を検索すると、データを確認できます。
 
 <div id="manage-streams">
-  ### ストリームの管理
+  ### ストリームの管理 {#manage-streams}
 </div>
 
 <Tabs>
@@ -280,13 +280,13 @@ Datadog 独自のメトリクス API を使用して、Auth0 のメトリクス�
 </Tabs>
 
 <div id="set-up-new-relic">
-  ## New Relicを設定する
+  ## New Relicを設定する {#set-up-new-relic}
 </div>
 
 OpenTelemetry Protocol (OTLP) を使用して、Auth0のメトリクスをNew Relicに送信します。
 
 <div id="get-new-relic-credentials">
-  ### New Relicの資格情報を取得する
+  ### New Relicの資格情報を取得する {#get-new-relic-credentials}
 </div>
 
 <Steps>
@@ -310,7 +310,7 @@ OpenTelemetry Protocol (OTLP) を使用して、Auth0のメトリクスをNew Re
 </Steps>
 
 <div id="create-metric-stream">
-  ### メトリックストリーム を作成
+  ### メトリックストリーム を作成 {#create-metric-stream-2}
 </div>
 
 <Tabs>
@@ -356,13 +356,13 @@ OpenTelemetry Protocol (OTLP) を使用して、Auth0のメトリクスをNew Re
 </Tabs>
 
 <div id="set-up-splunk">
-  ## Splunk を設定する
+  ## Splunk を設定する {#set-up-splunk}
 </div>
 
 OpenTelemetry Protocol (OTLP) を使用して、Auth0 のメトリクスを Splunk Observability Cloud にストリーミングします。
 
 <div id="get-splunk-credentials">
-  ### Splunkの資格情報を取得する
+  ### Splunkの資格情報を取得する {#get-splunk-credentials}
 </div>
 
 <Steps>
@@ -388,7 +388,7 @@ OpenTelemetry Protocol (OTLP) を使用して、Auth0 のメトリクスを Splu
   </Step>
 </Steps>
 
-### メトリックストリームを作成
+### メトリックストリームを作成 {#create-metric-stream-3}
 
 <Tabs>
   <Tab title="Auth0 Dashboard">
@@ -433,7 +433,7 @@ OpenTelemetry Protocol (OTLP) を使用して、Auth0 のメトリクスを Splu
 </Tabs>
 
 <div id="understand-metric-cardinality">
-  ## メトリクスのカーディナリティを理解する
+  ## メトリクスのカーディナリティを理解する {#understand-metric-cardinality}
 </div>
 
 カーディナリティとは、メトリクスによって生成される一意の時系列の数を指します。カーディナリティが高いほど、監視コストも増加します。
@@ -456,11 +456,11 @@ OpenTelemetry Protocol (OTLP) を使用して、Auth0 のメトリクスを Splu
 </Warning>
 
 <div id="troubleshooting">
-  ## トラブルシューティング
+  ## トラブルシューティング {#troubleshooting}
 </div>
 
 <div id="metrics-not-appearing">
-  ### メトリクスが表示されない
+  ### メトリクスが表示されない {#metrics-not-appearing}
 </div>
 
 **ストリームのステータスを確認する:**
@@ -492,7 +492,7 @@ OpenTelemetry Protocol (OTLP) を使用して、Auth0 のメトリクスを Splu
 キャッシュされたリクエストや WAF によってブロックされたリクエストは、メトリックストリームに含まれないことに注意してください。
 
 <div id="high-monitoring-costs">
-  ### 監視コストが高い場合
+  ### 監視コストが高い場合 {#high-monitoring-costs}
 </div>
 
 想定以上にコストがかかっている場合は、次の点を確認してください。

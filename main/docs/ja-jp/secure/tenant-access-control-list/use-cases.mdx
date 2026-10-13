@@ -5,7 +5,7 @@ description: Tenant ACL の一般的なユースケースを実装するため�
 ---
 
 <div id="block-a-request">
-  ## リクエストをブロックする
+  ## リクエストをブロックする {#block-a-request}
 </div>
 
 この Tenant ACL ルールの例では、特定の地理位置情報の国コードからの受信トラフィックをブロックします。
@@ -167,7 +167,7 @@ description: Tenant ACL の一般的なユースケースを実装するため�
 ![ブロックページの例](/docs/images/tenants/block-page-example.png)
 
 <div id="allow-a-request">
-  ## リクエストを許可する
+  ## リクエストを許可する {#allow-a-request}
 </div>
 
 この Tenant ACL ルールの例では、特定の地理位置情報の国コードからのトラフィックのみを許可します。
@@ -310,7 +310,7 @@ description: Tenant ACL の一般的なユースケースを実装するため�
 </Tabs>
 
 <div id="redirect-a-request">
-  ## リクエストをリダイレクトする
+  ## リクエストをリダイレクトする {#redirect-a-request}
 </div>
 
 この Tenant ACL ルールの例では、特定の地理位置情報の国コードからのすべてのトラフィックをリダイレクトします。
@@ -464,7 +464,7 @@ description: Tenant ACL の一般的なユースケースを実装するため�
 </Tabs>
 
 <div id="complex-comparisons">
-  ## 複雑な比較
+  ## 複雑な比較 {#complex-comparisons}
 </div>
 
 1 つの Tenant ACL ルール内で `match` 演算子と `not_match` 演算子を組み合わせることで、きめ細かなアクセス制御ポリシーを適用できます。
@@ -626,7 +626,7 @@ description: Tenant ACL の一般的なユースケースを実装するため�
 </Tabs>
 
 <div id="enforce-traffic-through-specific-infrastructure">
-  ## 特定のインフラストラクチャを経由するようにトラフィックを制限する
+  ## 特定のインフラストラクチャを経由するようにトラフィックを制限する {#enforce-traffic-through-specific-infrastructure}
 </div>
 
 `hostnames` と `connecting_ipv4_cidrs` のシグナルを組み合わせることで、リバースプロキシや VPN など、承認済みのインフラストラクチャを経由するリクエストだけをテナントにルーティングできます。

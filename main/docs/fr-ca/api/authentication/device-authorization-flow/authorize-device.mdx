@@ -6,7 +6,7 @@ description: "Obtenez un code d’appareil pour lancer le Device Authorization F
 import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `POST /oauth/device/code`
@@ -14,7 +14,7 @@ import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 Ce flux est conçu pour permettre à des appareils à saisie limitée d’accéder à une API. Utilisez ce point de terminaison pour obtenir un code d’appareil qui permet à l’utilisateur d’autoriser l’appareil.
 
 <div id="request-example">
-  ## Exemple de requête
+  ## Exemple de requête {#request-example}
 </div>
 
 ```http
@@ -25,7 +25,7 @@ client_id=${account.clientId}&scope=SCOPE&audience=API_IDENTIFIER
 ```
 
 <div id="response-values">
-  ### Valeurs de réponse
+  ### Valeurs de réponse {#response-values}
 </div>
 
 | Valeur                      | Description                                                                     |
@@ -38,14 +38,14 @@ client_id=${account.clientId}&scope=SCOPE&audience=API_IDENTIFIER
 | `interval`                  | L’intervalle d’interrogation, en secondes, pour effectuer une demande de jeton. |
 
 <div id="remarks">
-  ### Remarques
+  ### Remarques {#remarks}
 </div>
 
 * Incluez `offline_access` dans le `scope` pour obtenir un jeton d’actualisation.
 * Utilisez le code d’appareil renvoyé pour demander un jeton d’accès au point de terminaison des jetons.
 
 <div id="token-request-example">
-  ### Exemple de requête de jeton
+  ### Exemple de requête de jeton {#token-request-example}
 </div>
 
 ```http
@@ -56,11 +56,11 @@ client_id=${account.clientId}&device_code=YOUR_DEVICE_CODE&grant_type=urn:ietf:p
 ```
 
 <div id="responses">
-  ### Réponses
+  ### Réponses {#responses}
 </div>
 
 <div id="200">
-  #### 200
+  #### 200 {#200}
 </div>
 
 Une requête réussie retourne un jeton d’accès.
@@ -78,7 +78,7 @@ Content-Type: application/json
 ```
 
 <div id="error-responses">
-  ### Réponses d’erreur
+  ### Réponses d’erreur {#error-responses}
 </div>
 
 ```json
@@ -100,7 +100,7 @@ Content-Type: application/json
 ```
 
 <div id="learn-more">
-  ### En savoir plus
+  ### En savoir plus {#learn-more}
 </div>
 
 * [Device Authorization Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/device-authorization-flow)
@@ -108,7 +108,7 @@ Content-Type: application/json
 * [Configurer une autorisation Device Code à l’aide du Dashboard de gestion](https://auth0.com/docs/get-started/applications/update-grant-types)
 
 <div id="body-parameters">
-  ## Paramètres du corps
+  ## Paramètres du corps {#body-parameters}
 </div>
 
 <ParamField body="client_id" type="string" required>
@@ -128,7 +128,7 @@ Content-Type: application/json
 </ParamField>
 
 <div id="response-schema">
-  ## Schéma de réponse
+  ## Schéma de réponse {#response-schema}
 </div>
 
 <ResponseSchema>
@@ -158,7 +158,7 @@ Content-Type: application/json
 </ResponseSchema>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                                          |

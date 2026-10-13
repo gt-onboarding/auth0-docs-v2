@@ -6,7 +6,7 @@ title: サブドメイン URL プレースホルダー
 URL 内で動的なテキストとして機能する、さまざまなプレースホルダーを使用できます。
 
 <div id="how-url-evaluation-works">
-  ## URL 評価の仕組み
+  ## URL 評価の仕組み {#how-url-evaluation-works}
 </div>
 
 `{organization_name}` プレースホルダーを含む URL は、次の条件がすべて満たされる場合にのみ評価されます。
@@ -19,7 +19,7 @@ URL 内で動的なテキストとして機能する、さまざまなプレー�
 同じアプリケーションの同じ設定フィールドに、ワイルドカードと Organization プレースホルダーを含む URL を登録することは避けてください。意図しない動作を招き、トラブルシューティングが難しくなるおそれがあります。例として、**Allowed Callback URLs** が 2 つ設定されたアプリケーションを考えてみましょう: `https://*.exampleco.com` と `https://{organization_name}.exampleco.com` です。値が `https://company-a.exampleco.com` の `redirect_uri` は、テナントに `company-a` という名前の Organizations が登録されていなくても、有効と見なされます。これは、ワイルドカード プレースホルダーが評価されるためです。
 
 <div id="wildcard-url-placeholders">
-  ## ワイルドカード URL プレースホルダー
+  ## ワイルドカード URL プレースホルダー {#wildcard-url-placeholders}
 </div>
 
 サブドメイン内のワイルドカードプレースホルダーは、本番環境のアプリケーションでは**使用しないでください**。該当する場合、Auth0 では `{organization_name}` プレースホルダーを含む URL の使用を推奨しています。
@@ -47,11 +47,11 @@ URL 内で動的なテキストとして機能する、さまざまなプレー�
 * 有効なワイルドカードを含む URL は、ワイルドカードの位置に 2 階層以上のサブドメインが入る URL には**一致しません**。`https://*.example.com` は `https://sub1.sub2.example.com` では機能しません。
 
 <div id="organization-url-placeholders">
-  ## 組織URLのプレースホルダー
+  ## 組織URLのプレースホルダー {#organization-url-placeholders}
 </div>
 
 <div id="organization-name-placeholder">
-  ### 組織名プレースホルダー
+  ### 組織名プレースホルダー {#organization-name-placeholder}
 </div>
 
 `{organization_name}` は、URL (`https://{organization_name}.exampleco.com`) 内で登録済みの組織名を動的に指定するためのプレースホルダーとして使用できます。`{organization_name}` プレースホルダーを含む URL は、必ず完全に管理下にあるドメインでのみ使用してください。たとえば、`exampleco.com` ドメインを管理している場合、組織名を含むプレースホルダーは `https://{organization_name}.exampleco.com` です。
@@ -71,7 +71,7 @@ URL 内で動的なテキストとして機能する、さまざまなプレー�
 * URL 内でプレースホルダーをワイルドカードと併用しては**なりません**。`https://{organization_name}.*.exampleco.com` は使用できません。
 
 <div id="organization-metadata-placeholder">
-  ### 組織メタデータのプレースホルダー
+  ### 組織メタデータのプレースホルダー {#organization-metadata-placeholder}
 </div>
 
 `{organization.metadata.KEY}` は、現在のリクエスト内の組織に関連付けられたメタデータに基づいて URL を動的に指定するためのプレースホルダーとして使用できます。これは、各組織がそれぞれ別のバニティドメインに対応している場合など、組織ごとに異なるログイン URI が必要なときに便利です。
@@ -87,7 +87,7 @@ Auth0 では、このプレースホルダーをアプリケーションのロ�
 </Callout>
 
 <div id="custom-domain-url-placeholders">
-  ## カスタムドメイン URL のプレースホルダー
+  ## カスタムドメイン URL のプレースホルダー {#custom-domain-url-placeholders}
 </div>
 
 `{custom_domain.metadata.KEY}` をプレースホルダーとして使用すると、リクエストで使われるカスタムドメインに関連付けられたメタデータに基づいて、URL を動的に指定できます。これにより、同じテナント内でアプリケーション URL が異なる複数のカスタムドメインをサポートできます。
@@ -95,7 +95,7 @@ Auth0 では、このプレースホルダーをアプリケーションのロ�
 この機能の詳細な概要については、[複数のカスタムドメイン](/docs/ja-jp/customize/custom-domains/multiple-custom-domains) を参照してください。
 
 <div id="validation-rules">
-  ### 検証ルール
+  ### 検証ルール {#validation-rules}
 </div>
 
 <Warning>
@@ -114,7 +114,7 @@ Auth0 では、このプレースホルダーをアプリケーションのロ�
   * **データ型**: カスタムドメインのメタデータ内の値は String である必要があります。キーが存在しない場合、または値が String でない場合、その URL は検証時に無視されます。
 
 <div id="supported-fields">
-  ### 対応フィールド
+  ### 対応フィールド {#supported-fields}
 </div>
 
 これらのプレースホルダーは、次のアプリケーションURLに設定できます。
@@ -132,13 +132,13 @@ Auth0 では、このプレースホルダーをアプリケーションのロ�
 </Note>
 
 <div id="using-with-organization-placeholders">
-  ### 組織プレースホルダーと併用する
+  ### 組織プレースホルダーと併用する {#using-with-organization-placeholders}
 </div>
 
 フローでサポートされていれば、カスタムドメインのプレースホルダーと `{organization_name}` プレースホルダーを組み合わせて使用できます。どちらのプレースホルダーも実行時に評価されて置き換えられます。
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * [機密アプリケーションとパブリックアプリケーション](/docs/ja-jp/get-started/applications/confidential-and-public-applications)

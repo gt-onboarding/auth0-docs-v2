@@ -10,7 +10,7 @@ title: IDプロバイダーからユーザーをログアウトさせる
 `https://{yourDomain}/oidc/logout?federated`
 
 <div id="federated-logout-support">
-  ## フェデレーテッドログアウトへの対応
+  ## フェデレーテッドログアウトへの対応 {#federated-logout-support}
 </div>
 
 以下のアイデンティティプロバイダーは、フェデレーテッドログアウトに対応しています。
@@ -37,13 +37,13 @@ title: IDプロバイダーからユーザーをログアウトさせる
 * Microsoft Viva Engage
 
 <div id="clear-application-session">
-  ## アプリケーションセッションをクリアする
+  ## アプリケーションセッションをクリアする {#clear-application-session}
 </div>
 
 Auth0 の Logout エンドポイントでは、Auth0 から、必要に応じてアイデンティティプロバイダーからもログアウトできます。ただし、アプリケーションからはログアウトされません。これについては、ご自身の側で実装する必要があります。ユーザーのセッションをクリアして、アプリケーションからログアウトさせる必要があります。
 
 <div id="alternative-logout">
-  ## 代替ログアウト
+  ## 代替ログアウト {#alternative-logout}
 </div>
 
 [代替ログアウトエンドポイント](https://auth0.com/docs/api/authentication#logout)にフェデレーテッドログアウトを追加するには、ログアウト URL に `federated` クエリ文字列パラメーターを追加します。
@@ -51,7 +51,7 @@ Auth0 の Logout エンドポイントでは、Auth0 から、必要に応じて
 `https://{yourDomain}/v2/logout?federated`
 
 <div id="alternative-logout-limitations">
-  ### 代替ログアウトの制限事項
+  ### 代替ログアウトの制限事項 {#alternative-logout-limitations}
 </div>
 
 * `returnTo` パラメーターの値として指定された URL や、その URL に含まれるクエリ文字列またはハッシュ情報は検証されません。
@@ -60,7 +60,7 @@ Auth0 の Logout エンドポイントでは、Auth0 から、必要に応じて
 * Auth0 Enterprise ユーザーの場合、通常は SharePoint、いくつかの .NET アプリケーション、いくつかの Java アプリケーション、Zendesk など、複数のアプリケーションで <Tooltip tip="Single Sign-On (SSO): ユーザーが 1 つのアプリケーションにログインすると、そのユーザーを他のアプリケーションにも自動的にログインさせるサービス。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=SSO">SSO</Tooltip> が有効になっています。この場合、ユーザーがサインアウトする際は、それらすべてのアプリケーションでも同様にサインアウトされる必要があることがよくあります。
 
 <div id="learn-more">
-  ## 詳しくはこちら
+  ## 詳しくはこちら {#learn-more}
 </div>
 
 * [アプリケーションからユーザーをログアウトする](/docs/ja-jp/authenticate/login/logout/log-users-out-of-applications)

@@ -4,7 +4,7 @@ description: "トラブルシューティングのために、別のユーザー
 ---
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `POST /users/{user_id}/impersonate`
@@ -12,7 +12,7 @@ description: "トラブルシューティングのために、別のユーザー
 このエンドポイントを使用すると、別のユーザーとしてログインするためのURLを取得できます。トラブルシューティングに役立ちます。
 
 <div id="remarks">
-  ### 注記
+  ### 注記 {#remarks}
 </div>
 
 * このエンドポイントは、**Global Client** の認証情報でのみ使用できます。
@@ -20,7 +20,7 @@ description: "トラブルシューティングのために、別のユーザー
 * 通常の Web アプリでは、`additionalParameters` を設定する必要があります。`response_type` は `code`、`callback_url` は Auth0 が認可コードを付与してリダイレクトするコールバック URL、`scope` は JWT に含めたい JWT クレームに設定してください。
 
 <div id="body-parameters">
-  ## リクエスト本文のパラメーター
+  ## リクエスト本文のパラメーター {#body-parameters}
 </div>
 
 <ParamField body="protocol" type="string" required />
@@ -32,7 +32,7 @@ description: "トラブルシューティングのために、別のユーザー
 <ParamField body="additionalParameters" type="object" />
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | Status | Description     |

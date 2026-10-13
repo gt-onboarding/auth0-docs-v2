@@ -19,7 +19,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 </Frame>
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 Universal Components for Android SDK でパスキーのサポートを有効にするには、以下の準備が必要です。
@@ -35,7 +35,7 @@ Universal Components for Android SDK でパスキーのサポートを有効に�
 * **Android のバージョンを確認します**。Credential Manager のすべての機能を利用するには、Android **14 以降** (API 34 以降) が必要です。Android **11～13** (API 30～33) では、Play Services が最新のデバイスであれば、パスキーは Google Password Manager を通じて同期されます。
 
 <div id="platform-setup">
-  ## プラットフォームの設定
+  ## プラットフォームの設定 {#platform-setup}
 </div>
 
 パスキーは、資格情報を Auth0 テナントの[カスタムドメイン](/docs/ja-jp/customize/custom-domains)に紐付けます。プラットフォームは Android Digital Asset Links を使用して、この紐付けを検証します。
@@ -49,7 +49,7 @@ Universal Components for Android SDK は、`androidx.credentials:credentials:1.5
 </Callout>
 
 <div id="sdk-limitations">
-  ## SDK の制限事項
+  ## SDK の制限事項 {#sdk-limitations}
 </div>
 
 * **パスキーの登録は `AuthenticatorSettingsComponent` 内からのみ可能です**。アプリケーション内の他の場所から、単独でパスキー登録を開始するための公開 Composable API はありません。ログイン後に表示する「パスキーを保存」アップセルプロンプトはサポートされていません。最新情報は [universal-components-android](https://github.com/auth0/universal-components-android/issues) で確認できます。
@@ -61,7 +61,7 @@ Universal Components for Android SDK は、`androidx.credentials:credentials:1.5
 * **証明書利用は公開されていません**。SDK では、証明書利用ポリシー (`none` / `indirect` / `direct`) を選択したり、認証器のトランスポートを列挙したりすることはできません。Auth0 テナントで設定された [WebAuthn](/docs/ja-jp/secure/multi-factor-authentication/webauthn-as-mfa#webauthn-as-multi-factor-authentication) ポリシーが使用されます。
 
 <div id="learn-more">
-  ## 詳しく見る
+  ## 詳しく見る {#learn-more}
 </div>
 
 <CardGroup cols={2}>

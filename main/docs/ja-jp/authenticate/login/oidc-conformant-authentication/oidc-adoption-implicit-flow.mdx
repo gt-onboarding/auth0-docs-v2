@@ -12,11 +12,11 @@ import {AuthCodeBlock} from "/snippets/ja-jp/AuthCodeBlock.jsx";
 さらに、OIDC 準拠のパイプラインは、次の領域で Implicit Flow に影響します: 認証リクエスト、認証レスポンス、ID トークンの構造、アクセストークンの構造。
 
 <div id="authentication-request">
-  ## 認証リクエスト
+  ## 認証リクエスト {#authentication-request}
 </div>
 
 <div id="legacy">
-  ### レガシー
+  ### レガシー {#legacy}
 </div>
 
 ```http lines
@@ -32,7 +32,7 @@ GET /authorize?
 `offline_access` スコープを指定してリフレッシュトークンをリクエストする場合にのみ、`device` パラメータが必要です。詳しくは、[リフレッシュトークン](/docs/ja-jp/secure/tokens/refresh-tokens)をご覧ください。
 
 <div id="oidc-conformant">
-  ### OIDC準拠
+  ### OIDC準拠 {#oidc-conformant}
 </div>
 
 ```http lines
@@ -53,11 +53,11 @@ GET /authorize?
 * `nonce` には、暗号学的に安全なランダム文字列を指定する必要があります。詳しくは、[Implicit Flow の使用時にリプレイ攻撃を軽減する](/docs/ja-jp/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post/mitigate-replay-attacks-when-using-the-implicit-flow) を参照してください。
 
 <div id="authentication-response">
-  ## 認証レスポンス
+  ## 認証レスポンス {#authentication-response}
 </div>
 
 <div id="legacy">
-  ### レガシー
+  ### レガシー {#legacy-2}
 </div>
 
 ```json lines
@@ -75,7 +75,7 @@ Location: https://app.example.com/#
 * リフレッシュトークンは、`device` パラメータが渡され、`offline_access` スコープが要求された場合にのみ返されます。
 
 <div id="oidc-conformant">
-  ### OIDC準拠
+  ### OIDC準拠 {#oidc-conformant-2}
 </div>
 
 ```json lines
@@ -93,11 +93,11 @@ Location: https://app.example.com/#
   リフレッシュトークンは インプリシットグラント では使用できません。代わりに `prompt=none` を使用してください。
 
 <div id="id-token-structure">
-  ## ID トークンの構造
+  ## ID トークンの構造 {#id-token-structure}
 </div>
 
 <div id="legacy">
-  ### レガシー
+  ### レガシー {#legacy-3}
 </div>
 
 export const codeExample1 = `{
@@ -114,7 +114,7 @@ export const codeExample1 = `{
 <AuthCodeBlock children={codeExample1} language="json" filename="JSON" />
 
 <div id="oidc-conformant">
-  ### OIDC準拠
+  ### OIDC準拠 {#oidc-conformant-3}
 </div>
 
 export const codeExample2 = `{
@@ -135,11 +135,11 @@ export const codeExample2 = `{
 * ID トークンを検証した後、アプリケーションはリプレイ攻撃を防ぐために <Tooltip tip="Nonce: リプレイ攻撃を検出して防止するために、認証プロトコルで一度だけ発行される任意の数値。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=nonce">nonce</Tooltip> も検証する必要があります。
 
 <div id="access-token-structure-optional">
-  ## アクセストークンの構造 (任意)
+  ## アクセストークンの構造 (任意) {#access-token-structure-optional}
 </div>
 
 <div id="legacy">
-  ### レガシー
+  ### レガシー {#legacy-4}
 </div>
 
 ```bash HTTP lines
@@ -149,7 +149,7 @@ SlAV32hkKG
 返されたアクセストークンはオペークで、`/userinfo` エンドポイントの呼び出しにのみ有効です。
 
 <div id="oidc-conformant">
-  ### OIDC準拠
+  ### OIDC準拠 {#oidc-conformant-4}
 </div>
 
 export const codeExample3 = `{
@@ -171,7 +171,7 @@ export const codeExample3 = `{
 * 指定された <Tooltip tip="Audience: 発行されたtokenのaudienceを一意に識別するidentifierです。token内ではaudと呼ばれ、その値には、ID トークンの場合はアプリケーション（Client ID）のID、アクセストークンの場合はAPI（API Identifier）のIDが含まれます。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=audience">audience</Tooltip> が `/userinfo` のみであっても、不透明なアクセストークンが返されることがあります。
 
 <div id="learn-more">
-  ## 詳しくはこちら
+  ## 詳しくはこちら {#learn-more}
 </div>
 
 * [OIDC を使用したアクセストークン](/docs/ja-jp/authenticate/login/oidc-conformant-authentication/oidc-adoption-access-tokens)

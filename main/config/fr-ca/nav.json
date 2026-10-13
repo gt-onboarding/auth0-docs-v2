@@ -4,45 +4,45 @@
       "pages": [
         "docs/fr-ca/index"
       ],
-      "tab": "Accueil"
+      "tab": "Home"
     },
     {
-      "tab": "Pour commencer",
+      "tab": "Get Started",
       "icon": "play",
       "$ref": "./navigation/get-started.json"
     },
     {
-      "tab": "Authentifier",
+      "tab": "Authenticate",
       "icon": "/icons/authenticate.svg",
       "$ref": "./navigation/authenticate.json"
     },
     {
-      "tab": "Gérer les utilisateurs",
+      "tab": "Manage Users",
       "icon": "/icons/manage-users.svg",
       "$ref": "./navigation/manage-users.json"
     },
     {
-      "tab": "Personnaliser",
+      "tab": "Customize",
       "icon": "/icons/customize.svg",
       "$ref": "./navigation/customize.json"
     },
     {
-      "tab": "Sécuriser",
+      "tab": "Secure",
       "icon": "shield-check",
       "$ref": "./navigation/secure.json"
     },
     {
-      "tab": "Déployer et surveiller",
+      "tab": "Deploy & Monitor",
       "icon": "chart-simple",
       "$ref": "./navigation/deploy-and-monitor.json"
     },
     {
-      "tab": "Agents d’IA et MCP",
+      "tab": "AI Agents & MCP",
       "icon": "robot",
       "$ref": "./navigation/ai-agents-mcp.json"
     },
     {
-      "tab": "Plateforme",
+      "tab": "Platform",
       "icon": "/icons/platform.svg",
       "$ref": "./navigation/platform.json"
     },
@@ -50,27 +50,27 @@
       "icon": "/icons/dev-tools.svg",
       "menu": [
         {
-          "item": "API",
+          "item": "APIs",
           "icon": "/icons/apis.svg",
           "$ref": "./navigation/apis.json"
         },
         {
-          "item": "SDK",
+          "item": "SDKs",
           "icon": "/icons/sdks.svg",
           "$ref": "./navigation/sdk-libraries.json"
         },
         {
-          "item": "Catalogue des événements",
+          "item": "Events Catalog",
           "icon": "/icons/events-catalog.svg",
           "$ref": "./navigation/generated/events-catalog.json"
         },
         {
-          "item": "Référence d’Actions",
+          "item": "Actions Reference",
           "icon": "/icons/actions-reference.svg",
           "$ref": "./navigation/generated/actions-reference.json"
         },
         {
-          "item": "Catalogue des journaux du tenant",
+          "item": "Tenant Log Catalog",
           "icon": "/icons/tenant-logs.svg",
           "$ref": "./navigation/generated/tenant-logs.json"
         },
@@ -80,7 +80,7 @@
           "$ref": "./navigation/universal-components.json"
         }
       ],
-      "tab": "Outils de développement"
+      "tab": "Dev Tools"
     }
   ]
 }

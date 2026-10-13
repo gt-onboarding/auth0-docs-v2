@@ -5,13 +5,13 @@
       "pages": [
         "docs/ja-jp/tenant-logs",
         {
-          "group": "Actions イベント",
+          "group": "Actions events",
           "pages": [
             "docs/ja-jp/tenant-logs/actions/actions-execution-failed"
           ]
         },
         {
-          "group": "Login - 失敗",
+          "group": "Login - Failure",
           "pages": [
             "docs/ja-jp/tenant-logs/auth-login-fail/f",
             "docs/ja-jp/tenant-logs/auth-login-fail/fcoa",
@@ -21,14 +21,14 @@
           ]
         },
         {
-          "group": "Login - 通知",
+          "group": "Login - Notification",
           "pages": [
             "docs/ja-jp/tenant-logs/auth-login-notification/scv",
             "docs/ja-jp/tenant-logs/auth-login-notification/w"
           ]
         },
         {
-          "group": "Login - 成功",
+          "group": "Login - Success",
           "pages": [
             "docs/ja-jp/tenant-logs/auth-login-success/s",
             "docs/ja-jp/tenant-logs/auth-login-success/scoa",
@@ -37,7 +37,7 @@
           ]
         },
         {
-          "group": "Logout - 失敗",
+          "group": "Logout - Failure",
           "pages": [
             "docs/ja-jp/tenant-logs/auth-logout-fail/federated-logout-failed",
             "docs/ja-jp/tenant-logs/auth-logout-fail/flo",
@@ -46,7 +46,7 @@
           ]
         },
         {
-          "group": "Logout - 成功",
+          "group": "Logout - Success",
           "pages": [
             "docs/ja-jp/tenant-logs/auth-logout-success/oidc-backchannel-logout-succeeded",
             "docs/ja-jp/tenant-logs/auth-logout-success/slo",
@@ -54,33 +54,33 @@
           ]
         },
         {
-          "group": "Signup - 失敗",
+          "group": "Signup - Failure",
           "pages": [
             "docs/ja-jp/tenant-logs/auth-signup-fail/fs"
           ]
         },
         {
-          "group": "Signup - 成功",
+          "group": "Signup - Success",
           "pages": [
             "docs/ja-jp/tenant-logs/auth-signup-success/ss"
           ]
         },
         {
-          "group": "サイレント認証 - 失敗",
+          "group": "Silent Authentication - Failure",
           "pages": [
             "docs/ja-jp/tenant-logs/auth-silent-auth-fail/fdelsa",
             "docs/ja-jp/tenant-logs/auth-silent-auth-fail/fsa"
           ]
         },
         {
-          "group": "サイレント認証 - 成功",
+          "group": "Silent Authentication - Success",
           "pages": [
             "docs/ja-jp/tenant-logs/auth-silent-auth-success/sdelsa",
             "docs/ja-jp/tenant-logs/auth-silent-auth-success/ssa"
           ]
         },
         {
-          "group": "トークン交換 - 失敗",
+          "group": "Token Exchange - Failure",
           "pages": [
             "docs/ja-jp/tenant-logs/auth-token-exchange-fail/ciba-exchange-failed",
             "docs/ja-jp/tenant-logs/auth-token-exchange-fail/failed-on-behalf-of-token-exchange",
@@ -101,7 +101,7 @@
           ]
         },
         {
-          "group": "トークン交換 - 成功",
+          "group": "Token Exchange - Success",
           "pages": [
             "docs/ja-jp/tenant-logs/auth-token-exchange-success/ciba-exchange-succeeded",
             "docs/ja-jp/tenant-logs/auth-token-exchange-success/feta",
@@ -124,14 +124,14 @@
           ]
         },
         {
-          "group": "Management API - 成功",
+          "group": "Management API - Success",
           "pages": [
             "docs/ja-jp/tenant-logs/management-success/mgmt-api-read",
             "docs/ja-jp/tenant-logs/management-success/sapi"
           ]
         },
         {
-          "group": "その他のイベント",
+          "group": "Other Events",
           "pages": [
             "docs/ja-jp/tenant-logs/other/acls-summary",
             "docs/ja-jp/tenant-logs/other/ciba-start-failed",
@@ -185,13 +185,13 @@
           ]
         },
         {
-          "group": "SCIM イベント",
+          "group": "SCIM Events",
           "pages": [
             "docs/ja-jp/tenant-logs/scim-event/sscim"
           ]
         },
         {
-          "group": "システム - 通知",
+          "group": "System - Notification",
           "pages": [
             "docs/ja-jp/tenant-logs/system-notification/acul-sdk-notice",
             "docs/ja-jp/tenant-logs/system-notification/api-limit",
@@ -211,7 +211,7 @@
           ]
         },
         {
-          "group": "ユーザー/行動 - 失敗",
+          "group": "User/Behavioral - Failure",
           "pages": [
             "docs/ja-jp/tenant-logs/user-fail/connected-accounts-connection-failed",
             "docs/ja-jp/tenant-logs/user-fail/connected-accounts-delete-failed",
@@ -233,7 +233,7 @@
           ]
         },
         {
-          "group": "ユーザー/行動 - 通知",
+          "group": "User/Behavioral - Notification",
           "pages": [
             "docs/ja-jp/tenant-logs/user-notification/cs",
             "docs/ja-jp/tenant-logs/user-notification/gd-enrollment-complete",
@@ -245,7 +245,7 @@
           ]
         },
         {
-          "group": "ユーザー/行動 - 成功",
+          "group": "User/Behavioral - Success",
           "pages": [
             "docs/ja-jp/tenant-logs/user-success/connected-accounts-connection-succeeded",
             "docs/ja-jp/tenant-logs/user-success/connected-accounts-delete-succeeded",

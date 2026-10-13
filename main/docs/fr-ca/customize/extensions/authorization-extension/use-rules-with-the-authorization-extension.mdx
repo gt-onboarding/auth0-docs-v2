@@ -26,7 +26,7 @@ Comme la logique ci-dessus fait partie d’une règle, elle n’est exécutée q
 Pour en savoir plus, consultez [Auth0 Rules](/docs/fr-ca/customize/rules).
 
 <div id="add-custom-claims-to-the-issued-token">
-  ## Ajouter des claims personnalisées au jeton émis
+  ## Ajouter des claims personnalisées au jeton émis {#add-custom-claims-to-the-issued-token}
 </div>
 
 Pour ajouter des claims personnalisées à vos jetons, vous pouvez créer une règle supplémentaire qui permet à l’Authorization Extension de le faire. Les claims personnalisées peuvent être avec ou sans espace de noms.
@@ -53,7 +53,7 @@ Cette règle doit s’exécuter **après** la règle Authorization Extension. Po
 Lorsque vous appelez le point de terminaison `/authorize` ou configurez Lock, vous devrez préciser les informations à inclure dans le `scope` en indiquant `groups`, `permissions` et/ou `roles`.
 
 <div id="control-app-access">
-  ## Contrôler l’accès à l’application
+  ## Contrôler l’accès à l’application {#control-app-access}
 </div>
 
 Vous pouvez aussi écrire des Rules qui s’exécutent après la règle Authorization Extension pour notamment contrôler l’accès à votre application. Une façon de procéder consiste à préciser, pour chaque application, les rôles requis au moyen des métadonnées de l’application.
@@ -61,7 +61,7 @@ Vous pouvez aussi écrire des Rules qui s’exécutent après la règle Authoriz
 Pour plus de détails, consultez [Gérer les métadonnées avec les Rules](/docs/fr-ca/manage-users/user-accounts/metadata/manage-metadata-rules).
 
 <div id="set-app-metadata-required-roles">
-  ### Définir les rôles requis dans les métadonnées de l’application
+  ### Définir les rôles requis dans les métadonnées de l’application {#set-app-metadata-required-roles}
 </div>
 
 Vous pouvez définir les métadonnées de l’application avec des rôles, qui sont des groupes de permissions regroupées pour créer un ensemble précis de fonctionnalités. Vous pouvez voir cette étape comme une façon d’« étiqueter » l’application afin que les rules que vous configurez sachent à quelle application s’appliquer.
@@ -72,7 +72,7 @@ Vous pouvez définir les métadonnées de l’application avec des rôles, qui s
 3. Une fois terminé, sélectionnez **Save Changes**. Désormais, lorsque vous vous connectez à partir de cette application, `context.clientMetadata` contiendra `required_roles` avec la chaîne de rôles que vous avez entrée.
 
 <div id="create-rule-enforcing-app-roles">
-  ### Créer une règle qui applique les rôles de l’application
+  ### Créer une règle qui applique les rôles de l’application {#create-rule-enforcing-app-roles}
 </div>
 
 Maintenant que chaque application a un rôle qui lui est associé, vous pouvez créer une règle qui s’exécute en tenant compte de cette information sur l’application.
@@ -105,7 +105,7 @@ Maintenant que chaque application a un rôle qui lui est associé, vous pouvez c
    ```
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Importer et exporter les données d’Authorization Extension](/docs/fr-ca/customize/extensions/authorization-extension/import-and-export-authorization-extension-data)

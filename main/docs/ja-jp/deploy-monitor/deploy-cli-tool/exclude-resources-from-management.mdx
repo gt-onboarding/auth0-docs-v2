@@ -6,7 +6,7 @@ title: 管理対象からリソースを除外する
 場合によっては、リソースを管理対象から除外すると便利です。たとえば、テナント内に特定種類のリソースが大量にあり、それらを管理するのが運用上の負担になる場合や、開発ワークフローが特定のリソース群のみに関係しており、パフォーマンス向上のためにそれ以外のリソースをすべて除外したい場合があります。いずれの場合も、Deploy CLI ではリソースを管理対象から除外するための方法がいくつか用意されています。
 
 <div id="exclude-entire-resources-by-type">
-  ## 種類ごとにリソース全体を除外する
+  ## 種類ごとにリソース全体を除外する {#exclude-entire-resources-by-type}
 </div>
 
 より複雑なテナントでは、リソースタイプごと丸ごと除外したくなることがあります。たとえば、次のようなケースです。
@@ -20,7 +20,7 @@ title: 管理対象からリソースを除外する
 除外でサポートされるすべてのリソース値: `actions`, `attackProtection`, `branding`, `clientGrants`, `clients`, `connections`, `customDomains`, `databases`, `emailProvider`, `emailTemplates`, `guardianFactorProviders`, `guardianFactorTemplates`, `guardianFactors`, `guardianPhoneFactorMessageTypes`, `guardianPhoneFactorSelectedProvider`, `guardianPolicies`, `logStreams`, `migrations`, `organizations`, `pages`, `prompts`, `resourceServers`, `roles`, `tenant`, `triggers`.
 
 <div id="exclusion-example">
-  ### 除外の例
+  ### 除外の例 {#exclusion-example}
 </div>
 
 次の例では、Deploy CLI の管理対象から `clients`、`connections`、`databases`、`organizations` を除外する方法を示します。
@@ -34,7 +34,7 @@ title: 管理対象からリソースを除外する
 ```
 
 <div id="inclusion-example">
-  ### 含める場合の例
+  ### 含める場合の例 {#inclusion-example}
 </div>
 
 次の例は、Deploy CLI で `actions`、`clients`、`connections` のみを管理するように指定する方法を示しています。
@@ -48,14 +48,14 @@ title: 管理対象からリソースを除外する
 ```
 
 <div id="exclude-single-resources-by-id">
-  ## ID で個別のリソースを除外する
+  ## ID で個別のリソースを除外する {#exclude-single-resources-by-id}
 </div>
 
 一部のリソースタイプでは、ID を指定して個々のリソースを除外できます。これは、複数の環境で作業していて、下位環境から本番環境固有のリソースを除外したい場合に便利です。
 
 この方法は、ルール、クライアント、データベース、接続、および <Tooltip tip="Resource Server: 保護されたリソースをホストするサーバー。Resource Server は保護されたリソースへのリクエストを受け取り、応答します。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=resource+servers">resource servers</Tooltip> でサポートされており、それぞれ `AUTH0_EXCLUDED_RULES`、`AUTH0_EXCLUDED_CLIENTS`、`AUTH0_EXCLUDED_DATABASES`、`AUTH0_EXCLUDED_CONNECTIONS`、`AUTH0_EXCLUDED_RESOURCE_SERVERS` の構成値を使用します。
 
-### 例
+### 例 {#example}
 
 ```json lines
 {
@@ -71,13 +71,13 @@ title: 管理対象からリソースを除外する
 </Callout>
 
 <div id="omission-and-empty-states">
-  ## 省略と空の状態
+  ## 省略と空の状態 {#omission-and-empty-states}
 </div>
 
 Auth0 Deploy CLI では、双方向で設定を強制的に無視する「リソースの除外」に加えて、これに類似した 2 つの概念である「省略」と「空の状態」もサポートしています。
 
 <div id="omission">
-  ### 省略
+  ### 省略 {#omission}
 </div>
 
 意図的かどうかを問わず、存在しないリソース設定はインポート時にスキップされます。たとえば、リソース設定が削除されている場合、その設定はインポート時にスキップされ、リモートテナントの状態は変更されません。
@@ -85,7 +85,7 @@ Auth0 Deploy CLI では、双方向で設定を強制的に無視する「リソ
 エクスポートでは、省略という考え方はありません。明示的に除外しない限り、すべてのテナント設定がリソース設定ファイルに書き出されます。
 
 <div id="example">
-  #### 例
+  #### 例 {#example-2}
 </div>
 
 ```yaml lines
@@ -100,7 +100,7 @@ roles: # rolesの設定は省略されていない
 ```
 
 <div id="empty">
-  ### 空
+  ### 空 {#empty}
 </div>
 
 明示的に空であると定義されたリソース設定です。hooks、組織、アクションのような集合ベースの構成では、これらの構成を空集合に設定することで、それらのリソースを意図的に空にすることを示します。これは削除の意思表示となり、削除設定プロパティ `AUTH0_ALLOW_DELETE` が有効になっている場合に限り、削除として扱われます。このプロパティの詳細については、[Deploy CLI を設定する](/docs/ja-jp/deploy-monitor/deploy-cli-tool/configure-the-deploy-cli)を参照してください。
@@ -108,7 +108,7 @@ roles: # rolesの設定は省略されていない
 テナントやブランディングのような非集合ベースのリソース設定には、空という概念は適用されず、削除や除去は発生しません。
 
 <div id="example-of-emptiness">
-  #### 空の例
+  #### 空の例 {#example-of-emptiness}
 </div>
 
 ```yaml lines

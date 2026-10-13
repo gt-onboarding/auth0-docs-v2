@@ -10,7 +10,7 @@ description: "Universal Login の `organization-picker` 画面をカスタマイ
 </Frame>
 
 <div id="import">
-  ## インポート
+  ## インポート {#import}
 </div>
 
 各画面には、それぞれ固有のフックとメソッドがあります。SDKは、各画面で **部分インポート** と **ルートインポート** をサポートしています。
@@ -55,7 +55,7 @@ function OrganizationPickerScreen() {
 ```
 
 <div id="context-hooks">
-  ## Context Hooks
+  ## Context Hooks {#context-hooks}
 </div>
 
 `organization-picker` 画面で Auth0 のコンテキストデータへの読み取り専用アクセスを提供する、画面スコープのフックです。`@auth0/auth0-acul-react/organization-picker` からインポートします。
@@ -167,7 +167,7 @@ function OrganizationPickerScreen() {
 </ParamField>
 
 <div id="methods">
-  ## メソッド
+  ## メソッド {#methods}
 </div>
 
 <ParamField body="selectOrganization" type="Promise<void>">
@@ -221,7 +221,7 @@ function OrganizationPickerScreen() {
 </ParamField>
 
 <div id="commonutility-hooks">
-  ## 共通/ユーティリティ Hooks
+  ## 共通/ユーティリティ Hooks {#commonutility-hooks}
 </div>
 
 <ParamField body={<a href="/docs/ja-jp/libraries/acul/react-sdk/API-Reference/Hooks/useAuth0Themes">useAuth0Themes</a>} type="フック">

@@ -4,7 +4,7 @@ description: "パスワードレス認証を開始するために、ユーザー
 ---
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `POST /passwordless/start`
@@ -18,7 +18,7 @@ description: "パスワードレス認証を開始するために、ユーザー
 * SMS で確認コードを送信する。
 
 <div id="remarks">
-  ### 備考
+  ### 備考 {#remarks}
 </div>
 
 * メールまたはSMSで確認コードを送信した場合は、コードを受け取った後、`username` に `email` または `phone_number` を、`password` に確認コードを指定して、[/passwordless/verify エンドポイント](/passwordless/authenticate-user)を使用してユーザーを認証する必要があります。
@@ -26,20 +26,20 @@ description: "パスワードレス認証を開始するために、ユーザー
 * auth0.js のサンプルスクリプトでは、ライブラリのバージョン 8 を使用しています。auth0.js バージョン 7 を使用している場合は、この[リファレンスガイド](/libraries/auth0js/v7)を参照してください。
 
 <div id="error-codes">
-  ### エラーコード
+  ### エラーコード {#error-codes}
 </div>
 
 このエンドポイントの完全なエラーコード一覧については、[Errors &gt; POST /passwordless/start](#post-passwordless-start)を参照してください。
 
 <div id="learn-more">
-  ### 詳細
+  ### 詳細 {#learn-more}
 </div>
 
 * [Passwordless Authentication](https://auth0.com/docs/authenticate/passwordless)
 * [Passwordless Best Practices](https://auth0.com/docs/authenticate/passwordless/best-practices)
 
 <div id="body-parameters">
-  ## Body Parameters
+  ## Body Parameters {#body-parameters}
 </div>
 
 <ParamField body="client_id" type="string" required>
@@ -93,7 +93,7 @@ description: "パスワードレス認証を開始するために、ユーザー
 </ParamField>
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | ステータス | 説明                         |

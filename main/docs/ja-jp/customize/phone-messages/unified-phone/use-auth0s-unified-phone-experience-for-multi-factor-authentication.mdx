@@ -25,7 +25,7 @@ Unified Phone Experienceでは、電話プロバイダーの設定をテナン�
 </Callout>
 
 <div id="update-your-phone-provider">
-  ## 電話プロバイダーを更新する
+  ## 電話プロバイダーを更新する {#update-your-phone-provider}
 </div>
 
 Unified Phone Experience を使用するには、次の対応が必要です。
@@ -40,7 +40,7 @@ Unified Phone Experience を使用するには、次の対応が必要です。
 * Auth0 Actions のトリガーを更新する
 
 <div id="verify-current-settings">
-  ### 現在の設定を確認する
+  ### 現在の設定を確認する {#verify-current-settings}
 </div>
 
 1. 現在の MFA 設定を確認するには、[**Auth0 Dashboard &gt; Security &gt; Multi-factor Auth**](https://manage.auth0.com/#/security/mfa) に移動します。
@@ -64,7 +64,7 @@ Unified Phone Experience を使用するには、次の対応が必要です。
 7. 必要に応じて有効にします。
 
 <div id="configure-twilio-as-a-tenant-level-provider">
-  ### Twilio をテナントレベルのプロバイダーとして設定する
+  ### Twilio をテナントレベルのプロバイダーとして設定する {#configure-twilio-as-a-tenant-level-provider}
 </div>
 
 多要素認証の電話プロバイダーとして Twilio を使用している場合は、Twilio SID と AuthToken を Unified Phone Experience に追加する必要があります。Twilio SID は既存の設定からコピーできますが、AuthToken の値は Twilio から取得する必要があります。
@@ -94,7 +94,7 @@ Unified Phone Experience を使用するには、次の対応が必要です。
 6. 変更を**保存**します。
 
 <div id="configure-a-custom-provider-with-auth0-actions">
-  ### Auth0 Actions を使用してカスタムプロバイダーを設定する
+  ### Auth0 Actions を使用してカスタムプロバイダーを設定する {#configure-a-custom-provider-with-auth0-actions}
 </div>
 
 Unified Phone Experience では、カスタムの電話通知に `send-phone-message` トリガー を使用する代わりに、電話通知には `custom-phone-provider` トリガー を使用します。
@@ -218,7 +218,7 @@ exports.onExecuteCustomPhoneProvider = async (event, api) => {
 ```
 
 <div id="configure-mfa-custom-phone-provider">
-  #### MFA `custom-phone-provider` を設定する
+  #### MFA `custom-phone-provider` を設定する {#configure-mfa-custom-phone-provider}
 </div>
 
 MFA `custom-phone-provider` トリガーを設定するには、次の手順に従います。
@@ -234,7 +234,7 @@ MFA `custom-phone-provider` トリガーを設定するには、次の手順に�
 6. 変更を **Save** します。
 
 <div id="update-mfa-phone-factors-and-delivery-methods">
-  ### MFA の 電話認証要素 と 配信方法 を更新する
+  ### MFA の 電話認証要素 と 配信方法 を更新する {#update-mfa-phone-factors-and-delivery-methods}
 </div>
 
 <Warning>
@@ -274,7 +274,7 @@ Unified Phone Experience への移行中に、現在のテナントレベルの�
 | SMS + 音声   | SMS + 音声        | 音声              | なし                                                                 |
 
 <div id="update-guardian-endpoints-with-management-api">
-  ### Management API を使用して Guardian エンドポイントを更新する
+  ### Management API を使用して Guardian エンドポイントを更新する {#update-guardian-endpoints-with-management-api}
 </div>
 
 Unified Phone Experience では、通知に特定のエンドポイントを使用します。プッシュ通知とワンタイムパスワードに [Auth0 Guardian](/docs/ja-jp/secure/multi-factor-authentication/auth0-guardian) を使用している場合は、新しい Phone Provider Branding エンドポイントを使用するように設定を更新する必要があります。
@@ -313,7 +313,7 @@ Guardian エンドポイントは、新しい Phone Provider Branding エンド�
 | <ul><li>[電話プロバイダーの設定を更新](https://auth0.com/docs/api/management/v2/guardian/put-phone-providers)</li></ul>          | `update:guardian_factors` |
 
 <div id="disable-phone-provider">
-  ## 電話プロバイダーを無効にする
+  ## 電話プロバイダーを無効にする {#disable-phone-provider}
 </div>
 
 Unified Phone Experience を設定した後で無効にすると、MFA を含む電話プロバイダーとの既存の連携が利用できなくなる可能性があります。

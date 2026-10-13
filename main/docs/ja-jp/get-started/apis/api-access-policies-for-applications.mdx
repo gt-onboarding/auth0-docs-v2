@@ -9,7 +9,7 @@ validatedOn: 2026-01-26
 Auth0 Dashboard では、登録されている各 API ごとにアプリケーションの API アクセスポリシーを設定できます。詳しくは、[API のアプリケーションアクセス ポリシーを設定する](#configure-api-application-access-policy)を参照してください。
 
 <div id="user-delegated-access-vs-client-access">
-  ## ユーザー委任アクセスとクライアントアクセス
+  ## ユーザー委任アクセスとクライアントアクセス {#user-delegated-access-vs-client-access}
 </div>
 
 ユーザー委任アクセス用とクライアント (マシンツーマシン) アクセス用に、それぞれ個別のアプリケーションAPIアクセスポリシーを設定できます。
@@ -18,7 +18,7 @@ Auth0 Dashboard では、登録されている各 API ごとにアプリケー�
 * **ユーザー委任アクセス**: エンドユーザーに関連付けられたアクセストークンを生成する、すべてのアクセスフローで使用されます。これにより、アプリケーションはユーザーに代わってAPIにアクセスできます。ユーザー委任アクセスフローには、Client Credentials Flowは含まれません。ユーザー委任アクセスフローの詳細については、[Authentication and Authorization Flows](/docs/ja-jp/get-started/authentication-and-authorization-flow)をご覧ください。
 
 <div id="application-api-access-policies">
-  ## アプリケーションの API アクセスポリシー
+  ## アプリケーションの API アクセスポリシー {#application-api-access-policies}
 </div>
 
 アプリケーションの API アクセスポリシーは次のとおりです。
@@ -34,7 +34,7 @@ API のアプリケーションアクセス ポリシーを設定する場合、
 API のアプリケーションアクセス ポリシーを `Per-app authorization` に設定した場合は、トークンリクエストに必要なスコープを明示的に指定する必要があります。これはリフレッシュトークンのリクエストには当てはまりません。リフレッシュトークンのリクエストでスコープを省略すると、認可サーバーは、アプリケーションが元のアクセストークンで付与されたすべてのスコープを求めているものと見なします。その結果、認可サーバーは、リソース所有者によって元のアクセストークンに付与されたものと同じスコープを持つアクセストークンを返します。
 
 <div id="configure-api-application-access-policy">
-  ## APIのアプリケーションアクセスポリシーを設定する
+  ## APIのアプリケーションアクセスポリシーを設定する {#configure-api-application-access-policy}
 </div>
 
 Auth0 Dashboard または Management API を使用して、APIのアプリケーションアクセスポリシーを設定できます。
@@ -119,7 +119,7 @@ Auth0 Dashboard または Management API を使用して、APIのアプリケー
 </Tabs>
 
 <div id="api-access-policies-and-third-party-applications">
-  ## API アクセスポリシーとサードパーティアプリケーション
+  ## API アクセスポリシーとサードパーティアプリケーション {#api-access-policies-and-third-party-applications}
 </div>
 
 [サードパーティアプリケーション](/docs/ja-jp/get-started/applications/third-party-applications)が API にアクセスするには、API に設定されているアクセスポリシーにかかわらず、常に明示的なクライアントグラントが必要です。
@@ -144,7 +144,7 @@ Auth0 Dashboard または Management API を使用して、APIのアプリケー
 </Callout>
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * [API へのアプリケーションアクセス：クライアントグラント](/docs/ja-jp/get-started/applications/application-access-to-apis-client-grants)

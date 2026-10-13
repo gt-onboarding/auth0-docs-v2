@@ -12,7 +12,7 @@ Il y a de nombreux facteurs à considérer avant de choisir entre [Lock et une U
 </Card>
 
 <div id="using-lock">
-  ## Utiliser Lock
+  ## Utiliser Lock {#using-lock}
 </div>
 
 Lock prend en charge les [inscriptions avec des champs personnalisés](/docs/fr-ca/libraries/lock/lock-configuration).
@@ -20,23 +20,23 @@ Lock prend en charge les [inscriptions avec des champs personnalisés](/docs/fr-
 L’option `additionalSignUpFields` de Lock fonctionne uniquement avec les inscriptions via Database. Pour les inscriptions qui utilisent des <Tooltip tip="Fournisseur d’identité (IdP) : service qui stocke et gère les identités numériques." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=identity+providers">fournisseurs d’identité</Tooltip> sociaux, il n’est pas possible de recueillir ces champs de la même façon avec Lock, mais il existe deux autres options pour permettre les inscriptions avec des IdP sociaux dans Lock tout en recueillant quand même des champs personnalisés supplémentaires.
 
 <div id="redirect-to-another-page">
-  ### Rediriger vers une autre page
+  ### Rediriger vers une autre page {#redirect-to-another-page}
 </div>
 
 Une façon d’utiliser les inscriptions à l’aide d’un fournisseur d’identité sociale avec Lock et de recueillir des champs personnalisés consiste à utiliser des [règles de redirection](/docs/fr-ca/customize/rules/redirect-users) pour rediriger l’utilisateur vers une autre page afin de lui demander des renseignements supplémentaires, puis de le rediriger de nouveau pour terminer la transaction d’authentification.
 
 <div id="progressive-profiling">
-  ### Profilage progressif
+  ### Profilage progressif {#progressive-profiling}
 </div>
 
 Une autre façon de recueillir les données de champs personnalisés lorsque les utilisateurs s’inscrivent avec des fournisseurs d’identité sociale consiste à utiliser le [profilage progressif](/docs/fr-ca/manage-users/user-accounts/user-profiles/progressive-profiling), qui vous permet d’enrichir progressivement les données du profil utilisateur au fil du temps. Vous recueillez le strict minimum de renseignements au moment de l’inscription, puis, lorsque l’utilisateur interagit de nouveau avec votre application, vous recueillez chaque fois une petite quantité de données (peut-être une seule question) jusqu’à ce que son profil soit complet. Cela vous permet de recueillir l’information souhaitée en réduisant la friction, puisque l’objectif d’utiliser un IdP social pour l’inscription est de rendre l’expérience plus simple et plus fluide pour l’utilisateur.
 
 <div id="using-the-api">
-  ## Utilisation de l’API
+  ## Utilisation de l’API {#using-the-api}
 </div>
 
 <div id="create-a-signup-form-to-capture-custom-fields">
-  ### Créer un formulaire d’inscription pour saisir des champs personnalisés
+  ### Créer un formulaire d’inscription pour saisir des champs personnalisés {#create-a-signup-form-to-capture-custom-fields}
 </div>
 
 `name` est un attribut du profil utilisateur, et `color` est un champ personnalisé.
@@ -44,7 +44,7 @@ Une autre façon de recueillir les données de champs personnalisés lorsque les
 À l’heure actuelle, il n’existe aucun moyen de valider les champs personnalisés fournis par l’utilisateur au moment de l’inscription. La validation doit être effectuée à la connexion à l’aide d’une Auth0 [Rule](/docs/fr-ca/customize/rules), ou au moyen d’une logique personnalisée **côté serveur** dans votre application.
 
 <div id="send-the-form-data">
-  ### Envoyer les données du formulaire
+  ### Envoyer les données du formulaire {#send-the-form-data}
 </div>
 
 Envoyez une requête POST au point de terminaison [/dbconnections/signup](https://auth0.com/docs/api/authentication/reference#signup) dans Auth0.
@@ -58,7 +58,7 @@ Vous devrez envoyer :
 * Tout champ personnalisé dans `user_metadata`
 
 <div id="custom-fields-limitations">
-  ## Limites des champs personnalisés
+  ## Limites des champs personnalisés {#custom-fields-limitations}
 </div>
 
 Lorsque vos utilisateurs s’inscrivent, les champs personnalisés sont envoyés dans `user_metadata`. Voici les limites de ce champ :
@@ -70,7 +70,7 @@ Lorsque vos utilisateurs s’inscrivent, les champs personnalisés sont envoyés
 * La limite de taille actuelle de `user_metadata` est de **16 MB**
 
 <div id="redirect-mode">
-  ## Mode de redirection
+  ## Mode de redirection {#redirect-mode}
 </div>
 
 Après une connexion réussie, Auth0 redirigera l’utilisateur vers l’URL de rappel que vous avez configurée avec un <Tooltip tip="JSON Web Token (JWT) : format standard des ID Token (et souvent des jetons d’accès), utilisé pour représenter des claims de façon sécurisée entre deux parties." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=JWT">JWT</Tooltip> (`id_token`) dans la chaîne de requête.
@@ -78,7 +78,7 @@ Après une connexion réussie, Auth0 redirigera l’utilisateur vers l’URL de 
 Votre serveur devra ensuite appeler APIv2 pour ajouter les champs personnalisés nécessaires au profil de l’utilisateur.
 
 <div id="add-username-to-the-signup-form">
-  ## Ajouter un nom d’utilisateur au formulaire d’inscription
+  ## Ajouter un nom d’utilisateur au formulaire d’inscription {#add-username-to-the-signup-form}
 </div>
 
 Une personnalisation courante consiste à ajouter un nom d’utilisateur à l’inscription.
@@ -88,7 +88,7 @@ Pour activer cette fonctionnalité, activez le paramètre **Requires Username** 
 Recueillez le champ `username` dans votre formulaire personnalisé, puis ajoutez `username` au corps de votre requête.
 
 <div id="optional-verify-password-strength">
-  ## Facultatif : Vérifier la solidité du mot de passe
+  ## Facultatif : Vérifier la solidité du mot de passe {#optional-verify-password-strength}
 </div>
 
 Les politiques de mot de passe des connexions de base de données peuvent être configurées dans le Dashboard. Pour en savoir plus, consultez : [Solidité du mot de passe dans les connexions de base de données Auth0](/docs/fr-ca/authenticate/database-connections/password-strength).

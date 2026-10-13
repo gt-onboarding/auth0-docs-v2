@@ -19,7 +19,7 @@ APP_SESSION_SECRET="<YOUR SECRET VALUE>"`;
 ここでは、このアプローチの概要と、[Node.js](https://nodejs.org/en/) を使用した実装例を紹介します。
 
 <div id="how-it-works">
-  ## 仕組み
+  ## 仕組み {#how-it-works}
 </div>
 
 以下の手順では、トークンがどのように取得され、利用されるかを示します。このアプローチでは、従来の[Authorization Code Flow with Proof Key for Code Exchange](/docs/ja-jp/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce)の代わりに、[Implicit Flow with Form Post](/docs/ja-jp/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post)を使用します。これは、アクセス先が自分自身のリソースである場合、Form Post Response Mode のほうが login をより簡単に実装できるためです。
@@ -39,7 +39,7 @@ APP_SESSION_SECRET="<YOUR SECRET VALUE>"`;
 <Frame>![Cookie を使用して シングルページアプリケーション を認証する仕組み パート 2 の図](/docs/images/cdy7uua7fh8z/6SCp9KwQkwJV7L26TOuxIO/d625575a43d00a00fcf17c7310ac2bc8/2023-09-22_13-21-50.png)</Frame>
 
 <div id="invalid-or-missing-cookies">
-  ### 無効または欠落しているCookie
+  ### 無効または欠落しているCookie {#invalid-or-missing-cookies}
 </div>
 
 この方法を実装する際は、認証Cookieが無効な場合や存在しない場合への対応が必要です。クライアントからバックエンドへのAPI呼び出しはバックグラウンドで行われるため、ユーザーに再認証が必要であることを示すサーバーからの応答は、クライアント側で処理しなければなりません。
@@ -47,13 +47,13 @@ APP_SESSION_SECRET="<YOUR SECRET VALUE>"`;
 次のサンプルアプリケーションでは、このケースを、API呼び出しの結果が302 Redirectになった場合にユーザーに再認証を促すという単純な方法で処理しています。302が発生するのは、Cookieのバリデーションに失敗すると、サーバーが<Tooltip tip="認可サーバー: ユーザーのアクセス範囲の境界を定義することに寄与する集約サーバーです。たとえば、認可サーバーは、ユーザーが利用できるデータ、タスク、機能を制御できます。" cta="用語集を表示" href="/docs/ja-jp/glossary?term=authorization+server">認可サーバー</Tooltip>の認可エンドポイントへリダイレクトしようとし、その応答をクライアントに返すためです。
 
 <div id="example">
-  ## 例
+  ## 例 {#example}
 </div>
 
 このサンプルアプリケーションでは、Node.js と Express を使用して、上記の概念を実演します。
 
 <div id="prerequisites">
-  ### 前提条件
+  ### 前提条件 {#prerequisites}
 </div>
 
 * この手順を進めるには、[最新バージョンの Node](https://nodejs.org/en/download/) がインストールされていることを確認してください。
@@ -71,7 +71,7 @@ APP_SESSION_SECRET="<YOUR SECRET VALUE>"`;
   `git checkout with-oidc`
 
 <div id="initialize-the-nodejs-app">
-  ### Node.jsアプリを初期化する
+  ### Node.jsアプリを初期化する {#initialize-the-nodejs-app}
 </div>
 
 ターミナルで `npm install` を実行し、アプリケーションの依存関係をインストールします。アプリケーションを実行するには、`npm run dev` を実行します。これにより Express サーバーが起動します。ブラウザーで [http://localhost:3000](http://localhost:3000/) にアクセスすると、アプリケーションを表示できます。
@@ -79,7 +79,7 @@ APP_SESSION_SECRET="<YOUR SECRET VALUE>"`;
 開発サーバーでは `nodemon` を使用しているため、ファイルの変更を検出すると自動的に再起動します。
 
 <div id="explore-the-application">
-  ### アプリケーションを試す
+  ### アプリケーションを試す {#explore-the-application}
 </div>
 
 [http://localhost:3000](http://localhost:3000/) でアプリケーションを開いた状態で、**Call API** ボタンをクリックします。画面にメッセージが表示されます。
@@ -89,7 +89,7 @@ APP_SESSION_SECRET="<YOUR SECRET VALUE>"`;
 ログインしていなくても API を呼び出せたことに注目してください。これを修正するために、API を呼び出す前にユーザーの認証を必須にするミドルウェアを追加しましょう。
 
 <div id="set-up-environment">
-  ### 環境を設定する
+  ### 環境を設定する {#set-up-environment}
 </div>
 
 アプリケーションで認証を機能させるには、`express-openid-connect` にいくつかの環境変数が必要です。このアプリケーションでは、これらの変数を `.env` ファイルで指定できます。プロジェクトのルートディレクトリに `.env` ファイルを作成し、次の内容を設定します。
@@ -102,7 +102,7 @@ APP_SESSION_SECRET="<YOUR SECRET VALUE>"
 ```
 
 <div id="set-up-app-in-auth0">
-  ### Auth0 でアプリを設定する
+  ### Auth0 でアプリを設定する {#set-up-app-in-auth0}
 </div>
 
 1. [Auth0 Dashboard &gt; アプリケーション &gt; アプリケーション](https://manage.auth0.com/#/applications) に移動し、**Create Application** をクリックします。
@@ -117,7 +117,7 @@ APP_SESSION_SECRET="<YOUR SECRET VALUE>"
    <AuthCodeBlock children={codeExample} language="shell" filename=".env" />
 
 <div id="run-the-app">
-  ### アプリを実行する
+  ### アプリを実行する {#run-the-app}
 </div>
 
 1. サーバーと環境の設定が完了したら、アプリケーションを開いているブラウザーウィンドウを探します。ブラウザーを閉じてサーバーも停止している場合は、アプリケーションを再起動するためにターミナルで次を実行します。
@@ -127,7 +127,7 @@ APP_SESSION_SECRET="<YOUR SECRET VALUE>"
 4. ページ上部の **Profile** リンクをクリックすると、ID トークンから取得したユーザー情報が表示されます。
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * [Implicit Flow with Form Post](/docs/ja-jp/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post)

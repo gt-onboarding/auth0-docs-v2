@@ -10,7 +10,7 @@ title: SameSite Cookie 属性の変更
 * Web メッセージ (`checkSession` とも呼ばれます)
 
 <div id="samesite-attributes">
-  ## SameSite 属性
+  ## SameSite 属性 {#samesite-attributes}
 </div>
 
 ブラウザーの動作を制限するために、`set-cookie` HTTP レスポンスヘッダーに [SameSite Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) 属性を追加できます。これにより、HTTP リクエストを引き起こした操作の種類に応じて、ブラウザーが Cookie の `key=value` ペアを送信しないようにできる場合があります。
@@ -34,7 +34,7 @@ title: SameSite Cookie 属性の変更
 ブラウザーはこれを受け取るとヘッダーを解析し、それに応じて Cookie jar を更新します。
 
 <div id="browser-cookie-changes">
-  ## ブラウザーのCookieに関する変更
+  ## ブラウザーのCookieに関する変更 {#browser-cookie-changes}
 </div>
 
 2020年2月以降、Google Chrome v80 では Cookie の扱い方が変更されました。これに伴い、Auth0 でも Cookie の扱いに関して次の変更を実装しました。
@@ -64,7 +64,7 @@ title: SameSite Cookie 属性の変更
 <Frame>![sameSite Cookie Attributes Cookie Return Interaction flow](/docs/images/cdy7uua7fh8z/4dc2HWnmPBOV6cvdKbNM6g/50149f55e38fdf7453944932a3ef9d1c/cookie-return-interaction.png)</Frame>
 
 <div id="features-affected">
-  ## 影響を受ける機能
+  ## 影響を受ける機能 {#features-affected}
 </div>
 
 以下の表は、`SameSite` 属性の変更がアプリにどのような影響を及ぼすかを示しています。
@@ -86,7 +86,7 @@ Google Chrome と Microsoft Edge では、`SameSite` を未定義にした場合
 `A cookie associated with a cross-site resource (URL) was set without the SameSite attribute. A future release of Chrome will only deliver cookies with cross-site requests if they are set with SameSite=None and Secure. You can review cookies in developer tools under Application>Storage>Cookies and see more details at https://www.chromestatus.com/feature/5088147346030592 and https://www.chromestatus.com/feature/5633521622188032`
 
 <div id="actions-you-need-to-take">
-  ## 必要な対応
+  ## 必要な対応 {#actions-you-need-to-take}
 </div>
 
 この変更に備えて、次の対応を行ってください。

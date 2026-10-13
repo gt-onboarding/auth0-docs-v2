@@ -12,7 +12,7 @@ import {AuthCodeBlock} from "/snippets/fr-ca/AuthCodeBlock.jsx";
 </Warning>
 
 <div id="example">
-  #### Exemple
+  #### Exemple {#example}
 </div>
 
 Auparavant, Auth0 n’autorisait que les claims avec espace de noms dans les <Tooltip tip="Jeton d’accès : justificatif d’autorisation, sous la forme d’une chaîne opaque ou d’un JWT, utilisé pour accéder à une API." cta="Consulter le glossaire" href="/docs/fr-ca/glossary?term=access+tokens">jetons d’accès</Tooltip> et les jetons d’identité. Avec la migration vers les claims personnalisés, les claims sans espace de noms peuvent être utilisés dans les jetons d’accès, les jetons d’identité et le endpoint `/userinfo` de l’Authentication API d’Auth0.
@@ -32,7 +32,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="affected-flows">
-  ## Flux concernés
+  ## Flux concernés {#affected-flows}
 </div>
 
 Tous les flux <Tooltip tip="OpenID : norme ouverte d’authentification qui permet aux applications de vérifier l’identité des utilisateurs sans recueillir ni stocker leurs renseignements de connexion." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=OpenID">OpenID</Tooltip> Connect (OIDC) pris en charge par Auth0 sont touchés par cette migration. Pour consulter la liste des flux, lisez [Flux d’authentification et d’autorisation](/docs/fr-ca/get-started/authentication-and-authorization-flow).
@@ -48,11 +48,11 @@ Les fonctionnalités suivantes sont touchées uniquement lorsqu’elles sont uti
 * [module complémentaire SAML2 Web App](/docs/fr-ca/authenticate/protocols/saml/saml-sso-integrations/enable-saml2-web-app-addon)
 
 <div id="restrictions">
-  ## Restrictions
+  ## Restrictions {#restrictions}
 </div>
 
 <div id="maximum-token-size">
-  ### Taille maximale du jeton
+  ### Taille maximale du jeton {#maximum-token-size}
 </div>
 
 Auth0 limite la charge utile des claims personnalisés à un maximum de 100 Ko. Il est important de vous assurer que la charge utile ne dépasse pas cette limite, sinon la transaction d’authentification échouera avec une erreur. Nous vous recommandons de revoir votre utilisation du code d’extensibilité (c.-à-d. [Rules](/docs/fr-ca/customize/rules), [Hooks](/docs/fr-ca/customize/hooks) ou [Actions](/docs/fr-ca/customize/actions)). Vérifiez en particulier les charges utiles volumineuses provenant d’API externes.
@@ -66,7 +66,7 @@ Pour éviter les erreurs, Auth0 recommande d’utiliser la plus petite charge ut
 La limite de 100 Ko s’applique séparément aux jetons d’accès et aux jetons d’identité. Par exemple, un jeton d’accès de 100 Ko et un jeton d’identité de 100 Ko peuvent être renvoyés dans la même transaction.
 
 <div id="examples">
-  #### Exemples
+  #### Exemples {#examples}
 </div>
 
 ```javascript lines
@@ -117,7 +117,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="restricted-claims">
-  ### Claims restreints
+  ### Claims restreints {#restricted-claims}
 </div>
 
 Auth0 restreint la personnalisation des claims utilisés par les normes OIDC ou OAuth2, ainsi que des claims réservés à un usage interne. Toute tentative de modifier l’un de ces claims sera ignorée. La transaction n’échouera pas, mais le claim ne sera pas inclus dans les jetons. Auth0 recommande d’utiliser un claim public avec espace de noms.
@@ -184,7 +184,7 @@ Auth0 restreint la personnalisation des claims utilisés par les normes OIDC ou 
 * `x5t#S256`
 
 <div id="example">
-  #### Exemple
+  #### Exemple {#example-2}
 </div>
 
 ```javascript lines
@@ -201,7 +201,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="restricted-token-audience">
-  ### Audience restreinte des jetons
+  ### Audience restreinte des jetons {#restricted-token-audience}
 </div>
 
 Auth0 limitera la création de claims personnalisés privés, sans espace de noms, sur les jetons d’accès dont l’<Tooltip tip="Audience : identifiant unique de l’audience d’un jeton émis. Nommée aud dans un jeton, sa valeur contient l’ID soit d’une application (Client ID) pour un ID Token, soit d’une API (API Identifier) pour un Access Token." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=audience">audience</Tooltip> correspond à une Auth0 API. Toute tentative de définir un claim personnalisé privé, sans espace de noms, sur un jeton d’accès dont l’audience est une Auth0 API sera ignorée. La transaction n’échouera pas, mais le claim ne sera pas ajouté à votre jeton. Auth0 recommande de ne pas définir de claims personnalisés sur les jetons destinés aux API d’Auth0.
@@ -223,7 +223,7 @@ L’exception à cette restriction est l’audience Auth0 `/userinfo`. Les claim
 * `https://YOUR_TENANT.auth0app.com/userinfo`
 
 <div id="examples">
-  #### Exemples
+  #### Exemples {#examples-2}
 </div>
 
 ```javascript lines
@@ -314,7 +314,7 @@ scope:openid profile
 ```
 
 <div id="restriction-on-auth0-and-webtask-namespaces">
-  ## Restriction sur les espaces de noms Auth0 et Webtask
+  ## Restriction sur les espaces de noms Auth0 et Webtask {#restriction-on-auth0-and-webtask-namespaces}
 </div>
 
 Auth0 limitera la création de claims personnalisés avec espace de noms dont l’identifiant d’espace de noms est un domaine Auth0. Les domaines Auth0 sont :
@@ -342,7 +342,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="oidc-user-profile-claims">
-  ### Claims du profil utilisateur OIDC
+  ### Claims du profil utilisateur OIDC {#oidc-user-profile-claims}
 </div>
 
 Auth0 permet maintenant d’ajouter des claims du profil utilisateur OIDC aux jetons d’accès.
@@ -376,7 +376,7 @@ Vous pouvez ajouter les claims du profil utilisateur OIDC suivants aux jetons d�
 * `zoneinfo`
 
 <div id="example">
-  #### Exemple
+  #### Exemple {#example-3}
 </div>
 
 ```javascript lines
@@ -395,7 +395,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="saml2-add-on-and-web-service-federation-protocol-ws-fed-attribute-mapping-with-auth0-rules">
-  ### Mappage d’attributs du module complémentaire SAML2 et du protocole Web Service Federation (WS-Fed) avec Auth0 Rules
+  ### Mappage d’attributs du module complémentaire SAML2 et du protocole Web Service Federation (WS-Fed) avec Auth0 Rules {#saml2-add-on-and-web-service-federation-protocol-ws-fed-attribute-mapping-with-auth0-rules}
 </div>
 
 Comme avec Auth0 Rules pour modifier l’objet `user`, les claims de prémigration `app_metadata` ou `user_metadata` fusionnent aussi leur contenu lorsque le claim est défini dans l’objet `context.idToken` et que les noms sont en conflit. Pour en savoir plus sur les propriétés de l’objet, consultez [User Object Properties In Rules](/docs/fr-ca/customize/rules/user-object-in-rules).
@@ -533,7 +533,7 @@ Réponse SAML avec le nouveau comportement :
 ```
 
 <div id="add-private-non-namespace-claims-to-tokens">
-  ### Ajouter des claims personnalisés privés sans espace de noms aux jetons
+  ### Ajouter des claims personnalisés privés sans espace de noms aux jetons {#add-private-non-namespace-claims-to-tokens}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -543,7 +543,7 @@ Réponse SAML avec le nouveau comportement :
 Vous pouvez maintenant ajouter des claims personnalisés privés sans espace de noms au payload des jetons d’accès et d’ID.
 
 <div id="example">
-  #### Exemple
+  #### Exemple {#example-4}
 </div>
 
 ```javascript lines
@@ -562,13 +562,13 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="private-non-namespace-claims-to-userinfo">
-  ### Revendications privées sans espace de noms dans /userinfo
+  ### Revendications privées sans espace de noms dans /userinfo {#private-non-namespace-claims-to-userinfo}
 </div>
 
 Auth0 renvoie désormais les revendications personnalisées privées sans espace de noms dans la réponse /userinfo lorsqu’elles sont définies dans les jetons d’identité.
 
 <div id="example">
-  #### Exemple
+  #### Exemple {#example-5}
 </div>
 
 ```javascript lines
@@ -598,11 +598,11 @@ Authorization: Bearer {yourAccessToken}
 ```
 
 <div id="actions">
-  ## Actions
+  ## Actions {#actions}
 </div>
 
 <div id="review-tenant-logs">
-  ### Vérifier les journaux du tenant
+  ### Vérifier les journaux du tenant {#review-tenant-logs}
 </div>
 
 Commencez par vérifier les journaux du tenant pour repérer les avis de dépréciation et déterminer si votre tenant est touché par la migration.
@@ -610,7 +610,7 @@ Commencez par vérifier les journaux du tenant pour repérer les avis de dépré
 1. Accédez à Auth0 [Dashboard &gt; Monitoring &gt; Logs](https://manage.auth0.com/#/logs).
 2. Recherchez dans les journaux `type: depnote AND description: *Custom*claims*`.
 
-### Exemple
+### Exemple {#example-6}
 
 Vous trouverez ci-dessous un exemple de journal de dépréciation généré chaque fois que du code d’extensibilité est exécuté.
 
@@ -650,7 +650,7 @@ Vous trouverez ci-dessous un exemple de journal de dépréciation généré chaq
 ```
 
 <div id="fix-auth0-rules-for-saml2-add-on-and-web-service-federation-protocol-ws-fed">
-  ### Corriger les règles Auth0 pour le module complémentaire SAML2 et le protocole Web Service Federation (Ws-Fed)
+  ### Corriger les règles Auth0 pour le module complémentaire SAML2 et le protocole Web Service Federation (Ws-Fed) {#fix-auth0-rules-for-saml2-add-on-and-web-service-federation-protocol-ws-fed}
 </div>
 
 Si vous définissez des claims `app_metadata` ou `user_metadata` sur l’objet `context.idToken` à l’aide du module complémentaire SAML2 ou du protocole Web Service Federation (Ws-Fed) avec Auth0 Rules, ainsi qu’un mappage d’attributs, vous devrez mettre à jour votre configuration pour tenir compte de la façon dont Auth0 évalue les noms de claims en conflit entre ces objets. Plusieurs correctifs sont possibles :
@@ -689,7 +689,7 @@ Si vous définissez des claims `app_metadata` ou `user_metadata` sur l’objet `
   ```
 
 <div id="disable-legacy-behavior">
-  ### Désactiver le comportement hérité
+  ### Désactiver le comportement hérité {#disable-legacy-behavior}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">

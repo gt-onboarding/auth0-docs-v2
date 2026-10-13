@@ -6,7 +6,7 @@ description: "事前にトークンを用意しなくても、クライアント
 import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `POST /oidc/register`
@@ -14,7 +14,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 名前と必要なコールバック URL を指定すると、Auth0 でクライアントを動的に登録できます。このリクエストにトークンは不要です。
 
 <div id="body-parameters">
-  ## Body パラメータ
+  ## Body パラメータ {#body-parameters}
 </div>
 
 <ParamField body="client_name" type="string">
@@ -34,7 +34,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 </ParamField>
 
 <div id="response-schema">
-  ## レスポンススキーマ
+  ## レスポンススキーマ {#response-schema}
 </div>
 
 <ResponseSchema>
@@ -56,7 +56,7 @@ import { ResponseSchema } from '/snippets/ja-jp/ResponseSchema.jsx';
 </ResponseSchema>
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | ステータス | 説明                 |

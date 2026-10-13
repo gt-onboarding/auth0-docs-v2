@@ -10,7 +10,7 @@ description: "Universal Login の `mfa-voice-challenge` 画面をカスタマイ
 </Frame>
 
 <div id="import">
-  ## インポート
+  ## インポート {#import}
 </div>
 
 各画面には、それぞれ固有のフックとメソッドがあります。SDK は、各画面で **部分インポート** と **ルートインポート** の両方をサポートしています。
@@ -61,7 +61,7 @@ function MfaVoiceChallengeScreen() {
 ```
 
 <div id="context-hooks">
-  ## コンテキストフック
+  ## コンテキストフック {#context-hooks}
 </div>
 
 `mfa-voice-challenge` 画面で Auth0 のコンテキストデータへの読み取り専用アクセスを提供する画面スコープのフックです。`@auth0/auth0-acul-react/mfa-voice-challenge` からインポートします。
@@ -173,7 +173,7 @@ function MfaVoiceChallengeScreen() {
 </ParamField>
 
 <div id="methods">
-  ## メソッド
+  ## メソッド {#methods}
 </div>
 
 <ParamField body="continueMethod" type="Promise<void>">
@@ -278,7 +278,7 @@ function MfaVoiceChallengeScreen() {
 </ParamField>
 
 <div id="commonutility-hooks">
-  ## 共通/ユーティリティ フック
+  ## 共通/ユーティリティ フック {#commonutility-hooks}
 </div>
 
 <ParamField body={<a href="/docs/ja-jp/libraries/acul/react-sdk/API-Reference/Hooks/useResend">useResend</a>} type="Hooks">

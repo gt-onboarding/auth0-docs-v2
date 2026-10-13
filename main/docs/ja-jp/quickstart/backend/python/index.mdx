@@ -19,7 +19,7 @@ import {HowToSchema} from "/snippets/ja-jp/HowToSchema.jsx";
 </Note>
 
 <div id="get-started">
-  ## はじめに
+  ## はじめに {#get-started}
 </div>
 
 このガイドでは、[Flask](https://flask.palletsprojects.com/) で構築した新規または既存の Python API に Auth0 を統合する方法を説明します。
@@ -241,13 +241,13 @@ import {HowToSchema} from "/snippets/ja-jp/HowToSchema.jsx";
 </Check>
 
 <div id="test-your-api">
-  ## APIをテストする
+  ## APIをテストする {#test-your-api}
 </div>
 
 保護されたエンドポイントをテストするには、アクセストークンが必要です。
 
 <div id="get-a-test-token">
-  ### テスト用トークンを取得する
+  ### テスト用トークンを取得する {#get-a-test-token}
 </div>
 
 1. [Auth0 Dashboard](https://manage.auth0.com/)に移動します
@@ -257,7 +257,7 @@ import {HowToSchema} from "/snippets/ja-jp/HowToSchema.jsx";
 5. アクセストークンをコピーします
 
 <div id="make-a-request">
-  ### リクエストを送信する
+  ### リクエストを送信する {#make-a-request}
 </div>
 
 パブリックエンドポイント (トークン不要) をテストします：
@@ -276,7 +276,7 @@ curl -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
 `YOUR_ACCESS_TOKEN` を Auth0 Dashboard からコピーしたトークンに置き換えます。
 
 <div id="advanced-usage">
-  ## 高度な使用方法
+  ## 高度な使用方法 {#advanced-usage}
 </div>
 
 <Accordion title="カスタムクレームの検証">
@@ -465,7 +465,7 @@ curl -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
 </Accordion>
 
 <div id="common-issues">
-  ## よくある問題
+  ## よくある問題 {#common-issues}
 </div>
 
 <AccordionGroup>
@@ -543,7 +543,7 @@ curl -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
 </AccordionGroup>
 
 <div id="additional-resources">
-  ## 追加リソース
+  ## 追加リソース {#additional-resources}
 </div>
 
 <CardGroup cols={3}>
@@ -573,7 +573,7 @@ curl -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
 </CardGroup>
 
 <div id="next-steps">
-  ## 次のステップ
+  ## 次のステップ {#next-steps}
 </div>
 
 Flask を使った完全に動作するサンプルについては、[Auth0 Python API samples repository](https://github.com/auth0-samples/auth0-python-api-samples)をご覧ください。

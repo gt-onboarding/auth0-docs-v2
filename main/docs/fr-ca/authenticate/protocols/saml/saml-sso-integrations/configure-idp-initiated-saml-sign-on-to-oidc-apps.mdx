@@ -26,7 +26,7 @@ Si vous souhaitez mettre en œuvre cette méthode, vous devez :
   2. Rediriger vers une application par défaut qui envoie une demande d’authentification initiée par le fournisseur de services.
 
 <div id="how-it-works">
-  ## Fonctionnement
+  ## Fonctionnement {#how-it-works}
 </div>
 
 <Frame>![Diagramme du flux de connexion SAML initiée par le fournisseur d’identité vers des applications OIDC](/docs/images/cdy7uua7fh8z/5vinAB4pSSwaKDgliTkAhh/0c5822149426b986bbcc851d07666187/idp-provider-init-saml-sign-in0.png)</Frame>
@@ -49,7 +49,7 @@ Si vous souhaitez mettre en œuvre cette méthode, vous devez :
 16. L’application OIDC vérifie le paramètre `state`, analyse le jeton d’ID et crée une session d’application pour l’utilisateur.
 
 <div id="create-the-custom-login-route-handler">
-  ## Créer le gestionnaire de la route de connexion personnalisé
+  ## Créer le gestionnaire de la route de connexion personnalisé {#create-the-custom-login-route-handler}
 </div>
 
 Le gestionnaire de la route de connexion personnalisé appelle la méthode de connexion de votre application. Il doit accepter le paramètre `connection` et l’inclure dans la requête d’authentification envoyée à votre tenant Auth0.
@@ -61,7 +61,7 @@ Nous vous recommandons d’associer le gestionnaire de la route de connexion per
 </Warning>
 
 <div id="example">
-  ### Exemple
+  ### Exemple {#example}
 </div>
 
 Si vous utilisez le [Auth0 Single Page App SDK](/docs/fr-ca/libraries/auth0-single-page-app-sdk), vous pouvez ajouter un gestionnaire personnalisé de la route de connexion et mettre à jour la méthode de connexion pour prendre en charge le paramètre `connection`, comme suit :
@@ -110,7 +110,7 @@ const login = async (targetUrl, connection) => {
 ```
 
 <div id="create-the-query-string">
-  ## Créer la chaîne de requête
+  ## Créer la chaîne de requête {#create-the-query-string}
 </div>
 
 La chaîne de requête contient le paramètre `redirect_uri`. La valeur de ce paramètre doit être encodée dans une URL et se compose de :
@@ -119,13 +119,13 @@ La chaîne de requête contient le paramètre `redirect_uri`. La valeur de ce pa
 2. Du paramètre `connection`, dont la valeur correspond au nom de votre connexion SAML.
 
 <div id="example">
-  ### Exemple
+  ### Exemple {#example-2}
 </div>
 
 Si le point de terminaison de votre application est `https://exampleco.com/startlogin` et que le nom de votre connexion SAML est `my-saml-connection`, la chaîne de requête sera `redirect_uri=https%3A%2F%2Fexampleco.com%2Fstartlogin%3Fconnection%3Dmy-saml-connection`.
 
 <div id="configure-the-application">
-  ## Configurer l’application
+  ## Configurer l’application {#configure-the-application}
 </div>
 
 1. Accédez à [Auth0 Dashboard &gt; Applications &gt; Applications](https://manage.auth0.com/#/applications).
@@ -133,7 +133,7 @@ Si le point de terminaison de votre application est `https://exampleco.com/start
 3. Mettez à jour **Allowed Callback URLs** pour inclure le point de terminaison de l’application associé à votre gestionnaire personnalisé de la route de connexion.
 
 <div id="configure-the-connection">
-  ## Configurer la connexion
+  ## Configurer la connexion {#configure-the-connection}
 </div>
 
 1. Accédez à [Auth0 Dashboard &gt; Authentication &gt; Enterprise &gt; SAML](https://manage.auth0.com/#/connections/enterprise/samlp).
@@ -145,7 +145,7 @@ Si le point de terminaison de votre application est `https://exampleco.com/start
 7. Pour **Query String**, saisissez la chaîne de requête que vous avez créée précédemment.
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Connecter votre application à des fournisseurs d’identité SAML](/docs/fr-ca/authenticate/identity-providers/enterprise-identity-providers/saml)

@@ -16,7 +16,7 @@ Vous pouvez aussi personnaliser l’ensemble du contenu HTML pour répondre aux 
 Avec l’expérience Universal Login, l’authentification MFA est présentée de manière encore plus simple à l’utilisateur. Une fois ses informations d’identification saisies pour se connecter, l’écran MFA s’affiche. Si aucun facteur MFA n’est inscrit, on lui demandera d’en inscrire un; dans le cas contraire, on lui demandera d’utiliser son facteur MFA.
 
 <div id="use-the-mfa-api">
-  ## Utiliser l’API MFA
+  ## Utiliser l’API MFA {#use-the-mfa-api}
 </div>
 
 Auth0 fournit une [API MFA](/docs/fr-ca/secure/multi-factor-authentication/multi-factor-authentication-developer-resources/mfa-api) pour les scénarios suivants :
@@ -37,13 +37,13 @@ Pour utiliser l’API MFA, vous devez activer le type d’autorisation MFA pour 
 4. Cliquez sur **Save Changes**.
 
 <div id="limitations">
-  ### Limitations
+  ### Limitations {#limitations}
 </div>
 
 L’API MFA est conçue pour fonctionner avec les facteurs SMS, les notifications push dans l’application Guardian, Email et OTP. Elle ne prend pas en charge l’inscription avec Duo.
 
 <div id="customize-mfa-policy-with-actions">
-  ## Personnaliser la politique MFA avec Actions
+  ## Personnaliser la politique MFA avec Actions {#customize-mfa-policy-with-actions}
 </div>
 
 Vous pouvez utiliser Actions pour personnaliser la politique MFA de votre tenant, notamment en exigeant la MFA pour les utilisateurs d’applications particulières, les utilisateurs ayant des métadonnées utilisateur précises ou provenant de plages d’adresses IP précises, et plus encore.
@@ -81,7 +81,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="common-use-case-examples">
-  ## Exemples de cas d’utilisation courants
+  ## Exemples de cas d’utilisation courants {#common-use-case-examples}
 </div>
 
 Voici quelques scénarios courants d’authentification multifacteur contextuelle qui peuvent être pris en charge par Actions.
@@ -93,7 +93,7 @@ Voici quelques scénarios courants d’authentification multifacteur contextuell
 </Callout>
 
 <div id="require-mfa-for-specific-applications">
-  ### Exiger MFA pour certaines applications
+  ### Exiger MFA pour certaines applications {#require-mfa-for-specific-applications}
 </div>
 
 Vous pouvez personnaliser MFA pour qu’elle se déclenche uniquement lorsque les utilisateurs se connectent à certaines applications.
@@ -113,7 +113,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="require-mfa-for-specific-users">
-  ### Exiger MFA pour certains utilisateurs
+  ### Exiger MFA pour certains utilisateurs {#require-mfa-for-specific-users}
 </div>
 
 Vous pouvez personnaliser MFA afin qu’elle ne se déclenche que pour les utilisateurs désignés pour utiliser MFA.
@@ -127,7 +127,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="change-frequency-of-mfa-prompts">
-  ### Modifier la fréquence des demandes de MFA
+  ### Modifier la fréquence des demandes de MFA {#change-frequency-of-mfa-prompts}
 </div>
 
 Dans certains cas, vous ne voudrez peut-être pas demander à l’utilisateur de s’authentifier par MFA chaque fois qu’il se connecte à partir du même navigateur. Vous pouvez modifier ce comportement à l’aide de la propriété `allowRememberBrowser` :
@@ -155,7 +155,7 @@ Lorsque vous permettez à l’utilisateur d’ignorer la MFA, un cookie est stoc
 Si un utilisateur perd un appareil de confiance, vous pouvez exiger la MFA pour cet utilisateur lors de sa prochaine connexion en appelant le point de terminaison Auth0 <Tooltip tip="Management API : un produit qui permet aux clients d’effectuer des tâches administratives." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Management+API">Management API</Tooltip> [Invalidate Remember Browser](https://auth0.com/docs/api/management/v2#!/Users/post_invalidate_remember_browser).
 
 <div id="require-mfa-for-users-outside-of-the-network">
-  ### Exiger la MFA pour les utilisateurs à l’extérieur du réseau
+  ### Exiger la MFA pour les utilisateurs à l’extérieur du réseau {#require-mfa-for-users-outside-of-the-network}
 </div>
 
 En supposant que l’accès au réseau d’adresses IP internes spécifié soit bien contrôlé, vous pouvez aussi faire en sorte qu’Auth0 ne demande la MFA qu’aux utilisateurs dont les requêtes proviennent de l’extérieur du réseau d’entreprise :
@@ -173,7 +173,7 @@ exports.onExecutePostLogin = async (event, api) => {
 ```
 
 <div id="bypass-mfa-for-refresh-token-requests">
-  ### Contourner la MFA pour les requêtes de jeton d’actualisation
+  ### Contourner la MFA pour les requêtes de jeton d’actualisation {#bypass-mfa-for-refresh-token-requests}
 </div>
 
 Si vos utilisateurs signalent des déconnexions fréquentes, vous devrez peut-être contourner la MFA pour les requêtes de <Tooltip tip="Jeton d’actualisation : jeton utilisé pour obtenir un jeton d’accès renouvelé sans obliger les utilisateurs à se connecter de nouveau." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=refresh+token">jeton d’actualisation</Tooltip>. Vous pouvez modifier le comportement par défaut au moyen d’une Action de filtre sur la propriété d’objet `event.transaction.protocol`.
@@ -190,7 +190,7 @@ exports.onExecutePostLogin = async (event, api) => {
 Pour en savoir plus sur l’objet `event` de l’Action, consultez [Déclencheurs d’Actions : post-login - objet Event](/docs/fr-ca/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object).
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Personnaliser MFA pour Classic Login](/docs/fr-ca/secure/multi-factor-authentication/customize-mfa/customize-mfa-classic-login)

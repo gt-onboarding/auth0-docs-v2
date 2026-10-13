@@ -13,13 +13,13 @@ sidebarTitle: Premiers pas
 Aidez votre équipe et vos utilisateurs à tirer parti d’[Auth0 Model Context Protocol (MCP) Server](/docs/fr-ca/get-started/auth0-mcp-server) en l’installant et en l’intégrant à plusieurs [clients MCP](https://modelcontextprotocol.io/clients) couramment utilisés.
 
 <div id="installation-and-configuration">
-  ## Installation et configuration
+  ## Installation et configuration {#installation-and-configuration}
 </div>
 
 Installez Auth0 MCP Server en exécutant l’une de ces commandes dans votre terminal :
 
 <div id="for-claude-desktop-default">
-  ### Pour Claude Desktop (par défaut)
+  ### Pour Claude Desktop (par défaut) {#for-claude-desktop-default}
 </div>
 
 ```bash lines
@@ -27,7 +27,7 @@ npx @auth0/auth0-mcp-server init
 ```
 
 <div id="for-cursor">
-  ### Pour Cursor
+  ### Pour Cursor {#for-cursor}
 </div>
 
 ```bash lines
@@ -35,7 +35,7 @@ npx @auth0/auth0-mcp-server init --client cursor
 ```
 
 <div id="for-windsurf">
-  ### Pour Windsurf
+  ### Pour Windsurf {#for-windsurf}
 </div>
 
 ```bash lines
@@ -43,7 +43,7 @@ npx @auth0/auth0-mcp-server init --client windsurf
 ```
 
 <div id="other-mcp-clients">
-  ### Autres clients MCP
+  ### Autres clients MCP {#other-mcp-clients}
 </div>
 
 Pour utiliser Auth0 MCP Server avec n’importe quel autre client MCP, vous pouvez ajouter manuellement cette configuration dans le client, puis le redémarrer pour que les modifications prennent effet :
@@ -64,7 +64,7 @@ Pour utiliser Auth0 MCP Server avec n’importe quel autre client MCP, vous pouv
 ```
 
 <div id="authenticate-with-auth0">
-  ## Authentifiez-vous avec Auth0
+  ## Authentifiez-vous avec Auth0 {#authenticate-with-auth0}
 </div>
 
 Votre navigateur s’ouvrira automatiquement pour lancer le <Tooltip tip="OAuth 2.0 : cadre d’autorisation qui définit les protocoles et les flux de travail d’autorisation." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=OAuth+2.0">OAuth 2.0</Tooltip> flux sur appareil d’<Tooltip tip="OAuth 2.0 : cadre d’autorisation qui définit les protocoles et les flux de travail d’autorisation." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=authorization+flow">autorisation</Tooltip>. Connectez-vous à votre compte Auth0 et accordez les autorisations demandées.
@@ -74,11 +74,11 @@ Votre navigateur s’ouvrira automatiquement pour lancer le <Tooltip tip="OAuth 
 </Callout>
 
 <div id="verify-your-integration">
-  ## Vérifier votre intégration
+  ## Vérifier votre intégration {#verify-your-integration}
 </div>
 
 <div id="claude-desktop">
-  ### Claude Desktop
+  ### Claude Desktop {#claude-desktop}
 </div>
 
 1. Redémarrez Claude Desktop pour vous assurer qu’il reconnaît l’Auth0 MCP Server nouvellement installé.
@@ -86,7 +86,7 @@ Votre navigateur s’ouvrira automatiquement pour lancer le <Tooltip tip="OAuth 
 3. Lancez une conversation avec Claude Desktop et demandez de l’aide pour gérer votre tenant Auth0.
 
 <div id="cursor">
-  ### Cursor
+  ### Cursor {#cursor}
 </div>
 
 1. Redémarrez Cursor pour vous assurer qu’il reconnaît le Auth0 MCP Server nouvellement installé.
@@ -94,7 +94,7 @@ Votre navigateur s’ouvrira automatiquement pour lancer le <Tooltip tip="OAuth 
 3. Lancez une conversation avec Cursor et demandez de l’aide pour gérer votre tenant Auth0.
 
 <div id="windsurf">
-  ### Windsurf
+  ### Windsurf {#windsurf}
 </div>
 
 1. Redémarrez Windsurf pour vous assurer qu&#39;il reconnaît l’Auth0 MCP Server nouvellement installé.
@@ -102,7 +102,7 @@ Votre navigateur s’ouvrira automatiquement pour lancer le <Tooltip tip="OAuth 
 3. Lancez une conversation avec Windsurf et demandez-lui de vous aider à gérer votre tenant Auth0.
 
 <div id="common-troubleshooting-steps">
-  ## Étapes de dépannage courantes
+  ## Étapes de dépannage courantes {#common-troubleshooting-steps}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -110,7 +110,7 @@ Votre navigateur s’ouvrira automatiquement pour lancer le <Tooltip tip="OAuth 
 </Callout>
 
 <div id="get-command-line-help">
-  #### Obtenir de l’aide sur la ligne de commande :
+  #### Obtenir de l’aide sur la ligne de commande : {#get-command-line-help}
 </div>
 
 Consultez la liste des commandes prises en charge et des exemples d’utilisation avec :
@@ -120,7 +120,7 @@ npx @auth0/auth0-mcp-server help
 ```
 
 <div id="authentication-issues">
-  #### Problèmes d’authentification
+  #### Problèmes d’authentification {#authentication-issues}
 </div>
 
 Assurez-vous que les autorisations de votre tenant Auth0 sont correctes, puis essayez de réinitialiser avec :
@@ -130,7 +130,7 @@ npx @auth0/auth0-mcp-server init
 ```
 
 <div id="connection-failures">
-  #### Échecs de connexion :
+  #### Échecs de connexion : {#connection-failures}
 </div>
 
 1. Assurez-vous que le serveur MCP est bien en cours d’exécution avec :
@@ -142,7 +142,7 @@ npx @auth0/auth0-mcp-server init
 2. Redémarrez votre client d’IA après avoir vérifié que le serveur est en cours d’exécution.
 
 <div id="claude-cant-connect-to-the-server-error">
-  #### Erreur : Claude ne peut pas se connecter au serveur
+  #### Erreur : Claude ne peut pas se connecter au serveur {#claude-cant-connect-to-the-server-error}
 </div>
 
 1. Redémarrez Claude Desktop après l’installation.
@@ -153,17 +153,17 @@ npx @auth0/auth0-mcp-server init
    ```
 
 <div id="api-errors">
-  #### Erreurs d’API :
+  #### Erreurs d’API : {#api-errors}
 </div>
 
 Vérifiez les autorisations et la date d’expiration de votre token Auth0. Activez le mode de débogage (voir ci-dessous) pour consulter des logs détaillés.
 
 <div id="debug-configuration-issues">
-  ## Résoudre les problèmes de configuration
+  ## Résoudre les problèmes de configuration {#debug-configuration-issues}
 </div>
 
 <div id="enable-debug-mode">
-  #### Activer le mode de débogage
+  #### Activer le mode de débogage {#enable-debug-mode}
 </div>
 
 Activez le mode de débogage pour consulter des journaux détaillés :
@@ -173,7 +173,7 @@ export DEBUG=auth0-mcp
 ```
 
 <div id="debug-client-logs">
-  #### Déboguer les journaux du client
+  #### Déboguer les journaux du client {#debug-client-logs}
 </div>
 
 Accédez aux journaux détaillés du client MCP dans Claude Desktop :
@@ -190,7 +190,7 @@ DEBUG=auth0-mcp npx @auth0/auth0-mcp-server run
 ```
 
 <div id="advanced-debugging-using-mcp-inspector">
-  #### Débogage avancé à l’aide du MCP Inspector
+  #### Débogage avancé à l’aide du MCP Inspector {#advanced-debugging-using-mcp-inspector}
 </div>
 
 Pour effectuer un dépannage avancé, utilisez le MCP Inspector :
@@ -200,7 +200,7 @@ npx @modelcontextprotocol/inspector -e DEBUG='auth0-mcp' @auth0/auth0-mcp-server
 ```
 
 <div id="next-steps">
-  ## Prochaines étapes
+  ## Prochaines étapes {#next-steps}
 </div>
 
 Explorez toutes les capacités du Auth0 MCP Server en consultant notre [référence des outils du Auth0 Model Context Protocol (MCP) Server](/docs/fr-ca/get-started/auth0-mcp-server/auth0-mcp-tools-reference), ou consultez nos guides du Auth0 Model Context Protocol (MCP) Server pour découvrir des exemples pratiques et des cas d’utilisation.

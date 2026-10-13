@@ -10,7 +10,7 @@ title: Pushed Authorization Requests（PAR）を使用する認可コードフ�
 [Pushed Authorization Request (PAR)](https://datatracker.ietf.org/doc/html/rfc9126) は、認可リクエストを <Tooltip tip="Authorization Server: ユーザーのアクセス範囲の定義に関与する集中型サーバー。たとえば、認可サーバーはユーザーが利用できるデータ、タスク、機能を制御できます。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=authorization+server">認可サーバー</Tooltip> に直接送信するためのバックエンドプロトコルです。これは、高い価値を持つシナリオで API を保護することを目的とした [Financial-Grade API (FAPI) Security Profile 1.0](https://openid.net/specs/openid-financial-api-part-2-1_0.html) の技術コンポーネントです。
 
 <div id="how-it-works">
-  ## 仕組み
+  ## 仕組み {#how-it-works}
 </div>
 
 PAR を使用すると、アプリケーションは <Tooltip tip="OAuth 2.0: 認可プロトコルとワークフローを定義する認可フレームワーク。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=OAuth+2.0">OAuth 2.0</Tooltip> の認可リクエストのパラメーターを、認可サーバーの PAR エンドポイント **(1)** に直接送信できます。これに対して、認可サーバーは `/authorize` エンドポイント **(3)** の呼び出し時に使用する request URI 値 `request_uri` **(2)** を返します。`request_uri` は `/par` エンドポイントに保存された認可リクエストへの参照であるため、これらのリクエストが公開されることはありません **(4)**。詳しくは、[Push Authorization Requests を設定する](/docs/ja-jp/get-started/applications/configure-par) をご覧ください。
@@ -18,7 +18,7 @@ PAR を使用すると、アプリケーションは <Tooltip tip="OAuth 2.0: �
 <Frame>![](/docs/images/cdy7uua7fh8z/6ivWNzZR7pnV79AXtjhJca/ad707b701d2a6d8b965ca3afe8846868/Template_for_Docs_-_Authorization_Code_Flow_with_PAR.png)</Frame>
 
 <div id="benefits">
-  ## 利点
+  ## 利点 {#benefits}
 </div>
 
 PAR を使用する利点の 1 つは、早い段階で検証を行えることです。[認可コードフロー](/docs/ja-jp/get-started/authentication-and-authorization-flow/authorization-code-flow) など、他の OAuth 2.0 フローでは、エンドユーザーは検証のために認可サーバーへリダイレクトされます。PAR では、エンドユーザーがリダイレクトされる前に、認可リクエストの開始時点でリクエストパラメータが検証されます。エラーページを表示するためにユーザーをリダイレクトするのは望ましくありません。
@@ -32,18 +32,18 @@ PAR では、認可リクエストはバックチャネル経由でも送信さ�
 * URL の長さに関する制限を気にする必要がありません。
 
 <div id="limitations">
-  ## 制限事項
+  ## 制限事項 {#limitations}
 </div>
 
 * リクエストのペイロードの最大サイズは 10 KB です。
 * 現在、パブリックアプリケーションはサポートされていません。詳しくは、[パブリックアプリケーションと機密アプリケーション](/docs/ja-jp/get-started/applications/confidential-and-public-applications)をお読みください。
 
 <div id="call-the-par-endpoint">
-  ## PAR エンドポイントを呼び出す
+  ## PAR エンドポイントを呼び出す {#call-the-par-endpoint}
 </div>
 
 <div id="requirements">
-  ### 要件
+  ### 要件 {#requirements}
 </div>
 
 PARエンドポイントを呼び出すには、次の要件を満たす必要があります。
@@ -53,7 +53,7 @@ PARエンドポイントを呼び出すには、次の要件を満たす必要�
 * リクエストに、アプリケーションの認証方式を指定する追加のパラメーターを含めます。PARをサポートしているのは<Tooltip tip="機密クライアント: 信頼できるバックエンドサーバーを使用して資格情報を安全に保持できるクライアント（アプリケーション）。たとえば、安全なバックエンドを備えたWebアプリケーションやmachine-to-machine（M2M）アプリケーションなどがあります。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=confidential+clients">機密クライアント</Tooltip>のみであるため、使用できる[アプリケーションの認証方式](https://auth0.com/docs/api/authentication#authentication-methods)は次のとおりです: <Tooltip tip="Client Secret: クライアント（アプリケーション）が認可サーバーに対して認証を行うために使用するSecretです。クライアントと認可サーバーのみが知っている必要があり、推測できないよう十分にランダムでなければなりません。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Client+Secret">Client Secret</Tooltip>、Private Key <Tooltip tip="Client Secret: クライアント（アプリケーション）が認可サーバーに対して認証を行うために使用するSecretです。クライアントと認可サーバーのみが知っている必要があり、推測できないよう十分にランダムでなければなりません。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=JWT">JWT</Tooltip>、およびmTLSです。<Tooltip tip="Access Token: APIへのアクセスに使用される認可資格情報で、不透明な文字列またはJWTの形式を取ります。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=access+token">アクセストークン</Tooltip>を取得する際は、`/token`エンドポイントでも同じアプリケーションの認証方式を使用する必要があります。
 
 <div id="supported-parameters">
-  ### サポートされているパラメーター
+  ### サポートされているパラメーター {#supported-parameters}
 </div>
 
 PAR エンドポイントで保存および処理されるのは、次のもののみです。
@@ -68,7 +68,7 @@ PAR は、それ以外のカスタム認可パラメーターを無視します�
 </Callout>
 
 <div id="example-par-request">
-  ### PARリクエストの例
+  ### PARリクエストの例 {#example-par-request}
 </div>
 
 ```bash lines
@@ -83,7 +83,7 @@ curl --location --request POST https://$tenant/oauth/par \
 ```
 
 <div id="example-par-response">
-  ### PARレスポンスの例
+  ### PARレスポンスの例 {#example-par-response}
 </div>
 
 次のPARレスポンス例では:
@@ -103,13 +103,13 @@ HTTP/1.1 201 Created
 ```
 
 <div id="rate-limits">
-  ### レート制限
+  ### レート制限 {#rate-limits}
 </div>
 
 Essential、Professional、Enterprise の本番テナントでは、PAR エンドポイントへの呼び出しは、標準の Authentication API のレート制限に含まれます。詳細については、[レート制限の構成](/docs/ja-jp/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations)を参照し、ご利用のサブスクリプションタイプをクリックしてください。次に、**Authentication API** をクリックしてください。
 
 <div id="call-the-authorization-endpoint">
-  ## 認可エンドポイントを呼び出す
+  ## 認可エンドポイントを呼び出す {#call-the-authorization-endpoint}
 </div>
 
 アプリケーションは、認可リクエスト内で `/oauth/par` エンドポイントから返された `request_uri` の値を使用し、ユーザーエージェントを認可エンドポイントにリダイレクトします。`request_uri` パラメーターの詳細については、[Configure Push Authorization Requests](/docs/ja-jp/get-started/applications/configure-par)をご覧ください。
@@ -123,7 +123,7 @@ GET /authorize?client_id=CLIENT_ID&request_uri=urn%3Aietf%3Aparam...qrwSI HTTP/1
 有効な `request_uri` であれば、<Tooltip tip="認可フロー: OAuth 2.0 フレームワークで指定される認可グラント（またはワークフロー）。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=authorization+flow">認可フロー</Tooltip> の残りの流れは同じです。
 
 <div id="validation">
-  ### 検証
+  ### 検証 {#validation}
 </div>
 
 * PAR は、このステージで他の認可リクエストと同様に、認可サーバーによって再度検証されます。
@@ -132,7 +132,7 @@ GET /authorize?client_id=CLIENT_ID&request_uri=urn%3Aietf%3Aparam...qrwSI HTTP/1
 * テナントレベルまたはクライアントレベルで PAR が必須の場合、PAR ではないリクエストは拒否されます。
 
 <div id="learn-more">
-  ## さらに詳しく
+  ## さらに詳しく {#learn-more}
 </div>
 
 * [Pushed Authorization Requests (PAR) の設定](/docs/ja-jp/get-started/applications/configure-par)

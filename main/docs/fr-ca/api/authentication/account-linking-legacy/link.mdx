@@ -4,7 +4,7 @@ description: "Point de terminaison obsolète servant à la liaison de comptes d�
 ---
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `GET /authorize`
@@ -18,13 +18,13 @@ Appelez ce point de terminaison lorsqu’un utilisateur souhaite lier une deuxi�
 Ce point de terminaison déclenche le flux de connexion pour lier un compte existant à un nouveau. Il renvoie une redirection 302 vers la `connection` que l’utilisateur actuel souhaite ajouter. L’utilisateur est identifié par le jeton d’accès renvoyé après une connexion réussie.
 
 <div id="remarks">
-  ### Remarques
+  ### Remarques {#remarks}
 </div>
 
 * La valeur `redirect_uri` doit être définie comme une URL de rappel valide dans les [Paramètres de votre application](https://manage.auth0.com/dashboard).
 
 <div id="learn-more">
-  ### En savoir plus
+  ### En savoir plus {#learn-more}
 </div>
 
 * [Lier des comptes d’utilisateur](https://auth0.com/docs/manage-users/user-accounts/user-account-linking/link-user-accounts)
@@ -32,7 +32,7 @@ Ce point de terminaison déclenche le flux de connexion pour lier un compte exis
 * [Scénario de liaison de comptes d’utilisateur côté serveur](https://auth0.com/docs/manage-users/user-accounts/user-account-linking/suggested-account-linking-server-side-implementation)
 
 <div id="query-parameters">
-  ## Paramètres de requête
+  ## Paramètres de requête {#query-parameters}
 </div>
 
 <ParamField query="response_type" type="string" required>
@@ -56,7 +56,7 @@ Ce point de terminaison déclenche le flux de connexion pour lier un compte exis
 </ParamField>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                                               |

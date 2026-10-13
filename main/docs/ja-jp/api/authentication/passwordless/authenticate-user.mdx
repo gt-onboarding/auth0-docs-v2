@@ -4,7 +4,7 @@ description: "電話番号またはメールアドレスと、パスワードレ
 ---
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `POST /oauth/token`
@@ -12,7 +12,7 @@ description: "電話番号またはメールアドレスと、パスワードレ
 確認コードを取得したら、このエンドポイントを使用して、電話番号またはメールアドレスと確認コードでユーザーをログインさせます。
 
 <div id="remarks">
-  ### 注意事項
+  ### 注意事項 {#remarks}
 </div>
 
 * `grant_type` には `http://auth0.com/oauth/grant-type/passwordless/otp` を指定する必要があります。
@@ -23,13 +23,13 @@ description: "電話番号またはメールアドレスと、パスワードレ
 * `redirect_uri` は必須のコールバック URL で、アプリケーションの **Allowed Callback URLs** に登録されている必要があります。
 
 <div id="learn-more">
-  ### 詳細はこちら
+  ### 詳細はこちら {#learn-more}
 </div>
 
 * [パスワードレス認証](https://auth0.com/docs/authenticate/passwordless)
 
 <div id="headers">
-  ## ヘッダー
+  ## ヘッダー {#headers}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -37,7 +37,7 @@ description: "電話番号またはメールアドレスと、パスワードレ
 </ParamField>
 
 <div id="body-parameters">
-  ## ボディパラメーター
+  ## ボディパラメーター {#body-parameters}
 </div>
 
 <div className="prose-sm prose-gray dark:prose-invert">
@@ -87,7 +87,7 @@ description: "電話番号またはメールアドレスと、パスワードレ
 </ParamField>
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | ステータス | 説明                     |

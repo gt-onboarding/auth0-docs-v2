@@ -7,7 +7,7 @@ title: Flux hybride
 Les applications en mesure de stocker de façon sécurisée des [identifiants du client](/docs/fr-ca/secure/application-credentials) peuvent tirer parti du flux hybride (défini dans la [spécification OpenID Connect, section 3.3](https://openid.net/specs/openid-connect-core-1_0.html#HybridFlowAuth)). Le flux hybride permet à votre application d’accéder immédiatement à un <Tooltip tip="Jeton ID : information d’identification destinée au client lui-même, plutôt qu’à l’accès à une ressource." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=ID+token">jeton ID</Tooltip>, tout en assurant la récupération sécurisée des <Tooltip tip="Jeton ID : information d’identification destinée au client lui-même, plutôt qu’à l’accès à une ressource." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=access+tokens">jetons d’accès</Tooltip> et des <Tooltip tip="Jeton d’accès : information d’autorisation, sous la forme d’une chaîne opaque ou d’un JWT, utilisée pour accéder à une API." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=refresh+tokens">jetons d’actualisation</Tooltip>. Cela peut être utile lorsque votre application doit accéder immédiatement à des renseignements sur l’utilisateur, mais doit d’abord effectuer un certain traitement avant d’obtenir un accès prolongé à des ressources protégées.
 
 <div id="how-it-works">
-  ## Fonctionnement
+  ## Fonctionnement {#how-it-works}
 </div>
 
 Le flux hybride combine des étapes du [Flux implicite avec Form Post](/docs/fr-ca/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post) et du [Flux de code d’autorisation](/docs/fr-ca/get-started/authentication-and-authorization-flow/authorization-code-flow) :
@@ -28,13 +28,13 @@ Le flux hybride combine des étapes du [Flux implicite avec Form Post](/docs/fr-
 </Callout>
 
 <div id="how-to-implement-it">
-  ## Comment le mettre en œuvre
+  ## Comment le mettre en œuvre {#how-to-implement-it}
 </div>
 
 Vous pouvez suivre notre tutoriel pour utiliser l’Authentication API afin d’[appeler votre API à l’aide du flux hybride](/docs/fr-ca/get-started/authentication-and-authorization-flow/hybrid-flow/call-api-hybrid-flow).
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Auth0 Rules](/docs/fr-ca/customize/rules)

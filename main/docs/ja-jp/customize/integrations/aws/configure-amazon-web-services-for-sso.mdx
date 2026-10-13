@@ -16,7 +16,7 @@ AWS で <Tooltip tip="シングルサインオン（SSO）: ユーザーが 1 �
 5. AWS ロールをユーザーに対応付けます。
 
 <div id="create-an-external-identity-provider-in-aws">
-  ## AWS で外部アイデンティティプロバイダーを作成する
+  ## AWS で外部アイデンティティプロバイダーを作成する {#create-an-external-identity-provider-in-aws}
 </div>
 
 1. 1 つ変更を加えたうえで、AWS のガイド [Connect to your External Identity Provider](https://docs.aws.amazon.com/singlesignon/latest/userguide/manage-your-identity-source-idp.html) に従って、AWS で外部アイデンティティプロバイダーを設定します。
@@ -26,13 +26,13 @@ AWS で <Tooltip tip="シングルサインオン（SSO）: ユーザーが 1 �
 2. 後のセクションで設定を完了する必要があるため、このページはブラウザーで開いたままにしておいてください。
 
 <div id="configure-saml-sso-for-auth0">
-  ## Auth0 の SAML SSO を設定する
+  ## Auth0 の SAML SSO を設定する {#configure-saml-sso-for-auth0}
 </div>
 
 <Tooltip tip="Auth0 Dashboard: サービスを設定するための Auth0 の主要な製品です。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip> を使用して、アプリケーションの SAML2 Web App アドオンを設定します。設定方法については、[Amazon Web Services 向けに Auth0 を IDプロバイダーとして設定する](/docs/ja-jp/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-saml2-web-app-addon-for-aws) を参照してください。
 
 <div id="complete-aws-identity-provider-configuration">
-  ## AWSアイデンティティプロバイダーの設定を完了する
+  ## AWSアイデンティティプロバイダーの設定を完了する {#complete-aws-identity-provider-configuration}
 </div>
 
 1. ブラウザーで開いている AWS SSO のアイデンティティプロバイダーページに戻ります。
@@ -40,7 +40,7 @@ AWS で <Tooltip tip="シングルサインオン（SSO）: ユーザーが 1 �
 3. 内容を確認し、アイデンティティソースの変更を**確認**します。
 
 <div id="create-aws-iam-role">
-  ## AWS IAMロールを作成
+  ## AWS IAMロールを作成 {#create-aws-iam-role}
 </div>
 
 プロバイダーを使用するには、そのプロバイダーをロールの信頼ポリシーに含めた IAM ロールを作成する必要があります。
@@ -59,7 +59,7 @@ AWS で <Tooltip tip="シングルサインオン（SSO）: ユーザーが 1 �
 7. **Trusted entities** と **Policies** の情報を確認し、**Create Role** をクリックします。
 
 <div id="map-aws-role-to-a-user">
-  ## AWS ロールをユーザーにマッピングする
+  ## AWS ロールをユーザーにマッピングする {#map-aws-role-to-a-user}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -106,7 +106,7 @@ AWS で <Tooltip tip="シングルサインオン（SSO）: ユーザーが 1 �
       ```
 
 <div id="map-multiple-roles">
-  ### 複数のロールをマッピングする
+  ### 複数のロールをマッピングする {#map-multiple-roles}
 </div>
 
 ロールのマッピングには配列を指定することもできます (つまり、`awsRoles: role1` ではなく `awsRoles = [ role1, role2 ]` になります)
@@ -154,7 +154,7 @@ function (user, context, callback) {
 ```
 
 <div id="configure-session-expiration">
-  ## セッションの有効期限を設定する
+  ## セッションの有効期限を設定する {#configure-session-expiration}
 </div>
 
 AWS セッションの有効期限 (3600 秒) を延長するには、カスタムの[ルール](/docs/ja-jp/customize/rules)を使用します。このルールでは、セッション時間を変更する [**SessionDuration** 属性](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_saml_assertions.html) を設定します。
@@ -181,7 +181,7 @@ export const codeExample = `function (user, context, callback) {
 <AuthCodeBlock children={codeExample} language="javascript" />
 
 <div id="test-configuration">
-  ## 設定をテストする
+  ## 設定をテストする {#test-configuration}
 </div>
 
 1. [Auth0 Dashboard &gt; アプリケーション &gt; アプリケーション](https://manage.auth0.com/#/applications) に移動し、対象のアプリケーション名をクリックします。
@@ -189,7 +189,7 @@ export const codeExample = `function (user, context, callback) {
 3. **Usage** タブで、**IDプロバイダーのログイン URL** を探します。Auth0 アカウントのログインページにリダイレクトされます。正常にログインできると、AWS にリダイレクトされます。
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * [Amazon Web Services を SAMLサービスプロバイダーとして設定する](/docs/ja-jp/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-saml2-web-app-addon-for-aws)

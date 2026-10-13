@@ -1,60 +1,184 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "aspen",
-  "name": "Auth0 Docs",
-  "description": "Auth0 documentation",
-  "styling": {
-    "eyebrows": "breadcrumbs"
-  },
-  "seo": {
-    "metatags": {
-      "canonical": "https://auth0.com",
-      "og:image": "docs/images/share-image.png"
-    }
-  },
-  "colors": {
-    "primary": "#7549F2",
-    "light": "#B3A7FF",
-    "dark": "#343434"
-  },
-  "contextual": {
-    "options": ["copy", "view", "chatgpt", "claude"]
-  },
-  "fonts": {
-    "body": {
-      "family": "Inter",
-      "source": "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
-      "format": "woff2"
-    }
-  },
-  "integrations": {
-    "gtm": {
-      "tagId": "GTM-W7FRLJ"
-    },
-    "onetrust": {
-      "domainScript": "96e22fd8-d619-4cdd-a3c6-d51529d21faf",
-      "categoryId": "C0002",
-      "scriptSource": "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
-    },
-    "heap": {
-      "appId": "1279799279"
-    },
-    "adobe": {
-      "launchUrl": "https://assets.adobedtm.com/6bb3f7663515/7006851c9849/launch-af624fe9e34f.min.js"
-    }
-  },
   "api": {
-    "url": "full",
+    "params": {
+      "post": [
+        "x-release-lifecycle"
+      ]
+    },
     "playground": {
       "proxy": false
     },
-    "params": {
-      "post": ["x-release-lifecycle"]
-    }
+    "url": "full"
   },
   "background": {
     "decoration": "gradient"
   },
+  "colors": {
+    "dark": "#343434",
+    "light": "#B3A7FF",
+    "primary": "#7549F2"
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude"
+    ]
+  },
+  "description": "Auth0 documentation",
+  "favicon": "/docs/images/logo/favicon.svg",
+  "fonts": {
+    "body": {
+      "family": "Inter",
+      "format": "woff2",
+      "source": "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    }
+  },
+  "footer": {
+    "links": [
+      {
+        "header": "Developers",
+        "items": [
+          {
+            "href": "https://developer.auth0.com",
+            "label": "Developer Hub"
+          },
+          {
+            "href": "https://developer.auth0.com/resources",
+            "label": "Code Samples & Guides"
+          },
+          {
+            "href": "https://auth0.com/blog/newsletter",
+            "label": "Zero Index Newsletter"
+          },
+          {
+            "href": "https://auth0.com/blog",
+            "label": "Blog"
+          },
+          {
+            "href": "https://auth0.com/changelog",
+            "label": "Changelog"
+          }
+        ]
+      },
+      {
+        "header": "Docs",
+        "items": [
+          {
+            "href": "https://auth0.com/docs",
+            "label": "Documentation"
+          },
+          {
+            "href": "https://auth0.com/docs/quickstarts",
+            "label": "Quickstarts"
+          },
+          {
+            "href": "https://auth0.com/docs/api",
+            "label": "APIs"
+          },
+          {
+            "href": "https://auth0.com/docs/libraries",
+            "label": "SDK Libraries"
+          },
+          {
+            "href": "https://auth0.com/learn",
+            "label": "Learn"
+          },
+          {
+            "href": "https://auth0.com/intro-to-iam",
+            "label": "Intro to IAM (CIAM)"
+          },
+          {
+            "href": "https://auth0.com/resources/whitepapers",
+            "label": "Reports"
+          },
+          {
+            "href": "https://auth0.com/resources/webinars",
+            "label": "Webinars"
+          }
+        ]
+      },
+      {
+        "header": "Support Center",
+        "items": [
+          {
+            "href": "https://community.auth0.com",
+            "label": "Community"
+          },
+          {
+            "href": "https://support.auth0.com",
+            "label": "Help"
+          },
+          {
+            "href": "https://auth0.com/docs/troubleshoot",
+            "label": "FAQs"
+          },
+          {
+            "href": "https://auth0.com",
+            "label": "Auth0"
+          }
+        ]
+      },
+      {
+        "header": "Company",
+        "items": [
+          {
+            "href": "https://auth0.com/customers",
+            "label": "Our Customers"
+          },
+          {
+            "href": "https://auth0.com/security",
+            "label": "Compliance"
+          },
+          {
+            "href": "https://auth0.com/partners",
+            "label": "Partners"
+          },
+          {
+            "href": "https://www.okta.com/company/careers",
+            "label": "Careers"
+          },
+          {
+            "href": "https://www.okta.com/okta-and-auth0",
+            "label": "Okta + Auth0"
+          },
+          {
+            "href": "https://auth0.com/about",
+            "label": "About us"
+          }
+        ]
+      }
+    ],
+    "socials": {
+      "github": "https://github.com/auth0",
+      "linkedin": "https://www.linkedin.com/company/auth0",
+      "x-twitter": "https://x.com/auth0"
+    }
+  },
+  "integrations": {
+    "adobe": {
+      "launchUrl": "https://assets.adobedtm.com/6bb3f7663515/7006851c9849/launch-af624fe9e34f.min.js"
+    },
+    "gtm": {
+      "tagId": "GTM-W7FRLJ"
+    },
+    "heap": {
+      "appId": "1279799279"
+    },
+    "onetrust": {
+      "categoryId": "C0002",
+      "domainScript": "96e22fd8-d619-4cdd-a3c6-d51529d21faf",
+      "scriptSource": "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
+    }
+  },
+  "logo": {
+    "dark": "/docs/images/logo/dark.svg",
+    "href": "https://auth0.com/docs/",
+    "light": "/docs/images/logo/light.svg"
+  },
+  "name": "Auth0 Docs",
   "navigation": {
     "languages": [
       {
@@ -70,134 +194,17 @@
       }
     ]
   },
-  "logo": {
-    "light": "/docs/images/logo/light.svg",
-    "dark": "/docs/images/logo/dark.svg",
-    "href": "https://auth0.com/docs/"
-  },
-  "favicon": "/docs/images/logo/favicon.svg",
-  "footer": {
-    "socials": {
-      "x-twitter": "https://x.com/auth0",
-      "github": "https://github.com/auth0",
-      "linkedin": "https://www.linkedin.com/company/auth0"
-    },
-    "links": [
-      {
-        "header": "Developers",
-        "items": [
-          {
-            "label": "Developer Hub",
-            "href": "https://developer.auth0.com"
-          },
-          {
-            "label": "Code Samples & Guides",
-            "href": "https://developer.auth0.com/resources"
-          },
-          {
-            "label": "Zero Index Newsletter",
-            "href": "https://auth0.com/blog/newsletter"
-          },
-          {
-            "label": "Blog",
-            "href": "https://auth0.com/blog"
-          },
-          {
-            "label": "Changelog",
-            "href": "https://auth0.com/changelog"
-          }
-        ]
-      },
-      {
-        "header": "Docs",
-        "items": [
-          {
-            "label": "Documentation",
-            "href": "https://auth0.com/docs"
-          },
-          {
-            "label": "Quickstarts",
-            "href": "https://auth0.com/docs/quickstarts"
-          },
-          {
-            "label": "APIs",
-            "href": "https://auth0.com/docs/api"
-          },
-          {
-            "label": "SDK Libraries",
-            "href": "https://auth0.com/docs/libraries"
-          },
-          {
-            "label": "Learn",
-            "href": "https://auth0.com/learn"
-          },
-          {
-            "label": "Intro to IAM (CIAM)",
-            "href": "https://auth0.com/intro-to-iam"
-          },
-          {
-            "label": "Reports",
-            "href": "https://auth0.com/resources/whitepapers"
-          },
-          {
-            "label": "Webinars",
-            "href": "https://auth0.com/resources/webinars"
-          }
-        ]
-      },
-      {
-        "header": "Support Center",
-        "items": [
-          {
-            "label": "Community",
-            "href": "https://community.auth0.com"
-          },
-          {
-            "label": "Help",
-            "href": "https://support.auth0.com"
-          },
-          {
-            "label": "FAQs",
-            "href": "https://auth0.com/docs/troubleshoot"
-          },
-          {
-            "label": "Auth0",
-            "href": "https://auth0.com"
-          }
-        ]
-      },
-      {
-        "header": "Company",
-        "items": [
-          {
-            "label": "Our Customers",
-            "href": "https://auth0.com/customers"
-          },
-          {
-            "label": "Compliance",
-            "href": "https://auth0.com/security"
-          },
-          {
-            "label": "Partners",
-            "href": "https://auth0.com/partners"
-          },
-          {
-            "label": "Careers",
-            "href": "https://www.okta.com/company/careers"
-          },
-          {
-            "label": "Okta + Auth0",
-            "href": "https://www.okta.com/okta-and-auth0"
-          },
-          {
-            "label": "About us",
-            "href": "https://auth0.com/about"
-          }
-        ]
-      }
-    ]
-  },
   "redirects": {
     "$ref": "config/redirects.json"
-  }
+  },
+  "seo": {
+    "metatags": {
+      "canonical": "https://auth0.com",
+      "og:image": "docs/images/share-image.png"
+    }
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
+  },
+  "theme": "aspen"
 }

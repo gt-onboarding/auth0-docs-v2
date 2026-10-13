@@ -14,7 +14,7 @@ Dans le <Tooltip tip="Auth0 Dashboard : le principal produit d’Auth0 pour con
 De plus, vous pouvez gérer le contenu de vos pages à l’aide du [système de contrôle de version](/docs/fr-ca/customize/login-pages/classic-login/version-control) de votre choix.
 
 <div id="basic-customization">
-  ## Personnalisation de base
+  ## Personnalisation de base {#basic-customization}
 </div>
 
 Vous pouvez configurer les options suivantes dans l’Auth0 Dashboard, sous [Branding &gt; Universal Login &gt; onglet Settings](https://manage.auth0.com/#/login_settings) :
@@ -26,7 +26,7 @@ Vous pouvez configurer les options suivantes dans l’Auth0 Dashboard, sous [Bra
 Par défaut, ces paramètres s’appliquent à toutes les pages de Classic Login, comme l’écran de connexion ou la page de réinitialisation du mot de passe. Si vous modifiez directement le modèle HTML d’une ou de plusieurs pages et modifiez des attributs liés à ces options, ces attributs remplaceront ces paramètres.
 
 <div id="advanced-customization">
-  ## Personnalisation avancée
+  ## Personnalisation avancée {#advanced-customization}
 </div>
 
 Pour une personnalisation plus poussée, vous pouvez modifier directement le modèle HTML des pages suivantes :
@@ -36,7 +36,7 @@ Pour une personnalisation plus poussée, vous pouvez modifier directement le mod
 * [Authentification multifacteur](/docs/fr-ca/secure/multi-factor-authentication/customize-mfa/customize-mfa-classic-login)
 
 <div id="responsibility-for-updates">
-  ### Responsabilité des mises à jour
+  ### Responsabilité des mises à jour {#responsibility-for-updates}
 </div>
 
 **Lorsque vous activez la personnalisation d’une page précise, vous assumez la responsabilité de sa maintenance**, puisqu’elle ne recevra plus automatiquement les mises à jour d’Auth0. Cette maintenance comprend notamment la mise à jour des numéros de version de tous les SDK Auth0 et widgets inclus.
@@ -44,7 +44,7 @@ Pour une personnalisation plus poussée, vous pouvez modifier directement le mod
 Comme des renseignements sensibles liés à la sécurité transitent souvent par la page de connexion, l’introduction de vulnérabilités de type script intersite (XSS) constitue un risque préoccupant. De plus, si votre organisation utilise [Home Realm Discovery](/docs/fr-ca/get-started/architecture-scenarios/business-to-business/authentication#home-realm-discovery) conjointement avec Classic Login, la liste des connexions disponibles est visible publiquement dans la propriété Auth0.setClient. Dans ce contexte, Auth0 vous encourage à faire preuve de prudence lorsque vous utilisez du JavaScript tiers sur votre page de connexion.
 
 <div id="enable-page-customization">
-  ### Activer la personnalisation de la page
+  ### Activer la personnalisation de la page {#enable-page-customization}
 </div>
 
 Pour activer la personnalisation d’une page en particulier, suivez les étapes ci-dessous :
@@ -65,7 +65,7 @@ Après avoir activé la personnalisation d’une page, vous pouvez modifier son 
 </Warning>
 
 <div id="customize-the-login-page">
-  ### Personnaliser la page de connexion
+  ### Personnaliser la page de connexion {#customize-the-login-page}
 </div>
 
 Pour personnaliser le modèle de la page de connexion, vous devez d’abord choisir un modèle de base.
@@ -84,7 +84,7 @@ Les modèles offerts utilisent les bibliothèques suivantes :
 Vous pouvez utiliser ces bibliothèques dans Classic Login ou les intégrer directement dans une application. Pour mieux comprendre comment personnaliser votre expérience de connexion, consultez la documentation de la bibliothèque que vous préférez.
 
 <div id="lock-template">
-  #### Modèle Lock
+  #### Modèle Lock {#lock-template}
 </div>
 
 Si vous comptez utiliser la page de connexion par défaut et n’avez besoin que de modifications mineures, vous pouvez utiliser le modèle Lock pour modifier le comportement du widget Lock sur la page de connexion.
@@ -98,13 +98,13 @@ Par exemple, vous pouvez configurer le widget Lock pour :
 Pour en savoir plus sur la personnalisation du widget Lock, consultez les [Options de configuration de Lock](/docs/fr-ca/libraries/lock/lock-configuration).
 
 <div id="custom-login-form-template">
-  #### Modèle Custom Login Form
+  #### Modèle Custom Login Form {#custom-login-form-template}
 </div>
 
 Si vous souhaitez modifier considérablement la page de connexion, vous pouvez utiliser le modèle Custom Login Form comme guide. Ce modèle vous montre comment récupérer les valeurs dont vous avez besoin avec le SDK Auth0.js. Vous pouvez ensuite modifier le style et la mise en page de la page de connexion à votre guise. Toute personnalisation CSS **doit** être intégrée directement dans le code, car vous ne pouvez pas héberger de fichier CSS distinct dans votre tenant Auth0.
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Expérience Classic Login](/docs/fr-ca/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/classic-experience)

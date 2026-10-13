@@ -6,7 +6,7 @@ title: Déconnexion (B2B)
 La [déconnexion](/docs/fr-ca/authenticate/login/logout) consiste à mettre fin à une session authentifiée lorsqu’elle n’est plus nécessaire, ce qui réduit le risque que des parties non autorisées puissent « prendre le contrôle » de la session. On y parvient généralement en offrant une option de déconnexion dans l’interface utilisateur que vous mettez à la disposition de vos utilisateurs. Plusieurs types de sessions peuvent être créés lorsqu’un utilisateur se connecte (p. ex., des sessions d’application locales, une session Auth0, des sessions de <Tooltip tip="Fournisseur d’identité (IdP) : service qui stocke et gère les identités numériques." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Identity+Provider">fournisseur d’identité</Tooltip> tiers), et vous devrez déterminer lesquelles de ces sessions doivent être terminées lorsque l’utilisateur clique sur une option de **déconnexion**.
 
 <Info>
-  ### Bonne pratique
+  ### Bonne pratique {#best-practice}
 
   Le comportement de déconnexion doit permettre à l’utilisateur de comprendre clairement quelle(s) session(s) est/sont terminée(s) et, idéalement, afficher ensuite une confirmation visuelle de la déconnexion.
 </Info>
@@ -31,7 +31,7 @@ Les fonctionnalités offertes par votre application, ainsi que votre utilisation
 Dans certaines situations, on peut s’attendre à ce qu’un utilisateur soit déconnecté de toutes les applications associées lorsqu’il se déconnecte de l’une des applications que vous fournissez. Cela peut toutefois ajouter de la complexité. Cependant, si vous craignez que les utilisateurs se retrouvent en situation de vulnérabilité (en raison de la sensibilité des données, par exemple), vous devrez probablement examiner la [déconnexion unique](#single-logout) et la mettre en œuvre en conséquence.
 
 <div id="where-to-send-users-after-logout">
-  ## Où rediriger les utilisateurs après la déconnexion
+  ## Où rediriger les utilisateurs après la déconnexion {#where-to-send-users-after-logout}
 </div>
 
 Une fois votre utilisateur déconnecté, il sera redirigé vers l’emplacement précis de votre choix. Cet emplacement correspond à l’**URL de redirection de déconnexion**, que vous pouvez [définir comme paramètre](/docs/fr-ca/authenticate/login/logout/redirect-users-after-logout) dans le <Tooltip tip="Auth0 Dashboard : produit principal d’Auth0 pour configurer vos services." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip>.
@@ -43,13 +43,13 @@ Les URL utilisées pour rediriger les utilisateurs après leur déconnexion doiv
 </Callout>
 
 <div id="automatic-termination-of-sessions">
-  ## Expiration automatique des sessions
+  ## Expiration automatique des sessions {#automatic-termination-of-sessions}
 </div>
 
 Comme tous les utilisateurs ne déclenchent pas manuellement le processus de déconnexion, Auth0 propose aussi un **délai d’expiration de session** pour éviter que les sessions restent actives trop longtemps. Ce paramètre est [disponible et configurable dans l’Auth0 Dashboard](/docs/fr-ca/get-started/tenant-settings#login-session-management).
 
 <div id="single-logout">
-  ## Déconnexion unique
+  ## Déconnexion unique {#single-logout}
 </div>
 
 Si vous mettez en place la [Déconnexion fédérée](#federated-logout), vous voudrez probablement aussi mettre en place la déconnexion unique (SLO). Il existe deux grandes approches possibles.
@@ -59,11 +59,11 @@ Si vous mettez en place la [Déconnexion fédérée](#federated-logout), vous vo
 </Warning>
 
 <div id="short-lived-tokens">
-  ### Jetons à courte durée de vie
+  ### Jetons à courte durée de vie {#short-lived-tokens}
 </div>
 
 <Info>
-  ### Bonne pratique
+  ### Bonne pratique {#best-practice-2}
 
   Vous devez éviter d’effectuer trop de requêtes vers votre tenant Auth0 afin d’éviter la limitation du nombre de requêtes et les mauvaises performances. Une bonne pratique consiste à ne demander de nouveaux jetons que lorsqu’ils ont expiré et qu’un utilisateur effectue une action. Cela évite que des applications simplement ouvertes, mais non utilisées, sondent continuellement le système pour obtenir de nouveaux jetons.
 </Info>
@@ -75,7 +75,7 @@ C’est de loin l’approche la plus simple pour la déconnexion unique. Chaque 
 </Warning>
 
 <div id="build-a-logout-service">
-  ### Créer un service de déconnexion
+  ### Créer un service de déconnexion {#build-a-logout-service}
 </div>
 
 Une autre technique consiste à créer un service de déconnexion capable de suivre et d’invalider les sessions d’application. Chaque application informerait le service de déconnexion lorsqu’elle crée ou supprime une session. Le service de déconnexion aurait soit un accès direct à toutes les sessions côté serveur des applications et les invaliderait lui-même, soit la capacité d’effectuer un appel back-channel à chaque application pour lui indiquer qu’elle doit supprimer sa session.
@@ -83,13 +83,13 @@ Une autre technique consiste à créer un service de déconnexion capable de sui
 Cette technique peut être très efficace, puisqu’il y a peu de latence entre le moment où un utilisateur lance la déconnexion et celui où il est déconnecté de toutes les applications. Toutefois, elle peut aussi ajouter de la complexité ainsi que du temps de développement supplémentaire pour la mise en œuvre. Elle exigera également un moyen de s’assurer que les nouvelles applications ajoutées au système sont bien ajoutées à ce service.
 
 <div id="federated-logout">
-  ## Déconnexion fédérée
+  ## Déconnexion fédérée {#federated-logout}
 </div>
 
 La [déconnexion des utilisateurs fédérés](/docs/fr-ca/authenticate/login/logout/log-users-out-of-idps) est peut-être un aspect à prendre en compte pour votre application. Si vous ou vos clients utilisez un IdP tiers (c.-à-d. autre chose qu’un [fournisseur d’identité de base de données](/docs/fr-ca/authenticate/database-connections)), vous devrez déterminer s’il faut aussi déconnecter l’utilisateur de l’IdP lorsqu’il se déconnecte de votre application. La réponse dépend des attentes de vos utilisateurs. Si l’application ou l’IdP que vous utilisez est étroitement lié à une organisation cliente et joue un rôle central dans les activités quotidiennes, il peut être frustrant pour les utilisateurs d’être déconnectés de leur IdP lorsqu’ils se déconnectent de votre application. Dans le cas contraire, le fait d’être déconnecté de l’IdP peut être normal, voire souhaitable dans certains cas. Dans la plupart des scénarios B2B, nos clients estiment qu’il est préférable de *ne pas* effectuer de déconnexion fédérée pour un utilisateur.
 
 <div id="project-planning-guide">
-  ## Guide de planification de projet
+  ## Guide de planification de projet {#project-planning-guide}
 </div>
 
 Nous mettons à votre disposition un guide de planification au format PDF, que vous pouvez télécharger et consulter pour en savoir plus sur les stratégies que nous recommandons.

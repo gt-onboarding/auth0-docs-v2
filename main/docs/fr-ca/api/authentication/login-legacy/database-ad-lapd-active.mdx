@@ -6,7 +6,7 @@ description: "Point de terminaison d’authentification active obsolète pour le
 import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `POST /oauth/ro`
@@ -18,7 +18,7 @@ import { ResponseSchema } from '/snippets/fr-ca/ResponseSchema.jsx';
 Utilisez ce point de terminaison pour l’authentification active par API. À partir des identifiants de l’utilisateur et de la `connection` indiquée, il effectuera l’authentification auprès du fournisseur et renverra un objet JSON contenant le jeton d’accès et le jeton d’ID.
 
 <div id="remarks">
-  ### Remarques
+  ### Remarques {#remarks}
 </div>
 
 * Ce point de terminaison fonctionne uniquement avec les connexions de base de données, les connexions sans mot de passe, Active Directory/LDAP, Windows Azure AD et ADFS.
@@ -28,7 +28,7 @@ Utilisez ce point de terminaison pour l’authentification active par API. À pa
 * L’exemple de script auth0.js utilise la version 8 de la bibliothèque. Si vous utilisez la version 7 d’auth0.js, veuillez consulter ce [guide de référence](https://auth0.com/docs/libraries/auth0js/v7).
 
 <div id="learn-more">
-  ### Pour en savoir plus
+  ### Pour en savoir plus {#learn-more}
 </div>
 
 * [Fournisseurs d’identité de base de données](https://auth0.com/docs/authenticate/database-connections)
@@ -36,7 +36,7 @@ Utilisez ce point de terminaison pour l’authentification active par API. À pa
 * [Connecteur Active Directory/LDAP](https://auth0.com/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector)
 
 <div id="body-parameters">
-  ## Paramètres du corps
+  ## Paramètres du corps {#body-parameters}
 </div>
 
 <ParamField body="client_id" type="string" required>
@@ -72,7 +72,7 @@ Utilisez ce point de terminaison pour l’authentification active par API. À pa
 </ParamField>
 
 <div id="response-schema">
-  ## Schéma de réponse
+  ## Schéma de réponse {#response-schema}
 </div>
 
 <ResponseSchema statusCode="200">
@@ -100,7 +100,7 @@ Utilisez ce point de terminaison pour l’authentification active par API. À pa
 </ResponseSchema>
 
 <div id="response-messages">
-  ## Messages de réponse
+  ## Messages de réponse {#response-messages}
 </div>
 
 | Statut | Description                        |

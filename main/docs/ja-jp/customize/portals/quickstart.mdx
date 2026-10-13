@@ -15,14 +15,14 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 * [Auth0 Dashboard](/docs/ja-jp/get-started/auth0-overview/dashboard#auth0-dashboard) を使用して、手順に沿ってアプリケーションとポータルを作成する。
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 * Universal Portals ベータ版へのアクセスがプロビジョニングされている [Development](/docs/ja-jp/get-started/tenant-settings#environment-tag) Auth0 テナント。
 
 <Tabs>
   <Tab title="Auth0 CLI">
-    ## ステップ1: Auth0 CLI Beta をインストールする
+## ステップ1: Auth0 CLI Beta をインストールする {#step-1-install-the-auth0-cli-beta}
 
     お使いのプラットフォーム用の[インストール手順](https://github.com/auth0/auth0-cli/#linux-and-macos-1)に従ってインストールし、tenantで認証します。
 
@@ -30,7 +30,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
     auth0-beta login
     ```
 
-    ## ステップ2：設定コマンドを実行する
+## ステップ2：設定コマンドを実行する {#step-2-run-the-setup-command}
 
     ```bash
     auth0-beta universal-portals setup
@@ -48,13 +48,13 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
   </Tab>
 
   <Tab title="Auth0 Agent Skills">
-    ## ステップ 1: Auth0 Agent Skills をインストールする
+## ステップ 1: Auth0 Agent Skills をインストールする {#step-1-install-auth0-agent-skills}
 
     ```bash
     npx skills add auth0/agent-skills
     ```
 
-    ## ステップ2：AI agent に Universal Portals の設定を依頼する
+## ステップ2：AI agent に Universal Portals の設定を依頼する {#step-2-ask-your-ai-agent-to-configure-universal-portals}
 
     ```bash
     Auth0 テナントで Universal Portals を設定する
@@ -74,13 +74,13 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
   </Tab>
 
   <Tab title="Auth0 Dashboard">
-    ## ステップ1: 従来型Webアプリケーションを作成する
+## ステップ1: 従来型Webアプリケーションを作成する {#step-1-create-a-regular-web-application}
 
     1. [**Auth0 Dashboard &gt; アプリケーション &gt; アプリケーション**](https://manage.auth0.com/#/applications)に移動し、**Create Application** を選択します。
     2. **従来型Webアプリケーション** を選択し、名前を付けます。
     3. **Create** を選択します。
 
-    ## ステップ2: アプリケーションを設定する
+## ステップ2: アプリケーションを設定する {#step-2-configure-the-application}
 
     アプリケーションの **設定** タブで、次の操作を行います。
 
@@ -94,7 +94,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     3. **変更を保存** を選択します。
 
-    ## ステップ3: API アクセスを設定する
+## ステップ3: API アクセスを設定する {#step-3-configure-api-access}
 
     アプリケーションの **API Access** タブで、次の API とそのスコープを有効にします。
 
@@ -125,13 +125,13 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     各 API を有効にした後、**Save** を選択します。
 
-    ## ステップ4: Multi-Resource Refresh Token を有効にする
+## ステップ4: Multi-Resource Refresh Token を有効にする {#step-4-enable-multi-resource-refresh-token}
 
     **設定** タブに戻り、**Multi-Resource Refresh Token** までスクロールします。ステップ3で設定したユーザー委譲 API とスコープ (My Account API および My Organization API) に対して有効にします。
 
     **変更を保存** を選択します。
 
-    ## ステップ5: ポータルを作成する
+## ステップ5: ポータルを作成する {#step-5-create-a-portal}
 
     1. Auth0 Dashboard のサイドバーから **Portals** を選択します。
 
@@ -147,20 +147,20 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 
     ステップ2でコールバック URL とログアウト URL をまだ設定していない場合は、ポータル設定からコピーしてアプリケーションに設定します。
 
-    ## ステップ6: ページを作成する
+## ステップ6: ページを作成する {#step-6-build-a-page}
 
     ポータルの作成後、ビジュアルエディターが開きます。左側のパネルからコンポーネントをキャンバスにドラッグして、ページを構成します。
 
     <Frame>![Universal Portals ビジュアルエディター](/docs/images/customize/portals/portal-editor.png)</Frame>
 
-    ## ステップ7: プレビューして公開する
+## ステップ7: プレビューして公開する {#step-7-preview-and-publish}
 
     **Preview** を選択すると、新しいタブでポータルが開きます。準備ができたら、**Publish** を選択します。
   </Tab>
 </Tabs>
 
 <div id="learn-more">
-  ## 詳細情報
+  ## 詳細情報 {#learn-more}
 </div>
 
 <Card title="Universal Portals の概要" icon="key" href="/docs/ja-jp/customize/portals/overview" horizontal>

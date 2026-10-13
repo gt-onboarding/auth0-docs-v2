@@ -16,7 +16,7 @@ Lorsque le courriel est activé comme facteur, tous les utilisateurs ayant des a
 </Card>
 
 <div id="prerequisites">
-  ## Prérequis
+  ## Prérequis {#prerequisites}
 </div>
 
 Avant de pouvoir utiliser les API MFA, vous devez activer le type d’autorisation MFA pour votre application. Accédez à [Auth0 Dashboard &gt; Applications &gt; Advanced Settings &gt; Grant Types](https://manage.auth0.com/#/applications) et sélectionnez **MFA**.
@@ -24,13 +24,13 @@ Avant de pouvoir utiliser les API MFA, vous devez activer le type d’autorisati
 * [Configurer Email](/docs/fr-ca/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-email-notifications-for-mfa) en tant que facteur dans le Dashboard ou à l’aide de la [Management API](https://auth0.com/docs/api/management/v2#!/Guardian/put_factors_by_name).
 
 <div id="enroll-with-email">
-  ## Inscription avec le courriel
+  ## Inscription avec le courriel {#enroll-with-email}
 </div>
 
 Pour permettre aux utilisateurs d’inscrire des adresses courriel en plus de leur adresse courriel vérifiée associée à leur identité principale, vous devez suivre les étapes suivantes.
 
 <div id="get-mfa-token">
-  ### Obtenir un jeton MFA
+  ### Obtenir un jeton MFA {#get-mfa-token}
 </div>
 
 Selon le moment où vous lancez l’inscription, vous pouvez obtenir un <Tooltip tip="Identifiant d’autorisation, sous la forme d’une chaîne opaque ou d’un JWT, utilisé pour accéder à une API." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=access+token">jeton d’accès</Tooltip> pour utiliser l’API MFA de différentes façons :
@@ -39,7 +39,7 @@ Selon le moment où vous lancez l’inscription, vous pouvez obtenir un <Tooltip
 * Si vous voulez permettre à l’utilisateur d’inscrire un facteur à tout moment, consultez [Gérer l’inscription aux facteurs MFA](/docs/fr-ca/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authenticator-factors-mfa-api).
 
 <div id="enroll-authenticator">
-  ### Enregistrer l’authentificateur
+  ### Enregistrer l’authentificateur {#enroll-authenticator}
 </div>
 
 Envoyez une requête `POST` au point de terminaison MFA Associate pour enregistrer l’authentificateur de l’utilisateur. Le jeton porteur requis par ce point de terminaison est le jeton MFA obtenu à l’étape précédente.
@@ -219,7 +219,7 @@ Si vous obtenez l’erreur `User is already enrolled`, c’est que l’utilisate
 Si c’est la première fois que l’utilisateur associe un authentificateur, vous remarquerez que la réponse inclut `recovery_codes`. Les codes de récupération servent à accéder au compte de l’utilisateur s’il perd l’accès au compte ou à l’appareil utilisé pour son authentification à deux facteurs. Ces codes sont à usage unique, et de nouveaux codes sont générés au besoin.
 
 <div id="confirm-email-enrollment">
-  ### Confirmer l’inscription par courriel
+  ### Confirmer l’inscription par courriel {#confirm-email-enrollment}
 </div>
 
 L’utilisateur devrait recevoir un courriel contenant le code à 6 chiffres qu’il peut saisir dans l’application.
@@ -382,17 +382,17 @@ Vous pouvez en tout temps vérifier si un authentificateur a été confirmé en 
 Au besoin, vous pouvez personnaliser les courriels que les utilisateurs reçoivent. Consultez [Personnaliser les modèles de courriel](/docs/fr-ca/customize/email/email-templates) pour en savoir plus.
 
 <div id="challenge-with-email">
-  ## Vérification par courriel
+  ## Vérification par courriel {#challenge-with-email}
 </div>
 
 <div id="get-mfa-token">
-  ### Obtenir un jeton MFA
+  ### Obtenir un jeton MFA {#get-mfa-token-2}
 </div>
 
 Obtenez un jeton MFA en suivant la procédure décrite dans [S’authentifier avec Resource Owner Password Grant et MFA](/docs/fr-ca/secure/multi-factor-authentication/authenticate-using-ropg-flow-with-mfa).
 
 <div id="retrieve-enrolled-authenticators">
-  ### Récupérer les authentificateurs inscrits
+  ### Récupérer les authentificateurs inscrits {#retrieve-enrolled-authenticators}
 </div>
 
 Pour soumettre une vérification à l’utilisateur, vous avez besoin de l’`authenticator_id` du facteur que vous voulez utiliser. Vous pouvez lister tous les authentificateurs inscrits à l’aide du point de terminaison MFA Authenticators :
@@ -533,7 +533,7 @@ Pour soumettre une vérification à l’utilisateur, vous avez besoin de l’`au
 </AuthCodeGroup>
 
 <div id="challenge-user-with-otp">
-  ### Soumettre l’utilisateur à une vérification par OTP
+  ### Soumettre l’utilisateur à une vérification par OTP {#challenge-user-with-otp}
 </div>
 
 Pour déclencher une vérification par courriel, envoyez une requête `POST` au point de terminaison MFA Challenge en utilisant l’`authenticator_id` correspondant et le `mfa_token`.
@@ -670,7 +670,7 @@ Pour déclencher une vérification par courriel, envoyez une requête `POST` au 
 </AuthCodeGroup>
 
 <div id="complete-authentication-using-received-code">
-  ### Terminez l’authentification à l’aide du code reçu
+  ### Terminez l’authentification à l’aide du code reçu {#complete-authentication-using-received-code}
 </div>
 
 Si l’authentification réussit, vous recevez la réponse suivante :
@@ -847,7 +847,7 @@ Si la requête a réussi, vous recevrez une réponse au format ci-dessous conten
 ```
 
 <div id="customize-mfa">
-  ## Personnaliser la MFA
+  ## Personnaliser la MFA {#customize-mfa}
 </div>
 
 <Warning>
@@ -899,7 +899,7 @@ Forcez la vérification MFA en appelant le point de terminaison [`request/mfa/ch
 Personnalisez davantage votre flux MFA avec Auth0 Actions. Pour en savoir plus, consultez [Déclencheurs d’Actions : post-challenge - Objet API](/docs/fr-ca/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-api-object).
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Gérer les facteurs d’authentification avec l’Authentication API](/docs/fr-ca/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authenticator-factors-mfa-api)

@@ -29,7 +29,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 </Callout>
 
 <div id="the-experiment-context-shape">
-  ## 実験コンテキストの構造
+  ## 実験コンテキストの構造 {#the-experiment-context-shape}
 </div>
 
 画面でオプトインが有効になっており、実験が有効な場合は、`window.universal_login_context.experiment` から実験コンテキストにアクセスできます。
@@ -63,7 +63,7 @@ interface ExperimentContext {
 コントロールバリエーションの場合 (オーバーライドなし) 、`config.button_label.value` は `"Sign in"` です。
 
 <div id="read-a-parameter-value">
-  ## パラメータの値を取得する
+  ## パラメータの値を取得する {#read-a-parameter-value}
 </div>
 
 `config[paramName].value` を使ってパラメータの値にアクセスできます。
@@ -76,7 +76,7 @@ const label = experiment?.config?.button_label?.value;
 一貫してオプショナルチェーン (`?.`) を使用してください。有効な `experiment` がない場合、`experiment` prop は `undefined` になります。
 
 <div id="use-is_control">
-  ## `is_control` の使用
+  ## `is_control` の使用 {#use-is_control}
 </div>
 
 ユーザーがコントロールグループに属している場合、パラメータ `is_control` は `true` になります (ベースラインが配信され、オーバーライドは適用されません) 。変更のない体験をどのユーザーが見たかを追跡したい場合や、コントロールユーザーに対する任意の処理をスキップしたい場合に使用します。
@@ -92,7 +92,7 @@ if (!experiment?.is_control) {
 パラメータに基づくチェックのほうが読みやすく、将来の実験でどのバリエーションを統計上の対照群にするかを変更しても正しく機能します。
 
 <div id="example-copy-variant-experiment">
-  ## 例：ボタン文言のバリエーション実験
+  ## 例：ボタン文言のバリエーション実験 {#example-copy-variant-experiment}
 </div>
 
 この例では、ボタンの文言を変更する2つのバリエーションを持つ機能フラグを示します。コントロールでは標準のラベルを使用し、トリートメントでは別のラベルを使用します。
@@ -152,7 +152,7 @@ const buttonLabel = experiment
 ```
 
 <div id="example-boolean-feature-rollout">
-  ## 例: ブール値による機能の段階的ロールアウト
+  ## 例: ブール値による機能の段階的ロールアウト {#example-boolean-feature-rollout}
 </div>
 
 この例では、ブール値のパラメータを使って、新しいUI要素を条件付きで表示します。
@@ -181,7 +181,7 @@ export default function PostLoginScreen({...props }) {
 `=== true` でチェックしているのは (truthy チェックではなく) 意図的です。これにより、`experiment` が `undefined` の場合や `config` が存在しない場合ではなく、パラメータが明示的に `true` のときにのみバナーが表示されます。
 
 <div id="troubleshoot">
-  ## トラブルシュート
+  ## トラブルシュート {#troubleshoot}
 </div>
 
 `experiment` プロパティが `undefined` になるのは、次の 3 つの状況です。

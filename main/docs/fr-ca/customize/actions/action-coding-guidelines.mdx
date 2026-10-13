@@ -6,7 +6,7 @@ title: Directives de codage pour les Actions
 Suivez les directives ci-dessous pour rédiger du code Actions performant, sécurisé et clair, afin d’assurer un environnement de production fluide.
 
 <div id="actions-basics">
-  ## Principes de base des Actions
+  ## Principes de base des Actions {#actions-basics}
 </div>
 
 * Utilisez le moins de requêtes HTTP possible et définissez un délai d’expiration raisonnable (moins de 10 secondes) afin d’éviter l’accumulation de requêtes pendant la connexion.
@@ -31,7 +31,7 @@ Suivez les directives ci-dessous pour rédiger du code Actions performant, sécu
 </Warning>
 
 <div id="actions-modules">
-  ## Actions Modules
+  ## Actions Modules {#actions-modules}
 </div>
 
 * Utilisez Actions Modules lorsqu’il faut réutiliser des fonctions dans différentes Actions afin d’éviter la redondance du code.
@@ -44,7 +44,7 @@ Suivez les directives ci-dessous pour rédiger du code Actions performant, sécu
 </Callout>
 
 <div id="coding-basics">
-  ## Principes de base du codage
+  ## Principes de base du codage {#coding-basics}
 </div>
 
 * Vérifiez l’égalité stricte `===` pour toutes les données entrantes ou stockées.
@@ -52,7 +52,7 @@ Suivez les directives ci-dessous pour rédiger du code Actions performant, sécu
 * Exécutez un linter, comme [ESLint](https://eslint.org), et un analyseur, comme [Semgrep](https://semgrep.dev/docs/getting-started/), pour améliorer la qualité du code et repérer automatiquement les problèmes.
 
 <div id="security-basics">
-  ## Principes de base de la sécurité
+  ## Principes de base de la sécurité {#security-basics}
 </div>
 
 * N’écrivez pas de secrets ni d’artefacts de code sensibles en texte brut dans votre code Actions. Utilisez plutôt le [Secrets Manager](/docs/fr-ca/customize/actions/write-your-first-action#add-a-secret) ou votre propre gestionnaire en l’intégrant au code Actions.
@@ -62,21 +62,21 @@ Suivez les directives ci-dessous pour rédiger du code Actions performant, sécu
 * Soyez attentif aux données entrantes qui peuvent être falsifiées (paramètres d’URL, agent utilisateur, etc.).
 
 <div id="defensive-coding">
-  ## Programmation défensive
+  ## Programmation défensive {#defensive-coding}
 </div>
 
 * [Interceptez les erreurs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements) et gérez-les au besoin.
 * Utilisez des clauses de garde et prévoyez un retour immédiat si le traitement de l’Action ne doit pas se poursuivre.
 
 <div id="logging">
-  ## Journalisation
+  ## Journalisation {#logging}
 </div>
 
 * Ne consignez jamais de données sensibles, de secrets ni de PII.
 * Limitez-vous à un maximum de 256 caractères consignés par Action.
 
 <div id="dependencies">
-  ## Dépendances
+  ## Dépendances {#dependencies}
 </div>
 
 * Utilisez des paquets de confiance et bien maintenus.
@@ -84,14 +84,14 @@ Suivez les directives ci-dessous pour rédiger du code Actions performant, sécu
 * Utilisez la version la plus récente d’un paquet, si possible.
 
 <div id="user-data">
-  ## Données utilisateur
+  ## Données utilisateur {#user-data}
 </div>
 
 * Vérifiez si une adresse courriel est vérifiée avec `event.user.email_verified` lorsqu’elle est utilisée dans un contexte sensible ou de haute sécurité.
 * Les différentes connexions fournissent des données de profil utilisateur différentes; le seul [champ du profil utilisateur](/docs/fr-ca/manage-users/user-accounts/user-profiles/user-profile-structure) garanti est `user_id`.
 
 <div id="redirect-actions-in-the-login-flow">
-  ## Redirect Actions dans le flux de connexion
+  ## Redirect Actions dans le flux de connexion {#redirect-actions-in-the-login-flow}
 </div>
 
 * Le jeton renvoyé par `api.redirect.encodeToken` est signé, mais non chiffré; les données sensibles ou les PII ne doivent donc pas être incluses dans le payload.

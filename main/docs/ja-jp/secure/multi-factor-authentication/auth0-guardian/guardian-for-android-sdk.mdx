@@ -8,7 +8,7 @@ title: Guardian for Android SDK
 Guardian for Android SDK を使用するには、Android API level 15 以降が必要です。
 
 <div id="install-guardian-android-sdk">
-  ## Guardian Android SDK をインストール
+  ## Guardian Android SDK をインストール {#install-guardian-android-sdk}
 </div>
 
 Guardian は [Maven Central](http://search.maven.org/) と [JCenter](https://bintray.com/auth0/android/guardian) の両方で利用できます。
@@ -19,7 +19,7 @@ Guardian は [Maven Central](http://search.maven.org/) と [JCenter](https://bin
 2. Gradle の依存関係を追加したら、必ずプロジェクトを Gradle ファイルと同期してください。
 
 <div id="enable-guardian-push-notifications">
-  ### Guardianのプッシュ通知を有効にする
+  ### Guardianのプッシュ通知を有効にする {#enable-guardian-push-notifications}
 </div>
 
 1. [Auth0 Dashboard &gt; Security &gt; Multi-factor Auth &gt; Push via Auth0 Guardian](https://manage.auth0.com/#/security/mfa/guardian) に移動します。
@@ -30,7 +30,7 @@ Guardian は [Maven Central](http://search.maven.org/) と [JCenter](https://bin
 3. [プッシュ通知を設定する](/docs/ja-jp/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-push-notifications-for-mfa#configure-push-notifications-for-android-using-fcm)。
 
 <div id="use-sdk">
-  ## SDK を使う
+  ## SDK を使う {#use-sdk}
 </div>
 
 Guardian は SDK の中核となるクラスです。ご利用のテナント URL に対応するこのクラスのインスタンスを作成する必要があります。
@@ -54,7 +54,7 @@ Guardian guardian = new Guardian.Builder()
 ```
 
 <div id="enroll">
-  ### 登録
+  ### 登録 {#enroll}
 </div>
 
 第2の認証要素 (デバイス上のアプリのインスタンス) と Auth0 アカウントの紐付けは、**登録**と呼ばれます。
@@ -105,7 +105,7 @@ guardian
 | `fcmToken`   | Firebase Cloud Messaging (FCM) のプッシュ通知サービス用トークン。詳細は [Sample Register](https://firebase.google.com/docs/cloud-messaging/android/client#sample-register) を参照してください。 |
 
 <div id="unenroll">
-  ### 登録解除
+  ### 登録解除 {#unenroll}
 </div>
 
 MFA を無効にするには、登録を削除します。
@@ -117,7 +117,7 @@ guardian
 ```
 
 <div id="allow-login-requests">
-  ### ログインリクエストを承認する
+  ### ログインリクエストを承認する {#allow-login-requests}
 </div>
 
 登録が完了すると、ユーザーに多要素認証が必要になるたびに、FCM のプッシュ通知が届きます。
@@ -148,7 +148,7 @@ guardian
 ```
 
 <div id="reject-login-requests">
-  ### ログインリクエストを拒否する
+  ### ログインリクエストを拒否する {#reject-login-requests}
 </div>
 
 認証リクエストを拒否するには、代わりに`reject`を使用します。拒否の理由を任意で追加することもでき、その理由はGuardianのログで確認できます。
@@ -160,7 +160,7 @@ guardian
 ```
 
 <div id="set-up-mobile-only-otp-enrollment">
-  ### モバイル専用のOTP登録を設定する
+  ### モバイル専用のOTP登録を設定する {#set-up-mobile-only-otp-enrollment}
 </div>
 
 <Tooltip tip="Auth0 Dashboard: サービスを設定するための Auth0 の主要製品。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip> または <Tooltip tip="Management API: お客様が管理タスクを実行できるようにする製品。" cta="用語集を見る" href="/docs/ja-jp/glossary?term=Management+API">Management API</Tooltip> を使用して、ワンタイムパスワード (OTP) をMFAの認証要素として有効にできます。このオプションではQRコードは不要で、ユーザーは手動で登録できます。
@@ -168,13 +168,13 @@ guardian
 ユーザーを登録に招待するには、[Auth0 Dashboard &gt; User Management &gt; Users](https://manage.auth0.com/#/users) に移動してユーザーを選択します。次に、そのユーザーの Details タブを開き、Multi-Factor Authentication セクションから登録招待を送信します。
 
 <div id="connect-a-resource">
-  #### リソースを接続する
+  #### リソースを接続する {#connect-a-resource}
 </div>
 
 Auth0 Dashboard または Guardian SDK を使用して、リソースを接続できます。
 
 <div id="use-auth0-dashboard">
-  ##### Auth0 Dashboard を使用する
+  ##### Auth0 Dashboard を使用する {#use-auth0-dashboard}
 </div>
 
 1. Auth0 のログイン画面にアクセスし、表示されたコード、または別のソースから取得した同様のBase32エンコード済みキーをコピーします。
@@ -191,7 +191,7 @@ Auth0 Dashboard または Guardian SDK を使用して、リソースを接続�
 `val copiedCode: String = "{copiedCode}"`
 
 <div id="use-guardian-sdk">
-  ##### Guardian SDK を使用する
+  ##### Guardian SDK を使用する {#use-guardian-sdk}
 </div>
 
 まず、`LoginCodeGenerator` クラスをプロジェクトに追加します。次に、アプリで `getCode (String copiedCode) to` を使用してワンタイムコードを生成します。
@@ -269,7 +269,7 @@ class LoginCodeGenerator {
 ```
 
 <div id="enter-one-time-code">
-  #### ワンタイムコードを入力
+  #### ワンタイムコードを入力 {#enter-one-time-code}
 </div>
 
 `getCode()` で生成されたワンタイムパスワードを Auth0 のログイン画面に入力します。
@@ -279,7 +279,7 @@ class LoginCodeGenerator {
 Continue を選択すると、アプリケーションがそのユーザーの認証要素として追加されたことを示すメッセージが表示されます。
 
 <div id="log-in-with-your-app">
-  #### アプリを使ってログインする
+  #### アプリを使ってログインする {#log-in-with-your-app}
 </div>
 
 認証要素の登録が完了すると、ユーザーはアプリを使ってログインできます。まず、認証方法として Guardian アプリを選択します。
@@ -293,7 +293,7 @@ Continue を選択すると、アプリケーションがそのユーザーの�
 <Frame>![ユーザーにワンタイムコードの入力を求める本人確認画面](/docs/images/cdy7uua7fh8z/S6uTieLjtuNUrQRMh8uch/21f1671d21ae9f61b63154ffaa21b5a2/OTP_Challenge_-_English.png)</Frame>
 
 <div id="learn-more">
-  ## 詳細
+  ## 詳細 {#learn-more}
 </div>
 
 * [MFA のプッシュ通知を設定する](/docs/ja-jp/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-push-notifications-for-mfa)

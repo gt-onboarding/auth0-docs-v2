@@ -13,7 +13,7 @@ Auth0 の [Universal Components for Web](https://github.com/auth0/auth0-ui-compo
 Universal Components for Web は [Auth0 SDK](/docs/ja-jp/libraries) を基盤としており、[My Organization API](/docs/ja-jp/api/myorganization) と統合することで、Organizations、ドメイン、SSO プロバイダーの管理など、埋め込み型の Delegated Administration を実現します。
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 Web 向け Auth0 Universal Components を使用するには、次の条件を満たす必要があります。
@@ -25,7 +25,7 @@ Web 向け Auth0 Universal Components を使用するには、次の条件を満
 
 <Tabs>
   <Tab title="React">
-    ## Universal Components をインストールする
+## Universal Components をインストールする {#install-universal-components}
 
     <CodeGroup>
       ```bash npm  wrap lines
@@ -41,7 +41,7 @@ Web 向け Auth0 Universal Components を使用するには、次の条件を満
       </Callout>
     </CodeGroup>
 
-    ## アプリケーションを設定する
+## アプリケーションを設定する {#configure-your-application}
 
     1. アプリケーションを `Auth0Provider` と `Auth0ComponentProvider` でラップします。
 
@@ -90,7 +90,7 @@ Web 向け Auth0 Universal Components を使用するには、次の条件を満
     }
     ```
 
-    ## Universal Components の設定
+## Universal Components の設定 {#configure-universal-components}
 
     `Auth0ComponentProvider` は、すべてのコンポーネントの認証、キャッシュ、国際化、トースト通知を管理します。
 
@@ -104,7 +104,7 @@ Web 向け Auth0 Universal Components を使用するには、次の条件を満
     </Auth0ComponentProvider>
     ```
 
-    ## スタイルコンポーネント
+## スタイルコンポーネント {#style-components}
 
     <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
       インポートしたスタイルシート (`@auth0/universal-components-react/styles`) により、
@@ -125,7 +125,7 @@ Web 向け Auth0 Universal Components を使用するには、次の条件を満
   </Tab>
 
   <Tab title="Next.js">
-    ## Universal Components をインストールする
+## Universal Components をインストールする {#install-universal-components-2}
 
     <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
       `@auth0/auth0-react` は不要です。Next.js の実装では、サーバーサイド認証を使用する proxy
@@ -142,7 +142,7 @@ Web 向け Auth0 Universal Components を使用するには、次の条件を満
       ```
     </CodeGroup>
 
-    ## アプリケーションを設定する
+## アプリケーションを設定する {#configure-your-application-2}
 
     1. アプリケーションを `Auth0Provider` と `Auth0ComponentProvider` でラップします。
 
@@ -183,7 +183,7 @@ Web 向け Auth0 Universal Components を使用するには、次の条件を満
     }
     ```
 
-    ## Universal Components を設定する
+## Universal Components を設定する {#configure-universal-components-2}
 
     `Auth0ComponentProvider` は、すべてのコンポーネントの認証、キャッシュ、国際化、トースト通知を管理します。Next.js では、サーバーサイドで認証を行うためにプロキシモードを使用します。
 
@@ -199,7 +199,7 @@ Web 向け Auth0 Universal Components を使用するには、次の条件を満
     </Auth0ComponentProvider>
     ```
 
-    ## スタイルコンポーネント
+## スタイルコンポーネント {#style-components-2}
 
     <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
       インポートしたスタイルシート (`@auth0/universal-components-react/styles`) によって、
@@ -220,7 +220,7 @@ Web 向け Auth0 Universal Components を使用するには、次の条件を満
   </Tab>
 
   <Tab title="shadcn">
-    ## Universal Components をインストールする
+## Universal Components をインストールする {#install-universal-components-3}
 
     Universal Components では `@/...` インポートを使用します。まず、パスエイリアスとプロジェクトの依存関係を設定します。
 
@@ -239,7 +239,7 @@ Web 向け Auth0 Universal Components を使用するには、次の条件を満
       連携に必要な依存関係 `@auth0/universal-components-core` をインストールします。
     </Callout>
 
-    ## アプリケーションを設定する
+## アプリケーションを設定する {#configure-your-application-3}
 
     1. アプリケーションを `Auth0Provider` と `Auth0ComponentProvider` でラップします。
 
@@ -281,7 +281,7 @@ Web 向け Auth0 Universal Components を使用するには、次の条件を満
     }
     ```
 
-    ## Universal Components を設定する
+## Universal Components を設定する {#configure-universal-components-3}
 
     `Auth0ComponentProvider` は、すべてのコンポーネントにおける認証、キャッシュ、国際化、トースト通知を管理します。
 
@@ -295,7 +295,7 @@ Web 向け Auth0 Universal Components を使用するには、次の条件を満
     </Auth0ComponentProvider>
     ```
 
-    ## スタイルコンポーネント
+## スタイルコンポーネント {#style-components-3}
 
     <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
       Shadcn 用のスタイルは、すでに Tailwind のビルドに含まれています。追加の
@@ -316,7 +316,7 @@ Web 向け Auth0 Universal Components を使用するには、次の条件を満
 </Tabs>
 
 <div id="example-implementations">
-  ## 実装例
+  ## 実装例 {#example-implementations}
 </div>
 
 サンプルアプリケーションで、動作する完全な実装例をご覧ください。
@@ -336,7 +336,7 @@ Web 向け Auth0 Universal Components を使用するには、次の条件を満
 </CardGroup>
 
 <div id="next-steps">
-  ## 次のステップ
+  ## 次のステップ {#next-steps}
 </div>
 
 <CardGroup cols={2}>

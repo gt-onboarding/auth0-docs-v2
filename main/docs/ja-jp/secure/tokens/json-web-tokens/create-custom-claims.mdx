@@ -12,7 +12,7 @@ JWTでカスタムクレームを設定する際は、名前の衝突を避け�
 </Callout>
 
 <div id="general-restrictions">
-  ## 一般的な制限
+  ## 一般的な制限 {#general-restrictions}
 </div>
 
 Auth0 では、カスタムクレームに次の制限が適用されます。
@@ -86,7 +86,7 @@ Auth0 では、カスタムクレームに次の制限が適用されます。
 * `x5t#S256`
 
 <div id="non-restricted-claims">
-  ### 制限対象外のクレーム
+  ### 制限対象外のクレーム {#non-restricted-claims}
 </div>
 
 機微なユーザー情報に関するクレームを作成することで、ユーザープロファイルを充実させ、ユーザーエクスペリエンスを向上させることができます。これらのクレームは、アプリケーションで IDトークンから利用されます。制限対象外のクレームの使用方法について詳しくは、[IDトークン](/docs/ja-jp/secure/tokens/id-tokens)を参照してください。使用する際は、[トークンのベストプラクティス](/docs/ja-jp/secure/tokens/token-best-practices)も確認してください。
@@ -114,7 +114,7 @@ Auth0 では、カスタムクレームに次の制限が適用されます。
 * `zoneinfo`
 
 <div id="namespaced-guidelines">
-  ## 名前空間付きガイドライン
+  ## 名前空間付きガイドライン {#namespaced-guidelines}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -138,7 +138,7 @@ Auth0 では、カスタムクレームに次の制限が適用されます。
 `http://www.example.com/favorite_color`
 
 <div id="non-namespaced-guidelines">
-  ## 非名前空間クレームのガイドライン
+  ## 非名前空間クレームのガイドライン {#non-namespaced-guidelines}
 </div>
 
 非名前空間のカスタムクレームについては、次のガイドラインに従ってください。
@@ -151,13 +151,13 @@ Auth0 では、カスタムクレームに次の制限が適用されます。
 トークンに追加するカスタムクレームの例については、[スコープとクレームのユースケース例](/docs/ja-jp/get-started/apis/scopes/sample-use-cases-scopes-and-claims) を参照してください。
 
 <div id="create-custom-claims">
-  ## カスタムクレームを作成する
+  ## カスタムクレームを作成する {#create-custom-claims}
 </div>
 
 Auth0 Actions を使用してカスタムクレームを作成します。`api` オブジェクトでは、アクセストークンまたは ID トークンに対して `setCustomClaim` メソッドを使用できます。
 
 <div id="example">
-  ### 例
+  ### 例 {#example}
 </div>
 
 ```js lines
@@ -167,7 +167,7 @@ exports.onExecuteCredentialsExchange = async (event, api) => {
 ```
 
 <div id="learn-more">
-  ## 詳細
+  ## 詳細 {#learn-more}
 </div>
 
 * [JSON Web Token のクレーム](/docs/ja-jp/secure/tokens/json-web-tokens/json-web-token-claims)

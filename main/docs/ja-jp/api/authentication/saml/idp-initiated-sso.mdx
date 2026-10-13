@@ -4,7 +4,7 @@ description: "IdP 主導の SAMLResponse を受け取り、SAML シングルサ�
 ---
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `POST /login/callback`
@@ -12,13 +12,13 @@ description: "IdP 主導の SAMLResponse を受け取り、SAML シングルサ�
 このエンドポイントは、SAML アイデンティティプロバイダー から送信される IdP-Initiated Sign On の SAMLResponse を受け付けます。アイデンティティプロバイダー に対応する接続は、クエリ文字列で指定します。ユーザーは、SAML Provider の IdP-Initiated Sign On セクションで指定されたアプリケーションにリダイレクトされます。
 
 <div id="learn-more">
-  ### 詳細
+  ### 詳細 {#learn-more}
 </div>
 
 * [SAML](https://auth0.com/docs/authenticate/protocols/saml/saml-configuration)
 
 <div id="body-parameters">
-  ## リクエスト本文のパラメータ
+  ## リクエスト本文のパラメータ {#body-parameters}
 </div>
 
 <ParamField body="connection" type="string" required>

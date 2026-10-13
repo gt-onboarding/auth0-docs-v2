@@ -34,7 +34,7 @@ import {HowToSchema} from "/snippets/ja-jp/HowToSchema.jsx";
 このガイドでは、`Auth0.OidcClient.MAUI` バージョン **1.x** を使用します。
 
 <Note>
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 
   * **.NET 8 または .NET 9 SDK** がインストールされていること ([ダウンロード](https://dotnet.microsoft.com/download))
   * **.NET MAUI ワークロード** がインストールされていること
@@ -56,7 +56,7 @@ dotnet workload install maui
 ```
 
 <div id="get-started">
-  ## はじめに
+  ## はじめに {#get-started}
 </div>
 
 <Steps>
@@ -402,7 +402,7 @@ dotnet workload install maui
 ***
 
 <div id="troubleshooting">
-  ## トラブルシューティング
+  ## トラブルシューティング {#troubleshooting}
 </div>
 
 <AccordionGroup>
@@ -453,7 +453,7 @@ dotnet workload install maui
 ***
 
 <div id="next-steps">
-  ## 次のステップ
+  ## 次のステップ {#next-steps}
 </div>
 
 これで、.NET MAUI アプリで動作する Auth0 連携ができました。実装をさらに拡張するには、次のトピックを確認してください。
@@ -461,7 +461,7 @@ dotnet workload install maui
 <Accordion title="リフレッシュトークン">
   Auth0 MAUI SDK はリフレッシュトークンをサポートしており、ユーザーに再入力を求めることなくセッションを自動更新できます。
 
-  ### リフレッシュトークンを有効にする
+  ### リフレッシュトークンを有効にする {#enable-refresh-tokens}
 
   `Scope` プロパティに `offline_access` を追加します。
 
@@ -476,7 +476,7 @@ dotnet workload install maui
   }));
   ```
 
-  ### リフレッシュトークンを使用する
+  ### リフレッシュトークンを使用する {#use-refresh-tokens}
 
   ログイン後にリフレッシュトークンを保存し、それを使ってセッションを自動更新します。
 
@@ -556,7 +556,7 @@ dotnet workload install maui
 ***
 
 <div id="additional-resources">
-  ## 追加リソース
+  ## 追加リソース {#additional-resources}
 </div>
 
 <CardGroup cols={3}>

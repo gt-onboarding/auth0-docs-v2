@@ -4,7 +4,7 @@ description: "Demandez une vérification par clé d’accès pour permettre aux 
 ---
 
 <div id="endpoint">
-  ## Point de terminaison
+  ## Point de terminaison {#endpoint}
 </div>
 
 `POST /passkey/challenge`
@@ -14,7 +14,7 @@ Demandez un défi de clé d’accès afin qu’un utilisateur puisse s’authent
 Ce point de terminaison prend en charge les API Passkey pour les applications natives et Web. Utilisez-le avec le type d’autorisation Auth0 d’[échange de jetons pour les clés d’accès](https://auth0.com/docs/authenticate/database-connections/passkeys).
 
 <div id="remarks">
-  ### Remarques
+  ### Remarques {#remarks}
 </div>
 
 * Les [types d’autorisation](/docs/fr-ca/get-started/applications/application-settings#grant-types) de l’application doivent inclure : `urn:okta:params:oauth:grant-type:webauthn`.
@@ -23,7 +23,7 @@ Ce point de terminaison prend en charge les API Passkey pour les applications na
 * La requête doit être effectuée sur un [domaine personnalisé](https://auth0.com/docs/customize/custom-domains) configuré pour votre tenant. Les appels au domaine Auth0 par défaut (`{tenant}.auth0.com`) sont rejetés.
 
 <div id="request-body">
-  ## Corps de la requête
+  ## Corps de la requête {#request-body}
 </div>
 
 <ParamField body="client_id" type="string" required>
@@ -43,7 +43,7 @@ Ce point de terminaison prend en charge les API Passkey pour les applications na
 </ParamField>
 
 <div id="response">
-  ## Réponse
+  ## Réponse {#response}
 </div>
 
 Une réponse réussie contient les paramètres WebAuthn que votre application transmet à l’authentificateur de plateforme, ainsi qu’une valeur `auth_session` qui associe l’assertion suivante à ce défi.

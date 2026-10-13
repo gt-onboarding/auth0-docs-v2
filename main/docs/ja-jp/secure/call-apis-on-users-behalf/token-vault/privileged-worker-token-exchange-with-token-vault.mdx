@@ -16,7 +16,7 @@ Token Vault は Privileged Worker Token Exchange をサポートしており、�
 Token Vault で Privileged Worker Token Exchange を使用するには、クライアントアプリケーションが高い特権を持つクライアントであり、Token Vault を介して外部プロバイダーからアクセス トークンを要求できる必要があります。また、[Private Key JWT](/docs/ja-jp/get-started/authentication-and-authorization-flow/authenticate-with-private-key-jwt) アサーションや [相互 TLS 認証](/docs/ja-jp/get-started/authentication-and-authorization-flow/authenticate-with-mtls) などの非対称暗号方式を使用して Token Vault に対して認証する必要があります。
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 Token Vault で Privileged Worker Token Exchange を使用できるのは、特定の種類のクライアントに限られます。
@@ -31,7 +31,7 @@ Token Vault で Privileged Worker Token Exchange を使用できるのは、特�
 2. クライアント アプリケーションに [Private Key JWT](/docs/ja-jp/get-started/authentication-and-authorization-flow/authenticate-with-private-key-jwt) または [相互 TLS 認証](/docs/ja-jp/get-started/authentication-and-authorization-flow/authenticate-with-mtls) を設定します。
 
 <div id="configure-client-application">
-  ## クライアントアプリケーションを設定する
+  ## クライアントアプリケーションを設定する {#configure-client-application}
 </div>
 
 クライアントアプリケーションの Token Vault への特権アクセスを設定するには、次の作業が必要です。
@@ -143,7 +143,7 @@ Token Vault で Privileged Worker Token Exchange を使用できるのは、特�
 </Callout>
 
 <div id="create-signed-jwt-subject-token">
-  ## 署名付きJWTサブジェクトトークンを作成する
+  ## 署名付きJWTサブジェクトトークンを作成する {#create-signed-jwt-subject-token}
 </div>
 
 [公開鍵を使用してクライアントアプリケーションを設定](#configure-client-application)した後、外部APIのアクセストークンと交換するサブジェクトトークンを作成する必要があります。サブジェクトトークンは、必要なクレームを含むJSON Web トークン (JWT) です。秘密キーで署名されます。
@@ -221,7 +221,7 @@ import * as jwt from 'jsonwebtoken';
 ```
 
 <div id="request-token-for-external-api">
-  ## 外部APIのアクセストークンをリクエストする
+  ## 外部APIのアクセストークンをリクエストする {#request-token-for-external-api}
 </div>
 
 署名済みのJWTを取得したら、外部APIのアクセストークンをリクエストできます。

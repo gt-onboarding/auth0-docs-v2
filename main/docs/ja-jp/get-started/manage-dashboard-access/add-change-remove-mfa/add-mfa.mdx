@@ -22,7 +22,7 @@ title: Auth0 Dashboard へのアクセスに多要素認証を追加
 </Warning>
 
 <div id="add-mfa">
-  ## MFA を追加する
+  ## MFA を追加する {#add-mfa}
 </div>
 
 MFA を自身で登録するには、Auth0 Dashboard の各ユーザーが次の手順に従う必要があります。
@@ -34,7 +34,7 @@ MFA を自身で登録するには、Auth0 Dashboard の各ユーザーが次の
 3. 画面上の案内に従って登録を完了します。
 
 <div id="device-biometrics">
-  ## デバイス生体認証
+  ## デバイス生体認証 {#device-biometrics}
 </div>
 
 デバイス生体認証を使うWebAuthnは、Account Settingsページで追加できない唯一の方式です。代わりに、Auth0ではWebAuthn対応デバイスが段階的に登録されます。ほかのMFA方式を登録すると、Auth0からそれらのデバイスを登録するよう求められます。これらの案内は、Auth0 Dashboardにログインするたびに繰り返し表示されます。
@@ -46,7 +46,7 @@ MFA を自身で登録するには、Auth0 Dashboard の各ユーザーが次の
 Javascriptが無効になっているブラウザーや、WebAuthnのプラットフォーム認証器をサポートしていないブラウザーでは、デバイス生体認証を登録したり、その方法で認証したりすることはできません。主要なブラウザーとオペレーティングシステムの最新バージョンでは、WebAuthn with Security Keysがサポートされています。詳しくは、[webauthn.meのブラウザーサポートセクション](https://webauthn.me/browser-support)をご覧ください。
 
 <div id="recovery-codes">
-  ## 回復コード
+  ## 回復コード {#recovery-codes}
 </div>
 
 二要素認証を有効にすると、成功直後に Auth0 からリカバリーコードをコピーするよう求められます。登録済みの認証要素をすべて利用できなくなった場合は、このリカバリーコードを使ってアカウントにログインできます。Auth0 では、リカバリーコードをコピーして印刷するか、パスワードマネージャーなどの安全な場所に保管することを推奨しています。
@@ -54,7 +54,7 @@ Javascriptが無効になっているブラウザーや、WebAuthnのプラッ�
 リカバリーコードを紛失した場合や、新しいコードを生成したい場合は、[プロファイル](https://manage.auth0.com/#/profile) から行えます。
 
 <div id="log-in-to-the-dashboard-with-mfa-enabled">
-  ## MFA を有効にして Auth0 Dashboard にログインする
+  ## MFA を有効にして Auth0 Dashboard にログインする {#log-in-to-the-dashboard-with-mfa-enabled}
 </div>
 
 MFA を有効にしてログインする場合も、通常のログインとほとんど変わりません。管理者アカウントの資格情報を入力すると、有効にしている MFA の認証要素の種類に応じて、2 つ目のプロンプトが表示されます。
@@ -64,7 +64,7 @@ MFA を有効にしてログインする場合も、通常のログインとほ�
 2 つ目の認証要素の登録が正常に完了したあと、WebAuthn をサポートする新しいデバイスからログインすると、「このデバイスでよりすばやくログイン」というプロンプトが表示されます。これにより、次回からそのデバイスを多要素認証に使用できます。
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * [Auth0 Dashboard ユーザー向けの多要素認証](/docs/ja-jp/get-started/manage-dashboard-access/add-change-remove-mfa)

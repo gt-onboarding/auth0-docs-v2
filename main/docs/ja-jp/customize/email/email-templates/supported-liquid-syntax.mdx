@@ -17,7 +17,7 @@ Liquid 構文の概要については、[LiquidJS introduction](https://liquidjs
 このページでは、メールテンプレートでサポートされるタグ、フィルター、変数を一覧で紹介します。
 
 <div id="tags">
-  ## タグ
+  ## タグ {#tags}
 </div>
 
 すべてのメールテンプレートで、以下の Liquid タグを利用できます。
@@ -33,13 +33,13 @@ Liquid 構文の概要については、[LiquidJS introduction](https://liquidjs
 Liquid タグの説明と使用例は、[LiquidJS のタグページ](https://liquidjs.com/tags/overview.html)で確認できます。
 
 <div id="debug-tag">
-  ### debug タグ
+  ### debug タグ {#debug-tag}
 </div>
 
 デバッグや開発に役立てるため、独自の `{% debug %}` タグは、テンプレートがレンダリングされた時点でそのテンプレート内で使用できるテンプレート変数の概要を出力します。
 
 <div id="filters">
-  ## フィルター
+  ## フィルター {#filters}
 </div>
 
 すべてのメールテンプレートで、以下の Liquid フィルターを利用できます。
@@ -56,7 +56,7 @@ Liquid タグの説明と使用例は、[LiquidJS のタグページ](https://li
 Liquid フィルターの説明と例は、[LiquidJS のフィルターページ](https://liquidjs.com/filters/overview.html)で確認できます。
 
 <div id="general-variables">
-  ## 一般変数
+  ## 一般変数 {#general-variables}
 </div>
 
 以下の変数は、すべてのテンプレートの **From Address**、**Subject**、**Message** フィールドで使用できます (特に記載がない限り) 。
@@ -139,7 +139,7 @@ Liquid フィルターの説明と例は、[LiquidJS のフィルターページ
 3. 複数のカスタムドメインを使用している場合は、[デフォルトのカスタムドメイン](/docs/ja-jp/customize/custom-domains/multiple-custom-domains/default-domain)を設定していること
 
 <div id="redirect-to-variables">
-  ### Redirect To 変数
+  ### Redirect To 変数 {#redirect-to-variables}
 </div>
 
 **Redirect To** URL フィールドがあるメールテンプレートでは、サポートされる変数は次の 3 つだけです。
@@ -155,13 +155,13 @@ Liquid フィルターの説明と例は、[LiquidJS のフィルターページ
   callback domain を使うと、`{{ application.callback_domain }}/result_page` のような構文で、そのアクションをトリガーしたアプリケーション内のパスにユーザーをリダイレクトできます。
 
 <div id="template-specific-variables">
-  ## テンプレート固有の変数
+  ## テンプレート固有の変数 {#template-specific-variables}
 </div>
 
 すべてのメールテンプレートで使用できる共通の Liquid 変数に加え、以下のメールテンプレートでは追加の変数も使用できます。
 
 <div id="blocked-account-email-template-variables">
-  ### アカウントがブロックされた際のメールテンプレート変数
+  ### アカウントがブロックされた際のメールテンプレート変数 {#blocked-account-email-template-variables}
 </div>
 
 * `user.source_ip`
@@ -170,25 +170,25 @@ Liquid フィルターの説明と例は、[LiquidJS のフィルターページ
 * `url`、アカウントのブロック解除用リンク
 
 <div id="change-password-code-email-template-variables">
-  ### パスワード変更 (コード) メールテンプレートの変数
+  ### パスワード変更 (コード) メールテンプレートの変数 {#change-password-code-email-template-variables}
 </div>
 
 * `code`、パスワード変更用のコード
 
 <div id="change-password-link-email-template-variables">
-  ### パスワード変更 (リンク) メールテンプレートの変数
+  ### パスワード変更 (リンク) メールテンプレートの変数 {#change-password-link-email-template-variables}
 </div>
 
 * `url`：パスワードリセット用のリンク
 
 <div id="mfa-enrollment-email-template-variables">
-  ### MFA登録メールテンプレートの変数
+  ### MFA登録メールテンプレートの変数 {#mfa-enrollment-email-template-variables}
 </div>
 
 * `link`：MFA登録リンク。
 
 <div id="passwordless-otp-email-template-variables">
-  ### パスワードレス OTP メールテンプレート変数
+  ### パスワードレス OTP メールテンプレート変数 {#passwordless-otp-email-template-variables}
 </div>
 
 * リクエストされたパスワードレスメールの種類に応じて、値が `link`、`link_ios`、`link_android`、または `code` になる `send`
@@ -197,7 +197,7 @@ Liquid フィルターの説明と例は、[LiquidJS のフィルターページ
 * パスワードレスのメールアドレス変更操作では、値が `change_email` になる `operation`
 
 <div id="user-invitation-email-template-variables">
-  ### ユーザー招待メールテンプレートの変数
+  ### ユーザー招待メールテンプレートの変数 {#user-invitation-email-template-variables}
 </div>
 
 * `inviter.name`
@@ -206,13 +206,13 @@ Liquid フィルターの説明と例は、[LiquidJS のフィルターページ
 * `roles.description`
 
 <div id="verification-email-code-template-variables">
-  ### 確認メール (コード) のテンプレート変数
+  ### 確認メール (コード) のテンプレート変数 {#verification-email-code-template-variables}
 </div>
 
 * `code`：確認コード
 
 <div id="verification-email-link-template-variables">
-  ### 確認メール (リンク) のテンプレート変数
+  ### 確認メール (リンク) のテンプレート変数 {#verification-email-link-template-variables}
 </div>
 
 * `url`：確認リンク

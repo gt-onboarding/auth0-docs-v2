@@ -16,11 +16,11 @@ Auth0 では、特定の種類の情報を保存するために使用される�
 | **アプリケーション情報** | `Client` オブジェクト内の `client_metadata`、ルール内の `context.clientMetadata`、および post-login Actions 内の `event.client.metadata`。 | アプリケーション (OIDC および OAuth 2.0 の用語では *client*) に関する情報を保存します。たとえば、アプリケーションのホームページ URL などです (Application Settings で Auth0 が設定しない任意の値) 。  |
 
 <div id="metadata-field-names">
-  ## メタデータのフィールド名
+  ## メタデータのフィールド名 {#metadata-field-names}
 </div>
 
 <div id="accepted-characters">
-  ### 使用可能な文字
+  ### 使用可能な文字 {#accepted-characters}
 </div>
 
 フィールド名には、`.` (ドット) または`$` (ドル記号) を含めることはできません。
@@ -44,7 +44,7 @@ Auth0 では、特定の種類の情報を保存するために使用される�
 ```
 
 <div id="dynamic-field-names">
-  ### 動的なフィールド名
+  ### 動的なフィールド名 {#dynamic-field-names}
 </div>
 
 フィールド名は固定にするべきです。動的なフィールド名はインデックス効率を下げ、検索クエリの性能低下を招きます。スキーマは固定されているほうが、検索や操作、扱いがしやすくなります。
@@ -82,7 +82,7 @@ Auth0 では、特定の種類の情報を保存するために使用される�
 ```
 
 <div id="name-collision">
-  ### 名前の競合
+  ### 名前の競合 {#name-collision}
 </div>
 
 `app_metadata` フィールドとルートプロファイルフィールドに同じ名前を使用しないでください。`app_metadata` フィールドは、ルールと Actions の両方でルートプロファイルにマージされるため、ルートプロファイルフィールドを上書きしてしまう可能性があります。
@@ -108,7 +108,7 @@ Auth0 では、特定の種類の情報を保存するために使用される�
 [Rule](/docs/ja-jp/manage-users/user-accounts/metadata/manage-metadata-rules) で [ユーザーオブジェクト](/docs/ja-jp/customize/rules/user-object-in-rules) の `groups` フィールドを参照すると、`["internal-group-1", "internal-group-2"]` が返されます。
 
 <div id="metadata-data-types">
-  ## メタデータのデータ型
+  ## メタデータのデータ型 {#metadata-data-types}
 </div>
 
 メタデータフィールドでは、[JSON互換のデータ型](https://datatracker.ietf.org/doc/html/rfc7159)をすべてサポートしています。
@@ -121,11 +121,11 @@ Auth0 では、特定の種類の情報を保存するために使用される�
 データ型はユーザー間で統一するようにしてください。たとえば、あるユーザーでは値を文字列として保存し (`user.user_metadata.age = "23"`)、別のユーザーでは数値として保存している場合 (`user.user_metadata.age = 23`)、データの取得時に問題が発生する可能性があります。
 
 <div id="limitations-and-restrictions">
-  ## 制限事項と制約条件
+  ## 制限事項と制約条件 {#limitations-and-restrictions}
 </div>
 
 <div id="rate-limits">
-  ### レート制限
+  ### レート制限 {#rate-limits}
 </div>
 
 [ルール](/docs/ja-jp/manage-users/user-accounts/metadata/manage-metadata-rules) または [Actions](/docs/ja-jp/manage-users/user-accounts/metadata/manage-user-metadata) を使ってログイン時にメタデータを更新する場合は、テナントのレート制限が適用されます。詳しくは、[Management API Endpoint Rate Limits](/docs/ja-jp/troubleshoot/customer-support/operational-policies/rate-limit-policy/management-api-endpoint-rate-limits) を参照してください。
@@ -137,7 +137,7 @@ Auth0 では、特定の種類の情報を保存するために使用される�
 </Warning>
 
 <div id="size-limits-and-storage">
-  ### サイズ制限と保存
+  ### サイズ制限と保存 {#size-limits-and-storage}
 </div>
 
 * [user search endpoint](https://auth0.com/docs/api/management/v2/users/get-users) でインデックス化、クエリ、および返却できるユーザーデータには、ユーザーごとに 1 MB の上限があります。ユーザープロファイルが 1 MB を超える場合、`app_metadata` と `user_metadata` 内の 256 文字を超える属性値は検索できず、検索結果にも返されません。これらの大きな値を除外してもユーザープロファイルが 1 MB を超える場合、そのユーザーの `app_metadata` と `user_metadata` の属性は、いずれも検索も返却もできません。Auth0 は、大きな値を除外してもユーザープロファイルが 1 MB を超えている事例を、`wum` の[イベントコード](/docs/ja-jp/deploy-monitor/logs/log-event-type-codes)で記録します。サイズ超過のユーザープロファイルについてすべてのメタデータ属性を取得するには、[ユーザー取得エンドポイント](https://auth0.com/docs/api/management/v2/users/get-users-by-id)を使用する必要があります。
@@ -145,7 +145,7 @@ Auth0 では、特定の種類の情報を保存するために使用される�
 * `client_metadata` フィールドには、最大 10 個のキーを設定できます。キーと値はそれぞれ最大 255 文字で、UTF-8 の特殊文字は使用できません。
 
 <div id="restrictions">
-  ### 制限事項
+  ### 制限事項 {#restrictions}
 </div>
 
 `app_metadata` フィールドには、以下のプロパティを含めることはできません。
@@ -170,7 +170,7 @@ Auth0 では、特定の種類の情報を保存するために使用される�
 * `user_id`
 
 <div id="learn-more">
-  ## 詳細はこちら
+  ## 詳細はこちら {#learn-more}
 </div>
 
 * [ルールを使ってメタデータを管理する](/docs/ja-jp/manage-users/user-accounts/metadata/manage-metadata-rules)

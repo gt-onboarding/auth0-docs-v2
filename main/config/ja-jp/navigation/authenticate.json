@@ -2,7 +2,7 @@
   "pages": [
     "docs/ja-jp/authenticate",
     {
-      "group": "ログインを追加する",
+      "group": "Add Login",
       "pages": [
         {
           "group": "Login",
@@ -11,7 +11,7 @@
               "group": "Auth0 Universal Login",
               "pages": [
                 {
-                  "group": "Universal Login とクラシックログインの比較",
+                  "group": "Universal Login vs. Classic Login",
                   "pages": [
                     "docs/ja-jp/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience",
                     "docs/ja-jp/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/classic-experience"
@@ -19,7 +19,7 @@
                   "root": "docs/ja-jp/authenticate/login/auth0-universal-login/universal-login-vs-classic-login"
                 },
                 {
-                  "group": "パスワードレスログイン",
+                  "group": "Passwordless Login",
                   "pages": [
                     "docs/ja-jp/authenticate/login/auth0-universal-login/passwordless-login/webauthn-device-biometrics",
                     "docs/ja-jp/authenticate/login/auth0-universal-login/passwordless-login/email-or-sms"
@@ -40,7 +40,7 @@
             "docs/ja-jp/authenticate/login/redirect-users-after-login",
             "docs/ja-jp/authenticate/login/max-age-reauthentication",
             {
-              "group": "ログアウト",
+              "group": "Logout",
               "pages": [
                 "docs/ja-jp/authenticate/login/logout/universal-logout",
                 "docs/ja-jp/authenticate/login/logout/log-users-out-of-applications",
@@ -49,7 +49,7 @@
                 "docs/ja-jp/authenticate/login/logout/log-users-out-of-saml-idps",
                 "docs/ja-jp/authenticate/login/logout/redirect-users-after-logout",
                 {
-                  "group": "OIDC バックチャネルログアウト",
+                  "group": "OIDC Back-Channel Logout",
                   "pages": [
                     "docs/ja-jp/authenticate/login/logout/back-channel-logout/configure-back-channel-logout",
                     "docs/ja-jp/authenticate/login/logout/back-channel-logout/oidc-back-channel-logout-initiators"
@@ -60,7 +60,7 @@
               "root": "docs/ja-jp/authenticate/login/logout"
             },
             {
-              "group": "OIDC 準拠の認証",
+              "group": "OIDC-Conformant Authentication",
               "pages": [
                 "docs/ja-jp/authenticate/login/oidc-conformant-authentication/oidc-adoption-access-tokens",
                 "docs/ja-jp/authenticate/login/oidc-conformant-authentication/oidc-adoption-apis",
@@ -78,14 +78,14 @@
           "root": "docs/ja-jp/authenticate/login"
         },
         {
-          "group": "シングルサインオン",
+          "group": "Single Sign-On",
           "pages": [
             "docs/ja-jp/authenticate/single-sign-on/inbound-single-sign-on",
             {
-              "group": "IDプロバイダー主導のシングルサインオン",
+              "group": "Identity-Provider-Initiated Single Sign-On",
               "pages": [
                 {
-                  "group": "Auth0 を SAML IDプロバイダーとして設定する",
+                  "group": "Configure Auth0 as SAML Identity Provider",
                   "pages": [
                     "docs/ja-jp/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-saml2-web-app-addon-for-aws",
                     "docs/ja-jp/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-auth0-as-identity-provider-for-atlassian",
@@ -113,7 +113,7 @@
               "root": "docs/ja-jp/authenticate/single-sign-on/outbound-single-sign-on"
             },
             {
-              "group": "ネイティブからWebへのSSO",
+              "group": "Native to Web SSO",
               "pages": [
                 "docs/ja-jp/authenticate/single-sign-on/native-to-web/configure-implement-native-to-web",
                 "docs/ja-jp/authenticate/single-sign-on/native-to-web/configure-mobile-to-web-payment-flows",
@@ -123,7 +123,7 @@
               "root": "docs/ja-jp/authenticate/single-sign-on/native-to-web"
             },
             {
-              "group": "セッション委譲",
+              "group": "Session Delegation",
               "pages": [
                 "docs/ja-jp/authenticate/single-sign-on/session-delegation/configure-session-delegation",
                 "docs/ja-jp/authenticate/single-sign-on/session-delegation/implement-session-delegation",
@@ -137,10 +137,10 @@
           "root": "docs/ja-jp/authenticate/single-sign-on"
         },
         {
-          "group": "パスワードレス",
+          "group": "Passwordless",
           "pages": [
             {
-              "group": "認証方法",
+              "group": "Authentication Methods",
               "pages": [
                 "docs/ja-jp/authenticate/passwordless/authentication-methods/email-otp",
                 "docs/ja-jp/authenticate/passwordless/authentication-methods/email-magic-link",
@@ -150,11 +150,11 @@
               "root": "docs/ja-jp/authenticate/passwordless/authentication-methods"
             },
             {
-              "group": "ログインを実装する",
+              "group": "Implement Login",
               "pages": [
                 "docs/ja-jp/authenticate/passwordless/implement-login/universal-login",
                 {
-                  "group": "埋め込みログイン",
+                  "group": "Embedded Login",
                   "pages": [
                     "docs/ja-jp/authenticate/passwordless/implement-login/embedded-login/relevant-api-endpoints",
                     "docs/ja-jp/authenticate/passwordless/implement-login/embedded-login/spa",
@@ -174,7 +174,7 @@
           "root": "docs/ja-jp/authenticate/passwordless"
         },
         {
-          "group": "カスタムトークン交換",
+          "group": "Custom Token Exchange",
           "pages": [
             "docs/ja-jp/authenticate/custom-token-exchange/cte-example-use-cases",
             "docs/ja-jp/authenticate/custom-token-exchange/configure-custom-token-exchange",
@@ -186,16 +186,16 @@
       ]
     },
     {
-      "group": "ユーザーをプロビジョニングする",
+      "group": "Provision Users",
       "pages": [
         {
-          "group": "IDプロバイダー",
+          "group": "Identity Providers",
           "pages": [
             {
-              "group": "ソーシャルIDプロバイダー",
+              "group": "Social Identity Providers",
               "pages": [
                 {
-                  "group": "Web アプリケーション向け",
+                  "group": "For Web Applications",
                   "pages": [
                     "docs/ja-jp/authenticate/identity-providers/social-identity-providers/github",
                     "docs/ja-jp/authenticate/identity-providers/social-identity-providers/google",
@@ -203,7 +203,7 @@
                   ]
                 },
                 {
-                  "group": "ネイティブアプリケーション向け",
+                  "group": "For Native Applications",
                   "pages": [
                     "docs/ja-jp/authenticate/identity-providers/social-identity-providers/apple-native",
                     "docs/ja-jp/authenticate/identity-providers/social-identity-providers/facebook-native",
@@ -218,24 +218,24 @@
               "root": "docs/ja-jp/authenticate/identity-providers/social-identity-providers"
             },
             {
-              "group": "エンタープライズIDプロバイダー",
+              "group": "Enterprise Identity Providers",
               "pages": [
                 {
-                  "group": "Google で Auth0 を使用する",
+                  "group": "Use Auth0 with Google",
                   "pages": [
                     "docs/ja-jp/authenticate/identity-providers/enterprise-identity-providers/google-apps",
                     "docs/ja-jp/authenticate/identity-providers/enterprise-identity-providers/google-directory-sync"
                   ]
                 },
                 {
-                  "group": "Okta で Auth0 を使用する",
+                  "group": "Use Auth0 with Okta",
                   "pages": [
                     "docs/ja-jp/authenticate/identity-providers/okta",
                     "docs/ja-jp/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration"
                   ]
                 },
                 {
-                  "group": "LDAP を使用してアプリを Active Directory に接続する",
+                  "group": "Connect Your App to Active Directory using LDAP",
                   "pages": [
                     {
                       "group": "AD/LDAP Connector",
@@ -285,16 +285,16 @@
           "root": "docs/ja-jp/authenticate/identity-providers"
         },
         {
-          "group": "データベース接続",
+          "group": "Database Connections",
           "pages": [
             {
               "directory": "accordion",
-              "group": "カスタムデータベース接続",
+              "group": "Custom Database Connections",
               "pages": [
                 "docs/ja-jp/authenticate/database-connections/custom-db/create-db-connection",
                 {
                   "expanded": true,
-                  "group": "カスタムデータベースアクションスクリプト",
+                  "group": "Custom Database Action Scripts",
                   "pages": [
                     "docs/ja-jp/authenticate/database-connections/custom-db/templates/change-password",
                     "docs/ja-jp/authenticate/database-connections/custom-db/templates/create",
@@ -308,7 +308,7 @@
                   "root": "docs/ja-jp/authenticate/database-connections/custom-db/custom-database-connections-scripts"
                 },
                 {
-                  "group": "トラブルシューティング",
+                  "group": "Troubleshooting",
                   "pages": [
                     "docs/ja-jp/authenticate/database-connections/custom-db/test-custom-database-connections",
                     "docs/ja-jp/authenticate/database-connections/custom-db/error-handling"
@@ -318,7 +318,7 @@
               "root": "docs/ja-jp/authenticate/database-connections/custom-db"
             },
             {
-              "group": "パスキー",
+              "group": "Passkeys",
               "pages": [
                 "docs/ja-jp/authenticate/database-connections/passkeys/configure-passkey-policy",
                 "docs/ja-jp/authenticate/database-connections/passkeys/monitor-passkey-events-in-tenant-logs",
@@ -340,10 +340,10 @@
           "root": "docs/ja-jp/authenticate/database-connections"
         },
         {
-          "group": "エンタープライズ接続",
+          "group": "Enterprise Connections",
           "pages": [
             {
-              "group": "セルフサービスのエンタープライズ設定",
+              "group": "Self-Service Enterprise Configuration",
               "pages": [
                 "docs/ja-jp/authenticate/enterprise-connections/self-service-enterprise-configuration/manage-self-service-enterprise-config",
                 "docs/ja-jp/authenticate/enterprise-connections/connection-profile",
@@ -358,7 +358,7 @@
           "root": "docs/ja-jp/authenticate/enterprise-connections"
         },
         {
-          "group": "プロトコル",
+          "group": "Protocols",
           "pages": [
             {
               "group": "SAML",
@@ -366,7 +366,7 @@
                 "docs/ja-jp/authenticate/identity-providers/enterprise-identity-providers/ping-federate",
                 "docs/ja-jp/authenticate/protocols/saml/saml-identity-provider-configuration-settings",
                 {
-                  "group": "SAML 設定",
+                  "group": "SAML Configuration",
                   "pages": [
                     "docs/ja-jp/authenticate/protocols/saml/saml-configuration/customize-saml-assertions",
                     "docs/ja-jp/authenticate/protocols/saml/saml-configuration/deprovision-users-in-saml-integrations",
@@ -376,12 +376,12 @@
                   "root": "docs/ja-jp/authenticate/protocols/saml/saml-configuration"
                 },
                 {
-                  "group": "SAML SSO 連携",
+                  "group": "SAML Single Sign-On Integrations",
                   "pages": [
                     "docs/ja-jp/authenticate/protocols/saml/saml-sso-integrations/identity-provider-initiated-single-sign-on",
                     "docs/ja-jp/authenticate/protocols/saml/saml-sso-integrations/configure-idp-initiated-saml-sign-on-to-oidc-apps",
                     {
-                      "group": "Auth0 を SAML サービスプロバイダーとして設定する",
+                      "group": "Configure Auth0 as SAML Service Provider",
                       "pages": [
                         "docs/ja-jp/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-service-provider/configure-adfs-saml-connections",
                         "docs/ja-jp/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-service-provider/configure-okta-as-saml-identity-provider",

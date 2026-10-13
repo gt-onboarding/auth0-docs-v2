@@ -1,10 +1,11 @@
 ---
+
 title: "アプリケーションを認可する"
 description: "OAuth 2.0の認可コードフローを開始し、ユーザーの同意と認可コードを取得します。"
 ---"
 
 <div id="endpoint">
-  ## エンドポイント
+  ## エンドポイント {#endpoint}
 </div>
 
 `GET /authorize`
@@ -12,7 +13,7 @@ description: "OAuth 2.0の認可コードフローを開始し、ユーザーの
 OAuth 2.0の認可フローを開始するには、まずユーザーを認可URLにリダイレクトする必要があります。
 
 <div id="authorize-endpoint">
-  ## 認可エンドポイント
+  ## 認可エンドポイント {#authorize-endpoint}
 </div>
 
 この呼び出しの目的は、API (`audience` で指定) を呼び出し、ユーザーに代わって特定の操作 (`scope` で指定) を実行することについて、ユーザーの同意を得ることです。Auth0 は、以前に同意が付与されていない限り、ユーザーを認証して同意を取得します。`scope` の値を変更すると、Auth0 はあらためて同意を求めます。
@@ -28,7 +29,7 @@ OAuth 2.0の認可フローを開始するには、まずユーザーを認可UR
 実装する OAuth 2.0 フローに応じて、パラメータは若干異なります。どのフローが自分のケースに最も適しているかを判断するには、[どの OAuth 2.0 フローを使うべきですか？](https://auth0.com/docs/get-started/authentication-and-authorization-flow/which-oauth-2-0-flow-should-i-use) を参照してください。
 
 <div id="query-parameters">
-  ## クエリパラメータ
+  ## クエリパラメータ {#query-parameters}
 </div>
 
 <ParamField query="audience" type="string" required>
@@ -80,7 +81,7 @@ OAuth 2.0の認可フローを開始するには、まずユーザーを認可UR
 </ParamField>
 
 <div id="response-messages">
-  ## レスポンスメッセージ
+  ## レスポンスメッセージ {#response-messages}
 </div>
 
 | ステータス | 説明               |

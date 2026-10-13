@@ -7,7 +7,7 @@ title: User Attribute Profile
 Le User Attribute Profile (UAP) fournit une façon uniforme de définir, de gérer et de mapper les attributs utilisateur dans l’ensemble de protocoles comme [SCIM](/docs/fr-ca/authenticate/protocols/scim), [SAML](/docs/fr-ca/authenticate/protocols/saml) et [OIDC](/docs/fr-ca/authenticate/login/oidc-conformant-authentication). Le UAP avec [Self-Service Enterprise Configuration](/docs/fr-ca/authenticate/enterprise-connections/self-service-enterprise-configuration) donne aux administrateurs un meilleur contrôle sur les données d’identité utilisateur en définissant les attributs utilisateur et en appliquant le profil à l’ensemble des protocoles d’authentication.
 
 <div id="how-it-works">
-  ## Fonctionnement
+  ## Fonctionnement {#how-it-works}
 </div>
 
 * **Définition du profil**
@@ -23,7 +23,7 @@ Le User Attribute Profile (UAP) fournit une façon uniforme de définir, de gér
   Chaque attribut prend en charge des mappages entre les protocoles d’authentication, avec la possibilité de remplacer des valeurs pour certains providers ou certaines stratégies de connection, comme Okta et Entra ID.
 
 <div id="attribute-mapping-and-override">
-  ## Mappage d’attributs et dérogation
+  ## Mappage d’attributs et dérogation {#attribute-mapping-and-override}
 </div>
 
 UAP prend en charge les définitions d’attributs multiprotocoles et les dérogations de stratégie pour répondre aux besoins propres aux fournisseurs.
@@ -48,7 +48,7 @@ Certains fournisseurs utilisent des mappages non standard. UAP permet des dérog
 | Okta            | Mapper des attributs comme `middleNam`e ou `federated_groups` à l’aide de claims propres à Okta. |
 
 <div id="user-id">
-  ### ID utilisateur
+  ### ID utilisateur {#user-id}
 </div>
 
 La propriété user&#95;id définit comment mapper des claims OIDC, des attributs SAML ou des attributs SCIM à l’ID utilisateur d’Auth0. Chaque utilisateur Auth0 doit avoir un ID; ce mappage est donc obligatoire.
@@ -57,7 +57,7 @@ La propriété user&#95;id définit comment mapper des claims OIDC, des attribut
   * Pour SAML et SCIM, le mappage est plus souple et peut pointer vers plusieurs attributs possibles.
 
 <div id="user-attributes">
-  ### Attributs utilisateur
+  ### Attributs utilisateur {#user-attributes}
 </div>
 
 La propriété `user_attributes` contient des informations de mappage qui permettent au système d’interpréter les claims entrants de l’IdP et de les enregistrer comme attributs du profil utilisateur Auth0.
@@ -77,7 +77,7 @@ Chaque attribut doit être fourni sous forme de paire clé/valeur :
       * `display_name` le libellé affiché aux utilisateurs finaux dans les flows en libre-service
 
 <div id="strategy-overrides">
-  ### Dérogations de stratégie
+  ### Dérogations de stratégie {#strategy-overrides}
 </div>
 
 La propriété `strategy_overrides` vous permet de définir des exceptions pour chaque fournisseur d’identité (IdP), puisque tous les IdP n’exposent pas les mêmes identifiants ni les mêmes claims.
@@ -85,11 +85,11 @@ La propriété `strategy_overrides` vous permet de définir des exceptions pour 
 Chaque dérogation définit des mappages propres au protocole qui remplacent les valeurs par défaut définies dans `user_id` ou `user_attributes`.
 
 <div id="examples">
-  ## Exemples
+  ## Exemples {#examples}
 </div>
 
 <div id="user-identifier">
-  ### Identifiant utilisateur
+  ### Identifiant utilisateur {#user-identifier}
 </div>
 
 ```json
@@ -121,7 +121,7 @@ Chaque dérogation définit des mappages propres au protocole qui remplacent les
 * **Dérogations** : SAML et WAAD personnalisent les mappages.
 
 <div id="email-attribute">
-  ### Attribut de l’adresse courriel
+  ### Attribut de l’adresse courriel {#email-attribute}
 </div>
 
 ```json
@@ -151,13 +151,13 @@ Chaque dérogation définit des mappages propres au protocole qui remplacent les
 * La dérogation WAAD assure le mappage correct vers les adresses courriel professionnelles.
 
 <div id="create-a-user-attribute-profile">
-  ## Créer un User Attribute Profile
+  ## Créer un User Attribute Profile {#create-a-user-attribute-profile}
 </div>
 
 Vous pouvez définir un UAP dans Self-Service Enterprise Configuration à l’aide de l’Auth0 Dashboard ou de la Management API. Pour le moment, il peut être configuré dans l’expérience Self-Service Enterprise Configuration.
 
 <div id="configure-with-auth0-dashboard">
-  ### Configurer avec Auth0 Dashboard
+  ### Configurer avec Auth0 Dashboard {#configure-with-auth0-dashboard}
 </div>
 
 1. Accédez à [**Authentication &gt; Enterprise &gt; Self-Service Enterprise Configuration**](http://manage.auth0.com/*/connections/enterprise/self-service-profiles).
@@ -171,7 +171,7 @@ Vous pouvez définir un UAP dans Self-Service Enterprise Configuration à l’ai
 Votre nouveau UAP est maintenant prêt à être configuré pour le SSO.
 
 <div id="configure-with-management-api">
-  ### Configurer avec la Management API
+  ### Configurer avec la Management API {#configure-with-management-api}
 </div>
 
 Pour gérer les User Attribute Profiles, les points de terminaison suivants de la [Management API](https://auth0.com/docs/api/management/v2/introduction) sont offerts :
@@ -184,7 +184,7 @@ Pour gérer les User Attribute Profiles, les points de terminaison suivants de l
 * `GET` `/api/v2/user-attribute-profiles/templates/{id}`
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Self-Service Enterprise Configuration](/docs/fr-ca/authenticate/enterprise-connections/self-service-enterprise-configuration)

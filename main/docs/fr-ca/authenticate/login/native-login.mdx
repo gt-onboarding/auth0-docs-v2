@@ -12,14 +12,14 @@ Avec un flux de connexion **natif**, l’utilisateur s’inscrit, se connecte, i
 Les applications natives peuvent utiliser une combinaison de flux de connexion natifs et via le navigateur. Par exemple, vous pouvez utiliser une redirection par navigateur pour la connexion principale ainsi que les [API de clés d’accès](/docs/fr-ca/authenticate/database-connections/passkeys) ou la [connexion sociale native](/docs/fr-ca/authenticate/identity-providers/social-identity-providers) pour la réauthentification, l’inscription de facteurs ou l’authentification renforcée dans l’application.
 
 <div id="browser-based-login">
-  ## Connexion via le navigateur
+  ## Connexion via le navigateur {#browser-based-login}
 </div>
 
 * [Quickstart Android](/docs/fr-ca/quickstart/native/android)
 * [Quickstart iOS Swift](/docs/fr-ca/quickstart/native/ios-swift)
 
 <div id="native-embedded-login">
-  ## Connexion intégrée dans une application native
+  ## Connexion intégrée dans une application native {#native-embedded-login}
 </div>
 
 Si vous préférez intégrer vos propres pages de connexion à votre application native/mobile, vous pouvez implémenter notre widget de connexion, Lock, directement dans votre application avec :
@@ -28,13 +28,13 @@ Si vous préférez intégrer vos propres pages de connexion à votre application
 * [Lock.Android](/docs/fr-ca/libraries/lock-android)
 
 <div id="passwordless">
-  ### Sans mot de passe
+  ### Sans mot de passe {#passwordless}
 </div>
 
 [Connexion sans mot de passe intégrée dans les applications natives](/docs/fr-ca/authenticate/passwordless/implement-login/embedded-login/native)
 
 <div id="considerations">
-  ### Éléments à prendre en compte
+  ### Éléments à prendre en compte {#considerations}
 </div>
 
 Lorsque vous mettez en œuvre une connexion intégrée dans une application native avec un formulaire d’identifiants personnalisé, tenez compte des éléments suivants.
@@ -50,7 +50,7 @@ Lorsque vous mettez en œuvre une connexion intégrée dans une application nati
 Les approches intégrées modernes, comme les [API de clés d’accès](/docs/fr-ca/authenticate/database-connections/passkeys) et [connexion sociale native](/docs/fr-ca/authenticate/identity-providers/social-identity-providers), reposent sur des échanges de jetons conformes au protocole et évitent la plupart de ces compromis.
 
 <div id="native-social-login">
-  ## Connexion sociale native
+  ## Connexion sociale native {#native-social-login}
 </div>
 
 Vous pouvez ajouter à votre application native une fonctionnalité permettant aux utilisateurs de s’authentifier directement dans l’application auprès de <Tooltip tip="Fournisseur d’identité (IdP) : service qui stocke et gère les identités numériques." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=identity+providers">fournisseurs d’identité</Tooltip> sociaux :
@@ -67,7 +67,7 @@ Sign In with Apple :
 * [Ajouter Sign In with Apple aux applications iOS natives](/docs/fr-ca/authenticate/identity-providers/social-identity-providers/apple-native)
 
 <div id="rate-limits">
-  ### Limites de débit
+  ### Limites de débit {#rate-limits}
 </div>
 
 Les limites s’appliquent uniquement aux requêtes liées aux flux connexion sociale native, qui sont identifiées d’après le corps des requêtes selon les critères initiaux suivants :
@@ -78,7 +78,7 @@ Les limites s’appliquent uniquement aux requêtes liées aux flux connexion so
 | `subject_token_type` | `http://auth0.com/oauth/token-type/apple-authz-code` |
 
 <div id="limits-for-production-tenants-of-paying-customers">
-  #### Limites applicables aux tenants de production des clients payants
+  #### Limites applicables aux tenants de production des clients payants {#limits-for-production-tenants-of-paying-customers}
 </div>
 
 | Point de terminaison | Chemin         | Limité par                                | Limite de débit                                                |
@@ -86,7 +86,7 @@ Les limites s’appliquent uniquement aux requêtes liées aux flux connexion so
 | Obtenir un jeton     | `/oauth/token` | Toute requête de connexion sociale native | 50 par minute, avec des pointes pouvant atteindre 500 requêtes |
 
 <div id="limits-for-non-production-tenants-of-paying-customers-and-all-tenants-of-free-customers">
-  #### Limites pour les tenants hors production des clients payants et tous les tenants des clients Free
+  #### Limites pour les tenants hors production des clients payants et tous les tenants des clients Free {#limits-for-non-production-tenants-of-paying-customers-and-all-tenants-of-free-customers}
 </div>
 
 | Point de terminaison | Chemin         | Limité par                                 | Limite de requêtes |

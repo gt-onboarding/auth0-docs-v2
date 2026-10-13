@@ -10,7 +10,7 @@ Le SDK Auth0 Angular gère les détails liés aux grants et aux protocoles, l’
 La bibliothèque est [hébergée sur GitHub](https://github.com/auth0/auth0-angular), où vous pouvez [en savoir plus sur l’API](https://auth0.github.io/auth0-angular/).
 
 <div id="installation">
-  ## Installation
+  ## Installation {#installation}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -22,7 +22,7 @@ Utilisez le [Angular CLI](https://cli.angular.io/) pour installer le SDK dans vo
 `ng add @auth0/auth0-angular`
 
 <div id="getting-started">
-  ## Premiers pas
+  ## Premiers pas {#getting-started}
 </div>
 
 Commencez l’intégration du SDK en important `AuthModule` dans votre projet et en le configurant pour votre application cliente Auth0 :
@@ -56,7 +56,7 @@ export class AppModule {}
 ```
 
 <div id="login">
-  ## Connexion
+  ## Connexion {#login}
 </div>
 
 Le SDK prend entièrement en charge le système d’injection de dépendances d’Angular. Pour commencer, importez le type `AuthService` dans un composant et injectez-le dans le constructeur.
@@ -86,7 +86,7 @@ export class LoginComponent {
 ```
 
 <div id="logout">
-  ## Logout
+  ## Logout {#logout}
 </div>
 
 Utilisez `logout` pour déconnecter vos utilisateurs. Assurez-vous que `returnTo` figure dans **Allowed Logout URLs** de votre <Tooltip tip="Auth0 Dashboard : le principal produit d’Auth0 pour configurer vos services." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Auth0+Dashboard">Auth0 Dashboard</Tooltip>.
@@ -118,7 +118,7 @@ export class LogoutComponent {
 ```
 
 <div id="authentication-state">
-  ## État d’authentification
+  ## État d’authentification {#authentication-state}
 </div>
 
 L’état d’authentification est accessible via l’observable `isAuthenticated$` :
@@ -130,7 +130,7 @@ L’état d’authentification est accessible via l’observable `isAuthenticate
 ```
 
 <div id="user-profile">
-  ## Profil utilisateur
+  ## Profil utilisateur {#user-profile}
 </div>
 
 Le profil utilisateur de l’utilisateur authentifié est accessible par l’observable `user$` :
@@ -145,7 +145,7 @@ Le profil utilisateur de l’utilisateur authentifié est accessible par l’obs
 En interne, cet observable est chaîné à l’observable `isAuthenticated$`, donc il n’est pas nécessaire de vérifier manuellement si l’utilisateur est connecté. Il commencera à émettre des valeurs dès qu’un utilisateur authentifié sera disponible.
 
 <div id="protect-a-route">
-  ## Protéger une route
+  ## Protéger une route {#protect-a-route}
 </div>
 
 Protégez le composant d’une route à l’aide de l’`AuthGuard` intégré. Si un utilisateur accède à cette route sans être authentifié, il sera redirigé vers la page de connexion, puis ramené à cette page après la connexion.
@@ -185,14 +185,14 @@ export class AppRoutingModule {}
 
 La garde d’authentification prend aussi en charge le hook `canLoad` pour empêcher le chargement des modules à chargement différé lorsque l’utilisateur n’est pas authentifié.
 
-## Appeler une API
+## Appeler une API {#call-an-api}
 
 Le SDK contient un `HttpInterceptor` intégré qui ajoute automatiquement des <Tooltip tip="Jeton d’accès : information d’autorisation, sous la forme d’une chaîne opaque ou d’un JWT, utilisée pour accéder à une API." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=access+tokens">jetons d’accès</Tooltip> en injectant un en-tête `Authorization` lorsque des requêtes sont envoyées à l’aide du service `HttpClient` d’Angular.
 
 Vous devez configurer le SDK pour indiquer quelles routes de l’API doivent recevoir automatiquement cet en-tête, afin d’éviter toute fuite de jetons d’accès vers des destinataires non prévus.
 
 <div id="import-the-http-interceptor">
-  ### Importez l’intercepteur HTTP
+  ### Importez l’intercepteur HTTP {#import-the-http-interceptor}
 </div>
 
 Pour commencer, importez les types dont vous aurez besoin pour intégrer l’intercepteur HTTP d’Auth0 à votre application :
@@ -221,7 +221,7 @@ import { AuthHttpInterceptor } from '@auth0/auth0-angular';
 **Remarque :** L’intercepteur doit être enregistré manuellement dans le module de votre application (plutôt que d’être enregistré automatiquement), puisqu’il est conçu pour être chaîné avec d’autres intercepteurs, et nous ne pouvons pas garantir de l’insérer au bon endroit.
 
 <div id="configure-the-http-interceptor">
-  ### Configurer l’intercepteur HTTP
+  ### Configurer l’intercepteur HTTP {#configure-the-http-interceptor}
 </div>
 
 Il existe plusieurs façons de le configurer selon vos besoins. Une route peut être définie à l’aide d’une chaîne de caractères, d’un objet d’options qui influencent le token envoyé, et peut aussi être mise en correspondance selon le verbe HTTP utilisé. Les URI de route peuvent également inclure un caractère générique pour désigner un groupe de routes.
@@ -290,7 +290,7 @@ AuthModule.forRoot({
 **Remarque :** `tokenOptions` est passé directement à la méthode `getTokenSilently` du SDK SPA sous-jacent. Veuillez consulter [la documentation](https://auth0.github.io/auth0-spa-js/interfaces/GetTokenSilentlyOptions.html) pour obtenir plus de détails sur les propriétés acceptées.
 
 <div id="call-an-api">
-  ### Appeler une API
+  ### Appeler une API {#call-an-api-2}
 </div>
 
 Effectuez votre appel d’API à l’aide du service `HttpClient` d’Angular. Les jetons d’accès devraient être automatiquement inclus dans l’en-tête `Authorization` pour les routes correspondant à la configuration.

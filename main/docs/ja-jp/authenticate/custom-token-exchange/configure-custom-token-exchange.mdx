@@ -14,7 +14,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 * カスタムトークン交換プロファイルを[設定](#configure-custom-token-exchange-profile)し、[管理](#manage-custom-token-exchange-profile)する
 
 <div id="prerequisites">
-  ## 前提条件
+  ## 前提条件 {#prerequisites}
 </div>
 
 カスタムトークン交換を設定する前に、アプリケーションが以下の前提条件を満たしていることを確認してください。
@@ -25,7 +25,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 アプリケーションを設定するには、Auth0 Dashboard で **[アプリケーション &gt; 詳細設定 &gt; OAuth](https://auth0.com/docs/get-started/applications/application-settings#oauth)** に移動してください。
 
 <div id="enable-custom-token-exchange-for-your-application">
-  ## アプリケーションでカスタムトークン交換を有効にする
+  ## アプリケーションでカスタムトークン交換を有効にする {#enable-custom-token-exchange-for-your-application}
 </div>
 
 カスタムトークン交換を有効にするには、[新しいアプリケーションを作成](/docs/ja-jp/get-started/auth0-overview/create-applications)するか、Auth0 Dashboard または Management API を使用して既存のアプリケーションを更新します。カスタムトークン交換で使用するために、複数のアプリケーションを作成できます。
@@ -52,7 +52,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 アプリケーションを作成したら、後で `/oauth/token` エンドポイントを呼び出すときに使用する `client_id` と `client_secret` を控えておきます。
 
 <div id="configure-custom-token-exchange-profile">
-  ## カスタムトークン交換プロファイルを設定する
+  ## カスタムトークン交換プロファイルを設定する {#configure-custom-token-exchange-profile}
 </div>
 
 各カスタムトークン交換プロファイルでは、`subject_token_type` と Action が1対1でマッピングされ、Action には特定のユースケースに対応するコードロジックが含まれます。
@@ -66,7 +66,7 @@ import { ReleaseStageNotice } from "/snippets/ja-jp/ReleaseStageNotice.jsx"
 3. [カスタムトークン交換プロファイルを管理する](#manage-custom-token-exchange-profile)
 
 <div id="create-action-for-the-profile">
-  ### プロファイル用のActionを作成する
+  ### プロファイル用のActionを作成する {#create-action-for-the-profile}
 </div>
 
 Custom Token Exchange の Event オブジェクトと API オブジェクトを使用して、次の処理を行う Action を作成します。
@@ -107,7 +107,7 @@ curl --location 'https://{yourDomain}/api/v2/actions/actions?actionName={yourAct
 レスポンス本文の `actions[0].id.` に Action ID が含まれているはずです。カスタムトークン交換プロファイル を作成するには、Action ID が必要です。
 
 <div id="create-custom-token-exchange-profile">
-  ### カスタムトークン交換プロファイルを作成
+  ### カスタムトークン交換プロファイルを作成 {#create-custom-token-exchange-profile}
 </div>
 
 カスタムトークン交換プロファイルを作成するには、Management API を使用して、次のパラメータを指定した `POST` リクエストを `/token-exchange-profiles` エンドポイントに送信します。
@@ -145,7 +145,7 @@ curl --location 'https://{yourDomain}/api/v2/token-exchange-profiles' \
 ```
 
 <div id="manage-custom-token-exchange-profile">
-  ### カスタムトークン交換プロファイルを管理する
+  ### カスタムトークン交換プロファイルを管理する {#manage-custom-token-exchange-profile}
 </div>
 
 カスタムトークン交換プロファイルを管理するには、Management API を使用して `/token-exchange-profiles` エンドポイントにリクエストを送信します。

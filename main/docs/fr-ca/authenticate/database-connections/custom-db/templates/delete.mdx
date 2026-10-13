@@ -9,7 +9,7 @@ Le script Delete implémente la fonction définie pour supprimer un utilisateur 
 Ce script n’est utilisé que dans un [scénario d’authentification héritée](/docs/fr-ca/authenticate/database-connections/custom-db/overview-custom-db-connections) et il est requis si vous souhaitez supprimer un utilisateur d’Auth0 et de votre base de données externe dans la même opération.
 
 <div id="deleteuser-function">
-  ## Fonction DeleteUser
+  ## Fonction DeleteUser {#deleteuser-function}
 </div>
 
 La fonction `deleteUser` doit :
@@ -19,7 +19,7 @@ La fonction `deleteUser` doit :
 * Retourner une erreur si la suppression a échoué.
 
 <div id="definition">
-  ### Définition
+  ### Définition {#definition}
 </div>
 
 La fonction `deleteUser` accepte deux paramètres et renvoie une fonction de rappel :
@@ -58,13 +58,13 @@ function deleteUser(id, callback) {
 ```
 
 <div id="callback-function">
-  ## Fonction de rappel
+  ## Fonction de rappel {#callback-function}
 </div>
 
 La fonction `callback` accepte un paramètre et renvoie une fonction.
 
 <div id="definition">
-  ### Définition
+  ### Définition {#definition-2}
 </div>
 
 ```js lines
@@ -76,7 +76,7 @@ callback(error): function
 | `error`   | Objet | Obligatoire | Contient les données d’erreur. |
 
 <div id="return-a-success">
-  ### Retourner une réussite
+  ### Retourner une réussite {#return-a-success}
 </div>
 
 Si l’utilisateur a bien été supprimé de votre base de données externe, appelez la fonction de rappel et transmettez une valeur `null` pour le paramètre `error` :
@@ -86,7 +86,7 @@ return callback(null);
 ```
 
 <div id="return-an-error">
-  ### Retourner une erreur
+  ### Retourner une erreur {#return-an-error}
 </div>
 
 Si une erreur se produit, appelez la fonction de rappel et transmettez au paramètre `error` les renseignements pertinents sur l’erreur :
@@ -96,7 +96,7 @@ return callback(new Error("My custom error message."));
 ```
 
 <div id="language-specific-script-examples">
-  ## Exemples de scripts par langage
+  ## Exemples de scripts par langage {#language-specific-script-examples}
 </div>
 
 Auth0 fournit des exemples de scripts à utiliser avec les langages et technologies suivants :

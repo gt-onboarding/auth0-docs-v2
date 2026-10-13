@@ -18,7 +18,7 @@ Pour en savoir plus sur les clés Auth0, [consultez la hiérarchie des clés Aut
 </Callout>
 
 <div id="control-your-own-key">
-  ## Control Your Own Key
+  ## Control Your Own Key {#control-your-own-key}
 </div>
 
 Vous pouvez gérer le cycle de vie de votre Tenant Master Key à l’aide du point de terminaison [Rekey](https://auth0.com/docs/api/management/v2/keys/post-encryption-rekey) de l’<Tooltip tip="Management API : un produit permettant aux clients d’effectuer des tâches administratives." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Management+API">Management API</Tooltip> pour :
@@ -27,7 +27,7 @@ Vous pouvez gérer le cycle de vie de votre Tenant Master Key à l’aide du poi
 * Faire la rotation des Namespace Keys et les rechiffrer à l’aide de la nouvelle Tenant Master Key.
 
 <div id="permissions">
-  ### Permissions
+  ### Permissions {#permissions}
 </div>
 
 Utilisez les permissions suivantes pour accorder l’accès aux endpoints Rekey :
@@ -37,7 +37,7 @@ Utilisez les permissions suivantes pour accorder l’accès aux endpoints Rekey�
 | `create:encryption_keys` `update:encryption_keys` | Les utilisateurs peuvent effectuer la rotation et le rechiffrement de la hiérarchie des clés d’un tenant Auth0 à l’aide de l’endpoint Rekey de la Management API. |
 
 <div id="endpoint">
-  ### Point de terminaison
+  ### Point de terminaison {#endpoint}
 </div>
 
 Utilisez le point de terminaison [Rekey](https://auth0.com/docs/api/management/v2/keys/post-encryption-rekey) de la Management API pour faire la rotation de la Tenant Master Key, ainsi que la rotation et le rechiffrement des Namespace Keys.
@@ -54,7 +54,7 @@ Utilisez le point de terminaison [Rekey](https://auth0.com/docs/api/management/v
 </Callout>
 
 <div id="bring-your-own-key">
-  ## Bring Your Own Key
+  ## Bring Your Own Key {#bring-your-own-key}
 </div>
 
 <Warning>
@@ -71,7 +71,7 @@ Avec Bring Your Own Key, vous pouvez :
 Vous pouvez utiliser le [Dashboard](/docs/fr-ca/secure/highly-regulated-identity/customer-managed-keys/customer-managed-keys-dashboard) ou la [Management API](/docs/fr-ca/secure/highly-regulated-identity/customer-managed-keys/customer-managed-keys-management-api) pour activer Bring Your Own Key.
 
 <div id="monitor-customer-managed-keys-log-events">
-  ## Surveiller les événements de journalisation de Customer Managed Keys
+  ## Surveiller les événements de journalisation de Customer Managed Keys {#monitor-customer-managed-keys-log-events}
 </div>
 
 <Callout icon="file-lines" color="#0EA5E9" iconType="regular">
@@ -98,7 +98,7 @@ Un code d’événement `kms_key_management_failure` indiquant une opération KM
 Un code d’événement `kms_key_state_changed` indiquant un changement d’état d’une clé KMS.
 
 <div id="auth0-key-hierarchy">
-  ## Hiérarchie des clés d’Auth0
+  ## Hiérarchie des clés d’Auth0 {#auth0-key-hierarchy}
 </div>
 
 Au niveau de la couche applicative d’Auth0, Auth0 protège les secrets et les données des clients au moyen du chiffrement par enveloppe.
@@ -113,7 +113,7 @@ La hiérarchie de chiffrement par enveloppe d’Auth0 comprend les clés suivant
 | Clé de chiffrement des données | AES-256-GCM                                                    | Stockée à côté des données                |
 
 <div id="environment-root-key">
-  ### Environment Root Key
+  ### Environment Root Key {#environment-root-key}
 </div>
 
 La Environment Root Key se trouve au sommet de la hiérarchie et encapsule la Tenant Master Key pour éviter qu’elle soit divulguée ou altérée à l’extérieur d’Auth0.
@@ -132,7 +132,7 @@ Auth0 utilise les algorithms suivants pour encapsuler la Tenant Master Key avec 
 </Callout>
 
 <div id="tenant-master-keys">
-  ### Tenant Master Keys
+  ### Tenant Master Keys {#tenant-master-keys}
 </div>
 
 Chaque tenant possède une Tenant Master Key chiffrée stockée dans l’Auth0 Key Management Service, qui sert à chiffrer les Namespace Keys.
@@ -144,7 +144,7 @@ L’algorithme utilisé pour chiffrer la Tenant Master Key est AES256 GCM.
 </Callout>
 
 <div id="namespace-keys">
-  ### Namespace Keys
+  ### Namespace Keys {#namespace-keys}
 </div>
 
 Les Namespace Keys servent à séparer les clés de chiffrement utilisées à différentes fins dans le tenant. Le nombre de Namespace Keys ainsi que leur utilisation sont configurés en interne par Auth0 et ne peuvent pas être personnalisés.
@@ -154,7 +154,7 @@ Le chiffrement et le déchiffrement des Namespace Keys nécessitent l’accès �
 Les Namespace Keys se trouvent dans Auth0 Key Management Service et sont chiffrées avec l’algorithme AES256 GCM.
 
 <div id="data-encryption-keys">
-  ### Clés de chiffrement de données
+  ### Clés de chiffrement de données {#data-encryption-keys}
 </div>
 
 Le service Auth0 Key Management Service génère de façon sécurisée différentes clés de chiffrement de données pour les requêtes ultérieures de chiffrement des données. Le service Auth0 Key Management Service optimise la sécurité et les performances en émettant régulièrement de nouvelles clés de chiffrement de données.

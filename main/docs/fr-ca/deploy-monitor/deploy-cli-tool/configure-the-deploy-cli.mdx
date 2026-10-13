@@ -9,12 +9,12 @@ Configurer le Deploy CLI est essentiel pour définir les identifiants Auth0 et a
 2. Définir des variables d’environnement.
 
 <div id="configuration-file">
-  ## Fichier de configuration
+  ## Fichier de configuration {#configuration-file}
 </div>
 
 Un fichier JSON autonome peut être utilisé pour configurer Deploy CLI. Ce fichier se trouve habituellement dans le répertoire racine de votre projet et doit être nommé `config.json`.
 
-### Exemple
+### Exemple {#example}
 
 ```json lines
 {
@@ -29,7 +29,7 @@ Un fichier JSON autonome peut être utilisé pour configurer Deploy CLI. Ce fich
 </Callout>
 
 <div id="environment-variables">
-  ## Variables d’environnement
+  ## Variables d’environnement {#environment-variables}
 </div>
 
 Par défaut, le Deploy CLI utilise les variables d’environnement, ce qui permet de transmettre des informations d’authentification et d’autres paramètres à l’outil sans devoir les publier dans le fichier `config.json`. Les variables d’environnement peuvent servir à compléter le fichier `config.json` ou à le remplacer entièrement, selon les besoins du projet.
@@ -39,11 +39,11 @@ Les valeurs de configuration non primitives comme `AUTH0_KEYWORD_REPLACE_MAPPING
 Pour désactiver l’utilisation des variables d’environnement pour les commandes `import` ou `export`, transmettez l’argument `--env=false`.
 
 <div id="examples">
-  ### Exemples
+  ### Exemples {#examples}
 </div>
 
 <div id="deploying-configuration-for-yaml-formats-without-a-configjson-file">
-  #### Déployer une configuration pour les formats YAML sans fichier config.json
+  #### Déployer une configuration pour les formats YAML sans fichier config.json {#deploying-configuration-for-yaml-formats-without-a-configjson-file}
 </div>
 
 ```bash lines
@@ -54,7 +54,7 @@ $ a0deploy import --input_file=local/tenant.yaml
 ```
 
 <div id="disable-environment-variable-ingestion">
-  #### Désactiver la lecture des variables d’environnement
+  #### Désactiver la lecture des variables d’environnement {#disable-environment-variable-ingestion}
 </div>
 
 ```bash wrap lines
@@ -62,7 +62,7 @@ $ a0deploy export -c=config.json --format=yaml --output_folder=local --env=false
 ```
 
 <div id="non-primitive-configuration-values">
-  #### Valeurs de configuration non primitives
+  #### Valeurs de configuration non primitives {#non-primitive-configuration-values}
 </div>
 
 ```bash lines
@@ -72,41 +72,41 @@ $ a0deploy export -c=config.json --format=yaml --output_folder=local
 ```
 
 <div id="available-configuration-properties">
-  ## Propriétés de configuration disponibles
+  ## Propriétés de configuration disponibles {#available-configuration-properties}
 </div>
 
 <div id="auth0_domain">
-  ### AUTH0_DOMAIN
+  ### AUTH0_DOMAIN {#auth0_domain}
 </div>
 
 String. Le domaine du tenant Auth0 cible.
 
 <div id="auth0_client_id">
-  ### AUTH0_CLIENT_ID
+  ### AUTH0_CLIENT_ID {#auth0_client_id}
 </div>
 
 String. L’ID de l’application Auth0 spécifiée utilisée pour envoyer des requêtes à l’API.
 
 <div id="auth0_client_secret">
-  ### AUTH0_CLIENT_SECRET
+  ### AUTH0_CLIENT_SECRET {#auth0_client_secret}
 </div>
 
 String. Le secret de l’application Auth0 spécifiée servant à effectuer des requêtes API.
 
 <div id="auth0_access_token">
-  ### AUTH0_ACCESS_TOKEN
+  ### AUTH0_ACCESS_TOKEN {#auth0_access_token}
 </div>
 
 String. <Tooltip tip="Jeton d’accès : identifiant d’autorisation, sous la forme d’une chaîne opaque ou d’un JWT, utilisé pour accéder à une API." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=access+token">Jeton d’accès</Tooltip> de courte durée permettant d’accéder à la <Tooltip tip="Jeton d’accès : identifiant d’autorisation, sous la forme d’une chaîne opaque ou d’un JWT, utilisé pour accéder à une API." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Management+API">Management API</Tooltip> depuis l’application Auth0 désignée. Peut être utilisé à la place de la combinaison <Tooltip tip="ID client : valeur d’identification attribuée à votre ressource enregistrée par Auth0." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=client+ID">ID client</Tooltip> et <Tooltip tip="ID client : valeur d’identification attribuée à votre ressource enregistrée par Auth0." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=client+secret">secret client</Tooltip>.
 
 <div id="auth0_client_signing_key_path">
-  ### AUTH0_CLIENT_SIGNING_KEY_PATH
+  ### AUTH0_CLIENT_SIGNING_KEY_PATH {#auth0_client_signing_key_path}
 </div>
 
 String. Chemin d’accès à la clé privée utilisée par le client pour l’authentification <Tooltip tip="JSON Web Token (JWT) : format standard de ID Token (et souvent de jeton d’accès) utilisé pour représenter de façon sécurisée des assertions entre deux parties." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=JWT">JWT</Tooltip> avec clé privée. Chemin relatif au répertoire de travail. Voir aussi `AUTH0_CLIENT_SIGNING_ALGORITHM` pour préciser l’<Tooltip tip="Signing Algorithm : algorithme utilisé pour signer numériquement des jetons afin de garantir que le jeton n’a pas été altéré." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=signing+algorithm">algorithme de signature</Tooltip>.
 
 <div id="auth0_client_signing_algorithm">
-  ### AUTH0_CLIENT_SIGNING_ALGORITHM
+  ### AUTH0_CLIENT_SIGNING_ALGORITHM {#auth0_client_signing_algorithm}
 </div>
 
 String. Indique les algorithmes de signature JWT utilisés par le client pour l’authentification par JWT avec clé privée. Utilisé uniquement en combinaison avec `AUTH0_CLIENT_SIGNING_KEY_PATH`.
@@ -114,13 +114,13 @@ String. Indique les algorithmes de signature JWT utilisés par le client pour l�
 Valeurs acceptées : `RS256`, `RS384`, `PS256`.
 
 <div id="auth0_allow_delete">
-  ### AUTH0_ALLOW_DELETE
+  ### AUTH0_ALLOW_DELETE {#auth0_allow_delete}
 </div>
 
 Booléen. Si elle est activée, cette option permet à l’outil de supprimer des ressources. Par défaut : `false`.
 
 <div id="auth0_excluded">
-  ### AUTH0_EXCLUDED
+  ### AUTH0_EXCLUDED {#auth0_excluded}
 </div>
 
 Tableau de chaînes de caractères. Exclut entièrement certains types de ressources de la gestion, dans les deux sens. Pour en savoir plus, consultez [Exclure des ressources de la gestion](/docs/fr-ca/deploy-monitor/deploy-cli-tool/exclude-resources-from-management).
@@ -130,7 +130,7 @@ Ne peut pas être utilisé simultanément avec [AUTH0&#95;INCLUDED&#95;ONLY](#au
 Valeurs possibles : `actions`, `attackProtection`, `branding`, `clientGrants`, `clients`, `connections`, `customDomains`, `databases`, `emailProvider`, `emailTemplates`, `guardianFactorProviders`, `guardianFactorTemplates`, `guardianFactors`, `guardianPhoneFactorMessageTypes`, `guardianPhoneFactorSelectedProvider`, `guardianPolicies`, `logStreams`, `migrations`, `organizations`, `pages`, `prompts`, `resourceServers`, `roles`, `tenant`, `triggers`.
 
 <div id="example">
-  #### Exemple
+  #### Exemple {#example-2}
 </div>
 
 ```json lines
@@ -140,7 +140,7 @@ Valeurs possibles : `actions`, `attackProtection`, `branding`, `clientGrants`, 
 ```
 
 <div id="auth0_included_only">
-  ### AUTH0_INCLUDED_ONLY
+  ### AUTH0_INCLUDED_ONLY {#auth0_included_only}
 </div>
 
 Tableau de chaînes de caractères. Indique quels types de ressources gérer dans les deux sens. Pour en savoir plus, consultez [Exclure des ressources de la gestion](/docs/fr-ca/deploy-monitor/deploy-cli-tool/exclude-resources-from-management).
@@ -150,7 +150,7 @@ Ne peut pas être utilisé en même temps que [AUTH0&#95;EXCLUDED](#auth0_exclud
 Valeurs possibles : `actions`, `attackProtection`, `branding`, `clientGrants`, `clients`, `connections`, `customDomains`, `databases`, `emailProvider`, `emailTemplates`, `guardianFactorProviders`, `guardianFactorTemplates`, `guardianFactors`, `guardianPhoneFactorMessageTypes`, `guardianPhoneFactorSelectedProvider`, `guardianPolicies`, `logStreams`, `migrations`, `organizations`, `pages`, `prompts`, `resourceServers`, `roles`, `tenant`, `triggers`.
 
 <div id="example">
-  #### Exemple
+  #### Exemple {#example-3}
 </div>
 
 ```json lines
@@ -160,13 +160,13 @@ Valeurs possibles : `actions`, `attackProtection`, `branding`, `clientGrants`, 
 ```
 
 <div id="auth0_keyword_replace_mappings">
-  ### AUTH0_KEYWORD_REPLACE_MAPPINGS
+  ### AUTH0_KEYWORD_REPLACE_MAPPINGS {#auth0_keyword_replace_mappings}
 </div>
 
 Mappage de mots-clés précis permettant le remplacement dynamique. Pour en savoir plus, consultez [Remplacement de mots-clés](/docs/fr-ca/deploy-monitor/deploy-cli-tool/keyword-replacement).
 
 <div id="example">
-  #### Exemple
+  #### Exemple {#example-4}
 </div>
 
 ```json lines
@@ -177,7 +177,7 @@ Mappage de mots-clés précis permettant le remplacement dynamique. Pour en savo
 ```
 
 <div id="auth0_preserve_keywords">
-  ### AUTH0_PRESERVE_KEYWORDS
+  ### AUTH0_PRESERVE_KEYWORDS {#auth0_preserve_keywords}
 </div>
 
 Booléen. Lorsqu’elle est activée, cette option tente de conserver les marqueurs de remplacement de mots-clés dans les fichiers de ressources locaux pendant l’exportation. Sinon, les valeurs distantes écraseront ces marqueurs de mots-clés ajoutés manuellement.
@@ -187,19 +187,19 @@ Cette configuration exige la présence de fichiers de configuration locaux ainsi
 Voir aussi : [Préserver les mots-clés lors de l’exportation](/docs/fr-ca/deploy-monitor/deploy-cli-tool/keyword-replacement#preserve-keywords-on-export).
 
 <div id="auth0_export_identifiers">
-  ### AUTH0_EXPORT_IDENTIFIERS
+  ### AUTH0_EXPORT_IDENTIFIERS {#auth0_export_identifiers}
 </div>
 
 Booléen. Lorsqu’elle est activée, renvoie les identifiants de toutes les ressources. Peut être utile dans certains scénarios de débogage ou de consignation au sein d’un contexte à tenant unique. Par défaut : `false`.
 
 <div id="excluded_props">
-  ### EXCLUDED_PROPS
+  ### EXCLUDED_PROPS {#excluded_props}
 </div>
 
 Permet d’exclure de la gestion les propriétés indésirables.
 
 <div id="example">
-  #### Exemple
+  #### Exemple {#example-5}
 </div>
 
 ```json lines
@@ -209,37 +209,37 @@ Permet d’exclure de la gestion les propriétés indésirables.
 ```
 
 <div id="auth0_audience">
-  ### AUTH0_AUDIENCE
+  ### AUTH0_AUDIENCE {#auth0_audience}
 </div>
 
 String. Valeur distincte de la valeur <Tooltip tip="Audience : Identifiant unique de l’audience d’un jeton émis. Nommée aud dans un jeton, cette valeur contient le Client ID d’une application pour un ID Token ou l’identifiant d’API d’une API pour un jeton d’accès." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=audience">audience</Tooltip> lors de l’obtention d’un jeton d’accès pour la Management API. Utile lorsque les points de terminaison par défaut de la Management API ne sont pas exposés publiquement.
 
 <div id="auth0_excluded_rules">
-  ### AUTH0_EXCLUDED_RULES
+  ### AUTH0_EXCLUDED_RULES {#auth0_excluded_rules}
 </div>
 
 Tableau de chaînes de caractères. Exclut de la gestion des Rules précis par ID. Remarque : cette configuration pourrait faire l’objet d’une dépréciation à l’avenir. Pour en savoir plus, consultez [Exclure des ressources de la gestion](/docs/fr-ca/deploy-monitor/deploy-cli-tool/exclude-resources-from-management).
 
 <div id="auth0_excluded_clients">
-  ### AUTH0_EXCLUDED_CLIENTS
+  ### AUTH0_EXCLUDED_CLIENTS {#auth0_excluded_clients}
 </div>
 
 Tableau de chaînes de caractères. Exclut de la gestion certains clients selon leur ID. Remarque : cette configuration pourrait faire l’objet d’une dépréciation à l’avenir. Pour en savoir plus, consultez [Exclure des ressources de la gestion](/docs/fr-ca/deploy-monitor/deploy-cli-tool/exclude-resources-from-management).
 
 <div id="auth0_excluded_databases">
-  ### AUTH0_EXCLUDED_DATABASES
+  ### AUTH0_EXCLUDED_DATABASES {#auth0_excluded_databases}
 </div>
 
 Tableau de chaînes de caractères. Exclut de la gestion certaines bases de données selon leur ID. Remarque : cette configuration pourrait faire l’objet d’une dépréciation à l’avenir. Pour en savoir plus, consultez [Exclure des ressources de la gestion](/docs/fr-ca/deploy-monitor/deploy-cli-tool/exclude-resources-from-management).
 
 <div id="auth0_excluded_connections">
-  ### AUTH0_EXCLUDED_CONNECTIONS
+  ### AUTH0_EXCLUDED_CONNECTIONS {#auth0_excluded_connections}
 </div>
 
 Tableau de chaînes de caractères. Exclut de la gestion certaines connexions en fonction de leur ID. Remarque : cette configuration pourrait faire l’objet d’une dépréciation à l’avenir. Pour en savoir plus, consultez [Exclure des ressources de la gestion](/docs/fr-ca/deploy-monitor/deploy-cli-tool/exclude-resources-from-management).
 
 <div id="auth0_excluded_resource_servers">
-  ### AUTH0_EXCLUDED_RESOURCE_SERVERS
+  ### AUTH0_EXCLUDED_RESOURCE_SERVERS {#auth0_excluded_resource_servers}
 </div>
 
 Tableau de chaînes de caractères. Exclut de la gestion certains <Tooltip tip="Serveur de ressources : serveur hébergeant des ressources protégées. Les serveurs de ressources acceptent les requêtes de ressources protégées et y répondent." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=resource+servers">serveurs de ressources</Tooltip> selon leur ID. Remarque : cette configuration pourrait faire l’objet d’une dépréciation à l’avenir. Pour en savoir plus, consultez [Exclure des ressources de la gestion](/docs/fr-ca/deploy-monitor/deploy-cli-tool/exclude-resources-from-management).

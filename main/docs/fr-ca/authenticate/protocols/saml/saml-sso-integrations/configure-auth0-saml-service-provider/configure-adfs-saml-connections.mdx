@@ -11,17 +11,17 @@ Créez une connexion <Tooltip tip="Security Assertion Markup Language (SAML) : 
 4. Activer et tester votre intégration.
 
 <div id="configure-adfs">
-  ## Configurer ADFS
+  ## Configurer ADFS {#configure-adfs}
 </div>
 
 <div id="add-relying-party-trust">
-  ### Ajouter une approbation de partie de confiance
+  ### Ajouter une approbation de partie de confiance {#add-relying-party-trust}
 </div>
 
 Pour savoir comment ajouter une approbation de <Tooltip tip="Partie de confiance : entité (comme un service ou une application) qui dépend d’un fournisseur d’identité tiers pour authentifier un utilisateur." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=relying+party">partie de confiance</Tooltip>, consultez [Créer une approbation de partie de confiance](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/operations/create-a-relying-party-trust) sur [https://docs.microsoft.com](https://docs.microsoft.com).
 
 <div id="create-using-federation-metadata">
-  #### Créer à l’aide des métadonnées de fédération
+  #### Créer à l’aide des métadonnées de fédération {#create-using-federation-metadata}
 </div>
 
 Suivez les étapes décrites dans [Créer une approbation de partie de confiance prenant en charge les revendications à l’aide des métadonnées de fédération (MSDN)](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/operations/create-a-relying-party-trust#to-create-a-claims-aware-relying-party-trust-using-federation-metadata). Pour l’**adresse des métadonnées de fédération** à l’étape 4, l’URL à saisir doit correspondre à l’un des formats suivants :
@@ -39,7 +39,7 @@ JP : `https://{yourTenantName}.jp.auth0.com/samlp/metadata?connection=CONNECTIO
 Une fois l’approbation de partie de confiance créée, [passez à la section suivante](#edit-claim-issuance-policy).
 
 <div id="create-manually">
-  #### Créer manuellement
+  #### Créer manuellement {#create-manually}
 </div>
 
 1. Lancez votre instance d’ADFS et démarrez l’assistant **Add approbation de partie de confiance**.
@@ -54,7 +54,7 @@ Une fois l’approbation de partie de confiance créée, [passez à la section s
 10. Assurez-vous que la case **Configure claims issuance policy for this application** est sélectionnée, puis cliquez sur **Close**.
 
 <div id="edit-claim-issuance-policy">
-  ### Modifier la politique d’émission des revendications
+  ### Modifier la politique d’émission des revendications {#edit-claim-issuance-policy}
 </div>
 
 Après avoir fermé l’assistant **Add Relying Party Trust**, la fenêtre **Edit Claim Issuance Policy** s’affiche.
@@ -78,7 +78,7 @@ La revendication sortante `Name ID` doit toujours être présente afin d’assur
 7. Dans la fenêtre **Edit Claim Issuance Policy**, cliquez sur **Apply**. Vous pouvez maintenant fermer cette fenêtre.
 
 <div id="export-signing-certificate">
-  ### Exporter le certificat de signature
+  ### Exporter le certificat de signature {#export-signing-certificate}
 </div>
 
 Enfin, vous devrez exporter le certificat de signature depuis la console ADFS pour le téléverser dans Auth0.
@@ -90,7 +90,7 @@ Enfin, vous devrez exporter le certificat de signature depuis la console ADFS po
 5. Vérifiez que les paramètres de votre certificat sont corrects, puis cliquez sur **Finish**.
 
 <div id="create-saml-connection-with-auth0-as-service-provider">
-  ## Créer une connexion SAML avec Auth0 comme fournisseur de services
+  ## Créer une connexion SAML avec Auth0 comme fournisseur de services {#create-saml-connection-with-auth0-as-service-provider}
 </div>
 
 1. Suivez le tutoriel pour créer une connexion SAML dans lequel [Auth0 agit comme fournisseur de services](/docs/fr-ca/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-service-provider). Lorsque vous y êtes invité, téléversez le certificat de signature que vous avez exporté d’ADFS.
@@ -102,7 +102,7 @@ Enfin, vous devrez exporter le certificat de signature depuis la console ADFS po
 | --------- | ---------------- |
 
 <div id="edit-relying-party-trust">
-  ## Modifier l’approbation de la partie de confiance
+  ## Modifier l’approbation de la partie de confiance {#edit-relying-party-trust}
 </div>
 
 1. Dans la console ADFS, accédez à **ADFS &gt; Approbations de partie de confiance** à l’aide du volet de navigation de gauche. Sélectionnez l’approbation de la partie de confiance que vous avez créée précédemment, puis cliquez sur **Propriétés** (dans le volet de navigation de droite).
@@ -112,7 +112,7 @@ Enfin, vous devrez exporter le certificat de signature depuis la console ADFS po
 5. Cliquez sur **OK**. Enfin, cliquez sur **Appliquer**, puis fermez la fenêtre Propriétés.
 
 <div id="enable-sign-requests-optional">
-  ## Activer la signature des requêtes (facultatif)
+  ## Activer la signature des requêtes (facultatif) {#enable-sign-requests-optional}
 </div>
 
 Si vous le souhaitez, vous pouvez signer vos requêtes SAML vers le serveur ADFS.
@@ -123,7 +123,7 @@ Si vous le souhaitez, vous pouvez signer vos requêtes SAML vers le serveur ADFS
 4. Retournez dans ADFS et importez le certificat téléchargé à l’aide de l’onglet **Signatures** de la boîte de dialogue des propriétés de la partie de confiance.
 
 <div id="enable-and-test-the-integration">
-  ## Activez et testez l’intégration
+  ## Activez et testez l’intégration {#enable-and-test-the-integration}
 </div>
 
 Avant de tester votre intégration, assurez-vous d’avoir terminé les étapes suivantes :

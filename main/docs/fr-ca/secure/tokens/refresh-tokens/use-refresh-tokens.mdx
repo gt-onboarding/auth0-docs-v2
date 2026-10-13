@@ -14,7 +14,7 @@ En règle générale, vous devriez demander un nouveau jeton d’accès avant l�
 Vous pouvez aussi utiliser un jeton d’actualisation pour demander un nouveau jeton d’identité pour un utilisateur, et vous devriez le faire si vous devez actualiser les claims dans le jeton d’identité.
 
 <div id="call-the-api">
-  ## Appeler l’API
+  ## Appeler l’API {#call-the-api}
 </div>
 
 Pour échanger le jeton d’actualisation que vous avez reçu pendant l’authentification contre un nouveau jeton d’accès, faites une requête au [point de terminaison Obtenir un jeton](https://auth0.com/docs/api/authentication#refresh-token) de l’Auth0 Authentication API.
@@ -22,7 +22,7 @@ Pour échanger le jeton d’actualisation que vous avez reçu pendant l’authen
 Pour en savoir plus sur les méthodes d’authentification offertes par l’Authentication API, consultez [Méthodes d’authentification](https://auth0.com/docs/api/authentication#authentication-methods).
 
 <div id="use-basic-authentication">
-  ### Utiliser l’authentification Basic
+  ### Utiliser l’authentification Basic {#use-basic-authentication}
 </div>
 
 <AuthCodeGroup>
@@ -181,7 +181,7 @@ Pour en savoir plus sur les méthodes d’authentification offertes par l’Auth
 </AuthCodeGroup>
 
 <div id="use-post-authentication">
-  ### Utiliser l’authentification Post
+  ### Utiliser l’authentification Post {#use-post-authentication}
 </div>
 
 <AuthCodeGroup>
@@ -330,7 +330,7 @@ Pour en savoir plus sur les méthodes d’authentification offertes par l’Auth
 </AuthCodeGroup>
 
 <div id="parameter-definition">
-  ### Définition des paramètres
+  ### Définition des paramètres {#parameter-definition}
 </div>
 
 | Parameter       | Description                                                                                                                                                       |
@@ -353,7 +353,7 @@ La réponse comprendra un nouveau jeton d’accès, son type, sa durée de vie (
 ```
 
 <div id="bypass-mfa">
-  ## Contourner la logique MFA
+  ## Contourner la logique MFA {#bypass-mfa}
 </div>
 
 Si [l’authentification multifacteur (MFA)](/docs/fr-ca/secure/multi-factor-authentication) est activée et que le flux d’échange de jeton d’actualisation échoue, vous pouvez utiliser le code Action ci-dessous pour contourner la logique de <Tooltip tip="Authentification multifacteur (MFA) : processus d’authentification de l’utilisateur qui utilise un facteur en plus du nom d’utilisateur et du mot de passe, comme un code envoyé par SMS." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=MFA">MFA</Tooltip> :
@@ -374,7 +374,7 @@ exports.onExecutePostLogin = async (event, api) => {
 Vous pouvez personnaliser l’exemple de code lorsqu’une logique différente doit être exécutée ou ignorée selon le flow ou le protocole en cours.
 
 <div id="customize-mfa">
-  ## Personnaliser la MFA
+  ## Personnaliser la MFA {#customize-mfa}
 </div>
 
 <Warning>
@@ -426,7 +426,7 @@ Imposez la demande de vérification MFA en appelant le point de terminaison [`re
 Personnalisez encore davantage votre flux MFA avec Auth0 Actions. Pour en savoir plus, consultez [Actions Triggers : post-challenge - objet de l’API](/docs/fr-ca/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-api-object).
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Obtenir des jetons d’actualisation](/docs/fr-ca/secure/tokens/refresh-tokens/get-refresh-tokens)

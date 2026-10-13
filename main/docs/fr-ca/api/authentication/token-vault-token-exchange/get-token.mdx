@@ -15,7 +15,7 @@ Le type d’autorisation prend en charge deux variantes, qui ne diffèrent que p
 Pour en savoir plus, consultez la [documentation de Token Vault](/docs/fr-ca/secure/call-apis-on-users-behalf/token-vault).
 
 <div id="remarks">
-  ## Remarques
+  ## Remarques {#remarks}
 </div>
 
 * Avant de pouvoir effectuer l’échange, vous devez [configurer la connexion pour Token Vault](/docs/fr-ca/secure/call-apis-on-users-behalf/token-vault/configure-token-vault) et connecter le compte externe de l’utilisateur au moyen du [flux Connected Accounts](/docs/fr-ca/secure/call-apis-on-users-behalf/token-vault/connected-accounts-for-token-vault), qui utilise la [My Account API](/docs/fr-ca/manage-users/my-account-api).
@@ -29,7 +29,7 @@ Pour en savoir plus, consultez la [documentation de Token Vault](/docs/fr-ca/sec
 * Auth0 renvoie un code d’état `401` s’il ne parvient pas à trouver une identité d’utilisateur correspondant à la `connection` (et à `login_hint`, s’il est fourni).
 
 <div id="headers">
-  ## En-têtes
+  ## En-têtes {#headers}
 </div>
 
 <ParamField header="DPoP" type="string">
@@ -41,7 +41,7 @@ Pour en savoir plus, consultez la [documentation de Token Vault](/docs/fr-ca/sec
 </ParamField>
 
 <div id="request-body">
-  ## Corps de la requête
+  ## Corps de la requête {#request-body}
 </div>
 
 <ParamField body="grant_type" type="string" required>
@@ -77,7 +77,7 @@ Pour en savoir plus, consultez la [documentation de Token Vault](/docs/fr-ca/sec
 </ParamField>
 
 <div id="response">
-  ## Réponse
+  ## Réponse {#response}
 </div>
 
 | Statut | Description                                                                                                                                                                         |
@@ -99,7 +99,7 @@ Pour en savoir plus, consultez la [documentation de Token Vault](/docs/fr-ca/sec
 </ResponseExample>
 
 <div id="response-fields">
-  ## Champs de réponse
+  ## Champs de réponse {#response-fields}
 </div>
 
 <ResponseField name="access_token" type="string">

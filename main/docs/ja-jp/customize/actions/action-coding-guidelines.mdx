@@ -6,7 +6,7 @@ title: Actions コーディングガイドライン
 本番環境を円滑に運用するために、以下のガイドラインに従って、高性能で安全かつ明確な Actions コードを記述してください。
 
 <div id="actions-basics">
-  ## Actions の基本
+  ## Actions の基本 {#actions-basics}
 </div>
 
 * ログイン中にリクエストが積み重なるのを避けるため、HTTP リクエストはできるだけ少なくし、妥当なタイムアウト (10 秒未満) を設定します。
@@ -31,7 +31,7 @@ title: Actions コーディングガイドライン
 </Warning>
 
 <div id="actions-modules">
-  ## Actions Modules
+  ## Actions Modules {#actions-modules}
 </div>
 
 * 異なる Action 間で関数を再利用する必要があり、コードの重複を避けたい場合は、Actions Modules を使用します。
@@ -44,7 +44,7 @@ title: Actions コーディングガイドライン
 </Callout>
 
 <div id="coding-basics">
-  ## コーディングの基本
+  ## コーディングの基本 {#coding-basics}
 </div>
 
 * 受信または保存するデータでは、必ず厳密等価演算子 `===` を使用します。
@@ -52,7 +52,7 @@ title: Actions コーディングガイドライン
 * コードの品質向上と問題の自動検出のために、[ESLint](https://eslint.org) のようなコードリンターや、[Semgrep](https://semgrep.dev/docs/getting-started/) のようなアナライザーを実行します。
 
 <div id="security-basics">
-  ## セキュリティの基本
+  ## セキュリティの基本 {#security-basics}
 </div>
 
 * Actions のコード内に、シークレットや機密性の高いコード成果物を平文で記述しないでください。代わりに、[Secrets Manager](/docs/ja-jp/customize/actions/write-your-first-action#add-a-secret) を使用するか、独自のマネージャーを Actions のコードに統合して利用してください。
@@ -62,21 +62,21 @@ title: Actions コーディングガイドライン
 * 改ざんされる可能性のある受信データ (URL パラメーター、ユーザーエージェントなど) に注意してください。
 
 <div id="defensive-coding">
-  ## 防御的コーディング
+  ## 防御的コーディング {#defensive-coding}
 </div>
 
 * [エラーを捕捉し](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements)、必要に応じて適切に処理します。
 * Action の処理を続行すべきでない場合は、ガード節を使って早めに return します。
 
 <div id="logging">
-  ## ログ
+  ## ログ {#logging}
 </div>
 
 * 機密データ、シークレット、または PII は決してログに記録しないでください。
 * 1 つの Action に記録するログは、最大 256 文字以内にしてください。
 
 <div id="dependencies">
-  ## 依存関係
+  ## 依存関係 {#dependencies}
 </div>
 
 * 信頼でき、適切に保守されているパッケージを使用します。
@@ -84,14 +84,14 @@ title: Actions コーディングガイドライン
 * 可能であれば、パッケージの最新バージョンを使用します。
 
 <div id="user-data">
-  ## ユーザーデータ
+  ## ユーザーデータ {#user-data}
 </div>
 
 * 機密性の高い用途や高セキュリティが求められる場面で使用する場合は、`event.user.email_verified` を使って、メールアドレスが確認済みかどうかを確認してください。
 * Connection によって提供されるユーザープロファイルデータは異なります。唯一保証されている [ユーザープロファイルフィールド](/docs/ja-jp/manage-users/user-accounts/user-profiles/user-profile-structure) は `user_id` だけです。
 
 <div id="redirect-actions-in-the-login-flow">
-  ## ログインフローでのリダイレクトActions
+  ## ログインフローでのリダイレクトActions {#redirect-actions-in-the-login-flow}
 </div>
 
 * `api.redirect.encodeToken` が返すトークンは署名されていますが暗号化はされていないため、機密データや個人を特定できる情報 (PII) をペイロードに含めるべきではありません。

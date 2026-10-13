@@ -12,17 +12,17 @@ Pour les mises en œuvre de <Tooltip tip="Authentification unique (SSO) : servi
 Dans Auth0, l&#39;authentification unique initiée par le fournisseur de services est gérée par les connexions.
 
 <div id="auth0-sso-sessions-vs-application-sessions">
-  ## Sessions SSO Auth0 et sessions d’application
+  ## Sessions SSO Auth0 et sessions d’application {#auth0-sso-sessions-vs-application-sessions}
 </div>
 
 Lorsque les utilisateurs se connectent, différentes [couches de session](/docs/fr-ca/manage-users/sessions/session-layers) peuvent être créées. Pour les mises en œuvre de authentification unique initié par le fournisseur de services, il est important de comprendre que l’expérience SSO est rendue possible par la couche de session Auth0, qui est stockée de façon centralisée sur le <Tooltip tip="Authorization Server : serveur centralisé qui contribue à définir les limites de l’accès d’un utilisateur. Par exemple, votre Authorization Server peut contrôler les données, les tâches et les fonctionnalités auxquelles un utilisateur a accès." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Authorization+Server">Authorization Server</Tooltip>. Grâce à cette couche de session, les utilisateurs peuvent facilement s’authentifier auprès de différentes applications, chacune pouvant avoir sa propre session d’application pour suivre si l’utilisateur y est connecté.
 
 <div id="build-your-own-implementations">
-  ## Développez vos propres mises en œuvre
+  ## Développez vos propres mises en œuvre {#build-your-own-implementations}
 </div>
 
 <div id="oidcoauth">
-  ### OIDC/OAuth
+  ### OIDC/OAuth {#oidcoauth}
 </div>
 
 * Social <Tooltip tip="Fournisseur d’identité (IdP) : service qui stocke et gère les identités numériques." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Identity+Providers">Fournisseurs d’identité</Tooltip>
@@ -30,7 +30,7 @@ Lorsque les utilisateurs se connectent, différentes [couches de session](/docs/
 * [Auth0 Marketplace](https://marketplace.auth0.com/)
 
 <div id="saml">
-  ### SAML
+  ### SAML {#saml}
 </div>
 
 * Auth0 fournit des instructions pour configurer les <Tooltip tip="Security Assertion Markup Language (SAML) : protocole normalisé permettant à deux parties d’échanger des informations d’authentification sans mot de passe." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=SAML">fournisseurs d’identité SAML</Tooltip> suivants avec Auth0 :
@@ -45,14 +45,14 @@ Lorsque les utilisateurs se connectent, différentes [couches de session](/docs/
 * [Configurer l’authentification unique initiée par le fournisseur d’identité](/docs/fr-ca/authenticate/protocols/saml/saml-sso-integrations/identity-provider-initiated-single-sign-on)
 
 <div id="limitations">
-  ## Limitations
+  ## Limitations {#limitations}
 </div>
 
 * Les applications natives ne peuvent utiliser que [Universal Login](/docs/fr-ca/authenticate/login/auth0-universal-login).
 * <Tooltip tip="OpenID : norme ouverte d’authentification qui permet aux applications de vérifier l’identité des utilisateurs sans recueillir ni stocker les informations de connexion." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=OpenID">OpenID</Tooltip> Connect (OIDC) ne prend pas en charge le SSO initié par le fournisseur d’identité.
 
 <div id="learn-more">
-  ## En savoir plus
+  ## En savoir plus {#learn-more}
 </div>
 
 * [Authentification unique initiée par le fournisseur d’identité](/docs/fr-ca/authenticate/single-sign-on/outbound-single-sign-on)

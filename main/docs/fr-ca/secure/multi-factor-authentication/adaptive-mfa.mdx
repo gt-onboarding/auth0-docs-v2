@@ -27,7 +27,7 @@ souple et extensible qui peut vous aider à protéger votre tenant contre les
 sans compliquer l’expérience des utilisateurs légitimes. Elle évalue le risque potentiel à chaque tentative de connexion, puis demande à l’utilisateur d’effectuer une vérification supplémentaire, au besoin.
 
 <div id="how-it-works">
-  ## Fonctionnement
+  ## Fonctionnement {#how-it-works}
 </div>
 
 Pendant une transaction de connexion, Adaptive MFA calcule un score de confiance global à partir de l’analyse de trois évaluations du risque :
@@ -48,7 +48,7 @@ Adaptive MFA comprend un processus de sécurité complet qui garantit l’authen
 Adaptive MFA ignore toutes les sessions MFA existantes (par exemple, un utilisateur a sélectionné **Se souvenir de ce navigateur** lors d’un flux MFA précédent) et ne permet pas aux utilisateurs de contourner les défis MFA.
 
 <div id="customize-adaptive-mfa">
-  ## Personnaliser Adaptive MFA
+  ## Personnaliser Adaptive MFA {#customize-adaptive-mfa}
 </div>
 
 Vous pouvez utiliser Actions pour personnaliser le flux MFA et offrir la meilleure expérience possible à vos utilisateurs.
@@ -56,11 +56,11 @@ Vous pouvez utiliser Actions pour personnaliser le flux MFA et offrir la meilleu
 Pour en savoir plus sur les évaluations du risque, les scores de confiance et les options de personnalisation, consultez [Personnaliser Adaptive MFA](/docs/fr-ca/secure/multi-factor-authentication/adaptive-mfa/customize-adaptive-mfa).
 
 <div id="support-and-limitations">
-  ## Soutien et limitations
+  ## Soutien et limitations {#support-and-limitations}
 </div>
 
 <div id="authorization-flows">
-  ### Flux d’autorisation
+  ### Flux d’autorisation {#authorization-flows}
 </div>
 
 Adaptive MFA est pris en charge par tous les flux d’authentification et les <Tooltip tip="Flux d’autorisation : grant d’autorisation (ou workflow) défini dans le framework OAuth 2.0." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=authorization+flows">flux d’autorisation</Tooltip> qui commencent du côté de l’utilisateur final. Pour en savoir plus sur les différents flux et protocoles, consultez [Flux d’authentification et d’autorisation](/docs/fr-ca/get-started/authentication-and-authorization-flow) et [Protocoles](/docs/fr-ca/authenticate/protocols).
@@ -83,7 +83,7 @@ Adaptive MFA est pris en charge par tous les flux d’authentification et les <T
 *Adaptive MFA n’est pas pris en charge pour les flux <Tooltip tip="Security Assertion Markup Language (SAML) : protocole normalisé permettant à deux parties d’échanger des renseignements d’authentification sans mot de passe." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=SAML">SAML</Tooltip> initiés par l’<Tooltip tip="Security Assertion Markup Language (SAML) : protocole normalisé permettant à deux parties d’échanger des renseignements d’authentification sans mot de passe." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=IdP">IdP</Tooltip>, mais vous pouvez simuler ce flux avec des applications OIDC. Pour en savoir plus, consultez [Configurer la connexion SAML initiée par l’IdP pour des applications OIDC](/docs/fr-ca/authenticate/protocols/saml/saml-sso-integrations/configure-idp-initiated-saml-sign-on-to-oidc-apps).
 
 <div id="social-connections">
-  ### Connexions sociales
+  ### Connexions sociales {#social-connections}
 </div>
 
 Adaptive MFA est entièrement pris en charge pour les types de connexion sociale où une adresse courriel est disponible pour chaque utilisateur.
@@ -93,7 +93,7 @@ Adaptive MFA exige une adresse courriel pour effectuer l’étape de vérificati
 Si vous avez configuré une connexion sociale et vous vous attendez à ce qu’une adresse courriel soit disponible, mais que ce n’est pas le cas, vérifiez votre configuration et confirmez que les scopes, claims et permissions appropriés sont demandés. Pour en savoir plus sur les connexions sociales prises en charge et sur la façon de les installer, consultez [Connexions sociales sur Auth0 Marketplace](https://marketplace.auth0.com/features/social-connections).
 
 <div id="auth0-features">
-  ### Fonctionnalités d’Auth0
+  ### Fonctionnalités d’Auth0 {#auth0-features}
 </div>
 
 Le tableau suivant présente les mises en œuvre d’Auth0 et leur prise en charge par Adaptive MFA :
@@ -112,7 +112,7 @@ Le tableau suivant présente les mises en œuvre d’Auth0 et leur prise en char
 | Flux hébergés par vous (et non par Auth0) utilisant `lock.js` ou `auth0.js` qui effectuent une authentification inter-origines (endpoint co/authenticate)                                   | Pris en charge                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
 <div id="learn-more">
-  ## Pour en savoir plus
+  ## Pour en savoir plus {#learn-more}
 </div>
 
 * [Activer Adaptive MFA](/docs/fr-ca/secure/multi-factor-authentication/adaptive-mfa/enable-adaptive-mfa)

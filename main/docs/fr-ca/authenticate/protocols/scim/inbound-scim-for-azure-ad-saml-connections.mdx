@@ -13,7 +13,7 @@ validatedOn: 2026-02-09
 Pour provisionner des utilisateurs vers votre point de terminaison SCIM Auth0, vous devez configurer une application d’entreprise hors galerie dans Microsoft Entra ID (anciennement Azure Active Directory).
 
 <div id="configure-scim-settings-in-auth0">
-  ## Configurer les paramètres SCIM dans Auth0
+  ## Configurer les paramètres SCIM dans Auth0 {#configure-scim-settings-in-auth0}
 </div>
 
 1. Dans le [<Tooltip tip="..." cta="Voir le glossaire" href="/docs/fr-ca/glossary?term=Auth0%20Dashboard">Auth0 Dashboard</Tooltip>](https://manage.auth0.com/#/), accédez à **Authentication &gt; Enterprise &gt; SAML &gt; [YOUR&#95;AUTH0&#95;CONNECTION] &gt; Provisioning**.
@@ -31,7 +31,7 @@ Pour provisionner des utilisateurs vers votre point de terminaison SCIM Auth0, v
 4. Au besoin, sélectionnez **Save Changes**.
 
 <div id="retrieve-scim-endpoint-url-and-token">
-  ## Récupérer l’URL du point de terminaison SCIM et le jeton
+  ## Récupérer l’URL du point de terminaison SCIM et le jeton {#retrieve-scim-endpoint-url-and-token}
 </div>
 
 Pour configurer SCIM dans un tenant Microsoft Entra ID, vous avez besoin d’une URL de point de terminaison SCIM et d’un jeton provenant d’Auth0. Vous pouvez obtenir ces valeurs dans l’Auth0 Dashboard :
@@ -46,7 +46,7 @@ Vous pouvez aussi obtenir ces valeurs par programmation à l’aide des endpoint
 Pour connaître les bonnes pratiques, consultez les [directives de déploiement de Configure Inbound SCIM](/docs/fr-ca/authenticate/protocols/scim/configure-inbound-scim#deployment-guidelines).
 
 <div id="configure-scim-in-entra-id-for-saml-apps">
-  ## Configurer SCIM dans Entra ID pour les applications SAML
+  ## Configurer SCIM dans Entra ID pour les applications SAML {#configure-scim-in-entra-id-for-saml-apps}
 </div>
 
 Si votre application SAML n’est pas déjà enregistrée, suivez [Configurer la connexion SAML IdP-Initiated avec Azure comme IdP](https://support.auth0.com/center/s/article/Configure-IdP-Initiated-SAML-Login-with-Azure-as-the-IdP) pour enregistrer une application d’entreprise personnalisée hors galerie dans un tenant Entra ID.
@@ -71,7 +71,7 @@ Ensuite, pour configurer SCIM :
 11. Sélectionnez **OK** pour enregistrer la configuration. Cela ferme l’écran **Modifier l’attribut**. Ensuite, dans l’écran **Mappage des attributs**, sélectionnez **Enregistrer**.
 
 <div id="testing">
-  ## Test
+  ## Test {#testing}
 </div>
 
 1. Dans l’écran **Overview** de l’application d’entreprise, accédez à **Manage &gt; Provisioning &gt; Provision on Demand** pour tester la connexion SCIM.

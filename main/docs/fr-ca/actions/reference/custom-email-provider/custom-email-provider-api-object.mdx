@@ -13,13 +13,13 @@ sidebarTitle: 'Objet API'
 L’objet API du déclencheur Actions custom-email-provider comprend :
 
 <div id="apicache">
-  ## `api.cache`
+  ## `api.cache` {#apicache}
 </div>
 
 Modifiez le cache.
 
 <div id="apicachedeletekey">
-  ### `api.cache.delete(key)`
+  ### `api.cache.delete(key)` {#apicachedeletekey}
 </div>
 
 Supprime l’enregistrement associé à une valeur mise en cache pour la
@@ -34,7 +34,7 @@ clé fournie, s’il existe.
 </Expandable>
 
 <div id="apicachegetkey">
-  ### `api.cache.get(key)`
+  ### `api.cache.get(key)` {#apicachegetkey}
 </div>
 
 Récupère un enregistrement décrivant une valeur mise en cache associée à la clé fournie,
@@ -50,7 +50,7 @@ dans la propriété `value` de l’objet retourné.
 </Expandable>
 
 <div id="apicachesetkey-value-options">
-  ### `api.cache.set(key, value, options)`
+  ### `api.cache.set(key, value, options)` {#apicachesetkey-value-options}
 </div>
 
 Stocke ou met à jour une valeur de type chaîne dans le cache sous la clé indiquée.
@@ -108,7 +108,7 @@ disponibles lors de transactions ultérieures, même si leur durée de vie indiq
 </Expandable>
 
 <div id="apinotification">
-  ## `api.notification`
+  ## `api.notification` {#apinotification}
 </div>
 
 Indique si l’événement de notification doit être réessayé ou abandonné.
@@ -116,7 +116,7 @@ Consultez chacune de ces méthodes pour en savoir plus sur le comportement réel
 Si plusieurs appels sont effectués, seul le dernier est pris en compte.
 
 <div id="apinotificationdropreason">
-  ### `api.notification.drop(reason)`
+  ### `api.notification.drop(reason)` {#apinotificationdropreason}
 </div>
 
 Lorsqu’elle est appelée, l’événement de notification est considéré comme ayant échoué, sans possibilité de rétablissement :
@@ -132,7 +132,7 @@ Si cet événement de notification doit être réessayé, appelez plutôt retry.
 </Expandable>
 
 <div id="apinotificationretryreason">
-  ### `api.notification.retry(reason)`
+  ### `api.notification.retry(reason)` {#apinotificationretryreason}
 </div>
 
 Lorsqu’elle est appelée, l’événement de notification est considéré comme ayant échoué, mais peut être récupéré :
